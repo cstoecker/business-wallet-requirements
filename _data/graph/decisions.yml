@@ -3,7 +3,7 @@
 - id: DEC-01
   title: Credential data model, semantics and formats
   question: "Which credential formats and which semantic layer should a business wallet support so that credentials are interoperable, machine-processable and, where needed, verifiable?"
-  clusters: [K01, K16]
+  clusters: [K01]
   status: draft
   page: /architecture/decisions/dec-01/
 - id: DEC-02
@@ -46,4 +46,9 @@
   title: Evidence, logging and audit
   question: "What is logged, by whom, with which integrity and access rules, so that actions are attributable and auditable without exposing employees unnecessarily?"
   clusters: [K10]
+  status: planned
+- id: DEC-10
+  title: "AI-first: agent protocols, agent identity and mandates"
+  question: "Which agent protocols (MCP, A2A and others), which form of verifiable agent identity and agent card, and which mandate model should a business wallet support so that AI agents can act for an organisation under control?"
+  clusters: [K16, K03]
   status: planned

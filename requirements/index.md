@@ -11,7 +11,7 @@ last_verified: "2026-10-03"
 
 # Requirements
 
-Each requirement is atomic, technology-neutral and traced to a source. They are grouped into 13 categories and can be filtered by category, status, provenance and text. How they are written and reviewed is described in the [requirements management methodology](methodology/).
+Each requirement is atomic, technology-neutral and traced to a source. They are grouped into 14 categories and can be filtered by category, status, provenance and text. How they are written and reviewed is described in the [requirements management methodology](methodology/).
 
 <div class="status-note" role="note"><strong>Draft.</strong> {{ site.requirements.size }} requirements are derived from sources that were read in the original text. None has been reviewed by a named person yet, and those marked "proposal" follow the Commission proposal COM(2025) 838, which may change. Another {{ site.data.graph.ecosystem-requirements.size }} statements from ecosystems are candidates that still have to be derived.</div>
 

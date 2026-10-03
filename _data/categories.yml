@@ -49,6 +49,11 @@
   scope: Overlays per industry, such as product passports, automotive, pharma and AI.
   plane: Per domain
   icon: package
+- code: AIF
+  name: AI-first and agent interoperability
+  scope: 'Machine-readable and AI-processable data, agent protocols (MCP, A2A), verifiable agent identity and agent cards, mandates for agents, and AI governance.'
+  plane: Control and data planes
+  icon: code-browser
 - code: BIZ
   name: Business and adoption
   scope: Cost, onboarding effort, access for small firms, migration from existing solutions.

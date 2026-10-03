@@ -61,6 +61,6 @@
   decision: null
   summary: "Public-sector acceptance, transition periods, SME access and interoperability across Member States and ecosystems."
 - code: K16
-  name: AI use and AI governance
-  decision: DEC-01
-  summary: "AI agents acting with credentials, AI Act duties and machine-readable evidence."
+  name: AI-first and agent interoperability
+  decision: DEC-10
+  summary: "Machine-processable data, agent protocols (MCP, A2A), verifiable agent identity and agent cards, mandates for agents and AI governance."

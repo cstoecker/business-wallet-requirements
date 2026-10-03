@@ -56,6 +56,7 @@ Ecosystem requirement statements (see [Ecosystems & initiatives]({{ '/ecosystem/
 | DAT | Data space and sovereignty | usage policies, contract negotiation, connector-wallet binding, DSP/DCP profiles |
 | OPS | Operational and service | SLAs, support, incidents, key ceremonies, lifecycle, continuity |
 | DOM | Domain-specific | overlays per industry |
+| AIF | AI-first and agent interoperability | machine-readable and AI-processable data, agent protocols (MCP, A2A), verifiable agent identity and agent cards, mandates for agents, AI governance |
 | BIZ | Business and adoption | cost, onboarding friction, SME access, migration |
 | CON | Constraints and assumptions | mandated technology, legal limits, explicit assumptions |
 | TRN | Transition and migration | coexistence with legacy, phased roll-out |
