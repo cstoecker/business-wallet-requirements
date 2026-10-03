@@ -24,4 +24,6 @@ concepts:
 created: '2026-10-03'
 last_verified: '2026-10-03'
 quote: shall communicate the personal data breach to the data subject without undue delay
+full_quote: When the personal data breach is likely to result in a high risk to the rights and freedoms of natural persons, the controller shall communicate the personal data breach to the data subject without undue delay. ... in clear and plain language the nature of the personal data breach
+fidelity_checked: '2026-10-03'
 ---

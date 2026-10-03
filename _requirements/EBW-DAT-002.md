@@ -24,4 +24,6 @@ concepts:
 created: '2026-10-03'
 last_verified: '2026-10-03'
 quote: sufficiently described to enable automatic access and transmission of data between parties
+full_quote: the technical means to access the data, such as application programming interfaces, and their terms of use and quality of service shall be sufficiently described to enable automatic access and transmission of data between parties
+fidelity_checked: '2026-10-03'
 ---

@@ -24,4 +24,6 @@ concepts:
 created: '2026-10-03'
 last_verified: '2026-10-03'
 quote: a trust service provider shall, with regard to significant incidents that have an impact on the provision of its trust services
+full_quote: a trust service provider shall, with regard to significant incidents that have an impact on the provision of its trust services, notify the CSIRT or, where applicable, the competent authority, without undue delay and in any event within 24 hours of becoming aware of the significant incident
+fidelity_checked: '2026-10-03'
 ---

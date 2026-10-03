@@ -25,4 +25,6 @@ concepts:
 created: '2026-10-03'
 last_verified: '2026-10-03'
 quote: the dataset content, use restrictions, licences, data collection methodology, data quality and uncertainty shall be sufficiently described
+full_quote: 'Participants in data spaces that offer data or data services to other participants shall comply with the following essential requirements: (a) the dataset content, use restrictions, licences, data collection methodology, data quality and uncertainty shall be sufficiently described, where applicable, in a machine-readable format, to allow the recipient to find, access and use the data'
+fidelity_checked: '2026-10-03'
 ---
