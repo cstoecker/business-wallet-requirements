@@ -1,0 +1,582 @@
+- id: EBW-OPS-011
+  fidelity: broader-than-quote
+  verdict: reword
+  applicability: provider-side
+  priority: P3
+  priority_reason: Roadmap recommendation; organisational, no architecture impact
+  clusters:
+  - K11
+  - K04
+  verification_ready: needs-source-check
+  note: '"Standardised format" not in quote; roadmap addresses Member States, not providers.'
+  corrected_statement: The wallet provider and each trust service provider shall maintain a current inventory of assets that perform cryptographic operations and of assets on which cryptographic operations
+    are performed.
+- id: EBW-OPS-012
+  fidelity: broader-than-quote
+  verdict: reword
+  applicability: provider-side
+  priority: P3
+  priority_reason: Risk-management process duty; non-binding roadmap
+  clusters:
+  - K11
+  verification_ready: needs-source-check
+  note: Low/medium/high classification of each use is not in the quote; split off or cite source. Overlaps EBW-OPS-005 and EBW-LEG-023.
+  corrected_statement: The wallet provider and each trust service provider shall include the quantum threat to cryptography in its top-level risk management.
+- id: EBW-OPS-013
+  fidelity: ok
+  verdict: merge-with:EBW-NFR-006
+  applicability: provider-side
+  priority: P2
+  priority_reason: Standard-derived key management control
+  clusters:
+  - K04
+  - K11
+  verification_ready: 'yes'
+  note: Near-duplicate of EBW-NFR-006 and EBW-LEG-026 on cryptography controls; keep only if standard anchor is wanted.
+- id: EBW-OPS-014
+  fidelity: ok
+  verdict: reword
+  applicability: provider-side
+  priority: P3
+  priority_reason: Operational patch SLA, not architecture
+  clusters:
+  - K11
+  verification_ready: 'yes'
+  note: Overlaps EBW-LEG-039 (CRA, 24h early warning) only in topic. Add "not previously addressed" nuance.
+  corrected_statement: The trust service provider shall address each critical vulnerability within 48 hours of its discovery, unless already addressed.
+- id: EBW-OPS-015
+  fidelity: ok
+  verdict: reword
+  applicability: provider-side
+  priority: P3
+  priority_reason: Generic retention rule; period left open
+  clusters:
+  - K10
+  - K13
+  verification_ready: 'yes'
+  note: Overlaps EBW-OPS-007 (evidence records after cessation) and EBW-OPS-018.
+  corrected_statement: The trust service provider shall retain records concerning its services for a period appropriate for providing legal evidence, as stated in its terms and conditions.
+- id: EBW-OPS-016
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P3
+  priority_reason: Continuity plan target; organisational
+  clusters:
+  - K11
+  verification_ready: 'yes'
+  note: Overlaps EBW-LEG-024 (continuity, backup, disaster recovery); statement adds remediate-the-cause not in quote.
+- id: EBW-OPS-017
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P2
+  priority_reason: Key destruction at termination; local procedure
+  clusters:
+  - K04
+  - K13
+  verification_ready: 'yes'
+  note: Related to EBW-OPS-008 termination plan.
+- id: EBW-OPS-018
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P2
+  priority_reason: Concrete seven-year retention shapes log storage
+  clusters:
+  - K10
+  - K07
+  verification_ready: needs-source-check
+  note: Quote truncated before the list of retained items; statement names key lifecycle log and application documentation.
+- id: EBW-OPS-019
+  fidelity: broader-than-quote
+  verdict: reword
+  applicability: provider-side
+  priority: P3
+  priority_reason: Provider ceremony procedure, standard-derived
+  clusters:
+  - K04
+  - K05
+  verification_ready: needs-source-check
+  note: Quote only covers the report; documented procedure and signature come from adjacent GEN requirements.
+  corrected_statement: The certification service provider shall generate CA key pairs under a documented ceremony and produce a signed report showing that the ceremony followed that procedure.
+- id: EBW-OPS-020
+  fidelity: broader-than-quote
+  verdict: split
+  applicability: provider-side
+  priority: P2
+  priority_reason: Trust anchor compromise response, key to trust framework
+  clusters:
+  - K11
+  - K05
+  - K07
+  verification_ready: needs-source-check
+  note: Two obligations; quote supports only the first. Overlaps EBW-OPS-006 and EBW-OPS-016.
+  corrected_statement:
+  - On compromise, loss or suspected compromise of a CA private key, the certification service provider shall treat it as a disaster.
+  - On such a compromise, the provider shall inform all subscribers and relying parties and indicate that certificates and status information issued with that key may no longer be valid.
+- id: EBW-OPS-021
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P2
+  priority_reason: Algorithm obsolescence communication; crypto agility trigger
+  clusters:
+  - K11
+  - K05
+  verification_ready: 'yes'
+  note: Pairs with EBW-TRU-076; consider merging into one algorithm-insufficiency requirement.
+- id: EBW-OPS-022
+  fidelity: ok
+  verdict: reword
+  applicability: provider-side
+  priority: P3
+  priority_reason: Certification record retention, organisational
+  clusters:
+  - K14
+  - K10
+  verification_ready: 'yes'
+  note: Statement is compound (information and specimens) but one retention rule; acceptable.
+  corrected_statement: The holder of a wallet solution certificate of conformity shall securely retain the information provided during certification and specimens of certified hardware components for at
+    least five years after cancellation or expiry of the certificate.
+- id: EBW-OPS-023
+  fidelity: derived-marked
+  verdict: ok
+  applicability: provider-side
+  priority: P2
+  priority_reason: Mandatory NIS2 reporting step, process only
+  clusters:
+  - K11
+  - K13
+  verification_ready: needs-legal-review
+  note: Check that the quote supports applicability to trust service providers; complements EBW-LEG-027.
+- id: EBW-OPS-024
+  fidelity: derived-marked
+  verdict: reword
+  applicability: provider-side
+  priority: P3
+  priority_reason: Contractual flow-down from DORA, conditional on customer
+  clusters:
+  - K11
+  - K04
+  verification_ready: needs-legal-review
+  note: Derived via financial entity ICT risk; mitigation clause not in quote. Applicability limited to financial customers.
+  corrected_statement: Where the wallet provider serves a financial entity, it shall support updating or changing cryptographic technology as cryptanalysis developments require and apply mitigation and
+    monitoring where it cannot update.
+- id: EBW-OPS-025
+  fidelity: derived-marked
+  verdict: split
+  applicability: provider-side
+  priority: P3
+  priority_reason: DORA flow-down, conditional, operational
+  clusters:
+  - K11
+  - K05
+  verification_ready: needs-legal-review
+  note: Two obligations; register not in quote (Article 7(5)). Quote supports only renewal.
+  corrected_statement:
+  - Where the wallet provider serves a financial entity, it shall renew certificates in advance of their expiration.
+  - Where the wallet provider serves a financial entity, it shall keep a register of certificates and certificate-storing devices.
+- id: EBW-TRN-002
+  fidelity: derived-marked
+  verdict: reword
+  applicability: provider-side
+  priority: P2
+  priority_reason: Non-binding roadmap deadline; shapes crypto agility
+  clusters:
+  - K11
+  - K04
+  - K15
+  verification_ready: needs-source-check
+  note: '"Complete transition by then" is redundant; high-risk use cases undefined for wallets; roadmap is not binding on providers.'
+  corrected_statement: After 31 December 2030 the wallet provider shall not use quantum-vulnerable public-key mechanisms stand-alone for high-risk use cases.
+- id: EBW-TRN-003
+  fidelity: broader-than-quote
+  verdict: reword
+  applicability: provider-side
+  priority: P2
+  priority_reason: Upgrade path is architecture-relevant crypto agility
+  clusters:
+  - K04
+  - K11
+  verification_ready: needs-source-check
+  note: Quote says "should"; PQ-signed update mechanism is not in quote. Make that a separate derived requirement.
+  corrected_statement: The wallet provider shall ensure that wallet software expected to remain in use beyond 2030 can be upgraded to post-quantum cryptography.
+- id: EBW-TRN-004
+  fidelity: broader-than-quote
+  verdict: reword
+  applicability: provider-side
+  priority: P3
+  priority_reason: Planning duty depending on device market; no design impact
+  clusters:
+  - K04
+  - K14
+  verification_ready: needs-source-check
+  note: Roadmap quote is about availability, not a provider duty; "customers and conformity assessment" is not in quote.
+  corrected_statement: The qualified trust service provider shall plan for availability of certified signature and seal creation devices supporting post-quantum algorithms.
+- id: EBW-TRU-048
+  fidelity: ok
+  verdict: ok
+  applicability: wallet-general
+  priority: P2
+  priority_reason: Protocol-specific client registration, local detail
+  clusters:
+  - K16
+  - K08
+  - K06
+  verification_ready: 'yes'
+  note: Technology-specific to MCP; flag as ecosystem profile, not core law.
+- id: EBW-TRU-049
+  fidelity: derived-marked
+  verdict: reword
+  applicability: core
+  priority: P2
+  priority_reason: Domain-bound agent identity, derived from SHOULD
+  clusters:
+  - K16
+  - K06
+  - K08
+  verification_ready: 'yes'
+  note: Rationale marks derivation. "so that identity is bound to a domain" is a purpose clause; keep in rationale.
+  corrected_statement: Where the wallet or an agent acts as an MCP client towards authorization servers it does not control, it shall support OAuth Client ID Metadata Documents.
+- id: EBW-TRU-050
+  fidelity: broader-than-quote
+  verdict: reword
+  applicability: provider-side
+  priority: P2
+  priority_reason: Legal-person binding for agent endpoints
+  clusters:
+  - K16
+  - K06
+  - K05
+  verification_ready: needs-source-check
+  note: Quote only states out-of-scope; obligation is purely derived but provenance D, acceptable. Verifiable by whom is unclear.
+  corrected_statement: Where the wallet or an agent exposes an MCP server to counterparties, the wallet provider shall make the identity of the operating legal person verifiable through wallet or trust-list
+    mechanisms.
+- id: EBW-TRU-051
+  fidelity: derived-marked
+  verdict: ok
+  applicability: core
+  priority: P2
+  priority_reason: Signed agent cards give attributable agent endpoints
+  clusters:
+  - K16
+  - K05
+  - K01
+  verification_ready: 'yes'
+  note: Source says MAY; derivation explained in rationale. Technology-specific (JWS, A2A).
+- id: EBW-TRU-052
+  fidelity: ok
+  verdict: reword
+  applicability: wallet-general
+  priority: P2
+  priority_reason: Protocol-level verification detail
+  clusters:
+  - K16
+  - K05
+  - K07
+  verification_ready: 'yes'
+  note: Quote only covers expired or revoked keys; rest from adjacent text. Compound; consider split.
+  corrected_statement: When verifying a signed A2A Agent Card, the wallet or agent shall obtain the public key via kid and jku or a trusted key store, verify the signature over the canonicalised card and
+    reject expired or revoked keys.
+- id: EBW-TRU-053
+  fidelity: derived-marked
+  verdict: merge-with:EBW-TRU-052
+  applicability: core
+  priority: P2
+  priority_reason: Source-level SHOULD upgraded for business use
+  clusters:
+  - K16
+  - K05
+  verification_ready: 'yes'
+  note: Largely duplicates TRU-052 and TRU-051 verification chain; merge into one verifier requirement.
+- id: EBW-TRU-054
+  fidelity: derived-marked
+  verdict: ok
+  applicability: core
+  priority: P1
+  priority_reason: Binds agent to legal person; central to agent mandates
+  clusters:
+  - K16
+  - K03
+  - K06
+  verification_ready: 'yes'
+  note: Core business-wallet value; rationale derivation fine. Overlaps EBW-TRU-055 on identity portability.
+- id: EBW-TRU-055
+  fidelity: ok
+  verdict: reword
+  applicability: core
+  priority: P2
+  priority_reason: Cross-domain agent identity principle
+  clusters:
+  - K16
+  - K05
+  - K06
+  verification_ready: needs-source-check
+  note: Original has no "shall" actor; provenance S but source is an OIDF discussion text ("must" in descriptive prose).
+  corrected_statement: Where the wallet or an agent operates across organisational boundaries, the wallet provider shall ensure its identity is verifiable by a third party without access to its host environment.
+- id: EBW-TRU-056
+  fidelity: ok
+  verdict: ok
+  applicability: wallet-general
+  priority: P2
+  priority_reason: Secure trust-anchor distribution, standard-derived
+  clusters:
+  - K05
+  - K16
+  verification_ready: 'yes'
+  note: Related to EBW-TRU-075 (anchor distribution).
+- id: EBW-TRU-057
+  fidelity: ok
+  verdict: ok
+  applicability: wallet-general
+  priority: P2
+  priority_reason: Downgrade protection for DID resolution
+  clusters:
+  - K06
+  - K16
+  - K11
+  verification_ready: 'yes'
+  note: Technology-specific to DID; keep as DID profile requirement.
+- id: EBW-TRU-058
+  fidelity: derived-marked
+  verdict: reword
+  applicability: core
+  priority: P1
+  priority_reason: Hard-to-change mandate model interop with legal instrument
+  clusters:
+  - K03
+  - K15
+  - K01
+  verification_ready: needs-legal-review
+  note: Quote says "should"; Directive number "2025/25" must be verified. "Compatible" is untestable; define testable form.
+  corrected_statement: The mandate and authorisation system of the European Business Wallet shall support use of the digital EU power of attorney as mandate evidence.
+- id: EBW-TRU-059
+  fidelity: ok
+  verdict: ok
+  applicability: core
+  priority: P1
+  priority_reason: Proof-bound audit trail shapes data model
+  clusters:
+  - K10
+  - K03
+  - K01
+  verification_ready: needs-source-check
+  note: Council text, not Commission proposal; overlaps EBW-NFR-013 and EBW-NFR-002 on logging; keep for proof binding.
+- id: EBW-TRU-060
+  fidelity: ok
+  verdict: ok
+  applicability: core
+  priority: P2
+  priority_reason: Key-bound open mandates for agents
+  clusters:
+  - K16
+  - K03
+  - K04
+  verification_ready: 'yes'
+  note: Specific to AP2 protocol; no merge needed. Uses RFC 7800 key binding.
+- id: EBW-TRU-061
+  fidelity: broader-than-quote
+  verdict: reword
+  applicability: wallet-general
+  priority: P2
+  priority_reason: Standard-derived token binding
+  clusters:
+  - K16
+  - K08
+  - K04
+  verification_ready: needs-source-check
+  note: Quote only describes DPoP mechanism; prohibition of bearer tokens is an inference. Provenance S is generous.
+  corrected_statement: The authorisation server shall issue access tokens for AI agents as sender-constrained tokens bound to an agent key rather than as bearer tokens.
+- id: EBW-TRU-062
+  fidelity: ok
+  verdict: ok
+  applicability: wallet-general
+  priority: P2
+  priority_reason: Transaction-bound closed mandates, protocol detail
+  clusters:
+  - K16
+  - K03
+  - K01
+  verification_ready: 'yes'
+  note: Quote is about Payment Mandate and Checkout; generalised to "transaction object". Mark as AP2 profile.
+- id: EBW-TRU-063
+  fidelity: ok
+  verdict: ok
+  applicability: wallet-general
+  priority: P2
+  priority_reason: Scope narrowing along delegation chain
+  clusters:
+  - K03
+  - K16
+  verification_ready: 'yes'
+  note: Source is informative text; provenance S still fine.
+- id: EBW-TRU-064
+  fidelity: derived-marked
+  verdict: ok
+  applicability: relying-party-side
+  priority: P1
+  priority_reason: Prevents misuse of credentials as authority; shapes mandates
+  clusters:
+  - K03
+  - K01
+  - K16
+  verification_ready: 'yes'
+  note: Source is non-normative; derivation stated. Core separation of identification from authorisation.
+- id: EBW-TRU-065
+  fidelity: ok
+  verdict: reword
+  applicability: wallet-general
+  priority: P2
+  priority_reason: Source says SHOULD; revocation of agent access
+  clusters:
+  - K07
+  - K03
+  - K16
+  verification_ready: needs-source-check
+  note: Quote is "SHOULD invalidate"; statement shall is stronger. Mark derived or soften. Overlaps EBW-TRU-066.
+  corrected_statement: The authorisation server shall provide a means for the principal side to revoke an access token and shall then invalidate it for all purposes.
+- id: EBW-TRU-066
+  fidelity: derived-marked
+  verdict: split
+  applicability: core
+  priority: P1
+  priority_reason: Mandate revocation semantics are architecture-shaping
+  clusters:
+  - K07
+  - K03
+  - K16
+  verification_ready: needs-legal-review
+  note: Two actors in one statement; quote only shows owner revocation power. Overlaps EBW-TRU-065, EBW-TRU-013, EBW-TRU-047.
+  corrected_statement:
+  - When the owner revokes a mandate, the wallet provider shall make the revocation effective for the AI agent within a defined time.
+  - Verifiers shall reject presentations of a revoked mandate.
+- id: EBW-TRU-067
+  fidelity: ok
+  verdict: ok
+  applicability: core
+  priority: P1
+  priority_reason: Legal identity bound to wallet unit
+  clusters:
+  - K06
+  - K02
+  - K04
+  verification_ready: 'yes'
+  note: Overlaps EBW-INT-004 and EBW-INT-005 on owner identification data but covers binding.
+- id: EBW-TRU-068
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P1
+  priority_reason: Issuance-time representation check, in force
+  clusters:
+  - K03
+  - K07
+  - K06
+  verification_ready: 'yes'
+  note: Close to EBW-TRU-019; keep for representation focus.
+- id: EBW-TRU-069
+  fidelity: ok
+  verdict: reword
+  applicability: provider-side
+  priority: P2
+  priority_reason: Lifecycle choice for representation attestations
+  clusters:
+  - K07
+  - K03
+  verification_ready: 'yes'
+  note: Source is ARF HLR, not law; uses "ensure either/or" so test case is clear.
+  corrected_statement: The attestation provider issuing representation attestations shall ensure that the attestations are short-lived or that all entities entitled by law to request revocation can do so.
+- id: EBW-TRU-070
+  fidelity: broader-than-quote
+  verdict: reword
+  applicability: core
+  priority: P1
+  priority_reason: Authentication gate for staff using wallet
+  clusters:
+  - K04
+  - K02
+  - K14
+  verification_ready: needs-source-check
+  note: Quote omits assurance level substantial and notified eID; verify. Council text only. Merge candidate with EBW-NFR-012.
+  corrected_statement: The European Business Wallet provider shall grant access to the wallet unit only after successful authentication of the user.
+- id: EBW-TRU-071
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P2
+  priority_reason: Trust anchor longevity drives rollover design
+  clusters:
+  - K05
+  - K11
+  - K04
+  verification_ready: 'yes'
+  note: Standard is TS 119 312 (cryptographic suites); overlaps EBW-TRU-072.
+- id: EBW-TRU-072
+  fidelity: ok
+  verdict: merge-with:EBW-TRU-071
+  applicability: provider-side
+  priority: P2
+  priority_reason: Same maintenance principle for other keys
+  clusters:
+  - K11
+  - K04
+  - K05
+  verification_ready: 'yes'
+  note: Both express maintenance before algorithm breaks; merge into one key suitability requirement.
+- id: EBW-TRU-073
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P2
+  priority_reason: Continuity of CA rollover for relying parties
+  clusters:
+  - K05
+  - K11
+  verification_ready: 'yes'
+  note: Statement adds "generate a new certificate" not in quote; related to EBW-TRU-074.
+- id: EBW-TRU-074
+  fidelity: broader-than-quote
+  verdict: merge-with:EBW-TRU-073
+  applicability: provider-side
+  priority: P3
+  priority_reason: Source is "should"; implementation detail
+  clusters:
+  - K05
+  - K11
+  verification_ready: 'yes'
+  note: Quote says "should"; statement says shall. Fold into TRU-073 as a recommendation.
+- id: EBW-TRU-075
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P2
+  priority_reason: Trust anchor distribution integrity
+  clusters:
+  - K05
+  - K11
+  verification_ready: 'yes'
+  note: Overlaps EBW-TRU-056 on authentic trust anchor distribution but different actor.
+- id: EBW-TRU-076
+  fidelity: ok
+  verdict: merge-with:EBW-OPS-021
+  applicability: provider-side
+  priority: P2
+  priority_reason: Revocation planning after algorithm weakening
+  clusters:
+  - K07
+  - K11
+  verification_ready: 'yes'
+  note: Same trigger as EBW-OPS-021; combine into one algorithm-insufficiency requirement or keep separate with clear split.
+- id: EBW-TRU-077
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P1
+  priority_reason: Status availability beyond expiry shapes status service
+  clusters:
+  - K07
+  - K05
+  - K08
+  verification_ready: needs-source-check
+  note: Automated, reliable and free of charge not in the visible quote; check full quote. Overlaps EBW-TRU-023 and EBW-TRU-041.

@@ -1,0 +1,560 @@
+- id: EBW-AIF-049
+  fidelity: broader-than-quote
+  verdict: split
+  corrected_statement:
+  - Where a decision based solely on automated processing with legal or similarly significant effects rests on contract necessity or explicit consent, the controller shall provide rights to human intervention,
+    to express a view and to contest the decision.
+  - A decision based solely on automated processing shall not be based on special categories of personal data unless Article 22(4) conditions are met.
+  applicability: horizontal
+  priority: P2
+  priority_reason: GDPR duty, local to automated-decision processing
+  clusters:
+  - K16
+  - K09
+  verification_ready: needs-source-check (quote covers only 22(4); 22(2)-(3) text absent)
+  note: Two obligations (safeguards; special-category limit); overlaps EBW-LEG-015 on Art 22 safeguards.
+- id: EBW-AIF-050
+  fidelity: ok
+  verdict: ok
+  applicability: horizontal
+  priority: P2
+  priority_reason: GDPR information duty, local to controller
+  clusters:
+  - K09
+  - K16
+  verification_ready: 'yes'
+  note: Applies when data collected from the data subject; statement omits that trigger.
+- id: EBW-AIF-051
+  fidelity: ok
+  verdict: ok
+  applicability: horizontal
+  priority: P3
+  priority_reason: Data-subject access procedure, overlaps AIF-050 content
+  clusters:
+  - K09
+  - K16
+  verification_ready: 'yes'
+  note: Same logic-information content as AIF-050, different trigger (access request).
+- id: EBW-AIF-052
+  fidelity: ok
+  verdict: ok
+  applicability: authority-side
+  priority: P3
+  priority_reason: Procedural duty on public bodies, no wallet design impact
+  clusters:
+  - K15
+  verification_ready: needs-source-check (quote is a fragment; scope of binding digital requirements)
+  note: Authority-side procedure; Interoperable Europe Act.
+- id: EBW-AIF-053
+  fidelity: broader-than-quote
+  verdict: reword
+  corrected_statement: The public sector body or Union entity that carried out an interoperability assessment shall publish the assessment report in a machine-readable format facilitating automated translation.
+  applicability: authority-side
+  priority: P3
+  priority_reason: Publication procedure of authorities
+  clusters:
+  - K15
+  - K01
+  verification_ready: needs-source-check (website and Board sharing not in quote)
+  note: Quote supports only machine-readable format facilitating automated translation.
+- id: EBW-AIF-054
+  fidelity: broader-than-quote
+  verdict: reword
+  corrected_statement: A public sector body or Union entity shall, on request, make an interoperability solution supporting a trans-European digital public service available to any other such body, including
+    technical documentation and open standards references.
+  applicability: authority-side
+  priority: P3
+  priority_reason: Reuse duty among public bodies, no wallet design impact
+  clusters:
+  - K15
+  - K08
+  verification_ready: needs-source-check (exceptions, documentation not in quote)
+  note: '"subject to the stated exceptions" is untestable; name exceptions or drop clause.'
+- id: EBW-AIF-055
+  fidelity: derived-marked
+  verdict: ok
+  applicability: horizontal
+  priority: P2
+  priority_reason: In-force ESPR duty on DPP operator, wallet link derived
+  clusters:
+  - K01
+  - K15
+  - K08
+  verification_ready: needs-legal-review (statement addresses operator, not wallet; derivation unclear)
+  note: Quote shorter than statement (machine-readable, no lock-in parts). Wallet applicability only if wallet carries DPP data.
+- id: EBW-AIF-056
+  fidelity: broader-than-quote
+  verdict: ok
+  applicability: horizontal
+  priority: P2
+  priority_reason: ESPR identifier duty, local to DPP design
+  clusters:
+  - K06
+  - K01
+  verification_ready: needs-source-check (Annex III reference not in quote)
+  note: Wallet relevance indirect; Annex III standards clause unverified.
+- id: EBW-AIF-057
+  fidelity: ok
+  verdict: ok
+  applicability: horizontal
+  priority: P2
+  priority_reason: ESPR interoperability duty, semantic design impact
+  clusters:
+  - K15
+  - K01
+  verification_ready: 'yes'
+  note: '"Fully interoperable" is hard to test without delegated-act profiles.'
+- id: EBW-AIF-058
+  fidelity: broader-than-quote
+  verdict: reword
+  corrected_statement: The digital product passport shall be designed and operated so that data authentication, reliability and integrity are ensured.
+  applicability: horizontal
+  priority: P2
+  priority_reason: ESPR integrity duty, local design requirement
+  clusters:
+  - K11
+  - K01
+  verification_ready: needs-source-check (quote covers only authentication, reliability, integrity)
+  note: 'Bundles security, privacy, fraud avoidance: vague, non-atomic.'
+- id: EBW-AIF-059
+  fidelity: ok
+  verdict: ok
+  applicability: horizontal
+  priority: P2
+  priority_reason: ESPR write-access restriction, local to DPP system
+  clusters:
+  - K03
+  - K11
+  verification_ready: 'yes'
+  note: Access rights come from delegated acts; testable once those exist.
+- id: EBW-AIF-060
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P2
+  priority_reason: ESPR DPP service-provider data use limit
+  clusters:
+  - K09
+  - K13
+  verification_ready: 'yes'
+  note: 'Note: statement allows reuse if agreed with economic operator, as in quote context.'
+- id: EBW-AIF-061
+  fidelity: ok
+  verdict: drop
+  applicability: horizontal
+  priority: P3
+  priority_reason: Manufacturer product-design duty, wallet link only derived
+  clusters:
+  - K01
+  - K15
+  verification_ready: needs-legal-review
+  note: Data Act Art 3(1) binds manufacturers of connected products, not wallet or trust services; very long multi-attribute statement.
+- id: EBW-AIF-062
+  fidelity: ok
+  verdict: ok
+  applicability: horizontal
+  priority: P3
+  priority_reason: Data-space description duty, complements DAT-001/002
+  clusters:
+  - K01
+  - K15
+  - K08
+  verification_ready: 'yes'
+  note: Overlap with EBW-DAT-001/002 as stated in rationale.
+- id: EBW-AIF-063
+  fidelity: ok
+  verdict: ok
+  applicability: horizontal
+  priority: P3
+  priority_reason: Data-space contract-tool interoperability, vague, peripheral
+  clusters:
+  - K08
+  - K16
+  verification_ready: needs-legal-review (what "means to enable interoperability" demands)
+  note: '"Where applicable" and "means to enable" are hard to test.'
+- id: EBW-CON-001
+  fidelity: broader-than-quote
+  verdict: drop
+  applicability: authority-side
+  priority: P3
+  priority_reason: Non-binding recommendation to Member States
+  clusters:
+  - K11
+  - K15
+  verification_ready: 'yes'
+  note: Quote is Member States "should consider"; statement widens to bodies exchanging with wallets and says shall. Covered by TRN-002/003.
+- id: EBW-FUN-035
+  fidelity: ok
+  verdict: merge-with:EBW-FUN-042
+  applicability: core
+  priority: P1
+  priority_reason: Proposal text, mandate-bound access shapes architecture
+  clusters:
+  - K03
+  - K08
+  verification_ready: needs-source-check (Council text, not final law)
+  note: Subset of FUN-042 criteria; same Annex 12(1).
+- id: EBW-FUN-036
+  fidelity: ok
+  verdict: merge-with:EBW-FUN-043
+  applicability: core
+  priority: P1
+  priority_reason: Proposal text, real-time mandate check shapes architecture
+  clusters:
+  - K03
+  - K08
+  verification_ready: needs-source-check (Council text)
+  note: Exact duplicate of FUN-043 (same quote, point 12(2)(b)).
+- id: EBW-FUN-037
+  fidelity: ok
+  verdict: ok
+  applicability: core
+  priority: P2
+  priority_reason: Standard-derived rule for delegated tokens
+  clusters:
+  - K03
+  - K16
+  - K08
+  verification_ready: 'yes'
+  note: Only meaningful where RFC 8693 token exchange is used; make that condition explicit.
+- id: EBW-FUN-038
+  fidelity: derived-unmarked
+  verdict: reword
+  corrected_statement: The European Business Wallet provider shall enable a natural person representing another natural person or a legal person to use the wallet as a user.
+  applicability: core
+  priority: P1
+  priority_reason: Defines user model, drives K02 subject design
+  clusters:
+  - K02
+  - K03
+  verification_ready: needs-legal-review (quote is a definition, not an obligation)
+  note: Article 3(22) is a definition; shall-obligation derived but provenance is L.
+- id: EBW-FUN-039
+  fidelity: ok
+  verdict: ok
+  applicability: wallet-general
+  priority: P1
+  priority_reason: In-force PID rule enabling representatives in personal wallets
+  clusters:
+  - K02
+  - K06
+  - K03
+  verification_ready: 'yes'
+  note: Member State duty for EUDI wallet PID; implication for EBW is hybrid model.
+- id: EBW-FUN-040
+  fidelity: broader-than-quote
+  verdict: reword
+  corrected_statement: The Member State shall ensure that the European Digital Identity Wallet offers natural persons qualified electronic signatures by default and free of charge, except where limited
+    to non-professional purposes.
+  applicability: wallet-general
+  priority: P2
+  priority_reason: EUDI signing right, local to personal wallet
+  clusters:
+  - K04
+  - K02
+  verification_ready: needs-source-check (professional-use limitation not in quote)
+  note: Rationale admits Member States may limit free use; statement omits it.
+- id: EBW-FUN-041
+  fidelity: broader-than-quote
+  verdict: ok
+  applicability: core
+  priority: P2
+  priority_reason: Proposal text, qualified certificates for users
+  clusters:
+  - K04
+  - K03
+  verification_ready: needs-source-check (device types local/external/remote; Council text)
+  note: Overlaps FUN-005 (signing and sealing); device-type wording not in quote.
+- id: EBW-FUN-042
+  fidelity: broader-than-quote
+  verdict: reword
+  corrected_statement: 'The European Business Wallet provider shall base access authorisation decisions on one or more of: attestations of the acting subject, formal role, scope, validity and constraints
+    of any mandate or power of attorney, and sector rules.'
+  applicability: core
+  priority: P1
+  priority_reason: Proposal text, authorisation criteria shape access architecture
+  clusters:
+  - K03
+  - K08
+  verification_ready: needs-source-check (Council text; quote covers only mandate criterion)
+  note: Absorbs FUN-035. "or" makes the criteria set ambiguous.
+- id: EBW-FUN-043
+  fidelity: ok
+  verdict: ok
+  applicability: core
+  priority: P1
+  priority_reason: Proposal text, real-time role validation shapes architecture
+  clusters:
+  - K03
+  - K08
+  - K12
+  verification_ready: needs-source-check (Council text)
+  note: Survivor of FUN-036 duplicate; also overlaps FUN-015 on real-time role conflicts.
+- id: EBW-GOV-024
+  fidelity: derived-unmarked
+  verdict: ok
+  applicability: provider-side
+  priority: P2
+  priority_reason: Definition-derived owner binding, drives K02 model
+  clusters:
+  - K02
+  - K13
+  verification_ready: needs-legal-review (Article 3(25) is a definition)
+  note: Definition turned into obligation; accountability claim in rationale not in quote.
+- id: EBW-GOV-025
+  fidelity: ok
+  verdict: merge-with:EBW-GOV-026
+  applicability: provider-side
+  priority: P2
+  priority_reason: Proposal duty to inform, supports revocation route
+  clusters:
+  - K07
+  - K04
+  verification_ready: 'yes'
+  note: Commission-text variant of GOV-026; also overlaps FUN-029 (in-force user revocation right). Keep only if tracking text variants.
+- id: EBW-GOV-026
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P2
+  priority_reason: Council variant of information duty on revocation
+  clusters:
+  - K07
+  - K04
+  verification_ready: needs-source-check (Council text)
+  note: Wider group than GOV-025; adopt one text.
+- id: EBW-GOV-027
+  fidelity: broader-than-quote
+  verdict: reword
+  corrected_statement: Member States shall limit the mandatory issuance of European Digital Identity Wallets to natural persons.
+  applicability: authority-side
+  priority: P3
+  priority_reason: Scope clause for Member State EUDIW issuance
+  clusters:
+  - K02
+  - K15
+  verification_ready: needs-source-check (Article 20(1)/recital wording)
+  note: Clarifies scope rather than creating obligation; quote only says issuance relates only to natural persons.
+- id: EBW-GOV-028
+  fidelity: derived-marked
+  verdict: reword
+  corrected_statement: Authorisations granted through the European Business Wallet shall not create, limit or otherwise affect any power of attorney or legal mandate under national or Union law.
+  applicability: core
+  priority: P2
+  priority_reason: Recital-based separation of technical and legal authority
+  clusters:
+  - K03
+  - K13
+  verification_ready: needs-legal-review (non-binding recital)
+  note: Recital 18 is not an operative text; keep shall only if operative article exists.
+- id: EBW-INT-021
+  fidelity: narrower
+  verdict: ok
+  applicability: core
+  priority: P2
+  priority_reason: Standard-derived discovery rule for MCP endpoints
+  clusters:
+  - K16
+  - K08
+  - K05
+  verification_ready: 'yes'
+  note: Technology-specific by nature; statement scoped to HTTP transports with authorization.
+- id: EBW-INT-022
+  fidelity: ok
+  verdict: ok
+  applicability: core
+  priority: P2
+  priority_reason: Standard-derived client discovery rule
+  clusters:
+  - K16
+  - K08
+  - K05
+  verification_ready: 'yes'
+  note: Pairs with INT-021; could be merged into one requirement.
+- id: EBW-INT-023
+  fidelity: ok
+  verdict: ok
+  applicability: core
+  priority: P2
+  priority_reason: Standard-derived agent discovery artefact
+  clusters:
+  - K16
+  - K08
+  verification_ready: 'yes'
+  note: Protocol-specific (A2A).
+- id: EBW-INT-024
+  fidelity: broader-than-quote
+  verdict: ok
+  applicability: core
+  priority: P3
+  priority_reason: Local signing-format detail for Agent Cards
+  clusters:
+  - K16
+  - K01
+  - K11
+  verification_ready: needs-source-check (exclusion of signatures field not in quote)
+  note: Overlaps TRU-051/052 on signed Agent Cards.
+- id: EBW-INT-025
+  fidelity: derived-unmarked
+  verdict: ok
+  applicability: core
+  priority: P2
+  priority_reason: Standard claim for delegation, interoperability value
+  clusters:
+  - K03
+  - K16
+  - K08
+  verification_ready: needs-source-check (RFC says act "provides a means", not MUST)
+  note: Statement upgrades RFC option to shall; overlaps FUN-037, INT-029.
+- id: EBW-INT-026
+  fidelity: derived-marked
+  verdict: ok
+  applicability: core
+  priority: P2
+  priority_reason: Standard-derived mandate expression
+  clusters:
+  - K03
+  - K16
+  - K08
+  verification_ready: 'yes'
+  note: Derivation stated; RFC 9396 does not require it, so shall is a design choice.
+- id: EBW-INT-027
+  fidelity: ok
+  verdict: ok
+  applicability: authority-side
+  priority: P2
+  priority_reason: Proposal scope for implementing acts on mandate interoperability
+  clusters:
+  - K03
+  - K15
+  - K08
+  verification_ready: needs-source-check (Council text)
+  note: Obligation on implementing acts, not on a wallet; untestable until acts exist.
+- id: EBW-INT-028
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P2
+  priority_reason: Standard-derived safe-failure rule
+  clusters:
+  - K03
+  - K08
+  - K11
+  verification_ready: 'yes'
+  note: Overlaps AIF-020 (unknown constraints fail evaluation) in effect.
+- id: EBW-INT-029
+  fidelity: ok
+  verdict: ok
+  applicability: core
+  priority: P2
+  priority_reason: Standard-derived delegation chain encoding
+  clusters:
+  - K03
+  - K16
+  - K10
+  verification_ready: 'yes'
+  note: Related to AIF-006 and TRU-063; keep as encoding rule.
+- id: EBW-INT-030
+  fidelity: broader-than-quote
+  verdict: reword
+  corrected_statement: The scheme provider of a representation attestation rulebook shall specify the operations the representative is authorised to perform, thereby limiting the scope of authorisation.
+  applicability: provider-side
+  priority: P2
+  priority_reason: ARF rulebook content rule for representation
+  clusters:
+  - K03
+  - K01
+  - K07
+  verification_ready: needs-source-check (validity period, nature of representation not in quote)
+  note: Multi-attribute statement; quote supports only operations limiting scope.
+- id: EBW-INT-031
+  fidelity: ok
+  verdict: ok
+  applicability: wallet-general
+  priority: P1
+  priority_reason: In-force format support mandate fixes data model
+  clusters:
+  - K01
+  - K15
+  - K08
+  verification_ready: 'yes'
+  note: Pairs with INT-033 (issuer side).
+- id: EBW-INT-032
+  fidelity: derived-unmarked
+  verdict: merge-with:EBW-INT-033
+  applicability: wallet-general
+  priority: P1
+  priority_reason: In-force format list, but duplicates INT-031/033
+  clusters:
+  - K01
+  - K15
+  verification_ready: needs-source-check (Annex II content; mapping to SD-JWT VC and mdoc)
+  note: Quote says specs "apply"; issuer duty and format mapping are inferred. Content of Annex II belongs in INT-033.
+- id: EBW-INT-033
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P1
+  priority_reason: In-force issuer format floor for wallet attestations
+  clusters:
+  - K01
+  - K15
+  - K07
+  verification_ready: 'yes'
+  note: Absorbs INT-032 listing of clauses 2 to 6.
+- id: EBW-INT-034
+  fidelity: derived-marked
+  verdict: reword
+  corrected_statement: When profiles on the W3C VCDM format are available, the wallet provider should support that format in the wallet.
+  applicability: wallet-general
+  priority: P3
+  priority_reason: Non-binding recital on future VCDM support
+  clusters:
+  - K01
+  - K15
+  verification_ready: needs-legal-review (recital says should)
+  note: Statement says shall; recital is "should" and not binding.
+- id: EBW-INT-035
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P2
+  priority_reason: ARF rulebook format rule for qualified attestations
+  clusters:
+  - K01
+  - K15
+  verification_ready: 'yes'
+  note: Related to INT-036 and INT-038; consistent wording "one or both".
+- id: EBW-INT-036
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P2
+  priority_reason: ARF rulebook format rule for non-qualified attestations
+  clusters:
+  - K01
+  - K15
+  verification_ready: 'yes'
+  note: Title says "may add" but statement says "shall specify one or more".
+- id: EBW-INT-037
+  fidelity: broader-than-quote
+  verdict: ok
+  applicability: provider-side
+  priority: P2
+  priority_reason: ARF rule for W3C VCDM selective disclosure
+  clusters:
+  - K01
+  - K08
+  verification_ready: needs-source-check (approval by standardisation body or Cooperation Group not in quote)
+  note: Statement adds approval authority and request flow beyond quote.
+- id: EBW-INT-038
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P2
+  priority_reason: ARF rule for offline presentation format
+  clusters:
+  - K01
+  - K08
+  verification_ready: 'yes'
+  note: Conditional rule; consistent with INT-035.

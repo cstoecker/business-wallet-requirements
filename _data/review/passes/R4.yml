@@ -1,0 +1,622 @@
+- id: EBW-GOV-001
+  fidelity: derived-unmarked
+  verdict: merge-with:EBW-GOV-012
+  applicability: authority-side
+  priority: P3
+  priority_reason: Procedural supervisory timeline, no wallet design impact
+  clusters:
+  - K05
+  - K13
+  verification_ready: needs-source-check
+  note: No quote; 3-month clock here conflicts with GOV-012 wording (3 months after notification). Duplicate of GOV-012.
+- id: EBW-GOV-002
+  fidelity: ok
+  verdict: ok
+  applicability: core
+  priority: P1
+  priority_reason: Proposal; constrains hosting, ownership and supply chain choices
+  clusters:
+  - K13
+  - K04
+  - K15
+  verification_ready: needs-legal-review
+  note: No quote. 'Third-country control' undefined; testability depends on definition in the proposal.
+- id: EBW-GOV-003
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P2
+  priority_reason: Proposal; discovery metadata published by provider
+  clusters:
+  - K05
+  - K13
+  - K06
+  verification_ready: 'yes'
+- id: EBW-GOV-004
+  fidelity: ok
+  verdict: drop
+  applicability: authority-side
+  priority: P3
+  priority_reason: Supervisor-to-Commission reporting; no design impact
+  clusters:
+  - K13
+  - K05
+  verification_ready: 'yes'
+  note: Authority procedure, not a wallet obligation.
+- id: EBW-GOV-005
+  fidelity: ok
+  verdict: ok
+  applicability: authority-side
+  priority: P3
+  priority_reason: Enforcement lever on listing; procedural
+  clusters:
+  - K13
+  - K05
+  verification_ready: 'yes'
+  note: Revocation consequences for relying parties (status of provider) are the design-relevant part; see TRU-006.
+- id: EBW-GOV-006
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P2
+  priority_reason: In-force liability baseline; local to provider contracts
+  clusters:
+  - K13
+  verification_ready: 'yes'
+  note: Statement says 'due to failure to comply with the Regulation'; quote fragment does not show this, check Article 13(1).
+- id: EBW-GOV-007
+  fidelity: derived-unmarked
+  verdict: merge-with:EBW-GOV-006
+  applicability: provider-side
+  priority: P2
+  priority_reason: In-force burden reversal; implies evidence retention
+  clusters:
+  - K13
+  - K10
+  verification_ready: 'yes'
+  note: Quote says intention or negligence is presumed; 'burden of proof' wording is an implication. Fold into GOV-006 as second sentence.
+- id: EBW-GOV-008
+  fidelity: ok
+  verdict: merge-with:EBW-BIZ-002
+  applicability: provider-side
+  priority: P3
+  priority_reason: Duplicates pre-contract disclosure of limitations
+  clusters:
+  - K13
+  - K14
+  verification_ready: 'yes'
+  note: Same Article 13(2) obligation as BIZ-002; 'to limit its liability' is a purpose, not an obligation.
+- id: EBW-GOV-009
+  fidelity: broader-than-quote
+  verdict: drop
+  applicability: authority-side
+  priority: P3
+  priority_reason: Member State sanctions regime; no design impact
+  clusters:
+  - K13
+  verification_ready: needs-source-check
+  note: Quote lacks the EUR 5 000 000 and 1% figures; verify Article 16(2). Obligation lies on Member States.
+- id: EBW-GOV-010
+  fidelity: ok
+  verdict: merge-with:EBW-GOV-001
+  applicability: authority-side
+  priority: P3
+  priority_reason: Procedural supervisor-to-list-operator notification
+  clusters:
+  - K05
+  - K13
+  verification_ready: 'yes'
+  note: Withdrawal counterpart of GOV-001/012; merge into one 'status change communicated to list operator' requirement.
+- id: EBW-GOV-011
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P3
+  priority_reason: Procedural onboarding step for qualified providers
+  clusters:
+  - K13
+  - K14
+  verification_ready: 'yes'
+- id: EBW-GOV-012
+  fidelity: ok
+  verdict: ok
+  applicability: authority-side
+  priority: P3
+  priority_reason: Supervisory deadline; no design impact
+  clusters:
+  - K13
+  - K05
+  verification_ready: 'yes'
+  note: Absorb GOV-001. 'Or otherwise inform provider of reasons for delay' is a second obligation; consider split.
+- id: EBW-GOV-013
+  fidelity: ok
+  verdict: ok
+  applicability: authority-side
+  priority: P3
+  priority_reason: Member State notification enabling trusted list discovery
+  clusters:
+  - K05
+  - K13
+  verification_ready: 'yes'
+  note: Design-relevant only as publication of signing certificates (trust anchors).
+- id: EBW-GOV-014
+  fidelity: ok
+  verdict: split
+  corrected_statement:
+  - The qualified trust service provider shall inform the supervisory body at least one month before any change to its qualified services.
+  - The qualified trust service provider shall inform the supervisory body at least three months before ceasing its qualified services.
+  applicability: provider-side
+  priority: P3
+  priority_reason: Procedural notice periods to supervisor
+  clusters:
+  - K13
+  - K15
+  verification_ready: 'yes'
+  note: Two obligations with different periods (change one month, cessation three months).
+- id: EBW-GOV-015
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P3
+  priority_reason: Organisational financial safeguard
+  clusters:
+  - K13
+  verification_ready: 'yes'
+  note: Quote has 'and/or'; statement uses 'or'. Acceptable.
+- id: EBW-GOV-016
+  fidelity: ok
+  verdict: reword
+  corrected_statement: The Member State shall ensure that public sector bodies issuing electronic attestations of attributes meet a level of reliability and trustworthiness equivalent to that of qualified
+    trust service providers under Article 24.
+  applicability: authority-side
+  priority: P2
+  priority_reason: Sets assurance level of public issuers, affecting trust
+  clusters:
+  - K14
+  - K07
+  - K05
+  verification_ready: needs-source-check
+  note: Obligation sits with Member States; check Article 45f(2) wording and that Article 24 reference is not broader than quote.
+- id: EBW-GOV-017
+  fidelity: ok
+  verdict: drop
+  applicability: authority-side
+  priority: P3
+  priority_reason: Supervisor communication duty; no design impact
+  clusters:
+  - K11
+  - K13
+  verification_ready: 'yes'
+- id: EBW-GOV-018
+  fidelity: ok
+  verdict: drop
+  applicability: authority-side
+  priority: P3
+  priority_reason: Supervisory task; provider duty is in OPS-008
+  clusters:
+  - K13
+  verification_ready: 'yes'
+  note: Provider-side counterpart is OPS-008.
+- id: EBW-GOV-019
+  fidelity: ok
+  verdict: drop
+  applicability: authority-side
+  priority: P3
+  priority_reason: Annual authority reporting; no design impact
+  clusters:
+  - K13
+  verification_ready: 'yes'
+- id: EBW-GOV-020
+  fidelity: ok
+  verdict: ok
+  applicability: authority-side
+  priority: P3
+  priority_reason: Consequence path; design only needs suspension support
+  clusters:
+  - K13
+  - K04
+  verification_ready: needs-source-check
+  note: Statement says 'may order... and shall inform relying parties and users'; informing is not visible in the quote. Scoped to EUDI wallet, not EBW.
+- id: EBW-GOV-021
+  fidelity: ok
+  verdict: ok
+  applicability: authority-side
+  priority: P3
+  priority_reason: Enforcement lever; wallet-ecosystem specific
+  clusters:
+  - K05
+  - K13
+  verification_ready: 'yes'
+  note: Applies to EUDI wallet RP registration (Art 5b(7)); EBW equivalent unclear.
+- id: EBW-GOV-022
+  fidelity: ok
+  verdict: ok
+  applicability: authority-side
+  priority: P3
+  priority_reason: Registrar procedure; no direct design impact
+  clusters:
+  - K05
+  - K06
+  verification_ready: 'yes'
+  note: Registrar is an authority role; useful as input to relying party registration design.
+- id: EBW-GOV-023
+  fidelity: broader-than-quote
+  verdict: reword
+  corrected_statement: When a wallet-relying party registration is suspended or cancelled, the registrar shall inform the access certificate provider, the registration certificate provider and the relying
+    party within 24 hours.
+  applicability: authority-side
+  priority: P3
+  priority_reason: Registrar notification procedure
+  clusters:
+  - K05
+  - K07
+  verification_ready: needs-source-check
+  note: Quote only supports 24-hour timing; recipients, reasons and redress options are not shown.
+- id: EBW-NFR-001
+  fidelity: ok
+  verdict: ok
+  applicability: core
+  priority: P1
+  priority_reason: Proposal; portability shapes data model and export interfaces
+  clusters:
+  - K01
+  - K09
+  - K15
+  verification_ready: 'yes'
+  note: Overlaps LEG-014, FUN-031, LEG-029, OPS-002; consolidate export requirements. Triple trigger (request, termination, revocation) is acceptable.
+- id: EBW-NFR-002
+  fidelity: ok
+  verdict: merge-with:EBW-NFR-013
+  applicability: core
+  priority: P1
+  priority_reason: Proposal; owner-facing log shapes logging architecture
+  clusters:
+  - K10
+  - K09
+  verification_ready: 'yes'
+  note: Owner access to log of all transactions; NFR-013 defines what is logged, NFR-014 integrity. Keep as owner-access requirement.
+- id: EBW-NFR-003
+  fidelity: ok
+  verdict: reword
+  corrected_statement: The provider of European Business Wallets shall implement technical and organisational measures that ensure the confidentiality, integrity, authenticity and availability of its wallets,
+    and their interoperability with other business wallets and European Digital Identity Wallets.
+  applicability: core
+  priority: P2
+  priority_reason: Broad security duty; testable only via derived requirements
+  clusters:
+  - K11
+  - K15
+  - K14
+  verification_ready: 'yes'
+  note: Vague 'appropriate measures'; mixes security properties and interoperability.
+- id: EBW-NFR-004
+  fidelity: ok
+  verdict: recategorise:INT
+  applicability: authority-side
+  priority: P2
+  priority_reason: Access-control constraint on directory design
+  clusters:
+  - K06
+  - K09
+  - K05
+  verification_ready: 'yes'
+  note: Obligation sits on the Commission; the design obligation is on the directory (restrict access). Reword as 'The directory shall...'.
+- id: EBW-NFR-005
+  fidelity: derived-unmarked
+  verdict: reword
+  corrected_statement: The provider of trust services and of end-user products used for them shall make them available in plain and intelligible language, in accordance with the accessibility requirements
+    referenced in Article 15.
+  applicability: provider-side
+  priority: P2
+  priority_reason: In-force accessibility; applies to any UI
+  clusters:
+  - K15
+  - K09
+  verification_ready: needs-source-check
+  note: Quote cites UN CRPD, statement cites Directive 2019/882; the accessibility reference is not in the quote.
+- id: EBW-NFR-006
+  fidelity: broader-than-quote
+  verdict: reword
+  corrected_statement: The qualified trust service provider shall use trustworthy systems and products protected against modification that ensure the technical security and reliability of the processes
+    they support.
+  applicability: provider-side
+  priority: P2
+  priority_reason: Vague in-force qualified provider security duty
+  clusters:
+  - K11
+  - K14
+  verification_ready: 'yes'
+  note: '''Trustworthy'' and ''suitable cryptographic techniques'' not testable; tie to certification and crypto policy (see NFR-021, LEG-026). Quote lacks ''including suitable cryptographic techniques''.'
+- id: EBW-NFR-007
+  fidelity: broader-than-quote
+  verdict: ok
+  applicability: provider-side
+  priority: P2
+  priority_reason: In-force qualified provider integrity measures
+  clusters:
+  - K11
+  - K10
+  verification_ready: needs-source-check
+  note: Quote truncated at 'forgery, theft or'; the deletion and alteration part is not visible. Not testable as written; overlaps NFR-006.
+- id: EBW-NFR-008
+  fidelity: ok
+  verdict: reword
+  corrected_statement: Electronic signature creation data shall be generated, managed or duplicated only on behalf and at the request of the signatory, and only by a qualified trust service provider managing
+    remote creation devices.
+  applicability: core
+  priority: P1
+  priority_reason: In-force; defines who may hold signing and sealing keys
+  clusters:
+  - K04
+  - K14
+  verification_ready: 'yes'
+  note: Passive voice, no actor. Check applicability to seals via CER-006. Strong architecture driver for remote sealing in EBW.
+- id: EBW-NFR-009
+  fidelity: broader-than-quote
+  verdict: split
+  corrected_statement:
+  - The qualified provider managing remote signature creation devices shall duplicate signature creation data only for back-up purposes.
+  - The qualified provider shall ensure that duplicated signature creation data has the same security level as the original.
+  - The qualified provider shall keep the number of duplicated datasets to the minimum needed to ensure service continuity.
+  applicability: provider-side
+  priority: P2
+  priority_reason: In-force; local key backup rule
+  clusters:
+  - K04
+  - K11
+  verification_ready: needs-source-check
+  note: Quote covers only the minimum number of copies; 'only for back-up' and 'same security level' are not shown.
+- id: EBW-NFR-010
+  fidelity: ok
+  verdict: merge-with:EBW-LEG-005
+  applicability: provider-side
+  priority: P2
+  priority_reason: In-force logical separation of attestation provider data
+  clusters:
+  - K09
+  - K13
+  verification_ready: 'yes'
+  note: Same Article 45h; combine with LEG-005 (no combination of personal data) and NFR-011.
+- id: EBW-NFR-011
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P2
+  priority_reason: In-force; organisational/architectural separation of services
+  clusters:
+  - K13
+  - K09
+  verification_ready: 'yes'
+  note: '''Functionally separate'' is not testable without definition; applies to qualified EAA providers only.'
+- id: EBW-NFR-012
+  fidelity: ok
+  verdict: recategorise:FUN
+  applicability: wallet-general
+  priority: P2
+  priority_reason: In-force CIR for EUDI wallets; local gating rule
+  clusters:
+  - K04
+  - K09
+  verification_ready: 'yes'
+  note: Source is CIR 2024/2979 for EUDI wallets; EBW applicability must be confirmed. Reword 'any wallet function' to refer to the Article 5a(4) functions.
+- id: EBW-NFR-013
+  fidelity: derived-unmarked
+  verdict: ok
+  applicability: wallet-general
+  priority: P2
+  priority_reason: In-force EUDI logging rule; shapes log design
+  clusters:
+  - K10
+  - K09
+  verification_ready: 'yes'
+  note: '''Irrespective of whether the transaction completes'' is not in the quote. Also overlaps NFR-002, NFR-019.'
+- id: EBW-NFR-014
+  fidelity: ok
+  verdict: split
+  corrected_statement:
+  - The wallet provider shall ensure the integrity, authenticity and confidentiality of the transaction log.
+  - The wallet provider shall access the transaction log only where necessary for the wallet service and on explicit prior consent of the wallet user.
+  - The wallet provider shall enable the wallet user to export the transaction log.
+  applicability: wallet-general
+  priority: P2
+  priority_reason: In-force; three separate provider obligations
+  clusters:
+  - K10
+  - K09
+  verification_ready: 'yes'
+  note: Combines integrity, consented access and export; source locations 9(3), 9(5), 9(7) differ, quote only covers consent.
+- id: EBW-NFR-015
+  fidelity: ok
+  verdict: recategorise:FUN
+  applicability: wallet-general
+  priority: P2
+  priority_reason: In-force; central disclosure gate in wallet
+  clusters:
+  - K09
+  - K04
+  - K08
+  verification_ready: 'yes'
+  note: Three conditions; consider structured list. Overlaps NFR-017 and FUN-004, FUN-030.
+- id: EBW-NFR-016
+  fidelity: ok
+  verdict: recategorise:TRU
+  applicability: provider-side
+  priority: P1
+  priority_reason: In-force; revocation approach is hard to change later
+  clusters:
+  - K07
+  - K09
+  verification_ready: 'yes'
+  note: Overlaps NFR-018 and TRU-031. Statement scope (qualified and public sector attestations) not visible in quote.
+- id: EBW-NFR-017
+  fidelity: ok
+  verdict: merge-with:EBW-NFR-015
+  applicability: wallet-general
+  priority: P2
+  priority_reason: ARF restatement of CIR 2024/2982 disclosure rule
+  clusters:
+  - K09
+  - K08
+  verification_ready: 'yes'
+  note: Duplicate of NFR-015 with additional 'always allow refusal'; keep that clause when merging.
+- id: EBW-NFR-018
+  fidelity: ok
+  verdict: recategorise:TRU
+  applicability: provider-side
+  priority: P2
+  priority_reason: Standard-derived; mechanism-specific privacy rule
+  clusters:
+  - K07
+  - K09
+  verification_ready: 'yes'
+  note: Technology-specific (status list index); reword neutrally as 'unpredictable status identifier' if neutrality is wanted. ARF text may change.
+- id: EBW-NFR-019
+  fidelity: ok
+  verdict: recategorise:LEG
+  applicability: wallet-general
+  priority: P2
+  priority_reason: Standard-derived log minimisation; local design rule
+  clusters:
+  - K10
+  - K09
+  verification_ready: 'yes'
+  note: Tension with NFR-013/NFR-002 and audit needs; resolve explicitly (log metadata, not values).
+- id: EBW-NFR-020
+  fidelity: ok
+  verdict: recategorise:LEG
+  applicability: relying-party-side
+  priority: P2
+  priority_reason: Standard-derived intermediary retention limit
+  clusters:
+  - K09
+  - K08
+  verification_ready: 'yes'
+  note: '''Completely and immediately'' is ambiguous for logs and backups. Intermediary is not an EBW function; confirm applicability.'
+- id: EBW-NFR-021
+  fidelity: ok
+  verdict: reword
+  corrected_statement: The wallet provider shall use only cryptographic algorithms listed in the then-current ECCG Agreed Cryptographic Mechanisms when issuing, presenting or verifying wallet instance attestations
+    and key attestations.
+  applicability: wallet-general
+  priority: P2
+  priority_reason: Standard-derived algorithm baseline, version-bound
+  clusters:
+  - K11
+  - K04
+  verification_ready: needs-source-check
+  note: Hard-wires v2.0 of a document; breaks crypto agility. 'Participants' is vague.
+- id: EBW-OPS-001
+  fidelity: ok
+  verdict: ok
+  applicability: core
+  priority: P2
+  priority_reason: Proposal; local provider support channel
+  clusters:
+  - K13
+  - K11
+  verification_ready: 'yes'
+  note: Combines support and incident reporting; acceptable. 'Easily' is not testable.
+- id: EBW-OPS-002
+  fidelity: ok
+  verdict: split
+  corrected_statement:
+  - On suspension, revocation or voluntary termination of its services, or removal from the list of notified providers, the provider of European Business Wallets shall notify owners.
+  - In those cases the provider shall ensure the transfer or deletion of owner data according to the owner's instructions.
+  applicability: core
+  priority: P1
+  priority_reason: Proposal; exit and data portability shape provider architecture
+  clusters:
+  - K09
+  - K13
+  - K15
+  verification_ready: needs-source-check
+  note: Notification and data transfer/deletion are separate; trigger list beyond quote should be checked at Article 7(6)(f). Overlaps NFR-001, LEG-029.
+- id: EBW-OPS-003
+  fidelity: ok
+  verdict: merge-with:EBW-OPS-005
+  applicability: provider-side
+  priority: P3
+  priority_reason: Organisational risk management; identical wording to OPS-005
+  clusters:
+  - K11
+  - K13
+  verification_ready: 'yes'
+  note: Identical to OPS-005 except provider type. Merge into one requirement for all trust service providers.
+- id: EBW-OPS-004
+  fidelity: broader-than-quote
+  verdict: merge-with:EBW-OPS-006
+  applicability: provider-side
+  priority: P2
+  priority_reason: In-force incident notification; clock design impact
+  clusters:
+  - K11
+  - K13
+  verification_ready: needs-source-check
+  note: '''And affected individuals'' not in quote. Trigger ''becoming aware'' differs from OPS-006 ''of the incident''; also overlaps LEG-027, LEG-028.'
+- id: EBW-OPS-005
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P3
+  priority_reason: Organisational risk management
+  clusters:
+  - K11
+  - K13
+  verification_ready: 'yes'
+  note: Merge target for OPS-003. Not testable as phrased ('appropriate policies').
+- id: EBW-OPS-006
+  fidelity: broader-than-quote
+  verdict: merge-with:EBW-LEG-027
+  applicability: provider-side
+  priority: P2
+  priority_reason: In-force 24-hour incident reporting
+  clusters:
+  - K11
+  - K13
+  - K10
+  verification_ready: needs-source-check
+  note: Recipients (affected individuals, other bodies) not in quote; inconsistent 24-hour trigger vs OPS-004. Consolidate with LEG-027 and OPS-004.
+- id: EBW-OPS-007
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P2
+  priority_reason: In-force evidence retention drives log and archive design
+  clusters:
+  - K10
+  - K13
+  verification_ready: 'yes'
+  note: '''As long as necessary'' not testable; sets duration by national or contractual rule.'
+- id: EBW-OPS-008
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P3
+  priority_reason: Organisational continuity plan
+  clusters:
+  - K13
+  - K11
+  verification_ready: 'yes'
+  note: Supervisor-side counterpart is GOV-018.
+- id: EBW-OPS-009
+  fidelity: ok
+  verdict: ok
+  applicability: wallet-general
+  priority: P2
+  priority_reason: In-force; revocation notification channel needed in wallet
+  clusters:
+  - K07
+  - K13
+  verification_ready: 'yes'
+  note: Clause 'in concise and plain language' not in quote. EUDI scope; EBW equivalent needs decision.
+- id: EBW-OPS-010
+  fidelity: ok
+  verdict: ok
+  applicability: wallet-general
+  priority: P3
+  priority_reason: PID is natural-person specific; peripheral for EBW
+  clusters:
+  - K07
+  - K09
+  verification_ready: 'yes'
+  note: Applies to PID providers (employee wallets only). 'Dedicated and secure channel' not in quote.

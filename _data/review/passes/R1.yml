@@ -1,0 +1,602 @@
+- id: EBW-CER-001
+  fidelity: derived-unmarked
+  verdict: reword
+  corrected_statement: A qualified trust service provider shall be audited by a conformity assessment body at least every 24 months.
+  applicability: provider-side
+  priority: P3
+  priority_reason: Organisational audit cycle; no design impact
+  clusters:
+  - K14
+  - K13
+  verification_ready: 'needs-source-check: no quote recorded'
+  note: No quote. Second half duplicates CER-002; remove it.
+- id: EBW-CER-002
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P3
+  priority_reason: Procedural deadline towards supervisor
+  clusters:
+  - K13
+  - K14
+  verification_ready: 'yes'
+- id: EBW-CER-003
+  fidelity: broader-than-quote
+  verdict: reword
+  corrected_statement: The qualified trust service provider shall inform the supervisory body at least one month before any planned audit.
+  applicability: provider-side
+  priority: P3
+  priority_reason: Procedural notice; no design impact
+  clusters:
+  - K13
+  - K14
+  verification_ready: 'needs-source-check: observation right not in quote'
+  note: Observation on request is not supported by the quote.
+- id: EBW-CER-004
+  fidelity: broader-than-quote
+  verdict: reword
+  corrected_statement: The qualified trust service provider shall permit audits or conformity assessments requested by the supervisory body at any time.
+  applicability: provider-side
+  priority: P3
+  priority_reason: Supervisory power; organisational
+  clusters:
+  - K13
+  - K14
+  verification_ready: 'needs-source-check: provider expense not in quote'
+  note: '"At provider expense" unsupported by the quote as extracted.'
+- id: EBW-CER-005
+  fidelity: broader-than-quote
+  verdict: reword
+  corrected_statement: Certification of a qualified signature creation device shall be valid for no more than five years, provided vulnerability assessments are carried out every two years.
+  applicability: provider-side
+  priority: P2
+  priority_reason: Bounds QSCD assurance for remote sealing keys
+  clusters:
+  - K04
+  - K14
+  verification_ready: 'needs-source-check: cancellation clause not in quote'
+  note: Cancellation clause beyond quote.
+- id: EBW-CER-006
+  fidelity: ok
+  verdict: reword
+  corrected_statement: A qualified electronic seal creation device, including its remote management, shall meet the requirements of Article 29 applicable to qualified signature creation devices.
+  applicability: provider-side
+  priority: P2
+  priority_reason: Fixes QSCD basis for remote sealing custody
+  clusters:
+  - K04
+  - K14
+  verification_ready: 'needs-source-check: remote management scope (Art 39a)'
+  note: '"Requirements applicable to signature devices" is not testable as written.'
+- id: EBW-CER-007
+  fidelity: ok
+  verdict: ok
+  applicability: wallet-general
+  priority: P2
+  priority_reason: Keeps wallet certificate current; reporting duty
+  clusters:
+  - K14
+  - K11
+  verification_ready: 'yes'
+- id: EBW-CER-008
+  fidelity: broader-than-quote
+  verdict: ok
+  applicability: authority-side
+  priority: P3
+  priority_reason: Duty of certification body, not wallet design
+  clusters:
+  - K14
+  - K13
+  verification_ready: 'needs-source-check: cancel step beyond quote'
+  note: Quote covers suspension only; cancellation rests on 12(2).
+- id: EBW-TRU-001
+  fidelity: derived-unmarked
+  verdict: ok
+  applicability: provider-side
+  priority: P2
+  priority_reason: Mandatory gate; local process control
+  clusters:
+  - K13
+  - K05
+  verification_ready: 'needs-source-check: no quote recorded'
+- id: EBW-TRU-002
+  fidelity: ok
+  verdict: ok
+  applicability: authority-side
+  priority: P2
+  priority_reason: Trusted list format drives relying-party validation code
+  clusters:
+  - K05
+  - K01
+  verification_ready: 'needs-source-check: no quote recorded'
+  note: Several near-identical signed machine-readable publication duties (TRU-014,017,027,036,037).
+- id: EBW-TRU-003
+  fidelity: derived-unmarked
+  verdict: reword
+  corrected_statement: A trusted list shall allow a relying party to determine the status of a listed trust service at any specified time in the past.
+  applicability: authority-side
+  priority: P2
+  priority_reason: Historic status drives long-term validation design
+  clusters:
+  - K05
+  - K07
+  verification_ready: 'needs-source-check: no quote recorded'
+  note: Derived from standard scope; "shall" adopted from descriptive text.
+- id: EBW-TRU-004
+  fidelity: ok
+  verdict: ok
+  applicability: wallet-general
+  priority: P1
+  priority_reason: One-way status model is hard to change later
+  clusters:
+  - K07
+  verification_ready: 'needs-source-check: no quote recorded'
+  note: Absorb TRU-025, TRU-026 and TRU-028 as additional sources.
+- id: EBW-TRU-005
+  fidelity: derived-unmarked
+  verdict: reword
+  corrected_statement: A relying party shall verify a presented credential and its status against the trust anchors published for the relevant role.
+  applicability: relying-party-side
+  priority: P2
+  priority_reason: Defines relying-party verification behaviour
+  clusters:
+  - K05
+  - K07
+  verification_ready: 'needs-source-check: no quote recorded'
+  note: Merges two actions; no quote.
+- id: EBW-TRU-006
+  fidelity: derived-unmarked
+  verdict: ok
+  applicability: wallet-general
+  priority: P2
+  priority_reason: Standard-derived; issuer-side check
+  clusters:
+  - K05
+  - K07
+  - K04
+  verification_ready: 'needs-source-check: no quote recorded'
+- id: EBW-TRU-007
+  fidelity: derived-unmarked
+  verdict: ok
+  applicability: authority-side
+  priority: P3
+  priority_reason: Commission publication duty
+  clusters:
+  - K05
+  - K13
+  verification_ready: 'needs-source-check: no quote recorded'
+  note: Qualified-flag in the list not shown by quote.
+- id: EBW-TRU-008
+  fidelity: broader-than-quote
+  verdict: reword
+  corrected_statement: The European Business Wallet shall support secure remote onboarding of the owner through an authorised representative.
+  applicability: core
+  priority: P2
+  priority_reason: Onboarding feature; assurance level unsupported
+  clusters:
+  - K02
+  - K03
+  verification_ready: 'needs-source-check: assurance level substantial or high'
+  note: Assurance level not in quote. Recategorise FUN is possible.
+- id: EBW-TRU-009
+  fidelity: ok
+  verdict: ok
+  applicability: core
+  priority: P1
+  priority_reason: Proposal obligation; RP authentication interface
+  clusters:
+  - K08
+  - K05
+  verification_ready: needs-legal-review
+  note: Conditional "where required" weakens testability.
+- id: EBW-TRU-010
+  fidelity: ok
+  verdict: ok
+  applicability: core
+  priority: P1
+  priority_reason: Proposal obligation; wallet attestation interface
+  clusters:
+  - K04
+  - K08
+  verification_ready: needs-legal-review
+- id: EBW-TRU-011
+  fidelity: broader-than-quote
+  verdict: reword
+  corrected_statement: The provider of European Business Wallets shall provide a wallet unit attestation to every wallet unit, containing the public key of that unit.
+  applicability: core
+  priority: P1
+  priority_reason: Wallet unit attestation shapes key architecture
+  clusters:
+  - K04
+  - K05
+  verification_ready: 'needs-source-check: protected private keys not in quote'
+  note: Key-protection clause unsupported by quote; place in own requirement.
+- id: EBW-TRU-012
+  fidelity: ok
+  verdict: recategorise:FUN
+  applicability: core
+  priority: P1
+  priority_reason: Role-attribute mapping shapes delegation model
+  clusters:
+  - K03
+  - K10
+  verification_ready: needs-legal-review
+  note: 'Four properties in one sentence: split verifiable, revocable, traceable if kept.'
+- id: EBW-TRU-013
+  fidelity: ok
+  verdict: recategorise:FUN
+  applicability: core
+  priority: P1
+  priority_reason: Revocation triggers define wallet lifecycle
+  clusters:
+  - K07
+  - K04
+  verification_ready: 'needs-source-check: trigger list truncated in quote'
+  note: Overlaps FUN-029; wallet lifecycle rather than trust.
+- id: EBW-TRU-014
+  fidelity: ok
+  verdict: ok
+  applicability: authority-side
+  priority: P3
+  priority_reason: Commission publication; overlaps GOV-003
+  clusters:
+  - K05
+  - K08
+  verification_ready: 'yes'
+  note: Same pattern as TRU-017.
+- id: EBW-TRU-015
+  fidelity: ok
+  verdict: recategorise:INT
+  applicability: provider-side
+  priority: P2
+  priority_reason: Identifier issuance rule; overlaps INT-007
+  clusters:
+  - K06
+  verification_ready: needs-legal-review
+  note: Overlaps INT-007; statement is dense and conditional.
+- id: EBW-TRU-016
+  fidelity: ok
+  verdict: recategorise:GOV
+  applicability: authority-side
+  priority: P3
+  priority_reason: Supervisory procedure; overlaps GOV-005
+  clusters:
+  - K13
+  verification_ready: 'yes'
+- id: EBW-TRU-017
+  fidelity: ok
+  verdict: ok
+  applicability: authority-side
+  priority: P3
+  priority_reason: Commission publication; no wallet design impact
+  clusters:
+  - K05
+  verification_ready: 'yes'
+- id: EBW-TRU-018
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P3
+  priority_reason: Website link; peripheral
+  clusters:
+  - K05
+  - K13
+  verification_ready: 'yes'
+- id: EBW-TRU-019
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P2
+  priority_reason: Issuer vetting baseline for seals and attestations
+  clusters:
+  - K06
+  - K07
+  verification_ready: 'yes'
+- id: EBW-TRU-020
+  fidelity: broader-than-quote
+  verdict: reword
+  corrected_statement: The qualified trust service provider shall verify identity by means of the European Digital Identity Wallet or a notified electronic identification means meeting Article 8, or by another method permitted in Article 24(1a).
+  applicability: provider-side
+  priority: P2
+  priority_reason: Onboarding paths allowed; local process
+  clusters:
+  - K06
+  - K14
+  verification_ready: 'needs-source-check: other four methods not in quote'
+  note: Quote supports first method only; enumeration of methods is a long list.
+- id: EBW-TRU-021
+  fidelity: broader-than-quote
+  verdict: reword
+  corrected_statement: The qualified trust service provider shall verify attributes by a method permitted in Article 24(1b), including a qualified electronic attestation of attributes.
+  applicability: provider-side
+  priority: P2
+  priority_reason: Attestation chaining shapes issuance flows
+  clusters:
+  - K06
+  - K07
+  - K01
+  verification_ready: 'needs-source-check: other methods not in quote'
+  note: Quote shows item (c) only.
+- id: EBW-TRU-022
+  fidelity: broader-than-quote
+  verdict: ok
+  applicability: provider-side
+  priority: P2
+  priority_reason: 24 h latency is a local operational target
+  clusters:
+  - K07
+  verification_ready: 'yes'
+  note: '"Immediate effect on publication" not in quote.'
+- id: EBW-TRU-023
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P2
+  priority_reason: Status service availability and cost
+  clusters:
+  - K07
+  - K11
+  verification_ready: 'yes'
+  note: Rationale mentions attestations under 24(4a); covered by TRU-024.
+- id: EBW-TRU-024
+  fidelity: ok
+  verdict: merge-with:EBW-TRU-022
+  applicability: provider-side
+  priority: P2
+  priority_reason: Cross-reference only; no own obligation
+  clusters:
+  - K07
+  verification_ready: 'yes'
+  note: Cross-reference to paragraphs 3 and 4; merge with TRU-022 and TRU-023.
+- id: EBW-TRU-025
+  fidelity: ok
+  verdict: merge-with:EBW-TRU-004
+  applicability: provider-side
+  priority: P1
+  priority_reason: Same one-way status rule as TRU-004
+  clusters:
+  - K07
+  verification_ready: 'yes'
+  note: Four near-identical irreversible-revocation requirements.
+- id: EBW-TRU-026
+  fidelity: ok
+  verdict: merge-with:EBW-TRU-004
+  applicability: provider-side
+  priority: P1
+  priority_reason: Same one-way status rule as TRU-004
+  clusters:
+  - K07
+  verification_ready: 'yes'
+- id: EBW-TRU-027
+  fidelity: broader-than-quote
+  verdict: reword
+  corrected_statement: The Commission shall publish the list of notified issuing public sector bodies in electronically signed or sealed form suitable for automated processing.
+  applicability: authority-side
+  priority: P3
+  priority_reason: Member State and Commission procedure
+  clusters:
+  - K05
+  - K13
+  verification_ready: 'needs-source-check: notification duty not in quote'
+- id: EBW-TRU-028
+  fidelity: ok
+  verdict: merge-with:EBW-TRU-004
+  applicability: provider-side
+  priority: P1
+  priority_reason: Same one-way status rule as TRU-004
+  clusters:
+  - K07
+  verification_ready: 'yes'
+  note: Public sector issuers are the issuer type for authentic sources.
+- id: EBW-TRU-029
+  fidelity: ok
+  verdict: ok
+  applicability: wallet-general
+  priority: P1
+  priority_reason: Wallet attestation anchored in trusted list
+  clusters:
+  - K04
+  - K05
+  verification_ready: 'needs-source-check: trusted list reference (2024/2980)'
+  note: Statement adds list of certificate; quote shows signing only.
+- id: EBW-TRU-030
+  fidelity: ok
+  verdict: split
+  corrected_statement:
+  - Only the wallet provider that provided a wallet unit shall be capable of revoking its wallet unit attestation.
+  - The wallet provider shall publish a policy on the conditions and timeframe for revoking wallet unit attestations.
+  applicability: wallet-general
+  priority: P2
+  priority_reason: Revocation authority control; policy is organisational
+  clusters:
+  - K07
+  - K04
+  - K13
+  verification_ready: 'yes'
+- id: EBW-TRU-031
+  fidelity: broader-than-quote
+  verdict: reword
+  corrected_statement: When a wallet provider revokes a wallet unit attestation, it shall publish its validity status in a privacy-preserving manner.
+  applicability: wallet-general
+  priority: P1
+  priority_reason: Status mechanism affects linkability by design
+  clusters:
+  - K07
+  - K09
+  verification_ready: 'needs-source-check: location in attestation not in quote'
+- id: EBW-TRU-032
+  fidelity: ok
+  verdict: ok
+  applicability: wallet-general
+  priority: P1
+  priority_reason: Wallet must validate relying party access certificates
+  clusters:
+  - K05
+  - K08
+  verification_ready: 'yes'
+- id: EBW-TRU-033
+  fidelity: ok
+  verdict: split
+  corrected_statement:
+  - The wallet unit shall authenticate and validate the wallet-relying party registration certificate where one is provided.
+  - The wallet unit shall display the information of a validated registration certificate to the wallet user.
+  applicability: wallet-general
+  priority: P2
+  priority_reason: Wallet UX for registration data
+  clusters:
+  - K05
+  - K09
+  verification_ready: 'yes'
+- id: EBW-TRU-034
+  fidelity: ok
+  verdict: ok
+  applicability: wallet-general
+  priority: P1
+  priority_reason: Wallet restricts issuance to certified issuers
+  clusters:
+  - K05
+  - K07
+  verification_ready: 'yes'
+- id: EBW-TRU-035
+  fidelity: broader-than-quote
+  verdict: reword
+  corrected_statement: Before issuing person identification data to a wallet unit, the provider shall authenticate and validate the wallet unit attestation.
+  applicability: provider-side
+  priority: P2
+  priority_reason: Issuer-side check of wallet unit attestation
+  clusters:
+  - K04
+  - K05
+  - K07
+  verification_ready: 'needs-source-check: accepted-solution check not in quote'
+- id: EBW-TRU-036
+  fidelity: ok
+  verdict: split
+  corrected_statement:
+  - The Commission shall publish the lists of registrars, registers, wallet providers, PID providers and access certificate providers in signed or sealed machine-readable form.
+  - The Commission shall make these lists available without registration or authentication over state-of-the-art transport encryption.
+  applicability: authority-side
+  priority: P3
+  priority_reason: Commission publication; no wallet design impact
+  clusters:
+  - K05
+  verification_ready: 'yes'
+  note: Also requires a human-readable website; five items in one.
+- id: EBW-TRU-037
+  fidelity: broader-than-quote
+  verdict: reword
+  corrected_statement: Member States shall make registered wallet-relying party information available in machine-processable form through a single common API, signed or sealed by or on behalf of the registrar.
+  applicability: authority-side
+  priority: P3
+  priority_reason: National register interface; Member State duty
+  clusters:
+  - K05
+  - K08
+  verification_ready: 'needs-source-check: website and sealing not in quote'
+- id: EBW-TRU-038
+  fidelity: ok
+  verdict: split
+  corrected_statement:
+  - Where a Member State authorises registration certificates, they shall express each intended use and include a harmonised general access policy limiting requests to registered data.
+  - Registration certificates shall contain a URL to the privacy policy for the intended use.
+  applicability: authority-side
+  priority: P2
+  priority_reason: Registration certificate content drives wallet over-ask checks
+  clusters:
+  - K05
+  - K09
+  verification_ready: 'needs-source-check: intended-use and policy items not in quote'
+- id: EBW-TRU-039
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P2
+  priority_reason: Public status policies; relying-party assessment
+  clusters:
+  - K07
+  - K13
+  verification_ready: 'yes'
+- id: EBW-TRU-040
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P2
+  priority_reason: Revocation triggers vs short validity design
+  clusters:
+  - K07
+  verification_ready: 'needs-source-check: full circumstance list truncated in quote'
+- id: EBW-TRU-041
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P2
+  priority_reason: Status integrity and authenticity
+  clusters:
+  - K07
+  - K11
+  verification_ready: 'yes'
+- id: EBW-TRU-042
+  fidelity: broader-than-quote
+  verdict: merge-with:EBW-FUN-024
+  applicability: provider-side
+  priority: P2
+  priority_reason: QERDS identification; local to registered delivery
+  clusters:
+  - K12
+  - K06
+  verification_ready: 'needs-source-check: "very high level of confidence"'
+  note: Recategorise FUN; assurance level not in quote.
+- id: EBW-TRU-043
+  fidelity: ok
+  verdict: ok
+  applicability: wallet-general
+  priority: P1
+  priority_reason: RP authentication in all channels; standard
+  clusters:
+  - K05
+  - K08
+  verification_ready: 'yes'
+  note: Overlaps TRU-032, TRU-009; two actors in one statement.
+- id: EBW-TRU-044
+  fidelity: ok
+  verdict: ok
+  applicability: wallet-general
+  priority: P2
+  priority_reason: Standard-derived trust anchor restriction
+  clusters:
+  - K05
+  verification_ready: 'yes'
+- id: EBW-TRU-045
+  fidelity: ok
+  verdict: ok
+  applicability: wallet-general
+  priority: P2
+  priority_reason: Standard-derived over-ask detection
+  clusters:
+  - K09
+  - K05
+  verification_ready: 'yes'
+  note: Overlaps FUN-030, FUN-034.
+- id: EBW-TRU-046
+  fidelity: ok
+  verdict: ok
+  applicability: wallet-general
+  priority: P2
+  priority_reason: Standard-derived issuer registration check
+  clusters:
+  - K05
+  - K07
+  verification_ready: 'yes'
+  note: Close to TRU-034; keep separate by checked item.
+- id: EBW-TRU-047
+  fidelity: broader-than-quote
+  verdict: reword
+  corrected_statement: A relying party that does not verify the revocation status of a revocable attestation on receipt shall perform a risk analysis considering all relevant factors for the use case.
+  applicability: relying-party-side
+  priority: P3
+  priority_reason: Relying-party process; no wallet design impact
+  clusters:
+  - K07
+  - K11
+  verification_ready: 'yes'
+  note: Statement mixes "should" with "shall"; the quote supports only the shall.

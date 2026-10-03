@@ -1,0 +1,565 @@
+- id: EBW-INT-039
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P2
+  priority_reason: ARF rulebook rule; local naming constraint
+  clusters:
+  - K01
+  - K05
+  verification_ready: 'yes'
+- id: EBW-INT-040
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P2
+  priority_reason: Standard-derived; keeps semantics format-independent
+  clusters:
+  - K01
+  verification_ready: 'yes'
+- id: EBW-INT-041
+  fidelity: broader-than-quote
+  verdict: reword
+  corrected_statement: The rulebook shall define each attribute of an ISO/IEC 18013-5 attestation within a namespace that fully defines the identifier, syntax and semantics of each attribute.
+  applicability: provider-side
+  priority: P2
+  priority_reason: mdoc-specific standard-derived namespace rule
+  clusters:
+  - K01
+  verification_ready: 'needs-source-check: ecosystem-unique namespace identifier not in quote'
+  note: Uniqueness clause unsupported by quote; also not format-neutral.
+- id: EBW-INT-042
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P2
+  priority_reason: SD-JWT-specific rulebook rule
+  clusters:
+  - K01
+  - K09
+  verification_ready: 'yes'
+  note: Format-specific; tech-neutral only for SD-JWT VC rulebooks.
+- id: EBW-INT-043
+  fidelity: broader-than-quote
+  verdict: reword
+  corrected_statement:
+  - The requester of a catalogue entry for an attribute shall provide an attribute identifier unique within its namespace and the version of the attribute.
+  applicability: authority-side
+  priority: P3
+  priority_reason: Catalogue request procedure; little design impact
+  clusters:
+  - K01
+  - K15
+  verification_ready: 'needs-source-check: namespace uniqueness not in quote'
+  note: Merge with INT-044 candidate; quote lacks namespace part.
+- id: EBW-INT-044
+  fidelity: ok
+  verdict: merge-with:EBW-INT-043
+  applicability: authority-side
+  priority: P3
+  priority_reason: Catalogue request procedure
+  clusters:
+  - K01
+  - K15
+  verification_ready: 'yes'
+  note: Same Article 7(5) request content; merge or keep atomic by design choice.
+- id: EBW-INT-045
+  fidelity: ok
+  verdict: merge-with:EBW-INT-046
+  applicability: authority-side
+  priority: P3
+  priority_reason: Scheme catalogue request procedure
+  clusters:
+  - K01
+  - K15
+  verification_ready: 'yes'
+  note: Same Article 8(3) request content as INT-046.
+- id: EBW-INT-046
+  fidelity: ok
+  verdict: ok
+  applicability: authority-side
+  priority: P3
+  priority_reason: Scheme catalogue request procedure
+  clusters:
+  - K01
+  - K15
+  verification_ready: 'yes'
+- id: EBW-INT-047
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P2
+  priority_reason: In-force rule; unique IDs shape schema design
+  clusters:
+  - K01
+  - K15
+  verification_ready: 'yes'
+- id: EBW-INT-048
+  fidelity: ok
+  verdict: ok
+  applicability: authority-side
+  priority: P2
+  priority_reason: Proposal makes owner identification attestation discoverable
+  clusters:
+  - K06
+  - K01
+  - K05
+  verification_ready: 'yes'
+  note: Check overlap with INT-004/005 owner identification data.
+- id: EBW-INT-049
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P2
+  priority_reason: Format-specific standard rule; local
+  clusters:
+  - K01
+  verification_ready: 'yes'
+  note: Not technology-neutral; SD-JWT VC specific.
+- id: EBW-LEG-045
+  fidelity: ok
+  verdict: ok
+  applicability: authority-side
+  priority: P2
+  priority_reason: Defines minimum mandate fields; shapes mandate model
+  clusters:
+  - K03
+  - K01
+  verification_ready: 'yes'
+  note: Template is a Commission/MS obligation; wallet must carry these fields.
+- id: EBW-LEG-046
+  fidelity: broader-than-quote
+  verdict: split
+  corrected_statement:
+  - Member States shall ensure that the digital EU power of attorney is authenticated by means of eIDAS trust services.
+  - Member States shall ensure that granting, amendment and revocation of the digital EU power of attorney is compatible with use in the European Digital Identity Wallet.
+  applicability: authority-side
+  priority: P1
+  priority_reason: Anchors wallet mandates in trust services; architecture-shaping
+  clusters:
+  - K03
+  - K05
+  - K04
+  verification_ready: 'needs-source-check: wallet-compatibility part not in quote'
+  note: Two obligations; second half unsupported by recorded quote.
+- id: EBW-LEG-047
+  fidelity: ok
+  verdict: ok
+  applicability: relying-party-side
+  priority: P1
+  priority_reason: Mandatory acceptance of mandate evidence; shapes acceptance
+  clusters:
+  - K03
+  - K15
+  verification_ready: 'yes'
+- id: EBW-LEG-048
+  fidelity: derived-unmarked
+  verdict: reword
+  corrected_statement: When a deployer of a high-risk AI system has reason to consider its use may present a risk under Article 79(1), the deployer shall without undue delay inform the provider or distributor
+    and the market surveillance authority and suspend use.
+  applicability: horizontal
+  priority: P3
+  priority_reason: Deployer organisational duty; general AI Act law
+  clusters:
+  - K16
+  - K03
+  - K13
+  verification_ready: needs-legal-review
+  note: Wallet-credential scoping is derivation; AI Act duty applies generally, so mark as D.
+- id: EBW-LEG-049
+  fidelity: ok
+  verdict: ok
+  applicability: core
+  priority: P1
+  priority_reason: Legal-effect equivalence underpins B2B/B2G acceptance
+  clusters:
+  - K15
+  - K12
+  verification_ready: 'yes'
+  note: Proposal only; check final wording.
+- id: EBW-LEG-050
+  fidelity: ok
+  verdict: merge-with:EBW-LEG-049
+  applicability: core
+  priority: P2
+  priority_reason: Sole-trader variant of equivalence rule
+  clusters:
+  - K15
+  - K12
+  verification_ready: 'yes'
+  note: Second subparagraph of Article 4; could be kept as scope extension of LEG-049.
+- id: EBW-NFR-022
+  fidelity: ok
+  verdict: ok
+  applicability: core
+  priority: P2
+  priority_reason: Agent protocol security; ecosystem practice, not law
+  clusters:
+  - K16
+  - K08
+  - K11
+  verification_ready: 'yes'
+  note: Protocol-specific (MCP), not technology-neutral; keep as AIF profile.
+- id: EBW-NFR-023
+  fidelity: ok
+  verdict: ok
+  applicability: core
+  priority: P2
+  priority_reason: Agent protocol security; local control
+  clusters:
+  - K16
+  - K11
+  - K08
+  verification_ready: 'yes'
+  note: MCP-specific.
+- id: EBW-NFR-024
+  fidelity: ok
+  verdict: ok
+  applicability: core
+  priority: P2
+  priority_reason: Prevents token passthrough; accountability
+  clusters:
+  - K16
+  - K11
+  - K10
+  verification_ready: 'yes'
+  note: MCP-specific.
+- id: EBW-NFR-025
+  fidelity: ok
+  verdict: ok
+  applicability: core
+  priority: P3
+  priority_reason: Applies only to proxy deployments; local
+  clusters:
+  - K16
+  - K09
+  - K11
+  verification_ready: 'yes'
+  note: MCP-specific; narrow deployment.
+- id: EBW-NFR-026
+  fidelity: ok
+  verdict: ok
+  applicability: wallet-general
+  priority: P3
+  priority_reason: Applies only to local server setup UX
+  clusters:
+  - K16
+  - K11
+  - K04
+  verification_ready: 'yes'
+  note: Does not belong in NFR if EBW rarely supports local MCP servers.
+- id: EBW-NFR-027
+  fidelity: derived-unmarked
+  verdict: reword
+  corrected_statement:
+  - Where the wallet or an agent acts as an MCP client, the client should request only the scopes necessary for the intended operation.
+  applicability: core
+  priority: P2
+  priority_reason: Least-privilege for agent delegation; standard SHOULD
+  clusters:
+  - K16
+  - K03
+  - K11
+  verification_ready: 'needs-source-check: step-up elevation not in quote'
+  note: Source says SHOULD; statement hardens to shall and adds step-up. State derivation in rationale.
+- id: EBW-NFR-028
+  fidelity: ok
+  verdict: ok
+  applicability: core
+  priority: P2
+  priority_reason: Agent protocol authentication; local
+  clusters:
+  - K16
+  - K08
+  - K11
+  verification_ready: 'yes'
+  note: A2A-specific.
+- id: EBW-NFR-029
+  fidelity: ok
+  verdict: ok
+  applicability: core
+  priority: P2
+  priority_reason: Agent protocol authorisation scoping; local
+  clusters:
+  - K16
+  - K03
+  - K11
+  verification_ready: 'yes'
+  note: A2A-specific.
+- id: EBW-NFR-030
+  fidelity: ok
+  verdict: ok
+  applicability: core
+  priority: P3
+  priority_reason: Applies only if extended card is offered
+  clusters:
+  - K16
+  - K08
+  verification_ready: 'yes'
+  note: A2A-specific.
+- id: EBW-NFR-031
+  fidelity: derived-unmarked
+  verdict: reword
+  corrected_statement:
+  - Where in-task credentials are passed in-band through a chain of A2A agents, they should be bound to the originating agent.
+  applicability: core
+  priority: P2
+  priority_reason: Bounds credential reuse in agent chains; source SHOULD
+  clusters:
+  - K16
+  - K03
+  - K11
+  verification_ready: 'needs-source-check: SHOULD hardened to shall without stated derivation'
+  note: Source SHOULD; rationale does not mark derivation.
+- id: EBW-NFR-032
+  fidelity: derived-marked
+  verdict: split
+  corrected_statement:
+  - Where the wallet or an agent implements A2A, the agent shall keep audit trails for sensitive operations.
+  - The agent shall exclude credentials and unneeded personal data from its logs.
+  applicability: core
+  priority: P2
+  priority_reason: Agent audit trail; ties to accountability
+  clusters:
+  - K10
+  - K16
+  - K09
+  verification_ready: 'yes'
+  note: Two obligations (trail, log content); derivation stated. Overlaps NFR-033/035 and NFR-013.
+- id: EBW-NFR-033
+  fidelity: derived-unmarked
+  verdict: ok
+  applicability: core
+  priority: P1
+  priority_reason: Principal-vs-agent attribution is hard to retrofit
+  clusters:
+  - K10
+  - K16
+  - K03
+  verification_ready: 'needs-source-check: derivation from OIDF text not marked'
+  note: Key AI-first accountability requirement; mark provenance derived if statement exceeds quote.
+- id: EBW-NFR-034
+  fidelity: ok
+  verdict: ok
+  applicability: core
+  priority: P2
+  priority_reason: Standard-derived token binding; local
+  clusters:
+  - K11
+  - K16
+  - K08
+  verification_ready: 'yes'
+  note: DPoP-specific; conditional on using DPoP.
+- id: EBW-NFR-035
+  fidelity: ok
+  verdict: merge-with:EBW-NFR-013
+  applicability: core
+  priority: P2
+  priority_reason: Logs denied requests too; overlaps transaction logging
+  clusters:
+  - K10
+  - K16
+  - K11
+  verification_ready: 'yes'
+  note: NFR-013 logs failed wallet transactions; keep only if agent scope needed.
+- id: EBW-NFR-036
+  fidelity: derived-marked
+  verdict: reword
+  corrected_statement:
+  - Where the wallet or an agent holds a DID authentication key, it shall protect the key against disclosure and should use hardware-backed storage, an HSM or a secure enclave where available.
+  applicability: core
+  priority: P2
+  priority_reason: Key protection for agent keys; source SHOULD
+  clusters:
+  - K04
+  - K16
+  - K11
+  verification_ready: 'yes'
+  note: Statement hardens SHOULD to shall for disclosure protection; hardware part conditional.
+- id: EBW-NFR-037
+  fidelity: ok
+  verdict: ok
+  applicability: wallet-general
+  priority: P1
+  priority_reason: 'In-force: user control; limits employer-managed model'
+  clusters:
+  - K02
+  - K09
+  - K04
+  verification_ready: needs-legal-review
+  note: Rationale on employer control is interpretation; Article 5a(14) concerns EUDI wallet, not EBW.
+- id: EBW-NFR-038
+  fidelity: ok
+  verdict: merge-with:EBW-LEG-008
+  applicability: wallet-general
+  priority: P2
+  priority_reason: Data minimisation by wallet provider
+  clusters:
+  - K09
+  - K13
+  verification_ready: 'yes'
+  note: Overlaps LEG-008/LEG-007 on minimal processing; keep if wallet-usage telemetry is specific.
+- id: EBW-NFR-039
+  fidelity: ok
+  verdict: merge-with:EBW-NFR-013
+  applicability: core
+  priority: P1
+  priority_reason: Logging policy shapes audit design; Council text
+  clusters:
+  - K10
+  - K12
+  - K04
+  verification_ready: needs-legal-review
+  note: Council position, not adopted law; overlaps NFR-013 and NFR-002.
+- id: EBW-NFR-040
+  fidelity: ok
+  verdict: merge-with:EBW-NFR-014
+  applicability: core
+  priority: P2
+  priority_reason: Provider log access limit; Council text
+  clusters:
+  - K10
+  - K09
+  verification_ready: needs-legal-review
+  note: Overlaps NFR-014 consent condition; Council divergence. Verify against Commission proposal.
+- id: EBW-NFR-041
+  fidelity: ok
+  verdict: ok
+  applicability: core
+  priority: P1
+  priority_reason: Proof-bound logs make authority provable; hard to retrofit
+  clusters:
+  - K10
+  - K03
+  - K04
+  verification_ready: needs-legal-review
+  note: Council text; overlaps NFR-033 conceptually.
+- id: EBW-NFR-042
+  fidelity: ok
+  verdict: merge-with:EBW-NFR-001
+  applicability: core
+  priority: P2
+  priority_reason: Import complements export; portability
+  clusters:
+  - K15
+  - K09
+  verification_ready: needs-legal-review
+  note: Council text; export is NFR-001/LEG-014, import is additional obligation.
+- id: EBW-NFR-043
+  fidelity: ok
+  verdict: merge-with:EBW-NFR-016
+  applicability: wallet-general
+  priority: P1
+  priority_reason: Unlinkability across relying parties shapes presentation design
+  clusters:
+  - K09
+  - K01
+  - K07
+  verification_ready: 'yes'
+  note: Overlaps NFR-016 revocation unlinkability; this one is broader.
+- id: EBW-NFR-044
+  fidelity: ok
+  verdict: reword
+  corrected_statement:
+  - The wallet provider shall design wallet and trust-service components so that cryptographic algorithms and parameters can be replaced without redesigning surrounding protocols or systems.
+  applicability: provider-side
+  priority: P1
+  priority_reason: Crypto agility is hard to retrofit
+  clusters:
+  - K11
+  - K04
+  verification_ready: 'needs-source-check: roadmap only recommends'
+  note: Derivation marked; make measurable (algorithm replaceable by configuration).
+- id: EBW-NFR-045
+  fidelity: derived-marked
+  verdict: reword
+  corrected_statement:
+  - Where the wallet provider relies on run-time cipher suite negotiation, it shall prevent downgrade attacks.
+  applicability: provider-side
+  priority: P3
+  priority_reason: Design caution; no hard obligation in source
+  clusters:
+  - K11
+  - K08
+  verification_ready: 'needs-source-check: source is a caution, not a rule'
+  note: Quote is a clarification of a definition, not an obligation; consider drop or "should".
+- id: EBW-NFR-046
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P2
+  priority_reason: Hybrid PQC is standard-derived; local crypto choice
+  clusters:
+  - K11
+  - K04
+  verification_ready: 'yes'
+- id: EBW-NFR-047
+  fidelity: broader-than-quote
+  verdict: reword
+  corrected_statement:
+  - The trust service provider should use only SOG-IS recommended cryptographic mechanisms and key sizes to generate new signatures and seals.
+  applicability: provider-side
+  priority: P2
+  priority_reason: Algorithm baseline; source says should
+  clusters:
+  - K11
+  - K14
+  verification_ready: 'needs-source-check: legacy-interoperability clause not in quote'
+  note: Source says "should"; legacy exception unsupported.
+- id: EBW-NFR-048
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P3
+  priority_reason: Local logging detail
+  clusters:
+  - K10
+  - K11
+  verification_ready: 'yes'
+- id: EBW-NFR-049
+  fidelity: ok
+  verdict: merge-with:EBW-NFR-014
+  applicability: wallet-general
+  priority: P2
+  priority_reason: Retention reference for logs
+  clusters:
+  - K10
+  - K09
+  verification_ready: 'yes'
+  note: Overlaps NFR-014/013 on log availability; retention horizon is additional.
+- id: EBW-NFR-050
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P2
+  priority_reason: Key protection for registered delivery signing; local
+  clusters:
+  - K04
+  - K12
+  - K14
+  verification_ready: 'needs-source-check: EAL4 and FIPS date not in quote'
+- id: EBW-NFR-051
+  fidelity: ok
+  verdict: merge-with:EBW-NFR-021
+  applicability: provider-side
+  priority: P2
+  priority_reason: Same ECCG mechanisms rule for ERDS
+  clusters:
+  - K11
+  - K12
+  verification_ready: 'yes'
+  note: Same rule as NFR-021 for wallet attestations; generalise.
+- id: EBW-NFR-052
+  fidelity: broader-than-quote
+  verdict: reword
+  corrected_statement:
+  - The national register of wallet-relying parties shall provide security functions that ensure the availability and integrity of its common API and the information available through it.
+  applicability: authority-side
+  priority: P3
+  priority_reason: Register API availability; Member State duty
+  clusters:
+  - K05
+  - K11
+  - K08
+  verification_ready: 'needs-source-check: security by default and design'
+  note: Authority-side register operator duty; not design of EBW.

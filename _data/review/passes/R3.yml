@@ -1,0 +1,578 @@
+- id: EBW-BIZ-001
+  fidelity: broader-than-quote
+  verdict: ok
+  applicability: authority-side
+  priority: P1
+  priority_reason: In-proposal adoption mandate drives acceptance architecture
+  clusters:
+  - K15
+  - K12
+  - K08
+  verification_ready: needs-source-check
+  note: Quote fragment lacks 24 months, action list and procedures scope; verify Article 16(1) text.
+- id: EBW-BIZ-002
+  fidelity: ok
+  verdict: recategorise:GOV
+  applicability: provider-side
+  priority: P3
+  priority_reason: Organisational transparency duty of provider
+  clusters:
+  - K13
+  - K14
+  verification_ready: 'yes'
+  note: Not a business requirement; overlaps EBW-GOV-008 on limitation notice.
+- id: EBW-DAT-001
+  fidelity: derived-unmarked
+  verdict: reword
+  corrected_statement: A data space participant offering data or data services shall sufficiently describe dataset content, use restrictions, licences, collection methodology, quality and uncertainty, in
+    machine-readable format where applicable.
+  applicability: horizontal
+  priority: P3
+  priority_reason: Data Act duty on data space participants, peripheral
+  clusters:
+  - K08
+  - K01
+  verification_ready: needs-source-check
+  note: '''Machine-readable'' and ''where applicable'' absent from quote; unclear that EBW participates in a data space.'
+- id: EBW-DAT-002
+  fidelity: broader-than-quote
+  verdict: ok
+  applicability: horizontal
+  priority: P3
+  priority_reason: Data Act duty, only indirect wallet link
+  clusters:
+  - K08
+  verification_ready: needs-source-check
+  note: Terms of use and quality of service not in quote; consider merging with DAT-001.
+- id: EBW-LEG-001
+  fidelity: ok
+  verdict: reword
+  corrected_statement: The European Business Wallet provider shall comply with the cybersecurity risk-management and incident-reporting requirements of Directive (EU) 2022/2555 that apply to it.
+  applicability: provider-side
+  priority: P1
+  priority_reason: Umbrella proposal duty; sets NIS2 regime for wallet
+  clusters:
+  - K11
+  - K13
+  verification_ready: 'yes'
+  note: Untestable as written; refined by LEG-021..028. Specify applicable NIS2 duties.
+- id: EBW-LEG-002
+  fidelity: broader-than-quote
+  verdict: split
+  corrected_statement:
+  - The Member State shall not deny an electronic signature legal effect or admissibility as evidence in legal proceedings solely because it is electronic or does not meet qualified signature requirements.
+  - The Member State shall give a qualified electronic signature the equivalent legal effect of a handwritten signature.
+  applicability: authority-side
+  priority: P2
+  priority_reason: Legal effect given by Member State law
+  clusters:
+  - K14
+  - K15
+  - K04
+  verification_ready: 'yes'
+  note: Quote supports only the QES clause; the non-discrimination clause is Art 25(1).
+- id: EBW-LEG-003
+  fidelity: ok
+  verdict: reword
+  corrected_statement: The Member State shall presume a qualified electronic seal to ensure integrity of the data to which it is linked and correctness of the origin of that data.
+  applicability: authority-side
+  priority: P2
+  priority_reason: Legal effect of seals underpins sealing function
+  clusters:
+  - K14
+  - K04
+  verification_ready: 'yes'
+  note: '''Linked data'' collides with K01 linked-data vocabulary; effect rather than duty.'
+- id: EBW-LEG-004
+  fidelity: broader-than-quote
+  verdict: split
+  corrected_statement:
+  - The Member State shall give a qualified electronic attestation of attributes the same legal effect as a lawfully issued paper attestation.
+  - The Member State shall give an electronic attestation of attributes issued by a public sector body responsible for an authentic source the same legal effect as a lawfully issued paper attestation.
+  applicability: authority-side
+  priority: P2
+  priority_reason: Member State recognition of attestation legal effect
+  clusters:
+  - K07
+  - K15
+  - K06
+  verification_ready: needs-source-check
+  note: Quote covers qualified attestations only; public-sector authentic-source limb needs a separate quote; check paragraph.
+- id: EBW-LEG-005
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P2
+  priority_reason: Local privacy constraint on attestation provider data use
+  clusters:
+  - K09
+  - K13
+  verification_ready: needs-source-check
+  note: Check whether duty applies to all or only qualified attestation providers; related to NFR-010.
+- id: EBW-LEG-006
+  fidelity: derived-unmarked
+  verdict: reword
+  corrected_statement: The registrar shall keep records of registered information, of issued access and registration certificates, and of subsequent changes for 10 years.
+  applicability: authority-side
+  priority: P3
+  priority_reason: Registrar record keeping, procedural
+  clusters:
+  - K05
+  - K10
+  verification_ready: needs-source-check
+  note: Quote is only '10 years'; instrument for 'Article 10' unnamed; record list unsupported. Tension with GDPR erasure (LEG-013).
+- id: EBW-LEG-007
+  fidelity: derived-unmarked
+  verdict: reword
+  corrected_statement: The controller of personal data processing in the wallet shall implement technical and organisational measures that give effect to data-protection principles such as data minimisation.
+  applicability: wallet-general
+  priority: P2
+  priority_reason: GDPR design duty; generic restatement
+  clusters:
+  - K09
+  verification_ready: 'yes'
+  note: Assigns duty to wallet provider; GDPR addresses the controller, whose role is undecided for EBW.
+- id: EBW-LEG-008
+  fidelity: broader-than-quote
+  verdict: reword
+  corrected_statement: The controller shall ensure that by default only personal data necessary for each specific purpose are processed, as to amount, extent, storage period and accessibility.
+  applicability: wallet-general
+  priority: P2
+  priority_reason: Privacy-by-default shapes default disclosure settings
+  clusters:
+  - K09
+  - K06
+  verification_ready: 'yes'
+  note: Controller role assumption; amount/extent/storage/accessibility not in quote. Overlaps LEG-007, LEG-010.
+- id: EBW-LEG-009
+  fidelity: derived-unmarked
+  verdict: reword
+  corrected_statement: The controller shall ensure that by default personal data of natural persons are not made accessible to an indefinite number of natural persons without the individual's intervention.
+  applicability: wallet-general
+  priority: P1
+  priority_reason: Constrains public directory design for representatives' data
+  clusters:
+  - K09
+  - K06
+  - K05
+  verification_ready: needs-legal-review
+  note: '''Published from the wallet'' not in quote; wallet does not publish, the directory does. ''Indefinite number'' vague.'
+- id: EBW-LEG-010
+  fidelity: ok
+  verdict: merge-with:EBW-FUN-032
+  applicability: wallet-general
+  priority: P2
+  priority_reason: Attribute-level disclosure per presentation, standard-like
+  clusters:
+  - K09
+  - K01
+  verification_ready: 'yes'
+  note: Duplicates selective disclosure in FUN-004/FUN-032/NFR-017; 'purpose stated by relying party' needs registration certificate.
+- id: EBW-LEG-011
+  fidelity: ok
+  verdict: ok
+  applicability: wallet-general
+  priority: P2
+  priority_reason: Retention design for logs and backups
+  clusters:
+  - K09
+  - K10
+  verification_ready: 'yes'
+  note: Conflicts with log retention duties (LEG-006, NFR-014); needs defined periods per record class.
+- id: EBW-LEG-012
+  fidelity: broader-than-quote
+  verdict: reword
+  corrected_statement: The controller shall inform the data subject of action taken on a rights request without undue delay and within one month of receipt, extendable as permitted by Article 12(3).
+  applicability: provider-side
+  priority: P3
+  priority_reason: Procedural response deadline
+  clusters:
+  - K09
+  verification_ready: 'yes'
+  note: Omits extension option of Art 12(3); controller role assumed.
+- id: EBW-LEG-013
+  fidelity: ok
+  verdict: ok
+  applicability: wallet-general
+  priority: P1
+  priority_reason: Erasure vs append-only logs shapes storage design
+  clusters:
+  - K09
+  - K10
+  - K04
+  verification_ready: needs-legal-review
+  note: Art 17(3) exceptions and retention duties (LEG-006) must be reconciled; ground list not in statement.
+- id: EBW-LEG-014
+  fidelity: ok
+  verdict: ok
+  applicability: wallet-general
+  priority: P2
+  priority_reason: Portability affects export formats and provider switching
+  clusters:
+  - K09
+  - K15
+  - K01
+  verification_ready: 'yes'
+  note: Overlaps NFR-001 and FUN-031; Art 20 limited to data provided by the subject.
+- id: EBW-LEG-015
+  fidelity: derived-unmarked
+  verdict: reword
+  corrected_statement: Where a controller takes a decision based solely on automated processing, including by an agent acting with wallet credentials, that produces legal or similarly significant effects
+    on a natural person, it shall provide human intervention, an opportunity to express a view and a means to contest.
+  applicability: wallet-general
+  priority: P2
+  priority_reason: Conditional AI agent duty, protects natural persons only
+  clusters:
+  - K16
+  - K03
+  - K09
+  verification_ready: needs-legal-review
+  note: Quote is Art 22(1) only; agent scope and safeguards from 22(3) derived. Art 22 protects natural persons, not legal persons.
+- id: EBW-LEG-016
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P3
+  priority_reason: Organisational record, no design impact
+  clusters:
+  - K09
+  - K13
+  verification_ready: needs-source-check
+  note: Rationale claim on small-organisation derogation not supported by quote.
+- id: EBW-LEG-017
+  fidelity: ok
+  verdict: ok
+  applicability: wallet-general
+  priority: P2
+  priority_reason: Local security measure; vague 'as appropriate to risk'
+  clusters:
+  - K11
+  - K09
+  verification_ready: 'yes'
+  note: Overlaps LEG-035 encryption; Art 32 requires measures 'as appropriate', not unconditionally.
+- id: EBW-LEG-018
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P3
+  priority_reason: Procedural 72-hour notification
+  clusters:
+  - K11
+  - K09
+  - K13
+  verification_ready: 'yes'
+  note: Requires processor-to-controller notice too; align with other incident clocks (LEG-027, LEG-039).
+- id: EBW-LEG-019
+  fidelity: broader-than-quote
+  verdict: ok
+  applicability: provider-side
+  priority: P3
+  priority_reason: Procedural duty; channel inference weak
+  clusters:
+  - K09
+  - K12
+  verification_ready: 'yes'
+  note: Quote lacks 'clear and plain language'; exceptions in Art 34(3) omitted.
+- id: EBW-LEG-020
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P3
+  priority_reason: Organisational pre-processing assessment
+  clusters:
+  - K09
+  - K13
+  verification_ready: 'yes'
+  note: Rationale presumes DPIA is triggered; conditional on high risk.
+- id: EBW-LEG-021
+  fidelity: ok
+  verdict: reword
+  corrected_statement: Each qualified trust service provider shall comply with NIS2 obligations for essential entities regardless of its size.
+  applicability: authority-side
+  priority: P2
+  priority_reason: Classification sets NIS2 regime for QTSPs
+  clusters:
+  - K13
+  - K11
+  verification_ready: 'yes'
+  note: Statement of status, not an obligation; rephrase as duty. Wallet providers covered separately by LEG-001.
+- id: EBW-LEG-022
+  fidelity: broader-than-quote
+  verdict: reword
+  corrected_statement: The management body of a trust service provider shall approve the cybersecurity risk-management measures taken to comply with Article 21 of Directive (EU) 2022/2555.
+  applicability: provider-side
+  priority: P3
+  priority_reason: Organisational governance duty
+  clusters:
+  - K13
+  - K11
+  verification_ready: 'yes'
+  note: Quote supports only approval; oversight and liability not quoted.
+- id: EBW-LEG-023
+  fidelity: ok
+  verdict: merge-with:EBW-OPS-005
+  applicability: provider-side
+  priority: P2
+  priority_reason: Baseline security management duty
+  clusters:
+  - K11
+  - K13
+  verification_ready: 'yes'
+  note: Overlaps eIDAS risk-management duty OPS-003/005; two obligations (21(1) and 21(2)(a)).
+- id: EBW-LEG-024
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P2
+  priority_reason: Continuity measures shape resilient service design
+  clusters:
+  - K11
+  verification_ready: 'yes'
+- id: EBW-LEG-025
+  fidelity: broader-than-quote
+  verdict: ok
+  applicability: provider-side
+  priority: P2
+  priority_reason: Supply chain duty; local implementation
+  clusters:
+  - K11
+  - K13
+  verification_ready: needs-source-check
+  note: Quote truncated; 21(3) elements (supplier quality, secure development) not shown.
+- id: EBW-LEG-026
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P2
+  priority_reason: Crypto policy underpins key and algorithm governance
+  clusters:
+  - K11
+  - K04
+  verification_ready: 'yes'
+  note: Post-quantum remark in rationale is not source-backed.
+- id: EBW-LEG-027
+  fidelity: broader-than-quote
+  verdict: merge-with:EBW-OPS-006
+  applicability: provider-side
+  priority: P2
+  priority_reason: 24-hour incident clock for QTSPs
+  clusters:
+  - K11
+  - K13
+  verification_ready: needs-source-check
+  note: 24 hours absent from quote. Duplicates OPS-004/006; clarify which regime prevails after NIS2.
+- id: EBW-LEG-028
+  fidelity: broader-than-quote
+  verdict: split
+  corrected_statement:
+  - Where appropriate, the trust service provider shall notify recipients of its services without undue delay of significant incidents likely to adversely affect the services.
+  - Where appropriate, the trust service provider shall inform recipients of measures or remedies they can take in response to significant cyber threats.
+  applicability: provider-side
+  priority: P3
+  priority_reason: Customer notification, procedural
+  clusters:
+  - K11
+  - K12
+  verification_ready: 'yes'
+  note: Quote supports notification of incidents only; threat-mitigation advice is separate (23(2)).
+- id: EBW-LEG-029
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P3
+  priority_reason: Sector-specific contract clause, financial entities only
+  clusters:
+  - K13
+  - K15
+  verification_ready: needs-legal-review
+  note: DORA duty rests on the financial entity to include the clause; check whether wallet providers are ICT third-party providers.
+- id: EBW-LEG-030
+  fidelity: ok
+  verdict: merge-with:EBW-LEG-029
+  applicability: provider-side
+  priority: P3
+  priority_reason: Sector-specific contract clause
+  clusters:
+  - K13
+  - K11
+  verification_ready: needs-legal-review
+  note: Same DORA contract-clause group as LEG-029; combine into one DORA contractual requirement.
+- id: EBW-LEG-031
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P2
+  priority_reason: Exit strategy drives portability and interoperability design
+  clusters:
+  - K15
+  - K13
+  - K01
+  verification_ready: needs-legal-review
+  note: Applies only to critical or important functions; derived applicability to EBW.
+- id: EBW-LEG-032
+  fidelity: derived-unmarked
+  verdict: reword
+  corrected_statement: Where a wallet is a product with digital elements within the scope of the CRA, the wallet provider shall demonstrate compliance with both the CRA essential cybersecurity requirements
+    and eIDAS Article 5a security requirements.
+  applicability: wallet-general
+  priority: P2
+  priority_reason: Dual conformity route affects certification approach
+  clusters:
+  - K14
+  - K11
+  verification_ready: needs-legal-review
+  note: Recital is non-binding ('should'); statement 'shall' overstates; CRA scope for wallets unconfirmed.
+- id: EBW-LEG-033
+  fidelity: broader-than-quote
+  verdict: reword
+  corrected_statement: Where applicable, the wallet provider shall ensure that vulnerabilities can be addressed through security updates, including automatic updates enabled by default with an opt-out,
+    notification of available updates and temporary postponement.
+  applicability: wallet-general
+  priority: P2
+  priority_reason: Update channel mandatory; local design
+  clusters:
+  - K11
+  - K04
+  verification_ready: 'yes'
+  note: Opt-out, notification and postpone details not in quote; 'where applicable' dropped.
+- id: EBW-LEG-034
+  fidelity: broader-than-quote
+  verdict: ok
+  applicability: wallet-general
+  priority: P2
+  priority_reason: Access control baseline; local
+  clusters:
+  - K11
+  - K03
+  - K04
+  verification_ready: 'yes'
+  note: '''Report on possible unauthorised access'' is not in quote; overlaps NFR-012.'
+- id: EBW-LEG-035
+  fidelity: broader-than-quote
+  verdict: split
+  corrected_statement:
+  - The wallet provider shall protect the confidentiality of stored, transmitted or otherwise processed data by encrypting relevant data at rest and in transit using state-of-the-art mechanisms.
+  - The wallet provider shall protect the integrity of stored, transmitted or otherwise processed data and report on corruptions.
+  applicability: wallet-general
+  priority: P2
+  priority_reason: Encryption and integrity baseline
+  clusters:
+  - K11
+  - K09
+  verification_ready: 'yes'
+  note: Merges confidentiality (Annex I(2)(e)) and integrity/reporting (2)(f); quote covers confidentiality only.
+- id: EBW-LEG-036
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P2
+  priority_reason: SBOM mandatory but local process
+  clusters:
+  - K11
+  - K14
+  verification_ready: 'yes'
+- id: EBW-LEG-037
+  fidelity: broader-than-quote
+  verdict: ok
+  applicability: provider-side
+  priority: P3
+  priority_reason: Organisational disclosure policy
+  clusters:
+  - K11
+  - K13
+  verification_ready: 'yes'
+  note: Contact address (point 6) not in quote.
+- id: EBW-LEG-038
+  fidelity: broader-than-quote
+  verdict: split
+  corrected_statement:
+  - The wallet provider shall handle vulnerabilities of the wallet throughout a support period of at least five years, or the expected use time if shorter.
+  - The wallet provider shall keep each security update available for at least ten years after issuance or for the remainder of the support period, whichever is longer.
+  applicability: provider-side
+  priority: P2
+  priority_reason: Support period sets long-term maintenance commitment
+  clusters:
+  - K11
+  - K13
+  - K07
+  verification_ready: 'yes'
+  note: Quote covers only 5-year support period; update availability is Art 13(9).
+- id: EBW-LEG-039
+  fidelity: broader-than-quote
+  verdict: ok
+  applicability: provider-side
+  priority: P2
+  priority_reason: Mandatory reporting process; applicable since Sept 2026
+  clusters:
+  - K11
+  - K13
+  verification_ready: needs-source-check
+  note: Quote omits CSIRT/ENISA recipients; add 72-hour and final reports; align with other incident clocks.
+- id: EBW-LEG-040
+  fidelity: derived-unmarked
+  verdict: ok
+  applicability: horizontal
+  priority: P3
+  priority_reason: Conditional on high-risk classification of agents
+  clusters:
+  - K16
+  - K10
+  verification_ready: needs-legal-review
+  note: Assumes agents are high-risk AI systems; obligation falls on the AI provider, not the wallet.
+- id: EBW-LEG-041
+  fidelity: ok
+  verdict: ok
+  applicability: horizontal
+  priority: P2
+  priority_reason: Stop control maps to mandate revocation
+  clusters:
+  - K16
+  - K03
+  - K07
+  verification_ready: needs-legal-review
+  note: Conditional on high-risk classification; mandate revocation mapping is derived.
+- id: EBW-LEG-042
+  fidelity: ok
+  verdict: ok
+  applicability: horizontal
+  priority: P3
+  priority_reason: AI provider duty, untestable 'resilient'
+  clusters:
+  - K16
+  - K11
+  verification_ready: needs-legal-review
+  note: Not testable without defined robustness criteria; conditional on high-risk status.
+- id: EBW-LEG-043
+  fidelity: ok
+  verdict: ok
+  applicability: horizontal
+  priority: P3
+  priority_reason: Generic AI Act transparency, outside wallet core
+  clusters:
+  - K16
+  verification_ready: 'yes'
+  note: Applies to any AI system interacting with persons; not limited to agents with credentials.
+- id: EBW-LEG-044
+  fidelity: ok
+  verdict: drop
+  applicability: authority-side
+  priority: P3
+  priority_reason: AI provider registration; no wallet design impact
+  clusters:
+  - K16
+  - K13
+  verification_ready: needs-legal-review
+  note: Not a wallet or trust service obligation; evidence use is speculative. Keep only if an AI-compliance attestation is specified.
+- id: EBW-TRN-001
+  fidelity: derived-unmarked
+  verdict: reword
+  corrected_statement: Until 36 months after entry into force, a public sector body may choose not to offer the qualified electronic registered delivery service, provided it supports alternative solutions
+    meeting eIDAS qualified delivery requirements with a gateway to the wallet delivery service.
+  applicability: authority-side
+  priority: P3
+  priority_reason: Transitional rule for public bodies
+  clusters:
+  - K15
+  - K12
+  verification_ready: needs-source-check
+  note: Quote says 'may choose not to offer'; 'shall support' and gateway duty not supported by quote.

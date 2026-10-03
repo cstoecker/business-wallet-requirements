@@ -1,13 +1,15 @@
 #!/usr/bin/env python3
 """Merge reviewer shards (YAML lists) into _data/review/requirement-review.yml and validate them.
-Usage: scripts/merge_review.py R1.yml R2.yml ...   Review entries are proposals; requirement files are not changed."""
+Usage: scripts/merge_review.py [R1.yml ...]  (default: every file in _data/review/passes/)   Review entries are proposals; requirement files are not changed."""
 import os, re, sys, yaml
 ROOT = os.path.join(os.path.dirname(__file__), "..")
 ids = {f[:-3] for f in os.listdir(os.path.join(ROOT, "_requirements"))}
 clusters = {c["code"] for c in yaml.safe_load(open(os.path.join(ROOT, "_data/graph/clusters.yml")))}
 cats = {c["code"] for c in yaml.safe_load(open(os.path.join(ROOT, "_data/categories.yml")))}
 out, seen, problems = [], set(), []
-for p in sys.argv[1:]:
+import glob
+files = sys.argv[1:] or sorted(glob.glob(os.path.join(ROOT, "_data/review/passes/*.yml")))
+for p in files:
     for e in yaml.safe_load(open(p, encoding="utf-8")):
         rid = e["id"]
         if rid not in ids: problems.append(f"unknown id {rid}"); continue

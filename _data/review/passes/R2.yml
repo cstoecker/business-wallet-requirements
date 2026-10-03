@@ -1,0 +1,636 @@
+- id: EBW-FUN-001
+  fidelity: ok
+  verdict: ok
+  applicability: core
+  priority: P1
+  priority_reason: Core B2B/B2G channel in proposal; shapes architecture
+  clusters:
+  - K12
+  - K08
+  verification_ready: needs-source-check (quote not stored in file)
+- id: EBW-FUN-002
+  fidelity: ok
+  verdict: reword
+  corrected_statement: When owner information changes, the European Business Wallet provider shall send the update to the European Digital Directory within one working day of the change.
+  applicability: provider-side
+  priority: P2
+  priority_reason: Local interface deadline; directory sync design
+  clusters:
+  - K06
+  - K05
+  verification_ready: needs-source-check (one working day vs Art 10(5) wording)
+  note: Obligation is on provider; "updates of owner information" unspecified; deadline starting event missing.
+- id: EBW-FUN-003
+  fidelity: ok
+  verdict: split
+  corrected_statement:
+  - The European Business Wallet shall enable the owner to request, obtain, store, select and delete electronic attestations of attributes.
+  - The European Business Wallet shall enable the owner to combine, share and present electronic attestations of attributes securely.
+  applicability: core
+  priority: P1
+  priority_reason: Baseline wallet functions in proposal
+  clusters:
+  - K07
+  - K01
+  - K08
+  verification_ready: needs-source-check (quote not stored in file)
+  note: Bundles nine verbs; "issue" differs from "request/obtain" (owner as issuer is FUN-007).
+- id: EBW-FUN-004
+  fidelity: ok
+  verdict: ok
+  applicability: core
+  priority: P1
+  priority_reason: Selective disclosure shapes credential formats
+  clusters:
+  - K01
+  - K09
+  verification_ready: needs-source-check (quote not stored in file)
+- id: EBW-FUN-005
+  fidelity: ok
+  verdict: ok
+  applicability: core
+  priority: P1
+  priority_reason: Qualified sign/seal from wallet drives key custody
+  clusters:
+  - K04
+  - K14
+  verification_ready: needs-source-check (quote not stored in file)
+- id: EBW-FUN-006
+  fidelity: ok
+  verdict: ok
+  applicability: core
+  priority: P2
+  priority_reason: Qualified time stamp integration, local service call
+  clusters:
+  - K10
+  - K14
+  verification_ready: needs-source-check (quote not stored in file)
+- id: EBW-FUN-007
+  fidelity: ok
+  verdict: ok
+  applicability: core
+  priority: P1
+  priority_reason: Owner as issuer changes wallet role model
+  clusters:
+  - K07
+  - K02
+  - K01
+  verification_ready: needs-source-check (quote not stored in file)
+- id: EBW-FUN-008
+  fidelity: ok
+  verdict: reword
+  corrected_statement: The European Business Wallet shall enable an attestation issued by the owner to reference other attestations, so that a verifier can validate the chain of attestations.
+  applicability: core
+  priority: P2
+  priority_reason: Chaining feature; format detail follows
+  clusters:
+  - K01
+  - K03
+  verification_ready: needs-source-check (what "chain" means in Art 5(1)(g))
+  note: '"Relevant" and "chain" undefined; not testable as written.'
+- id: EBW-FUN-009
+  fidelity: ok
+  verdict: ok
+  applicability: core
+  priority: P1
+  priority_reason: Attestation-based authentication affects identity model
+  clusters:
+  - K03
+  - K06
+  verification_ready: needs-source-check (quote not stored in file)
+- id: EBW-FUN-010
+  fidelity: ok
+  verdict: ok
+  applicability: core
+  priority: P1
+  priority_reason: Multi-user access is central to B2B model
+  clusters:
+  - K03
+  - K02
+  verification_ready: needs-source-check (quote not stored in file)
+- id: EBW-FUN-011
+  fidelity: ok
+  verdict: ok
+  applicability: core
+  priority: P1
+  priority_reason: Relying-party authorisation by owner; shapes protocols
+  clusters:
+  - K03
+  - K09
+  - K08
+  verification_ready: needs-source-check (quote not stored in file)
+- id: EBW-FUN-012
+  fidelity: ok
+  verdict: ok
+  applicability: core
+  priority: P2
+  priority_reason: Dashboard is UI feature over delivery service
+  clusters:
+  - K12
+  - K10
+  verification_ready: needs-source-check (quote not stored in file)
+  note: Dashboard not technology-neutral issue; fine.
+- id: EBW-FUN-013
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P2
+  priority_reason: Standalone delivery offering; commercial/interface decision
+  clusters:
+  - K12
+  - K15
+  verification_ready: needs-source-check (quote not stored in file)
+- id: EBW-FUN-014
+  fidelity: ok
+  verdict: ok
+  applicability: core
+  priority: P1
+  priority_reason: Machine interfaces shape API and agent design
+  clusters:
+  - K08
+  - K16
+  verification_ready: needs-source-check (quote not stored in file)
+  note: Rationale mentions agent use; source cites only automation.
+- id: EBW-FUN-015
+  fidelity: broader-than-quote
+  verdict: reword
+  corrected_statement: The European Business Wallet provider shall ensure that the wallet automatically detects and rejects role conflicts, over-delegation and expired authorisations when an authorisation
+    is used.
+  applicability: core
+  priority: P2
+  priority_reason: Real-time prevention detail; verify quote scope
+  clusters:
+  - K03
+  - K16
+  verification_ready: 'needs-source-check (Art 6(2)(b) second indent: detection vs prevention, "real time")'
+  note: Statement may overstate "automatically ... in real time"; untestable without defined conflict rules.
+- id: EBW-FUN-016
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P3
+  priority_reason: Directory data-quality duty; organisational
+  clusters:
+  - K06
+  - K13
+  verification_ready: needs-source-check (quote not stored in file)
+  note: Overlaps FUN-002; consider merge-with FUN-002 as directory maintenance pair.
+- id: EBW-FUN-017
+  fidelity: ok
+  verdict: recategorise:BIZ
+  applicability: authority-side
+  priority: P3
+  priority_reason: Duty of public bodies; adoption, not design
+  clusters:
+  - K15
+  - K12
+  verification_ready: needs-source-check (quote not stored in file)
+  note: Not a wallet function; overlaps BIZ-001/TRN-001 on public sector acceptance. "shall have" is ambiguous.
+- id: EBW-FUN-018
+  fidelity: ok
+  verdict: recategorise:OPS
+  applicability: provider-side
+  priority: P2
+  priority_reason: Provider internal database; local to QTSP
+  clusters:
+  - K07
+  - K13
+  verification_ready: needs-source-check (quote not stored in file)
+  note: Trust service provider duty, not wallet function; not applicable to wallet itself.
+- id: EBW-FUN-019
+  fidelity: ok
+  verdict: recategorise:LEG
+  applicability: horizontal
+  priority: P2
+  priority_reason: Definition of AdES properties; standards-implemented
+  clusters:
+  - K14
+  - K04
+  verification_ready: needs-source-check (quote not stored in file)
+  note: Definitional ("shall be" property), not a design obligation on a named actor; testable only via standards.
+- id: EBW-FUN-020
+  fidelity: ok
+  verdict: ok
+  applicability: relying-party-side
+  priority: P2
+  priority_reason: Validation system property; local to validators
+  clusters:
+  - K14
+  - K05
+  verification_ready: needs-source-check (quote not stored in file)
+  note: Actor is validation system; correct as technical requirement.
+- id: EBW-FUN-021
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P2
+  priority_reason: Validation service output format; local
+  clusters:
+  - K14
+  - K08
+  verification_ready: needs-source-check (quote not stored in file)
+- id: EBW-FUN-022
+  fidelity: ok
+  verdict: recategorise:LEG
+  applicability: horizontal
+  priority: P2
+  priority_reason: Definition of AdESeal properties; standards-implemented
+  clusters:
+  - K14
+  - K04
+  verification_ready: needs-source-check (quote not stored in file)
+  note: Definitional; same issue as FUN-019. Seal "control with high confidence" is not directly testable.
+- id: EBW-FUN-023
+  fidelity: ok
+  verdict: split
+  corrected_statement:
+  - The qualified electronic time stamp shall bind date and time to data so that undetected change is precluded.
+  - The qualified electronic time stamp shall use a time source linked to Coordinated Universal Time.
+  - The qualified electronic time stamp shall be signed or sealed by the qualified trust service provider.
+  applicability: provider-side
+  priority: P2
+  priority_reason: Time stamp content; local to QTSP service
+  clusters:
+  - K10
+  - K14
+  verification_ready: needs-source-check (quote not stored in file)
+  note: Three obligations (binding, UTC time source, signing) in one.
+- id: EBW-FUN-024
+  fidelity: ok
+  verdict: split
+  corrected_statement:
+  - The qualified electronic registered delivery service shall identify the sender with a high level of confidence.
+  - The qualified electronic registered delivery service shall identify the addressee before delivery of the data.
+  applicability: provider-side
+  priority: P1
+  priority_reason: Delivery identification drives B2B/B2G addressing and wallet linkage
+  clusters:
+  - K12
+  - K06
+  verification_ready: needs-source-check (quote not stored in file)
+  note: Sender and addressee identification have different assurance (high confidence vs unspecified).
+- id: EBW-FUN-025
+  fidelity: ok
+  verdict: split
+  corrected_statement:
+  - The qualified electronic registered delivery service shall secure sending and receiving with an advanced electronic signature or seal of a qualified provider.
+  - The qualified electronic registered delivery service shall indicate any change of the data.
+  - The qualified electronic registered delivery service shall time-stamp sending, receipt and any change with a qualified electronic time stamp.
+  applicability: provider-side
+  priority: P1
+  priority_reason: Evidence production underpins legal effect of delivery
+  clusters:
+  - K12
+  - K10
+  verification_ready: needs-source-check (quote not stored in file)
+  note: 'Three obligations: signing, change indication, time-stamping.'
+- id: EBW-FUN-026
+  fidelity: ok
+  verdict: recategorise:TRU
+  applicability: authority-side
+  priority: P1
+  priority_reason: Authentic-source verification gates company-data attestations
+  clusters:
+  - K06
+  - K07
+  - K05
+  verification_ready: needs-source-check (quote not stored in file)
+  note: Obligation on Member States, not wallet; scope "at least Annex VI" fine. Verifiable by Member State implementation.
+- id: EBW-FUN-027
+  fidelity: ok
+  verdict: ok
+  applicability: wallet-general
+  priority: P2
+  priority_reason: Cross-border portability; interoperability principle
+  clusters:
+  - K15
+  - K07
+  verification_ready: needs-source-check (quote not stored in file)
+  note: Actor "provider of attestations" vs rationale "wallet portability" slightly mismatched.
+- id: EBW-FUN-028
+  fidelity: ok
+  verdict: ok
+  applicability: wallet-general
+  priority: P1
+  priority_reason: Key generation and proof of possession shape key custody
+  clusters:
+  - K04
+  - K11
+  verification_ready: needs-source-check (quote not stored in file)
+- id: EBW-FUN-029
+  fidelity: ok
+  verdict: split
+  corrected_statement:
+  - The wallet provider shall provide mechanisms, independent of wallet units, for secure identification and authentication of wallet users.
+  - The wallet provider shall ensure that wallet users can request revocation of their wallet unit attestations using those mechanisms.
+  applicability: wallet-general
+  priority: P2
+  priority_reason: Revocation channel independent of wallet; local mechanism
+  clusters:
+  - K04
+  - K07
+  - K11
+  verification_ready: needs-source-check (quote not stored in file)
+  note: 'Two obligations: independent authentication mechanisms and user-initiated revocation.'
+- id: EBW-FUN-030
+  fidelity: ok
+  verdict: recategorise:TRU
+  applicability: wallet-general
+  priority: P2
+  priority_reason: Wallet-side policy check; local logic
+  clusters:
+  - K05
+  - K09
+  - K03
+  verification_ready: needs-source-check (quote not stored in file)
+  note: Overlaps FUN-034 (same behaviour at wallet unit, ARF-derived); merge-with:EBW-FUN-034 candidate. "complies" is ambiguous on what is checked.
+- id: EBW-FUN-031
+  fidelity: ok
+  verdict: ok
+  applicability: wallet-general
+  priority: P2
+  priority_reason: Portability exception-laden; implementation detail
+  clusters:
+  - K04
+  - K15
+  - K09
+  verification_ready: needs-source-check (quote not stored in file)
+  note: '"Where technically feasible" weakens testability; keep as written.'
+- id: EBW-FUN-032
+  fidelity: ok
+  verdict: split
+  corrected_statement:
+  - The wallet solution shall support selective disclosure of attributes of person identification data and attestations.
+  - The wallet unit shall support proving possession of the private keys used in cryptographic bindings.
+  applicability: wallet-general
+  priority: P1
+  priority_reason: Selective disclosure and holder binding fix format choices
+  clusters:
+  - K01
+  - K09
+  - K04
+  verification_ready: needs-source-check (quote not stored in file)
+  note: Two obligations; overlaps FUN-004 (EBW-level selective disclosure) and FUN-028 (proof of possession).
+- id: EBW-FUN-033
+  fidelity: ok
+  verdict: recategorise:LEG
+  applicability: wallet-general
+  priority: P2
+  priority_reason: GDPR Art 17 support in wallet; local feature
+  clusters:
+  - K09
+  - K08
+  verification_ready: needs-source-check (quote not stored in file)
+  note: Two obligations (request protocol, display history); fine as one feature but could split.
+- id: EBW-FUN-034
+  fidelity: ok
+  verdict: merge-with:EBW-FUN-030
+  applicability: wallet-general
+  priority: P2
+  priority_reason: Standard-derived duplicate of FUN-030 check
+  clusters:
+  - K03
+  - K05
+  - K09
+  verification_ready: needs-source-check (quote not stored in file)
+  note: Standard-derived refinement of FUN-030; keep one with both sources.
+- id: EBW-INT-001
+  fidelity: narrower
+  verdict: drop
+  applicability: wallet-general
+  priority: P3
+  priority_reason: Pilot (WE BUILD) choice, not legal or product requirement
+  clusters:
+  - K08
+  - K15
+  verification_ready: needs-legal-review
+  note: Pilot-specific protocol pinning, S provenance; not a legal obligation or technology-neutral requirement. Move to architecture decision record.
+- id: EBW-INT-002
+  fidelity: ok
+  verdict: ok
+  applicability: core
+  priority: P1
+  priority_reason: Interoperability across EBW, EUDI and relying parties
+  clusters:
+  - K08
+  - K15
+  - K09
+  verification_ready: needs-source-check (quote not stored in file)
+  note: Overlaps FUN-003 (share/present) and FUN-009; not distinct enough.
+- id: EBW-INT-003
+  fidelity: ok
+  verdict: recategorise:FUN
+  applicability: core
+  priority: P1
+  priority_reason: Digital address anchors delivery and directory
+  clusters:
+  - K12
+  - K06
+  verification_ready: needs-source-check (quote not stored in file)
+  note: '"At least one unique digital address" is testable; belongs with delivery functions.'
+- id: EBW-INT-004
+  fidelity: ok
+  verdict: reword
+  corrected_statement: The provider of owner identification data shall issue it as a qualified electronic attestation, a public-sector authentic-source attestation or a Commission attestation, according
+    to issuer type, in a format listed in Annex II of Implementing Regulation (EU) 2024/2979.
+  applicability: provider-side
+  priority: P2
+  priority_reason: Format of owner identification data; issuer-side
+  clusters:
+  - K01
+  - K06
+  - K07
+  verification_ready: needs-legal-review (issuer-type mapping vs Art 8(3))
+  note: Mixes standard conformity and three issuer-type mappings; ambiguous grammar.
+- id: EBW-INT-005
+  fidelity: ok
+  verdict: recategorise:FUN
+  applicability: core
+  priority: P1
+  priority_reason: Minimum legal-entity data set shapes data model
+  clusters:
+  - K06
+  - K01
+  verification_ready: needs-source-check (quote not stored in file)
+- id: EBW-INT-006
+  fidelity: ok
+  verdict: ok
+  applicability: core
+  priority: P1
+  priority_reason: EUID reuse fixes identifier design
+  clusters:
+  - K06
+  verification_ready: needs-source-check (quote not stored in file)
+  note: Merge candidate with INT-007 (identifier assignment rule pair).
+- id: EBW-INT-007
+  fidelity: ok
+  verdict: split
+  corrected_statement:
+  - Where no European Unique Identifier exists, a unique identifier shall be created in accordance with the implementing act.
+  - The creation of unique identifiers shall ensure that no owner is attributed more than one unique identifier.
+  applicability: core
+  priority: P1
+  priority_reason: Unique identifier fallback fixes identity model
+  clusters:
+  - K06
+  verification_ready: needs-source-check (Art 9(2) vs 9(4) separately)
+  note: Combines creation rule and no-duplicate guarantee; implementing act not yet defined.
+- id: EBW-INT-008
+  fidelity: ok
+  verdict: split
+  corrected_statement:
+  - The European Digital Directory shall provide a machine-readable interface exposed through an API for automated system-to-system communication.
+  - The European Digital Directory shall provide a secure web-based portal for authenticated and authorised users.
+  applicability: authority-side
+  priority: P2
+  priority_reason: Directory API plus portal; Commission-operated
+  clusters:
+  - K08
+  - K06
+  - K05
+  verification_ready: needs-source-check (quote not stored in file)
+  note: API and web portal are two obligations; actor is the Directory (Commission).
+- id: EBW-INT-009
+  fidelity: ok
+  verdict: split
+  corrected_statement:
+  - The Commission shall assess the equivalence of assurances before adopting an implementing act recognising third-country business wallets.
+  - Third-country business wallets recognised by an implementing act shall be interoperable with the eIDAS trust framework and support at least identification, authentication and attestation exchange.
+  applicability: authority-side
+  priority: P3
+  priority_reason: Commission procedure for third-country recognition
+  clusters:
+  - K15
+  - K05
+  verification_ready: needs-source-check (quote not stored in file)
+  note: Procedural duty plus conditions on future act; no wallet design impact.
+- id: EBW-INT-010
+  fidelity: ok
+  verdict: ok
+  applicability: authority-side
+  priority: P2
+  priority_reason: Cross-border recognition, in force; acceptance principle
+  clusters:
+  - K15
+  - K05
+  verification_ready: needs-source-check (quote not stored in file)
+  note: Aggregates three item types; Art 24a(1),(9) may differ per item.
+- id: EBW-INT-011
+  fidelity: ok
+  verdict: ok
+  applicability: authority-side
+  priority: P3
+  priority_reason: Limit on MS demands in public services
+  clusters:
+  - K15
+  - K14
+  verification_ready: needs-source-check (quote not stored in file)
+  note: Applies to Member States only, no wallet design effect.
+- id: EBW-INT-012
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P2
+  priority_reason: Fixes seal certificate profile; local to CA
+  clusters:
+  - K14
+  - K01
+  verification_ready: needs-source-check (quote not stored in file)
+  note: Two obligations (meet Annex III; no additional mandatory requirements); second is prohibition on states.
+- id: EBW-INT-013
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P3
+  priority_reason: Optional interconnection framework between delivery providers
+  clusters:
+  - K12
+  - K14
+  verification_ready: needs-source-check (quote not stored in file)
+  note: Conditional on providers agreeing; two obligations (comply, confirm by CAB).
+- id: EBW-INT-014
+  fidelity: ok
+  verdict: merge-with:EBW-INT-010
+  applicability: authority-side
+  priority: P2
+  priority_reason: Cross-border recognition of authentic-source attestations
+  clusters:
+  - K15
+  - K05
+  - K07
+  verification_ready: needs-source-check (quote not stored in file)
+  note: Same mechanism as INT-010; keep separate only if attestation type needs tracing.
+- id: EBW-INT-015
+  fidelity: ok
+  verdict: split
+  corrected_statement:
+  - The qualified electronic attestation of attributes shall contain the content listed in Annex V of Regulation (EU) 910/2014, including a qualified indication, issuer data, subject data, attributes and
+    validity period.
+  - The qualified electronic attestation of attributes shall contain a unique attestation code, the issuer qualified signature or seal, and the locations of the supporting certificate and status service.
+  applicability: core
+  priority: P1
+  priority_reason: Minimum QEAA content fixes data model
+  clusters:
+  - K01
+  - K07
+  verification_ready: needs-source-check (quote not stored in file)
+  note: Nine mandatory elements; test per Annex V item rather than single compound shall.
+- id: EBW-INT-016
+  fidelity: ok
+  verdict: merge-with:EBW-INT-015
+  applicability: authority-side
+  priority: P3
+  priority_reason: Anti-fragmentation clause, no design effect
+  clusters:
+  - K15
+  - K01
+  verification_ready: needs-source-check (quote not stored in file)
+  note: Prohibition on Member States; restate as constraint within INT-015 or drop.
+- id: EBW-INT-017
+  fidelity: ok
+  verdict: split
+  corrected_statement:
+  - The public sector body issuing an attestation shall include in it the content listed in Annex VII.
+  - The public sector body issuing an attestation shall use a qualified certificate indicating its legal basis as responsible for the authentic source and data identifying that source.
+  applicability: provider-side
+  priority: P2
+  priority_reason: Public issuer attestation content; local to issuer
+  clusters:
+  - K01
+  - K05
+  - K06
+  verification_ready: needs-source-check (quote not stored in file)
+  note: Combines Annex VII content, qualified certificate, legal basis and source identification.
+- id: EBW-INT-018
+  fidelity: ok
+  verdict: merge-with:EBW-INT-019
+  applicability: provider-side
+  priority: P2
+  priority_reason: Issuer interface to wallets; protocol-level
+  clusters:
+  - K08
+  - K07
+  verification_ready: needs-source-check (quote not stored in file)
+  note: Same obligation as INT-019 for a different issuer type; ensure interface requirement mapped to protocols.
+- id: EBW-INT-019
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P2
+  priority_reason: Issuer interface to wallets; protocol-level
+  clusters:
+  - K08
+  - K07
+  verification_ready: needs-source-check (quote not stored in file)
+  note: 'Wording narrow: wallets includes EBW? source says EUDI wallets only; applicability to EBW needs legal check.'
+- id: EBW-INT-020
+  fidelity: ok
+  verdict: ok
+  applicability: authority-side
+  priority: P3
+  priority_reason: Commission publication duty; no wallet design effect
+  clusters:
+  - K01
+  - K15
+  verification_ready: needs-source-check (quote not stored in file)
+  note: Two catalogues in one statement; also not strictly "shall"-testable on wallet.

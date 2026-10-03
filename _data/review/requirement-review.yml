@@ -4216,6 +4216,28 @@
   corrected_statement:
   - Communication and distribution of information via BRIS shall include measures ensuring non-repudiation of origin and of receipt, confidentiality, integrity, security event logging, and authentication and authorisation of users and systems.
   note: Quote covers non-repudiation only; other measures need quotes. Standard-derived (S), not a wallet duty.
+- id: EBW-NFR-055
+  verdict: ok
+  priority: P2
+  priority_reason: mandatory for EUDI Wallet providers; sets the bar for the business wallet
+  clusters:
+  - K15
+  - K02
+  applicability: wallet-general
+  fidelity: ok
+  verification_ready: true
+  note: Accessibility of the personal wallet; see NFR-056 for the business wallet.
+- id: EBW-NFR-056
+  verdict: ok
+  priority: P2
+  priority_reason: assumption to verify against the proposal annex and Directive 2019/882 scope
+  clusters:
+  - K15
+  - K02
+  applicability: core
+  fidelity: derived-unmarked
+  verification_ready: needs-legal-review
+  note: Derivation class D; the proposal text read has no accessibility provision for persons with disabilities.
 - id: EBW-OPS-001
   verdict: ok
   priority: P2

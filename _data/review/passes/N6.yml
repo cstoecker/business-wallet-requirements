@@ -1,0 +1,333 @@
+- id: EBW-INT-063
+  fidelity: broader-than-quote
+  verdict: ok
+  applicability: authority-side
+  priority: P3
+  priority_reason: "Commission publication duty; no wallet design impact"
+  clusters: [K01, K17]
+  verification_ready: needs-source-check
+  note: "Quote omits 'all official languages'; confirm full Article 16b(8) text."
+- id: EBW-INT-064
+  fidelity: broader-than-quote
+  verdict: reword
+  corrected_statement: "The Commission shall adopt implementing acts specifying the technical specifications, taxonomy and multilingual template of the EU Company Certificate and the digital EU power of attorney, including compatibility with the European Digital Identity Wallet."
+  applicability: authority-side
+  priority: P2
+  priority_reason: "Future specs will fix certificate and mandate format"
+  clusters: [K01, K03, K17]
+  verification_ready: needs-source-check
+  note: "Quote covers only compatibility clause; deadline and taxonomy unquoted. Rationale mixes publication-status finding into rationale."
+- id: EBW-INT-065
+  fidelity: ok
+  verdict: merge-with:EBW-TRU-095
+  applicability: authority-side
+  priority: P2
+  priority_reason: "Directive duty on registers; wallet-consumed output format"
+  clusters: [K01, K17, K15]
+  verification_ready: needs-legal-review
+  note: "Same wallet-compatibility duty as TRU-095 (certificate) and TRU-098 (authentication); extracts vs certificate differ only in object."
+- id: EBW-INT-066
+  fidelity: ok
+  verdict: ok
+  applicability: authority-side
+  priority: P3
+  priority_reason: "Register-to-register interconnection; indirect wallet effect"
+  clusters: [K08, K01, K17]
+  verification_ready: yes
+  note: "Overlaps EBW-INT-058 and NFR-054 only thematically."
+- id: EBW-INT-067
+  fidelity: broader-than-quote
+  verdict: reword
+  corrected_statement: "The EU Company Certificate and the digital EU power of attorney of an EU Inc. shall be compatible with the European Digital Identity Wallets."
+  applicability: authority-side
+  priority: P2
+  priority_reason: "Proposal; extends wallet-compatible company evidence to EU Inc"
+  clusters: [K01, K03, K17]
+  verification_ready: needs-source-check
+  note: "Quote says European Digital Identity Wallets, statement says Business Wallets 'where available'; unsupported. Near-duplicate of INT-064/TRU-095."
+- id: EBW-LEG-051
+  fidelity: ok
+  verdict: ok
+  applicability: core
+  priority: P2
+  priority_reason: "Proposal; legal effect only, no design change"
+  clusters: [K06, K17]
+  verification_ready: needs-legal-review
+  note: "Check statement says qualified EAA equivalence only; quote truncated."
+- id: EBW-LEG-052
+  fidelity: ok
+  verdict: ok
+  applicability: relying-party-side
+  priority: P1
+  priority_reason: "In force; forces non-wallet fallback channels"
+  clusters: [K15, K17]
+  verification_ready: yes
+  note: "Obligation is on service providers, not the wallet; drives counterparty-without-wallet design."
+- id: EBW-LEG-053
+  fidelity: broader-than-quote
+  verdict: reword
+  corrected_statement: "Data sent and received using a qualified electronic registered delivery service shall enjoy the presumption of integrity, of sending by the identified sender, of receipt by the identified addressee, and of the accuracy of the date and time."
+  applicability: provider-side
+  priority: P1
+  priority_reason: "In force; legal weight of registered delivery evidence"
+  clusters: [K12, K10, K17]
+  verification_ready: needs-source-check
+  note: "Quote ends at the sender clause; verify full list. 'shall enjoy' is a legal effect, not a design duty."
+- id: EBW-LEG-054
+  fidelity: ok
+  verdict: ok
+  applicability: authority-side
+  priority: P2
+  priority_reason: "In force; governs non-EU trust service acceptance"
+  clusters: [K17, K05, K15]
+  verification_ready: yes
+  note: "The only-where restriction is implied by Article structure; fine."
+- id: EBW-LEG-055
+  fidelity: ok
+  verdict: ok
+  applicability: authority-side
+  priority: P3
+  priority_reason: "Legal formality exemption; no design impact"
+  clusters: [K17, K15]
+  verification_ready: yes
+- id: EBW-LEG-056
+  fidelity: ok
+  verdict: reword
+  corrected_statement: "Business-related communication of an EU Inc., in digital or paper form, shall contain company name, EUID, registered office address, digital correspondence address and digital presence address."
+  applicability: core
+  priority: P2
+  priority_reason: "Proposal; EUID in communications, local template impact"
+  clusters: [K17, K06, K12]
+  verification_ready: needs-source-check
+  note: "Verify list of items in Article 29(1) is complete; 'digital presence address' definition unclear."
+- id: EBW-NFR-053
+  fidelity: ok
+  verdict: ok
+  applicability: authority-side
+  priority: P3
+  priority_reason: "Binds registers and authorities, not wallets"
+  clusters: [K09, K17]
+  verification_ready: yes
+  note: "Rationale claims wallet-side relying parties must respect it; not supported by quote."
+- id: EBW-NFR-054
+  fidelity: broader-than-quote
+  verdict: reword
+  corrected_statement: "Communication and distribution of information via BRIS shall include measures ensuring non-repudiation of origin and of receipt, confidentiality, integrity, security event logging, and authentication and authorisation of users and systems."
+  applicability: authority-side
+  priority: P3
+  priority_reason: "BRIS operational standard; wallet impact only by mirroring"
+  clusters: [K11, K10, K08]
+  verification_ready: needs-source-check
+  note: "Quote covers non-repudiation only; other measures need quotes. Standard-derived (S), not a wallet duty."
+- id: EBW-TRU-078
+  fidelity: ok
+  verdict: ok
+  applicability: core
+  priority: P1
+  priority_reason: "Proposal; primary identity credential shapes EBW model"
+  clusters: [K06, K07, K02]
+  verification_ready: needs-legal-review
+- id: EBW-TRU-079
+  fidelity: ok
+  verdict: ok
+  applicability: authority-side
+  priority: P2
+  priority_reason: "Proposal; authentic-source discovery list"
+  clusters: [K05, K06]
+  verification_ready: needs-legal-review
+- id: EBW-TRU-080
+  fidelity: ok
+  verdict: merge-with:EBW-INT-051
+  applicability: authority-side
+  priority: P3
+  priority_reason: "Publication procedure for Commission"
+  clusters: [K17, K05]
+  verification_ready: needs-legal-review
+  note: "Publication of equivalence list belongs with the equivalence act requirement (INT-051/INT-009)."
+- id: EBW-TRU-081
+  fidelity: ok
+  verdict: merge-with:EBW-TRU-015
+  applicability: authority-side
+  priority: P2
+  priority_reason: "Proposal; uniqueness rule for third-country identity"
+  clusters: [K17, K06]
+  verification_ready: needs-legal-review
+  note: "Duplicate of TRU-015 (one set of identification data for third-country operators)."
+- id: EBW-TRU-082
+  fidelity: ok
+  verdict: ok
+  applicability: authority-side
+  priority: P2
+  priority_reason: "In force; assurance vocabulary baseline"
+  clusters: [K17, K14]
+  verification_ready: yes
+  note: "Binds notified schemes; wallet consumes the level."
+- id: EBW-TRU-083
+  fidelity: ok
+  verdict: ok
+  applicability: wallet-general
+  priority: P1
+  priority_reason: "In force; assurance level high shapes wallet architecture"
+  clusters: [K14, K04, K17]
+  verification_ready: yes
+  note: "Applies to natural-person EUDI wallets; EBW applicability to be decided in K02."
+- id: EBW-TRU-084
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P2
+  priority_reason: "Standard-derived identity proofing detail"
+  clusters: [K17, K06, K14]
+  verification_ready: needs-source-check
+  note: "Statement combines name, legal form, identifier and evidence check; quote covers only identifier. Consider split."
+- id: EBW-TRU-085
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P2
+  priority_reason: "Standard-derived; revocable representation binding"
+  clusters: [K03, K07, K17]
+  verification_ready: yes
+  note: "Requirement is testable but passive; actor is eID scheme provider."
+- id: EBW-TRU-086
+  fidelity: broader-than-quote
+  verdict: split
+  corrected_statement:
+    - "The issuer of a non-qualified electronic attestation of attributes under the rulebook shall include its EBWOID in the header of every such attestation."
+    - "The relying party shall verify the EBWOID in the header of an attestation of this kind before relying on it."
+  applicability: core
+  priority: P2
+  priority_reason: "Ecosystem rulebook; binds secondary identifiers to primary"
+  clusters: [K17, K05, K01]
+  verification_ready: needs-source-check
+  note: "Quote only supports issuer inclusion; relying-party verification is unquoted. Rulebook scope (rb-duns) is narrower than 'every EAA'."
+- id: EBW-TRU-087
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P3
+  priority_reason: "Ecosystem rulebook; GS1-specific credential chain"
+  clusters: [K17, K01, K06]
+  verification_ready: yes
+  note: "Technology-specific credential type names should stay out of statement; currently neutral."
+- id: EBW-TRU-088
+  fidelity: broader-than-quote
+  verdict: reword
+  corrected_statement: "Member States shall ensure that electronic identification means issued under an approved scheme, or issued elsewhere and recognised for cross-border authentication, can be used by applicants who are Union citizens in online company procedures."
+  applicability: authority-side
+  priority: P2
+  priority_reason: "In force; register-side eID acceptance, wallet-consumed"
+  clusters: [K17, K15, K06]
+  verification_ready: needs-source-check
+  note: "Statement drops the 'Union citizens' restriction present in quote."
+- id: EBW-TRU-089
+  fidelity: ok
+  verdict: ok
+  applicability: authority-side
+  priority: P3
+  priority_reason: "Directive procedural rule for Member States"
+  clusters: [K03, K17]
+  verification_ready: yes
+  note: "Rationale implication about wallet evidence is derived, not in quote."
+- id: EBW-TRU-090
+  fidelity: ok
+  verdict: ok
+  applicability: authority-side
+  priority: P3
+  priority_reason: "Member State procedural rule"
+  clusters: [K17, K15]
+  verification_ready: yes
+  note: "Rationale claims wallet must produce qualified signatures; derived, not in quote."
+- id: EBW-TRU-091
+  fidelity: ok
+  verdict: ok
+  applicability: authority-side
+  priority: P3
+  priority_reason: "Branch registration procedure for Member States"
+  clusters: [K17, K06]
+  verification_ready: yes
+- id: EBW-TRU-092
+  fidelity: ok
+  verdict: ok
+  applicability: authority-side
+  priority: P2
+  priority_reason: "In force; verifiable filings drive seal and signature use"
+  clusters: [K17, K08]
+  verification_ready: yes
+- id: EBW-TRU-093
+  fidelity: ok
+  verdict: ok
+  applicability: authority-side
+  priority: P1
+  priority_reason: "In force; EUID is primary legal-person identifier"
+  clusters: [K17, K06]
+  verification_ready: yes
+- id: EBW-TRU-094
+  fidelity: ok
+  verdict: split
+  corrected_statement:
+    - "Member States shall ensure that registers issue EU Company Certificates."
+    - "Member States shall ensure that the EU Company Certificate is accepted in all Member States as sufficient evidence, at the time of issuance, of the company's incorporation and listed information."
+  applicability: authority-side
+  priority: P1
+  priority_reason: "In force; cross-border company evidence anchors EBW onboarding"
+  clusters: [K17, K06, K15]
+  verification_ready: needs-source-check
+  note: "Quote supports only acceptance clause; issuance by registers needs its own quote. Overlap with EBW-FUN-048."
+- id: EBW-TRU-095
+  fidelity: broader-than-quote
+  verdict: split
+  corrected_statement:
+    - "Member States shall ensure that the electronic EU Company Certificate is authenticated by means of trust services under Regulation (EU) No 910/2014."
+    - "Member States shall ensure that the electronic EU Company Certificate is compatible with the European Digital Identity Wallet."
+  applicability: authority-side
+  priority: P1
+  priority_reason: "In force; certificate format and authentication shape wallet storage"
+  clusters: [K01, K17, K05]
+  verification_ready: needs-source-check
+  note: "Quote supports only authentication; compatibility clause needs quote. Duplicates EBW-INT-065 and LEG-046 pattern."
+- id: EBW-TRU-096
+  fidelity: ok
+  verdict: ok
+  applicability: authority-side
+  priority: P3
+  priority_reason: "Paper form detail; limited wallet relevance"
+  clusters: [K17, K12]
+  verification_ready: yes
+- id: EBW-TRU-097
+  fidelity: ok
+  verdict: ok
+  applicability: authority-side
+  priority: P2
+  priority_reason: "In force; ex-ante verification underpins mandate trust"
+  clusters: [K03, K17, K05]
+  verification_ready: yes
+  note: "Related to LEG-045/046/047 and TRU-058; not a duplicate."
+- id: EBW-TRU-098
+  fidelity: broader-than-quote
+  verdict: merge-with:EBW-INT-065
+  applicability: authority-side
+  priority: P2
+  priority_reason: "In force; authenticated register extracts usable as evidence"
+  clusters: [K01, K17, K05]
+  verification_ready: needs-source-check
+  note: "Quote gives purpose clause only; 'trust services' authentication not in quote. Same object as INT-065."
+- id: EBW-TRU-099
+  fidelity: ok
+  verdict: ok
+  applicability: core
+  priority: P1
+  priority_reason: "Proposal; makes EBW signing function a filing channel"
+  clusters: [K08, K04, K17]
+  verification_ready: needs-legal-review
+  note: "The if-applicable condition is ambiguous; clarify it."
+- id: EBW-TRU-100
+  fidelity: broader-than-quote
+  verdict: reword
+  corrected_statement: "All filings of documents and information with the business register of an EU Inc. shall be made fully online using electronic identification means under Regulation (EU) No 910/2014 or Business Wallets."
+  applicability: core
+  priority: P1
+  priority_reason: "Proposal; wallet as authentication channel for filings"
+  clusters: [K17, K15, K08]
+  verification_ready: needs-source-check
+  note: "Quote truncated at 'Business'; confirm 'Wallets' wording. Scope limited to EU Inc."

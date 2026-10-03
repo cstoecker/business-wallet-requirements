@@ -1,0 +1,594 @@
+- id: EBW-AIF-001
+  fidelity: derived-marked
+  verdict: reword
+  corrected_statement: Where a wallet or agent exposes wallet functions as MCP tools, the wallet shall require explicit user approval before invoking a tool that signs, seals or submits, and shall indicate
+    each tool invocation to the user.
+  applicability: wallet-general
+  priority: P2
+  priority_reason: Derived from SHOULD; local UI control
+  clusters:
+  - K16
+  - K03
+  - K10
+  verification_ready: needs-legal-review
+  note: Derived obligation strengthens MCP SHOULD; legal or financial effect is undefined and untestable.
+- id: EBW-AIF-002
+  fidelity: ok
+  verdict: ok
+  applicability: wallet-general
+  priority: P2
+  priority_reason: Standard MUST; local client check
+  clusters:
+  - K16
+  - K11
+  verification_ready: 'yes'
+- id: EBW-AIF-003
+  fidelity: ok
+  verdict: split
+  corrected_statement:
+  - Where a wallet or agent implements A2A, the agent shall not treat the TASK_STATE_AUTH_REQUIRED transition by itself as authorisation for any operation.
+  - Where a wallet or agent implements A2A, the agent shall identify and verify the mandate authorising each operation before performing it.
+  applicability: wallet-general
+  priority: P2
+  priority_reason: A2A-derived; second clause is a design duty
+  clusters:
+  - K16
+  - K03
+  verification_ready: 'yes'
+  note: 'Two obligations: no implicit authorisation, and defined authorisation identification.'
+- id: EBW-AIF-004
+  fidelity: derived-unmarked
+  verdict: reword
+  corrected_statement: Where an agent acts on behalf of a user or legal person, it shall use explicit delegation that proves its delegated scope and shall be identifiable as distinct from the principal.
+  applicability: core
+  priority: P1
+  priority_reason: Shapes delegation model; hard to retrofit
+  clusters:
+  - K03
+  - K16
+  - K10
+  verification_ready: needs-source-check
+  note: Rationale does not state the derivation; quote covers only distinct identifiability and scope proof, not a ban on impersonation.
+- id: EBW-AIF-005
+  fidelity: derived-unmarked
+  verdict: reword
+  corrected_statement: Where an agent presents an agent identity to a relying party, the wallet shall include the underlying model and version in the presented identity data.
+  applicability: relying-party-side
+  priority: P3
+  priority_reason: Risk-based access aid; no mandatory basis
+  clusters:
+  - K16
+  - K06
+  - K01
+  verification_ready: needs-source-check
+  note: Quote truncated; "capabilities" and risk-based access control are not evidenced. Statement tests unclear.
+- id: EBW-AIF-006
+  fidelity: broader-than-quote
+  verdict: split
+  corrected_statement:
+  - Where an agent delegates sub-tasks to other agents, a resource server shall be able to cryptographically verify the delegation path back to the original principal.
+  - Each delegation step shall grant no more scope than the preceding step.
+  applicability: core
+  priority: P2
+  priority_reason: Chain verification shapes delegation design
+  clusters:
+  - K03
+  - K16
+  - K04
+  verification_ready: needs-source-check
+  note: '"Each step shall narrow scope" is not in the quote; split verification from attenuation.'
+- id: EBW-AIF-007
+  fidelity: ok
+  verdict: ok
+  applicability: wallet-general
+  priority: P2
+  priority_reason: Standard-derived distinction
+  clusters:
+  - K16
+  - K03
+  verification_ready: 'yes'
+- id: EBW-AIF-008
+  fidelity: ok
+  verdict: merge-with:EBW-AIF-006
+  applicability: wallet-general
+  priority: P2
+  priority_reason: Same chain control as AIF-006 attenuation
+  clusters:
+  - K03
+  - K16
+  - K11
+  verification_ready: 'yes'
+  note: Re-binding context is a mechanism for the scope narrowing split out of AIF-006; fold them.
+- id: EBW-AIF-009
+  fidelity: ok
+  verdict: ok
+  applicability: wallet-general
+  priority: P2
+  priority_reason: Local authn/authz separation
+  clusters:
+  - K16
+  - K03
+  - K08
+  verification_ready: 'yes'
+  note: Overlaps AIF-003 principle; keep because protocol-specific to W3C DID profile.
+- id: EBW-AIF-010
+  fidelity: derived-unmarked
+  verdict: reword
+  corrected_statement: A mandate granted to an authorised representative or AI agent shall state the principal, the agent, the permitted actions, the limits on those actions and the validity period in a
+    machine-readable form.
+  applicability: core
+  priority: P1
+  priority_reason: Mandate content shapes data model
+  clusters:
+  - K03
+  - K01
+  - K16
+  verification_ready: needs-source-check
+  note: Quote is only the Article 2 mandate definition; limits and validity are derived but rationale does not mark it. Check against MAN-series requirements.
+- id: EBW-AIF-011
+  fidelity: ok
+  verdict: ok
+  applicability: core
+  priority: P1
+  priority_reason: Proposal Article 5(2) shapes core design
+  clusters:
+  - K11
+  - K16
+  - K13
+  verification_ready: needs-legal-review
+  note: Derives obligation for provider from optional-functionality wording; verify Article 5(2) text.
+- id: EBW-AIF-012
+  fidelity: derived-unmarked
+  verdict: reword
+  corrected_statement: The European Business Wallet shall record in its transaction log, for each action performed by an AI agent, the agent identifier and the mandate relied on.
+  applicability: core
+  priority: P1
+  priority_reason: Log distinguishability is architecture-shaping
+  clusters:
+  - K10
+  - K16
+  - K03
+  verification_ready: needs-source-check
+  note: Quote only says automatic interaction is allowed; logging of agent identifier and mandate is a derivation. Relates to NFR-002.
+- id: EBW-AIF-013
+  fidelity: ok
+  verdict: merge-with:EBW-AIF-004
+  applicability: wallet-general
+  priority: P2
+  priority_reason: Same separate-identity rule as AIF-004
+  clusters:
+  - K03
+  - K16
+  - K06
+  verification_ready: 'yes'
+  note: AIF-004 (distinct and identifiable) and AIF-013 (own identifier as actor) state the same obligation.
+- id: EBW-AIF-014
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P2
+  priority_reason: Key separation shapes custody architecture
+  clusters:
+  - K04
+  - K16
+  - K03
+  verification_ready: 'yes'
+  note: Quote is AP2 specific (Agent Provider signing key, Trusted Surface); generalise terms.
+- id: EBW-AIF-015
+  fidelity: derived-unmarked
+  verdict: reword
+  corrected_statement: The mandate and authorisation system shall not give an authorised representative or AI agent possession of the owner's private keys of the wallet unit.
+  applicability: core
+  priority: P1
+  priority_reason: Recital-based; fixes custody boundary
+  clusters:
+  - K04
+  - K03
+  - K06
+  verification_ready: needs-legal-review
+  note: Recital 18 wording is about preserving identity integrity; ban on possession of keys is a stronger derivation. Recitals are non-binding.
+- id: EBW-AIF-016
+  fidelity: ok
+  verdict: ok
+  applicability: wallet-general
+  priority: P2
+  priority_reason: Consent step is local UI design
+  clusters:
+  - K03
+  - K16
+  - K04
+  verification_ready: 'yes'
+- id: EBW-AIF-017
+  fidelity: ok
+  verdict: merge-with:EBW-AIF-016
+  applicability: wallet-general
+  priority: P3
+  priority_reason: Deterministic-consent detail of AIF-016
+  clusters:
+  - K16
+  - K03
+  verification_ready: needs-source-check
+  note: Quote fragment "following role MUST be non-agentic" lacks the role; "non-deterministic AI model" in statement is a gloss.
+- id: EBW-AIF-018
+  fidelity: ok
+  verdict: ok
+  applicability: wallet-general
+  priority: P2
+  priority_reason: Fail-safe verifier design; hard to test
+  clusters:
+  - K16
+  - K03
+  - K11
+  verification_ready: 'yes'
+  note: Testable only by architecture review; "AI model" needs definition.
+- id: EBW-AIF-019
+  fidelity: derived-unmarked
+  verdict: reword
+  corrected_statement: The verifier or the wallet shall enforce the limits of a mandate on each action an AI agent attempts, without relying on the agent's own compliance.
+  applicability: wallet-general
+  priority: P2
+  priority_reason: Enforcement location shapes architecture
+  clusters:
+  - K03
+  - K16
+  - K11
+  verification_ready: needs-source-check
+  note: Quote is threat-model statement, not enforcement duty; derivation not marked. Overlaps AIF-018.
+- id: EBW-AIF-020
+  fidelity: ok
+  verdict: ok
+  applicability: relying-party-side
+  priority: P2
+  priority_reason: Standard-derived fail-closed rule
+  clusters:
+  - K03
+  - K16
+  - K01
+  verification_ready: 'yes'
+- id: EBW-AIF-021
+  fidelity: ok
+  verdict: ok
+  applicability: relying-party-side
+  priority: P3
+  priority_reason: Payment-specific budget constraint
+  clusters:
+  - K03
+  - K16
+  - K07
+  verification_ready: 'yes'
+  note: AP2 payment mandate specific; not general to business wallet; consider dropping if no payment scope.
+- id: EBW-AIF-022
+  fidelity: ok
+  verdict: ok
+  applicability: wallet-general
+  priority: P3
+  priority_reason: AP2 payment-flow rule
+  clusters:
+  - K03
+  - K16
+  - K08
+  verification_ready: needs-source-check
+  note: Quote refers to Shopping Agents and Open Payment or Checkout Mandates; statement generalises.
+- id: EBW-AIF-023
+  fidelity: ok
+  verdict: ok
+  applicability: wallet-general
+  priority: P2
+  priority_reason: Minimisation for mandates; selective disclosure
+  clusters:
+  - K09
+  - K01
+  - K16
+  verification_ready: 'yes'
+- id: EBW-AIF-024
+  fidelity: ok
+  verdict: reword
+  corrected_statement: A mandate for an AI agent shall carry an expiry and the issuer shall not set it later than needed to complete the assigned task.
+  applicability: wallet-general
+  priority: P2
+  priority_reason: Short validity limits damage
+  clusters:
+  - K07
+  - K03
+  - K16
+  verification_ready: 'yes'
+  note: '"No later than the time needed" is hard to test.'
+- id: EBW-AIF-025
+  fidelity: derived-unmarked
+  verdict: reword
+  corrected_statement: A mandate shall state whether the AI agent may sub-delegate and the maximum number of delegation steps, and a verifier shall reject a delegation chain that exceeds that maximum.
+  applicability: core
+  priority: P2
+  priority_reason: Over-delegation prevention; extension of AP2
+  clusters:
+  - K03
+  - K16
+  - K07
+  verification_ready: needs-source-check
+  note: Quote only says delegation is possible; the depth limit is a derivation not marked as such. Overlaps AIF-006.
+- id: EBW-AIF-026
+  fidelity: broader-than-quote
+  verdict: ok
+  applicability: wallet-general
+  priority: P2
+  priority_reason: Receipt supports audit; standard-derived
+  clusters:
+  - K10
+  - K16
+  - K08
+  verification_ready: needs-source-check
+  note: Hash reference of mandate in receipt not in quote.
+- id: EBW-AIF-027
+  fidelity: derived-unmarked
+  verdict: reword
+  corrected_statement: The parties to an agent-initiated transaction shall retain the open mandate, the closed mandate and the receipt for a defined retention period.
+  applicability: wallet-general
+  priority: P2
+  priority_reason: Evidence retention drives log design
+  clusters:
+  - K10
+  - K16
+  - K03
+  verification_ready: needs-legal-review
+  note: Retention duty and period are unstated; "non-repudiable" is legal conclusion. Overlaps NFR-002, NFR-014.
+- id: EBW-AIF-028
+  fidelity: derived-unmarked
+  verdict: reword
+  corrected_statement: Where an AI agent is a high-risk AI system, a mandate shall be able to define thresholds above which a natural person must approve, and the wallet shall withhold the action until
+    approval.
+  applicability: wallet-general
+  priority: P2
+  priority_reason: Conditional on high-risk classification; mandate design aid
+  clusters:
+  - K03
+  - K16
+  - K10
+  verification_ready: needs-legal-review
+  note: Art 14(3) does not require thresholds; derivation unmarked, applies only if high-risk. Overlaps EBW-LEG-041.
+- id: EBW-AIF-029
+  fidelity: ok
+  verdict: drop
+  applicability: provider-side
+  priority: P3
+  priority_reason: Organisational training duty; no design impact
+  clusters:
+  - K16
+  - K13
+  verification_ready: needs-source-check
+  note: Art 4 applies to AI providers and deployers generally; no wallet design effect. Quote truncated ("to their best extent" dropped).
+- id: EBW-AIF-030
+  fidelity: derived-unmarked
+  verdict: reword
+  corrected_statement: Where an AI system used with a European Business Wallet is high-risk under Article 6 of Regulation (EU) 2024/1689, its provider shall establish, document and maintain a risk management
+    system over the whole lifecycle.
+  applicability: provider-side
+  priority: P3
+  priority_reason: Conditional AI Act provider process; no wallet design
+  clusters:
+  - K16
+  - K11
+  - K13
+  verification_ready: needs-legal-review
+  note: Rationale states conditional high-risk scope but statement does not; add scope.
+- id: EBW-AIF-031
+  fidelity: derived-unmarked
+  verdict: reword
+  corrected_statement: Where an AI system used with a European Business Wallet is high-risk under Article 6 of Regulation (EU) 2024/1689, its provider shall evaluate risks arising from intended use and
+    from reasonably foreseeable misuse.
+  applicability: provider-side
+  priority: P3
+  priority_reason: Conditional AI Act risk assessment duty
+  clusters:
+  - K16
+  - K11
+  verification_ready: needs-legal-review
+  note: Rationale states conditional high-risk scope but statement does not; add scope.
+- id: EBW-AIF-032
+  fidelity: derived-unmarked
+  verdict: reword
+  corrected_statement: Where an AI system used with a European Business Wallet is high-risk under Article 6 of Regulation (EU) 2024/1689, its provider shall test it against previously defined metrics and
+    probabilistic thresholds before placing it on the market or putting it into service.
+  applicability: provider-side
+  priority: P3
+  priority_reason: Conditional AI Act testing duty
+  clusters:
+  - K16
+  - K14
+  verification_ready: needs-legal-review
+  note: Rationale states conditional high-risk scope but statement does not; add scope.
+- id: EBW-AIF-033
+  fidelity: derived-unmarked
+  verdict: reword
+  corrected_statement: Where an AI system used with a European Business Wallet is high-risk under Article 6 of Regulation (EU) 2024/1689, its provider shall apply data governance practices to training,
+    validation and testing data, including data origin and bias examination.
+  applicability: provider-side
+  priority: P3
+  priority_reason: Conditional; training-data governance, no wallet core
+  clusters:
+  - K16
+  - K09
+  - K01
+  verification_ready: needs-legal-review
+  note: Rationale states conditional high-risk scope but statement does not; add scope.
+- id: EBW-AIF-034
+  fidelity: derived-unmarked
+  verdict: merge-with:EBW-LEG-040
+  applicability: provider-side
+  priority: P3
+  priority_reason: Duplicate of LEG-040 logging, adds purposes
+  clusters:
+  - K10
+  - K16
+  verification_ready: needs-legal-review
+  note: Art 12(2) purposes can be folded into LEG-040 as an additional clause.
+- id: EBW-AIF-035
+  fidelity: derived-unmarked
+  verdict: reword
+  corrected_statement: Where an AI system used with a European Business Wallet is high-risk under Article 6 of Regulation (EU) 2024/1689, its deployer shall keep the automatically generated logs under its
+    control for at least six months.
+  applicability: horizontal
+  priority: P3
+  priority_reason: Conditional deployer retention; log design hook
+  clusters:
+  - K10
+  - K16
+  - K09
+  verification_ready: needs-legal-review
+  note: Rationale states conditional high-risk scope but statement does not; add scope. Also GDPR retention tension.
+- id: EBW-AIF-036
+  fidelity: derived-unmarked
+  verdict: reword
+  corrected_statement: Where an AI system used with a European Business Wallet is high-risk under Article 6 of Regulation (EU) 2024/1689, its provider shall supply instructions for use in a digital format
+    stating provider identity, performance, limitations and human oversight measures.
+  applicability: provider-side
+  priority: P3
+  priority_reason: Conditional AI Act documentation duty
+  clusters:
+  - K16
+  - K13
+  verification_ready: needs-legal-review
+  note: Rationale states conditional high-risk scope but statement does not; add scope.
+- id: EBW-AIF-037
+  fidelity: derived-unmarked
+  verdict: merge-with:EBW-LEG-041
+  applicability: provider-side
+  priority: P3
+  priority_reason: Same Art 14 oversight as LEG-041 and AIF-028
+  clusters:
+  - K16
+  - K03
+  verification_ready: needs-legal-review
+  note: Art 14(1) design-for-oversight and 14(4) override duties overlap LEG-041; fold with AIF-038.
+- id: EBW-AIF-038
+  fidelity: derived-unmarked
+  verdict: merge-with:EBW-LEG-041
+  applicability: provider-side
+  priority: P3
+  priority_reason: Art 14(4) override; same stop mechanism
+  clusters:
+  - K16
+  - K03
+  verification_ready: needs-legal-review
+  note: Rationale calls it complement of LEG-041; same Article 14 human oversight control.
+- id: EBW-AIF-039
+  fidelity: derived-unmarked
+  verdict: merge-with:EBW-LEG-042
+  applicability: provider-side
+  priority: P3
+  priority_reason: Art 15 resilience; AI-specific refinement of LEG-042
+  clusters:
+  - K16
+  - K11
+  verification_ready: needs-source-check
+  note: Quote is a single word fragment "data poisoning"; verify Article 15(5) text.
+- id: EBW-AIF-040
+  fidelity: derived-unmarked
+  verdict: reword
+  corrected_statement: Where an AI system used with a European Business Wallet is high-risk under Article 6 of Regulation (EU) 2024/1689, its provider shall report serious incidents to the market surveillance
+    authority within 15 days of becoming aware.
+  applicability: provider-side
+  priority: P3
+  priority_reason: Conditional incident report; procedural
+  clusters:
+  - K11
+  - K16
+  - K13
+  verification_ready: needs-legal-review
+  note: Rationale states conditional high-risk scope but statement does not; add scope. Overlaps wallet incident duties (LEG-027).
+- id: EBW-AIF-041
+  fidelity: derived-unmarked
+  verdict: reword
+  corrected_statement: Where an AI system used with a European Business Wallet is high-risk under Article 6 of Regulation (EU) 2024/1689, its provider shall establish and document a post-market monitoring
+    system that collects and analyses performance data over its lifetime.
+  applicability: provider-side
+  priority: P3
+  priority_reason: Conditional organisational monitoring process
+  clusters:
+  - K16
+  - K11
+  - K10
+  verification_ready: needs-legal-review
+  note: Rationale states conditional high-risk scope but statement does not; add scope.
+- id: EBW-AIF-042
+  fidelity: derived-unmarked
+  verdict: drop
+  applicability: provider-side
+  priority: P3
+  priority_reason: Organisational deployer duty; no design impact
+  clusters:
+  - K16
+  - K13
+  verification_ready: needs-legal-review
+  note: Conditional on high-risk; pure usage-compliance duty.
+- id: EBW-AIF-043
+  fidelity: derived-unmarked
+  verdict: drop
+  applicability: provider-side
+  priority: P3
+  priority_reason: Organisational staffing duty; no design impact
+  clusters:
+  - K16
+  - K03
+  verification_ready: needs-legal-review
+  note: Conditional on high-risk; naming accountable humans already covered by AIF-010 principal.
+- id: EBW-AIF-044
+  fidelity: derived-unmarked
+  verdict: reword
+  corrected_statement: Where an AI system used with a European Business Wallet is high-risk under Article 6 of Regulation (EU) 2024/1689, its deployer shall, on reason to consider use presents a risk, inform
+    provider and authority and suspend use without undue delay.
+  applicability: horizontal
+  priority: P3
+  priority_reason: Conditional deployer incident procedure
+  clusters:
+  - K11
+  - K16
+  - K13
+  verification_ready: needs-legal-review
+  note: Rationale states conditional high-risk scope but statement does not; add scope.
+- id: EBW-AIF-045
+  fidelity: derived-unmarked
+  verdict: drop
+  applicability: horizontal
+  priority: P3
+  priority_reason: Organisational notice; no wallet impact
+  clusters:
+  - K16
+  - K09
+  verification_ready: needs-legal-review
+  note: Annex III deployer duty; wallet-specific link is speculative.
+- id: EBW-AIF-046
+  fidelity: derived-unmarked
+  verdict: drop
+  applicability: authority-side
+  priority: P3
+  priority_reason: Public-body procedure; no design impact
+  clusters:
+  - K16
+  - K13
+  verification_ready: needs-legal-review
+  note: FRIA only for public deployers and Article 6(2) systems.
+- id: EBW-AIF-047
+  fidelity: derived-unmarked
+  verdict: reword
+  corrected_statement: The provider of an AI system integrated with the wallet that generates synthetic content shall mark outputs in a machine-readable format as artificially generated, as far as technically
+    feasible.
+  applicability: horizontal
+  priority: P3
+  priority_reason: Generic Art 50 provider duty; outside core
+  clusters:
+  - K16
+  - K01
+  - K09
+  verification_ready: needs-legal-review
+  note: Applies to generative AI providers only; statement omits Art 50(2) exceptions; tie to wallet-integrated generators.
+- id: EBW-AIF-048
+  fidelity: derived-unmarked
+  verdict: merge-with:EBW-LEG-043
+  applicability: horizontal
+  priority: P3
+  priority_reason: Timing and form of LEG-043 disclosure
+  clusters:
+  - K16
+  - K15
+  verification_ready: needs-source-check
+  note: Rationale itself calls it a refinement of LEG-043; add to that requirement.
