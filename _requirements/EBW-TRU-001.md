@@ -25,4 +25,6 @@ concepts:
 - CON-TRUST-LIST
 created: '2026-10-03'
 last_verified: '2026-10-03'
+full_quote: Qualified trust service providers may begin to provide the qualified trust service after the qualified status has been indicated in the trusted lists referred to in Article 22(1).
+fidelity_checked: '2026-10-03'
 ---

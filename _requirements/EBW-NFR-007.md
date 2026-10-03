@@ -22,4 +22,6 @@ concepts:
 created: '2026-10-03'
 last_verified: '2026-10-03'
 quote: take appropriate measures against forgery, theft or
+full_quote: take appropriate measures against forgery, theft or misappropriation of data or, without right, deleting, altering or rendering data inaccessible
+fidelity_checked: '2026-10-03'
 ---

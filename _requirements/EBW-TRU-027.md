@@ -25,4 +25,6 @@ concepts:
 created: '2026-10-03'
 last_verified: '2026-10-03'
 quote: in electronically signed or sealed form suitable for automated processing
+full_quote: Member States shall notify public sector bodies referred to in Article 3, point (46), to the Commission. That notification shall include a conformity assessment report ... The Commission shall make available to the public, through a secure channel, the list ... in electronically signed or sealed form suitable for automated processing.
+fidelity_checked: '2026-10-03'
 ---

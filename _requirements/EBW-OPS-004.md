@@ -23,4 +23,6 @@ concepts:
 created: '2026-10-03'
 last_verified: '2026-10-03'
 quote: no later than 24 hours of having become aware of any security breaches or disruptions
+full_quote: notifying the supervisory body, the identifiable affected individuals, the public if it is of public interest and, where applicable, other relevant competent authorities, of any security breaches or disruptions ... that have a significant impact ..., without undue delay and in any case no later than 24 hours of having become aware
+fidelity_checked: '2026-10-03'
 ---

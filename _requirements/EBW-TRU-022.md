@@ -24,4 +24,6 @@ concepts:
 created: '2026-10-03'
 last_verified: '2026-10-03'
 quote: in any event within 24 hours after the receipt of the request
+full_quote: it shall register such revocation in its certificate database and publish the revocation status of the certificate in a timely manner, and in any event within 24 hours after the receipt of the request. The revocation shall become effective immediately upon its publication.
+fidelity_checked: '2026-10-03'
 ---

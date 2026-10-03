@@ -25,4 +25,6 @@ concepts:
 - CON-TRUST-PLANE
 created: '2026-10-03'
 last_verified: '2026-10-03'
+full_quote: Qualified trust service providers shall be audited at their own expense at least every 24 months by a conformity assessment body. ... shall submit the resulting conformity assessment report to the supervisory body within three working days of receipt.
+fidelity_checked: '2026-10-03'
 ---

@@ -23,4 +23,6 @@ concepts:
 created: '2026-10-03'
 last_verified: '2026-10-03'
 quote: without undue delay and in any event within 24 hours of the incident
+full_quote: notify the supervisory body, the identifiable affected individuals, other relevant competent bodies where applicable and, at the request of the supervisory body, the public if it is of public interest, of any security breaches or disruptions ... that have a significant impact ..., without undue delay and in any event within 24 hours of the incident
+fidelity_checked: '2026-10-03'
 ---

@@ -6,7 +6,7 @@ statement: A trusted list shall allow a relying party to determine the status of
 rationale: A relying party must be able to judge a past signature or seal against the status at the time it was made.
 sources:
 - id: SRC-ETSI-119612
-  location: scope
+  location: clause 1 Scope
 provenance: S
 legal_status: standard
 plane: trust
@@ -24,4 +24,6 @@ concepts:
 - CON-REVOCATION
 created: '2026-10-03'
 last_verified: '2026-10-03'
+full_quote: The present document specifies a format and mechanisms for establishing, locating, accessing and authenticating a trusted list which makes available trust service status information so that interested parties may determine the status of a listed trust service at a given time.
+fidelity_checked: '2026-10-03'
 ---

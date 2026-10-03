@@ -25,4 +25,6 @@ concepts:
 created: '2026-10-03'
 last_verified: '2026-10-03'
 quote: by means of the European Digital Identity Wallet or a notified electronic identification means which meets the requirements set out in Article 8
+full_quote: (a) by means of the European Digital Identity Wallet or a notified electronic identification means ... assurance level high; (b) a certificate of a qualified electronic signature or of a qualified electronic seal ...; (c) ... other identification methods ... high level of confidence, confirmed by a conformity assessment body; (d) through the physical presence
+fidelity_checked: '2026-10-03'
 ---

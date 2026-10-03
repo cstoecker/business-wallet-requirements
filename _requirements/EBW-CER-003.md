@@ -23,4 +23,6 @@ concepts:
 created: '2026-10-03'
 last_verified: '2026-10-03'
 quote: inform the supervisory body at the latest one month before any planned audits
+full_quote: Qualified trust service providers shall inform the supervisory body at the latest one month before any planned audits and shall allow the supervisory body to participate as an observer upon request.
+fidelity_checked: '2026-10-03'
 ---

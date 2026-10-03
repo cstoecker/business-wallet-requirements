@@ -25,4 +25,6 @@ concepts:
 created: '2026-10-03'
 last_verified: '2026-10-03'
 quote: made available in plain and intelligible language, in accordance with the United Nations Convention on the Rights of Persons with Disabilities
+full_quote: The provision of electronic identification means, trust services and end-user products that are used in the provision of those services shall be made available in plain and intelligible language, in accordance with the United Nations Convention on the Rights of Persons with Disabilities and with the accessibility requirements of Directive (EU) 2019/882
+fidelity_checked: '2026-10-03'
 ---

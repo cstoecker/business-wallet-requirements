@@ -22,4 +22,6 @@ concepts:
 created: '2026-10-03'
 last_verified: '2026-10-03'
 quote: the number of duplicated datasets must not exceed the minimum needed to ensure continuity of the service
+full_quote: duplicates the electronic signature creation data for back-up purposes only, provided that ... (i) the security of the duplicated datasets must be at the same level as for the original datasets; (ii) the number of duplicated datasets must not exceed the minimum needed to ensure continuity of the service
+fidelity_checked: '2026-10-03'
 ---

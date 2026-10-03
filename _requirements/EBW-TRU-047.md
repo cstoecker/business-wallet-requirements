@@ -6,7 +6,7 @@ statement: The relying party instance should verify the revocation status of a r
 rationale: Keeps status checking the default without forcing it.
 sources:
 - id: SRC-ARF-HLR
-  location: Annex 2 topic 7, VCR_13
+  location: Annex 2.02, topic 7, VCR_13
 provenance: S
 legal_status: standard
 plane: assurance
@@ -24,4 +24,6 @@ concepts:
 created: '2026-10-03'
 last_verified: '2026-10-03'
 quote: SHALL perform a risk analysis considering all relevant factors for the use case
+full_quote: A Relying Party Instance SHOULD verify the revocation status of a revocable PID or attestation upon obtaining it from a Wallet Unit. When a Relying Party considers deviating from this recommendation by not performing revocation checking, it SHALL perform a risk analysis considering all relevant factors for the use case
+fidelity_checked: '2026-10-03'
 ---

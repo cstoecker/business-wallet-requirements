@@ -23,4 +23,6 @@ concepts:
 created: '2026-10-03'
 last_verified: '2026-10-03'
 quote: the supervisory body may at any time audit or request a conformity assessment body to perform
+full_quote: the supervisory body may at any time audit or request a conformity assessment body to perform a conformity assessment of the qualified trust service providers, at the expense of those trust service providers
+fidelity_checked: '2026-10-03'
 ---

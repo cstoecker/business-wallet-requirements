@@ -24,4 +24,6 @@ concepts:
 created: '2026-10-03'
 last_verified: '2026-10-03'
 quote: (c) by means of a qualified electronic attestation of attributes;
+full_quote: (a) European Digital Identity Wallet or notified electronic identification means ... assurance level high; (b) certificate of a qualified electronic signature or seal; (c) a qualified electronic attestation of attributes; (d) other methods ... conformity ... confirmed by a conformity assessment body; (e) physical presence
+fidelity_checked: '2026-10-03'
 ---

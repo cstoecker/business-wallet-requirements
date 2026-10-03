@@ -2,11 +2,11 @@
 req_id: EBW-TRU-005
 title: Trust anchors and status checks by relying parties
 category: TRU
-statement: A relying party shall use the trust anchors published for the relevant role to verify a presented credential and to check its status or revocation information.
+statement: A relying party instance shall verify the signature over a presented PID, QEAA or PuB-EAA using a trust anchor of the provider obtained from a Trusted List or LoTE.
 rationale: Trust anchors are only useful if they are used both for the credential and for its status.
 sources:
 - id: SRC-ARF-TRUST
-  location: chapter 6, relying parties and trust anchors
+  location: Section 6.6.3.6 (Relying Party Instance verifies the authenticity of the PID or attestation)
 provenance: S
 legal_status: standard
 plane: trust
@@ -24,4 +24,7 @@ concepts:
 - CON-TRUST-LIST
 created: '2026-10-03'
 last_verified: '2026-10-03'
+full_quote: To do this for PIDs, QEAAs, and PuB-EAAs, the Relying Party Instance uses a trust anchor of the Provider obtained from a LoTE or Trusted List.
+fidelity_checked: '2026-10-03'
+revision_note: Statement narrowed to what the clause contains after a check against the full text.
 ---

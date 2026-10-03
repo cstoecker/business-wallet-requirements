@@ -6,7 +6,7 @@ statement: The qualified trust service provider shall carry the burden of provin
 rationale: Reverses the burden of proof, which shapes liability and evidence-retention design for qualified services.
 sources:
 - id: SRC-EIDAS-CONSOL
-  location: Article 13(1)
+  location: Article 13(1), third subparagraph
 provenance: L
 legal_status: in force
 plane: governance
@@ -23,4 +23,6 @@ concepts:
 created: '2026-10-03'
 last_verified: '2026-10-03'
 quote: The intention or negligence of a qualified trust service provider shall be presumed
+full_quote: The intention or negligence of a qualified trust service provider shall be presumed unless that qualified trust service provider proves that the damage referred to in the first subparagraph occurred without the intention or negligence of that qualified trust service provider.
+fidelity_checked: '2026-10-03'
 ---
