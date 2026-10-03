@@ -1,0 +1,1 @@
+{%- assign rq = site.requirements | where: "req_id", include.id | first -%}{%- if rq -%}<a href="{{ rq.url | relative_url }}" title="{{ rq.title | escape }}">{{ include.id }}</a>{%- else -%}{{ include.id }}{%- endif -%}

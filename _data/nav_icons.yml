@@ -22,3 +22,5 @@
 /ecosystem/certification/: award-03
 /ecosystem/governance/: users-check
 discussions: message-chat-circle
+/requirements/review/: list
+/architecture/decisions/: settings-02

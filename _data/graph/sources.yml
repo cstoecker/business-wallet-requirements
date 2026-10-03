@@ -190,8 +190,8 @@
   issuer: Open Identity Summit 2025
   class: paper
   url: https://doi.org/10.18420/oid2025_09
-  verification: unverified
-  note: Registered; clause-level extraction pending.
+  verification: snippet
+  note: Passages on representation, employees and legal-person identification data read; full paper not extracted.
 - id: SRC-EIDAS-CONSOL
   title: Regulation (EU) No 910/2014 (eIDAS), consolidated text as amended by Regulation (EU) 2024/1183
   issuer: European Union (EUR-Lex consolidated version, documentation tool without legal effect)
@@ -271,8 +271,8 @@
   url: https://data.consilium.europa.eu/doc/document/ST-9684-2026-INIT/en/pdf
   date: '2026-06-02'
   retrieved: '2026-10-03'
-  verification: unverified
-  note: Found by search, not read.
+  verification: read
+  note: 'Text submitted for the Council general approach (2 June 2026); the outcome of the 9 June 2026 meeting was not read. It differs from the Commission text (for example it deletes the definitions of authorised representative and mandate). Annex read in this version only.'
 - id: SRC-COUNCIL-ST-7659-26
   title: Council document ST 7659/26
   issuer: Council of the European Union
@@ -280,8 +280,8 @@
   url: https://data.consilium.europa.eu/doc/document/ST-7659-2026-INIT/en/pdf
   date: '2026-05-22'
   retrieved: '2026-10-03'
-  verification: unverified
-  note: Found by search, not read.
+  verification: read
+  note: 'Marked-up draft (22 May 2026); bold and underline were lost in text extraction, so original and new wording cannot be separated.'
 - id: SRC-PLOS-CHEN-2024
   title: 'Chen, Wang, Gan, Gui (2024): The effect of digital government on corporate total factor productivity. PLOS ONE. DOI 10.1371/journal.pone.0308093'
   issuer: PLOS ONE (peer-reviewed journal)
@@ -585,3 +585,82 @@
   version: 'ARF 3.0.0 (as rendered at /latest/)'
   retrieved: '2026-10-03'
   verification: read
+- id: SRC-CIR-2026-1731
+  title: 'Commission Implementing Regulation (EU) 2026/1731 amending Implementing Regulations (EU) 2024/2977, 2024/2979 and related acts (formats, standards and specifications for EUDI Wallets)'
+  issuer: European Commission
+  class: official
+  url: https://eur-lex.europa.eu/eli/reg_impl/2026/1731/oj
+  version: OJ 22.7.2026
+  date: '2026-07-22'
+  retrieved: '2026-10-03'
+  verification: read
+  note: 'Read in part: Annexes I, IV and XII and recital 18; the exact title and application dates were not extracted, apart from Article 3(4) applying from 11 August 2028. Replaces Annex II of Implementing Regulation (EU) 2024/2979, to which the EBW proposal refers in Article 8(3).'
+- id: SRC-ETSI-119472-1
+  title: 'ETSI TS 119 472-1 Profiles for Electronic Attestations of Attributes; Part 1: General requirements'
+  issuer: ETSI
+  class: standard
+  url: https://www.etsi.org/standards
+  version: V1.2.1
+  date: '2026-02'
+  retrieved: '2026-10-03'
+  verification: read
+  note: 'Read in part: clauses 1, 4.2, 5.2.1, 6.2.1, 7.1 to 7.2 and 7.6. The URL is the ETSI standards search page; the document copy used was fetched in the research pass.'
+- id: SRC-EUDI-TS11
+  title: 'EUDI Wallet Technical Specification 11: catalogue of attributes and attestation schemas'
+  issuer: European Commission (EUDI Wallet toolbox)
+  class: official
+  url: https://github.com/eu-digital-identity-wallet/eudi-doc-standards-and-technical-specifications
+  version: v1.0.1
+  date: '2026-01-30'
+  retrieved: '2026-10-03'
+  verification: read
+  note: 'Read from the raw repository file; the repository path of the specification was not re-checked.'
+- id: SRC-VCDM-2.0
+  title: 'Verifiable Credentials Data Model v2.0, W3C Recommendation'
+  issuer: W3C
+  class: standard
+  url: https://www.w3.org/TR/vc-data-model-2.0/
+  version: '2.0'
+  date: '2025-05-15'
+  retrieved: '2026-10-03'
+  verification: read
+- id: SRC-RFC-9901
+  title: 'RFC 9901: Selective Disclosure for JSON Web Tokens (SD-JWT)'
+  issuer: IETF
+  class: standard
+  url: https://www.rfc-editor.org/rfc/rfc9901.html
+  version: RFC 9901
+  date: '2025-11'
+  retrieved: '2026-10-03'
+  verification: read
+  note: 'Section 10.1 (unlinkability) read.'
+- id: SRC-IETF-SDJWT-VC
+  title: 'SD-JWT-based Verifiable Credentials (SD-JWT VC), Internet-Draft'
+  issuer: IETF OAuth Working Group
+  class: standard
+  url: https://datatracker.ietf.org/doc/draft-ietf-oauth-sd-jwt-vc/
+  version: draft-ietf-oauth-sd-jwt-vc-19
+  date: '2026-08-31'
+  retrieved: '2026-10-03'
+  verification: read
+  note: 'Not yet an RFC when read; the IETF status was "Waiting for AD Go-Ahead". ETSI TS 119 472-1 cites draft 13.'
+- id: SRC-IDTA-AAS-P1
+  title: 'Specification of the Asset Administration Shell, Part 1: Metamodel (IDTA-01001-3-0-2)'
+  issuer: Industrial Digital Twin Association
+  class: ecosystem-specification
+  url: https://industrialdigitaltwin.org/wp-content/uploads/2025/03/IDTA-01001-3-0-2_SpecificationAssetAdministrationShell_Part1_Metamodel.pdf
+  version: V3.0.2
+  date: '2025-03'
+  retrieved: '2026-10-03'
+  verification: read
+  note: 'Read by term search (semanticId, RDF serialisation). Parts 2, 3a and 4 not read. No IDTA specification on verifiable credentials was found.'
+- id: SRC-DCP
+  title: 'Decentralized Claims Protocol (DCP) v1.0'
+  issuer: Eclipse Dataspace Working Group
+  class: standard
+  url: https://eclipse-dataspace-dcp.github.io/decentralized-claims-protocol/
+  version: v1.0
+  date: '2026'
+  retrieved: '2026-10-03'
+  verification: read
+  note: 'Profiles read from the repository (commit b80ad76, 2026-08-05): VCDM 2.0 with JOSE and Bitstring Status List, and VCDM 1.1 with StatusList2021.'

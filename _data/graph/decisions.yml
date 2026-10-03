@@ -1,0 +1,49 @@
+# Architecture decision register. status: draft (analysis written, open for decision) | planned (question defined, analysis pending).
+# clusters link to _data/graph/clusters.yml; page is the decision page when one exists.
+- id: DEC-01
+  title: Credential data model, semantics and formats
+  question: "Which credential formats and which semantic layer should a business wallet support so that credentials are interoperable, machine-processable and, where needed, verifiable?"
+  clusters: [K01, K16]
+  status: draft
+  page: /architecture/decisions/dec-01/
+- id: DEC-02
+  title: "Employees: personal EUDI Wallet, business wallet or both"
+  question: "Should employees act for their company with their personal EUDI Wallet, with users and authorisations inside the organisation's European Business Wallet, or with a combination of both?"
+  clusters: [K02, K03]
+  status: draft
+  page: /architecture/decisions/dec-02/
+- id: DEC-03
+  title: Key custody and wallet architecture
+  question: "Where do the keys of an organisation live (device, hosted back-end, hardware security module, remote sealing) and what does that mean for control, assurance and exit?"
+  clusters: [K04]
+  status: planned
+- id: DEC-04
+  title: Trust framework and discovery
+  question: "Which trust lists, lists of trusted entities and ecosystem trust anchors does a relying party use, and how does it find the right one?"
+  clusters: [K05]
+  status: planned
+- id: DEC-05
+  title: Identity and identifiers
+  question: "How is a legal person identified across Member States and ecosystems, and how do unique identifiers, directory entries and ecosystem identifiers map to each other?"
+  clusters: [K06]
+  status: planned
+- id: DEC-06
+  title: Credential lifecycle and revocation
+  question: "How are validity, status and revocation handled for credentials, wallet units and authorisations, with which latency and which privacy properties?"
+  clusters: [K07]
+  status: planned
+- id: DEC-07
+  title: Protocols and interfaces
+  question: "Which issuance, presentation, data space and delivery protocols must a business wallet implement, and how do they fit together?"
+  clusters: [K08, K12]
+  status: planned
+- id: DEC-08
+  title: Privacy and data protection
+  question: "How are minimisation, unlinkability and the controller and processor roles designed when the wallet owner is an organisation and the users are people?"
+  clusters: [K09]
+  status: planned
+- id: DEC-09
+  title: Evidence, logging and audit
+  question: "What is logged, by whom, with which integrity and access rules, so that actions are attributable and auditable without exposing employees unnecessarily?"
+  clusters: [K10]
+  status: planned

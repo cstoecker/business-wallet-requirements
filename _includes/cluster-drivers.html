@@ -1,0 +1,8 @@
+{%- comment -%} Usage: include cluster-drivers.html cluster="K01" . Lists P1 requirements tagged with the cluster. {%- endcomment -%}
+{%- assign rvw = site.data.review.requirement-review -%}
+<div class="table-scroll" markdown="0"><table><thead><tr><th>Requirement</th><th>Title</th><th>Source</th><th>Proposal</th></tr></thead><tbody>
+{%- for x in rvw %}{% if x.clusters contains include.cluster and x.priority == "P1" %}
+{%- assign rq = site.requirements | where: "req_id", x.id | first %}
+<tr><td><a href="{{ rq.url | relative_url }}">{{ x.id }}</a></td><td>{{ rq.title }}</td><td>{{ rq.sources[0].id }}, {{ rq.sources[0].location }}</td><td>{{ rq.legal_status }}</td></tr>
+{%- endif %}{% endfor %}
+</tbody></table></div>
