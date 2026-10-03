@@ -188,7 +188,7 @@ Evaluation criteria: legal conformity, assurance level, sovereignty, interoperab
 ## 5. Knowledge graph design
 
 - **Source of truth:** `_data/` YAML (one file per entity type) + `ontology/` (SKOS concept schemes for taxonomy/glossary; OWL/RDFS vocabulary for relations; SHACL shapes for validation). Reuse existing vocabularies where possible: Dublin Core/DCAT, ELI (European Legislation Identifier) and FRBR for legal sources, ODRL for policies, PROV-O for provenance, SKOS for terms, schema.org for pages.
-- **Entity types:** `LegalSource`, `Clause`, `Obligation`, `Requirement`, `Capability`, `BuildingBlock`, `ArchitectureOption`, `Standard`, `StandardClause`, `Actor`, `Plane`, `Domain`, `UseCase`, `ConformanceCheck`, `Publication` (restricted to the OID 2025 paper), `Term`.
+- **Entity types:** `LegalSource`, `Clause`, `Obligation`, `Requirement`, `Capability`, `BuildingBlock`, `ArchitectureOption`, `Standard`, `StandardClause`, `Actor`, `Plane`, `Domain`, `UseCase`, `Ecosystem`, `ConformanceCheck`, `Publication` (restricted to the OID 2025 paper), `Term`.
 - **Build pipeline** (GitHub Actions, because custom Jekyll plugins are not supported on the default GitHub Pages build):
   1. Validate data (JSON-Schema + SHACL; broken links, orphans, duplicate IDs fail the build).
   2. Generate: per-entity Markdown stubs, traceability matrices, coverage report, JSON-LD export (`/graph.jsonld`), CSV/Excel export.
@@ -198,46 +198,60 @@ Evaluation criteria: legal conformity, assurance level, sovereignty, interoperab
 
 ---
 
-## 6. Proposed site map (Jekyll)
+## 6. Proposed site map and left-hand navigation (Jekyll)
+
+### 6.1 Left-hand sidebar: 8 top-level entries (decided 2026-10-03)
+
+Requirements come first, ahead of perspectives. Standards, Certification and Governance are grouped under "Ecosystem" together with the ecosystem/initiative pages.
+
+| # | Sidebar entry | Contains |
+|---|---|---|
+| 1 | **Start here** | Landing page, status of the EBW legislation, paths for executives, legal/compliance, architects, domain experts, implementers |
+| 2 | **Requirements** | Catalogue by category; **Requirements management methodology** (§6.3); one page per requirement |
+| 3 | **Perspectives** | B2B, B2G, B2C (EBW ↔ EUDI Wallet), G2B/G2G, M2M/A2A |
+| 4 | **Legal & compliance** | EBW proposal, eIDAS 2.0, horizontal law, product law, sector law, Reporting & Registry Atlas |
+| 5 | **Domains** | DPP with and without AAS, data spaces, automotive, pharma/GxP, industrial/agentic/physical AI, finance, public sector |
+| 6 | **Architecture** | Planes, building blocks, alternatives (ADRs, incl. AAS as implementation artefact), reference flows |
+| 7 | **Traceability & graph** | Matrices, coverage dashboard, gap list, interactive knowledge graph, JSON-LD download |
+| 8 | **Ecosystem** | **Ecosystems & initiatives** (§6.2), Standards radar, Certification, Governance |
+
+Utility links (header/footer, not in the numbered sidebar): Roadmap, Glossary, Research (non-normative reading list), Contribute, Changelog, About/Disclaimer.
+
+### 6.2 Ecosystems & initiatives subpage
+
+Location: **Ecosystem → Ecosystems & initiatives** (`/ecosystem/initiatives/`), one page per initiative: **Catena-X, WE BUILD, Manufacturing-X, Factory-X, energy data-X, CIRPASS-2**. Every page has the same template: *what it is and who governs it · what it does (technology-neutral) · use cases · high-level requirements on identity/trust/wallets (each with standard/document ID and link) · relation to EBW/eIDAS · sources with version/date*. Implementation details (specific products) are context only and never requirements. Only high-level requirements enter the requirement catalogue (principle 8).
+
+In the knowledge graph each initiative is an `Ecosystem` entity with edges `hasUseCase` → `UseCase`, `imposes` → `Requirement` (provenance S, tagged *ecosystem specification*), `specifiedBy` → `Standard`, and `relatesTo` → `LegalSource` (e.g. EBW proposal, ESPR).
+
+### 6.3 Requirements management methodology subpage
+
+Location: **Requirements → Requirements management methodology** (`/requirements/methodology/`). It explains the lifecycle (collect → extract → derive → link → review → publish), the taxonomy and facets, ID and status rules, provenance classes, the source rule (principle 8), traceability and coverage metrics, change control and versioning. It is generated from, and must stay consistent with, §1–§3 and §7 of this document.
+
+### 6.4 Page tree
 
 ```
-/                              Landing: purpose, status of EBW legislation, 3 entry paths, coverage dashboard
+/                              Landing: purpose, status of EBW legislation, entry paths, coverage dashboard
 /start/                        Start-here paths per stakeholder
-    executives/  legal-compliance/  architects/  domain-experts/  implementers/
-/perspectives/                 Interaction perspectives (cross-cut every other section)
-    b2b/                       Counterparty trust, mandates, contracts, data spaces, DPP/AAS exchange
-    b2g/                       Authenticate · Authorise · Report · Register (with sub-pages per obligation type)
-    b2c/                       EBW ↔ EUDI Wallet: consumer verification, relying-party role, issuance, representative (B2E) bridge
-    g2b-g2g/ m2m-a2a/          Authority-to-business notices; machine and agent delegation
-/legal/                        Legal & compliance atlas
-    reporting-registry/        Reporting & Registry Obligations Atlas (NIS2, CRA, DORA, GDPR, AI Act, MiFIT 🔎, DPP, EPRL, AI database, EUDAMED, …)
-    ebw/                       EBW proposal: article-by-article obligations, version diff, trilogue tracker
-    eidas/                     eIDAS 2.0 (Reg. 2024/1183) + implementing acts
-    horizontal/                GDPR, NIS2, DORA, CRA, Data Act, AI Act, Cyber/CSA
-    product/                   ESPR/DPP, Battery Regulation, MDR, …
-    sector/                    Automotive, pharma/GxP, financial, public sector/procurement
 /requirements/                 Catalogue (filter by category, plane, actor, domain, provenance, status)
+    methodology/               Requirements management methodology
     functional/  non-functional/  interoperability/  trust/  certification/
     governance/  legal/  data-space/  operational/  domain/  business/  constraints/  transition/
     <EBW-CAT-NNN>/             One page per requirement incl. trace links, history, discussion link
-/domains/                      Industry-domain perspectives (each: scenario, actors, overlay requirements, gaps)
-    dpp/ (with and without AAS)   aas-idta/   data-spaces/   automotive/   pharma-gxp/
-    industrial-ai/   agentic-ai/   physical-ai/   finance-trade/   public-sector/
-/architecture/
-    planes/                    Trust · Control · Data · Governance · Assurance
-    building-blocks/           Capability catalogue
-    alternatives/              ADRs + decision matrix + scoring against requirements
-    reference-flows/           Sequence diagrams (issue, present, mandate, seal, DSP negotiation, agent delegation)
-/standards/                    Standards & specs radar (W3C, OpenID, ISO/IEC, ETSI/CEN, IETF, IDTA, Eclipse, IDSA, Gaia-X, Catena-X) with maturity and mapping
-/traceability/                 Matrices (law→req, req→standard, req→architecture, req→test), coverage dashboard, gap list
+/perspectives/                 Interaction perspectives (cross-cut every other section)
+    b2b/  b2g/ (authenticate · authorise · report · register)  b2c/ (EBW ↔ EUDI Wallet)  g2b-g2g/  m2m-a2a/
+/legal/                        Legal & compliance atlas
+    reporting-registry/  ebw/  eidas/  horizontal/  product/  sector/
+/domains/                      dpp/ (with and without AAS)  data-spaces/  automotive/  pharma-gxp/
+                               industrial-ai/  agentic-ai/  physical-ai/  finance-trade/  public-sector/
+/architecture/                 planes/  building-blocks/  alternatives/ (ADRs + scoring)  reference-flows/
+/traceability/                 Matrices, coverage dashboard, gap list
 /graph/                        Interactive knowledge graph + JSON-LD download
-/certification/                Conformance profiles, test-suite catalogue, evidence templates
-/governance/                   Roles, rulebook requirements, change process, RACI
-/research/                     Non-normative reading list (outside the knowledge graph), publication timeline
-/roadmap/                      EBW legislative & standards timeline, project roadmap, open questions
-/glossary/                     SKOS-backed terms (EBW, LPID, QEAA, QSCD, ERDS, DPP, AAS, DSP, DCP, …)
-/contribute/                   How to propose/change a requirement; issue templates; code of conduct
-/changelog/  /about/  /disclaimer/
+/ecosystem/
+    initiatives/               catena-x/  we-build/  manufacturing-x/  factory-x/  energy-data-x/  cirpass-2/
+    standards/                 Standards & specs radar with maturity and mapping
+    certification/             Conformance profiles, test-suite catalogue, evidence templates
+    governance/                Roles, rulebook requirements, change process, RACI
+/research/  /roadmap/  /glossary/  /contribute/  /changelog/  /about/  /disclaimer/
 ```
 
 Page template essentials: provenance badge, status banner ("based on proposal COM(2025) 838 — may change"), "last verified" date, permalink + citation block (BibTeX/CSL), "view in graph", "edit on GitHub".

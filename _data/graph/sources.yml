@@ -1,0 +1,194 @@
+# Source register (graph entity type: Source). Only official sources, ecosystem specifications
+# and the OID 2025 paper are allowed here (docs/01 principle 8).
+# class: official | ecosystem-specification | paper
+# verification: read = fetched/read in full or in the cited part; snippet = seen only as a search snippet; unverified
+- id: SRC-CX-HOME
+  title: "Catena-X home page"
+  issuer: Catena-X Automotive Network Association
+  class: ecosystem-specification
+  url: https://catena-x.net/en/
+  retrieved: "2026-10-03"
+  verification: read
+- id: SRC-CX-CHANGELOG
+  title: "Catena-X standards changelog (CX-Neptune preview)"
+  issuer: Catena-X Automotive Network Association
+  class: ecosystem-specification
+  url: https://catenax-ev.github.io/docs/next/standards/changelog
+  version: "preview"
+  retrieved: "2026-10-03"
+  verification: read
+- id: SRC-CX-0018
+  title: "CX-0018 Dataspace Connectivity"
+  issuer: Catena-X Automotive Network Association
+  class: ecosystem-specification
+  url: https://catenax-ev.github.io/docs/next/standards/CX-0018-DataspaceConnectivity
+  version: "v4.3.0 (preview)"
+  retrieved: "2026-10-03"
+  verification: read
+- id: SRC-CX-0049
+  title: "CX-0049 DID Document Schema"
+  issuer: Catena-X Automotive Network Association
+  class: ecosystem-specification
+  url: https://catenax-ev.github.io/docs/next/standards/CX-0049-DIDDocumentSchema
+  version: "v2.3.0 (preview)"
+  retrieved: "2026-10-03"
+  verification: read
+- id: SRC-CX-0006
+  title: "CX-0006 Registration and Initial Onboarding"
+  issuer: Catena-X Automotive Network Association
+  class: ecosystem-specification
+  url: https://catenax-ev.github.io/docs/next/standards/CX-0006-RegistrationAndInitialOnboarding
+  version: "v2.1.0 (preview)"
+  retrieved: "2026-10-03"
+  verification: read
+- id: SRC-CX-SSI-CALL
+  title: "Call for the Expert Group Self-Sovereign Identity (SSI) / Digital Identity"
+  issuer: Catena-X Automotive Network Association
+  class: ecosystem-specification
+  url: https://catena-x.net/news/apply-now-expert-group-self-sovereign-identity-ssi-digital-identity/
+  date: 2026
+  retrieved: "2026-10-03"
+  verification: read
+- id: SRC-MX-WP
+  title: "Whitepaper Manufacturing-X"
+  issuer: Plattform Industrie 4.0 Task Force Manufacturing-X / BMWK
+  class: official
+  url: https://www.plattform-i40.de/IP/Redaktion/DE/Downloads/Publikation/Manufacturing-X_lang.pdf?__blob=publicationFile&v=6
+  date: "2022-11"
+  retrieved: "2026-10-03"
+  verification: read
+- id: SRC-MX-TALK15
+  title: "MX-Talk, Edition 24_10, The Industrial Data Ecosystem Manufacturing-X"
+  issuer: Plattform Industrie 4.0
+  class: official
+  url: https://www.plattform-i40.de/IP/Redaktion/DE/Downloads/Publikation/MX-Talk15.pdf?__blob=publicationFile&v=1
+  date: "2024-12-05"
+  retrieved: "2026-10-03"
+  verification: read
+- id: SRC-FX-HOME
+  title: "Factory-X home page"
+  issuer: Factory-X consortium
+  class: ecosystem-specification
+  url: https://factory-x.org/
+  retrieved: "2026-10-03"
+  verification: read
+- id: SRC-FX-LEO
+  title: "MX-Port Leo Specification"
+  issuer: Factory-X consortium
+  class: ecosystem-specification
+  url: https://factory-x.org/wp-content/uploads/MX-Port-Leo-Specification-v1.0.pdf
+  version: "v1.0"
+  date: "2026-06-09"
+  retrieved: "2026-10-03"
+  verification: read
+- id: SRC-FX-0097
+  title: "Factory-X Cross Cutting Roles Team, Governance MX-Port configuration \"Leo\" (FX-0097)"
+  issuer: Factory-X consortium
+  class: ecosystem-specification
+  url: https://factory-x.org/wp-content/uploads/FX-0097-CCRT-Governance-MX-Port-Leo-20.pdf
+  date: "2026-02-04"
+  retrieved: "2026-10-03"
+  verification: read
+- id: SRC-FX-APPGUIDE
+  title: "Factory-X Use Cases Application Guide"
+  issuer: Factory-X consortium
+  class: ecosystem-specification
+  url: https://factory-x.org/wp-content/uploads/Factory-X-Application-Guide.pdf
+  version: "V1.4"
+  date: "2025-05-14"
+  retrieved: "2026-10-03"
+  verification: read
+- id: SRC-EDX-HOME
+  title: "energy data-X project site"
+  issuer: energy data-X consortium
+  class: ecosystem-specification
+  url: https://www.energydata-x.eu/en/
+  retrieved: "2026-10-03"
+  verification: read
+- id: SRC-EDX-PR2023
+  title: "Press release, energy data-X funded by the Federal Government"
+  issuer: energy data-X consortium
+  class: ecosystem-specification
+  url: https://www.energydata-x.eu/en/2023/10/04/datenoekosystem-energy-data-x-wird-durch-bundesregierung-gefoerdert/
+  date: "2023-10-04"
+  retrieved: "2026-10-03"
+  verification: read
+- id: SRC-EDX-MXTALK
+  title: "MX-Talk Edition 25_7, energy data-X (TenneT)"
+  issuer: Plattform Industrie 4.0 / TenneT
+  class: official
+  url: https://www.plattform-i40.de/IP/Redaktion/DE/Downloads/Publikation/MX-Talk21-energydataX.pdf?__blob=publicationFile&v=3
+  date: "2025-07-03"
+  retrieved: "2026-10-03"
+  verification: read
+- id: SRC-FEL-2026
+  title: "First exchange of energy data between data spaces (Re4DE and energy data-X)"
+  issuer: dena Future Energy Lab
+  class: ecosystem-specification
+  url: https://future-energy-lab.de/news/erstmals-energiedaten-zwischen-datenraeumen-ausgetauscht/
+  date: "2026-06-11"
+  retrieved: "2026-10-03"
+  verification: read
+- id: SRC-CIRPASS2-HOME
+  title: "CIRPASS-2 project site"
+  issuer: CIRPASS-2 consortium (coordinator CEA-List)
+  class: ecosystem-specification
+  url: https://cirpass2.eu/
+  retrieved: "2026-10-03"
+  verification: read
+- id: SRC-CIRPASS2-ABOUT
+  title: "CIRPASS-2, About"
+  issuer: CIRPASS-2 consortium
+  class: ecosystem-specification
+  url: https://cirpass2.eu/about/
+  retrieved: "2026-10-03"
+  verification: read
+- id: SRC-CIRPASS2-PILOTS
+  title: "CIRPASS-2, Lighthouse pilots"
+  issuer: CIRPASS-2 consortium
+  class: ecosystem-specification
+  url: https://cirpass2.eu/lighthouse-pilots/
+  retrieved: "2026-10-03"
+  verification: read
+- id: SRC-CIRPASS1-D32
+  title: "CIRPASS D3.2 DPP System Architecture"
+  issuer: CIRPASS consortium (predecessor project)
+  class: ecosystem-specification
+  url: https://cirpassproject.eu/wp-content/uploads/2024/06/D3.2v1.9.pdf
+  version: "v1.9"
+  date: "2024-05"
+  retrieved: "2026-10-03"
+  verification: snippet
+- id: SRC-WEBUILD-SITE
+  title: "WE BUILD consortium website"
+  issuer: WE BUILD consortium
+  class: ecosystem-specification
+  url: https://www.webuildconsortium.eu/
+  retrieved: "2026-10-03"
+  verification: read
+- id: SRC-WEBUILD-ARCH
+  title: "WE BUILD consortium architecture repository (blueprint D4.1, ADRs, conformance specs)"
+  issuer: WE BUILD consortium
+  class: ecosystem-specification
+  url: https://github.com/webuild-consortium/architecture
+  version: "main, commit 8fcfea0"
+  date: "2026-02-20"
+  retrieved: "2026-10-03"
+  verification: read
+  note: "Read via the Spherity fork spherity/webuild-consortium-architecture."
+- id: SRC-WEBUILD-RB
+  title: "WE BUILD attestation rulebooks catalog"
+  issuer: WE BUILD consortium
+  class: ecosystem-specification
+  version: "main, commit de79cca (v1.0)"
+  date: "2026-08-09"
+  retrieved: "2026-10-03"
+  verification: read
+  note: "Read via the Spherity fork spherity/webuild-attestation-rulebooks-catalog."
+- id: SRC-OID2025
+  title: "Towards the European Business Wallet (T. Hühnlein, D. Hühnlein, S. Schwalm, C. Stöcker)"
+  issuer: Open Identity Summit 2025
+  class: paper
+  url: https://doi.org/10.18420/oid2025_09
+  verification: unverified
+  note: "Registered; clause-level extraction pending."

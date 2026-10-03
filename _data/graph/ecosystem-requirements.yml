@@ -1,0 +1,226 @@
+# Graph entity type: EcosystemRequirement (high-level requirement statements imposed by an ecosystem).
+# These are SOURCE statements, not yet derived EBW requirements: each still needs derivation into a
+# technology-neutral EBW-<CAT>-<NNN> requirement and human review (docs/01 §3, principle 8).
+# status: candidate | derived. verification: read | snippet | unverified. provenance: S (ecosystem specification).
+# Implementation specifics (products, protocols names) are kept only in `statement`/`ref` as quoted from the source.
+- id: ECR-CX-001
+  ecosystem: ECO-CATENAX
+  statement: "A participant agent must use a DID as its participant identifier in data-space exchanges."
+  ref: "CX-0018 v4.3.0 (preview)"
+  source: SRC-CX-0018
+  category: INT
+  status: candidate
+  verification: read
+- id: ECR-CX-002
+  ecosystem: ECO-CATENAX
+  statement: "Access to a provider's catalogue requires three credentials, a Membership credential, a Business Partner Number credential and a Framework Agreement credential."
+  ref: "CX-0018 (credentials defined in CX-0050)"
+  source: SRC-CX-0018
+  category: TRU
+  status: candidate
+  verification: read
+- id: ECR-CX-003
+  ecosystem: ECO-CATENAX
+  statement: "Credential exchange and token handling between participants follow the Decentralized Claims Protocol 1.0, with scoped tokens carried in all Dataspace Protocol messages."
+  ref: "CX-0018 v4.3.0 (preview)"
+  source: SRC-CX-0018
+  category: DAT
+  status: candidate
+  verification: read
+- id: ECR-CX-004
+  ecosystem: ECO-CATENAX
+  statement: "The DID document of a participant must follow DID Core 1.0 and DCP 1.0 and must contain a credential service endpoint."
+  ref: "CX-0049 v2.3.0 (preview)"
+  source: SRC-CX-0049
+  category: INT
+  status: candidate
+  verification: read
+- id: ECR-CX-005
+  ecosystem: ECO-CATENAX
+  statement: "Every participant must have access to a wallet instance that complies with the Catena-X wallet standard (CX-0149)."
+  ref: "CX-0006 v2.1.0 (preview); CX-0149 page not retrievable, content unverified"
+  source: SRC-CX-0006
+  category: FUN
+  status: candidate
+  verification: read
+- id: ECR-CX-006
+  ecosystem: ECO-CATENAX
+  statement: "Onboarding includes identity proofing of the company, creation of its legal-entity Business Partner Number and issuance of the participant credentials by a trusted service provider."
+  ref: "CX-0006 v2.1.0 (preview); identity-proofing standard ID is a placeholder in the preview text"
+  source: SRC-CX-0006
+  category: TRU
+  status: candidate
+  verification: read
+- id: ECR-CX-007
+  ecosystem: ECO-CATENAX
+  statement: "Participants exchange data via the Dataspace Protocol HTTPS binding (version 2025-01) with catalogue, contract negotiation and transfer process endpoints."
+  ref: "CX-0018 v4.3.0 (preview)"
+  source: SRC-CX-0018
+  category: DAT
+  status: candidate
+  verification: read
+
+- id: ECR-MX-001
+  ecosystem: ECO-MANUFACTURINGX
+  statement: "Participants should be able to onboard once and use one digital identity across data spaces (stated goal, requires uniform and coordinated identification)."
+  ref: "Plattform Industrie 4.0 material on eIDAS 2.0 (page blocked, search snippet only)"
+  source: SRC-MX-TALK15
+  category: BIZ
+  status: candidate
+  verification: snippet
+- id: ECR-MX-002
+  ecosystem: ECO-MANUFACTURINGX
+  statement: "Finding, not a requirement: no binding identity standard exists across Manufacturing-X projects; the compatibility of the identity solutions in use (BPN, GXDCH, webID, eIDAS, IATP, SSI) and discovery services is still to be examined."
+  ref: "MX-Talk 24_10, slide 36"
+  source: SRC-MX-TALK15
+  category: CON
+  status: candidate
+  verification: read
+
+- id: ECR-FX-001
+  ecosystem: ECO-FACTORYX
+  statement: "Organisations are identified and looked up by their company domain."
+  ref: "MX-Port Leo Specification v1.0, section 3"
+  source: SRC-FX-LEO
+  category: INT
+  status: candidate
+  verification: read
+- id: ECR-FX-002
+  ecosystem: ECO-FACTORYX
+  statement: "The token issuers of a data space are registered in a trusted partner list, and a data provider must verify that the issuer of an access token is on that list and validate its signature."
+  ref: "MX-Port Leo Specification v1.0, sections 2.3.2, 5 and 6.3"
+  source: SRC-FX-LEO
+  category: TRU
+  status: candidate
+  verification: read
+- id: ECR-FX-003
+  ecosystem: ECO-FACTORYX
+  statement: "The access token must distinguish human users from technical (machine) users."
+  ref: "MX-Port Leo Specification v1.0, section 6.1 (claim typ: authflow / clientflow)"
+  source: SRC-FX-LEO
+  category: FUN
+  status: candidate
+  verification: read
+- id: ECR-FX-004
+  ecosystem: ECO-FACTORYX
+  statement: "The access token carries minimal identity data and no organisation claim; organisational affiliation is derived from the issuer and trusted-list metadata, and the subject identifier must be unique for the lifetime of the identity."
+  ref: "MX-Port Leo Specification v1.0, section 6.2"
+  source: SRC-FX-LEO
+  category: NFR
+  status: candidate
+  verification: read
+- id: ECR-FX-005
+  ecosystem: ECO-FACTORYX
+  statement: "Authorisation decisions (e.g. attribute-based) remain the responsibility of the data provider; the shared services only authenticate."
+  ref: "MX-Port Leo Specification v1.0, section 2.2"
+  source: SRC-FX-LEO
+  category: GOV
+  status: candidate
+  verification: read
+
+- id: ECR-EDX-001
+  ecosystem: ECO-ENERGYDATAX
+  statement: "Participant identity and trust is a dedicated federated service that establishes who a participant is and which market role it holds."
+  ref: "MX-Talk 25_7, slide 20"
+  source: SRC-EDX-MXTALK
+  category: TRU
+  status: candidate
+  verification: read
+- id: ECR-EDX-002
+  ecosystem: ECO-ENERGYDATAX
+  statement: "The market role (BDEW role model) of a participant is an access criterion; regulated network operators and competing service providers receive different default access rights."
+  ref: "MX-Talk 25_7, slides 8, 11, 16, 20"
+  source: SRC-EDX-MXTALK
+  category: DAT
+  status: candidate
+  verification: read
+- id: ECR-EDX-003
+  ecosystem: ECO-ENERGYDATAX
+  statement: "Onboarding has an organisational and a technical track, supported by an onboarding portal."
+  ref: "MX-Talk 25_7, slides 9 and 10"
+  source: SRC-EDX-MXTALK
+  category: OPS
+  status: candidate
+  verification: read
+- id: ECR-EDX-004
+  ecosystem: ECO-ENERGYDATAX
+  statement: "Access policies must be strictly enforced."
+  ref: "MX-Talk 25_7, slide 13"
+  source: SRC-EDX-MXTALK
+  category: DAT
+  status: candidate
+  verification: read
+- id: ECR-EDX-005
+  ecosystem: ECO-ENERGYDATAX
+  statement: "Gap, not a requirement: machine and device connections (smart meter gateways, energy management systems) are made via connectors, but the deck states no device credential standard and reports a challenge with dynamic IP addresses and whitelisting."
+  ref: "MX-Talk 25_7, slide 16"
+  source: SRC-EDX-MXTALK
+  category: CON
+  status: candidate
+  verification: read
+
+- id: ECR-CP-001
+  ecosystem: ECO-CIRPASS2
+  statement: "A DPP is a structured collection of product data with pre-defined scope and agreed data management and access rights, conveyed through a unique identifier and accessible via a data carrier."
+  ref: "CIRPASS (v1) D3.2 DPP System Architecture v1.9 (seen as search snippet only)"
+  source: SRC-CIRPASS1-D32
+  category: DOM
+  status: candidate
+  verification: snippet
+- id: ECR-CP-002
+  ecosystem: ECO-CIRPASS2
+  statement: "DPP access is role-dependent (differentiated by stakeholder type); DPP deactivation, authentication mechanisms and transfer of responsibility need precise policy requirements."
+  ref: "CIRPASS (v1) D2.2 and D3.2 (seen as search snippets only)"
+  source: SRC-CIRPASS1-D32
+  category: DOM
+  status: candidate
+  verification: snippet
+
+- id: ECR-WB-001
+  ecosystem: ECO-WEBUILD
+  statement: "Issuers register on trusted lists (based on ETSI TS 119 612 v2.3.1) before testing; wallets and relying parties validate against the lists."
+  ref: "ADR trusted-lists.md"
+  source: SRC-WEBUILD-ARCH
+  category: TRU
+  status: candidate
+  verification: read
+- id: ECR-WB-002
+  ecosystem: ECO-WEBUILD
+  statement: "Providers of identity and attestations implement OpenID4VCI 1.0, relying parties implement OpenID4VP 1.0 and wallets implement both (proximity flows out of scope)."
+  ref: "ADR base-protocols.md"
+  source: SRC-WEBUILD-ARCH
+  category: INT
+  status: candidate
+  verification: read
+- id: ECR-WB-003
+  ecosystem: ECO-WEBUILD
+  statement: "The EBW Owner Identification Data (EBWOID) replaces the LPID within WE BUILD; a basic EBWOID (name plus unique identifier) is the minimum identity attestation and other attributes need separate attestations."
+  ref: "ADR 001-replace-lpid-with-ebwoid.md; basic-lpid.md (cites COM(2025) 838 Art. 8(5) and Implementing Regulation (EU) 2024/2977)"
+  source: SRC-WEBUILD-ARCH
+  category: FUN
+  status: candidate
+  verification: read
+- id: ECR-WB-004
+  ecosystem: ECO-WEBUILD
+  statement: "A Wallet Unit Attestation is mandatory for the EBW; a wallet is valid only with a valid Wallet Unit Attestation and a valid EBWOID."
+  ref: "ADR wallet-unit-lifecycle-management.md (status Proposed, 2026-02-11)"
+  source: SRC-WEBUILD-ARCH
+  category: TRU
+  status: candidate
+  verification: read
+- id: ECR-WB-005
+  ecosystem: ECO-WEBUILD
+  statement: "Qualified electronic registered delivery is piloted with a digital directory, a four-corner model per EN 319 522-1 and AS4 bindings per EN 319 522-4-1."
+  ref: "ADR build-qerds.md (Implementing Regulation (EU) 2025/1944 applies)"
+  source: SRC-WEBUILD-ARCH
+  category: FUN
+  status: candidate
+  verification: read
+- id: ECR-WB-006
+  ecosystem: ECO-WEBUILD
+  statement: "Proposed (unmerged ADR branch feat/adr-vcdm, Spherity fork): W3C VCDM is the preferred attestation format for the EBW, use-case owners may define mandatory and optional formats, all formats are tested, and an interoperability profile is defined."
+  ref: "ADR \"Preferred EUBW attestation format\" (branch, not on main)"
+  source: SRC-WEBUILD-ARCH
+  category: INT
+  status: candidate
+  verification: read

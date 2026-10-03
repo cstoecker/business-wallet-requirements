@@ -1,0 +1,51 @@
+# Graph entity type: Ecosystem. Edges: hasUseCase -> usecases.yml, imposes -> ecosystem-requirements.yml,
+# specifiedBy / documentedIn -> sources.yml, relatesTo -> legal sources (to be added to _data/graph/legal.yml).
+- id: ECO-CATENAX
+  name: Catena-X
+  domain: Automotive (Automotive Network)
+  governance: Catena-X Automotive Network Association (governance body of the ecosystem)
+  status: Operating; standards released as CX-Titan (stable) and CX-Neptune (preview)
+  summary: Collaborative data ecosystem for the automotive industry for exchanging data with business partners along the supply chain.
+  sources: [SRC-CX-HOME, SRC-CX-CHANGELOG, SRC-CX-0018, SRC-CX-0049, SRC-CX-0006, SRC-CX-SSI-CALL]
+  ebw_relation: Association states it is evolving from a single trust anchor to a federated trust model and leading integration of overarching trust infrastructures such as the European Business Wallet (SRC-CX-HOME); an SSI/Digital Identity expert group (Aug 2026 start) will advise on its role in the eIDAS 2.0 / EBW ecosystem (SRC-CX-SSI-CALL).
+- id: ECO-WEBUILD
+  name: WE BUILD
+  domain: Cross-sector (business, supply chain, payments)
+  governance: WE BUILD consortium; General Assembly led by the Dutch Ministry of Economic Affairs, project management by KVK (NL)
+  status: Large-Scale Pilot; start/end dates and grant number not verified
+  summary: Commission-funded Large-Scale Pilot using the EUDI Wallet and the European Business Wallet to cut red tape for cross-border business; 200+ organisations from 28 countries including 13 national business registers (project website).
+  sources: [SRC-WEBUILD-SITE, SRC-WEBUILD-ARCH, SRC-WEBUILD-RB]
+  ebw_relation: Blueprint anchors on Regulation (EU) 2024/1183 and on the EBW proposal COM(2025) 838 final; ADRs derive EBWOID, QERDS and the Digital Directory from the proposal, which is not yet in force.
+- id: ECO-MANUFACTURINGX
+  name: Manufacturing-X
+  domain: Industry (German initiative, cross-industry data space "Datenraum Industrie 4.0")
+  governance: Plattform Industrie 4.0 Task Force; funding programme by BMWK (now BMWE); MX Guidance Board aligns ecosystems
+  status: Funding programme with a portfolio of projects (e.g. Catena-X, Factory-X, Aerospace-X, Robot-X, Semiconductor-X)
+  summary: Industrial-policy initiative building a decentrally organised, interoperable data space for industry; a portfolio of ecosystems rather than one product.
+  sources: [SRC-MX-WP, SRC-MX-TALK15]
+  ebw_relation: No official statement read. Plattform Industrie 4.0 event page on eIDAS 2.0 and industry was not readable (blocked); treated as unverified.
+- id: ECO-FACTORYX
+  name: Factory-X
+  domain: Factory outfitters and operators (Manufacturing-X lighthouse project)
+  governance: Consortium funded by BMWK; project office Open Industry 4.0 Alliance Implementation GmbH
+  status: Consortium project ended 2026-06-30; collaboration continues in the Manufacturing-X community; GitHub org archived
+  summary: Open collaborative digital ecosystem for factory outfitters and operators, built on Catena-X foundations and Plattform Industrie 4.0 principles; defines the MX-Port "Leo" configuration for discovery and access.
+  sources: [SRC-FX-HOME, SRC-FX-LEO, SRC-FX-0097, SRC-FX-APPGUIDE]
+  ebw_relation: None found in the Leo specification, governance paper or application guide.
+- id: ECO-ENERGYDATAX
+  name: energy data-X
+  domain: Energy
+  governance: Consortium led by TenneT; funded by BMWK (7th Energy Research Programme, EUR 9.5m); started 2023-10-01
+  status: Planned project end September 2026; scaling planned from Q3 2026; current status not verified
+  summary: Data ecosystem for the energy industry based on Gaia-X standards, following the DSSC blueprint, with market-role based access and cross-data-space exchange.
+  sources: [SRC-EDX-HOME, SRC-EDX-PR2023, SRC-EDX-MXTALK, SRC-FEL-2026]
+  ebw_relation: None found. The deck states alignment with the EU action plan Digitalising the energy system and the planned European energy data space.
+  note: Spherity is a core partner of this project (self-reference to be disclosed on the page).
+- id: ECO-CIRPASS2
+  name: CIRPASS-2
+  domain: Digital Product Passports (textiles, electrical and electronic equipment, tyres, construction)
+  governance: Digital Europe Programme Innovation Action coordinated by CEA-List (France); May 2024 to April 2027
+  status: Running; current status not verified
+  summary: Demonstrates functioning DPPs in real settings and at scale through 13 lighthouse pilots in 4 value chains.
+  sources: [SRC-CIRPASS2-HOME, SRC-CIRPASS2-ABOUT, SRC-CIRPASS2-PILOTS, SRC-CIRPASS1-D32]
+  ebw_relation: No CIRPASS-2 source read mentions wallets or verifiable credentials; link to the EBW unverified.

@@ -1,0 +1,24 @@
+{%- assign eco = site.data.graph.ecosystems | where: "id", include.eco | first -%}
+{%- assign ucs = site.data.graph.usecases | where: "ecosystem", include.eco -%}
+{%- assign reqs = site.data.graph.ecosystem-requirements | where: "ecosystem", include.eco -%}
+## Use cases
+
+| ID | Use case | Verification |
+|---|---|---|
+{% for u in ucs %}| `{{ u.id }}` | {{ u.title }} | {% if u.verification == "read" %}✅ read{% else %}🔎 unverified{% endif %} |
+{% endfor %}
+## High-level requirements imposed on identity, trust and wallets
+
+Source statements only; each still has to be derived into a technology-neutral `EBW-<CAT>-<NNN>` requirement and reviewed (see [Requirements management methodology]({{ '/requirements/methodology/' | relative_url }})). Provenance class **S** (ecosystem specification).
+
+| ID | Cat. | Statement | Reference | Verification |
+|---|---|---|---|---|
+{% for r in reqs %}| `{{ r.id }}` | {{ r.category }} | {{ r.statement }} | {{ r.ref }} | {% if r.verification == "read" %}✅{% elsif r.verification == "snippet" %}🔎 snippet only{% else %}🔎{% endif %} |
+{% endfor %}
+## Sources
+
+| ID | Document | Version / date | Retrieved |
+|---|---|---|---|
+{% for sid in eco.sources %}{% assign s = site.data.graph.sources | where: "id", sid | first %}| `{{ s.id }}` | {% if s.url %}[{{ s.title }}]({{ s.url }}){% else %}{{ s.title }}{% endif %} | {{ s.version }} {{ s.date }} | {{ s.retrieved }} |
+{% endfor %}
+<small>Graph entity: `{{ eco.id }}`. Legend: ✅ verified in a source that was read, 🔎 to verify. Analysis, not legal advice.</small>

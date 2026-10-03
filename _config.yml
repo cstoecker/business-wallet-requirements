@@ -1,0 +1,11 @@
+title: European Business Wallet Requirements
+description: Traceable requirements for European Business Wallets and trust infrastructure
+theme: just-the-docs
+search_enabled: true
+heading_anchors: true
+aux_links:
+  "Edit on GitHub": "https://github.com/spherity/business-wallet-requirements"
+exclude: [docs, README.md, Gemfile.lock, vendor]
+defaults:
+  - scope: {path: ""}
+    values: {layout: default}

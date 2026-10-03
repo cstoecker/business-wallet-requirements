@@ -1,0 +1,60 @@
+# Graph entity type: UseCase (ecosystem use cases). Edge: ecosystem -> hasUseCase.
+# verification: read | unverified
+- {id: UC-CX-RESILIENCE, ecosystem: ECO-CATENAX, title: Resilient Supply Chains, source: SRC-CX-HOME, verification: read}
+- {id: UC-CX-SUSTAINABILITY, ecosystem: ECO-CATENAX, title: Trusted Sustainability, source: SRC-CX-HOME, verification: read}
+- {id: UC-CX-DPP, ecosystem: ECO-CATENAX, title: Digital Product Passport (CX-0143 Circular Economy DPP, v1.2.0 preview), source: SRC-CX-CHANGELOG, verification: read}
+- {id: UC-CX-QUALITY, ecosystem: ECO-CATENAX, title: Effective Quality Management, source: SRC-CX-HOME, verification: read}
+- {id: UC-CX-MDM, ecosystem: ECO-CATENAX, title: Next Level Master-Data-Management, source: SRC-CX-HOME, verification: read}
+- {id: UC-CX-PCF, ecosystem: ECO-CATENAX, title: Product Carbon Footprint (CX-0136 Use Case PCF, v3.0.0), source: SRC-CX-CHANGELOG, verification: read}
+- {id: UC-CX-ENGINEERING, ecosystem: ECO-CATENAX, title: Collaborative Engineering, source: SRC-CX-HOME, verification: read}
+- {id: UC-CX-DCM, ecosystem: ECO-CATENAX, title: Demand & Capacity Management, source: SRC-CX-HOME, verification: read}
+
+- {id: UC-WB-BU1, ecosystem: ECO-WEBUILD, title: Know Your Business Partner (KYC/KYS/KYB due diligence), source: SRC-WEBUILD-SITE, verification: read}
+- {id: UC-WB-BU2, ecosystem: ECO-WEBUILD, title: Create Company Branch, source: SRC-WEBUILD-SITE, verification: read}
+- {id: UC-WB-BU3, ecosystem: ECO-WEBUILD, title: Foreign Tax Declaration, source: SRC-WEBUILD-SITE, verification: read}
+- {id: UC-WB-BU4, ecosystem: ECO-WEBUILD, title: Company Representative acting on behalf of a Company, source: SRC-WEBUILD-SITE, verification: read}
+- {id: UC-WB-BU5, ecosystem: ECO-WEBUILD, title: Issuing Micro-Credentials and Verified Skills, source: SRC-WEBUILD-SITE, verification: read}
+- {id: UC-WB-BU6, ecosystem: ECO-WEBUILD, title: Business Access to the Once-Only Technical System (OOTS), source: SRC-WEBUILD-SITE, verification: read}
+- {id: UC-WB-SC1, ecosystem: ECO-WEBUILD, title: Authentication & Access for Transport, source: SRC-WEBUILD-SITE, verification: read}
+- {id: UC-WB-SC2, ecosystem: ECO-WEBUILD, title: Trusted Data Sharing for Data Spaces, source: SRC-WEBUILD-SITE, verification: read}
+- {id: UC-WB-SC5, ecosystem: ECO-WEBUILD, title: eInvoicing, source: SRC-WEBUILD-SITE, verification: read}
+- {id: UC-WB-PA1, ecosystem: ECO-WEBUILD, title: Consumer Banking, source: SRC-WEBUILD-SITE, verification: read}
+- {id: UC-WB-PA2, ecosystem: ECO-WEBUILD, title: Consumer Payments, source: SRC-WEBUILD-SITE, verification: read}
+- {id: UC-WB-PA3, ecosystem: ECO-WEBUILD, title: Corporate Banking, source: SRC-WEBUILD-SITE, verification: read}
+- {id: UC-WB-PA4, ecosystem: ECO-WEBUILD, title: Corporate Payments, source: SRC-WEBUILD-SITE, verification: read}
+
+- {id: UC-MX-TRANSPARENCY, ecosystem: ECO-MANUFACTURINGX, title: Transparency and resilience in supply chains, source: SRC-MX-WP, verification: read}
+- {id: UC-MX-CO2, ecosystem: ECO-MANUFACTURINGX, title: CO2 reduction and closed-loop circular economy, source: SRC-MX-WP, verification: read}
+- {id: UC-MX-BUSINESSMODELS, ecosystem: ECO-MANUFACTURINGX, title: New data-driven business models, source: SRC-MX-WP, verification: read}
+
+# Factory-X: the project states 11 use cases (SRC-FX-HOME, SRC-FX-APPGUIDE); titles below come from a search summary only.
+- {id: UC-FX-01, ecosystem: ECO-FACTORYX, title: Integrated Toolchains and Collaborative Engineering, source: SRC-FX-HOME, verification: unverified}
+- {id: UC-FX-02, ecosystem: ECO-FACTORYX, title: Information Update and Change Service, source: SRC-FX-HOME, verification: unverified}
+- {id: UC-FX-03, ecosystem: ECO-FACTORYX, title: Collaborative Information Logistics, source: SRC-FX-HOME, verification: unverified}
+- {id: UC-FX-04, ecosystem: ECO-FACTORYX, title: Condition Monitoring-led Services, source: SRC-FX-HOME, verification: unverified}
+- {id: UC-FX-05, ecosystem: ECO-FACTORYX, title: Modular Production, source: SRC-FX-HOME, verification: unverified}
+- {id: UC-FX-06, ecosystem: ECO-FACTORYX, title: Manufacturing-as-a-Service / On-Demand Manufacturing, source: SRC-FX-HOME, verification: unverified}
+- {id: UC-FX-07, ecosystem: ECO-FACTORYX, title: Autonomous Operation-as-a-Service, source: SRC-FX-HOME, verification: unverified}
+- {id: UC-FX-08, ecosystem: ECO-FACTORYX, title: Traceability, source: SRC-FX-HOME, verification: unverified}
+- {id: UC-FX-09, ecosystem: ECO-FACTORYX, title: Energy Consumption and Load Management, source: SRC-FX-HOME, verification: unverified}
+- {id: UC-FX-10, ecosystem: ECO-FACTORYX, title: Carbon Footprint Management, source: SRC-FX-HOME, verification: unverified}
+- {id: UC-FX-11, ecosystem: ECO-FACTORYX, title: Circular Economy, source: SRC-FX-HOME, verification: unverified}
+
+- {id: UC-EDX-UC1, ecosystem: ECO-ENERGYDATAX, title: Balance-group management quality (smart meter gateways feed meter values via connectors; flexibility call-off verification; MaBiS-Hub-Light orchestration), source: SRC-EDX-MXTALK, verification: read}
+- {id: UC-EDX-UC2, ecosystem: ECO-ENERGYDATAX, title: FleX flexibility (machine-to-machine exchange between controllable units, energy management system, virtual power plant and balance-responsible party), source: SRC-EDX-MXTALK, verification: read}
+- {id: UC-EDX-XDS, ecosystem: ECO-ENERGYDATAX, title: Cross-data-space exchange Re4DE and energy data-X (aggregated smart-meter data, 2026-06-11), source: SRC-FEL-2026, verification: read}
+
+# CIRPASS-2 lighthouse pilots (SRC-CIRPASS2-PILOTS); batteries are not among the value chains.
+- {id: UC-CP-PA1, ecosystem: ECO-CIRPASS2, title: Textiles - Circular Workwear, source: SRC-CIRPASS2-PILOTS, verification: read}
+- {id: UC-CP-PA2, ecosystem: ECO-CIRPASS2, title: Textiles - Connected Products Management at item level for circular business models, source: SRC-CIRPASS2-PILOTS, verification: read}
+- {id: UC-CP-PA3, ecosystem: ECO-CIRPASS2, title: Textiles - Scaling Circular Systems with DPPs, source: SRC-CIRPASS2-PILOTS, verification: read}
+- {id: UC-CP-PA4, ecosystem: ECO-CIRPASS2, title: Textiles - Textile loop, source: SRC-CIRPASS2-PILOTS, verification: read}
+- {id: UC-CP-PA5, ecosystem: ECO-CIRPASS2, title: Textiles - MattressID, source: SRC-CIRPASS2-PILOTS, verification: read}
+- {id: UC-CP-PA6, ecosystem: ECO-CIRPASS2, title: Textiles - Feasibility of DPP issuance by textile SMEs, source: SRC-CIRPASS2-PILOTS, verification: read}
+- {id: UC-CP-PB1, ecosystem: ECO-CIRPASS2, title: E&E - Cordless Vacuum Traceability (prevent incorrect repair), source: SRC-CIRPASS2-PILOTS, verification: read}
+- {id: UC-CP-PB2, ecosystem: ECO-CIRPASS2, title: E&E - DPP4.0 across the lifecycle, source: SRC-CIRPASS2-PILOTS, verification: read}
+- {id: UC-CP-PB3, ecosystem: ECO-CIRPASS2, title: E&E - Audio and Lighting Equipment repair and maintenance, source: SRC-CIRPASS2-PILOTS, verification: read}
+- {id: UC-CP-PB4, ecosystem: ECO-CIRPASS2, title: E&E - IT second-hand market and end of life, source: SRC-CIRPASS2-PILOTS, verification: read}
+- {id: UC-CP-PB5, ecosystem: ECO-CIRPASS2, title: E&E - Tumble Dryer Routes (usage, refurbishment, recycling), source: SRC-CIRPASS2-PILOTS, verification: read}
+- {id: UC-CP-PC1, ecosystem: ECO-CIRPASS2, title: Tyres - Tyre DPP, source: SRC-CIRPASS2-PILOTS, verification: read}
+- {id: UC-CP-PC2, ecosystem: ECO-CIRPASS2, title: Construction - DPPs for Construction, source: SRC-CIRPASS2-PILOTS, verification: read}
