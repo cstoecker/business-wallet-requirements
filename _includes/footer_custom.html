@@ -38,8 +38,15 @@
     var b = document.createElement("button");
     b.type = "button"; b.className = "nav-toggle";
     b.innerHTML = '<span class="icon" aria-hidden="true"></span>';
+    var side = document.querySelector(".side-bar"), tin, tout;
+    if (side) {
+      side.addEventListener("mouseenter", function () { clearTimeout(tout); if (html.classList.contains("nav-collapsed")) tin = setTimeout(function () { html.classList.add("nav-peek"); }, 90); });
+      side.addEventListener("mouseleave", function () { clearTimeout(tin); tout = setTimeout(function () { html.classList.remove("nav-peek"); }, 180); });
+      side.addEventListener("focusin", function () { if (html.classList.contains("nav-collapsed")) html.classList.add("nav-peek"); });
+      side.addEventListener("focusout", function (e) { if (!side.contains(e.relatedTarget)) html.classList.remove("nav-peek"); });
+    }
     function sync() { var c = html.classList.contains("nav-collapsed"); b.setAttribute("aria-pressed", c ? "true" : "false"); b.setAttribute("aria-label", c ? "Expand navigation" : "Collapse navigation to icons"); b.title = c ? "Expand navigation" : "Collapse navigation to icons"; }
-    b.addEventListener("click", function () { html.classList.toggle("nav-collapsed"); try { localStorage.setItem("ebw-nav", html.classList.contains("nav-collapsed") ? "collapsed" : "expanded"); } catch (e) {} sync(); });
+    b.addEventListener("click", function () { html.classList.remove("nav-peek"); html.classList.toggle("nav-collapsed"); try { localStorage.setItem("ebw-nav", html.classList.contains("nav-collapsed") ? "collapsed" : "expanded"); } catch (e) {} sync(); });
     header.appendChild(b); sync();
   }
   // "On this page" for long articles

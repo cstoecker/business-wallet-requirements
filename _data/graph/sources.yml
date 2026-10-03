@@ -436,3 +436,12 @@
   retrieved: '2026-10-03'
   verification: snippet
   note: Results not read.
+- id: SRC-EC-COM-2025-838
+  title: 'Proposal for a Regulation on the establishment of European Business Wallets, COM(2025) 838 final (2025/0358(COD))'
+  issuer: European Commission
+  class: official
+  url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52025PC0838
+  date: '2025-11-19'
+  retrieved: '2026-10-03'
+  verification: read
+  note: 'Full text read in the Commission document copy hosted by the Dutch Eerste Kamer; the EUR-Lex rendering could not be retrieved. Dates in the proposal are placeholders relative to entry into force. Art. 16 paragraphs are numbered 4 to 6 in the PDF but cross-refer to 1 to 3.'

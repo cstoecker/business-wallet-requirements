@@ -5,7 +5,7 @@
 <style>text{font-family:Archivo,Arial,sans-serif;fill:#253746}.t{font-size:26px;font-weight:700;fill:#023852}.lane{font-size:15px;font-weight:700;fill:#023852}.sub{font-size:12.5px;fill:#445260}.yr{font-size:22px;font-weight:700;fill:#023852}.q{font-size:13px;font-weight:600;fill:#fff}.bx{font-size:13.5px}.pres{font-size:13px;font-weight:600;fill:#023852}.leg{font-size:13px;fill:#445260}.grid{stroke:#C9C7C2;stroke-width:1;stroke-dasharray:4 5}</style>
 <rect width="1600" height="810" fill="#fff"/>
 <text x="24" y="40" class="t">European Business Wallet: legal and operational roadmap</text>
-<text x="24" y="62" class="sub">Indicative scenario; the Commission proposal is the only confirmed milestone. Analysis, not legal advice.</text>
+<text x="24" y="62" class="sub">Calendar dates are scenarios; periods after entry into force follow the Commission proposal. Analysis, not legal advice.</text>
 <text x="289" y="96" class="yr" text-anchor="middle">2025</text>
 <line x1="250" y1="104" x2="250" y2="740" class="grid"/>
 <text x="485" y="96" class="yr" text-anchor="middle">2026</text>
@@ -77,10 +77,10 @@
 <path d="M1279 195 L1288 204 L1279 213 L1270 204 Z" fill="#fff" stroke="#E8730C" stroke-width="2"/>
 <text x="1295" y="208" class="bx" text-anchor="start">EBW go-live: mandatory acceptance</text>
 <text x="1295" y="225" class="bx" text-anchor="start">by public administrations, T0 + 24 months</text>
-<text x="1295" y="242" class="bx" text-anchor="start">(2028-2029, subject to adoption)</text>
+<text x="1295" y="242" class="bx" text-anchor="start">Art. 16(1) of the proposal</text>
 <path d="M1517 259 L1526 268 L1517 277 L1508 268 Z" fill="#fff" stroke="#E8730C" stroke-width="2"/>
 <text x="1501" y="262" class="bx" text-anchor="end">QERDS go-live: mandatory acceptance</text>
-<text x="1501" y="279" class="bx" text-anchor="end">by public administrations, T0 + 36 months</text>
+<text x="1501" y="279" class="bx" text-anchor="end">by public administrations, T0 + 36 months (Art. 16(3))</text>
 <rect x="252" y="308" width="1326" height="40" rx="8" fill="#fff" stroke="#023852" stroke-width="1.5"/>
 <text x="915" y="333" class="bx" text-anchor="middle">Standardisation in ETSI ESI and CEN-CENELEC (ongoing)</text>
 <rect x="643" y="372" width="677" height="40" rx="8" fill="#fff" stroke="#023852" stroke-width="1.5"/>
@@ -122,5 +122,5 @@
 <path d="M154 747 L163 756 L154 765 L145 756 Z" fill="#fff" stroke="#E8730C" stroke-width="2"/>
 <text x="170" y="761" class="leg">indicative (scenario)</text>
 <text x="354" y="761" class="leg">CAB conformity assessment body, EAA electronic attestation of attributes, QEAA qualified EAA, QTSP qualified trust service provider, T0 date of entry into force</text>
-<text x="24" y="784" class="leg">Sources: COM(2025) 838 (proposal date); other milestones follow the Spherity Research roadmap scenario (2026-05-18, updated 2026-09-07), not an official timetable. Council presidency order per Council rotation.</text>
+<text x="24" y="784" class="leg">Sources: COM(2025) 838 (proposal date; periods relative to entry into force T0 per Art. 16 and 22); calendar dates follow the Spherity Research roadmap scenario (2026-05-18, updated 2026-09-07), not an official timetable. Council presidency order per Council rotation.</text>
 </svg>

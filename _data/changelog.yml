@@ -3,8 +3,8 @@
 - date: "2026-10-03"
   type: site
   title: "Legal roadmap added"
-  summary: "Swimlane roadmap chart and page with milestones, gates, Council presidencies and risks from the Commission proposal to mandatory acceptance. Only the proposal date is confirmed; all other dates are scenarios."
-  sources: [SRC-EC-IP-25-2718]
+  summary: "Swimlane roadmap chart and page with milestones, gates, Council presidencies and risks from the Commission proposal to mandatory acceptance. Periods relative to entry into force verified against the text of COM(2025) 838; calendar dates are scenarios."
+  sources: [SRC-EC-IP-25-2718, SRC-EC-COM-2025-838]
 - date: "2026-10-03"
   type: site
   title: "Business cases added (macroeconomic, ecosystem, company)"

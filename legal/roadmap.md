@@ -19,23 +19,28 @@ When could the European Business Wallet (EBW) become mandatory for public admini
 
 ## Reading the roadmap
 
-The structure follows the roadmap of [Spherity Research](https://spherity.github.io/spherity-research/ebw-roadmap.html) (published 2026-05-18, updated 2026-09-07): Council presidencies on top, then seven tracks. Mandatory acceptance is counted from **T0**, the date the regulation enters into force, 20 days after publication in the Official Journal. <span class="vtag v-todo">to verify</span> The application periods (24 months for EBW, 36 months for qualified electronic registered delivery) are taken from the Spherity roadmap and still have to be checked against the proposal text.
+The structure follows the roadmap of [Spherity Research](https://spherity.github.io/spherity-research/ebw-roadmap.html) (published 2026-05-18, updated 2026-09-07): Council presidencies on top, then seven tracks. Mandatory acceptance is counted from **T0**, the date the regulation enters into force, 20 days after publication in the Official Journal. The periods relative to T0 are <span class="vtag v-ok">verified</span> in the text of the proposal (see the table); the calendar dates are not, because they depend on when the regulation is adopted.
 
 ## Milestones
 
-| Milestone | Date | Status | Gate or dependency |
+| Milestone | Date | Basis | Gate or dependency |
 |---|---|---|---|
 | Commission proposal COM(2025) 838 | 19 Nov 2025 | confirmed | Starts the legislative procedure |
-| Parliament and Council positions | 2026 | indicative | Council working party and Parliament committee work |
-| Provisional agreement (trilogue) | late 2026 | indicative | Political priorities; slippage into 2027 possible |
-| Publication in the Official Journal | about Q1 to Q2 2027 | indicative | Legal-linguistic revision; defines T0 |
-| Entry into force (T0) | publication + 20 days | indicative | Starts the application periods |
-| EBW specifics in the ARF and toolbox | 2027 | indicative | Final legal text; Cooperation Group |
-| Standards in ETSI ESI and CEN-CENELEC | ongoing, 2026 to 2027 | indicative | Needed before conformity assessment |
-| Start of company credentials by authentic sources | 2027 to 2028 | indicative | National law and data models |
-| Mandatory acceptance by public administrations | T0 + 24 months (2028 to 2029) | indicative | Interoperability infrastructure, trust lists, discovery |
-| Qualified electronic registered delivery go-live | T0 + 36 months | indicative | As above |
-| Widespread industry adoption | 2028 onwards | indicative | Network effect; not mandated by the proposal |
+| Parliament and Council positions | 2026 | scenario | Council working party and Parliament committee work |
+| Provisional agreement (trilogue) | late 2026 | scenario | Political priorities; slippage into 2027 possible |
+| Publication in the Official Journal | about Q1 to Q2 2027 | scenario | Legal-linguistic revision |
+| Entry into force (T0) | 20th day after publication | <span class="vtag v-ok">verified</span> Art. 22 | Starts the periods below |
+| Member States notify penalty rules and supervisory body | T0 + 12 months | <span class="vtag v-ok">verified</span> Art. 13 | National law |
+| Regulation applies | T0 + 1 year | <span class="vtag v-ok">verified</span> Art. 22 | |
+| Public sector bodies enable economic operators to identify and authenticate, sign or seal, submit documents and send or receive notifications with a Business Wallet | T0 + 24 months (2028 to 2029) | <span class="vtag v-ok">verified</span> Art. 16(1) | Trusted lists, discovery and interoperability infrastructure |
+| Public sector bodies offer qualified electronic registered delivery | until T0 + 36 months they may use alternative solutions with a gateway | <span class="vtag v-ok">verified</span> Art. 16(3) | Transition derogation |
+| Commission report on application, including whether to make Business Wallets mandatory | T0 + 3 years | <span class="vtag v-ok">verified</span> Art. 21 | Usage data |
+| Implementing acts on core functionalities and standards | no deadline in the proposal | <span class="vtag v-ok">verified</span> recital 29: "should be prioritised" | Standards, Cooperation Group |
+| EBW specifics in the ARF and toolbox | 2027 | scenario | Final legal text |
+| Start of company credentials by authentic sources | 2027 to 2028 | scenario | National law and data models |
+| Widespread industry adoption | 2028 onwards | scenario | Not mandated by the proposal |
+
+*Verified* means read in the full text of COM(2025) 838. The calendar dates for 24 and 36 months follow from the date of entry into force and move with it. The text can still change in the legislative procedure.
 
 ## Council presidencies
 
@@ -57,4 +62,8 @@ Denmark holds the presidency in Q4 2025. Council presidency order per the Counci
 
 ## Sources and status
 
-Only the date of the Commission proposal is confirmed by an official source ([Commission press release IP/25/2718](https://ec.europa.eu/commission/presscorner/api/files/document/print/en/ip_25_2718/IP_25_2718_EN.pdf)). All other milestones are Spherity scenario assumptions (provenance class A). *Draft. Analysis, not legal advice.*
+- [COM(2025) 838 final](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52025PC0838): Articles 13, 16, 21 and 22 read in full. <span class="vtag v-todo">to verify</span> The EUR-Lex rendering could not be retrieved; the text was read in the Commission document copy hosted by the Dutch Eerste Kamer. In that copy, Article 16 paragraphs are numbered 4 to 6 but cross-refer to 1 to 3, so check the paragraph numbers against the official text.
+- [Commission press release IP/25/2718](https://ec.europa.eu/commission/presscorner/api/files/document/print/en/ip_25_2718/IP_25_2718_EN.pdf): date of the proposal.
+- Scenario rows follow the Spherity Research roadmap (provenance class A), not an official timetable.
+
+*Draft. Analysis, not legal advice.*
