@@ -18,7 +18,9 @@ default_image: "/assets/figures/concept-model-planes.png"
 # REQUIRED before public launch (German law: Impressum and privacy notice): set both to the Spherity pages.
 imprint_url: ""
 privacy_url: ""
+spherity_research_url: "https://spherity.github.io/spherity-research/"
 aux_links:
+  "Spherity Research": "https://spherity.github.io/spherity-research/"
   "Discussions": "https://github.com/spherity/business-wallet-requirements/discussions"
   "Contact": "/contact/"
   "GitHub": "https://github.com/spherity/business-wallet-requirements"

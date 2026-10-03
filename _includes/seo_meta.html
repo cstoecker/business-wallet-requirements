@@ -7,7 +7,7 @@
 <meta name="description" content="{{ desc | escape }}">
 {%- if page.keywords %}<meta name="keywords" content="{{ page.keywords | join: ', ' | escape }}">{% endif %}
 <meta name="author" content="{{ page.author | default: site.publisher.name | escape }}">
-{%- if page.noindex %}<meta name="robots" content="noindex, follow">{% else %}<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">{% endif %}
+{%- if page.noindex or site.preview %}<meta name="robots" content="noindex, follow">{% else %}<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">{% endif %}
 <meta name="theme-color" content="#082239">
 <link rel="canonical" href="{{ canonical }}">
 <link rel="alternate" type="text/plain" href="{{ '/llms.txt' | absolute_url }}" title="llms.txt">

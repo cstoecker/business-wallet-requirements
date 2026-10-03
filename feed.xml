@@ -1,0 +1,14 @@
+---
+layout: null
+permalink: /feed.xml
+sitemap: false
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"><channel>
+<title>{{ site.title | xml_escape }}: what changed</title>
+<link>{{ '/changelog/' | absolute_url }}</link>
+<description>Changes in laws, standards, ecosystems and on this site.</description>
+{%- for e in site.data.changelog %}
+<item><title>{{ e.title | xml_escape }}</title><link>{{ '/changelog/' | absolute_url }}</link><pubDate>{{ e.date | date_to_rfc822 }}</pubDate><description>{{ e.summary | xml_escape }}</description></item>
+{%- endfor %}
+</channel></rss>

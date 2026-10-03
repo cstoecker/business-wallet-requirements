@@ -3,240 +3,436 @@
 # class: official | ecosystem-specification | paper
 # verification: read = fetched/read in full or in the cited part; snippet = seen only as a search snippet; unverified
 - id: SRC-CX-HOME
-  title: "Catena-X home page"
+  title: Catena-X home page
   issuer: Catena-X Automotive Network Association
   class: ecosystem-specification
   url: https://catena-x.net/en/
-  retrieved: "2026-10-03"
+  retrieved: '2026-10-03'
   verification: read
 - id: SRC-CX-CHANGELOG
-  title: "Catena-X standards changelog (CX-Neptune preview)"
+  title: Catena-X standards changelog (CX-Neptune preview)
   issuer: Catena-X Automotive Network Association
   class: ecosystem-specification
   url: https://catenax-ev.github.io/docs/next/standards/changelog
-  version: "preview"
-  retrieved: "2026-10-03"
+  version: preview
+  retrieved: '2026-10-03'
   verification: read
 - id: SRC-CX-0018
-  title: "CX-0018 Dataspace Connectivity"
+  title: CX-0018 Dataspace Connectivity
   issuer: Catena-X Automotive Network Association
   class: ecosystem-specification
   url: https://catenax-ev.github.io/docs/next/standards/CX-0018-DataspaceConnectivity
-  version: "v4.3.0 (preview)"
-  retrieved: "2026-10-03"
+  version: v4.3.0 (preview)
+  retrieved: '2026-10-03'
   verification: read
 - id: SRC-CX-0049
-  title: "CX-0049 DID Document Schema"
+  title: CX-0049 DID Document Schema
   issuer: Catena-X Automotive Network Association
   class: ecosystem-specification
   url: https://catenax-ev.github.io/docs/next/standards/CX-0049-DIDDocumentSchema
-  version: "v2.3.0 (preview)"
-  retrieved: "2026-10-03"
+  version: v2.3.0 (preview)
+  retrieved: '2026-10-03'
   verification: read
 - id: SRC-CX-0006
-  title: "CX-0006 Registration and Initial Onboarding"
+  title: CX-0006 Registration and Initial Onboarding
   issuer: Catena-X Automotive Network Association
   class: ecosystem-specification
   url: https://catenax-ev.github.io/docs/next/standards/CX-0006-RegistrationAndInitialOnboarding
-  version: "v2.1.0 (preview)"
-  retrieved: "2026-10-03"
+  version: v2.1.0 (preview)
+  retrieved: '2026-10-03'
   verification: read
 - id: SRC-CX-SSI-CALL
-  title: "Call for the Expert Group Self-Sovereign Identity (SSI) / Digital Identity"
+  title: Call for the Expert Group Self-Sovereign Identity (SSI) / Digital Identity
   issuer: Catena-X Automotive Network Association
   class: ecosystem-specification
   url: https://catena-x.net/news/apply-now-expert-group-self-sovereign-identity-ssi-digital-identity/
   date: 2026
-  retrieved: "2026-10-03"
+  retrieved: '2026-10-03'
   verification: read
 - id: SRC-MX-WP
-  title: "Whitepaper Manufacturing-X"
+  title: Whitepaper Manufacturing-X
   issuer: Plattform Industrie 4.0 Task Force Manufacturing-X / BMWK
   class: official
   url: https://www.plattform-i40.de/IP/Redaktion/DE/Downloads/Publikation/Manufacturing-X_lang.pdf?__blob=publicationFile&v=6
-  date: "2022-11"
-  retrieved: "2026-10-03"
+  date: 2022-11
+  retrieved: '2026-10-03'
   verification: read
 - id: SRC-MX-TALK15
-  title: "MX-Talk, Edition 24_10, The Industrial Data Ecosystem Manufacturing-X"
+  title: MX-Talk, Edition 24_10, The Industrial Data Ecosystem Manufacturing-X
   issuer: Plattform Industrie 4.0
   class: official
   url: https://www.plattform-i40.de/IP/Redaktion/DE/Downloads/Publikation/MX-Talk15.pdf?__blob=publicationFile&v=1
-  date: "2024-12-05"
-  retrieved: "2026-10-03"
+  date: '2024-12-05'
+  retrieved: '2026-10-03'
   verification: read
 - id: SRC-FX-HOME
-  title: "Factory-X home page"
+  title: Factory-X home page
   issuer: Factory-X consortium
   class: ecosystem-specification
   url: https://factory-x.org/
-  retrieved: "2026-10-03"
+  retrieved: '2026-10-03'
   verification: read
 - id: SRC-FX-LEO
-  title: "MX-Port Leo Specification"
+  title: MX-Port Leo Specification
   issuer: Factory-X consortium
   class: ecosystem-specification
   url: https://factory-x.org/wp-content/uploads/MX-Port-Leo-Specification-v1.0.pdf
-  version: "v1.0"
-  date: "2026-06-09"
-  retrieved: "2026-10-03"
+  version: v1.0
+  date: '2026-06-09'
+  retrieved: '2026-10-03'
   verification: read
 - id: SRC-FX-0097
-  title: "Factory-X Cross Cutting Roles Team, Governance MX-Port configuration \"Leo\" (FX-0097)"
+  title: Factory-X Cross Cutting Roles Team, Governance MX-Port configuration "Leo" (FX-0097)
   issuer: Factory-X consortium
   class: ecosystem-specification
   url: https://factory-x.org/wp-content/uploads/FX-0097-CCRT-Governance-MX-Port-Leo-20.pdf
-  date: "2026-02-04"
-  retrieved: "2026-10-03"
+  date: '2026-02-04'
+  retrieved: '2026-10-03'
   verification: read
 - id: SRC-FX-APPGUIDE
-  title: "Factory-X Use Cases Application Guide"
+  title: Factory-X Use Cases Application Guide
   issuer: Factory-X consortium
   class: ecosystem-specification
   url: https://factory-x.org/wp-content/uploads/Factory-X-Application-Guide.pdf
-  version: "V1.4"
-  date: "2025-05-14"
-  retrieved: "2026-10-03"
+  version: V1.4
+  date: '2025-05-14'
+  retrieved: '2026-10-03'
   verification: read
 - id: SRC-EDX-HOME
-  title: "energy data-X project site"
+  title: energy data-X project site
   issuer: energy data-X consortium
   class: ecosystem-specification
   url: https://www.energydata-x.eu/en/
-  retrieved: "2026-10-03"
+  retrieved: '2026-10-03'
   verification: read
 - id: SRC-EDX-PR2023
-  title: "Press release, energy data-X funded by the Federal Government"
+  title: Press release, energy data-X funded by the Federal Government
   issuer: energy data-X consortium
   class: ecosystem-specification
   url: https://www.energydata-x.eu/en/2023/10/04/datenoekosystem-energy-data-x-wird-durch-bundesregierung-gefoerdert/
-  date: "2023-10-04"
-  retrieved: "2026-10-03"
+  date: '2023-10-04'
+  retrieved: '2026-10-03'
   verification: read
 - id: SRC-EDX-MXTALK
-  title: "MX-Talk Edition 25_7, energy data-X (TenneT)"
+  title: MX-Talk Edition 25_7, energy data-X (TenneT)
   issuer: Plattform Industrie 4.0 / TenneT
   class: official
   url: https://www.plattform-i40.de/IP/Redaktion/DE/Downloads/Publikation/MX-Talk21-energydataX.pdf?__blob=publicationFile&v=3
-  date: "2025-07-03"
-  retrieved: "2026-10-03"
+  date: '2025-07-03'
+  retrieved: '2026-10-03'
   verification: read
 - id: SRC-FEL-2026
-  title: "First exchange of energy data between data spaces (Re4DE and energy data-X)"
+  title: First exchange of energy data between data spaces (Re4DE and energy data-X)
   issuer: dena Future Energy Lab
   class: ecosystem-specification
   url: https://future-energy-lab.de/news/erstmals-energiedaten-zwischen-datenraeumen-ausgetauscht/
-  date: "2026-06-11"
-  retrieved: "2026-10-03"
+  date: '2026-06-11'
+  retrieved: '2026-10-03'
   verification: read
 - id: SRC-CIRPASS2-HOME
-  title: "CIRPASS-2 project site"
+  title: CIRPASS-2 project site
   issuer: CIRPASS-2 consortium (coordinator CEA-List)
   class: ecosystem-specification
   url: https://cirpass2.eu/
-  retrieved: "2026-10-03"
+  retrieved: '2026-10-03'
   verification: read
 - id: SRC-CIRPASS2-ABOUT
-  title: "CIRPASS-2, About"
+  title: CIRPASS-2, About
   issuer: CIRPASS-2 consortium
   class: ecosystem-specification
   url: https://cirpass2.eu/about/
-  retrieved: "2026-10-03"
+  retrieved: '2026-10-03'
   verification: read
 - id: SRC-CIRPASS2-PILOTS
-  title: "CIRPASS-2, Lighthouse pilots"
+  title: CIRPASS-2, Lighthouse pilots
   issuer: CIRPASS-2 consortium
   class: ecosystem-specification
   url: https://cirpass2.eu/lighthouse-pilots/
-  retrieved: "2026-10-03"
+  retrieved: '2026-10-03'
   verification: read
 - id: SRC-CIRPASS1-D32
-  title: "CIRPASS D3.2 DPP System Architecture"
+  title: CIRPASS D3.2 DPP System Architecture
   issuer: CIRPASS consortium (predecessor project)
   class: ecosystem-specification
   url: https://cirpassproject.eu/wp-content/uploads/2024/06/D3.2v1.9.pdf
-  version: "v1.9"
-  date: "2024-05"
-  retrieved: "2026-10-03"
+  version: v1.9
+  date: 2024-05
+  retrieved: '2026-10-03'
   verification: snippet
 - id: SRC-WEBUILD-SITE
-  title: "WE BUILD consortium website"
+  title: WE BUILD consortium website
   issuer: WE BUILD consortium
   class: ecosystem-specification
   url: https://www.webuildconsortium.eu/
-  retrieved: "2026-10-03"
+  retrieved: '2026-10-03'
   verification: read
 - id: SRC-WEBUILD-ARCH
-  title: "WE BUILD consortium architecture repository (blueprint D4.1, ADRs, conformance specs)"
+  title: WE BUILD consortium architecture repository (blueprint D4.1, ADRs, conformance specs)
   issuer: WE BUILD consortium
   class: ecosystem-specification
   url: https://github.com/webuild-consortium/architecture
-  version: "main, commit 8fcfea0"
-  date: "2026-02-20"
-  retrieved: "2026-10-03"
+  version: main, commit 8fcfea0
+  date: '2026-02-20'
+  retrieved: '2026-10-03'
   verification: read
-  note: "Read via the Spherity fork spherity/webuild-consortium-architecture."
+  note: Read via the Spherity fork spherity/webuild-consortium-architecture.
 - id: SRC-WEBUILD-RB
-  title: "WE BUILD attestation rulebooks catalog"
+  title: WE BUILD attestation rulebooks catalog
   issuer: WE BUILD consortium
   class: ecosystem-specification
-  version: "main, commit de79cca (v1.0)"
-  date: "2026-08-09"
-  retrieved: "2026-10-03"
+  version: main, commit de79cca (v1.0)
+  date: '2026-08-09'
+  retrieved: '2026-10-03'
   verification: read
-  note: "Read via the Spherity fork spherity/webuild-attestation-rulebooks-catalog."
+  note: Read via the Spherity fork spherity/webuild-attestation-rulebooks-catalog.
 - id: SRC-OID2025
-  title: "Towards the European Business Wallet (T. Hühnlein, D. Hühnlein, S. Schwalm, C. Stöcker)"
+  title: Towards the European Business Wallet (T. Hühnlein, D. Hühnlein, S. Schwalm, C. Stöcker)
   issuer: Open Identity Summit 2025
   class: paper
   url: https://doi.org/10.18420/oid2025_09
   verification: unverified
-  note: "Registered; clause-level extraction pending."
+  note: Registered; clause-level extraction pending.
 - id: SRC-EIDAS-CONSOL
-  title: "Regulation (EU) No 910/2014 (eIDAS), consolidated text as amended by Regulation (EU) 2024/1183"
-  issuer: "European Union (EUR-Lex consolidated version, documentation tool without legal effect)"
+  title: Regulation (EU) No 910/2014 (eIDAS), consolidated text as amended by Regulation (EU) 2024/1183
+  issuer: European Union (EUR-Lex consolidated version, documentation tool without legal effect)
   class: official
-  url: "https://eur-lex.europa.eu/eli/reg/2014/910/2024-10-18/eng/pdf"
-  version: "consolidated 2024-10-18"
-  retrieved: "2026-10-03"
+  url: https://eur-lex.europa.eu/eli/reg/2014/910/2024-10-18/eng/pdf
+  version: consolidated 2024-10-18
+  retrieved: '2026-10-03'
   verification: read
-  note: "Article numbers must be checked against the Official Journal text when cited legally. Amending Regulation (EU) 2024/1183 itself was not fetched."
+  note: Article numbers must be checked against the Official Journal text when cited legally. Amending Regulation (EU) 2024/1183 itself was not fetched.
 - id: SRC-EBW-PROPOSAL
-  title: "Proposal for a Regulation on European Business Wallets, COM(2025) 838 final"
-  issuer: "European Commission"
+  title: Proposal for a Regulation on European Business Wallets, COM(2025) 838 final
+  issuer: European Commission
   class: official
-  url: "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:52025PC0838"
-  version: "COM(2025) 838 final (proposal, procedure 2025/0358(COD))"
-  date: "2025-11-19"
-  retrieved: "2026-10-03"
+  url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:52025PC0838
+  version: COM(2025) 838 final (proposal, procedure 2025/0358(COD))
+  date: '2025-11-19'
+  retrieved: '2026-10-03'
   verification: read
-  note: "A proposal, not adopted law. Council documents ST 7659/26 and ST 9684/26 not yet read."
+  note: A proposal, not adopted law. Council documents ST 7659/26 and ST 9684/26 not yet read.
 - id: SRC-ETSI-119612
-  title: "ETSI TS 119 612, Electronic Signatures and Trust Infrastructures (ESI); Trusted Lists"
+  title: ETSI TS 119 612, Electronic Signatures and Trust Infrastructures (ESI); Trusted Lists
   issuer: ETSI
   class: standard
-  url: "https://www.etsi.org/deliver/etsi_ts/119600_119699/119612/02.04.01_60/ts_119612v020401p.pdf"
-  version: "V2.4.1"
-  date: "2025-08"
-  retrieved: "2026-10-03"
+  url: https://www.etsi.org/deliver/etsi_ts/119600_119699/119612/02.04.01_60/ts_119612v020401p.pdf
+  version: V2.4.1
+  date: 2025-08
+  retrieved: '2026-10-03'
   verification: read
-  note: "That V2.4.1 is the latest version was not confirmed."
+  note: That V2.4.1 is the latest version was not confirmed.
 - id: SRC-ETSI-119602
-  title: "ETSI TS 119 602, Electronic Signatures and Trust Infrastructures (ESI); Lists of trusted entities (LoTE); Data model"
+  title: ETSI TS 119 602, Electronic Signatures and Trust Infrastructures (ESI); Lists of trusted entities (LoTE); Data model
   issuer: ETSI
   class: standard
-  url: "https://www.etsi.org/deliver/etsi_ts/119600_119699/119602/01.01.01_60/ts_119602v010101p.pdf"
-  version: "V1.1.1"
-  date: "2025-11"
-  retrieved: "2026-10-03"
+  url: https://www.etsi.org/deliver/etsi_ts/119600_119699/119602/01.01.01_60/ts_119602v010101p.pdf
+  version: V1.1.1
+  date: 2025-11
+  retrieved: '2026-10-03'
   verification: read
 - id: SRC-ARF-TRUST
-  title: "EUDI Wallet Architecture and Reference Framework, chapter 6 Trust model (published at eudi.dev)"
-  issuer: "European Commission and Member States (EUDI Wallet toolbox)"
+  title: EUDI Wallet Architecture and Reference Framework, chapter 6 Trust model (published at eudi.dev)
+  issuer: European Commission and Member States (EUDI Wallet toolbox)
   class: official
-  url: "https://eudi.dev/latest/main/06-trust-model/"
-  version: "ARF v3.0.0"
-  date: "2026-07-21"
-  retrieved: "2026-10-03"
+  url: https://eudi.dev/latest/main/06-trust-model/
+  version: ARF v3.0.0
+  date: '2026-07-21'
+  retrieved: '2026-10-03'
   verification: read
-  note: "The GitHub repository of the ARF could not be read; the eudi.dev rendering was used."
+  note: The GitHub repository of the ARF could not be read; the eudi.dev rendering was used.
+- id: SRC-EC-IP-25-2718
+  title: 'Press release IP/25/2718: Simpler EU digital rules and new digital wallets to save billions for businesses and boost innovation'
+  issuer: European Commission
+  class: official
+  url: https://ec.europa.eu/commission/presscorner/api/files/document/print/en/ip_25_2718/IP_25_2718_EN.pdf
+  date: '2025-11-19'
+  retrieved: '2026-10-03'
+  verification: read
+- id: SRC-EC-SWD-2025-837
+  title: Commission Staff Working Document, Impact Assessment accompanying COM(2025) 838 final, SWD(2025) 837 final
+  issuer: European Commission
+  class: official
+  url: https://ec.europa.eu/transparency/documents-register/api/files/SWD(2025)837_0/090166e5258f2ae9?rendition=false
+  date: '2025-11-19'
+  retrieved: '2026-10-03'
+  verification: read
+  note: Draws on the Business Wallet Study (NTT Data, October 2025). Page and section references were taken from extracted text and are approximate. An executive summary may exist separately (not checked).
+- id: SRC-EC-DIGITAL-PACKAGE-FAQ
+  title: 'Digital Package: questions and answers'
+  issuer: European Commission
+  class: official
+  url: https://digital-strategy.ec.europa.eu/en/faqs/digital-package
+  retrieved: '2026-10-03'
+  verification: read
+- id: SRC-COUNCIL-ST-9684-26
+  title: Council document ST 9684/26 (general approach note on European Business Wallets)
+  issuer: Council of the European Union
+  class: official
+  url: https://data.consilium.europa.eu/doc/document/ST-9684-2026-INIT/en/pdf
+  date: '2026-06-02'
+  retrieved: '2026-10-03'
+  verification: unverified
+  note: Found by search, not read.
+- id: SRC-COUNCIL-ST-7659-26
+  title: Council document ST 7659/26
+  issuer: Council of the European Union
+  class: official
+  url: https://data.consilium.europa.eu/doc/document/ST-7659-2026-INIT/en/pdf
+  date: '2026-05-22'
+  retrieved: '2026-10-03'
+  verification: unverified
+  note: Found by search, not read.
+- id: SRC-PLOS-CHEN-2024
+  title: 'Chen, Wang, Gan, Gui (2024): The effect of digital government on corporate total factor productivity. PLOS ONE. DOI 10.1371/journal.pone.0308093'
+  issuer: PLOS ONE (peer-reviewed journal)
+  class: academic
+  url: https://doi.org/10.1371/journal.pone.0308093
+  date: '2024'
+  retrieved: '2026-10-03'
+  verification: read
+  note: Abstract page read. Chinese listed firms 2010-2020; limited transferability to EU SMEs.
+- id: SRC-EC-CFE-2025
+  title: 'Call for Evidence for an Impact Assessment: European Business Wallet, Ares(2025)3928207'
+  issuer: European Commission (DG CNCT)
+  class: official
+  url: https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=PI_COM:Ares(2025)3928207
+  date: '2025-05-15'
+  retrieved: '2026-10-03'
+  verification: read
+- id: SRC-FBI-IC3-2024
+  title: FBI Internet Crime Complaint Center, 2024 Internet Crime Report
+  issuer: FBI IC3 (US federal authority)
+  class: official
+  url: https://www.ic3.gov/AnnualReport/Reports/2024_IC3Report.pdf
+  date: '2025'
+  retrieved: '2026-10-03'
+  verification: read
+  note: US complaints that victims self-report; no breakdown by company size.
+- id: SRC-EUROPOL-IOCTA-2025
+  title: 'Europol IOCTA 2025: Steal, Deal and Repeat'
+  issuer: Europol
+  class: official
+  url: https://www.europol.europa.eu/cms/sites/default/files/documents/Steal-deal-repeat-IOCTA_2025.pdf
+  date: '2025'
+  retrieved: '2026-10-03'
+  verification: read
+- id: SRC-EUROPOL-IOCTA-2026
+  title: Europol IOCTA 2026
+  issuer: Europol
+  class: official
+  url: https://www.europol.europa.eu/cms/sites/default/files/documents/IOCTA-2026.pdf
+  date: '2026'
+  retrieved: '2026-10-03'
+  verification: read
+- id: SRC-EUROSTAT-ENT-DIGITAL
+  title: 'Eurostat Statistics Explained: Digital economy and society statistics, enterprises'
+  issuer: Eurostat
+  class: official
+  url: https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Digital_economy_and_society_statistics_-_enterprises
+  retrieved: '2026-10-03'
+  verification: read
+  note: ERP figure read; other figures seen as snippets only.
+- id: SRC-NBER-W24414
+  title: 'Fan, Liu, Qian, Wen: Computerizing VAT Invoices in China. NBER Working Paper 24414'
+  issuer: NBER
+  class: academic
+  url: https://doi.org/10.3386/w24414
+  date: '2018'
+  retrieved: '2026-10-03'
+  verification: read
+- id: SRC-LEWIS-FAUPEL-2016
+  title: 'Lewis-Faupel, Neggers, Olken, Pande: Can Electronic Procurement Improve Infrastructure Provision? American Economic Journal: Economic Policy 8(3)'
+  issuer: American Economic Association (peer-reviewed journal)
+  class: academic
+  url: https://doi.org/10.1257/pol.20140258
+  date: '2016'
+  retrieved: '2026-10-03'
+  verification: read
+  note: Abstract read.
+- id: SRC-BELLON-2022
+  title: 'Bellon, Dabla-Norris, Khalid, Lima: Digitalization to improve tax compliance, VAT e-invoicing in Peru. Journal of Public Economics'
+  issuer: Elsevier (peer-reviewed journal)
+  class: academic
+  url: https://doi.org/10.1016/j.jpubeco.2022.104661
+  date: '2022'
+  retrieved: '2026-10-03'
+  verification: snippet
+  note: Bibliographic data checked; effect sizes not extracted.
+- id: SRC-ESPR-IA-ANNEX
+  title: Impact assessment annex for the Ecodesign for Sustainable Products Regulation proposal (Council document 7854/22 ADD 5; SWD(2022) 82)
+  issuer: European Commission / Council of the EU
+  class: official
+  url: https://data.consilium.europa.eu/doc/document/ST-7854-2022-ADD-5/en/pdf
+  date: '2022-04-04'
+  retrieved: '2026-10-03'
+  verification: read
+- id: SRC-SWD-2025-836
+  title: Commission Staff Working Document, Digital Omnibus, SWD(2025) 836 final
+  issuer: European Commission
+  class: official
+  url: https://cdn.lawreportgroup.com/acuris/files/Law-Report-Group-Files-New/EC%20digital%20omnibus%20proposal.pdf
+  date: '2025-11-19'
+  retrieved: '2026-10-03'
+  verification: read
+  note: Read through a third-party mirror of the Commission document; confirm figures on EUR-Lex before citing legally.
+- id: SRC-SWD-2022-393
+  title: Impact assessment, VAT in the Digital Age (ViDA), SWD(2022) 393
+  issuer: European Commission
+  class: official
+  url: https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:52022SC0393
+  date: '2022-12-08'
+  retrieved: '2026-10-03'
+  verification: read
+  note: Time basis of the e-invoicing savings table was not checked.
+- id: SRC-SWD-2023-140
+  title: Impact assessment, EU customs reform, SWD(2023) 140
+  issuer: European Commission
+  class: official
+  url: https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX%3A52023SC0140
+  date: '2023-05-17'
+  retrieved: '2026-10-03'
+  verification: read
+- id: SRC-OECD-TPP-297
+  title: 'OECD Trade Policy Paper No. 297: The digitalisation of trade documents and processes'
+  issuer: OECD
+  class: academic
+  url: https://www.oecd.org/content/dam/oecd/en/publications/reports/2025/09/the-digitalisation-of-trade-documents-and-processes_de6a03e9/64872f25-en.pdf
+  date: 2025-09
+  retrieved: '2026-10-03'
+  verification: read
+- id: SRC-SWD-2022-34
+  title: Impact assessment, Data Act, SWD(2022) 34
+  issuer: European Commission
+  class: official
+  url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=SWD:2022:34:FIN
+  date: '2022-02-23'
+  retrieved: '2026-10-03'
+  verification: snippet
+  note: Figures seen in a secondary summary only.
+- id: SRC-GOLDFARB-TUCKER-2019
+  title: 'Goldfarb, Tucker: Digital Economics. Journal of Economic Literature 57(1), 3-43'
+  issuer: American Economic Association (peer-reviewed journal)
+  class: academic
+  url: https://doi.org/10.1257/jel.20171452
+  date: '2019'
+  retrieved: '2026-10-03'
+  verification: snippet
+  note: Citation data checked; content not re-read in this session.
+- id: SRC-HASTIG-SODHI-2020
+  title: 'Hastig, Sodhi: Blockchain for Supply Chain Traceability, Business Requirements and Critical Success Factors. Production and Operations Management 29(4)'
+  issuer: Wiley (peer-reviewed journal)
+  class: academic
+  url: https://doi.org/10.1111/poms.13147
+  date: '2020'
+  retrieved: '2026-10-03'
+  verification: snippet
+  note: Summary taken from search results; verify against the paper.
+- id: SRC-WALDEN-2021
+  title: 'Walden, Steinbrecher, Marinkovic: Digital Product Passports as Enabler of the Circular Economy. Chemie Ingenieur Technik 93(11)'
+  issuer: Wiley (peer-reviewed journal)
+  class: academic
+  url: https://doi.org/10.1002/cite.202100121
+  date: '2021'
+  retrieved: '2026-10-03'
+  verification: snippet
+  note: Results not read.

@@ -199,7 +199,7 @@
   related:
   - CON-TRUSTED-AI
   - CON-AI-SAFETY
-  summary: AISP as used in the Trusted AI work from a supply-chain perspective (expansion and scope to be confirmed from the source).
+  summary: AISP as used in the Trusted AI work from a supply-chain perspective; Spherity Research mentions an AI Service Passport (expansion to be confirmed against the Trusted AI sources).
   definition: To be defined from the cited source; the acronym is not expanded here until it has been confirmed.
 - id: CON-AI-SAFETY
   slug: ai-safety

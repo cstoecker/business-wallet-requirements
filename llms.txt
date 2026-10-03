@@ -14,11 +14,19 @@ Machine-readable discovery aid only. It is not a ranking, citation or training-d
 ## Ecosystems and initiatives
 {% for e in site.data.graph.ecosystems %}- [{{ e.name }}]({{ '/ecosystem/initiatives/' | append: e.id | remove: 'ECO-' | downcase | append: '/' | absolute_url }}): {{ e.summary }}
 {% endfor %}
+## Business cases
+- [Business cases]({{ '/perspectives/business-cases/' | absolute_url }}): macroeconomic, ecosystem and company-level cases with every number traced to an official source or peer-reviewed paper.
+- [Macroeconomic case]({{ '/perspectives/business-cases/macro/' | absolute_url }})
+- [Company case]({{ '/perspectives/business-cases/company/' | absolute_url }})
+
 ## Methodology
 - [Requirements management methodology]({{ '/requirements/methodology/' | absolute_url }}): sources, lifecycle, categories, provenance and traceability rules.
 
 ## Figures
 {% for f in site.figures %}- [{{ f.title }}]({{ f.url | absolute_url }}): {{ f.caption }}
 {% endfor %}
+## Related research
+- [Spherity Research]({{ site.spherity_research_url }}): publications and roadmaps by the publisher (reading list, not a source of this requirements baseline).
+
 ## Data
 - Sitemap: {{ '/sitemap.xml' | absolute_url }}

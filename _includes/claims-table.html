@@ -1,0 +1,5 @@
+{%- assign cl = site.data.graph.claims | where: "case", include.case -%}
+| ID | Statement | Figure and basis | Source and location | Check | Caveat |
+|---|---|---|---|---|---|
+{% for c in cl %}{% assign s = site.data.graph.sources | where: "id", c.source | first %}| `{{ c.id }}` | {{ c.statement }} | {% if c.figure %}{{ c.figure }} {{ c.unit }}; {% endif %}{{ c.type }}{% if c.basis %}, {{ c.basis }}{% endif %}{% if c.geography %}, {{ c.geography }}{% endif %}{% if c.scope %}; {{ c.scope }}{% endif %} | [{{ s.title | truncate: 90 }}]({{ s.url }}) ({{ s.date }}){% if c.location %}, {{ c.location }}{% endif %} | {% if c.verification == "read" %}<span class="vtag v-ok">verified</span>{% else %}<span class="vtag v-todo">to verify</span>{% endif %} | {{ c.caveat }} |
+{% endfor %}

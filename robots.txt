@@ -2,7 +2,12 @@
 layout: null
 permalink: /robots.txt
 ---
-# Crawler policy for the European Business Wallet Requirements site.
+{% if site.preview %}# Preview build: not for indexing.
+User-agent: *
+Disallow: /
+
+Sitemap: {{ "/sitemap.xml" | absolute_url }}
+{% else %}# Crawler policy for the European Business Wallet Requirements site.
 # Classic search crawlers and user-initiated answer-engine fetchers are allowed.
 # AI model-training crawlers: NO decision has been taken yet (open item, Legal review required).
 # Until a decision is documented, they fall under the catch-all group below. Do not read this as a decision.
@@ -53,3 +58,4 @@ User-agent: *
 Allow: /
 
 Sitemap: {{ "/sitemap.xml" | absolute_url }}
+{% endif %}

@@ -24,8 +24,21 @@ for x in ucs + reqs:
     if x["ecosystem"] not in eid: err(f"{x['id']}: unknown ecosystem {x['ecosystem']}")
     if x["source"] not in sid: err(f"{x['id']}: unknown source {x['source']}")
 for s in sources:
-    if s.get("class") not in ("official", "standard", "ecosystem-specification", "paper"): err(f"{s['id']}: class must be official, standard, ecosystem-specification or paper")
+    if s.get("class") not in ("official", "standard", "ecosystem-specification", "paper", "academic"): err(f"{s['id']}: class must be official, standard, ecosystem-specification, paper or academic")
 
+cases = load("_data/graph/business-cases.yml"); claims = load("_data/graph/claims.yml")
+bid = {b["id"] for b in cases}
+for c in claims:
+    if c["case"] not in bid: err(f"{c['id']}: unknown business case {c['case']}")
+    if c["source"] not in sid: err(f"{c['id']}: unknown source {c['source']}")
+    if c.get("verification") not in ("read", "snippet", "unverified"): err(f"{c['id']}: verification must be read, snippet or unverified")
+    if not c.get("caveat") and c.get("type") in ("upper-bound", "lower-bound", "estimate"): err(f"{c['id']}: estimates and bounds need a caveat")
+cids = [c["id"] for c in claims]
+for d in {i for i in cids if cids.count(i) > 1}: err(f"claims: duplicate id {d}")
+for b in cases:
+    if not any(c["case"] == b["id"] for c in claims): err(f"{b['id']}: business case has no claims")
+for u in ucs:
+    pass
 SECTIONS = ["Summary", "Definition", "Why it matters", "How it works", "Interaction flow", "Roles and responsibilities", "Related concepts",
             "Requirements and obligations", "Standards and specifications", "Design choices and alternatives", "Examples",
             "Open questions and limitations", "Terms introduced", "References", "Change log"]
@@ -81,6 +94,7 @@ for c in concepts:
 if "--report" in sys.argv:
     from collections import Counter
     print("Concept articles by status:", dict(Counter(c["status"] for c in concepts)))
+print(f"{len(cases)} business cases, {len(claims)} claims")
 print(f"{len(concepts)} concepts, {len(figs)} figures, {len(sources)} sources checked")
 if errors:
     print("\n".join("ERROR " + e for e in errors)); sys.exit(1)

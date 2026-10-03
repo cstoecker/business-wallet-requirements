@@ -1,0 +1,60 @@
+{
+ "W-ARF-RELEASES": null,
+ "W-CX-CHANGELOG": {
+  "hash": "3f0aad4beb5eefae9f2d44f4f02b5e974997567dc56c536950e41f306ef256ac",
+  "length": 12713
+ },
+ "W-DCP": {
+  "hash": "ce78e4f1c2041fbef496e39986804162e990720423c5eac9ad11ca17217cfc88",
+  "length": 41
+ },
+ "W-DSP": {
+  "hash": "6c20908f1a8eb98f32d84ca2a6ae9d149cab7202f1a62a0d7db5062d99f494de",
+  "length": 51
+ },
+ "W-ETSI-119461": {
+  "versions": [
+   "01.01.01",
+   "02.01.01"
+  ]
+ },
+ "W-ETSI-119475": {
+  "versions": [
+   "01.01.01",
+   "01.02.01"
+  ]
+ },
+ "W-ETSI-119602": {
+  "versions": [
+   "01.01.01"
+  ]
+ },
+ "W-ETSI-119612": {
+  "versions": [
+   "01.01.01",
+   "01.02.01",
+   "02.01.01",
+   "02.02.01",
+   "02.03.01",
+   "02.04.01"
+  ]
+ },
+ "W-OID4VCI": {
+  "hash": "1a913ffa2a105755ddf4f18865ebd1498cc92b46e5d6fd8c663adf633168a0d5",
+  "length": 231862
+ },
+ "W-OID4VP": {
+  "hash": "ffd3890126ba4872ca1e119003f4f573d746e3f1108e3dd72814efbe94784229",
+  "length": 224519
+ },
+ "W-W3C-STATUSLIST": {
+  "hash": "e74787782c338db6377393fbe725dd9a0799c08df91d9d5647eed03e6925c27c",
+  "length": 67742
+ },
+ "W-W3C-VCDM": {
+  "hash": "5d9083fdd1627bf7939c06579a1137af20d872313505b17a92d55219b300ecf1",
+  "length": 363054
+ },
+ "W-WEBUILD-ARCH": null,
+ "W-WEBUILD-RB": null
+}

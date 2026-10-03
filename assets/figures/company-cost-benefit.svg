@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" width="1200" height="560" role="img" aria-labelledby="tc dc">
+  <title id="tc">Annual cost and maximum annual benefit per company, EUR</title>
+  <desc id="dc">Bar chart per company size from the Commission impact assessment model. Micro: annual cost 500, maximum annual benefit 4,000. SME: annual cost 5,000, maximum annual benefit 42,250. Large: annual cost 50,000, maximum annual benefit 97,300.</desc>
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"><rdf:RDF><cc:Work rdf:about=""><dc:title>Annual cost and maximum annual benefit per company</dc:title><dc:description>Per-entity annual cost and maximum annual benefit from the impact assessment model for micro, small and large companies.</dc:description><dc:creator>European Business Wallet Requirements project</dc:creator><dc:subject>business case; company; cost; benefit; European Business Wallet</dc:subject><dc:language>en</dc:language><dc:format>image/svg+xml</dc:format><dc:rights>CC BY 4.0</dc:rights><cc:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/></cc:Work></rdf:RDF></metadata>
+  <style>
+      text{font-family:Archivo,Arial,sans-serif}
+      .lab{font-size:17px;fill:#253746}
+      .val{font-size:17px;font-weight:700;fill:#023852}
+      .note{font-size:15px;fill:#445260}
+      .ttl{font-size:20px;font-weight:700;fill:#023852}
+      .axis{stroke:#C9C7C2;stroke-width:1.5}
+      .grp{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:13px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;fill:#445260}
+    </style>
+  <rect width="1200" height="560" fill="#F4F2EE"/>
+  <text class="ttl" x="30" y="38">Per company and year, EUR (model values from the impact assessment)</text>
+  <text class="lab" x="316" y="108" text-anchor="end">Micro (under 10 staff)</text>
+  <rect x="330" y="78" width="2.8" height="34" rx="8" fill="#6F8895"/>
+  <text class="val" x="340.6" y="101">500 annual cost</text>
+  <rect x="330" y="120" width="22.0" height="34" rx="8" fill="#023852"/>
+  <text class="val" x="359.9" y="143">4,000 maximum benefit</text>
+  <text class="lab" x="316" y="238" text-anchor="end">SME (10 to 250)</text>
+  <rect x="330" y="208" width="27.5" height="34" rx="8" fill="#6F8895"/>
+  <text class="val" x="365.4" y="231">5,000 annual cost</text>
+  <rect x="330" y="250" width="232.4" height="34" rx="8" fill="#023852"/>
+  <text class="val" x="570.3" y="273">42,250 maximum benefit</text>
+  <text class="lab" x="316" y="368" text-anchor="end">Large (over 250)</text>
+  <rect x="330" y="338" width="275.0" height="34" rx="8" fill="#6F8895"/>
+  <text class="val" x="612.9" y="361">50,000 annual cost</text>
+  <rect x="330" y="380" width="535.1" height="34" rx="8" fill="#023852"/>
+  <text class="val" x="873.0" y="403">97,300 maximum benefit</text>
+  <line class="axis" x1="330" y1="64" x2="330" y2="438"/>
+  <text class="note" x="30" y="528">Source: SWD(2025) 837, Tables 5 and 8. Benefits are theoretical upper bounds (Standard Cost Model); costs are model assumptions. Not a price list.</text>
+</svg>

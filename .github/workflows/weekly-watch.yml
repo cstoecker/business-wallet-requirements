@@ -1,0 +1,38 @@
+name: Weekly watch of laws and standards
+
+on:
+  schedule:
+    - cron: "0 6 * * 1"   # Mondays 06:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pyyaml
+      - name: Fetch watched sources and write the report
+        run: |
+          mkdir -p docs/watch
+          python3 scripts/watch_sources.py --update --report "docs/watch/$(date -u +%F).md"
+      - name: Open a pull request for review when something changed
+        uses: peter-evans/create-pull-request@v6
+        with:
+          branch: watch/weekly
+          commit-message: "Weekly watch report and updated watch state"
+          title: "Weekly watch report (needs human review)"
+          body: |
+            Automated facts-only report of new versions and changes in watched official sources, standards and ecosystem specifications.
+            A person or the weekly research agent decides what each change means for concepts, sources and requirements.
+            Do not merge without review. See docs/11-weekly-watch.md.
+          labels: needs-review
+          add-paths: |
+            docs/watch/
+            _data/watch/state.json

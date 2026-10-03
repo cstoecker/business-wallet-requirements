@@ -91,6 +91,9 @@ for rel, d in pages:
         if not thin and sm and f"/concepts/{name}/" not in sm: errors.append(f"{rel}: missing from sitemap.xml")
         if thin and sm and f"/concepts/{name}/" in sm: errors.append(f"{rel}: noindex page must not be in sitemap.xml")
         if f"/concepts/{name}/" not in idx: errors.append(f"{rel}: not linked from the concepts index")
+if os.environ.get("PREVIEW"):
+    for rel, d in pages:
+        pass
 print(f"{len(pages)} pages checked")
 if errors: print("\n".join("ERROR " + e for e in errors)); sys.exit(1)
 print("OK")

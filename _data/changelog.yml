@@ -1,0 +1,12 @@
+# Public change log (what changed in laws, standards, ecosystems and on this site). Newest first.
+# Entries are added by people or by the weekly agent through a reviewed pull request. type: law | standard | ecosystem | site
+- date: "2026-10-03"
+  type: site
+  title: "Business cases added (macroeconomic, ecosystem, company)"
+  summary: "Forty-one traced claims from the Commission impact assessment SWD(2025) 837, other official impact assessments and academic papers, with basis, caveats and verification state. The often quoted EUR 37.5 billion SME figure could not be traced to an official document."
+  sources: [SRC-EC-SWD-2025-837, SRC-EC-IP-25-2718]
+- date: "2026-10-03"
+  type: site
+  title: "First draft published for review"
+  summary: "Methodology, ecosystem pages, 29 concept registry entries and the first concept article (Trust plane) are online as a draft."
+  sources: []

@@ -1,0 +1,13 @@
+# Preview build for review on the cstoecker fork. Not indexed by search engines.
+url: "https://cstoecker.github.io"
+baseurl: "/business-wallet-requirements"
+repo_url: "https://github.com/cstoecker/business-wallet-requirements"
+preview: true
+aux_links:
+  "Spherity Research": "https://spherity.github.io/spherity-research/"
+  "Contact": "/contact/"
+  "GitHub": "https://github.com/cstoecker/business-wallet-requirements"
+nav_external_links:
+  - title: Discussions
+    url: https://github.com/cstoecker/business-wallet-requirements/discussions
+    opens_in_new_tab: true

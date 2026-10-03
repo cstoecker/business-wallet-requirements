@@ -25,6 +25,7 @@ How a statement in a law, standard or ecosystem specification becomes a traceabl
 | **official** | EU legislation, proposals, Council/Parliament/Commission documents, implementing acts, the EUDI ARF | highest |
 | **standard** | ETSI/CEN, ISO/IEC, W3C, IETF, OpenID Foundation, Eclipse DSP/DCP | high |
 | **ecosystem-specification** | IDTA, Catena-X, Gaia-X, WE BUILD (blueprint, ADRs, rulebooks), Manufacturing-X, Factory-X, energy data-X, CIRPASS-2 | below law and formal standards |
+| **academic** | peer-reviewed journal papers and working papers of recognised institutions (NBER, CEPR, OECD, World Bank, IMF), used for business-case claims only, never as the basis of a requirement | context for claims |
 | **paper** | *Towards the European Business Wallet* (Open Identity Summit 2025, DOI 10.18420/oid2025_09) | context for derivation |
 
 From IDTA/AAS, Catena-X and IDSA only **high-level, technology-neutral requirements** are taken, never implementations; AAS is assessed as an implementation artefact in the architecture section. Blog posts, Medium articles, position papers, vendor material and repositories are **not** graph sources; they appear only in the non-normative reading list. Every source is recorded in the source register (`_data/graph/sources.yml`) with issuer, version, date, URL and a verification state (`read`, `snippet`, `unverified`).
