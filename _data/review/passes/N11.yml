@@ -1,0 +1,510 @@
+- id: EBW-TRU-103
+  fidelity: ok
+  verdict: ok
+  applicability: core
+  priority: P1
+  priority_reason: Proposal; key protection anchors the wallet trust model
+  clusters:
+  - K04
+  - K05
+  - K14
+  verification_ready: needs-legal-review
+  note: Proposal text; Council text may change.
+- id: EBW-TRU-104
+  fidelity: ok
+  verdict: merge-with:EBW-FUN-029
+  applicability: core
+  priority: P1
+  priority_reason: Proposal; out-of-band user authentication shapes recovery
+  clusters:
+  - K04
+  - K03
+  - K07
+  verification_ready: needs-legal-review
+  note: Same text as FUN-029; keep one.
+- id: EBW-TRU-105
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P3
+  priority_reason: Published policy document, no design impact
+  clusters:
+  - K07
+  - K13
+  verification_ready: needs-legal-review
+- id: EBW-TRU-106
+  fidelity: ok
+  verdict: split
+  corrected_statement:
+  - When the provider of European Business Wallets has revoked a wallet unit attestation, it shall make the validity status of that attestation publicly available.
+  - The provider of European Business Wallets shall describe the location of the validity status information in the wallet unit attestation.
+  applicability: core
+  priority: P1
+  priority_reason: Proposal; status publication shapes verification
+  clusters:
+  - K07
+  - K05
+  - K09
+  verification_ready: needs-legal-review
+  note: 'Two obligations: publish status, describe location. Overlaps TRU-031 without privacy clause.'
+- id: EBW-TRU-107
+  fidelity: ok
+  verdict: ok
+  applicability: core
+  priority: P2
+  priority_reason: Proposal; local presentation check
+  clusters:
+  - K05
+  - K08
+  - K09
+  verification_ready: needs-legal-review
+  note: '"Restricted audience" undefined; hard to test.'
+- id: EBW-TRU-108
+  fidelity: narrower
+  verdict: ok
+  applicability: core
+  priority: P2
+  priority_reason: Proposal; local issuance check
+  clusters:
+  - K08
+  - K05
+  verification_ready: needs-legal-review
+  note: Quote is truncated; statement adds the issuance trigger.
+- id: EBW-TRU-109
+  fidelity: ok
+  verdict: merge-with:EBW-TRU-035
+  applicability: core
+  priority: P2
+  priority_reason: Wallet side of the same issuance check as TRU-035
+  clusters:
+  - K04
+  - K05
+  - K08
+  verification_ready: needs-legal-review
+  note: Counterpart of TRU-035 (provider verifies WUA); presenting WUA also covers authorities.
+- id: EBW-TRU-110
+  fidelity: broader-than-quote
+  verdict: reword
+  corrected_statement:
+  - The wallet unit shall verify the authenticity and validity of owner identification data it receives.
+  applicability: core
+  priority: P2
+  priority_reason: Proposal; local validation duty
+  clusters:
+  - K07
+  - K05
+  - K01
+  verification_ready: needs-source-check
+  note: Quote names owner identification data only; attestations of attributes not in quote.
+- id: EBW-TRU-111
+  fidelity: ok
+  verdict: ok
+  applicability: authority-side
+  priority: P1
+  priority_reason: Binding identification data to unit is hard to retrofit
+  clusters:
+  - K06
+  - K04
+  verification_ready: needs-legal-review
+  note: Complements TRU-067; actor is authority issuing data.
+- id: EBW-TRU-112
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P2
+  priority_reason: Proposal; issuer authentication in issuance
+  clusters:
+  - K05
+  - K08
+  verification_ready: needs-legal-review
+  note: Check against Council text noted in rationale.
+- id: EBW-TRU-113
+  fidelity: ok
+  verdict: ok
+  applicability: wallet-general
+  priority: P2
+  priority_reason: ARF-derived; local keystore labelling
+  clusters:
+  - K04
+  - K14
+  verification_ready: 'yes'
+  note: EUDI ARF; business wallet bearing open.
+- id: EBW-TRU-114
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P2
+  priority_reason: Standard-derived assurance for remote signing
+  clusters:
+  - K04
+  - K14
+  - K17
+  verification_ready: 'yes'
+- id: EBW-TRU-115
+  fidelity: ok
+  verdict: ok
+  applicability: wallet-general
+  priority: P2
+  priority_reason: ARF check before remote signing
+  clusters:
+  - K04
+  - K05
+  verification_ready: 'yes'
+  note: Applies to a business wallet that remote-signs or seals.
+- id: EBW-TRU-116
+  fidelity: ok
+  verdict: ok
+  applicability: wallet-general
+  priority: P1
+  priority_reason: In force; splits attestation structure everywhere downstream
+  clusters:
+  - K04
+  - K07
+  - K08
+  verification_ready: 'yes'
+  note: EUDI profile; adoption by business wallet is open.
+- id: EBW-TRU-117
+  fidelity: derived-unmarked
+  verdict: reword
+  corrected_statement:
+  - The wallet provider shall set the expiry of each issued wallet instance attestation to less than 24 hours.
+  applicability: wallet-general
+  priority: P2
+  priority_reason: In force; local attestation lifetime parameter
+  clusters:
+  - K07
+  - K04
+  verification_ready: needs-source-check
+  note: Quote only caps exp below 24 hours; link to integrity-check time not quoted.
+- id: EBW-TRU-118
+  fidelity: ok
+  verdict: ok
+  applicability: wallet-general
+  priority: P2
+  priority_reason: In force; attribute value in key attestation
+  clusters:
+  - K04
+  - K14
+  verification_ready: 'yes'
+  note: Format-specific value; technology-neutrality weak.
+- id: EBW-TRU-119
+  fidelity: ok
+  verdict: ok
+  applicability: wallet-general
+  priority: P2
+  priority_reason: In force; separate attestations per keystore
+  clusters:
+  - K04
+  - K07
+  verification_ready: 'yes'
+- id: EBW-TRU-120
+  fidelity: ok
+  verdict: ok
+  applicability: wallet-general
+  priority: P2
+  priority_reason: In force; provider verification before signing
+  clusters:
+  - K04
+  - K11
+  verification_ready: 'yes'
+- id: EBW-TRU-121
+  fidelity: ok
+  verdict: ok
+  applicability: wallet-general
+  priority: P2
+  priority_reason: In force; credential validity bound to wallet status
+  clusters:
+  - K07
+  - K04
+  verification_ready: 'yes'
+- id: EBW-TRU-122
+  fidelity: ok
+  verdict: split
+  corrected_statement:
+  - A provider of person identification data with a technical validity period over 24 hours shall check the revocation status of the wallet instance attestation and key attestation at least every 24 hours.
+  - The provider shall revoke the person identification data where either attestation is revoked.
+  applicability: wallet-general
+  priority: P2
+  priority_reason: In force; issuer polling duty
+  clusters:
+  - K07
+  - K04
+  verification_ready: 'yes'
+  note: 'Two obligations: periodic check, and revoke.'
+- id: EBW-TRU-123
+  fidelity: ok
+  verdict: ok
+  applicability: wallet-general
+  priority: P2
+  priority_reason: In force; local status index rule
+  clusters:
+  - K07
+  - K04
+  verification_ready: 'yes'
+  note: Format-specific (status index).
+- id: EBW-TRU-124
+  fidelity: ok
+  verdict: ok
+  applicability: wallet-general
+  priority: P2
+  priority_reason: In force; local revocation operation
+  clusters:
+  - K07
+  - K04
+  verification_ready: 'yes'
+- id: EBW-TRU-125
+  fidelity: ok
+  verdict: split
+  corrected_statement:
+  - When a Member State withdraws a wallet solution, it shall ensure that the wallet unit attestations of the affected units are revoked and cannot revert to a valid state.
+  - When a Member State withdraws a wallet solution, it shall ensure that no new wallet unit attestation is issued to existing units of that solution.
+  applicability: authority-side
+  priority: P3
+  priority_reason: Duty of Member State on withdrawal
+  clusters:
+  - K13
+  - K07
+  verification_ready: 'yes'
+  note: Three outcomes bundled; no wallet design impact.
+- id: EBW-TRU-126
+  fidelity: ok
+  verdict: recategorise:INT
+  applicability: wallet-general
+  priority: P2
+  priority_reason: In force; fixes status model for key credential types
+  clusters:
+  - K07
+  - K01
+  verification_ready: 'yes'
+  note: Format of status element; statement on credential not trust service. Business wallet bearing open.
+- id: EBW-TRU-127
+  fidelity: ok
+  verdict: reword
+  corrected_statement:
+  - A provider of short-lived electronic attestations of attributes with a validity of 24 hours or less may omit revocation support.
+  applicability: wallet-general
+  priority: P2
+  priority_reason: In force; permission not obligation
+  clusters:
+  - K07
+  verification_ready: 'yes'
+  note: Not a "shall" duty; it is an exemption.
+- id: EBW-TRU-128
+  fidelity: ok
+  verdict: ok
+  applicability: relying-party-side
+  priority: P2
+  priority_reason: ARF rule on relying party decision
+  clusters:
+  - K07
+  - K05
+  verification_ready: 'yes'
+  note: Close to TRU-047 and TRU-135; check overlap.
+- id: EBW-TRU-129
+  fidelity: ok
+  verdict: ok
+  applicability: wallet-general
+  priority: P2
+  priority_reason: In force; revocation cascade
+  clusters:
+  - K07
+  - K04
+  verification_ready: 'yes'
+  note: Close to FUN/TRU-040 revocation circumstances; PID only.
+- id: EBW-TRU-130
+  fidelity: ok
+  verdict: ok
+  applicability: wallet-general
+  priority: P2
+  priority_reason: In force; user-initiated revocation
+  clusters:
+  - K07
+  - K03
+  verification_ready: 'yes'
+  note: PID only; business wallet equivalent open.
+- id: EBW-TRU-131
+  fidelity: ok
+  verdict: merge-with:EBW-TRU-028
+  applicability: wallet-general
+  priority: P2
+  priority_reason: In force; irreversibility duplicates other items
+  clusters:
+  - K07
+  verification_ready: 'yes'
+  note: Same rule as TRU-004/025/026/028 for PID; consider one generic requirement.
+- id: EBW-TRU-132
+  fidelity: ok
+  verdict: split
+  corrected_statement:
+  - Where national rules provide for temporary suspension of a qualified certificate, the provider shall record the suspension period in the certificate database.
+  - During the suspension, the status information service shall show the suspension status.
+  applicability: provider-side
+  priority: P3
+  priority_reason: Conditional on national suspension rules
+  clusters:
+  - K07
+  - K05
+  verification_ready: 'yes'
+  note: 'Two obligations: record period, expose status.'
+- id: EBW-TRU-133
+  fidelity: ok
+  verdict: ok
+  applicability: horizontal
+  priority: P3
+  priority_reason: Legal effect statement, conditional on national rules
+  clusters:
+  - K07
+  - K13
+  verification_ready: 'yes'
+  note: Legal effect, not a design duty.
+- id: EBW-TRU-134
+  fidelity: ok
+  verdict: reword
+  corrected_statement:
+  - Where owner identification data has a validity longer than 24 hours, its provider shall support revocation of it.
+  applicability: provider-side
+  priority: P2
+  priority_reason: Pilot rulebook; local lifecycle rule
+  clusters:
+  - K07
+  - K06
+  verification_ready: needs-source-check
+  note: Derived "shall" from a permission; ecosystem rulebook, not law.
+- id: EBW-TRU-135
+  fidelity: ok
+  verdict: merge-with:EBW-TRU-047
+  applicability: relying-party-side
+  priority: P2
+  priority_reason: Pilot rule on status default
+  clusters:
+  - K07
+  - K05
+  verification_ready: 'yes'
+  note: Overlaps TRU-047 and TRU-128; "indeterminate" undefined.
+- id: EBW-TRU-136
+  fidelity: ok
+  verdict: ok
+  applicability: core
+  priority: P2
+  priority_reason: Pilot ADR (Proposed), not binding; shapes unit lifecycle
+  clusters:
+  - K04
+  - K07
+  - K15
+  verification_ready: needs-source-check
+  note: ADR status Proposed.
+- id: EBW-TRU-137
+  fidelity: ok
+  verdict: ok
+  applicability: core
+  priority: P2
+  priority_reason: Pilot ADR; state model for unit
+  clusters:
+  - K04
+  - K07
+  - K06
+  verification_ready: needs-source-check
+  note: Depends on TRU-136; ADR status Proposed.
+- id: EBW-TRU-138
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P2
+  priority_reason: Standard-derived discovery pointer
+  clusters:
+  - K05
+  - K08
+  verification_ready: 'yes'
+- id: EBW-TRU-139
+  fidelity: ok
+  verdict: ok
+  applicability: relying-party-side
+  priority: P2
+  priority_reason: Standard-derived anchor check for list pointers
+  clusters:
+  - K05
+  - K11
+  verification_ready: 'yes'
+- id: EBW-TRU-140
+  fidelity: ok
+  verdict: split
+  corrected_statement:
+  - A party evaluating trust in an electronic registered delivery service shall validate the service signature and link the signing certificate to the service digital identity in the trusted list.
+  - The party shall verify that the current status of the service is granted and that its service type fits the applicable trust domain.
+  applicability: relying-party-side
+  priority: P2
+  priority_reason: Standard-derived; four checks
+  clusters:
+  - K05
+  - K12
+  verification_ready: 'yes'
+  note: Four separate checks bundled.
+- id: EBW-TRU-141
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P2
+  priority_reason: Derived; rulebook mechanism for trust anchors
+  clusters:
+  - K05
+  - K01
+  verification_ready: needs-source-check
+  note: Provenance D; rationale states derivation.
+- id: EBW-TRU-142
+  fidelity: ok
+  verdict: ok
+  applicability: relying-party-side
+  priority: P2
+  priority_reason: Data space pilot; multi-domain trust
+  clusters:
+  - K05
+  - K15
+  - K08
+  verification_ready: needs-source-check
+  note: Ecosystem source; "shall be able" testable by configuration.
+- id: EBW-TRU-143
+  fidelity: ok
+  verdict: ok
+  applicability: wallet-general
+  priority: P2
+  priority_reason: Standard-derived metadata signing
+  clusters:
+  - K08
+  - K05
+  - K06
+  verification_ready: 'yes'
+  note: EUDI profile; business wallet bearing open (DEC-07).
+- id: EBW-TRU-144
+  fidelity: ok
+  verdict: ok
+  applicability: wallet-general
+  priority: P3
+  priority_reason: EUDI PID flow rule; PID-specific
+  clusters:
+  - K08
+  - K14
+  verification_ready: 'yes'
+  note: EUDI profile; business wallet bearing open (DEC-07).
+- id: EBW-TRU-145
+  fidelity: ok
+  verdict: merge-with:EBW-TRU-032
+  applicability: wallet-general
+  priority: P2
+  priority_reason: In force; adds no-delegation to TRU-032
+  clusters:
+  - K05
+  - K04
+  - K08
+  verification_ready: 'yes'
+  note: Extends TRU-032 with no-delegation; could be merged. Business wallet bearing open.
+- id: EBW-TRU-146
+  fidelity: ok
+  verdict: recategorise:OPS
+  applicability: provider-side
+  priority: P3
+  priority_reason: Provider-side preservation service detail
+  clusters:
+  - K10
+  - K11
+  verification_ready: 'yes'
+  note: Preservation service evidence, not trust anchor; plane assurance already.

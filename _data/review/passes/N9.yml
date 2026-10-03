@@ -1,0 +1,507 @@
+- id: EBW-INT-083
+  fidelity: narrower
+  verdict: reword
+  corrected_statement: Where a qualified electronic registered delivery provider relays a message over AS4 under EN 319 522-4-1, it shall use the push message exchange pattern only.
+  applicability: provider-side
+  priority: P2
+  priority_reason: Standard-derived protocol detail; local interface choice
+  clusters:
+  - K08
+  - K12
+  verification_ready: needs-source-check
+  note: Quote says ERDS (not only relay) uses push; AS4 scope and relay restriction come from clause context, check.
+- id: EBW-LEG-057
+  fidelity: ok
+  verdict: ok
+  applicability: horizontal
+  priority: P3
+  priority_reason: Applies only if provider offers consumer services
+  clusters:
+  - K13
+  - K15
+  verification_ready: needs-legal-review
+  note: EAA scope for a B2B wallet is an inference; consider merging LEG-057..061 into a conditional accessibility family.
+- id: EBW-LEG-058
+  fidelity: broader-than-quote
+  verdict: reword
+  corrected_statement: Where Directive (EU) 2019/882 applies to its service, the service provider shall explain in its terms and conditions how the service meets the accessibility requirements, using the
+    information required by Annex V.
+  applicability: horizontal
+  priority: P3
+  priority_reason: Documentation duty, no architecture impact
+  clusters:
+  - K15
+  - K13
+  verification_ready: needs-source-check
+  note: Written and oral format detail is not in the quote; Annex V point 1 not quoted.
+- id: EBW-LEG-059
+  fidelity: ok
+  verdict: ok
+  applicability: horizontal
+  priority: P3
+  priority_reason: Organisational procedure duty
+  clusters:
+  - K15
+  - K13
+  verification_ready: 'yes'
+- id: EBW-LEG-060
+  fidelity: broader-than-quote
+  verdict: reword
+  corrected_statement: Where a service does not comply with applicable accessibility requirements, the service provider shall take corrective measures and shall immediately inform the competent national
+    authorities of the Member States where it is provided.
+  applicability: horizontal
+  priority: P3
+  priority_reason: Authority notification procedure
+  clusters:
+  - K13
+  - K15
+  verification_ready: needs-source-check
+  note: Quote covers only the notification; corrective measures part not in quote. Two obligations, arguably split.
+- id: EBW-LEG-061
+  fidelity: broader-than-quote
+  verdict: reword
+  corrected_statement: Upon a reasoned request from a competent authority, the service provider shall provide all information necessary to demonstrate conformity of the service with the applicable accessibility
+    requirements.
+  applicability: horizontal
+  priority: P3
+  priority_reason: Procedural cooperation duty
+  clusters:
+  - K13
+  - K15
+  verification_ready: needs-source-check
+  note: Cooperation clause not in quote.
+- id: EBW-LEG-062
+  fidelity: broader-than-quote
+  verdict: split
+  corrected_statement:
+  - Where an economic operator relies on fundamental alteration or disproportionate burden, it shall document the assessment.
+  - Where an economic operator relies on disproportionate burden, it shall keep the assessment results for five years and renew the assessment at least every five years.
+  applicability: horizontal
+  priority: P3
+  priority_reason: Internal record keeping for an exception
+  clusters:
+  - K15
+  - K10
+  verification_ready: needs-source-check
+  note: Quote covers only documentation; five-year retention and renewal not in quote.
+- id: EBW-LEG-063
+  fidelity: narrower
+  verdict: ok
+  applicability: authority-side
+  priority: P3
+  priority_reason: Binds Member State bodies, not the wallet
+  clusters:
+  - K15
+  - K13
+  verification_ready: needs-legal-review
+  note: Directive 2016/2102 binds Member States; portal in scope is an inference.
+- id: EBW-LEG-064
+  fidelity: broader-than-quote
+  verdict: reword
+  corrected_statement: Public sector bodies shall provide and regularly update an accessibility statement on the compliance of their websites and mobile applications.
+  applicability: authority-side
+  priority: P3
+  priority_reason: Authority publication duty
+  clusters:
+  - K15
+  - K13
+  verification_ready: needs-source-check
+  note: Feedback mechanism and enforcement link not in quote.
+- id: EBW-LEG-065
+  fidelity: broader-than-quote
+  verdict: reword
+  corrected_statement: Where the standards, specifications and procedures set by implementing acts are met, compliance with the access control requirements of the Annex shall be presumed.
+  applicability: authority-side
+  priority: P3
+  priority_reason: Presumption clause, no design duty
+  clusters:
+  - K14
+  - K11
+  verification_ready: needs-source-check
+  note: Presumption of conformity is a legal effect, not a wallet obligation; quote cites Article, statement says Annex point 12 (quote truncated).
+- id: EBW-LEG-066
+  fidelity: broader-than-quote
+  verdict: reword
+  corrected_statement: Where the wallet provider processes personal data on behalf of an owner acting as controller, a binding contract or legal act shall govern the processing and require processing only
+    on the owner's documented instructions.
+  applicability: provider-side
+  priority: P2
+  priority_reason: GDPR Art 28 contract; role allocation decides architecture
+  clusters:
+  - K09
+  - K13
+  verification_ready: needs-source-check
+  note: Quote covers only the contract requirement; documented-instructions part is point (a), not quoted. Role is inference.
+- id: EBW-LEG-067
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P2
+  priority_reason: Joint controller split fixes responsibilities
+  clusters:
+  - K09
+  - K13
+  verification_ready: needs-source-check
+  note: Quote omits the data-subject availability part (Art 26(2)); whether provider and owner are joint controllers is open.
+- id: EBW-LEG-068
+  fidelity: derived-marked
+  verdict: reword
+  corrected_statement: Where an owner is the controller, it shall implement technical and organisational measures, including training and information of authorised users, so that processing by those users
+    in the wallet complies with data protection rules.
+  applicability: core
+  priority: P3
+  priority_reason: Guideline-derived owner duty, organisational
+  clusters:
+  - K09
+  - K02
+  verification_ready: needs-legal-review
+  note: Source is non-binding EDPB guidance; true basis Art 24 GDPR. Provenance D with standard status; consider legal status guideline.
+- id: EBW-NFR-057
+  fidelity: ok
+  verdict: ok
+  applicability: core
+  priority: P1
+  priority_reason: Proposal duty on EBW providers; shapes UI and support
+  clusters:
+  - K15
+  - K11
+  verification_ready: needs-legal-review
+  note: Council text, not Commission proposal; may not survive trilogue. Overlaps EBW-NFR-055/056 in intent.
+- id: EBW-NFR-058
+  fidelity: ok
+  verdict: merge-with:EBW-NFR-057
+  applicability: core
+  priority: P3
+  priority_reason: Recital only; yardstick for NFR-057
+  clusters:
+  - K15
+  - K14
+  verification_ready: needs-legal-review
+  note: Recital is not operative; fold into NFR-057 as the yardstick.
+- id: EBW-NFR-059
+  fidelity: narrower
+  verdict: ok
+  applicability: horizontal
+  priority: P2
+  priority_reason: Mandatory only if EAA applies to the service
+  clusters:
+  - K15
+  verification_ready: needs-legal-review
+  note: Quote shows only the sensory-channel part; text-format part is rest of the indent.
+- id: EBW-NFR-060
+  fidelity: ok
+  verdict: ok
+  applicability: horizontal
+  priority: P2
+  priority_reason: EAA UI requirement, local to interface design
+  clusters:
+  - K15
+  verification_ready: needs-legal-review
+  note: Duplicates the WCAG target of NFR-063; keep the legal one as parent.
+- id: EBW-NFR-061
+  fidelity: ok
+  verdict: ok
+  applicability: horizontal
+  priority: P3
+  priority_reason: Support service content duty
+  clusters:
+  - K15
+  verification_ready: needs-legal-review
+- id: EBW-NFR-062
+  fidelity: derived-marked
+  verdict: ok
+  applicability: horizontal
+  priority: P3
+  priority_reason: Applies only in consumer e-commerce or banking flows
+  clusters:
+  - K15
+  - K04
+  verification_ready: needs-legal-review
+  note: Weak fit for a business wallet; consider dropping if B2C is out of scope.
+- id: EBW-NFR-063
+  fidelity: broader-than-quote
+  verdict: reword
+  corrected_statement: Where a wallet interface is a web page, it shall conform to clauses 9.1 to 9.4 and 9.6 of EN 301 549 V3.2.1 (WCAG 2.1 Level AA).
+  applicability: wallet-general
+  priority: P2
+  priority_reason: Standard-derived, testable UI target
+  clusters:
+  - K15
+  - K14
+  verification_ready: 'yes'
+  note: Quote supports equivalence; scope to wallet interfaces is application, not stated in standard.
+- id: EBW-NFR-064
+  fidelity: ok
+  verdict: ok
+  applicability: wallet-general
+  priority: P2
+  priority_reason: Standard-derived, local to app
+  clusters:
+  - K15
+  - K14
+  verification_ready: 'yes'
+  note: Whether EN 301 549 binds the business wallet is open.
+- id: EBW-NFR-065
+  fidelity: ok
+  verdict: ok
+  applicability: wallet-general
+  priority: P3
+  priority_reason: Applies to downloadable documents only
+  clusters:
+  - K15
+  - K12
+  verification_ready: 'yes'
+- id: EBW-NFR-066
+  fidelity: ok
+  verdict: ok
+  applicability: wallet-general
+  priority: P3
+  priority_reason: Local authentication design rule
+  clusters:
+  - K15
+  - K04
+  verification_ready: 'yes'
+  note: Biometrics unlikely central to a hosted business wallet.
+- id: EBW-NFR-067
+  fidelity: ok
+  verdict: split
+  corrected_statement:
+  - The wallet provider shall make product documentation available in a web format conforming to clause 9 or a non-web format conforming to clause 10 of EN 301 549.
+  - The wallet provider shall ensure its support services accommodate the communication needs of individuals with disabilities directly or through a referral point.
+  applicability: provider-side
+  priority: P3
+  priority_reason: Documentation and support organisation
+  clusters:
+  - K15
+  - K13
+  verification_ready: 'yes'
+  note: Two obligations; overlaps NFR-061.
+- id: EBW-NFR-068
+  fidelity: ok
+  verdict: reword
+  corrected_statement: Wallet providers shall ensure that their wallet units comply with the applicable requirements and standards of Directive (EU) 2016/2102 on the accessibility of websites and mobile
+    applications of public sector bodies.
+  applicability: wallet-general
+  priority: P2
+  priority_reason: ARF high-level requirement; local compliance
+  clusters:
+  - K15
+  - K14
+  verification_ready: needs-source-check
+  note: Source cites Directive 2016/2012 (likely typo); statement silently corrects the number, mark the derivation.
+- id: EBW-NFR-069
+  fidelity: ok
+  verdict: ok
+  applicability: core
+  priority: P1
+  priority_reason: Back-end key custody in secure device; hard to retrofit
+  clusters:
+  - K04
+  - K11
+  verification_ready: 'yes'
+- id: EBW-NFR-070
+  fidelity: ok
+  verdict: ok
+  applicability: core
+  priority: P1
+  priority_reason: Internal channel protection shapes component split
+  clusters:
+  - K04
+  - K11
+  verification_ready: 'yes'
+  note: One channel, three properties; acceptable as atomic.
+- id: EBW-NFR-071
+  fidelity: ok
+  verdict: ok
+  applicability: core
+  priority: P1
+  priority_reason: Key use gated by user authentication
+  clusters:
+  - K04
+  - K11
+  verification_ready: 'yes'
+- id: EBW-NFR-072
+  fidelity: ok
+  verdict: merge-with:EBW-FUN-028
+  applicability: core
+  priority: P2
+  priority_reason: Key generation capability; local to secure component
+  clusters:
+  - K04
+  verification_ready: 'yes'
+  note: Duplicates generation clause of EBW-FUN-028 (CIR), different source (proposal Annex); keep both or split FUN-028.
+- id: EBW-NFR-073
+  fidelity: ok
+  verdict: merge-with:EBW-FUN-028
+  applicability: core
+  priority: P2
+  priority_reason: Secure erasure capability; local to secure component
+  clusters:
+  - K04
+  - K07
+  verification_ready: 'yes'
+  note: Duplicates erasure clause of EBW-FUN-028; see also EBW-OPS-017.
+- id: EBW-NFR-074
+  fidelity: ok
+  verdict: merge-with:EBW-FUN-028
+  applicability: core
+  priority: P2
+  priority_reason: Proof of possession; local capability
+  clusters:
+  - K04
+  - K07
+  verification_ready: 'yes'
+  note: Duplicates proof-of-possession clause of EBW-FUN-028.
+- id: EBW-NFR-075
+  fidelity: ok
+  verdict: ok
+  applicability: core
+  priority: P1
+  priority_reason: Key protection requirement is core to custody design
+  clusters:
+  - K04
+  - K11
+  verification_ready: 'yes'
+  note: Not testable without a defined protection level; tie to certification.
+- id: EBW-NFR-076
+  fidelity: ok
+  verdict: ok
+  applicability: core
+  priority: P2
+  priority_reason: Log content detail; fixes log schema
+  clusters:
+  - K10
+  - K09
+  verification_ready: 'yes'
+  note: Overlaps NFR-013 on logging scope.
+- id: EBW-NFR-077
+  fidelity: ok
+  verdict: ok
+  applicability: core
+  priority: P2
+  priority_reason: Log content detail; consistent with NFR-019
+  clusters:
+  - K10
+  - K09
+  verification_ready: 'yes'
+- id: EBW-NFR-078
+  fidelity: ok
+  verdict: ok
+  applicability: core
+  priority: P2
+  priority_reason: Log content detail
+  clusters:
+  - K10
+  verification_ready: 'yes'
+- id: EBW-NFR-079
+  fidelity: ok
+  verdict: merge-with:EBW-NFR-014
+  applicability: core
+  priority: P2
+  priority_reason: Log protection; local control
+  clusters:
+  - K10
+  - K11
+  verification_ready: 'yes'
+  note: NFR-014 already requires integrity, authenticity and confidentiality of the transaction log (CIR basis).
+- id: EBW-NFR-080
+  fidelity: ok
+  verdict: ok
+  applicability: core
+  priority: P2
+  priority_reason: Authority-report logging; B2G evidence
+  clusters:
+  - K10
+  - K12
+  verification_ready: 'yes'
+- id: EBW-NFR-081
+  fidelity: ok
+  verdict: merge-with:EBW-NFR-049
+  applicability: core
+  priority: P3
+  priority_reason: Retention follows law; procedural
+  clusters:
+  - K10
+  - K09
+  verification_ready: 'yes'
+  note: Same obligation as EBW-NFR-049, different source.
+- id: EBW-NFR-082
+  fidelity: broader-than-quote
+  verdict: reword
+  corrected_statement: The European Business Wallet shall support secure export and portability of the owner's wallet data in at least an open format, so that the owner can migrate to another wallet solution.
+  applicability: core
+  priority: P1
+  priority_reason: Anti lock-in; shapes data model and exit
+  clusters:
+  - K15
+  - K01
+  - K04
+  verification_ready: needs-source-check
+  note: Assurance level substantial clause is not in the quote. Overlaps FUN-031 and NFR-001.
+- id: EBW-NFR-083
+  fidelity: narrower
+  verdict: reword
+  corrected_statement: The qualified electronic registered delivery service designated as the mandatory channel shall provide end-to-end encryption.
+  applicability: authority-side
+  priority: P1
+  priority_reason: Fixes confidentiality model of the mandatory channel
+  clusters:
+  - K12
+  - K11
+  - K08
+  verification_ready: needs-legal-review
+  note: Statement binds the Commission via implementing act; design duty falls on the ERDS. Check Annex point 11(2)(d) wording.
+- id: EBW-NFR-084
+  fidelity: ok
+  verdict: ok
+  applicability: core
+  priority: P1
+  priority_reason: Role-based visibility shapes multi-user model
+  clusters:
+  - K03
+  - K09
+  verification_ready: 'yes'
+  note: Overlaps FUN-010/FUN-035; testability depends on defined roles.
+- id: EBW-NFR-085
+  fidelity: ok
+  verdict: ok
+  applicability: wallet-general
+  priority: P2
+  priority_reason: LoA high isolation; EUDI scope, local design
+  clusters:
+  - K04
+  - K14
+  verification_ready: 'yes'
+  note: Applies to EUDI at LoA high; business wallet relevance is open.
+- id: EBW-NFR-086
+  fidelity: ok
+  verdict: ok
+  applicability: wallet-general
+  priority: P1
+  priority_reason: Binding key custody floor for EUDI wallets
+  clusters:
+  - K04
+  - K14
+  verification_ready: 'yes'
+  note: Business wallet relevance is open; parallels NFR-069.
+- id: EBW-NFR-087
+  fidelity: ok
+  verdict: ok
+  applicability: wallet-general
+  priority: P2
+  priority_reason: Channel protection in force; local
+  clusters:
+  - K04
+  - K11
+  verification_ready: 'yes'
+  note: Parallels NFR-070 (proposal).
+- id: EBW-NFR-088
+  fidelity: ok
+  verdict: ok
+  applicability: wallet-general
+  priority: P2
+  priority_reason: Standard-derived non-export rule
+  clusters:
+  - K04
+  verification_ready: 'yes'
+  note: 'Tension with NFR-082 export: only keys excluded.'

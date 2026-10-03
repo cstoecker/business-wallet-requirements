@@ -1,0 +1,491 @@
+- id: EBW-BIZ-003
+  fidelity: derived-marked
+  verdict: ok
+  applicability: authority-side
+  priority: P3
+  priority_reason: Explanatory statement; no design impact, adoption voluntary
+  clusters:
+  - K15
+  verification_ready: needs-legal-review
+  note: Negative design constraint; recital/memorandum only, Council keeps review of mandatory use.
+- id: EBW-BIZ-004
+  fidelity: derived-marked
+  verdict: reword
+  corrected_statement: Where Article 5(3) applies, self-employed persons shall be able to use a European Digital Identity Wallet to access the qualified registered delivery service without acquiring a European
+    Business Wallet.
+  applicability: core
+  priority: P2
+  priority_reason: Intention only; basis Art 5(3) QERDS
+  clusters:
+  - K02
+  - K15
+  verification_ready: needs-legal-review
+  note: Statement broader than quote and than Art 5(3); scope to secure channel and signatures is unsupported.
+- id: EBW-BIZ-005
+  fidelity: derived-marked
+  verdict: reword
+  corrected_statement: The European Business Wallet shall be onboardable by a microenterprise through a web or mobile application with minimal installation and configuration.
+  applicability: core
+  priority: P2
+  priority_reason: Design target from cost model, not law
+  clusters:
+  - K15
+  verification_ready: needs-source-check
+  note: Quote only supports minimal installation; "no individual contracting" comes from footnote cost value. Not testable as written.
+- id: EBW-BIZ-006
+  fidelity: derived-marked
+  verdict: drop
+  applicability: authority-side
+  priority: P3
+  priority_reason: Impact assessment content, not a design obligation
+  clusters:
+  - K15
+  verification_ready: 'yes'
+  note: Describes a Commission analysis method; no wallet or provider obligation.
+- id: EBW-BIZ-007
+  fidelity: ok
+  verdict: ok
+  applicability: authority-side
+  priority: P3
+  priority_reason: Commission review procedure, no design impact
+  clusters:
+  - K15
+  verification_ready: 'yes'
+  note: Council text only; Commission obligation.
+- id: EBW-BIZ-008
+  fidelity: ok
+  verdict: ok
+  applicability: horizontal
+  priority: P3
+  priority_reason: Data Act pricing cap; no wallet design effect
+  clusters:
+  - K15
+  verification_ready: 'yes'
+  note: Recategorise to DAT or DOM arguably; applies to data holders.
+- id: EBW-CER-009
+  fidelity: ok
+  verdict: reword
+  corrected_statement: Where critical assets support electronic identification at assurance level substantial, the European Business Wallet shall process them cryptographically in line with Implementing
+    Regulation (EU) 2015/1502 requirements for that level.
+  applicability: core
+  priority: P1
+  priority_reason: Proposal fixes key-handling assurance level; deleted by Council
+  clusters:
+  - K04
+  - K14
+  verification_ready: needs-legal-review
+  note: Quote does not name Reg 2015/1502 explicitly; ties to critical-assets definition. Contested across texts.
+- id: EBW-CER-010
+  fidelity: ok
+  verdict: ok
+  applicability: core
+  priority: P1
+  priority_reason: Baseline for key-protection components; hard to change later
+  clusters:
+  - K04
+  - K14
+  verification_ready: needs-legal-review
+  note: Overlaps CER-009 in assurance level; deleted by Council and EP. Contested.
+- id: EBW-CER-011
+  fidelity: ok
+  verdict: reword
+  corrected_statement: The wallet solution shall support mechanisms enabling providers of owner identification data to verify issuance, delivery and activation at assurance level substantial under Implementing
+    Regulation (EU) 2015/1502.
+  applicability: core
+  priority: P2
+  priority_reason: Assurance floor for issuance; Council/EP raise to high
+  clusters:
+  - K14
+  - K07
+  verification_ready: needs-legal-review
+  note: Subject "wallet solution shall support mechanisms" vague; conflicts with other texts on level.
+- id: EBW-CER-012
+  fidelity: ok
+  verdict: ok
+  applicability: wallet-general
+  priority: P1
+  priority_reason: Gates wallet unit activation on certified key device
+  clusters:
+  - K04
+  - K14
+  verification_ready: needs-source-check
+  note: Standard-derived (ARF); statement says level high, quote truncated before level; verify full text.
+- id: EBW-CER-013
+  fidelity: ok
+  verdict: ok
+  applicability: authority-side
+  priority: P2
+  priority_reason: Binds certification schemes, shapes WSCD choice
+  clusters:
+  - K14
+  - K04
+  verification_ready: 'yes'
+  note: Obligation on Member State schemes; relevance to EBW open.
+- id: EBW-CER-014
+  fidelity: ok
+  verdict: ok
+  applicability: authority-side
+  priority: P2
+  priority_reason: Evaluation depth for scheme; implementation detail
+  clusters:
+  - K14
+  - K04
+  verification_ready: 'yes'
+  note: Scheme-side; wallet-general; EBW relevance open.
+- id: EBW-CER-015
+  fidelity: ok
+  verdict: ok
+  applicability: authority-side
+  priority: P3
+  priority_reason: Scheme evaluation procedure for certification lifecycle
+  clusters:
+  - K14
+  - K04
+  verification_ready: 'yes'
+- id: EBW-CER-016
+  fidelity: ok
+  verdict: ok
+  applicability: authority-side
+  priority: P3
+  priority_reason: Certification outcome rule for schemes
+  clusters:
+  - K14
+  - K04
+  verification_ready: 'yes'
+- id: EBW-CER-017
+  fidelity: ok
+  verdict: ok
+  applicability: authority-side
+  priority: P2
+  priority_reason: Shapes split-key architectures evaluation
+  clusters:
+  - K04
+  - K14
+  verification_ready: 'yes'
+  note: Relevant to hybrid hosted/local custody options.
+- id: EBW-CER-018
+  fidelity: ok
+  verdict: ok
+  applicability: authority-side
+  priority: P3
+  priority_reason: Scheme documentation requirement for assumptions
+  clusters:
+  - K14
+  - K04
+  verification_ready: 'yes'
+- id: EBW-CER-019
+  fidelity: ok
+  verdict: ok
+  applicability: wallet-general
+  priority: P2
+  priority_reason: Standard-derived control level for remote signing
+  clusters:
+  - K04
+  - K14
+  verification_ready: needs-source-check
+  note: Standard not read; SCAL 2 level unverified against EN 419 241-1.
+- id: EBW-CON-004
+  fidelity: derived-marked
+  verdict: reword
+  corrected_statement: The business wallet design shall support digital product passport data models and access schemes defined per product group without hard-coding a single model.
+  applicability: horizontal
+  priority: P3
+  priority_reason: Domain overlay; avoids single-model lock-in
+  clusters:
+  - K01
+  - K15
+  verification_ready: 'yes'
+  note: Design guidance, not a legal duty; "shall not assume" untestable.
+- id: EBW-CON-005
+  fidelity: derived-marked
+  verdict: ok
+  applicability: core
+  priority: P1
+  priority_reason: Limits legal effect of authorisations; shapes mandate model
+  clusters:
+  - K03
+  verification_ready: needs-legal-review
+  note: Recital only; Council text. Not operative in the Commission text.
+- id: EBW-CON-006
+  fidelity: ok
+  verdict: ok
+  applicability: core
+  priority: P2
+  priority_reason: Preserves procedure-specific formats; local effect
+  clusters:
+  - K15
+  - K01
+  verification_ready: needs-legal-review
+  note: Council text only; "shall be observed" is by users and authorities.
+- id: EBW-CON-007
+  fidelity: ok
+  verdict: ok
+  applicability: core
+  priority: P1
+  priority_reason: Legal-effect equivalence shapes trust service use
+  clusters:
+  - K15
+  - K13
+  verification_ready: needs-legal-review
+  note: Council narrows to qualified trust services; contested vs Commission text. Quote shows partial.
+- id: EBW-CON-008
+  fidelity: ok
+  verdict: ok
+  applicability: authority-side
+  priority: P2
+  priority_reason: Coexistence with mandated authority systems
+  clusters:
+  - K15
+  - K08
+  verification_ready: 'yes'
+  note: Without-prejudice clause; design impact is coexistence, not new duty.
+- id: EBW-CON-009
+  fidelity: derived-marked
+  verdict: drop
+  applicability: authority-side
+  priority: P3
+  priority_reason: Commission cost assumption, not an obligation
+  clusters:
+  - K15
+  verification_ready: 'yes'
+  note: Records an impact assessment assumption; not a wallet or provider obligation.
+- id: EBW-DAT-009
+  fidelity: ok
+  verdict: split
+  corrected_statement:
+  - The data holder shall not require a user or third party to provide more information than necessary to verify its status.
+  - The data holder shall not retain information on the third party access beyond what is necessary.
+  applicability: horizontal
+  priority: P2
+  priority_reason: Data Act minimisation for third-party verification
+  clusters:
+  - K09
+  - K10
+  verification_ready: 'yes'
+  note: Two obligations on different actors (recipient evidence, holder retention).
+- id: EBW-DAT-010
+  fidelity: ok
+  verdict: ok
+  applicability: horizontal
+  priority: P2
+  priority_reason: Data Act access on behalf of user; mandate check
+  clusters:
+  - K03
+  - K08
+  verification_ready: 'yes'
+  note: Quote supports; connector mandate verification is implication in rationale only.
+- id: EBW-DAT-011
+  fidelity: ok
+  verdict: ok
+  applicability: horizontal
+  priority: P3
+  priority_reason: Smart contract vendor duty, domain-specific
+  clusters:
+  - K11
+  - K08
+  verification_ready: 'yes'
+  note: Not wallet-related unless connector executes smart contracts; split access control vs robustness.
+- id: EBW-DAT-012
+  fidelity: ok
+  verdict: ok
+  applicability: horizontal
+  priority: P3
+  priority_reason: Smart contract kill switch duty for vendors
+  clusters:
+  - K11
+  - K08
+  verification_ready: 'yes'
+  note: Revocation link in rationale is an inference.
+- id: EBW-DAT-013
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P3
+  priority_reason: Cloud switching export; wallet scope assessed per case
+  clusters:
+  - K15
+  - K09
+  verification_ready: needs-legal-review
+  note: Applicability to wallet as data processing service unverified. Related to EBW-NFR-001.
+- id: EBW-DAT-014
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P3
+  priority_reason: Transparency duty for cloud providers
+  clusters:
+  - K13
+  - K11
+  verification_ready: needs-legal-review
+  note: Applies only if wallet hosting qualifies as data processing service.
+- id: EBW-DAT-015
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P3
+  priority_reason: Notification regime for intermediaries; scope uncertain
+  clusters:
+  - K13
+  - K08
+  verification_ready: needs-legal-review
+- id: EBW-DAT-016
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P3
+  priority_reason: Legal representative for non-EU intermediaries
+  clusters:
+  - K13
+  - K17
+  verification_ready: 'yes'
+- id: EBW-DAT-017
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P3
+  priority_reason: Content of notification to authority
+  clusters:
+  - K13
+  - K06
+  verification_ready: 'yes'
+  note: Quote is the trade register part only; name, legal status, ownership not in quote.
+- id: EBW-DAT-018
+  fidelity: ok
+  verdict: ok
+  applicability: authority-side
+  priority: P3
+  priority_reason: Commission register publication duty
+  clusters:
+  - K05
+  - K13
+  verification_ready: 'yes'
+  note: Quote supports register only; published field list from rationale.
+- id: EBW-DAT-019
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P2
+  priority_reason: Interoperability duty for intermediaries
+  clusters:
+  - K15
+  - K08
+  verification_ready: 'yes'
+- id: EBW-DAT-020
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P2
+  priority_reason: Consent withdrawal tools for intermediaries
+  clusters:
+  - K09
+  - K03
+  verification_ready: 'yes'
+  note: Overlaps DAT-021; keep separate by actor.
+- id: EBW-DAT-021
+  fidelity: ok
+  verdict: merge-with:EBW-DAT-020
+  applicability: provider-side
+  priority: P3
+  priority_reason: Same pattern for altruism organisations
+  clusters:
+  - K09
+  verification_ready: 'yes'
+  note: Different actor class; merge only if actors generalised.
+- id: EBW-DAT-022
+  fidelity: ok
+  verdict: ok
+  applicability: wallet-general
+  priority: P2
+  priority_reason: DCP profile homogeneity; protocol-specific
+  clusters:
+  - K01
+  - K08
+  verification_ready: needs-source-check
+  note: Ecosystem spec, relevance to EBW open.
+- id: EBW-DAT-023
+  fidelity: ok
+  verdict: ok
+  applicability: wallet-general
+  priority: P2
+  priority_reason: DCP participant identifier is a DID; protocol-specific
+  clusters:
+  - K06
+  - K08
+  verification_ready: needs-source-check
+  note: Ecosystem spec; conflicts possible with EUID based identification.
+- id: EBW-DOM-001
+  fidelity: ok
+  verdict: ok
+  applicability: horizontal
+  priority: P3
+  priority_reason: DPP identifier standards; domain overlay
+  clusters:
+  - K06
+  - K17
+  verification_ready: 'yes'
+  note: Does not require authentication of a legal person.
+- id: EBW-DOM-002
+  fidelity: ok
+  verdict: ok
+  applicability: horizontal
+  priority: P3
+  priority_reason: Third party requests identifier; domain duty
+  clusters:
+  - K03
+  - K06
+  verification_ready: 'yes'
+  note: Mandate need is derived in rationale.
+- id: EBW-DOM-003
+  fidelity: ok
+  verdict: ok
+  applicability: horizontal
+  priority: P3
+  priority_reason: Sector B2G upload duty; wallet may authenticate
+  clusters:
+  - K12
+  - K08
+  verification_ready: 'yes'
+- id: EBW-DOM-004
+  fidelity: ok
+  verdict: drop
+  applicability: authority-side
+  priority: P3
+  priority_reason: Access right of authorities to DPP registry
+  clusters:
+  - K13
+  verification_ready: 'yes'
+  note: Not a wallet or provider design obligation.
+- id: EBW-DOM-005
+  fidelity: ok
+  verdict: ok
+  applicability: horizontal
+  priority: P3
+  priority_reason: Role-based DPP access; verifier needs role proof
+  clusters:
+  - K03
+  - K16
+  verification_ready: 'yes'
+  note: Consider recategorise K03 primary; quote partial.
+- id: EBW-DOM-006
+  fidelity: derived-marked
+  verdict: reword
+  corrected_statement: Where an implementing act under Article 11 of Regulation (EU) 2024/1781 defines digital credentials for DPP access rights, the business wallet shall support holding and presenting
+    them.
+  applicability: core
+  priority: P3
+  priority_reason: No implementing act exists; speculative wallet duty
+  clusters:
+  - K01
+  - K03
+  verification_ready: needs-legal-review
+  note: Wallet duty is derived; condition on act existing makes it untestable now.
+- id: EBW-DOM-007
+  fidelity: ok
+  verdict: ok
+  applicability: horizontal
+  priority: P3
+  priority_reason: Battery passport date; sector deadline, no wallet design
+  clusters:
+  - K15
+  verification_ready: 'yes'
+  note: Quote supports; date relevant only for planning.

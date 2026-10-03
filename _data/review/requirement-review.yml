@@ -810,6 +810,71 @@
   verification_ready: 'yes'
   verdict_arg: GOV
   note: Not a business requirement; overlaps EBW-GOV-008 on limitation notice.
+- id: EBW-BIZ-003
+  verdict: ok
+  priority: P3
+  priority_reason: Explanatory statement; no design impact, adoption voluntary
+  clusters:
+  - K15
+  applicability: authority-side
+  fidelity: derived-marked
+  verification_ready: needs-legal-review
+  note: Negative design constraint; recital/memorandum only, Council keeps review of mandatory use.
+- id: EBW-BIZ-004
+  verdict: reword
+  priority: P2
+  priority_reason: Intention only; basis Art 5(3) QERDS
+  clusters:
+  - K02
+  - K15
+  applicability: core
+  fidelity: derived-marked
+  verification_ready: needs-legal-review
+  corrected_statement:
+  - Where Article 5(3) applies, self-employed persons shall be able to use a European Digital Identity Wallet to access the qualified registered delivery service without acquiring a European Business Wallet.
+  note: Statement broader than quote and than Art 5(3); scope to secure channel and signatures is unsupported.
+- id: EBW-BIZ-005
+  verdict: reword
+  priority: P2
+  priority_reason: Design target from cost model, not law
+  clusters:
+  - K15
+  applicability: core
+  fidelity: derived-marked
+  verification_ready: needs-source-check
+  corrected_statement:
+  - The European Business Wallet shall be onboardable by a microenterprise through a web or mobile application with minimal installation and configuration.
+  note: Quote only supports minimal installation; "no individual contracting" comes from footnote cost value. Not testable as written.
+- id: EBW-BIZ-006
+  verdict: drop
+  priority: P3
+  priority_reason: Impact assessment content, not a design obligation
+  clusters:
+  - K15
+  applicability: authority-side
+  fidelity: derived-marked
+  verification_ready: 'yes'
+  note: Describes a Commission analysis method; no wallet or provider obligation.
+- id: EBW-BIZ-007
+  verdict: ok
+  priority: P3
+  priority_reason: Commission review procedure, no design impact
+  clusters:
+  - K15
+  applicability: authority-side
+  fidelity: ok
+  verification_ready: 'yes'
+  note: Council text only; Commission obligation.
+- id: EBW-BIZ-008
+  verdict: ok
+  priority: P3
+  priority_reason: Data Act pricing cap; no wallet design effect
+  clusters:
+  - K15
+  applicability: horizontal
+  fidelity: ok
+  verification_ready: 'yes'
+  note: Recategorise to DAT or DOM arguably; applies to data holders.
 - id: EBW-CER-001
   verdict: reword
   priority: P3
@@ -906,6 +971,128 @@
   fidelity: broader-than-quote
   verification_ready: 'needs-source-check: cancel step beyond quote'
   note: Quote covers suspension only; cancellation rests on 12(2).
+- id: EBW-CER-009
+  verdict: reword
+  priority: P1
+  priority_reason: Proposal fixes key-handling assurance level; deleted by Council
+  clusters:
+  - K04
+  - K14
+  applicability: core
+  fidelity: ok
+  verification_ready: needs-legal-review
+  corrected_statement:
+  - Where critical assets support electronic identification at assurance level substantial, the European Business Wallet shall process them cryptographically in line with Implementing Regulation (EU) 2015/1502 requirements for that level.
+  note: Quote does not name Reg 2015/1502 explicitly; ties to critical-assets definition. Contested across texts.
+- id: EBW-CER-010
+  verdict: ok
+  priority: P1
+  priority_reason: Baseline for key-protection components; hard to change later
+  clusters:
+  - K04
+  - K14
+  applicability: core
+  fidelity: ok
+  verification_ready: needs-legal-review
+  note: Overlaps CER-009 in assurance level; deleted by Council and EP. Contested.
+- id: EBW-CER-011
+  verdict: reword
+  priority: P2
+  priority_reason: Assurance floor for issuance; Council/EP raise to high
+  clusters:
+  - K14
+  - K07
+  applicability: core
+  fidelity: ok
+  verification_ready: needs-legal-review
+  corrected_statement:
+  - The wallet solution shall support mechanisms enabling providers of owner identification data to verify issuance, delivery and activation at assurance level substantial under Implementing Regulation (EU) 2015/1502.
+  note: Subject "wallet solution shall support mechanisms" vague; conflicts with other texts on level.
+- id: EBW-CER-012
+  verdict: ok
+  priority: P1
+  priority_reason: Gates wallet unit activation on certified key device
+  clusters:
+  - K04
+  - K14
+  applicability: wallet-general
+  fidelity: ok
+  verification_ready: needs-source-check
+  note: Standard-derived (ARF); statement says level high, quote truncated before level; verify full text.
+- id: EBW-CER-013
+  verdict: ok
+  priority: P2
+  priority_reason: Binds certification schemes, shapes WSCD choice
+  clusters:
+  - K14
+  - K04
+  applicability: authority-side
+  fidelity: ok
+  verification_ready: 'yes'
+  note: Obligation on Member State schemes; relevance to EBW open.
+- id: EBW-CER-014
+  verdict: ok
+  priority: P2
+  priority_reason: Evaluation depth for scheme; implementation detail
+  clusters:
+  - K14
+  - K04
+  applicability: authority-side
+  fidelity: ok
+  verification_ready: 'yes'
+  note: Scheme-side; wallet-general; EBW relevance open.
+- id: EBW-CER-015
+  verdict: ok
+  priority: P3
+  priority_reason: Scheme evaluation procedure for certification lifecycle
+  clusters:
+  - K14
+  - K04
+  applicability: authority-side
+  fidelity: ok
+  verification_ready: 'yes'
+- id: EBW-CER-016
+  verdict: ok
+  priority: P3
+  priority_reason: Certification outcome rule for schemes
+  clusters:
+  - K14
+  - K04
+  applicability: authority-side
+  fidelity: ok
+  verification_ready: 'yes'
+- id: EBW-CER-017
+  verdict: ok
+  priority: P2
+  priority_reason: Shapes split-key architectures evaluation
+  clusters:
+  - K04
+  - K14
+  applicability: authority-side
+  fidelity: ok
+  verification_ready: 'yes'
+  note: Relevant to hybrid hosted/local custody options.
+- id: EBW-CER-018
+  verdict: ok
+  priority: P3
+  priority_reason: Scheme documentation requirement for assumptions
+  clusters:
+  - K14
+  - K04
+  applicability: authority-side
+  fidelity: ok
+  verification_ready: 'yes'
+- id: EBW-CER-019
+  verdict: ok
+  priority: P2
+  priority_reason: Standard-derived control level for remote signing
+  clusters:
+  - K04
+  - K14
+  applicability: wallet-general
+  fidelity: ok
+  verification_ready: needs-source-check
+  note: Standard not read; SCAL 2 level unverified against EN 419 241-1.
 - id: EBW-CON-001
   verdict: drop
   priority: P3
@@ -940,6 +1127,72 @@
   fidelity: ok
   verification_ready: true
   note: Rationale states project owner exclusion; keep as context, not as EBW requirement.
+- id: EBW-CON-004
+  verdict: reword
+  priority: P3
+  priority_reason: Domain overlay; avoids single-model lock-in
+  clusters:
+  - K01
+  - K15
+  applicability: horizontal
+  fidelity: derived-marked
+  verification_ready: 'yes'
+  corrected_statement:
+  - The business wallet design shall support digital product passport data models and access schemes defined per product group without hard-coding a single model.
+  note: Design guidance, not a legal duty; "shall not assume" untestable.
+- id: EBW-CON-005
+  verdict: ok
+  priority: P1
+  priority_reason: Limits legal effect of authorisations; shapes mandate model
+  clusters:
+  - K03
+  applicability: core
+  fidelity: derived-marked
+  verification_ready: needs-legal-review
+  note: Recital only; Council text. Not operative in the Commission text.
+- id: EBW-CON-006
+  verdict: ok
+  priority: P2
+  priority_reason: Preserves procedure-specific formats; local effect
+  clusters:
+  - K15
+  - K01
+  applicability: core
+  fidelity: ok
+  verification_ready: needs-legal-review
+  note: Council text only; "shall be observed" is by users and authorities.
+- id: EBW-CON-007
+  verdict: ok
+  priority: P1
+  priority_reason: Legal-effect equivalence shapes trust service use
+  clusters:
+  - K15
+  - K13
+  applicability: core
+  fidelity: ok
+  verification_ready: needs-legal-review
+  note: Council narrows to qualified trust services; contested vs Commission text. Quote shows partial.
+- id: EBW-CON-008
+  verdict: ok
+  priority: P2
+  priority_reason: Coexistence with mandated authority systems
+  clusters:
+  - K15
+  - K08
+  applicability: authority-side
+  fidelity: ok
+  verification_ready: 'yes'
+  note: Without-prejudice clause; design impact is coexistence, not new duty.
+- id: EBW-CON-009
+  verdict: drop
+  priority: P3
+  priority_reason: Commission cost assumption, not an obligation
+  clusters:
+  - K15
+  applicability: authority-side
+  fidelity: derived-marked
+  verification_ready: 'yes'
+  note: Records an impact assessment assumption; not a wallet or provider obligation.
 - id: EBW-DAT-001
   verdict: reword
   priority: P3
@@ -1041,6 +1294,419 @@
   corrected_statement:
   - The EU Company Certificate for limited liability companies shall include the information listed in Article 16b(2) points (a) to (k), including EUID and persons authorised to represent.
   note: Quote 'shall include the following information' lacks the list; verify attribute list against full_quote.
+- id: EBW-DAT-009
+  verdict: split
+  priority: P2
+  priority_reason: Data Act minimisation for third-party verification
+  clusters:
+  - K09
+  - K10
+  applicability: horizontal
+  fidelity: ok
+  verification_ready: 'yes'
+  corrected_statement:
+  - The data holder shall not require a user or third party to provide more information than necessary to verify its status.
+  - The data holder shall not retain information on the third party access beyond what is necessary.
+  note: Two obligations on different actors (recipient evidence, holder retention).
+- id: EBW-DAT-010
+  verdict: ok
+  priority: P2
+  priority_reason: Data Act access on behalf of user; mandate check
+  clusters:
+  - K03
+  - K08
+  applicability: horizontal
+  fidelity: ok
+  verification_ready: 'yes'
+  note: Quote supports; connector mandate verification is implication in rationale only.
+- id: EBW-DAT-011
+  verdict: ok
+  priority: P3
+  priority_reason: Smart contract vendor duty, domain-specific
+  clusters:
+  - K11
+  - K08
+  applicability: horizontal
+  fidelity: ok
+  verification_ready: 'yes'
+  note: Not wallet-related unless connector executes smart contracts; split access control vs robustness.
+- id: EBW-DAT-012
+  verdict: ok
+  priority: P3
+  priority_reason: Smart contract kill switch duty for vendors
+  clusters:
+  - K11
+  - K08
+  applicability: horizontal
+  fidelity: ok
+  verification_ready: 'yes'
+  note: Revocation link in rationale is an inference.
+- id: EBW-DAT-013
+  verdict: ok
+  priority: P3
+  priority_reason: Cloud switching export; wallet scope assessed per case
+  clusters:
+  - K15
+  - K09
+  applicability: provider-side
+  fidelity: ok
+  verification_ready: needs-legal-review
+  note: Applicability to wallet as data processing service unverified. Related to EBW-NFR-001.
+- id: EBW-DAT-014
+  verdict: ok
+  priority: P3
+  priority_reason: Transparency duty for cloud providers
+  clusters:
+  - K13
+  - K11
+  applicability: provider-side
+  fidelity: ok
+  verification_ready: needs-legal-review
+  note: Applies only if wallet hosting qualifies as data processing service.
+- id: EBW-DAT-015
+  verdict: ok
+  priority: P3
+  priority_reason: Notification regime for intermediaries; scope uncertain
+  clusters:
+  - K13
+  - K08
+  applicability: provider-side
+  fidelity: ok
+  verification_ready: needs-legal-review
+- id: EBW-DAT-016
+  verdict: ok
+  priority: P3
+  priority_reason: Legal representative for non-EU intermediaries
+  clusters:
+  - K13
+  - K17
+  applicability: provider-side
+  fidelity: ok
+  verification_ready: 'yes'
+- id: EBW-DAT-017
+  verdict: ok
+  priority: P3
+  priority_reason: Content of notification to authority
+  clusters:
+  - K13
+  - K06
+  applicability: provider-side
+  fidelity: ok
+  verification_ready: 'yes'
+  note: Quote is the trade register part only; name, legal status, ownership not in quote.
+- id: EBW-DAT-018
+  verdict: ok
+  priority: P3
+  priority_reason: Commission register publication duty
+  clusters:
+  - K05
+  - K13
+  applicability: authority-side
+  fidelity: ok
+  verification_ready: 'yes'
+  note: Quote supports register only; published field list from rationale.
+- id: EBW-DAT-019
+  verdict: ok
+  priority: P2
+  priority_reason: Interoperability duty for intermediaries
+  clusters:
+  - K15
+  - K08
+  applicability: provider-side
+  fidelity: ok
+  verification_ready: 'yes'
+- id: EBW-DAT-020
+  verdict: ok
+  priority: P2
+  priority_reason: Consent withdrawal tools for intermediaries
+  clusters:
+  - K09
+  - K03
+  applicability: provider-side
+  fidelity: ok
+  verification_ready: 'yes'
+  note: Overlaps DAT-021; keep separate by actor.
+- id: EBW-DAT-021
+  verdict: merge-with
+  priority: P3
+  priority_reason: Same pattern for altruism organisations
+  clusters:
+  - K09
+  applicability: provider-side
+  fidelity: ok
+  verification_ready: 'yes'
+  verdict_arg: EBW-DAT-020
+  note: Different actor class; merge only if actors generalised.
+- id: EBW-DAT-022
+  verdict: ok
+  priority: P2
+  priority_reason: DCP profile homogeneity; protocol-specific
+  clusters:
+  - K01
+  - K08
+  applicability: wallet-general
+  fidelity: ok
+  verification_ready: needs-source-check
+  note: Ecosystem spec, relevance to EBW open.
+- id: EBW-DAT-023
+  verdict: ok
+  priority: P2
+  priority_reason: DCP participant identifier is a DID; protocol-specific
+  clusters:
+  - K06
+  - K08
+  applicability: wallet-general
+  fidelity: ok
+  verification_ready: needs-source-check
+  note: Ecosystem spec; conflicts possible with EUID based identification.
+- id: EBW-DOM-001
+  verdict: ok
+  priority: P3
+  priority_reason: DPP identifier standards; domain overlay
+  clusters:
+  - K06
+  - K17
+  applicability: horizontal
+  fidelity: ok
+  verification_ready: 'yes'
+  note: Does not require authentication of a legal person.
+- id: EBW-DOM-002
+  verdict: ok
+  priority: P3
+  priority_reason: Third party requests identifier; domain duty
+  clusters:
+  - K03
+  - K06
+  applicability: horizontal
+  fidelity: ok
+  verification_ready: 'yes'
+  note: Mandate need is derived in rationale.
+- id: EBW-DOM-003
+  verdict: ok
+  priority: P3
+  priority_reason: Sector B2G upload duty; wallet may authenticate
+  clusters:
+  - K12
+  - K08
+  applicability: horizontal
+  fidelity: ok
+  verification_ready: 'yes'
+- id: EBW-DOM-004
+  verdict: drop
+  priority: P3
+  priority_reason: Access right of authorities to DPP registry
+  clusters:
+  - K13
+  applicability: authority-side
+  fidelity: ok
+  verification_ready: 'yes'
+  note: Not a wallet or provider design obligation.
+- id: EBW-DOM-005
+  verdict: ok
+  priority: P3
+  priority_reason: Role-based DPP access; verifier needs role proof
+  clusters:
+  - K03
+  - K16
+  applicability: horizontal
+  fidelity: ok
+  verification_ready: 'yes'
+  note: Consider recategorise K03 primary; quote partial.
+- id: EBW-DOM-006
+  verdict: reword
+  priority: P3
+  priority_reason: No implementing act exists; speculative wallet duty
+  clusters:
+  - K01
+  - K03
+  applicability: core
+  fidelity: derived-marked
+  verification_ready: needs-legal-review
+  corrected_statement:
+  - Where an implementing act under Article 11 of Regulation (EU) 2024/1781 defines digital credentials for DPP access rights, the business wallet shall support holding and presenting them.
+  note: Wallet duty is derived; condition on act existing makes it untestable now.
+- id: EBW-DOM-007
+  verdict: ok
+  priority: P3
+  priority_reason: Battery passport date; sector deadline, no wallet design
+  clusters:
+  - K15
+  applicability: horizontal
+  fidelity: ok
+  verification_ready: 'yes'
+  note: Quote supports; date relevant only for planning.
+- id: EBW-DOM-008
+  verdict: reword
+  priority: P3
+  priority_reason: Sector passport tiers; only third tier needs attributes
+  clusters:
+  - K09
+  - K06
+  applicability: horizontal
+  fidelity: broader-than-quote
+  verification_ready: needs-source-check
+  corrected_statement:
+  - The battery passport shall provide information accessible to the public, information accessible only to notified bodies, market surveillance authorities and the Commission, and information accessible only to persons with a legitimate interest.
+  note: Quote covers only the legitimate-interest tier; check Article 77(2) for the other two.
+- id: EBW-DOM-009
+  verdict: reword
+  priority: P2
+  priority_reason: Statutory mandate case; written authorisation is wallet-representable
+  clusters:
+  - K03
+  applicability: horizontal
+  fidelity: derived-unmarked
+  verification_ready: needs-legal-review
+  corrected_statement:
+  - Where the economic operator authorises another operator to act on its behalf for the battery passport, it shall give that authorisation in writing.
+  note: Quote is permissive (may give written authorisation); "shall" is an implication.
+- id: EBW-DOM-010
+  verdict: ok
+  priority: P2
+  priority_reason: Requires legal-person identity and role verification; wallet evidence
+  clusters:
+  - K06
+  - K03
+  applicability: horizontal
+  fidelity: ok
+  verification_ready: 'yes'
+  note: Medicines verification system repository; domain-specific obligation on repository manager.
+- id: EBW-DOM-011
+  verdict: ok
+  priority: P3
+  priority_reason: Authority access to sector repository; no wallet design impact
+  clusters:
+  - K13
+  - K09
+  applicability: authority-side
+  fidelity: ok
+  verification_ready: 'yes'
+- id: EBW-DOM-012
+  verdict: ok
+  priority: P3
+  priority_reason: Public register of sector licences; verifier lookup only
+  clusters:
+  - K05
+  - K06
+  applicability: authority-side
+  fidelity: ok
+  verification_ready: 'yes'
+  note: Statement lists registrations beyond quote; verify list of contents.
+- id: EBW-DOM-013
+  verdict: ok
+  priority: P3
+  priority_reason: Sector B2G duty; sealed submission is only a use case
+  clusters:
+  - K12
+  - K03
+  applicability: horizontal
+  fidelity: ok
+  verification_ready: needs-source-check
+  note: Rationale admits later EUDR amendments not read; verify currency.
+- id: EBW-DOM-014
+  verdict: reword
+  priority: P2
+  priority_reason: Fixes EORI and authorised-representative role in registry
+  clusters:
+  - K17
+  - K06
+  - K03
+  applicability: authority-side
+  fidelity: broader-than-quote
+  verification_ready: needs-source-check
+  corrected_statement:
+  - The Commission information system for due diligence statements shall provide registration of operators, traders and their authorised representatives in the Union.
+  note: Quote supports registration only; the EORI inclusion needs the full Article text.
+- id: EBW-DOM-015
+  verdict: ok
+  priority: P2
+  priority_reason: Statutory mandate evidence on request; mandate credential use case
+  clusters:
+  - K03
+  applicability: horizontal
+  fidelity: ok
+  verification_ready: 'yes'
+- id: EBW-DOM-016
+  verdict: ok
+  priority: P3
+  priority_reason: Customs registration duty; EORI link not in text
+  clusters:
+  - K17
+  - K06
+  applicability: authority-side
+  fidelity: ok
+  verification_ready: 'yes'
+  note: Rationale itself says UCC does not use EORI; do not rely on it for identifier design.
+- id: EBW-DOM-017
+  verdict: ok
+  priority: P2
+  priority_reason: Evidence-of-empowerment on request; verifiable mandate fits
+  clusters:
+  - K03
+  applicability: horizontal
+  fidelity: ok
+  verification_ready: 'yes'
+  note: Exemption in Article 19(3) not captured.
+- id: EBW-DOM-018
+  verdict: ok
+  priority: P2
+  priority_reason: Authenticated machine access for authorities to freight data
+  clusters:
+  - K08
+  - K04
+  applicability: horizontal
+  fidelity: ok
+  verification_ready: 'yes'
+- id: EBW-DOM-019
+  verdict: ok
+  priority: P3
+  priority_reason: Platform logging duty; legal-person identification in logs
+  clusters:
+  - K10
+  applicability: horizontal
+  fidelity: ok
+  verification_ready: 'yes'
+- id: EBW-DOM-020
+  verdict: ok
+  priority: P3
+  priority_reason: Energy data access; eligible-party role is sector detail
+  clusters:
+  - K09
+  - K03
+  applicability: horizontal
+  fidelity: ok
+  verification_ready: 'yes'
+- id: EBW-DOM-021
+  verdict: ok
+  priority: P3
+  priority_reason: Sector consent lifecycle; parallel only to wallet design
+  clusters:
+  - K09
+  - K07
+  applicability: horizontal
+  fidelity: ok
+  verification_ready: 'yes'
+- id: EBW-DOM-022
+  verdict: ok
+  priority: P3
+  priority_reason: Sector precondition for data release
+  clusters:
+  - K09
+  applicability: horizontal
+  fidelity: ok
+  verification_ready: 'yes'
+  note: Statement adds "or another legal basis" exactly as quote; fine.
+- id: EBW-DOM-023
+  verdict: ok
+  priority: P2
+  priority_reason: Six identifier schemes side by side; secondary identifier evidence
+  clusters:
+  - K17
+  - K06
+  applicability: horizontal
+  fidelity: ok
+  verification_ready: 'yes'
+  note: Annex reporting table, duty on Member States reporting; use as evidence, not wallet duty.
 - id: EBW-FUN-001
   verdict: ok
   priority: P1
@@ -1637,6 +2303,65 @@
   fidelity: ok
   verification_ready: needs-legal-review
   note: COM(2026) 321 proposal; EU Inc, not EBW.
+- id: EBW-FUN-050
+  verdict: ok
+  priority: P1
+  priority_reason: 'Proposal Annex: QSCD interface model shapes key custody'
+  clusters:
+  - K04
+  - K08
+  applicability: core
+  fidelity: ok
+  verification_ready: 'yes'
+  note: Overlaps FUN-005 but adds device-model duty; keep.
+- id: EBW-FUN-051
+  verdict: reword
+  priority: P2
+  priority_reason: Signing application scope; relying-party data signing
+  clusters:
+  - K04
+  - K08
+  applicability: core
+  fidelity: broader-than-quote
+  verification_ready: needs-source-check
+  corrected_statement:
+  - The signature creation application of a European Business Wallet unit shall sign or seal data provided by wallet users and data provided by relying parties.
+  note: Quote covers only data provided by wallet users; relying-party part rests on point 9(2)(b), not quoted.
+- id: EBW-FUN-052
+  verdict: ok
+  priority: P2
+  priority_reason: Local display rule after unit revocation
+  clusters:
+  - K07
+  - K15
+  applicability: wallet-general
+  fidelity: ok
+  verification_ready: 'yes'
+  note: EUDI Wallet trust mark; relevance to business wallet is open.
+- id: EBW-FUN-053
+  verdict: ok
+  priority: P2
+  priority_reason: ARF user notification of revocation; standard-derived
+  clusters:
+  - K07
+  - K09
+  applicability: wallet-general
+  fidelity: ok
+  verification_ready: 'yes'
+  note: Related to OPS-035 (outside unit) but distinct; EUDI profile, business wallet relevance open.
+- id: EBW-FUN-054
+  verdict: reword
+  priority: P2
+  priority_reason: Transaction data binding gives evidential value for signing
+  clusters:
+  - K08
+  - K10
+  applicability: wallet-general
+  fidelity: derived-unmarked
+  verification_ready: needs-source-check
+  corrected_statement:
+  - When a wallet receives transaction_data in a presentation request, it shall include a representation or reference to that data in the credential presentation.
+  note: Error-return alternative is not in the quote; relevance to business wallet is open.
 - id: EBW-GOV-001
   verdict: merge-with
   priority: P3
@@ -2053,6 +2778,107 @@
   - The requesting authority shall refuse a register document or EU Company Certificate only where the register does not confirm its origin or authenticity.
   - The requesting authority shall notify the submitter within 10 working days of the register's reply when it refuses a document.
   note: Quote covers only refusal condition; 10-day notice must be checked.
+- id: EBW-GOV-037
+  verdict: ok
+  priority: P2
+  priority_reason: Conformity route sets evidence level; Council text only
+  clusters:
+  - K14
+  - K13
+  applicability: provider-side
+  fidelity: ok
+  verification_ready: needs-legal-review
+  note: Council general approach, not adopted law; conflicts with certification elsewhere (CER set).
+- id: EBW-GOV-038
+  verdict: ok
+  priority: P2
+  priority_reason: Whole-solution risk assessment justifies key custody choice
+  clusters:
+  - K11
+  - K04
+  - K14
+  applicability: provider-side
+  fidelity: ok
+  verification_ready: needs-legal-review
+  note: Council text; confirm it survives trilogue.
+- id: EBW-GOV-039
+  verdict: split
+  priority: P3
+  priority_reason: Procedural update cadence for self-assessment
+  clusters:
+  - K14
+  - K11
+  applicability: provider-side
+  fidelity: ok
+  verification_ready: needs-legal-review
+  corrected_statement:
+  - The provider of European Business Wallets shall update its self-assessment every 24 months.
+  - The provider shall update its self-assessment immediately upon a significant incident, a substantial change to architecture, security functions, cryptographic components, critical suppliers or core functionalities, or a newly identified risk.
+  note: 'Two obligations: periodic and event-triggered update.'
+- id: EBW-GOV-040
+  verdict: ok
+  priority: P3
+  priority_reason: Privacy-policy disclosure; procedural
+  clusters:
+  - K09
+  - K07
+  applicability: wallet-general
+  fidelity: ok
+  verification_ready: 'yes'
+  note: EUDI profile; business wallet relevance open.
+- id: EBW-GOV-041
+  verdict: ok
+  priority: P3
+  priority_reason: Organisational policy duty; no direct design impact
+  clusters:
+  - K04
+  - K13
+  applicability: wallet-general
+  fidelity: ok
+  verification_ready: 'yes'
+  note: Related to TRU-105; standard-derived; business wallet relevance open.
+- id: EBW-GOV-042
+  verdict: ok
+  priority: P3
+  priority_reason: Member State duty; no wallet design impact
+  clusters:
+  - K13
+  - K07
+  applicability: authority-side
+  fidelity: ok
+  verification_ready: 'yes'
+- id: EBW-GOV-043
+  verdict: ok
+  priority: P3
+  priority_reason: Authority deadline; design impact only via revocation capability
+  clusters:
+  - K13
+  - K07
+  applicability: authority-side
+  fidelity: ok
+  verification_ready: 'yes'
+  note: Quote shows only the 24-hour timing; the evaluation duty is in 4(2)-(3).
+- id: EBW-GOV-044
+  verdict: ok
+  priority: P3
+  priority_reason: Authority deadline for failed solutions
+  clusters:
+  - K13
+  - K07
+  applicability: authority-side
+  fidelity: ok
+  verification_ready: 'yes'
+- id: EBW-GOV-045
+  verdict: ok
+  priority: P2
+  priority_reason: Public status policy affects verifier trust and lifecycle
+  clusters:
+  - K07
+  - K13
+  applicability: provider-side
+  fidelity: ok
+  verification_ready: 'yes'
+  note: PID-specific; applies to wallet-general profile.
 - id: EBW-INT-001
   verdict: drop
   priority: P3
@@ -2866,6 +3692,192 @@
   corrected_statement:
   - The EU Company Certificate and the digital EU power of attorney of an EU Inc. shall be compatible with the European Digital Identity Wallets.
   note: Quote says European Digital Identity Wallets, statement says Business Wallets 'where available'; unsupported. Near-duplicate of INT-064/TRU-095.
+- id: EBW-INT-068
+  verdict: drop
+  priority: P3
+  priority_reason: Commission statement; no operative obligation
+  clusters:
+  - K15
+  applicability: authority-side
+  fidelity: derived-marked
+  verification_ready: needs-legal-review
+  note: Only a financial statement anchors it; duplicated by accessibility NFR/LEG set. Statement not testable.
+- id: EBW-INT-069
+  verdict: recategorise
+  priority: P3
+  priority_reason: Voluntary standard for authority portals; no wallet impact
+  clusters:
+  - K15
+  - K14
+  applicability: authority-side
+  fidelity: derived-marked
+  verification_ready: 'yes'
+  verdict_arg: LEG
+  note: Duty binds public sector sites under Directive 2016/2102; presumption of conformity, not mandatory.
+- id: EBW-INT-070
+  verdict: ok
+  priority: P2
+  priority_reason: Remote QSCD API interoperability; spec left to acts
+  clusters:
+  - K08
+  - K04
+  applicability: core
+  fidelity: ok
+  verification_ready: 'yes'
+  note: Same duty as INT-074 for the EUDI wallet; align on one API.
+- id: EBW-INT-071
+  verdict: ok
+  priority: P1
+  priority_reason: Mandatory registered delivery channel shapes architecture
+  clusters:
+  - K12
+  - K08
+  applicability: core
+  fidelity: ok
+  verification_ready: needs-legal-review
+  note: Single versus several services differs between texts; check final wording.
+- id: EBW-INT-072
+  verdict: ok
+  priority: P2
+  priority_reason: Commission act; open standards constrain channel choice
+  clusters:
+  - K12
+  - K08
+  - K15
+  applicability: authority-side
+  fidelity: ok
+  verification_ready: 'yes'
+- id: EBW-INT-073
+  verdict: ok
+  priority: P2
+  priority_reason: Owner identification data format; duty holder differs by text
+  clusters:
+  - K06
+  - K01
+  applicability: authority-side
+  fidelity: ok
+  verification_ready: needs-legal-review
+  note: Statement says competent authorities, rationale says Council places it on providers; resolve.
+- id: EBW-INT-074
+  verdict: ok
+  priority: P2
+  priority_reason: Binding API reference for signing app
+  clusters:
+  - K08
+  - K04
+  applicability: wallet-general
+  fidelity: ok
+  verification_ready: 'yes'
+  note: EUDI profile; business wallet relevance open. Overlaps INT-075 and INT-070.
+- id: EBW-INT-075
+  verdict: ok
+  priority: P2
+  priority_reason: Standard-fixed signing API
+  clusters:
+  - K08
+  - K04
+  applicability: wallet-general
+  fidelity: ok
+  verification_ready: 'yes'
+  note: Consider merging with INT-074 as one requirement with the clause reference; business wallet relevance open.
+- id: EBW-INT-076
+  verdict: ok
+  priority: P2
+  priority_reason: Fixes status list format for wallet components
+  clusters:
+  - K07
+  - K08
+  applicability: wallet-general
+  fidelity: ok
+  verification_ready: 'yes'
+  note: Business wallet relevance open.
+- id: EBW-INT-077
+  verdict: reword
+  priority: P2
+  priority_reason: Limits mdoc revocation mechanisms; format-specific
+  clusters:
+  - K07
+  - K01
+  applicability: wallet-general
+  fidelity: broader-than-quote
+  verification_ready: needs-source-check
+  corrected_statement:
+  - The provider of person identification data in mdoc format shall use short-lived attestations of 24 hours or less, an attestation status list or an attestation revocation list for revocation.
+  note: Quote mentions person identification data only; extension to qualified and public-sector attestations is not shown.
+- id: EBW-INT-078
+  verdict: ok
+  priority: P2
+  priority_reason: Verifier must handle both mdoc status mechanisms
+  clusters:
+  - K07
+  - K08
+  applicability: relying-party-side
+  fidelity: ok
+  verification_ready: 'yes'
+  note: Business wallet relevance open.
+- id: EBW-INT-079
+  verdict: ok
+  priority: P3
+  priority_reason: Local token claim; implementation detail
+  clusters:
+  - K07
+  - K08
+  applicability: wallet-general
+  fidelity: ok
+  verification_ready: 'yes'
+- id: EBW-INT-080
+  verdict: split
+  priority: P2
+  priority_reason: Provider-to-provider discovery enables digital address use
+  clusters:
+  - K12
+  - K08
+  - K06
+  applicability: provider-side
+  fidelity: broader-than-quote
+  verification_ready: needs-source-check
+  corrected_statement:
+  - Where providers of electronic registered delivery interoperate, the receiving provider shall bind capability discovery to the OASIS Service Metadata Publishing specification.
+  - Where providers of electronic registered delivery interoperate, they shall bind receiver identification to the OASIS BDXL specification.
+  note: Quote supports capability discovery only; receiver identification binding not quoted.
+- id: EBW-INT-081
+  verdict: split
+  priority: P2
+  priority_reason: One relying party authentication method for interoperability
+  clusters:
+  - K08
+  - K05
+  applicability: wallet-general
+  fidelity: broader-than-quote
+  verification_ready: needs-source-check
+  corrected_statement:
+  - A wallet-relying party shall use the x509_hash client identifier prefix in presentation requests.
+  - A wallet-relying party shall sign its presentation requests.
+  note: Request signing is not in the quote; EUDI HAIP profile; business wallet use is open (DEC-07).
+- id: EBW-INT-082
+  verdict: ok
+  priority: P2
+  priority_reason: Hop-level protection between delivery providers
+  clusters:
+  - K12
+  - K11
+  - K08
+  applicability: provider-side
+  fidelity: ok
+  verification_ready: 'yes'
+- id: EBW-INT-083
+  verdict: reword
+  priority: P2
+  priority_reason: Standard-derived protocol detail; local interface choice
+  clusters:
+  - K08
+  - K12
+  applicability: provider-side
+  fidelity: narrower
+  verification_ready: needs-source-check
+  corrected_statement:
+  - Where a qualified electronic registered delivery provider relays a message over AS4 under EN 319 522-4-1, it shall use the push message exchange pattern only.
+  note: Quote says ERDS (not only relay) uses push; AS4 scope and relay restriction come from clause context, check.
 - id: EBW-LEG-001
   verdict: reword
   priority: P1
@@ -3545,6 +4557,154 @@
   corrected_statement:
   - Business-related communication of an EU Inc., in digital or paper form, shall contain company name, EUID, registered office address, digital correspondence address and digital presence address.
   note: Verify list of items in Article 29(1) is complete; 'digital presence address' definition unclear.
+- id: EBW-LEG-057
+  verdict: ok
+  priority: P3
+  priority_reason: Applies only if provider offers consumer services
+  clusters:
+  - K13
+  - K15
+  applicability: horizontal
+  fidelity: ok
+  verification_ready: needs-legal-review
+  note: EAA scope for a B2B wallet is an inference; consider merging LEG-057..061 into a conditional accessibility family.
+- id: EBW-LEG-058
+  verdict: reword
+  priority: P3
+  priority_reason: Documentation duty, no architecture impact
+  clusters:
+  - K15
+  - K13
+  applicability: horizontal
+  fidelity: broader-than-quote
+  verification_ready: needs-source-check
+  corrected_statement:
+  - Where Directive (EU) 2019/882 applies to its service, the service provider shall explain in its terms and conditions how the service meets the accessibility requirements, using the information required by Annex V.
+  note: Written and oral format detail is not in the quote; Annex V point 1 not quoted.
+- id: EBW-LEG-059
+  verdict: ok
+  priority: P3
+  priority_reason: Organisational procedure duty
+  clusters:
+  - K15
+  - K13
+  applicability: horizontal
+  fidelity: ok
+  verification_ready: 'yes'
+- id: EBW-LEG-060
+  verdict: reword
+  priority: P3
+  priority_reason: Authority notification procedure
+  clusters:
+  - K13
+  - K15
+  applicability: horizontal
+  fidelity: broader-than-quote
+  verification_ready: needs-source-check
+  corrected_statement:
+  - Where a service does not comply with applicable accessibility requirements, the service provider shall take corrective measures and shall immediately inform the competent national authorities of the Member States where it is provided.
+  note: Quote covers only the notification; corrective measures part not in quote. Two obligations, arguably split.
+- id: EBW-LEG-061
+  verdict: reword
+  priority: P3
+  priority_reason: Procedural cooperation duty
+  clusters:
+  - K13
+  - K15
+  applicability: horizontal
+  fidelity: broader-than-quote
+  verification_ready: needs-source-check
+  corrected_statement:
+  - Upon a reasoned request from a competent authority, the service provider shall provide all information necessary to demonstrate conformity of the service with the applicable accessibility requirements.
+  note: Cooperation clause not in quote.
+- id: EBW-LEG-062
+  verdict: split
+  priority: P3
+  priority_reason: Internal record keeping for an exception
+  clusters:
+  - K15
+  - K10
+  applicability: horizontal
+  fidelity: broader-than-quote
+  verification_ready: needs-source-check
+  corrected_statement:
+  - Where an economic operator relies on fundamental alteration or disproportionate burden, it shall document the assessment.
+  - Where an economic operator relies on disproportionate burden, it shall keep the assessment results for five years and renew the assessment at least every five years.
+  note: Quote covers only documentation; five-year retention and renewal not in quote.
+- id: EBW-LEG-063
+  verdict: ok
+  priority: P3
+  priority_reason: Binds Member State bodies, not the wallet
+  clusters:
+  - K15
+  - K13
+  applicability: authority-side
+  fidelity: narrower
+  verification_ready: needs-legal-review
+  note: Directive 2016/2102 binds Member States; portal in scope is an inference.
+- id: EBW-LEG-064
+  verdict: reword
+  priority: P3
+  priority_reason: Authority publication duty
+  clusters:
+  - K15
+  - K13
+  applicability: authority-side
+  fidelity: broader-than-quote
+  verification_ready: needs-source-check
+  corrected_statement:
+  - Public sector bodies shall provide and regularly update an accessibility statement on the compliance of their websites and mobile applications.
+  note: Feedback mechanism and enforcement link not in quote.
+- id: EBW-LEG-065
+  verdict: reword
+  priority: P3
+  priority_reason: Presumption clause, no design duty
+  clusters:
+  - K14
+  - K11
+  applicability: authority-side
+  fidelity: broader-than-quote
+  verification_ready: needs-source-check
+  corrected_statement:
+  - Where the standards, specifications and procedures set by implementing acts are met, compliance with the access control requirements of the Annex shall be presumed.
+  note: Presumption of conformity is a legal effect, not a wallet obligation; quote cites Article, statement says Annex point 12 (quote truncated).
+- id: EBW-LEG-066
+  verdict: reword
+  priority: P2
+  priority_reason: GDPR Art 28 contract; role allocation decides architecture
+  clusters:
+  - K09
+  - K13
+  applicability: provider-side
+  fidelity: broader-than-quote
+  verification_ready: needs-source-check
+  corrected_statement:
+  - Where the wallet provider processes personal data on behalf of an owner acting as controller, a binding contract or legal act shall govern the processing and require processing only on the owner's documented instructions.
+  note: Quote covers only the contract requirement; documented-instructions part is point (a), not quoted. Role is inference.
+- id: EBW-LEG-067
+  verdict: ok
+  priority: P2
+  priority_reason: Joint controller split fixes responsibilities
+  clusters:
+  - K09
+  - K13
+  applicability: provider-side
+  fidelity: ok
+  verification_ready: needs-source-check
+  note: Quote omits the data-subject availability part (Art 26(2)); whether provider and owner are joint controllers is open.
+- id: EBW-LEG-068
+  verdict: reword
+  priority: P3
+  priority_reason: Guideline-derived owner duty, organisational
+  clusters:
+  - K09
+  - K02
+  applicability: core
+  fidelity: derived-marked
+  verification_ready: needs-legal-review
+  corrected_statement:
+  - Where an owner is the controller, it shall implement technical and organisational measures, including training and information of authorised users, so that processing by those users in the wallet complies with data protection rules.
+  note: Source is non-binding EDPB guidance; true basis Art 24 GDPR. Provenance D with standard status; consider legal status guideline.
 - id: EBW-NFR-001
   verdict: ok
   priority: P1
@@ -4238,6 +5398,683 @@
   fidelity: derived-unmarked
   verification_ready: needs-legal-review
   note: Derivation class D; the proposal text read has no accessibility provision for persons with disabilities.
+- id: EBW-NFR-057
+  verdict: ok
+  priority: P1
+  priority_reason: Proposal duty on EBW providers; shapes UI and support
+  clusters:
+  - K15
+  - K11
+  applicability: core
+  fidelity: ok
+  verification_ready: needs-legal-review
+  note: Council text, not Commission proposal; may not survive trilogue. Overlaps EBW-NFR-055/056 in intent.
+- id: EBW-NFR-058
+  verdict: merge-with
+  priority: P3
+  priority_reason: Recital only; yardstick for NFR-057
+  clusters:
+  - K15
+  - K14
+  applicability: core
+  fidelity: ok
+  verification_ready: needs-legal-review
+  verdict_arg: EBW-NFR-057
+  note: Recital is not operative; fold into NFR-057 as the yardstick.
+- id: EBW-NFR-059
+  verdict: ok
+  priority: P2
+  priority_reason: Mandatory only if EAA applies to the service
+  clusters:
+  - K15
+  applicability: horizontal
+  fidelity: narrower
+  verification_ready: needs-legal-review
+  note: Quote shows only the sensory-channel part; text-format part is rest of the indent.
+- id: EBW-NFR-060
+  verdict: ok
+  priority: P2
+  priority_reason: EAA UI requirement, local to interface design
+  clusters:
+  - K15
+  applicability: horizontal
+  fidelity: ok
+  verification_ready: needs-legal-review
+  note: Duplicates the WCAG target of NFR-063; keep the legal one as parent.
+- id: EBW-NFR-061
+  verdict: ok
+  priority: P3
+  priority_reason: Support service content duty
+  clusters:
+  - K15
+  applicability: horizontal
+  fidelity: ok
+  verification_ready: needs-legal-review
+- id: EBW-NFR-062
+  verdict: ok
+  priority: P3
+  priority_reason: Applies only in consumer e-commerce or banking flows
+  clusters:
+  - K15
+  - K04
+  applicability: horizontal
+  fidelity: derived-marked
+  verification_ready: needs-legal-review
+  note: Weak fit for a business wallet; consider dropping if B2C is out of scope.
+- id: EBW-NFR-063
+  verdict: reword
+  priority: P2
+  priority_reason: Standard-derived, testable UI target
+  clusters:
+  - K15
+  - K14
+  applicability: wallet-general
+  fidelity: broader-than-quote
+  verification_ready: 'yes'
+  corrected_statement:
+  - Where a wallet interface is a web page, it shall conform to clauses 9.1 to 9.4 and 9.6 of EN 301 549 V3.2.1 (WCAG 2.1 Level AA).
+  note: Quote supports equivalence; scope to wallet interfaces is application, not stated in standard.
+- id: EBW-NFR-064
+  verdict: ok
+  priority: P2
+  priority_reason: Standard-derived, local to app
+  clusters:
+  - K15
+  - K14
+  applicability: wallet-general
+  fidelity: ok
+  verification_ready: 'yes'
+  note: Whether EN 301 549 binds the business wallet is open.
+- id: EBW-NFR-065
+  verdict: ok
+  priority: P3
+  priority_reason: Applies to downloadable documents only
+  clusters:
+  - K15
+  - K12
+  applicability: wallet-general
+  fidelity: ok
+  verification_ready: 'yes'
+- id: EBW-NFR-066
+  verdict: ok
+  priority: P3
+  priority_reason: Local authentication design rule
+  clusters:
+  - K15
+  - K04
+  applicability: wallet-general
+  fidelity: ok
+  verification_ready: 'yes'
+  note: Biometrics unlikely central to a hosted business wallet.
+- id: EBW-NFR-067
+  verdict: split
+  priority: P3
+  priority_reason: Documentation and support organisation
+  clusters:
+  - K15
+  - K13
+  applicability: provider-side
+  fidelity: ok
+  verification_ready: 'yes'
+  corrected_statement:
+  - The wallet provider shall make product documentation available in a web format conforming to clause 9 or a non-web format conforming to clause 10 of EN 301 549.
+  - The wallet provider shall ensure its support services accommodate the communication needs of individuals with disabilities directly or through a referral point.
+  note: Two obligations; overlaps NFR-061.
+- id: EBW-NFR-068
+  verdict: reword
+  priority: P2
+  priority_reason: ARF high-level requirement; local compliance
+  clusters:
+  - K15
+  - K14
+  applicability: wallet-general
+  fidelity: ok
+  verification_ready: needs-source-check
+  corrected_statement:
+  - Wallet providers shall ensure that their wallet units comply with the applicable requirements and standards of Directive (EU) 2016/2102 on the accessibility of websites and mobile applications of public sector bodies.
+  note: Source cites Directive 2016/2012 (likely typo); statement silently corrects the number, mark the derivation.
+- id: EBW-NFR-069
+  verdict: ok
+  priority: P1
+  priority_reason: Back-end key custody in secure device; hard to retrofit
+  clusters:
+  - K04
+  - K11
+  applicability: core
+  fidelity: ok
+  verification_ready: 'yes'
+- id: EBW-NFR-070
+  verdict: ok
+  priority: P1
+  priority_reason: Internal channel protection shapes component split
+  clusters:
+  - K04
+  - K11
+  applicability: core
+  fidelity: ok
+  verification_ready: 'yes'
+  note: One channel, three properties; acceptable as atomic.
+- id: EBW-NFR-071
+  verdict: ok
+  priority: P1
+  priority_reason: Key use gated by user authentication
+  clusters:
+  - K04
+  - K11
+  applicability: core
+  fidelity: ok
+  verification_ready: 'yes'
+- id: EBW-NFR-072
+  verdict: merge-with
+  priority: P2
+  priority_reason: Key generation capability; local to secure component
+  clusters:
+  - K04
+  applicability: core
+  fidelity: ok
+  verification_ready: 'yes'
+  verdict_arg: EBW-FUN-028
+  note: Duplicates generation clause of EBW-FUN-028 (CIR), different source (proposal Annex); keep both or split FUN-028.
+- id: EBW-NFR-073
+  verdict: merge-with
+  priority: P2
+  priority_reason: Secure erasure capability; local to secure component
+  clusters:
+  - K04
+  - K07
+  applicability: core
+  fidelity: ok
+  verification_ready: 'yes'
+  verdict_arg: EBW-FUN-028
+  note: Duplicates erasure clause of EBW-FUN-028; see also EBW-OPS-017.
+- id: EBW-NFR-074
+  verdict: merge-with
+  priority: P2
+  priority_reason: Proof of possession; local capability
+  clusters:
+  - K04
+  - K07
+  applicability: core
+  fidelity: ok
+  verification_ready: 'yes'
+  verdict_arg: EBW-FUN-028
+  note: Duplicates proof-of-possession clause of EBW-FUN-028.
+- id: EBW-NFR-075
+  verdict: ok
+  priority: P1
+  priority_reason: Key protection requirement is core to custody design
+  clusters:
+  - K04
+  - K11
+  applicability: core
+  fidelity: ok
+  verification_ready: 'yes'
+  note: Not testable without a defined protection level; tie to certification.
+- id: EBW-NFR-076
+  verdict: ok
+  priority: P2
+  priority_reason: Log content detail; fixes log schema
+  clusters:
+  - K10
+  - K09
+  applicability: core
+  fidelity: ok
+  verification_ready: 'yes'
+  note: Overlaps NFR-013 on logging scope.
+- id: EBW-NFR-077
+  verdict: ok
+  priority: P2
+  priority_reason: Log content detail; consistent with NFR-019
+  clusters:
+  - K10
+  - K09
+  applicability: core
+  fidelity: ok
+  verification_ready: 'yes'
+- id: EBW-NFR-078
+  verdict: ok
+  priority: P2
+  priority_reason: Log content detail
+  clusters:
+  - K10
+  applicability: core
+  fidelity: ok
+  verification_ready: 'yes'
+- id: EBW-NFR-079
+  verdict: merge-with
+  priority: P2
+  priority_reason: Log protection; local control
+  clusters:
+  - K10
+  - K11
+  applicability: core
+  fidelity: ok
+  verification_ready: 'yes'
+  verdict_arg: EBW-NFR-014
+  note: NFR-014 already requires integrity, authenticity and confidentiality of the transaction log (CIR basis).
+- id: EBW-NFR-080
+  verdict: ok
+  priority: P2
+  priority_reason: Authority-report logging; B2G evidence
+  clusters:
+  - K10
+  - K12
+  applicability: core
+  fidelity: ok
+  verification_ready: 'yes'
+- id: EBW-NFR-081
+  verdict: merge-with
+  priority: P3
+  priority_reason: Retention follows law; procedural
+  clusters:
+  - K10
+  - K09
+  applicability: core
+  fidelity: ok
+  verification_ready: 'yes'
+  verdict_arg: EBW-NFR-049
+  note: Same obligation as EBW-NFR-049, different source.
+- id: EBW-NFR-082
+  verdict: reword
+  priority: P1
+  priority_reason: Anti lock-in; shapes data model and exit
+  clusters:
+  - K15
+  - K01
+  - K04
+  applicability: core
+  fidelity: broader-than-quote
+  verification_ready: needs-source-check
+  corrected_statement:
+  - The European Business Wallet shall support secure export and portability of the owner's wallet data in at least an open format, so that the owner can migrate to another wallet solution.
+  note: Assurance level substantial clause is not in the quote. Overlaps FUN-031 and NFR-001.
+- id: EBW-NFR-083
+  verdict: reword
+  priority: P1
+  priority_reason: Fixes confidentiality model of the mandatory channel
+  clusters:
+  - K12
+  - K11
+  - K08
+  applicability: authority-side
+  fidelity: narrower
+  verification_ready: needs-legal-review
+  corrected_statement:
+  - The qualified electronic registered delivery service designated as the mandatory channel shall provide end-to-end encryption.
+  note: Statement binds the Commission via implementing act; design duty falls on the ERDS. Check Annex point 11(2)(d) wording.
+- id: EBW-NFR-084
+  verdict: ok
+  priority: P1
+  priority_reason: Role-based visibility shapes multi-user model
+  clusters:
+  - K03
+  - K09
+  applicability: core
+  fidelity: ok
+  verification_ready: 'yes'
+  note: Overlaps FUN-010/FUN-035; testability depends on defined roles.
+- id: EBW-NFR-085
+  verdict: ok
+  priority: P2
+  priority_reason: LoA high isolation; EUDI scope, local design
+  clusters:
+  - K04
+  - K14
+  applicability: wallet-general
+  fidelity: ok
+  verification_ready: 'yes'
+  note: Applies to EUDI at LoA high; business wallet relevance is open.
+- id: EBW-NFR-086
+  verdict: ok
+  priority: P1
+  priority_reason: Binding key custody floor for EUDI wallets
+  clusters:
+  - K04
+  - K14
+  applicability: wallet-general
+  fidelity: ok
+  verification_ready: 'yes'
+  note: Business wallet relevance is open; parallels NFR-069.
+- id: EBW-NFR-087
+  verdict: ok
+  priority: P2
+  priority_reason: Channel protection in force; local
+  clusters:
+  - K04
+  - K11
+  applicability: wallet-general
+  fidelity: ok
+  verification_ready: 'yes'
+  note: Parallels NFR-070 (proposal).
+- id: EBW-NFR-088
+  verdict: ok
+  priority: P2
+  priority_reason: Standard-derived non-export rule
+  clusters:
+  - K04
+  applicability: wallet-general
+  fidelity: ok
+  verification_ready: 'yes'
+  note: 'Tension with NFR-082 export: only keys excluded.'
+- id: EBW-NFR-089
+  verdict: reword
+  priority: P2
+  priority_reason: ARF key protection; local security control
+  clusters:
+  - K04
+  - K11
+  applicability: wallet-general
+  fidelity: broader-than-quote
+  verification_ready: 'yes'
+  corrected_statement:
+  - The wallet secure cryptographic application and device shall protect each private key they generated during the entire lifetime of the key.
+  note: Extraction-in-the-clear clause not in quote; drop or source it.
+- id: EBW-NFR-090
+  verdict: ok
+  priority: P2
+  priority_reason: ARF isolation rule; matters for hosted multi-unit modules
+  clusters:
+  - K04
+  - K02
+  applicability: wallet-general
+  fidelity: ok
+  verification_ready: 'yes'
+- id: EBW-NFR-091
+  verdict: ok
+  priority: P2
+  priority_reason: ARF rule; conflicts with business wallet provider log access
+  clusters:
+  - K04
+  - K09
+  - K13
+  applicability: wallet-general
+  fidelity: broader-than-quote
+  verification_ready: needs-legal-review
+  note: Enumerated contents not in quote. Conflicts with NFR-040 and NFR-014; resolve in key custody decision.
+- id: EBW-NFR-092
+  verdict: ok
+  priority: P2
+  priority_reason: Hosted-architecture control; standard-derived
+  clusters:
+  - K04
+  - K09
+  - K11
+  applicability: wallet-general
+  fidelity: ok
+  verification_ready: 'yes'
+  note: Testability depends on defining "strict controls"; audit-based.
+- id: EBW-NFR-093
+  verdict: ok
+  priority: P2
+  priority_reason: Remote HSM access control; standard-derived
+  clusters:
+  - K04
+  - K11
+  applicability: wallet-general
+  fidelity: ok
+  verification_ready: 'yes'
+- id: EBW-NFR-094
+  verdict: ok
+  priority: P2
+  priority_reason: Remote signing consent control; standard-derived
+  clusters:
+  - K04
+  - K03
+  applicability: provider-side
+  fidelity: ok
+  verification_ready: 'yes'
+- id: EBW-NFR-095
+  verdict: ok
+  priority: P2
+  priority_reason: Local activation protocol detail for legal-person signer
+  clusters:
+  - K03
+  - K04
+  applicability: provider-side
+  fidelity: ok
+  verification_ready: 'yes'
+  note: Directly relevant to business seal or signature held remotely.
+- id: EBW-NFR-096
+  verdict: ok
+  priority: P2
+  priority_reason: QSCD key generation; standard-derived
+  clusters:
+  - K04
+  - K14
+  applicability: provider-side
+  fidelity: ok
+  verification_ready: 'yes'
+- id: EBW-NFR-097
+  verdict: ok
+  priority: P2
+  priority_reason: Concrete 30 minute limit; local implementation detail
+  clusters:
+  - K04
+  - K11
+  applicability: provider-side
+  fidelity: ok
+  verification_ready: 'yes'
+- id: EBW-NFR-098
+  verdict: reword
+  priority: P2
+  priority_reason: Mandatory in force; local sizing parameter
+  clusters:
+  - K07
+  - K09
+  applicability: provider-side
+  fidelity: derived-unmarked
+  verification_ready: 'yes'
+  corrected_statement:
+  - The wallet provider shall size each wallet instance attestation status list so that, where possible, it relates to at least 10 000 attestations.
+  note: Scale/architecture clause is not in quote. Business wallet with few units cannot reach 10 000 easily.
+- id: EBW-NFR-099
+  verdict: ok
+  priority: P2
+  priority_reason: Mandatory in force; local index allocation rule
+  clusters:
+  - K09
+  - K07
+  applicability: provider-side
+  fidelity: ok
+  verification_ready: 'yes'
+- id: EBW-NFR-100
+  verdict: ok
+  priority: P2
+  priority_reason: ARF rule; conflicts with business wallet texts
+  clusters:
+  - K09
+  - K08
+  - K05
+  applicability: wallet-general
+  fidelity: ok
+  verification_ready: needs-legal-review
+  note: Conflicts with TRU-109 and TRU-010 where unit attestation is shown to authorities or relying parties.
+- id: EBW-NFR-101
+  verdict: ok
+  priority: P2
+  priority_reason: ARF privacy rule; standard-derived
+  clusters:
+  - K09
+  - K04
+  applicability: wallet-general
+  fidelity: ok
+  verification_ready: 'yes'
+  note: Pair with NFR-100; atomic on its own.
+- id: EBW-NFR-102
+  verdict: ok
+  priority: P2
+  priority_reason: Mandatory in force; applies on suspension only
+  clusters:
+  - K13
+  - K09
+  - K15
+  applicability: provider-side
+  fidelity: ok
+  verification_ready: 'yes'
+  note: '"Hinder" is vague; test via export capability during suspension (see FUN-031).'
+- id: EBW-NFR-103
+  verdict: ok
+  priority: P2
+  priority_reason: In force mdoc profile; local status rule
+  clusters:
+  - K07
+  - K09
+  - K01
+  applicability: wallet-general
+  fidelity: ok
+  verification_ready: 'yes'
+  note: Absorbs NFR-108 (double allocation) for mdoc.
+- id: EBW-NFR-104
+  verdict: ok
+  priority: P2
+  priority_reason: ARF privacy rule; local status endpoint design
+  clusters:
+  - K09
+  - K07
+  - K08
+  applicability: provider-side
+  fidelity: ok
+  verification_ready: 'yes'
+- id: EBW-NFR-105
+  verdict: ok
+  priority: P3
+  priority_reason: PID-specific; bearing on business wallet is open
+  clusters:
+  - K07
+  - K09
+  applicability: provider-side
+  fidelity: ok
+  verification_ready: 'yes'
+  note: Counterpart of TRU-031 for PID; EUDI-only unless EBW issues PID-like data.
+- id: EBW-NFR-106
+  verdict: ok
+  priority: P2
+  priority_reason: IETF draft rule; local status allocation
+  clusters:
+  - K07
+  - K09
+  applicability: provider-side
+  fidelity: ok
+  verification_ready: 'yes'
+- id: EBW-NFR-107
+  verdict: ok
+  priority: P2
+  priority_reason: IETF draft rule; local status allocation
+  clusters:
+  - K07
+  - K09
+  applicability: provider-side
+  fidelity: ok
+  verification_ready: 'yes'
+- id: EBW-NFR-108
+  verdict: merge-with
+  priority: P2
+  priority_reason: Standard rule duplicating in force uniqueness rule
+  clusters:
+  - K07
+  - K09
+  applicability: provider-side
+  fidelity: ok
+  verification_ready: 'yes'
+  verdict_arg: EBW-NFR-103
+  note: Generic version of NFR-103 (unique index and address); merge, keep both sources.
+- id: EBW-NFR-109
+  verdict: ok
+  priority: P2
+  priority_reason: HAIP profile; use in business wallet open (DEC-07)
+  clusters:
+  - K08
+  - K09
+  - K11
+  applicability: wallet-general
+  fidelity: ok
+  verification_ready: 'yes'
+  note: EUDI profile; bearing on business wallet open.
+- id: EBW-NFR-110
+  verdict: reword
+  priority: P2
+  priority_reason: HAIP unlinkability rule; bearing on business wallet open
+  clusters:
+  - K09
+  - K08
+  - K04
+  applicability: wallet-general
+  fidelity: broader-than-quote
+  verification_ready: needs-source-check
+  corrected_statement:
+  - A wallet attestation presented to an issuer shall not carry an identifier specific to a single wallet instance.
+  note: No-reuse-across-issuers clause not in quote; verify against HAIP 4.4.1.
+- id: EBW-NFR-111
+  verdict: ok
+  priority: P2
+  priority_reason: ETSI profile; local API disclosure default
+  clusters:
+  - K09
+  - K08
+  applicability: wallet-general
+  fidelity: ok
+  verification_ready: 'yes'
+  note: EUDI profile; bearing on business wallet open.
+- id: EBW-NFR-112
+  verdict: ok
+  priority: P3
+  priority_reason: Commission duty on directory; "where appropriate" untestable
+  clusters:
+  - K09
+  - K06
+  applicability: authority-side
+  fidelity: ok
+  verification_ready: needs-legal-review
+  note: Vague, not testable; design impact on wallet is nil.
+- id: EBW-NFR-113
+  verdict: ok
+  priority: P2
+  priority_reason: Derived from EUDI rule; EBW proposal lacks equivalent
+  clusters:
+  - K09
+  - K07
+  - K04
+  applicability: core
+  fidelity: derived-marked
+  verification_ready: needs-legal-review
+  note: Art 5a(16)(a) binds EUDI wallets; extension to business wallet is a project decision.
+- id: EBW-NFR-114
+  verdict: reword
+  priority: P2
+  priority_reason: Mandatory logging scope; local provider process
+  clusters:
+  - K10
+  - K11
+  applicability: provider-side
+  fidelity: derived-unmarked
+  verification_ready: needs-legal-review
+  corrected_statement:
+  - The entity subject to the logging rule shall establish and keep reviewed a list of assets subject to logging, based on its risk assessment.
+  note: Quote says "relevant entities"; CIR 2024/2690 may not cover trust service providers. Verify scope.
+- id: EBW-NFR-115
+  verdict: reword
+  priority: P2
+  priority_reason: Mandatory logging retention; local provider process
+  clusters:
+  - K10
+  - K11
+  applicability: provider-side
+  fidelity: derived-unmarked
+  verification_ready: needs-legal-review
+  corrected_statement:
+  - The entity subject to the logging rule shall maintain and back up its logs for a predefined period and protect them from unauthorised access and modification.
+  note: Quote lacks the protection clause and the TSP scope. Overlaps NFR-079 and NFR-081.
+- id: EBW-NFR-116
+  verdict: ok
+  priority: P2
+  priority_reason: Standard audit-trail control; local
+  clusters:
+  - K10
+  - K11
+  applicability: provider-side
+  fidelity: ok
+  verification_ready: 'yes'
+  note: '"Easily" is not testable; consider defining tamper evidence. Overlaps NFR-079.'
 - id: EBW-OPS-001
   verdict: ok
   priority: P2
@@ -4541,6 +6378,174 @@
   - Where the wallet provider serves a financial entity, it shall renew certificates in advance of their expiration.
   - Where the wallet provider serves a financial entity, it shall keep a register of certificates and certificate-storing devices.
   note: Two obligations; register not in quote (Article 7(5)). Quote supports only renewal.
+- id: EBW-OPS-026
+  verdict: ok
+  priority: P2
+  priority_reason: Proposal user notice; local process; counterpart of OPS-009
+  clusters:
+  - K07
+  - K13
+  applicability: core
+  fidelity: ok
+  verification_ready: 'yes'
+  note: Kept as proposal counterpart of in-force OPS-009.
+- id: EBW-OPS-027
+  verdict: ok
+  priority: P3
+  priority_reason: Commission implementing-act duty; no direct wallet design duty
+  clusters:
+  - K12
+  - K11
+  applicability: authority-side
+  fidelity: ok
+  verification_ready: needs-legal-review
+  note: Binds the Commission, not the wallet; restate as design requirement on the delivery channel if wanted.
+- id: EBW-OPS-028
+  verdict: ok
+  priority: P2
+  priority_reason: Standard key lifecycle rule; local
+  clusters:
+  - K04
+  - K07
+  applicability: provider-side
+  fidelity: ok
+  verification_ready: 'yes'
+- id: EBW-OPS-029
+  verdict: ok
+  priority: P2
+  priority_reason: Standard key lifecycle rule; local
+  clusters:
+  - K04
+  - K03
+  applicability: provider-side
+  fidelity: ok
+  verification_ready: 'yes'
+- id: EBW-OPS-030
+  verdict: ok
+  priority: P2
+  priority_reason: In force status duty; local to wallet provider
+  clusters:
+  - K07
+  - K04
+  applicability: provider-side
+  fidelity: ok
+  verification_ready: 'yes'
+  note: Parallel to OPS-031; atomic separately.
+- id: EBW-OPS-031
+  verdict: ok
+  priority: P2
+  priority_reason: In force status duty; local to wallet provider
+  clusters:
+  - K07
+  - K04
+  applicability: provider-side
+  fidelity: ok
+  verification_ready: 'yes'
+- id: EBW-OPS-032
+  verdict: ok
+  priority: P2
+  priority_reason: In force validity floor; local parameter
+  clusters:
+  - K07
+  - K11
+  applicability: provider-side
+  fidelity: ok
+  verification_ready: 'yes'
+- id: EBW-OPS-033
+  verdict: split
+  priority: P2
+  priority_reason: ARF record-keeping; supports unit revocation
+  clusters:
+  - K04
+  - K07
+  - K13
+  applicability: provider-side
+  fidelity: broader-than-quote
+  verification_ready: 'yes'
+  corrected_statement:
+  - The wallet provider shall maintain, for each wallet unit it has activated, the set of instance attestations and key attestations issued to that unit.
+  - The wallet provider shall document the procedures, controls and risk analysis for unit revocation in its revocation policy.
+  note: Policy documentation clause is not in quote.
+- id: EBW-OPS-034
+  verdict: split
+  priority: P2
+  priority_reason: ARF unit integrity monitoring; supports revocation
+  clusters:
+  - K11
+  - K07
+  applicability: provider-side
+  fidelity: broader-than-quote
+  verification_ready: needs-source-check
+  corrected_statement:
+  - During the lifetime of a wallet unit, the wallet provider shall verify at defined intervals that the unit security is not breached or compromised.
+  - Where a breach affects the trustworthiness or reliability of a wallet unit, the wallet provider shall revoke the unit.
+  note: Revocation clause is not in quote; "regularly" untestable, define interval.
+- id: EBW-OPS-035
+  verdict: ok
+  priority: P2
+  priority_reason: ARF notice rule; extends OPS-009
+  clusters:
+  - K07
+  - K11
+  applicability: provider-side
+  fidelity: ok
+  verification_ready: 'yes'
+  note: Channel independence testable; see OPS-009 and FUN-053.
+- id: EBW-OPS-036
+  verdict: ok
+  priority: P3
+  priority_reason: PID-specific retention; bearing on business wallet open
+  clusters:
+  - K07
+  - K10
+  applicability: provider-side
+  fidelity: ok
+  verification_ready: 'yes'
+  note: EUDI PID only.
+- id: EBW-OPS-037
+  verdict: ok
+  priority: P2
+  priority_reason: ARF revocation trigger; local issuer rule
+  clusters:
+  - K07
+  - K01
+  applicability: provider-side
+  fidelity: ok
+  verification_ready: 'yes'
+  note: Check against TRU-040 and TRU-134 for overlap.
+- id: EBW-OPS-038
+  verdict: ok
+  priority: P2
+  priority_reason: Standard availability target for trust list operators
+  clusters:
+  - K05
+  - K11
+  applicability: provider-side
+  fidelity: broader-than-quote
+  verification_ready: needs-source-check
+  note: The 99,9 % over one year figure is not in the quote; verify clause 6.4.
+- id: EBW-OPS-039
+  verdict: ok
+  priority: P2
+  priority_reason: In force evidence archiving; local to delivery provider
+  clusters:
+  - K12
+  - K10
+  applicability: provider-side
+  fidelity: ok
+  verification_ready: 'yes'
+- id: EBW-OPS-040
+  verdict: merge-with
+  priority: P3
+  priority_reason: Organisational termination plan content
+  clusters:
+  - K13
+  - K10
+  applicability: provider-side
+  fidelity: ok
+  verification_ready: 'yes'
+  verdict_arg: EBW-OPS-008
+  note: Refines OPS-008 and OPS-007; fold in as plan content.
 - id: EBW-TRN-001
   verdict: reword
   priority: P3
@@ -5786,3 +7791,543 @@
   corrected_statement:
   - All filings of documents and information with the business register of an EU Inc. shall be made fully online using electronic identification means under Regulation (EU) No 910/2014 or Business Wallets.
   note: Quote truncated at 'Business'; confirm 'Wallets' wording. Scope limited to EU Inc.
+- id: EBW-TRU-101
+  verdict: ok
+  priority: P1
+  priority_reason: Proposal; unit attestation anchors wallet trust model
+  clusters:
+  - K04
+  - K05
+  - K07
+  applicability: core
+  fidelity: ok
+  verification_ready: 'yes'
+  note: Counterpart of TRU-029; check overlap with TRU-116.
+- id: EBW-TRU-102
+  verdict: ok
+  priority: P1
+  priority_reason: Proposal; fixes trust anchor of unit attestations
+  clusters:
+  - K05
+  - K04
+  applicability: core
+  fidelity: ok
+  verification_ready: 'yes'
+  note: Could merge with TRU-101 but separate obligation; counterpart of TRU-029.
+- id: EBW-TRU-103
+  verdict: ok
+  priority: P1
+  priority_reason: Proposal; key protection anchors the wallet trust model
+  clusters:
+  - K04
+  - K05
+  - K14
+  applicability: core
+  fidelity: ok
+  verification_ready: needs-legal-review
+  note: Proposal text; Council text may change.
+- id: EBW-TRU-104
+  verdict: merge-with
+  priority: P1
+  priority_reason: Proposal; out-of-band user authentication shapes recovery
+  clusters:
+  - K04
+  - K03
+  - K07
+  applicability: core
+  fidelity: ok
+  verification_ready: needs-legal-review
+  verdict_arg: EBW-FUN-029
+  note: Same text as FUN-029; keep one.
+- id: EBW-TRU-105
+  verdict: ok
+  priority: P3
+  priority_reason: Published policy document, no design impact
+  clusters:
+  - K07
+  - K13
+  applicability: provider-side
+  fidelity: ok
+  verification_ready: needs-legal-review
+- id: EBW-TRU-106
+  verdict: split
+  priority: P1
+  priority_reason: Proposal; status publication shapes verification
+  clusters:
+  - K07
+  - K05
+  - K09
+  applicability: core
+  fidelity: ok
+  verification_ready: needs-legal-review
+  corrected_statement:
+  - When the provider of European Business Wallets has revoked a wallet unit attestation, it shall make the validity status of that attestation publicly available.
+  - The provider of European Business Wallets shall describe the location of the validity status information in the wallet unit attestation.
+  note: 'Two obligations: publish status, describe location. Overlaps TRU-031 without privacy clause.'
+- id: EBW-TRU-107
+  verdict: ok
+  priority: P2
+  priority_reason: Proposal; local presentation check
+  clusters:
+  - K05
+  - K08
+  - K09
+  applicability: core
+  fidelity: ok
+  verification_ready: needs-legal-review
+  note: '"Restricted audience" undefined; hard to test.'
+- id: EBW-TRU-108
+  verdict: ok
+  priority: P2
+  priority_reason: Proposal; local issuance check
+  clusters:
+  - K08
+  - K05
+  applicability: core
+  fidelity: narrower
+  verification_ready: needs-legal-review
+  note: Quote is truncated; statement adds the issuance trigger.
+- id: EBW-TRU-109
+  verdict: merge-with
+  priority: P2
+  priority_reason: Wallet side of the same issuance check as TRU-035
+  clusters:
+  - K04
+  - K05
+  - K08
+  applicability: core
+  fidelity: ok
+  verification_ready: needs-legal-review
+  verdict_arg: EBW-TRU-035
+  note: Counterpart of TRU-035 (provider verifies WUA); presenting WUA also covers authorities.
+- id: EBW-TRU-110
+  verdict: reword
+  priority: P2
+  priority_reason: Proposal; local validation duty
+  clusters:
+  - K07
+  - K05
+  - K01
+  applicability: core
+  fidelity: broader-than-quote
+  verification_ready: needs-source-check
+  corrected_statement:
+  - The wallet unit shall verify the authenticity and validity of owner identification data it receives.
+  note: Quote names owner identification data only; attestations of attributes not in quote.
+- id: EBW-TRU-111
+  verdict: ok
+  priority: P1
+  priority_reason: Binding identification data to unit is hard to retrofit
+  clusters:
+  - K06
+  - K04
+  applicability: authority-side
+  fidelity: ok
+  verification_ready: needs-legal-review
+  note: Complements TRU-067; actor is authority issuing data.
+- id: EBW-TRU-112
+  verdict: ok
+  priority: P2
+  priority_reason: Proposal; issuer authentication in issuance
+  clusters:
+  - K05
+  - K08
+  applicability: provider-side
+  fidelity: ok
+  verification_ready: needs-legal-review
+  note: Check against Council text noted in rationale.
+- id: EBW-TRU-113
+  verdict: ok
+  priority: P2
+  priority_reason: ARF-derived; local keystore labelling
+  clusters:
+  - K04
+  - K14
+  applicability: wallet-general
+  fidelity: ok
+  verification_ready: 'yes'
+  note: EUDI ARF; business wallet bearing open.
+- id: EBW-TRU-114
+  verdict: ok
+  priority: P2
+  priority_reason: Standard-derived assurance for remote signing
+  clusters:
+  - K04
+  - K14
+  - K17
+  applicability: provider-side
+  fidelity: ok
+  verification_ready: 'yes'
+- id: EBW-TRU-115
+  verdict: ok
+  priority: P2
+  priority_reason: ARF check before remote signing
+  clusters:
+  - K04
+  - K05
+  applicability: wallet-general
+  fidelity: ok
+  verification_ready: 'yes'
+  note: Applies to a business wallet that remote-signs or seals.
+- id: EBW-TRU-116
+  verdict: ok
+  priority: P1
+  priority_reason: In force; splits attestation structure everywhere downstream
+  clusters:
+  - K04
+  - K07
+  - K08
+  applicability: wallet-general
+  fidelity: ok
+  verification_ready: 'yes'
+  note: EUDI profile; adoption by business wallet is open.
+- id: EBW-TRU-117
+  verdict: reword
+  priority: P2
+  priority_reason: In force; local attestation lifetime parameter
+  clusters:
+  - K07
+  - K04
+  applicability: wallet-general
+  fidelity: derived-unmarked
+  verification_ready: needs-source-check
+  corrected_statement:
+  - The wallet provider shall set the expiry of each issued wallet instance attestation to less than 24 hours.
+  note: Quote only caps exp below 24 hours; link to integrity-check time not quoted.
+- id: EBW-TRU-118
+  verdict: ok
+  priority: P2
+  priority_reason: In force; attribute value in key attestation
+  clusters:
+  - K04
+  - K14
+  applicability: wallet-general
+  fidelity: ok
+  verification_ready: 'yes'
+  note: Format-specific value; technology-neutrality weak.
+- id: EBW-TRU-119
+  verdict: ok
+  priority: P2
+  priority_reason: In force; separate attestations per keystore
+  clusters:
+  - K04
+  - K07
+  applicability: wallet-general
+  fidelity: ok
+  verification_ready: 'yes'
+- id: EBW-TRU-120
+  verdict: ok
+  priority: P2
+  priority_reason: In force; provider verification before signing
+  clusters:
+  - K04
+  - K11
+  applicability: wallet-general
+  fidelity: ok
+  verification_ready: 'yes'
+- id: EBW-TRU-121
+  verdict: ok
+  priority: P2
+  priority_reason: In force; credential validity bound to wallet status
+  clusters:
+  - K07
+  - K04
+  applicability: wallet-general
+  fidelity: ok
+  verification_ready: 'yes'
+- id: EBW-TRU-122
+  verdict: split
+  priority: P2
+  priority_reason: In force; issuer polling duty
+  clusters:
+  - K07
+  - K04
+  applicability: wallet-general
+  fidelity: ok
+  verification_ready: 'yes'
+  corrected_statement:
+  - A provider of person identification data with a technical validity period over 24 hours shall check the revocation status of the wallet instance attestation and key attestation at least every 24 hours.
+  - The provider shall revoke the person identification data where either attestation is revoked.
+  note: 'Two obligations: periodic check, and revoke.'
+- id: EBW-TRU-123
+  verdict: ok
+  priority: P2
+  priority_reason: In force; local status index rule
+  clusters:
+  - K07
+  - K04
+  applicability: wallet-general
+  fidelity: ok
+  verification_ready: 'yes'
+  note: Format-specific (status index).
+- id: EBW-TRU-124
+  verdict: ok
+  priority: P2
+  priority_reason: In force; local revocation operation
+  clusters:
+  - K07
+  - K04
+  applicability: wallet-general
+  fidelity: ok
+  verification_ready: 'yes'
+- id: EBW-TRU-125
+  verdict: split
+  priority: P3
+  priority_reason: Duty of Member State on withdrawal
+  clusters:
+  - K13
+  - K07
+  applicability: authority-side
+  fidelity: ok
+  verification_ready: 'yes'
+  corrected_statement:
+  - When a Member State withdraws a wallet solution, it shall ensure that the wallet unit attestations of the affected units are revoked and cannot revert to a valid state.
+  - When a Member State withdraws a wallet solution, it shall ensure that no new wallet unit attestation is issued to existing units of that solution.
+  note: Three outcomes bundled; no wallet design impact.
+- id: EBW-TRU-126
+  verdict: recategorise
+  priority: P2
+  priority_reason: In force; fixes status model for key credential types
+  clusters:
+  - K07
+  - K01
+  applicability: wallet-general
+  fidelity: ok
+  verification_ready: 'yes'
+  verdict_arg: INT
+  note: Format of status element; statement on credential not trust service. Business wallet bearing open.
+- id: EBW-TRU-127
+  verdict: reword
+  priority: P2
+  priority_reason: In force; permission not obligation
+  clusters:
+  - K07
+  applicability: wallet-general
+  fidelity: ok
+  verification_ready: 'yes'
+  corrected_statement:
+  - A provider of short-lived electronic attestations of attributes with a validity of 24 hours or less may omit revocation support.
+  note: Not a "shall" duty; it is an exemption.
+- id: EBW-TRU-128
+  verdict: ok
+  priority: P2
+  priority_reason: ARF rule on relying party decision
+  clusters:
+  - K07
+  - K05
+  applicability: relying-party-side
+  fidelity: ok
+  verification_ready: 'yes'
+  note: Close to TRU-047 and TRU-135; check overlap.
+- id: EBW-TRU-129
+  verdict: ok
+  priority: P2
+  priority_reason: In force; revocation cascade
+  clusters:
+  - K07
+  - K04
+  applicability: wallet-general
+  fidelity: ok
+  verification_ready: 'yes'
+  note: Close to FUN/TRU-040 revocation circumstances; PID only.
+- id: EBW-TRU-130
+  verdict: ok
+  priority: P2
+  priority_reason: In force; user-initiated revocation
+  clusters:
+  - K07
+  - K03
+  applicability: wallet-general
+  fidelity: ok
+  verification_ready: 'yes'
+  note: PID only; business wallet equivalent open.
+- id: EBW-TRU-131
+  verdict: merge-with
+  priority: P2
+  priority_reason: In force; irreversibility duplicates other items
+  clusters:
+  - K07
+  applicability: wallet-general
+  fidelity: ok
+  verification_ready: 'yes'
+  verdict_arg: EBW-TRU-028
+  note: Same rule as TRU-004/025/026/028 for PID; consider one generic requirement.
+- id: EBW-TRU-132
+  verdict: split
+  priority: P3
+  priority_reason: Conditional on national suspension rules
+  clusters:
+  - K07
+  - K05
+  applicability: provider-side
+  fidelity: ok
+  verification_ready: 'yes'
+  corrected_statement:
+  - Where national rules provide for temporary suspension of a qualified certificate, the provider shall record the suspension period in the certificate database.
+  - During the suspension, the status information service shall show the suspension status.
+  note: 'Two obligations: record period, expose status.'
+- id: EBW-TRU-133
+  verdict: ok
+  priority: P3
+  priority_reason: Legal effect statement, conditional on national rules
+  clusters:
+  - K07
+  - K13
+  applicability: horizontal
+  fidelity: ok
+  verification_ready: 'yes'
+  note: Legal effect, not a design duty.
+- id: EBW-TRU-134
+  verdict: reword
+  priority: P2
+  priority_reason: Pilot rulebook; local lifecycle rule
+  clusters:
+  - K07
+  - K06
+  applicability: provider-side
+  fidelity: ok
+  verification_ready: needs-source-check
+  corrected_statement:
+  - Where owner identification data has a validity longer than 24 hours, its provider shall support revocation of it.
+  note: Derived "shall" from a permission; ecosystem rulebook, not law.
+- id: EBW-TRU-135
+  verdict: merge-with
+  priority: P2
+  priority_reason: Pilot rule on status default
+  clusters:
+  - K07
+  - K05
+  applicability: relying-party-side
+  fidelity: ok
+  verification_ready: 'yes'
+  verdict_arg: EBW-TRU-047
+  note: Overlaps TRU-047 and TRU-128; "indeterminate" undefined.
+- id: EBW-TRU-136
+  verdict: ok
+  priority: P2
+  priority_reason: Pilot ADR (Proposed), not binding; shapes unit lifecycle
+  clusters:
+  - K04
+  - K07
+  - K15
+  applicability: core
+  fidelity: ok
+  verification_ready: needs-source-check
+  note: ADR status Proposed.
+- id: EBW-TRU-137
+  verdict: ok
+  priority: P2
+  priority_reason: Pilot ADR; state model for unit
+  clusters:
+  - K04
+  - K07
+  - K06
+  applicability: core
+  fidelity: ok
+  verification_ready: needs-source-check
+  note: Depends on TRU-136; ADR status Proposed.
+- id: EBW-TRU-138
+  verdict: ok
+  priority: P2
+  priority_reason: Standard-derived discovery pointer
+  clusters:
+  - K05
+  - K08
+  applicability: provider-side
+  fidelity: ok
+  verification_ready: 'yes'
+- id: EBW-TRU-139
+  verdict: ok
+  priority: P2
+  priority_reason: Standard-derived anchor check for list pointers
+  clusters:
+  - K05
+  - K11
+  applicability: relying-party-side
+  fidelity: ok
+  verification_ready: 'yes'
+- id: EBW-TRU-140
+  verdict: split
+  priority: P2
+  priority_reason: Standard-derived; four checks
+  clusters:
+  - K05
+  - K12
+  applicability: relying-party-side
+  fidelity: ok
+  verification_ready: 'yes'
+  corrected_statement:
+  - A party evaluating trust in an electronic registered delivery service shall validate the service signature and link the signing certificate to the service digital identity in the trusted list.
+  - The party shall verify that the current status of the service is granted and that its service type fits the applicable trust domain.
+  note: Four separate checks bundled.
+- id: EBW-TRU-141
+  verdict: ok
+  priority: P2
+  priority_reason: Derived; rulebook mechanism for trust anchors
+  clusters:
+  - K05
+  - K01
+  applicability: provider-side
+  fidelity: ok
+  verification_ready: needs-source-check
+  note: Provenance D; rationale states derivation.
+- id: EBW-TRU-142
+  verdict: ok
+  priority: P2
+  priority_reason: Data space pilot; multi-domain trust
+  clusters:
+  - K05
+  - K15
+  - K08
+  applicability: relying-party-side
+  fidelity: ok
+  verification_ready: needs-source-check
+  note: Ecosystem source; "shall be able" testable by configuration.
+- id: EBW-TRU-143
+  verdict: ok
+  priority: P2
+  priority_reason: Standard-derived metadata signing
+  clusters:
+  - K08
+  - K05
+  - K06
+  applicability: wallet-general
+  fidelity: ok
+  verification_ready: 'yes'
+  note: EUDI profile; business wallet bearing open (DEC-07).
+- id: EBW-TRU-144
+  verdict: ok
+  priority: P3
+  priority_reason: EUDI PID flow rule; PID-specific
+  clusters:
+  - K08
+  - K14
+  applicability: wallet-general
+  fidelity: ok
+  verification_ready: 'yes'
+  note: EUDI profile; business wallet bearing open (DEC-07).
+- id: EBW-TRU-145
+  verdict: merge-with
+  priority: P2
+  priority_reason: In force; adds no-delegation to TRU-032
+  clusters:
+  - K05
+  - K04
+  - K08
+  applicability: wallet-general
+  fidelity: ok
+  verification_ready: 'yes'
+  verdict_arg: EBW-TRU-032
+  note: Extends TRU-032 with no-delegation; could be merged. Business wallet bearing open.
+- id: EBW-TRU-146
+  verdict: recategorise
+  priority: P3
+  priority_reason: Provider-side preservation service detail
+  clusters:
+  - K10
+  - K11
+  applicability: provider-side
+  fidelity: ok
+  verification_ready: 'yes'
+  verdict_arg: OPS
+  note: Preservation service evidence, not trust anchor; plane assurance already.
