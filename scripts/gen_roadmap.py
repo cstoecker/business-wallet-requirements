@@ -9,7 +9,7 @@ LX, GX, GW = 24, 250, 1330          # label x, grid x, grid width
 NQ = 17                              # Q4 2025 .. Q4 2029
 QW = GW / NQ
 def qx(i): return GX + i * QW        # i = quarters since start of Q4 2025 (float ok)
-PET, CY, OR, GR = "#023852", "#00B6BD", "#023852", "#445260"
+PET, CY, OR, GR = "#023852", "#2BFEBB", "#023852", "#445260"
 out = []
 a = out.append
 a(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}" role="img" aria-labelledby="tm dm">')
@@ -27,14 +27,14 @@ for y, s, e in years:
     a(f'<line x1="{qx(s):.0f}" y1="104" x2="{qx(s):.0f}" y2="{H-70}" class="grid"/>')
 labels = ["Q4"] + ["Q1", "Q2", "Q3", "Q4"] * 4
 for i, l in enumerate(labels):
-    col = "#046A5F" if l == "Q4" and i == 0 else PET
+    col = "#022536" if l == "Q4" and i == 0 else PET
     a(f'<rect x="{qx(i)+1:.0f}" y="108" width="{QW-2:.0f}" height="28" rx="14" fill="{col}"/><text x="{qx(i)+QW/2:.0f}" y="127" class="q" text-anchor="middle">{l}</text>')
 # presidencies
 pres = [("Denmark", 0, 1), ("Cyprus", 1, 3), ("Ireland", 3, 5), ("Lithuania", 5, 7), ("Greece", 7, 9), ("Italy", 9, 11), ("Latvia", 11, 13), ("Luxembourg", 13, 15), ("Netherlands", 15, 17)]
 PY = 146
 a(f'<text x="{LX}" y="{PY+20}" class="lane">Council presidency</text>')
 for n, s, e in pres:
-    a(f'<rect x="{qx(s)+2:.0f}" y="{PY}" width="{(e-s)*QW-4:.0f}" height="28" rx="6" fill="#F2F0ED" stroke="#C9C7C2"/><text x="{(qx(s)+qx(e))/2:.0f}" y="{PY+19}" class="pres" text-anchor="middle">{n}</text>')
+    a(f'<rect x="{qx(s)+2:.0f}" y="{PY}" width="{(e-s)*QW-4:.0f}" height="28" rx="6" fill="#EEEEEE" stroke="#C9C7C2"/><text x="{(qx(s)+qx(e))/2:.0f}" y="{PY+19}" class="pres" text-anchor="middle">{n}</text>')
 def diamond(cx, cy, confirmed=False):
     f = OR if confirmed else "#fff"
     a(f'<path d="M{cx:.0f} {cy-9} L{cx+9:.0f} {cy} L{cx:.0f} {cy+9} L{cx-9:.0f} {cy} Z" fill="{f}" stroke="{OR}" stroke-width="2"/>')
@@ -52,7 +52,7 @@ for n, s, y, h in lanes:
     if s: a(f'<text x="{LX}" y="{y+37}" class="sub">{x(s)}</text>')
 # lane separators
 for yy in (298, 358, 426, 494, 574, 654, 722):
-    a(f'<line x1="{LX}" y1="{yy}" x2="{GX+GW}" y2="{yy}" stroke="#E4E2DD"/>')
+    a(f'<line x1="{LX}" y1="{yy}" x2="{GX+GW}" y2="{yy}" stroke="#C9C7C2"/>')
 # regulation / policy
 diamond(qx(0.5), 204, True); lines(qx(0.5)+16, 208, "Commission proposal|COM(2025) 838|19 Nov 2025")
 diamond(qx(4.9), 204); lines(qx(4.9)-16, 208, "Parliament and Council|provisional agreement|(trilogue), late 2026", "end")
@@ -82,7 +82,7 @@ bar(0, 9, 668, 44, "Trusted pilots of EBW-ready solutions (Industry 4.0, supply|
 bar(9.2, 17, 668, 44, "Widespread industry adoption", "#fff", PET)
 # legend
 ly = H - 60
-a(f'<rect x="0" y="{H-80}" width="{W}" height="80" fill="#F7F6F4"/>')
+a(f'<rect x="0" y="{H-80}" width="{W}" height="80" fill="#F4F2EE"/>')
 diamond(LX+10, ly+6, True); a(f'<text x="{LX+26}" y="{ly+11}" class="leg">confirmed</text>')
 diamond(LX+130, ly+6); a(f'<text x="{LX+146}" y="{ly+11}" class="leg">indicative (scenario)</text>')
 a(f'<text x="{LX+330}" y="{ly+11}" class="leg">CAB conformity assessment body, EAA electronic attestation of attributes, QEAA qualified EAA, QTSP qualified trust service provider, T0 date of entry into force</text>')

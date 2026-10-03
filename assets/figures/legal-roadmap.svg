@@ -16,7 +16,7 @@
 <line x1="954" y1="104" x2="954" y2="740" class="grid"/>
 <text x="1424" y="96" class="yr" text-anchor="middle">2029</text>
 <line x1="1267" y1="104" x2="1267" y2="740" class="grid"/>
-<rect x="251" y="108" width="76" height="28" rx="14" fill="#046A5F"/><text x="289" y="127" class="q" text-anchor="middle">Q4</text>
+<rect x="251" y="108" width="76" height="28" rx="14" fill="#022536"/><text x="289" y="127" class="q" text-anchor="middle">Q4</text>
 <rect x="329" y="108" width="76" height="28" rx="14" fill="#023852"/><text x="367" y="127" class="q" text-anchor="middle">Q1</text>
 <rect x="407" y="108" width="76" height="28" rx="14" fill="#023852"/><text x="446" y="127" class="q" text-anchor="middle">Q2</text>
 <rect x="486" y="108" width="76" height="28" rx="14" fill="#023852"/><text x="524" y="127" class="q" text-anchor="middle">Q3</text>
@@ -34,15 +34,15 @@
 <rect x="1425" y="108" width="76" height="28" rx="14" fill="#023852"/><text x="1463" y="127" class="q" text-anchor="middle">Q3</text>
 <rect x="1503" y="108" width="76" height="28" rx="14" fill="#023852"/><text x="1541" y="127" class="q" text-anchor="middle">Q4</text>
 <text x="24" y="166" class="lane">Council presidency</text>
-<rect x="252" y="146" width="74" height="28" rx="6" fill="#F2F0ED" stroke="#C9C7C2"/><text x="289" y="165" class="pres" text-anchor="middle">Denmark</text>
-<rect x="330" y="146" width="152" height="28" rx="6" fill="#F2F0ED" stroke="#C9C7C2"/><text x="406" y="165" class="pres" text-anchor="middle">Cyprus</text>
-<rect x="487" y="146" width="152" height="28" rx="6" fill="#F2F0ED" stroke="#C9C7C2"/><text x="563" y="165" class="pres" text-anchor="middle">Ireland</text>
-<rect x="643" y="146" width="152" height="28" rx="6" fill="#F2F0ED" stroke="#C9C7C2"/><text x="719" y="165" class="pres" text-anchor="middle">Lithuania</text>
-<rect x="800" y="146" width="152" height="28" rx="6" fill="#F2F0ED" stroke="#C9C7C2"/><text x="876" y="165" class="pres" text-anchor="middle">Greece</text>
-<rect x="956" y="146" width="152" height="28" rx="6" fill="#F2F0ED" stroke="#C9C7C2"/><text x="1032" y="165" class="pres" text-anchor="middle">Italy</text>
-<rect x="1113" y="146" width="152" height="28" rx="6" fill="#F2F0ED" stroke="#C9C7C2"/><text x="1189" y="165" class="pres" text-anchor="middle">Latvia</text>
-<rect x="1269" y="146" width="152" height="28" rx="6" fill="#F2F0ED" stroke="#C9C7C2"/><text x="1345" y="165" class="pres" text-anchor="middle">Luxembourg</text>
-<rect x="1426" y="146" width="152" height="28" rx="6" fill="#F2F0ED" stroke="#C9C7C2"/><text x="1502" y="165" class="pres" text-anchor="middle">Netherlands</text>
+<rect x="252" y="146" width="74" height="28" rx="6" fill="#EEEEEE" stroke="#C9C7C2"/><text x="289" y="165" class="pres" text-anchor="middle">Denmark</text>
+<rect x="330" y="146" width="152" height="28" rx="6" fill="#EEEEEE" stroke="#C9C7C2"/><text x="406" y="165" class="pres" text-anchor="middle">Cyprus</text>
+<rect x="487" y="146" width="152" height="28" rx="6" fill="#EEEEEE" stroke="#C9C7C2"/><text x="563" y="165" class="pres" text-anchor="middle">Ireland</text>
+<rect x="643" y="146" width="152" height="28" rx="6" fill="#EEEEEE" stroke="#C9C7C2"/><text x="719" y="165" class="pres" text-anchor="middle">Lithuania</text>
+<rect x="800" y="146" width="152" height="28" rx="6" fill="#EEEEEE" stroke="#C9C7C2"/><text x="876" y="165" class="pres" text-anchor="middle">Greece</text>
+<rect x="956" y="146" width="152" height="28" rx="6" fill="#EEEEEE" stroke="#C9C7C2"/><text x="1032" y="165" class="pres" text-anchor="middle">Italy</text>
+<rect x="1113" y="146" width="152" height="28" rx="6" fill="#EEEEEE" stroke="#C9C7C2"/><text x="1189" y="165" class="pres" text-anchor="middle">Latvia</text>
+<rect x="1269" y="146" width="152" height="28" rx="6" fill="#EEEEEE" stroke="#C9C7C2"/><text x="1345" y="165" class="pres" text-anchor="middle">Luxembourg</text>
+<rect x="1426" y="146" width="152" height="28" rx="6" fill="#EEEEEE" stroke="#C9C7C2"/><text x="1502" y="165" class="pres" text-anchor="middle">Netherlands</text>
 <text x="24" y="210" class="lane">Regulation / policy</text>
 <text x="24" y="227" class="sub">top milestones</text>
 <text x="24" y="326" class="lane">Standardisation</text>
@@ -55,13 +55,13 @@
 <text x="24" y="602" class="lane">Conformity and accreditation</text>
 <text x="24" y="619" class="sub">based on eIDAS</text>
 <text x="24" y="682" class="lane">Industry adoption</text>
-<line x1="24" y1="298" x2="1580" y2="298" stroke="#E4E2DD"/>
-<line x1="24" y1="358" x2="1580" y2="358" stroke="#E4E2DD"/>
-<line x1="24" y1="426" x2="1580" y2="426" stroke="#E4E2DD"/>
-<line x1="24" y1="494" x2="1580" y2="494" stroke="#E4E2DD"/>
-<line x1="24" y1="574" x2="1580" y2="574" stroke="#E4E2DD"/>
-<line x1="24" y1="654" x2="1580" y2="654" stroke="#E4E2DD"/>
-<line x1="24" y1="722" x2="1580" y2="722" stroke="#E4E2DD"/>
+<line x1="24" y1="298" x2="1580" y2="298" stroke="#C9C7C2"/>
+<line x1="24" y1="358" x2="1580" y2="358" stroke="#C9C7C2"/>
+<line x1="24" y1="426" x2="1580" y2="426" stroke="#C9C7C2"/>
+<line x1="24" y1="494" x2="1580" y2="494" stroke="#C9C7C2"/>
+<line x1="24" y1="574" x2="1580" y2="574" stroke="#C9C7C2"/>
+<line x1="24" y1="654" x2="1580" y2="654" stroke="#C9C7C2"/>
+<line x1="24" y1="722" x2="1580" y2="722" stroke="#C9C7C2"/>
 <path d="M289 195 L298 204 L289 213 L280 204 Z" fill="#023852" stroke="#023852" stroke-width="2"/>
 <text x="305" y="208" class="bx" text-anchor="start">Commission proposal</text>
 <text x="305" y="225" class="bx" text-anchor="start">COM(2025) 838</text>
@@ -116,7 +116,7 @@
 <text x="264" y="703.5" class="bx" text-anchor="start">chain, data spaces, DPP, cross-border procurement, payment)</text>
 <rect x="972" y="668" width="606" height="44" rx="8" fill="#fff" stroke="#023852" stroke-width="1.5"/>
 <text x="984" y="695.0" class="bx" text-anchor="start">Widespread industry adoption</text>
-<rect x="0" y="730" width="1600" height="80" fill="#F7F6F4"/>
+<rect x="0" y="730" width="1600" height="80" fill="#F4F2EE"/>
 <path d="M34 747 L43 756 L34 765 L25 756 Z" fill="#023852" stroke="#023852" stroke-width="2"/>
 <text x="50" y="761" class="leg">confirmed</text>
 <path d="M154 747 L163 756 L154 765 L145 756 Z" fill="#fff" stroke="#023852" stroke-width="2"/>
