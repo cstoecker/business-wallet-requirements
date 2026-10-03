@@ -3,7 +3,7 @@
 //   PLAYWRIGHT=/opt/node-tools/node_modules/playwright AXE=/tmp/axe/node_modules/axe-core/axe.min.js CHROME=/opt/pw-browsers/chromium-1194/chrome-linux/chrome node scripts/check_a11y.js
 // Prints one line per violation type; no output means no violations.
 const { chromium } = require(process.env.PLAYWRIGHT || 'playwright');
-const fs = require('fs'); const axe = fs.readFileSync('process.env.AXE || "node_modules/axe-core/axe.min.js"', 'utf8');
+const fs = require('fs'); const axe = fs.readFileSync(process.env.AXE || 'node_modules/axe-core/axe.min.js', 'utf8');
 const pages = ['/', '/requirements/', '/requirements/ebw-tru-012/', '/requirements/review/', '/concepts/trust-list/', '/architecture/decisions/dec-02/', '/legal/roadmap/', '/downloads/', '/about/', '/contact/', '/figures/'];
 (async () => {
   const b = await chromium.launch({ executablePath: process.env.CHROME || undefined, args: ['--no-sandbox'] });

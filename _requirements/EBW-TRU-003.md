@@ -26,4 +26,5 @@ created: '2026-10-03'
 last_verified: '2026-10-03'
 full_quote: The present document specifies a format and mechanisms for establishing, locating, accessing and authenticating a trusted list which makes available trust service status information so that interested parties may determine the status of a listed trust service at a given time.
 fidelity_checked: '2026-10-03'
+quote: so that interested parties may determine the status of a listed trust service at a given time
 ---

@@ -6,7 +6,7 @@ statement: In the WE BUILD pilot, PID/LPID and EAA providers shall implement Ope
 rationale: Gives pilot participants one protocol profile so that wallets, issuers and verifiers can be tested together.
 sources:
 - id: SRC-WEBUILD-ARCH
-  location: adr/base-protocols.md, section Decision
+  location: adr/base-protocols.md, sections Context and Decision
 provenance: S
 legal_status: ecosystem
 plane: data
@@ -24,7 +24,8 @@ concepts:
 - CON-DATA-PLANE
 created: '2026-10-03'
 last_verified: '2026-10-03'
-full_quote: PID/LPID Providers, EAA Providers (including QEAA, Pub-EAA) MUST implement OpenID4VCI version 1.0. Relying Parties MUST implement OpenID4VP version 1.0. Wallet Providers MUST implement in wallet solutions OpenID4VCI version 1.0 and OpenID4VP version 1.0. Proximity flows are out of scope.
+full_quote: PID/LPID Providers, EAA Providers (including QEAA, Pub-EAA) MUST implement OpenID4VCI version 1.0 ... Relying Parties MUST implement OpenID4VP version 1.0 ... Wallet Providers MUST implement in wallet solutions OpenID4VCI version 1.0 and OpenID4VP version 1.0
 fidelity_checked: '2026-10-03'
 revision_note: Statement narrowed to what the clause contains after a check against the full text.
+quote: Relying Parties MUST implement OpenID4VP version 1.0
 ---

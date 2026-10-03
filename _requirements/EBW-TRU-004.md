@@ -24,4 +24,7 @@ concepts:
 - CON-REVOCATION
 created: '2026-10-03'
 last_verified: '2026-10-03'
+quote: it shall lose its validity from the moment of its revocation and its status shall not in any circumstances be reverted
+full_quote: Where a qualified electronic attestation of attributes has been revoked after initial issuance, it shall lose its validity from the moment of its revocation and its status shall not in any circumstances be reverted.
+fidelity_checked: '2026-10-03'
 ---

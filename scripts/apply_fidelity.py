@@ -17,6 +17,7 @@ for path in sys.argv[1:]:
         if e.get("corrected_location"): fm["sources"][0]["location"] = e["corrected_location"]
         if e.get("provenance") in ("L", "S", "D"): fm["provenance"] = e["provenance"]
         if e.get("corrected_rationale"): fm["rationale"] = e["corrected_rationale"].strip()
+        if e.get("quote"): fm["quote"] = e["quote"].strip()
         if e.get("full_quote"): fm["full_quote"] = e["full_quote"].strip()
         fm["fidelity_checked"] = "2026-10-03"
         if v in ("overreach", "derived", "wrong-location"):

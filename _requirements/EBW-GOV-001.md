@@ -27,4 +27,5 @@ last_verified: '2026-10-03'
 full_quote: the supervisory body shall grant qualified status to the trust service provider and the trust services it provides and inform the body referred to in Article 22(3) for the purposes of updating the trusted lists referred to in Article 22(1), not later than three months after notification in accordance with paragraph 1
 fidelity_checked: '2026-10-03'
 revision_note: Statement narrowed to what the clause contains after a check against the full text.
+quote: inform the body referred to in Article 22(3) ... not later than three months after notification in accordance with paragraph 1
 ---

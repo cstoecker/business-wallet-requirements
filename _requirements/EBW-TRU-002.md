@@ -2,7 +2,7 @@
 req_id: EBW-TRU-002
 title: Trusted lists signed and machine-readable
 category: TRU
-statement: The operator of a trusted list shall publish the list electronically signed or sealed and in a form suitable for automated processing.
+statement: Member States shall establish, maintain and publish electronically signed or sealed trusted lists in a secured manner and in a form suitable for automated processing.
 rationale: Lets relying parties verify the origin of the list and process it without manual steps.
 sources:
 - id: SRC-EIDAS-CONSOL
@@ -24,4 +24,8 @@ concepts:
 - CON-TRUST-LIST
 created: '2026-10-03'
 last_verified: '2026-10-03'
+quote: Member States shall establish, maintain and publish, in a secured manner, the electronically signed or sealed trusted lists
+full_quote: Member States shall establish, maintain and publish, in a secured manner, the electronically signed or sealed trusted lists referred to in paragraph 1 in a form suitable for automated processing.
+fidelity_checked: '2026-10-03'
+revision_note: Statement narrowed to what the clause contains after a check against the full text.
 ---

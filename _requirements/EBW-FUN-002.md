@@ -23,4 +23,7 @@ concepts:
 - CON-TRUST-PLANE
 created: '2026-10-03'
 last_verified: '2026-10-03'
+quote: shall, without undue delay and in any event within one working day, be communicated by the providers of European Business Wallet directly to the Commission
+full_quote: Any modification or revocation concerning the information referred to in paragraph 2 shall, without undue delay and in any event within one working day, be communicated by the providers of European Business Wallet directly to the Commission for the purpose of maintaining the European Digital Directory.
+fidelity_checked: '2026-10-03'
 ---

@@ -23,4 +23,7 @@ concepts:
 - CON-TRUST-PLANE
 created: '2026-10-03'
 last_verified: '2026-10-03'
+quote: providers of European Business Wallets shall be established in the Union, have their principal place of business and main operations in the Union
+full_quote: providers of European Business Wallets shall be established in the Union, have their principal place of business and main operations in the Union and not present a risk to the security of the Union. In particular they shall not be subject to control by a third country or by a third-country entity.
+fidelity_checked: '2026-10-03'
 ---

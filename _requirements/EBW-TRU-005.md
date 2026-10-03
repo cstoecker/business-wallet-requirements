@@ -6,7 +6,7 @@ statement: A relying party instance shall verify the signature over a presented 
 rationale: Trust anchors are only useful if they are used both for the credential and for its status.
 sources:
 - id: SRC-ARF-TRUST
-  location: Section 6.6.3.6 (Relying Party Instance verifies the authenticity of the PID or attestation)
+  location: Section 6.6.3.6
 provenance: S
 legal_status: standard
 plane: trust
@@ -27,4 +27,5 @@ last_verified: '2026-10-03'
 full_quote: To do this for PIDs, QEAAs, and PuB-EAAs, the Relying Party Instance uses a trust anchor of the Provider obtained from a LoTE or Trusted List.
 fidelity_checked: '2026-10-03'
 revision_note: Statement narrowed to what the clause contains after a check against the full text.
+quote: the Relying Party Instance uses a trust anchor of the Provider obtained from a LoTE or Trusted List
 ---
