@@ -22,4 +22,6 @@ concepts:
 created: '2026-10-03'
 last_verified: '2026-10-03'
 quote: for 10 years.
+full_quote: Registrars shall keep records of the information provided by wallet-relying parties and registered in accordance with Annex I for the registration of a wallet-relying party and the issuance of the wallet-relying party access certificates and the wallet-relying party registration certificates, and of any subsequent changes to this information, for 10 years.
+fidelity_checked: '2026-10-03'
 ---

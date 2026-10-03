@@ -23,4 +23,6 @@ concepts:
 created: '2026-10-03'
 last_verified: '2026-10-03'
 quote: not later than 24 hours after the suspension or cancellation
+full_quote: Where the registration of a wallet-relying party is suspended or cancelled, the registrar shall inform the provider of the relevant wallet-relying party access certificates, the provider of the relevant wallet-relying party registration certificates, and the affected wallet-relying party of this action without undue delay and not later than 24 hours after the suspension or cancellation.
+fidelity_checked: '2026-10-03'
 ---

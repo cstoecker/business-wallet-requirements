@@ -26,4 +26,6 @@ concepts:
 created: '2026-10-03'
 last_verified: '2026-10-03'
 quote: make publicly available the validity status of the wallet unit attestation in a privacy preserving manner
+full_quote: Where wallet providers have revoked wallet unit attestations, they shall make publicly available the validity status of the wallet unit attestation in a privacy preserving manner and describe the location of that information in the wallet unit attestation.
+fidelity_checked: '2026-10-03'
 ---

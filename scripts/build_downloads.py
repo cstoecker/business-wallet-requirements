@@ -48,14 +48,18 @@ for row in ws.iter_rows(min_row=2):
     row[0].font = Font(name="Arial", bold=True, color=PETROL); row[1].font = Font(name="Arial"); row[1].alignment = Alignment(wrap_text=True, vertical="top")
 ws.column_dimensions["A"].width = 30; ws.column_dimensions["B"].width = 110
 catname = {c["code"]: c["name"] for c in cats}
+REV = {x["id"]: x for x in (load("_data/review/requirement-review.yml") if os.path.exists(os.path.join(ROOT, "_data/review/requirement-review.yml")) else [])}
+CLU = {c["code"]: c["name"] for c in load("_data/graph/clusters.yml")}
 rr = []
 for r in sorted(R, key=lambda x: x["req_id"]):
     rr.append([r["req_id"], r["category"], catname.get(r["category"], ""), r["title"], r["statement"], r["rationale"],
                j([f"{s['id']} ({s['location']})" for s in r["sources"]]), r["provenance"], r["legal_status"], r["plane"], j(r["perspectives"]), j(r["actors"]),
                r["verification_method"], r["status"], r["reviewer"], j(r.get("concepts")), r.get("created"), r.get("last_verified"),
-               "https://spherity.github.io/business-wallet-requirements/requirements/" + r["req_id"].lower() + "/"])
-HDR = ["ID", "Category", "Category name", "Title", "Requirement", "Rationale", "Sources", "Provenance", "Legal status", "Plane", "Perspectives", "Actors", "Verification method", "Status", "Reviewer", "Concepts", "Created", "Last verified", "URL"]
-sheet(wb, "Requirements", HDR, rr, [14, 9, 22, 30, 60, 45, 45, 11, 12, 12, 16, 28, 14, 10, 10, 28, 12, 12, 40])
+               "https://spherity.github.io/business-wallet-requirements/requirements/" + r["req_id"].lower() + "/",
+               r.get("quote", ""), REV.get(r["req_id"], {}).get("priority", ""), j([f"{c} {CLU.get(c, '')}" for c in REV.get(r["req_id"], {}).get("clusters", [])]), REV.get(r["req_id"], {}).get("applicability", ""),
+               (REV.get(r["req_id"], {}).get("verdict", "") + (" " + str(REV[r["req_id"]]["verdict_arg"]) if REV.get(r["req_id"], {}).get("verdict_arg") else "")).strip(), REV.get(r["req_id"], {}).get("note", "")])
+HDR = ["ID", "Category", "Category name", "Title", "Requirement", "Rationale", "Sources", "Provenance", "Legal status", "Plane", "Perspectives", "Actors", "Verification method", "Status", "Reviewer", "Concepts", "Created", "Last verified", "URL", "Source extract", "Priority", "Clusters", "Applicability", "Review proposal", "Review note"]
+sheet(wb, "Requirements", HDR, rr, [14, 9, 22, 30, 60, 45, 45, 11, 12, 12, 16, 28, 14, 10, 10, 28, 12, 12, 40, 50, 9, 36, 16, 16, 40])
 sheet(wb, "Candidates", ["ID", "Ecosystem", "Category", "Statement", "Reference", "Source", "Verification", "Status"],
       [[c["id"], c["ecosystem"], c["category"], c["statement"], c["ref"], c["source"], c["verification"], c["status"]] for c in cand], [14, 18, 9, 70, 40, 22, 12, 11])
 sheet(wb, "Sources", ["ID", "Title", "Issuer", "Class", "Version", "Date", "URL", "Retrieved", "Verification", "Note"],

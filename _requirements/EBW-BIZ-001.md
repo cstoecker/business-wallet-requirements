@@ -25,4 +25,6 @@ concepts:
 created: '2026-10-03'
 last_verified: '2026-10-03'
 quote: public sector bodies shall enable economic operators to take the following actions
+full_quote: 'public sector bodies shall enable economic operators to take the following actions by using the core functionalities of European Business Wallets as set out in Article 5(1): (a) identify and authenticate; (b) sign or seal; (c) submit documents; (d) send or receive notifications.'
+fidelity_checked: '2026-10-03'
 ---

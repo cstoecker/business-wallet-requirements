@@ -24,4 +24,6 @@ concepts:
 created: '2026-10-03'
 last_verified: '2026-10-03'
 quote: wallet instances shall log all transactions with wallet-relying parties and other wallet units, including electronic signing and sealing.
+full_quote: Irrespective of whether or not a transaction is successfully completed, wallet instances shall log all transactions with wallet-relying parties and other wallet units, including electronic signing and sealing.
+fidelity_checked: '2026-10-03'
 ---

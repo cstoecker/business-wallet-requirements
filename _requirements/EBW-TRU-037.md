@@ -26,4 +26,6 @@ concepts:
 created: '2026-10-03'
 last_verified: '2026-10-03'
 quote: available through a single common application programming interface
+full_quote: Member States shall make the information set out in Annex I on registered wallet-relying parties publicly available online, both in human-readable form and in a form suitable for automated processing. ... shall be available through a single common application programming interface ('API') and through a national website. It shall be electronically signed or sealed by or on behalf of the registrar
+fidelity_checked: '2026-10-03'
 ---

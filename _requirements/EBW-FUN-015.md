@@ -24,4 +24,6 @@ concepts:
 created: '2026-10-03'
 last_verified: '2026-10-03'
 quote: conflicts of roles, over-delegation, or expired authorisations are automatically detected and prevented in real time
+full_quote: 'Providers of European Business Wallets shall also: ... (b) ensure that, for the purposes of the functionality referred to in Article 5(1), point (j): ... conflicts of roles, over-delegation, or expired authorisations are automatically detected and prevented in real time'
+fidelity_checked: '2026-10-03'
 ---

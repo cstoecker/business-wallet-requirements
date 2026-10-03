@@ -25,4 +25,6 @@ concepts:
 created: '2026-10-03'
 last_verified: '2026-10-03'
 quote: remotely, using an electronic identification means, which meets the requirements set out in Article 8 of Regulation (EU) No 910/2014
+full_quote: REQ-QERDS-5.2.1.1-01 The QERDSP shall verify with a very high level of confidence the identity of the recipient ... remotely, using an electronic identification means ... assurance level 'high', or by means of the European Digital Identity Wallet; REQ-QERDS-5.2.1.1-01A ... identity of the sender by appropriate means ... remotely, by means of the European Digital Identity Wallet
+fidelity_checked: '2026-10-03'
 ---
