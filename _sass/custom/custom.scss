@@ -79,7 +79,7 @@ form.contact .hp { position: absolute; left: -9999px; }
 .site-footer-extra a:hover, .site-footer-extra a:focus-visible { text-decoration: underline; text-underline-offset: 3px; }
 .site-footer-extra .sf-brand img { display: block; height: 2rem; width: auto; margin-bottom: 1rem; }
 .site-footer-extra .sf-brand p { max-width: 24rem; margin: 0 0 .75rem; }
-.site-footer-extra .sf-legal { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--sph-petrol-700); font-size: 14px; color: var(--sph-petrol-100); }
+.site-footer-extra .sf-legal { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--sph-petrol-700); font-size: 16px; color: var(--sph-petrol-100); }
 @media (max-width: 50rem) { .site-footer-extra { padding: 1.5rem 1rem; } .site-footer-extra .sf-grid { grid-template-columns: 1fr 1fr; } .site-footer-extra .sf-brand { grid-column: 1 / -1; } }
 
 // ---------- Requirements overview, status note, tables on small screens ----------
@@ -90,7 +90,7 @@ form.contact .hp { position: absolute; left: -9999px; }
 .cat-code { font-family: var(--sph-font-mono); font-size: 12px; letter-spacing: .06em; color: var(--sph-text-dim); }
 .cat-card strong { font-size: 1.1rem; color: var(--sph-text-strong); }
 .cat-scope { font-size: .95rem; }
-.cat-count { margin-top: auto; font-family: var(--sph-font-mono); font-size: 13px; color: var(--sph-text-strong); }
+.cat-count { margin-top: auto; font-family: var(--sph-font-mono); font-size: 16px; color: var(--sph-text-strong); }
 .req-filter { display: grid; grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr)); gap: .75rem; margin: 1rem 0; }
 .req-filter label { font-weight: 700; color: var(--sph-text-strong); display: flex; flex-direction: column; gap: .25rem; }
 .req-filter select, .req-filter input { padding: .55rem .7rem; border: 1px solid var(--sph-border-strong); border-radius: var(--sph-radius-compact); font: inherit; background: var(--sph-surface-card); }
@@ -108,7 +108,7 @@ tr[hidden] { display: none; }
   h1 { font-size: 28px; }
   h2 { font-size: 22px; }
   .main-content { padding-left: 1rem; padding-right: 1rem; }
-  .status-banner { font-size: 14px; }
+  .status-banner { font-size: 16px; }
   .main-content .concept-meta dl { display: block !important; }
   .main-content .concept-meta dt { display: block; margin-top: .6rem; text-align: left; float: none; width: auto; }
   .main-content .concept-meta dd { display: block; margin: 0; }
@@ -133,7 +133,7 @@ tr[hidden] { display: none; }
 .aux-nav { height: auto; }
 .aux-nav .aux-nav-list { flex-wrap: wrap; height: auto; }
 .status-banner { padding: .5rem 1rem; margin-bottom: .75rem; }
-.fig-hint { display: none; font-size: 14px; color: var(--sph-text-dim); margin: .25rem 0 0; }
+.fig-hint { display: none; font-size: 16px; color: var(--sph-text-dim); margin: .25rem 0 0; }
 @media (min-width: 50rem) { .main-header { padding-right: 1rem; } }
 
 // ======================= Icons (Untitled UI, outline, 1.5px, currentColor) =======================
@@ -189,7 +189,7 @@ tr[hidden] { display: none; }
 .main-content ul, .main-content ol { margin-bottom: 1rem; }
 .main-content h2 { margin-top: 2.5rem; padding-top: .5rem; }
 .main-content h2 .anchor-heading, .main-content h3 .anchor-heading { margin-left: .25rem; }
-.breadcrumb-nav { font-size: 14px; }
+.breadcrumb-nav { font-size: 16px; }
 table tbody tr:hover td { background: var(--sph-offwhite-300); }
 .toc-box { border: 1px solid var(--sph-border-hairline); border-top: 6px solid var(--sph-petrol-500); border-radius: var(--sph-radius-standard); background: var(--sph-surface-card); padding: .5rem 1.1rem; margin: 0 0 1.5rem; }
 .toc-box summary { cursor: pointer; font-weight: 700; color: var(--sph-text-strong); padding: .4rem 0; }
@@ -228,3 +228,6 @@ table tbody tr:hover td { background: var(--sph-offwhite-300); }
 .main-content-wrap .site-footer-extra h2, .site-footer-extra h2 { font-size: 12px !important; line-height: 1.4; margin-top: 0 !important; color: var(--sph-petrol-100); }
 .site-footer-extra li::before, .site-footer-extra ul li::marker { content: none; display: none; }
 .site-footer-extra li { padding-left: 0; }
+
+/* body text never below 16px (design hard rule) */
+.site-nav .nav-list-link, .site-nav .nav-list-link .nav-list-link, .aux-nav .site-button, .side-bar footer, .site-footer { font-size: 16px; }
