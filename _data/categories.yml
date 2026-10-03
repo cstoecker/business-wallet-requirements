@@ -54,6 +54,8 @@
   scope: 'Machine-readable and AI-processable data, agent protocols (MCP, A2A), verifiable agent identity and agent cards, mandates for agents, and AI governance.'
   plane: Control and data planes
   icon: code-browser
+  collection: true
+  collection_note: Collection category. Some of these requirements are also held in another category; those are marked "also covered" and link to the other one.
 - code: BIZ
   name: Business and adoption
   scope: Cost, onboarding effort, access for small firms, migration from existing solutions.

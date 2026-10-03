@@ -25,3 +25,7 @@ DEC-01 (formats and semantics), DEC-02 (employee wallet) and DEC-10 (agents, pro
 ## Categories versus clusters
 
 Categories (FUN, NFR, INT, TRU, CER, GOV, LEG, DAT, OPS, DOM, AIF, BIZ, CON, TRN) classify the *kind* of requirement and fix its ID. Clusters group requirements by the *architecture concern* they bear on, across categories. A requirement has one category and one to three clusters.
+
+## Collection categories
+
+AIF (AI-first and agent interoperability) is a collecting category. Requirements stay in it even where the same obligation is also held elsewhere (for example AI Act duties next to LEG-040 to LEG-044, or protocol-specific text next to a neutral requirement). The cross-references are in `_data/review/cross-references.yml` (relations also-covered-by, better-fit, profile-of), derived by `scripts/derive_cross_references.py` and shown on the requirement pages. The mechanism is generic: another category can be flagged `collection: true` and handled the same way.

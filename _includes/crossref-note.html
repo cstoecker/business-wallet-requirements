@@ -1,0 +1,7 @@
+{%- comment -%} Usage: include crossref-note.html id=ID . Prints a short "also covered" note for a requirement, in both directions. {%- endcomment -%}
+{%- assign shown = "" -%}
+{%- for x in site.data.review.cross-references -%}
+{%- if x.id == include.id -%}
+{%- if x.relation == "also-covered-by" -%}also covered in {% for t in x.targets %}<a href="{{ '/requirements/' | append: t | downcase | append: '/' | relative_url }}">{{ t }}</a>{% unless forloop.last %}, {% endunless %}{% endfor %}. {% elsif x.relation == "better-fit" -%}fits {{ x.home_category }} as well. {% elsif x.relation == "profile-of" -%}profile of {% for t in x.targets %}<a href="{{ '/requirements/' | append: t | downcase | append: '/' | relative_url }}">{{ t }}</a>{% unless forloop.last %}, {% endunless %}{% endfor %}. {% endif -%}
+{%- elsif x.targets contains include.id -%}also held in <a href="{{ '/requirements/' | append: x.id | downcase | append: '/' | relative_url }}">{{ x.id }}</a>. {% endif -%}
+{%- endfor -%}

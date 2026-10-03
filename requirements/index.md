@@ -27,6 +27,7 @@ Each requirement is atomic, technology-neutral and traced to a source. They are 
   <span class="cat-head">{% include icon.html name=c.icon size="lg" %}<span class="cat-code">{{ c.code }}</span></span>
   <strong>{{ c.name }}</strong>
   <span class="cat-scope">{{ c.scope }}</span>
+  {% if c.collection %}<span class="cat-scope"><em>Collection category: some requirements are also held in another category and are marked.</em></span>{% endif %}
   <span class="cat-count">{{ n }} requirement{% if n != 1 %}s{% endif %} · {{ k }} candidate{% if k != 1 %}s{% endif %}</span>
 </a>
 {% endfor %}
@@ -58,7 +59,7 @@ Each requirement is atomic, technology-neutral and traced to a source. They are 
 {% for r in rs %}
 <tr data-cat="{{ r.category }}" data-status="{{ r.status }}" data-prov="{{ r.provenance }}">
 <td><a href="{{ r.url | relative_url }}">{{ r.req_id }}</a></td>
-<td>{{ r.statement }}</td>
+<td>{{ r.statement }}{% capture xr %}{% include crossref-note.html id=r.req_id %}{% endcapture %}{% if xr != "" %}<br><span class="cat-code">{{ xr }}</span>{% endif %}</td>
 <td>{{ r.provenance }}</td>
 <td><span class="badge badge-{{ r.status }}">{{ r.status }}</span></td>
 <td>{{ r.legal_status }}</td>

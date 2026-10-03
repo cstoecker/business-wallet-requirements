@@ -14,6 +14,10 @@ Outputs live in `_data/review/requirement-review.yml` (generated) and are shown 
 3. **Fidelity pass against the full text** for items flagged broader-than-quote or derived-unmarked (the stored quote is truncated at 25 words, so the extract alone cannot prove or disprove overreach). Verifier agents read the clause in the original, then return `supported | overreach | derived | wrong-location` with a corrected statement and a longer verbatim passage. Apply with `python3 scripts/apply_fidelity.py F.yml` (updates statement, location, provenance, rationale, `full_quote`, `fidelity_checked`, `revision_note`).
 4. **Apply verdicts only after a human decides** merge, split, drop and recategorise (IDs are immutable; a recategorisation renames the file and the ID).
 
+## Collection categories and cross-references
+
+A category with `collection: true` in `_data/categories.yml` (today AIF) stays a collecting pool: requirements are not moved or merged out of it. Instead `python3 scripts/derive_cross_references.py [CATEGORY ...]` records, in `_data/review/cross-references.yml`, where the same obligation is also held: `also-covered-by` (review verdict merge-with, same source and location in another category, or a near-identical statement), `better-fit` (review verdict recategorise) and `profile-of` (a protocol-specific profile of a neutral requirement; added by hand with `source: manual`). Entries with `source: manual` survive regeneration. The requirement page, the requirements table, the Excel column "Also covered" and the category card show the marks. The same mechanism can be used for any other category later.
+
 ## Reading the results
 
 Counts per cluster and priority are on the review page; clusters with many P1 requirements and several plausible options become decisions (`ebw-decision-page` skill). Look for systematic issues: recitals phrased as duties, wrong duty-holders, protocol-specific text in a technology-neutral category, authority-side procedures rated P1.

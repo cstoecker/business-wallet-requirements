@@ -13,6 +13,9 @@ layout: default
 <dt>Verification</dt><dd>{{ page.verification_method }}</dd>
 <dt>Review</dt><dd>Reviewer: {{ page.reviewer }}{% if page.reviewed_on %} ({{ page.reviewed_on }}){% endif %}. Last verified: {{ page.last_verified }}. Analysis, not legal advice.{% if page.review_comment %} Reviewer comment: {{ page.review_comment }}{% endif %}</dd>
 </dl></div>
+{%- capture xref -%}{% include crossref-note.html id=page.req_id %}{%- endcapture -%}
+{%- assign catinfo = site.data.categories | where: "code", page.category | first -%}
+{% if xref != "" %}<div class="status-note" role="note"><strong>Also covered elsewhere.</strong> {{ xref }}{% if catinfo.collection %} This category is a collection; the requirement stays here.{% endif %}</div>{% endif %}
 <h2>Requirement</h2>
 <p class="req-statement">{{ page.statement }}</p>
 <h2>Rationale</h2>
