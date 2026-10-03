@@ -9,7 +9,7 @@ LX, GX, GW = 24, 250, 1330          # label x, grid x, grid width
 NQ = 17                              # Q4 2025 .. Q4 2029
 QW = GW / NQ
 def qx(i): return GX + i * QW        # i = quarters since start of Q4 2025 (float ok)
-PET, CY, OR, GR = "#023852", "#00B6BD", "#E8730C", "#445260"
+PET, CY, OR, GR = "#023852", "#00B6BD", "#023852", "#445260"
 out = []
 a = out.append
 a(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}" role="img" aria-labelledby="tm dm">')
