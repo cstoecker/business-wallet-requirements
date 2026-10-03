@@ -1,7 +1,7 @@
 ---
 title: What changed
 parent: Start here
-nav_order: 5
+nav_order: 4
 permalink: /changelog/
 description: "Public change log of the European Business Wallet Requirements site: new or changed laws, standards and ecosystem specifications that affect requirements, and changes to the site itself."
 keywords: [European Business Wallet changes, eIDAS updates, standards updates, change log]

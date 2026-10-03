@@ -30,6 +30,9 @@ nav_external_links:
     url: https://github.com/spherity/business-wallet-requirements/discussions
     opens_in_new_tab: true
 collections:
+  requirements:
+    output: true
+    permalink: /requirements/:name/
   figures:
     output: true
     permalink: /figures/:name/
@@ -39,3 +42,5 @@ defaults:
     values: {layout: default}
   - scope: {path: "", type: figures}
     values: {layout: figure}
+  - scope: {path: "", type: requirements}
+    values: {layout: requirement, nav_exclude: true, parent: Requirements}

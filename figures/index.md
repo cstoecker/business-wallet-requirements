@@ -1,7 +1,7 @@
 ---
 title: Figure gallery
 parent: Start here
-nav_order: 3
+nav_order: 9
 permalink: /figures/
 description: "All conceptual figures of the European Business Wallet Requirements site with captions, descriptions and download links (SVG and PNG, CC BY 4.0)."
 keywords: [European Business Wallet figures, concept model, trust plane diagram, requirements lifecycle diagram]

@@ -1,0 +1,36 @@
+# Recent developments shown on the home page (newest first). Official or ecosystem sources only. Added by people or by the weekly agent through a reviewed pull request.
+- date: '2026-07-21'
+  type: standard
+  title: EUDI ARF v3.0.0 published
+  summary: Version 3.0.0 of the EUDI Architecture and Reference Framework, chapter 6 describes the trust model.
+  source: SRC-ARF-TRUST
+- date: '2026-06-30'
+  type: ecosystem
+  title: Factory-X consortium project ended
+  summary: The Factory-X consortium project ended on 30 June 2026; collaboration continues in the Manufacturing-X community.
+  source: SRC-FX-HOME
+- date: '2026-06-11'
+  type: ecosystem
+  title: First data exchange between two energy data spaces
+  summary: dena Future Energy Lab, energy data-X and Fraunhofer IEE demonstrated aggregated smart-meter data exchange between Re4DE and energy data-X.
+  source: SRC-FEL-2026
+- date: '2026-06-09'
+  type: law
+  title: Council negotiating position on European Business Wallets announced
+  summary: Council press release of 9 June 2026; document ST 9684/26 of 2 June 2026. Not yet read by this project (to verify).
+  source: SRC-COUNCIL-ST-9684-26
+- date: '2025-11-19'
+  type: law
+  title: Commission proposes European Business Wallets
+  summary: Proposal COM(2025) 838 final with impact assessment SWD(2025) 837 and press release IP/25/2718.
+  source: SRC-EBW-PROPOSAL
+- date: 2025-11
+  type: standard
+  title: ETSI TS 119 602 V1.1.1 published
+  summary: Data model for lists of trusted entities; generalises TS 119 612.
+  source: SRC-ETSI-119602
+- date: 2025-08
+  type: standard
+  title: ETSI TS 119 612 V2.4.1 published
+  summary: Current version of the trusted lists specification found in the ETSI folder.
+  source: SRC-ETSI-119612

@@ -1,7 +1,7 @@
 ---
 title: Research and reading
 parent: Start here
-nav_order: 4
+nav_order: 3
 permalink: /research/
 description: "Reading list for the European Business Wallet Requirements site: the Open Identity Summit 2025 paper, related Spherity Research publications and background articles. Background reading is not a source of the requirements baseline."
 keywords: [European Business Wallet research, Spherity Research, Open Identity Summit 2025, reading list]

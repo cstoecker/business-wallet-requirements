@@ -16,7 +16,7 @@ ucs = load("_data/graph/usecases.yml"); reqs = load("_data/graph/ecosystem-requi
 for name, items in (("sources", sources), ("ecosystems", ecos), ("usecases", ucs), ("ecosystem-requirements", reqs), ("concepts", concepts)):
     ids = [x["id"] for x in items]
     for d in {i for i in ids if ids.count(i) > 1}: err(f"{name}: duplicate id {d}")
-sid = {s["id"] for s in sources}; eid = {e["id"] for e in ecos}; cid = {c["id"]: c for c in concepts}
+cid_all = {c["id"] for c in concepts}; sid = {s["id"] for s in sources}; eid = {e["id"] for e in ecos}; cid = {c["id"]: c for c in concepts}
 for e in ecos:
     for s in e.get("sources", []):
         if s not in sid: err(f"{e['id']}: unknown source {s}")
@@ -39,6 +39,24 @@ for b in cases:
     if not any(c["case"] == b["id"] for c in claims): err(f"{b['id']}: business case has no claims")
 for u in ucs:
     pass
+cats = {c["code"] for c in load("_data/categories.yml")}
+rdir = os.path.join(ROOT, "_requirements"); rids = []
+for f in sorted(os.listdir(rdir)) if os.path.isdir(rdir) else []:
+    t = open(os.path.join(rdir, f), encoding="utf-8").read(); m = re.match(r"---\n(.*?)\n---", t, re.S); r = yaml.safe_load(m.group(1)); rids.append(r["req_id"])
+    if f != r["req_id"] + ".md": err(f"requirement file {f} must be named {r['id']}.md")
+    if not re.fullmatch(r"EBW-[A-Z]{3}-\d{3}", r["req_id"]) or r["req_id"].split("-")[1] != r["category"]: err(f"{r['id']}: ID must be EBW-<CATEGORY>-<NNN> matching the category")
+    if r["category"] not in cats: err(f"{r['id']}: unknown category {r['category']}")
+    if " shall " not in " " + r["statement"] + " ": err(f"{r['id']}: statement must contain 'shall'")
+    if r["provenance"] not in ("L", "S", "D", "A"): err(f"{r['id']}: provenance must be L, S, D or A")
+    if r["status"] not in ("draft", "in-review", "agreed", "verified", "obsolete"): err(f"{r['id']}: bad status")
+    if r["status"] in ("agreed", "verified") and r.get("reviewer") in (None, "", "pending"): err(f"{r['id']}: agreed or verified requires a named reviewer")
+    if not r.get("sources") and r["provenance"] != "A": err(f"{r['id']}: needs at least one source unless provenance is A")
+    for x in r.get("sources", []):
+        if x["id"] not in sid: err(f"{r['id']}: unknown source {x['id']}")
+    for cc in r.get("concepts", []):
+        if cc not in cid_all: err(f"{r['id']}: unknown concept {cc}")
+    if r["legal_status"] == "proposal" and not any(x["id"] == "SRC-EBW-PROPOSAL" for x in r["sources"]): err(f"{r['id']}: legal_status proposal must cite the proposal")
+for d in {i for i in rids if rids.count(i) > 1}: err(f"requirements: duplicate id {d}")
 SECTIONS = ["Summary", "Definition", "Why it matters", "How it works", "Interaction flow", "Roles and responsibilities", "Related concepts",
             "Requirements and obligations", "Standards and specifications", "Design choices and alternatives", "Examples",
             "Open questions and limitations", "Terms introduced", "References", "Change log"]
@@ -94,6 +112,7 @@ for c in concepts:
 if "--report" in sys.argv:
     from collections import Counter
     print("Concept articles by status:", dict(Counter(c["status"] for c in concepts)))
+print(f"{len(rids)} requirements")
 print(f"{len(cases)} business cases, {len(claims)} claims")
 print(f"{len(concepts)} concepts, {len(figs)} figures, {len(sources)} sources checked")
 if errors:

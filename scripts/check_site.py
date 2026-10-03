@@ -94,6 +94,18 @@ for rel, d in pages:
 if os.environ.get("PREVIEW"):
     for rel, d in pages:
         pass
+xl = os.path.join(site, "assets", "downloads", "ebw-requirements.xlsx")
+if not os.path.exists(xl): errors.append("downloads: ebw-requirements.xlsx missing (run scripts/build_downloads.py before the build)")
+else:
+    try:
+        import openpyxl
+        wb = openpyxl.load_workbook(xl, read_only=True); n = wb["Requirements"].max_row - 1
+        reqs = [r for r, _ in pages if r.startswith("requirements/") and r not in ("requirements/index.html", "requirements/methodology.html") and not r.endswith("methodology/index.html") and r != "requirements/index.html"]
+        reqs = [r for r in reqs if re.search(r"ebw-[a-z]{3}-\d{3}", r)]
+        if n != len(reqs): errors.append(f"downloads: Excel has {n} requirements but the site has {len(reqs)} requirement pages")
+        for need in ("Candidates", "Sources", "Claims", "Concepts", "Categories"):
+            if need not in wb.sheetnames: errors.append(f"downloads: Excel lacks sheet {need}")
+    except ImportError: print("WARN openpyxl not installed; Excel consistency not checked")
 print(f"{len(pages)} pages checked")
 if errors: print("\n".join("ERROR " + e for e in errors)); sys.exit(1)
 print("OK")

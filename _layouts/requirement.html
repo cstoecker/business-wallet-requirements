@@ -1,0 +1,27 @@
+---
+layout: default
+---
+<span class="badge badge-{{ page.status }}">{{ page.status }}</span>
+<h1>{{ page.req_id }}: {{ page.title }}</h1>
+{%- assign cat = site.data.categories | where: "code", page.category | first -%}
+<div class="concept-meta"><dl>
+<dt>Category</dt><dd>{{ page.category }}, {{ cat.name }}</dd>
+<dt>Provenance</dt><dd>{{ page.provenance }}{% if page.provenance == "L" %} (law){% elsif page.provenance == "S" %} (standard or specification){% elsif page.provenance == "D" %} (derived){% else %} (assumption){% endif %}; legal status: {{ page.legal_status }}</dd>
+<dt>Plane</dt><dd>{{ page.plane }}</dd>
+<dt>Perspectives</dt><dd>{{ page.perspectives | join: ", " }}</dd>
+<dt>Actors</dt><dd>{{ page.actors | join: ", " }}</dd>
+<dt>Verification</dt><dd>{{ page.verification_method }}</dd>
+<dt>Review</dt><dd>Reviewer: {{ page.reviewer }}. Last verified: {{ page.last_verified }}. Analysis, not legal advice.</dd>
+</dl></div>
+<h2>Requirement</h2>
+<p class="req-statement">{{ page.statement }}</p>
+<h2>Rationale</h2>
+<p>{{ page.rationale }}</p>
+<h2>Sources</h2>
+<ul>{% for s in page.sources %}{% assign src = site.data.graph.sources | where: "id", s.id | first %}<li><a href="{{ src.url }}">{{ src.title }}</a> ({{ src.version }}{{ src.date }}), {{ s.location }}. <code>{{ s.id }}</code></li>{% endfor %}</ul>
+{%- if page.legal_status == "proposal" %}<p><strong>Proposal text.</strong> This requirement follows the Commission proposal COM(2025) 838 and may change during the legislative procedure.</p>{% endif %}
+<h2>Related concepts</h2>
+<p>{% for rid in page.concepts %}{% include concept-ref.html id=rid %} {% endfor %}</p>
+<h2>Status and history</h2>
+<table><thead><tr><th>Date</th><th>Change</th><th>Reviewer</th></tr></thead><tbody><tr><td>{{ page.created }}</td><td>Draft derived from the cited source; not yet reviewed</td><td>{{ page.reviewer }}</td></tr></tbody></table>
+<p><a href="{{ '/downloads/' | relative_url }}">Download all requirements (Excel)</a> · <a href="{{ '/requirements/' | relative_url }}">All requirements</a></p>
