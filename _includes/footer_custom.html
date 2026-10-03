@@ -61,6 +61,38 @@
   // mark the current page in the navigation
   var here = location.pathname.replace(/index\.html$/, "");
   document.querySelectorAll(".nav-list-link").forEach(function (a) { try { var u = new URL(a.href, location.href); if (u.origin === location.origin && u.pathname.replace(/index\.html$/, "") === here) { a.setAttribute("aria-current", "page"); } } catch (e) {} });
+  // desktop: sub-pages open as a flyout on hover or focus instead of expanding inside the sidebar
+  (function () {
+    var mq = window.matchMedia("(min-width: 50rem)"), side = document.querySelector(".side-bar"), fly, hideT, showT, cur;
+    if (!side) return;
+    function close() { clearTimeout(showT); if (fly) { fly.remove(); fly = null; } cur = null; }
+    function open(li) {
+      if (!mq.matches || cur === li) return;
+      var sub = li.querySelector(":scope > .nav-list"); if (!sub) return;
+      close(); cur = li;
+      fly = document.createElement("nav"); fly.className = "nav-flyout"; fly.setAttribute("aria-label", li.querySelector(":scope > .nav-list-link").textContent.trim());
+      var ul = document.createElement("ul"); ul.className = "nav-list";
+      sub.querySelectorAll(":scope > .nav-list-item").forEach(function (item) {
+        var a = item.querySelector(":scope > .nav-list-link"); if (!a) return;
+        var c = a.cloneNode(true); c.removeAttribute("title"); var e = document.createElement("li"); e.appendChild(c); ul.appendChild(e);
+      });
+      fly.appendChild(ul); document.body.appendChild(fly);
+      var r = side.getBoundingClientRect(), lr = li.getBoundingClientRect(), h = fly.offsetHeight;
+      fly.style.left = r.right + "px"; fly.style.top = Math.max(8, Math.min(lr.top, window.innerHeight - h - 8)) + "px";
+      fly.addEventListener("mouseenter", function () { clearTimeout(hideT); });
+      fly.addEventListener("mouseleave", function () { hideT = setTimeout(close, 160); });
+      fly.addEventListener("focusout", function (ev) { if (!fly || !fly.contains(ev.relatedTarget)) hideT = setTimeout(close, 160); });
+    }
+    side.querySelectorAll(".nav-list > .nav-list-item").forEach(function (li) {
+      if (!li.querySelector(":scope > .nav-list")) return;
+      li.addEventListener("mouseenter", function () { clearTimeout(hideT); clearTimeout(showT); showT = setTimeout(function () { open(li); }, 140); });
+      li.addEventListener("mouseleave", function () { clearTimeout(showT); hideT = setTimeout(close, 160); });
+      li.addEventListener("focusin", function () { open(li); });
+    });
+    side.addEventListener("mouseenter", function (e) { if (!e.target.closest || true) clearTimeout(hideT); });
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape") close(); });
+    window.addEventListener("scroll", close, true); window.addEventListener("resize", close);
+  })();
   // collapse toggle
   var header = document.querySelector(".site-header");
   if (header && !header.querySelector(".nav-toggle")) {
