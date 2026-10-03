@@ -1,6 +1,11 @@
 # Public change log (what changed in laws, standards, ecosystems and on this site). Newest first.
 # Entries are added by people or by the weekly agent through a reviewed pull request. type: law | standard | ecosystem | site
 - date: "2026-10-03"
+  type: ecosystem
+  title: "40 cross-jurisdiction requirements added from Catena-X standards"
+  summary: "Identification of business partners (BPN), registration and onboarding, country rules and company certificates from CX-0006, CX-0009, CX-0010, CX-0050, CX-0076, CX-0135, CX-0149, CX-0152 and CX-0167 (Neptune preview). Several conflict with the EBW scope (single issuing organisation, BPNL only for capital companies, undefined identity proofing); they are tagged for review in cluster K17."
+  sources: [SRC-CX-0010, SRC-CX-0050, SRC-CX-0006, SRC-CX-0009, SRC-CX-0076, SRC-CX-0135, SRC-CX-0149, SRC-CX-0152]
+- date: "2026-10-03"
   type: site
   title: "199 draft requirements added from official sources"
   summary: "Derived from the Commission proposal COM(2025) 838, the consolidated eIDAS Regulation, the EUDI Wallet implementing regulations and the ARF high-level requirements, and horizontal law (GDPR, NIS2, DORA, CRA, AI Act, Data Act). Each requirement has a verbatim source extract, a category and a provenance class. None has been reviewed by a named person yet; the AI Act and DORA entries are derivations (class D)."

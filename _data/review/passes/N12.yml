@@ -1,0 +1,463 @@
+- id: EBW-CER-020
+  fidelity: ok
+  verdict: ok
+  applicability: authority-side
+  priority: P3
+  priority_reason: Onboarding check by Catena-X authority; ecosystem-specific
+  clusters:
+  - K14
+  - K17
+  verification_ready: 'yes'
+  note: CX-Neptune preview, not certifiable. Duty-holder is CSP-B; EBW analogue is the provider verifying conformity of a role claim. Statement carries the source's 'where applicable'; testability needs the role list.
+- id: EBW-CER-021
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P3
+  priority_reason: Certificate-to-site binding; ecosystem-specific, BPNS/BPNA are CX identifiers
+  clusters:
+  - K14
+  - K06
+  - K17
+  verification_ready: needs-source-check (quote covers only the MUST clause on BPNS/BPNA)
+  note: Depends on BPN site/address levels that EBW does not have; would need an EBW equivalent (e.g. LEI/EUID plus address). Do not adopt BPNS/BPNA as EBW terms.
+- id: EBW-DAT-024
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P2
+  priority_reason: Ties identifier to validated record; analogue of register-backed identification
+  clusters:
+  - K17
+  - K06
+  verification_ready: 'yes'
+  note: 'CX-Neptune preview, not certifiable. Related: EBW-DAT-003 (BPN credential), DAT-004 (stable BPN). In EBW the primary identifier comes from a register (EUID), not from a Golden Record.'
+- id: EBW-DAT-025
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P2
+  priority_reason: Minimum legal-entity attributes; compare with LPID attributes
+  clusters:
+  - K06
+  - K17
+  verification_ready: 'yes'
+  note: 'Cross-reference: EU legal person identification data (name, legal form, address) requirements in the LEG/DAT categories.'
+- id: EBW-DAT-026
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P1
+  priority_reason: Defines secondary identifier anchored to legally secure identifier; shapes the identifier model
+  clusters:
+  - K17
+  - K06
+  verification_ready: 'yes'
+  note: Shared basis for DAT-027..031. Secondary identifier derived from legal identifier; supports EUID/LEI mapping in DEC-11.
+- id: EBW-DAT-027
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P2
+  priority_reason: First step of ordered rule; local to BPN issuance
+  clusters:
+  - K17
+  - K06
+  verification_ready: 'yes'
+  note: Steps DAT-027..030 form one ordered rule (VAT, TIN, national register, international). EBW places the national register (EUID) first, so the order conflicts with EBW; keep as comparison input.
+- id: EBW-DAT-028
+  fidelity: ok
+  verdict: merge-with:EBW-DAT-027
+  applicability: provider-side
+  priority: P2
+  priority_reason: TIN second step of the same ordered rule; local to BPN issuance
+  clusters:
+  - K17
+  - K06
+  verification_ready: 'yes'
+  note: Same ordered rule as DAT-027; merge or keep as step.
+- id: EBW-DAT-029
+  fidelity: ok
+  verdict: merge-with:EBW-DAT-027
+  applicability: provider-side
+  priority: P2
+  priority_reason: national register third step of the same ordered rule; local to BPN issuance
+  clusters:
+  - K17
+  - K06
+  verification_ready: 'yes'
+  note: Propose merging DAT-027..030 into one ordered rule requirement (or keep as steps under DAT-027). Note LEI/EORI are last resort in CX, whereas EBW treats LEI as a secondary identifier.
+- id: EBW-DAT-030
+  fidelity: ok
+  verdict: merge-with:EBW-DAT-027
+  applicability: provider-side
+  priority: P2
+  priority_reason: international identifier last step of the same ordered rule; local to BPN issuance
+  clusters:
+  - K17
+  - K06
+  verification_ready: 'yes'
+  note: Same ordered rule as DAT-027; merge or keep as step.
+- id: EBW-DAT-031
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P2
+  priority_reason: Closing rule of ordered identifier selection; no identifier means no BPNL
+  clusters:
+  - K17
+  - K06
+  verification_ready: 'yes'
+  note: 'Conflicts with EBW scope: entities without VAT, TIN, register or international identifier cannot hold a BPNL, whereas EBW must cover all legal persons.'
+- id: EBW-DAT-032
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P1
+  priority_reason: 'Scope limit: BPNL only for capital companies conflicts with EBW coverage of all legal persons; shapes cross-jurisdiction design'
+  clusters:
+  - K17
+  - K06
+  - K15
+  verification_ready: needs-legal-review
+  note: 'Conflict flag: EBW covers all legal persons and public bodies; CX leaves partnerships, sole proprietorships, associations and public bodies optional. Rationale text (other forms optional) is from elsewhere in CX-0010, not the quote. Keep as ecosystem-constraint input for DEC-11.'
+- id: EBW-DAT-033
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P2
+  priority_reason: Historical resolvability of inactive entities; standard-derived
+  clusters:
+  - K06
+  - K17
+  - K10
+  verification_ready: 'yes'
+  note: 'Overlaps EBW-DAT-004 (BPN never ceases to exist, never reassigned): cross-reference, partial duplicate.'
+- id: EBW-DAT-034
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P3
+  priority_reason: Country-specific exclusion; local to identifier selection
+  clusters:
+  - K17
+  - K06
+  verification_ready: 'yes'
+  note: Quote 'these countries' refers to a country list not in the statement; restate the list when verifying.
+- id: EBW-DAT-035
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P2
+  priority_reason: Latin-script names affect non-EU interoperability and matching
+  clusters:
+  - K17
+  - K06
+  - K01
+  verification_ready: 'yes'
+  note: Cross-reference EBW-DAT-040 if needed; the EBW should additionally preserve original-script names (script variants are non-normative in CX-0074).
+- id: EBW-DAT-036
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P3
+  priority_reason: Golden Record process control; local to CX
+  clusters:
+  - K06
+  - K17
+  verification_ready: 'yes'
+  note: 'Related: GOV-048 (CSP-B checks participant not already onboarded). Cross-reference EBW-GOV-048.'
+- id: EBW-DAT-037
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P2
+  priority_reason: Legal form code aligned with LEI ELF; useful bridge for EBW LPID
+  clusters:
+  - K17
+  - K06
+  - K01
+  verification_ready: 'yes'
+  note: Compatible with EBW use of ISO 20275 ELF for legal form; candidate common code list.
+- id: EBW-DAT-038
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P2
+  priority_reason: Register match decides legal-entity status; authentic-source principle
+  clusters:
+  - K06
+  - K17
+  - K05
+  verification_ready: 'yes'
+  note: Quote adds 'equivalent official register'; consistent with EBW authentic sources. Cross-reference DAT-039.
+- id: EBW-DAT-039
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P3
+  priority_reason: Syntax and register check of tax number; local validation step
+  clusters:
+  - K06
+  - K17
+  verification_ready: 'yes'
+- id: EBW-DAT-040
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P3
+  priority_reason: Format-only check of other identifiers; clarifies LEI is not verified against its issuer
+  clusters:
+  - K17
+  - K06
+  verification_ready: 'yes'
+  note: Shows LEI is not authenticated against GLEIF in CX; EBW should require issuer verification for secondary identifiers where claimed as legally secure.
+- id: EBW-DOM-024
+  fidelity: broader-than-quote
+  verdict: ok
+  applicability: provider-side
+  priority: P2
+  priority_reason: Geographic scope of mandatory identifier issuance; matters for non-EU interoperability
+  clusters:
+  - K17
+  - K15
+  verification_ready: needs-source-check (Northern Ireland not in truncated quote; rationale on optional issuance elsewhere)
+  note: Research confirms Northern Ireland in CX-0010; the 25-word quote ends at Norway. Add full_quote in fidelity pass. Non-listed countries optional, so non-European partners lack a guaranteed identifier.
+- id: EBW-DOM-025
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P3
+  priority_reason: Country rule table detail; tax number requirement with local-law exception
+  clusters:
+  - K17
+  - K06
+  verification_ready: needs-source-check (country list in Table 2 not in statement)
+  note: Cross-reference DAT-028/DAT-039. Table 2 not extracted per country; separate pass needed.
+- id: EBW-DOM-026
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P3
+  priority_reason: Sub-national tax code for BR, CA, US; peripheral to EU wallet
+  clusters:
+  - K17
+  - K06
+  verification_ready: 'yes'
+  note: Outside EU scope; relevant only for non-EU partner interaction. Quote includes the 'US(PR)' country notation.
+- id: EBW-GOV-046
+  fidelity: broader-than-quote
+  verdict: ok
+  applicability: provider-side
+  priority: P3
+  priority_reason: Scope exclusion of natural persons from BPN; peripheral
+  clusters:
+  - K17
+  - K06
+  - K02
+  verification_ready: needs-source-check (quote truncated before the list of excluded entities; title mentions hierarchy elements but statement only natural persons)
+  note: 'Title says ''or hierarchy elements'' while the statement covers only natural persons acting for a legal entity: fix title or statement. Aligns with EBW distinction of legal person subject versus natural-person representative (K02).'
+- id: EBW-GOV-047
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P2
+  priority_reason: Country as entry point of jurisdiction rules at onboarding
+  clusters:
+  - K17
+  - K06
+  - K03
+  verification_ready: 'yes'
+  note: Duty-holder is the onboarding service provider (OSP); EBW analogue is the provider capturing legal-address country.
+- id: EBW-GOV-048
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P3
+  priority_reason: Duplicate-onboarding check; local
+  clusters:
+  - K06
+  - K17
+  verification_ready: 'yes'
+  note: Cross-reference DAT-036 (de-duplication).
+- id: EBW-INT-084
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P1
+  priority_reason: Registers BPN as ISO/IEC 6523 scheme; bridge to EUID, LEI and EBWOID
+  clusters:
+  - K17
+  - K06
+  - K08
+  verification_ready: 'yes'
+  note: CX-Neptune preview, not certifiable. Cross-reference EBW-INT-060 (EUID compliant with ISO 6523). Rationale 'restricts issuance to one issuing organisation' is not in quote and conflicts with EBW multi-register and multi-provider model.
+- id: EBW-INT-085
+  fidelity: ok
+  verdict: ok
+  applicability: wallet-general
+  priority: P2
+  priority_reason: Wallet identifier method; EBW must decide did:web versus other methods
+  clusters:
+  - K08
+  - K06
+  - K17
+  verification_ready: 'yes'
+  note: 'Conflict: did:web binds identity to a web domain, not to a legal register entry; EBW identity proofing binds to legal person data. Flag for DEC-11 and DEC-03.'
+- id: EBW-INT-086
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P2
+  priority_reason: Directory mapping BPNL to DID at single authority; shapes identifier directory
+  clusters:
+  - K06
+  - K17
+  - K05
+  verification_ready: needs-source-check (CX-0167 absent from stable release)
+  note: Single authority conflicts with EBW multi-provider model. CX-0167 only in preview.
+- id: EBW-INT-087
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P3
+  priority_reason: Limits resolution to onboarded entities; local to service
+  clusters:
+  - K06
+  - K17
+  - K05
+  verification_ready: 'yes'
+  note: Quote spells 'entites'; consider merging with INT-086 as one service requirement.
+- id: EBW-TRU-147
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P1
+  priority_reason: Identity proofing of legal entity at onboarding is trust-anchor core; assurance level unspecified
+  clusters:
+  - K17
+  - K14
+  - K06
+  verification_ready: needs-source-check (referenced identity-proofing standard is placeholder CX-XXXX, assurance level unspecified)
+  note: 'Gap: no level of assurance stated; cannot be mapped to eIDAS LoA. Not verifiable as written. Cross-reference EBW-TRU-084 (LoA high legal person registration), TRU-015, TRU-114.'
+- id: EBW-TRU-148
+  fidelity: ok
+  verdict: ok
+  applicability: wallet-general
+  priority: P2
+  priority_reason: Every participant needs a compliant wallet; local ecosystem rule
+  clusters:
+  - K15
+  - K04
+  - K17
+  verification_ready: 'yes'
+  note: Overlaps TRU-151 (any wallet in the data space compliant). See TRU-151.
+- id: EBW-TRU-149
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P2
+  priority_reason: Ecosystem authority issues three credentials; single trust anchor
+  clusters:
+  - K07
+  - K05
+  - K17
+  verification_ready: 'yes'
+  note: 'Related: DAT-003. Single issuer model conflicts with multi-issuer EBW trust list approach.'
+- id: EBW-TRU-150
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P3
+  priority_reason: External clearing house as additional trust anchor; Gaia-X specific
+  clusters:
+  - K05
+  - K17
+  - K08
+  verification_ready: 'yes'
+  note: CX-Neptune preview, not certifiable. CX-0009 fast-track; not certifiable. Statement is an interface capability, not a trust requirement.
+- id: EBW-TRU-151
+  fidelity: ok
+  verdict: merge-with:EBW-TRU-148
+  applicability: wallet-general
+  priority: P3
+  priority_reason: Near-duplicate of TRU-148; wallet compliance applies to all participants
+  clusters:
+  - K15
+  - K04
+  verification_ready: 'yes'
+  note: Same obligation as TRU-148 (wallet compliant with CX-0149) from different section; merge or cross-reference.
+- id: EBW-TRU-152
+  fidelity: derived-unmarked
+  verdict: reword
+  applicability: provider-side
+  priority: P2
+  priority_reason: Issuer delegation is the ecosystem trust-anchor model
+  clusters:
+  - K05
+  - K07
+  - K17
+  verification_ready: needs-source-check (quote is a descriptive sentence, no MUST; derivation unmarked)
+  corrected_statement: The core service provider, or an issuer assigned by it, issues the Membership Credential to the participant.
+  note: Source sentence states fact in a normative section; the 'shall' is a derivation per the research note. Mark as derived in fidelity pass.
+- id: EBW-TRU-153
+  fidelity: broader-than-quote
+  verdict: reword
+  applicability: relying-party-side
+  priority: P2
+  priority_reason: Trusted-issuer check gates directory access; trust definition missing
+  clusters:
+  - K05
+  - K07
+  - K17
+  verification_ready: needs-source-check (quote gives 'e.g.' list; who is a trusted issuer undefined)
+  corrected_statement: The BPN-DID resolution service shall check the validity of the provided Membership Credential, for example correct type, not expired, not revoked and properly signed by a trusted issuer, and shall deny access if the check fails.
+  note: 'Quote lists checks as examples (''e.g.''); statement makes them exhaustive. Also: trusted issuer undefined, no cross-jurisdiction trust list. Cross-reference EBW trust-list requirements.'
+- id: EBW-TRU-154
+  fidelity: ok
+  verdict: ok
+  applicability: relying-party-side
+  priority: P3
+  priority_reason: Token scope detail for catalogue request; protocol-specific
+  clusters:
+  - K08
+  - K17
+  - K05
+  verification_ready: 'yes'
+  note: Protocol-specific (CX-0018, CX-0050); not neutral. Consider profile-of cross-reference.
+- id: EBW-TRU-155
+  fidelity: ok
+  verdict: ok
+  applicability: relying-party-side
+  priority: P2
+  priority_reason: Partner access control by issuer-attested identifiers; ties BPN to access policy
+  clusters:
+  - K05
+  - K17
+  - K09
+  verification_ready: 'yes'
+  note: Quote ends 'via the MembershipCredential or the BpnCredential' as in statement; consider access-policy cluster K08.
+- id: EBW-TRU-156
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P1
+  priority_reason: Verified power of attorney between legal entities before relation is recorded; delegation between organisations
+  clusters:
+  - K03
+  - K17
+  - K06
+  verification_ready: needs-source-check (verification method left to Catena-X association)
+  note: 'Cross-reference EBW-GOV-027/representation and mandate requirements (K03). Verification method unspecified in source: not testable beyond the order of steps.'
+- id: EBW-TRU-157
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P3
+  priority_reason: Data-quality confidence score; assurance analogue but not an eIDAS level of assurance
+  clusters:
+  - K14
+  - K17
+  - K06
+  verification_ready: 'yes'
+  note: Scores 1/3/5 points; do not equate with LoA. Cross-reference EBW-TRU-084 for the eIDAS notion.
