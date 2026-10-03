@@ -29,7 +29,7 @@ Deliver a public Jekyll site (see doc 01) with a **requirements baseline v1.0** 
 - **Position papers** (DIGITALEUROPE, CNUE/Notaries, Bitkom, iGrant.io, Yivi, others): read for context only. **Not** registered as graph sources (see source rule below).
 - **Legal-person identity ecosystem:** LPID, EUID/BRIS, e-CODEX, Once-Only Technical System, Peppol/eDelivery AS4, ERDS (eIDAS Regulation Ch. III Sec. 7), company-law digitalisation directives.
 
-**Source rule (decided 2026-10-03):** the source register, obligation register and knowledge graph contain **only** official sources (EU legal and policy documents, ARF, standards and specifications of recognised bodies) **plus** the paper *Towards the European Business Wallet* (OID 2025, DOI 10.18420/oid2025_09). Everything else in R2 is background reading, kept in a separate non-normative reading list.
+**Source rule (decided 2026-10-03):** the source register, obligation register and knowledge graph contain **only** official sources (EU legal and policy documents, ARF, standards and specifications of recognised bodies, and ecosystem specifications from IDTA, Catena-X, Gaia-X and the WE BUILD consortium: blueprint, ADRs, rulebooks) **plus** the paper *Towards the European Business Wallet* (OID 2025, DOI 10.18420/oid2025_09). Everything else in R2 is background reading, kept in a separate non-normative reading list.
 
 ### R2 — Author & network publications (background reading only; not graph sources, except the OID 2025 paper)
 - **Carsten Stöcker (cstoecker):** GitHub public repos ✅ found: `Trusted-AI-from-a-Supply-Chain-Perspective` (KYA, AI BOM, Data Cards, TEVV, AISP, PoA, A2A — Catena-X Trusted AI WG), `chem-x`, `Project-Julius`; private `dpp-systems-staging` (not accessible/not to be used publicly without permission). Full read of public repos required — **access to these repos must be added to the session** (currently scoped to this repo only).
@@ -141,7 +141,7 @@ Critical path: legislative text moves (trilogue) → re-baseline obligations. Mi
 5. **Licence:** CC BY 4.0 for content — still to confirm.
 6. ~~Scope boundary~~ **Resolved:** European Business Wallet **plus** the EUDI wallet interface, interactions and workflows (first-class, not a footnote).
 7. ~~MiFIT~~ **Resolved:** MiFID II/MiFIR (given as an example only).
-8. ~~Sources in traceability/graph~~ **Resolved:** official sources plus the OID 2025 paper only (source rule in R1).
+8. ~~Sources in traceability/graph~~ **Resolved:** official sources, ecosystem specifications (IDTA, Catena-X, Gaia-X, WE BUILD) and the OID 2025 paper only (source rule in R1).
 9. **Effort/resourcing:** one lead with AI-assisted research, or also named domain stewards (reviewers owning IDTA/AAS, DPP, data space, pharma, automotive, legal)? Drives the timeline above.
 
 ## 7. Risks
