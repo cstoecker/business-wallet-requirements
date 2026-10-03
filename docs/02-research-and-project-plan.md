@@ -29,6 +29,8 @@ Deliver a public Jekyll site (see doc 01) with a **requirements baseline v1.0** 
 - **Position papers** (DIGITALEUROPE, CNUE/Notaries, Bitkom, iGrant.io, Yivi, others): read for context only. **Not** registered as graph sources (see source rule below).
 - **Legal-person identity ecosystem:** LPID, EUID/BRIS, e-CODEX, Once-Only Technical System, Peppol/eDelivery AS4, ERDS (eIDAS Regulation Ch. III Sec. 7), company-law digitalisation directives.
 
+**Scope of ecosystem sources:** from AAS/IDTA, Catena-X and IDSA only high-level requirements are taken (e.g. DCP/DSP for data-space connector integration), not implementations. AAS is evaluated separately as an implementation artefact in an architecture ADR (doc 01 §4, alternative 7); it is not a requirements source.
+
 **Source rule (decided 2026-10-03):** the source register, obligation register and knowledge graph contain **only** official sources (EU legal and policy documents, ARF, standards and specifications of recognised bodies, and ecosystem specifications from IDTA, Catena-X, Gaia-X and the WE BUILD consortium: blueprint, ADRs, rulebooks) **plus** the paper *Towards the European Business Wallet* (OID 2025, DOI 10.18420/oid2025_09). Everything else in R2 is background reading, kept in a separate non-normative reading list.
 
 ### R2 — Author & network publications (background reading only; not graph sources, except the OID 2025 paper)
