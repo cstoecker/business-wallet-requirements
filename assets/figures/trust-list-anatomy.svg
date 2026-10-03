@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1260 640" width="1260" height="640" role="img" aria-labelledby="t5 d5">
+  <title id="t5">Anatomy of a trusted list and who uses it</title>
+  <desc id="d5">A signed trusted list has three parts: scheme information, a list of providers with their services, and a digital signature. Each service carries a type, a digital identity used as trust anchor, a current status with start time and a history. A scheme operator publishes the list; relying parties read it.</desc>
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"><rdf:RDF><cc:Work rdf:about=""><dc:title>Anatomy of a trusted list and who uses it</dc:title><dc:description>A signed trusted list has three parts: scheme information, a list of providers with their services, and a digital signature. Each service carries a type, a digital identity used as trust anchor, a current status with start time and a history. A scheme operator publishes the list; relying parties read it.</dc:description><dc:creator>European Business Wallet Requirements project</dc:creator><dc:subject>trusted list; ETSI TS 119 612; trust anchor; service status; European Business Wallet</dc:subject><dc:language>en</dc:language><dc:format>image/svg+xml</dc:format><dc:rights>CC BY 4.0</dc:rights><cc:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/></cc:Work></rdf:RDF></metadata>
+  <defs>
+    <marker id="ah" viewBox="0 0 12 12" markerWidth="10" markerHeight="10" refX="10" refY="6" orient="auto"><path d="M1,1 L10,6 L1,11" fill="none" stroke="#023852" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></marker>
+    <style>
+      text{font-family:Archivo,Arial,sans-serif}
+      .bx{fill:#FFFFFE;stroke:#023852;stroke-width:2}
+      .sig{fill:#2BFEBB;stroke:#023852;stroke-width:2}
+      .big{fill:#023852;stroke:#023852;stroke-width:2}
+      .t{font-size:17px;font-weight:600;fill:#023852;text-anchor:middle}
+      .tw{font-size:17px;font-weight:600;fill:#F4F2EE;text-anchor:middle}
+      .li{font-size:16px;fill:#253746}
+      .lab{font-size:16px;fill:#253746;text-anchor:middle}
+      .arr{fill:none;stroke:#023852;stroke-width:2.2;stroke-linecap:round}
+      .grp{fill:none;stroke:#C9C7C2;stroke-width:2}
+      .gt{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:13px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;fill:#445260}
+      .wbg{fill:#F4F2EE}
+    </style>
+  </defs>
+  <rect width="1260" height="640" fill="#F4F2EE"/>
+<rect class="grp" x="20" y="70" width="190" height="500" rx="16"/><text class="gt" x="115" y="98" text-anchor="middle">Publisher</text>
+<rect class="grp" x="260" y="70" width="740" height="500" rx="16"/><text class="gt" x="630" y="98" text-anchor="middle">Signed trusted list (XML)</text>
+<rect class="grp" x="1050" y="70" width="190" height="500" rx="16"/><text class="gt" x="1145" y="98" text-anchor="middle">Relying party</text>
+<rect class="bx" x="40" y="200" width="150" height="90" rx="12"/><text class="t" x="115" y="236" >Scheme</text><text class="t" x="115" y="260">operator</text>
+<rect class="bx" x="285" y="120" width="690" height="130" rx="12"/><text class="t" x="630" y="148">Scheme information</text><text class="li" x="310" y="178">Operator, territory, list type, sequence number</text><text class="li" x="310" y="202">Issue date and next update</text><text class="li" x="310" y="226">Pointers to other lists, distribution points</text>
+<rect class="bx" x="285" y="270" width="690" height="190" rx="12"/><text class="t" x="630" y="298">Providers and their services</text><text class="li" x="310" y="328">Provider: name, address</text><text class="li" x="310" y="352">Service: type identifier, name</text><text class="li" x="310" y="376">Service digital identity (the trust anchor)</text><text class="li" x="310" y="400">Current status and status starting time</text><text class="li" x="310" y="424">Service history: earlier statuses, newest first</text>
+<rect class="sig" x="285" y="480" width="690" height="64" rx="12"/><text class="t" x="630" y="519">Digital signature of the scheme operator</text>
+<rect class="big" x="1070" y="240" width="150" height="110" rx="12"/><text class="tw" x="1145" y="284">Validates</text><text class="tw" x="1145" y="308">signature, status</text><text class="tw" x="1145" y="332">and chain</text>
+<path class="arr" d="M190,245 H255" marker-end="url(#ah)"/><text class="lab" x="222" y="232">Signs</text>
+<path class="arr" d="M1045,295 H1000" marker-end="url(#ah)"/><text class="lab" x="1022" y="282">Reads</text>
+</svg>

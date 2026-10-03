@@ -252,7 +252,7 @@
   slug: trust-list
   title: Trust list
   group: Trust
-  status: planned
+  status: draft
   requirement_categories:
   - TRU
   - GOV

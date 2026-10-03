@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1260 520" width="1260" height="520" role="img" aria-labelledby="t6 d6">
+  <title id="t6">How a relying party uses a trusted list</title>
+  <desc id="d6">Flow in six steps. The relying party locates the Commission list of trusted lists, verifies its signature against the digest published in the Official Journal, finds the pointer to the national list, downloads that list and verifies its signature with the certificate named in the list of lists, finds the service and its digital identity, checks that the status was granted and the list has not expired, and uses the digital identity as trust anchor for certificate path validation.</desc>
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"><rdf:RDF><cc:Work rdf:about=""><dc:title>How a relying party uses a trusted list</dc:title><dc:description>Flow in six steps. The relying party locates the Commission list of trusted lists, verifies its signature against the digest published in the Official Journal, finds the pointer to the national list, downloads that list and verifies its signature with the certificate named in the list of lists, finds the service and its digital identity, checks that the status was granted and the list has not expired, and uses the digital identity as trust anchor for certificate path validation.</dc:description><dc:creator>European Business Wallet Requirements project</dc:creator><dc:subject>trusted list; list of trusted lists; relying party validation; trust anchor; ETSI TS 119 612</dc:subject><dc:language>en</dc:language><dc:format>image/svg+xml</dc:format><dc:rights>CC BY 4.0</dc:rights><cc:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/></cc:Work></rdf:RDF></metadata>
+  <defs>
+    <marker id="ah" viewBox="0 0 12 12" markerWidth="10" markerHeight="10" refX="10" refY="6" orient="auto"><path d="M1,1 L10,6 L1,11" fill="none" stroke="#023852" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></marker>
+    <style>
+      text{font-family:Archivo,Arial,sans-serif}
+      .bx{fill:#FFFFFE;stroke:#023852;stroke-width:2}
+      .sig{fill:#2BFEBB;stroke:#023852;stroke-width:2}
+      .big{fill:#023852;stroke:#023852;stroke-width:2}
+      .t{font-size:17px;font-weight:600;fill:#023852;text-anchor:middle}
+      .tw{font-size:17px;font-weight:600;fill:#F4F2EE;text-anchor:middle}
+      .li{font-size:16px;fill:#253746}
+      .lab{font-size:16px;fill:#253746;text-anchor:middle}
+      .arr{fill:none;stroke:#023852;stroke-width:2.2;stroke-linecap:round}
+      .grp{fill:none;stroke:#C9C7C2;stroke-width:2}
+      .gt{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:13px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;fill:#445260}
+      .wbg{fill:#F4F2EE}
+    </style>
+  </defs>
+  <rect width="1260" height="520" fill="#F4F2EE"/>
+<rect class="grp" x="20" y="80" width="785" height="190" rx="16"/><text class="gt" x="40" y="108">Authenticate the lists</text>
+<rect class="grp" x="825" y="80" width="415" height="190" rx="16"/><text class="gt" x="845" y="108">Use the list</text>
+<rect class="bx" x="40" y="150" width="160" height="84" rx="12"/><text class="t" x="120" y="186">Locate the</text><text class="t" x="120" y="210">list of lists</text><text class="gt" x="50" y="140">1</text>
+<path class="arr" d="M200,192 H231" marker-end="url(#ah)"/>
+<rect class="bx" x="235" y="150" width="160" height="84" rx="12"/><text class="t" x="315" y="186">Verify its</text><text class="t" x="315" y="210">signature</text><text class="gt" x="245" y="140">2</text>
+<path class="arr" d="M395,192 H426" marker-end="url(#ah)"/>
+<rect class="bx" x="430" y="150" width="160" height="84" rx="12"/><text class="t" x="510" y="186">Find the</text><text class="t" x="510" y="210">national list</text><text class="gt" x="440" y="140">3</text>
+<path class="arr" d="M590,192 H621" marker-end="url(#ah)"/>
+<rect class="bx" x="625" y="150" width="160" height="84" rx="12"/><text class="t" x="705" y="186">Verify that</text><text class="t" x="705" y="210">list's signature</text><text class="gt" x="635" y="140">4</text>
+<path class="arr" d="M785,192 H841" marker-end="url(#ah)"/>
+<rect class="bx" x="845" y="150" width="160" height="84" rx="12"/><text class="t" x="925" y="186">Find service</text><text class="t" x="925" y="210">and identity</text><text class="gt" x="855" y="140">5</text>
+<path class="arr" d="M1005,192 H1036" marker-end="url(#ah)"/>
+<rect class="bx" x="1040" y="150" width="160" height="84" rx="12"/><text class="t" x="1120" y="186">Check status</text><text class="t" x="1120" y="210">and next update</text><text class="gt" x="1050" y="140">6</text>
+<rect class="sig" x="400" y="340" width="460" height="90" rx="12"/><text class="t" x="630" y="376">Trust anchor for certificate</text><text class="t" x="630" y="400">path validation</text>
+<path class="arr" d="M1120,234 C1120,300 700,300 700,336" marker-end="url(#ah)"/>
+<text class="lab" x="630" y="480">If any check fails, the relying party does not trust the result.</text>
+</svg>

@@ -2,9 +2,14 @@
 # Entries are added by people or by the weekly agent through a reviewed pull request. type: law | standard | ecosystem | site
 - date: "2026-10-03"
   type: site
+  title: "Concept article added: Trust list"
+  summary: "Structure of the EU trusted list and the lists of trusted entities for wallet roles, how a relying party authenticates and uses them, with two figures. Open verification points are marked in the article."
+  sources: [SRC-ETSI-119612, SRC-ETSI-119602, SRC-ARF-TRUST, SRC-EC-ID-2015-1505]
+- date: "2026-10-03"
+  type: site
   title: "Legal roadmap added"
   summary: "Swimlane roadmap chart and page with milestones, gates, Council presidencies and risks from the Commission proposal to mandatory acceptance. Periods relative to entry into force verified against the text of COM(2025) 838; calendar dates are scenarios."
-  sources: [SRC-EC-IP-25-2718, SRC-EC-COM-2025-838]
+  sources: [SRC-EC-IP-25-2718, SRC-EBW-PROPOSAL]
 - date: "2026-10-03"
   type: site
   title: "Business cases added (macroeconomic, ecosystem, company)"

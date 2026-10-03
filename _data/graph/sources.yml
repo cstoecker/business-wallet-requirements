@@ -436,12 +436,12 @@
   retrieved: '2026-10-03'
   verification: snippet
   note: Results not read.
-- id: SRC-EC-COM-2025-838
-  title: 'Proposal for a Regulation on the establishment of European Business Wallets, COM(2025) 838 final (2025/0358(COD))'
+- id: SRC-EC-ID-2015-1505
+  title: 'Commission Implementing Decision (EU) 2015/1505 of 8 September 2015 on technical specifications and formats relating to trusted lists pursuant to Article 22(5) of Regulation (EU) No 910/2014'
   issuer: European Commission
   class: official
-  url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52025PC0838
-  date: '2025-11-19'
+  url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32015D1505
+  date: '2015-09-08'
   retrieved: '2026-10-03'
   verification: read
-  note: 'Full text read in the Commission document copy hosted by the Dutch Eerste Kamer; the EUR-Lex rendering could not be retrieved. Dates in the proposal are placeholders relative to entry into force. Art. 16 paragraphs are numbered 4 to 6 in the PDF but cross-refer to 1 to 3.'
+  note: Whether this decision has been amended or replaced since was not checked.
