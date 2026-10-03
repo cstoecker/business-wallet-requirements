@@ -2,7 +2,7 @@ name: Weekly watch of laws and standards
 
 on:
   schedule:
-    - cron: "0 6 * * 1"   # Mondays 06:00 UTC
+    - cron: "0 4 * * 1"   # Mondays 04:00 UTC (05:00 or 06:00 Berlin), before the 07:00 Berlin agent
   workflow_dispatch:
 
 permissions:
