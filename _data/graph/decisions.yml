@@ -51,4 +51,10 @@
   title: "AI-first: agent protocols, agent identity and mandates"
   question: "Which agent protocols (MCP, A2A and others), which form of verifiable agent identity and agent card, and which mandate model should a business wallet support so that AI agents can act for an organisation under control?"
   clusters: [K16, K03]
+  status: draft
+  page: /architecture/decisions/dec-10/
+- id: DEC-11
+  title: "Primary and secondary identifiers, assurance and partners outside the EU"
+  question: "Which identifiers are primary for an EU organisation (EUID, EBWOID, EU Company Certificate), which are secondary (BPN, LEI, party GLN, domain identifiers), how are secondary identifiers issued quickly after authentication with a primary one, and how does an EBW holder interact with partners outside the EU and with partners that have no business wallet?"
+  clusters: [K17, K06, K14]
   status: planned

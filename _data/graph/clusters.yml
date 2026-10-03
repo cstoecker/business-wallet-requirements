@@ -64,3 +64,7 @@
   name: AI-first and agent interoperability
   decision: DEC-10
   summary: "Machine-processable data, agent protocols (MCP, A2A), verifiable agent identity and agent cards, mandates for agents and AI governance."
+- code: K17
+  name: Cross-jurisdiction identity, identifiers and assurance (EBW and non-EBW)
+  decision: DEC-11
+  summary: "Primary identifiers (EUID, EBWOID, EU Company Certificate), secondary identifiers (BPN, LEI, party GLN, domain-specific), levels of assurance, legal compliance across EU Member States and interaction with partners outside the EU, with and without a business wallet."
