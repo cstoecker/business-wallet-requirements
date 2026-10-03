@@ -8,7 +8,7 @@ Keep the site current without losing control of quality: find new or changed law
 
 ## 2. Two layers
 
-**Layer 1: watch script (deterministic, every Monday).** `scripts/watch_sources.py` reads `_data/watch/watchlist.yml` (21 sources: ETSI trusted-list and identity standards, ARF releases, W3C, OpenID, Eclipse DSP and DCP, Catena-X, WE BUILD, plus entries for sources it cannot fetch). It records version strings, page hashes or feed entries in `_data/watch/state.json` and writes a facts-only report. The GitHub workflow `.github/workflows/weekly-watch.yml` runs it and opens a pull request labelled `needs-review` with `docs/watch/<date>.md` and the new state. A baseline was recorded on 2026-10-03: for example TS 119 612 has versions 2.2.1, 2.3.1 and 2.4.1 in the ETSI folder, which confirms V2.4.1 as the newest listed there.
+**Layer 1: watch script (deterministic, every Monday 06:00 UTC, before the agent).** `scripts/watch_sources.py` reads `_data/watch/watchlist.yml` (23 sources: ETSI trusted-list and identity standards, ARF releases, W3C, OpenID, Eclipse DSP and DCP, Catena-X, WE BUILD, plus entries for sources it cannot fetch, including the Council working party documents and the BMDS). It records version strings, page hashes or feed entries in `_data/watch/state.json` and writes a facts-only report. The GitHub workflow `.github/workflows/weekly-watch.yml` runs it and opens a pull request labelled `needs-review` with `docs/watch/<date>.md` and the new state. A baseline was recorded on 2026-10-03: for example TS 119 612 has versions 2.2.1, 2.3.1 and 2.4.1 in the ETSI folder, which confirms V2.4.1 as the newest listed there.
 
 Limits found in the first run: the ARF, WE BUILD and rulebook GitHub feeds returned HTTP 403 from the build sandbox (they are expected to work from GitHub Actions; to be confirmed on the first scheduled run); the ETSI TS 119 472 folder name differs by part, so it is left to the agent; EUR-Lex pages block automated fetching, so legal sources are checked by the agent through search and the Legislative Observatory.
 
@@ -33,7 +33,7 @@ Limits found in the first run: the ARF, WE BUILD and rulebook GitHub feeds retur
 
 "Every Monday after the weekly watch report: read `docs/watch/<latest>.md` in the repository `<repo>`. For each detected change and for each `fetch: agent` source in `_data/watch/watchlist.yml`, check the primary official source. Follow `docs/11-weekly-watch.md` section 3. Prepare one pull request on a new branch with source register, changelog and, where clear, article edits, and list uncertainties for the reviewer. If nothing relevant changed, post a one-line note and stop."
 
-Scheduling needs a decision: day and time, the repository and branch it may write to, and who reviews. A scheduled routine can run in this environment; creating one is not done yet and needs your confirmation.
+Schedule (decided 2026-10-03): Mondays at 07:00 Europe/Berlin, as a routine that starts a fresh session each time; it writes only to a branch `watch/<date>` of `cstoecker/business-wallet-requirements` and opens a pull request for review. Added sources by the owner's request: Council working party documents on the EBW proposal and the German Federal Ministry for Digital and State Modernisation (BMDS).
 
 ## 5. Open points
 
