@@ -159,9 +159,8 @@ tr[hidden] { display: none; }
   .nav-toggle:hover { background: var(--sph-offwhite-500); }
   .nav-toggle .icon { width: 18px; height: 18px; transition: transform 220ms cubic-bezier(.16,1,.3,1); --icon: url("../icons/chevron-down.svg"); transform: rotate(90deg); }
   html.nav-collapsed .nav-toggle .icon { transform: rotate(-90deg); }
-  html.nav-collapsed .side-bar { width: 4.5rem !important; min-width: 4.5rem !important; }
-  html.nav-collapsed .side-bar + .main { margin-left: max(4.5rem, calc((100% - 56rem) / 2 + 2.25rem)) !important; }
-  html.nav-collapsed .site-header, html.nav-collapsed .site-nav, html.nav-collapsed .site-footer { width: 4.5rem; }
+  html.nav-collapsed .side-bar { --nav-w: 4.5rem; }
+  html.nav-collapsed .site-footer { width: 4.5rem; }
   html.nav-collapsed .site-header { flex-direction: column; justify-content: center; gap: .25rem; height: auto; max-height: none; padding: .5rem 0; }
   html.nav-collapsed .site-title { padding: 0; justify-content: center; flex-grow: 0; height: 2.25rem; }
   html.nav-collapsed .site-logo { background-image: url("../images/logos/spherity-s-mark.svg") !important; background-size: contain !important; background-position: center !important; width: 2rem; height: 2rem; }
@@ -199,4 +198,18 @@ table tbody tr:hover td { background: var(--sph-offwhite-300); }
   body { background: #fff; }
   a { text-decoration: none; color: inherit; }
   .main-content a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 12px; }
+}
+
+/* Layout: sidebar flush left, content uses the remaining width; smooth fold/unfold */
+@media (min-width: 50rem) {
+  html { --nav-w: 17rem; }
+  html .side-bar { --nav-w: inherit; width: var(--nav-w) !important; min-width: var(--nav-w) !important; align-items: flex-start; overflow: hidden; transition: width 240ms cubic-bezier(.16,1,.3,1); }
+  html .side-bar + .main { margin-left: var(--nav-w) !important; max-width: none; transition: margin-left 240ms cubic-bezier(.16,1,.3,1); }
+  html.nav-collapsed { --nav-w: 4.5rem; }
+  html .site-header, html .site-nav { width: 100%; }
+  html .main-content-wrap { max-width: 88rem; margin-left: auto; margin-right: auto; }
+  html .main-header { max-width: 88rem; margin-left: auto; margin-right: auto; }
+  .main-content > p, .main-content > ul, .main-content > ol { max-width: 64rem; }
+  .nav-list .nav-list-link { white-space: nowrap; overflow: hidden; transition: font-size 160ms ease, padding 240ms cubic-bezier(.16,1,.3,1), background-color 120ms; }
+  .nav-list .nav-list-link .nav-ic { transition: margin 240ms cubic-bezier(.16,1,.3,1); }
 }
