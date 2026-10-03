@@ -2,6 +2,11 @@
 # Entries are added by people or by the weekly agent through a reviewed pull request. type: law | standard | ecosystem | site
 - date: "2026-10-03"
   type: site
+  title: "199 draft requirements added from official sources"
+  summary: "Derived from the Commission proposal COM(2025) 838, the consolidated eIDAS Regulation, the EUDI Wallet implementing regulations and the ARF high-level requirements, and horizontal law (GDPR, NIS2, DORA, CRA, AI Act, Data Act). Each requirement has a verbatim source extract, a category and a provenance class. None has been reviewed by a named person yet; the AI Act and DORA entries are derivations (class D)."
+  sources: [SRC-EBW-PROPOSAL, SRC-EIDAS-CONSOL, SRC-GDPR, SRC-NIS2, SRC-DORA, SRC-CRA, SRC-AIACT, SRC-DATAACT]
+- date: "2026-10-03"
+  type: site
   title: "Concept article added: Trust list"
   summary: "Structure of the EU trusted list and the lists of trusted entities for wallet roles, how a relying party authenticates and uses them, with two figures. Open verification points are marked in the article."
   sources: [SRC-ETSI-119612, SRC-ETSI-119602, SRC-ARF-TRUST, SRC-EC-ID-2015-1505]

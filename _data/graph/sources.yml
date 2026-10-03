@@ -445,3 +445,143 @@
   retrieved: '2026-10-03'
   verification: read
   note: Whether this decision has been amended or replaced since was not checked.
+- id: SRC-GDPR
+  title: 'Regulation (EU) 2016/679 (GDPR)'
+  issuer: European Union
+  class: official
+  url: https://eur-lex.europa.eu/eli/reg/2016/679/oj
+  version: 'OJ original text'
+  date: '2016-04-27'
+  retrieved: '2026-10-03'
+  verification: read
+  note: 'Read in the Official Journal original text (Formex from the Publications Office); amendments and consolidated versions not checked.'
+- id: SRC-NIS2
+  title: 'Directive (EU) 2022/2555 (NIS 2)'
+  issuer: European Union
+  class: official
+  url: https://eur-lex.europa.eu/eli/dir/2022/2555/oj
+  version: 'OJ original text'
+  date: '2022-12-14'
+  retrieved: '2026-10-03'
+  verification: read
+  note: 'Read in the Official Journal original text (Formex from the Publications Office); amendments and consolidated versions not checked.'
+- id: SRC-DORA
+  title: 'Regulation (EU) 2022/2554 (DORA)'
+  issuer: European Union
+  class: official
+  url: https://eur-lex.europa.eu/eli/reg/2022/2554/oj
+  version: 'OJ original text'
+  date: '2022-12-14'
+  retrieved: '2026-10-03'
+  verification: read
+  note: 'Read in the Official Journal original text (Formex from the Publications Office); amendments and consolidated versions not checked.'
+- id: SRC-CRA
+  title: 'Regulation (EU) 2024/2847 (Cyber Resilience Act)'
+  issuer: European Union
+  class: official
+  url: https://eur-lex.europa.eu/eli/reg/2024/2847/oj
+  version: 'OJ original text'
+  date: '2024-10-23'
+  retrieved: '2026-10-03'
+  verification: read
+  note: 'Read in the Official Journal original text (Formex from the Publications Office); amendments and consolidated versions not checked.'
+- id: SRC-AIACT
+  title: 'Regulation (EU) 2024/1689 (AI Act)'
+  issuer: European Union
+  class: official
+  url: https://eur-lex.europa.eu/eli/reg/2024/1689/oj
+  version: 'OJ original text'
+  date: '2024-06-13'
+  retrieved: '2026-10-03'
+  verification: read
+  note: 'Read in the Official Journal original text (Formex from the Publications Office); amendments and consolidated versions not checked.'
+- id: SRC-DATAACT
+  title: 'Regulation (EU) 2023/2854 (Data Act)'
+  issuer: European Union
+  class: official
+  url: https://eur-lex.europa.eu/eli/reg/2023/2854/oj
+  version: 'OJ original text'
+  date: '2023-12-13'
+  retrieved: '2026-10-03'
+  verification: read
+  note: 'Read in the Official Journal original text (Formex from the Publications Office); amendments and consolidated versions not checked.'
+- id: SRC-CIR-2024-2977
+  title: 'Commission Implementing Regulation (EU) 2024/2977 (person identification data and electronic attestations of attributes issued to EUDI Wallets)'
+  issuer: 'European Commission'
+  class: official
+  url: https://eur-lex.europa.eu/eli/reg_impl/2024/2977/oj
+  version: 'OJ L 2024/2977'
+  date: '2024-12-04'
+  retrieved: '2026-10-03'
+  verification: read
+- id: SRC-CIR-2024-2979
+  title: 'Commission Implementing Regulation (EU) 2024/2979 (integrity and core functionalities of EUDI Wallets)'
+  issuer: 'European Commission'
+  class: official
+  url: https://eur-lex.europa.eu/eli/reg_impl/2024/2979/oj
+  version: 'OJ L 2024/2979'
+  date: '2024-12-04'
+  retrieved: '2026-10-03'
+  verification: read
+- id: SRC-CIR-2024-2980
+  title: 'Commission Implementing Regulation (EU) 2024/2980 (notifications to the Commission concerning the EUDI Wallet ecosystem)'
+  issuer: 'European Commission'
+  class: official
+  url: https://eur-lex.europa.eu/eli/reg_impl/2024/2980/oj
+  version: 'OJ L 2024/2980'
+  date: '2024-12-04'
+  retrieved: '2026-10-03'
+  verification: read
+- id: SRC-CIR-2024-2981
+  title: 'Commission Implementing Regulation (EU) 2024/2981 (certification of EUDI Wallets)'
+  issuer: 'European Commission'
+  class: official
+  url: https://eur-lex.europa.eu/eli/reg_impl/2024/2981/oj
+  version: 'OJ L 2024/2981'
+  date: '2024-12-04'
+  retrieved: '2026-10-03'
+  verification: read
+- id: SRC-CIR-2024-2982
+  title: 'Commission Implementing Regulation (EU) 2024/2982 (protocols and interfaces of the European Digital Identity Framework)'
+  issuer: 'European Commission'
+  class: official
+  url: https://eur-lex.europa.eu/eli/reg_impl/2024/2982/oj
+  version: 'OJ L 2024/2982'
+  date: '2024-12-04'
+  retrieved: '2026-10-03'
+  verification: read
+- id: SRC-CIR-2025-848
+  title: 'Commission Implementing Regulation (EU) 2025/848 (registration of wallet-relying parties)'
+  issuer: 'European Commission'
+  class: official
+  url: https://eur-lex.europa.eu/eli/reg_impl/2025/848/oj
+  version: 'OJ L 2025/848; applies from 2026-12-24'
+  date: '2025-05-06'
+  retrieved: '2026-10-03'
+  verification: read
+- id: SRC-CIR-2025-1569
+  title: 'Commission Implementing Regulation (EU) 2025/1569 (attestations of attributes)'
+  issuer: 'European Commission'
+  class: official
+  url: https://eur-lex.europa.eu/eli/reg_impl/2025/1569/oj
+  version: 'OJ L 2025/1569; Articles 6-9 apply from 2026-08-19'
+  date: '2025-07-29'
+  retrieved: '2026-10-03'
+  verification: read
+- id: SRC-CIR-2025-1944
+  title: 'Commission Implementing Regulation (EU) 2025/1944 (qualified electronic registered delivery services)'
+  issuer: 'European Commission'
+  class: official
+  url: https://eur-lex.europa.eu/eli/reg_impl/2025/1944/oj
+  version: 'OJ L 2025/1944'
+  date: '2025-09-29'
+  retrieved: '2026-10-03'
+  verification: read
+- id: SRC-ARF-HLR
+  title: 'EUDI Wallet ARF, Annex 2.02 High-level requirements by topic (eudi.dev rendering)'
+  issuer: 'European Commission and Member States'
+  class: standard
+  url: https://eudi.dev/latest/annexes/annex-2/annex-2.02-high-level-requirements-by-topic/
+  version: 'ARF 3.0.0 (as rendered at /latest/)'
+  retrieved: '2026-10-03'
+  verification: read
