@@ -21,6 +21,7 @@ Generated from the data on every build, so the files always match the published 
 | [Requirements]({{ '/assets/downloads/requirements.csv' | relative_url }}) | the requirements sheet as a plain table | CSV |
 | [Source register]({{ '/assets/downloads/sources.csv' | relative_url }}) | {{ site.data.graph.sources.size }} sources with class, version, date, URL and verification | CSV |
 | [Business-case claims]({{ '/assets/downloads/claims.csv' | relative_url }}) | {{ site.data.graph.claims.size }} claims with basis, caveat and source | CSV |
+| [Review worksheet]({{ '/assets/downloads/ebw-review-worksheet.xlsx' | relative_url }}) | all requirements, sorted by priority, with dropdown decision columns for reviewers, and the driver criteria of the architecture decisions to confirm | Excel |
 | [Knowledge graph]({{ '/assets/downloads/graph.jsonld' | relative_url }}) | requirements, sources and concepts as linked data | JSON-LD |
 
 ## Presentation

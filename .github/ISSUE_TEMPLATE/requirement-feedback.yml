@@ -1,0 +1,40 @@
+name: Requirement feedback
+description: Confirm, change or reject one requirement (review feedback)
+title: "Review: EBW-XXX-000"
+labels: ["review"]
+body:
+  - type: markdown
+    attributes:
+      value: "Open the requirement page, read the cited clause in the source, then answer. Analysis, not legal advice."
+  - type: input
+    id: requirement
+    attributes:
+      label: Requirement ID
+      placeholder: EBW-TRU-012
+    validations:
+      required: true
+  - type: dropdown
+    id: decision
+    attributes:
+      label: Decision
+      options: ["agree", "agree with change", "reject", "defer", "needs legal review"]
+    validations:
+      required: true
+  - type: textarea
+    id: wording
+    attributes:
+      label: Your corrected statement (only for "agree with change"; must contain "shall")
+  - type: input
+    id: change
+    attributes:
+      label: Category, priority or merge target you propose
+  - type: textarea
+    id: comment
+    attributes:
+      label: Comment (what in the source supports or contradicts the statement)
+  - type: input
+    id: reviewer
+    attributes:
+      label: Your name and role (needed for status "agreed")
+    validations:
+      required: true

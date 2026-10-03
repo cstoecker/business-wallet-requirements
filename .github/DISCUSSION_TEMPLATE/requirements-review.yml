@@ -1,0 +1,22 @@
+title: "Review worksheet: <your name>"
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: "Attach the filled review worksheet (ebw-review-worksheet.xlsx, from the Downloads page) and tell us which part you covered."
+  - type: input
+    id: reviewer
+    attributes:
+      label: Your name and role
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope you reviewed (priority, clusters or IDs)
+    validations:
+      required: true
+  - type: textarea
+    id: remarks
+    attributes:
+      label: General remarks (systematic problems, missing topics)

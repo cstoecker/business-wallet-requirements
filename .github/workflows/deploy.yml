@@ -32,7 +32,7 @@ jobs:
       - name: Validate data, requirements, concepts and figures
         run: python3 scripts/check_concepts.py
       - name: Generate downloads (Excel, CSV, JSON-LD) from the data
-        run: python3 scripts/build_downloads.py
+        run: python3 scripts/build_downloads.py && python3 scripts/build_review_worksheet.py
       - id: pages
         uses: actions/configure-pages@v5
       - name: Build Jekyll site
