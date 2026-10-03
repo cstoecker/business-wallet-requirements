@@ -8800,3 +8800,14 @@
   fidelity: ok
   verification_ready: 'yes'
   note: Scores 1/3/5 points; do not equate with LoA. Cross-reference EBW-TRU-084 for the eIDAS notion.
+- id: EBW-TRU-158
+  verdict: ok
+  priority: P2
+  priority_reason: In force from 11.8.2026; precondition for instance attestation trust
+  clusters:
+  - K07
+  - K04
+  applicability: wallet-general
+  fidelity: ok
+  verification_ready: 'yes'
+  note: Added after CIR 2026/1731; TR-WIA-2 of new Annex Ib. Complements EBW-TRU-117 (expiry) and EBW-TRU-029 (listed certificate).

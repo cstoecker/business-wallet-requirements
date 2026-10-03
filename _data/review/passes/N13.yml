@@ -1,0 +1,11 @@
+- id: EBW-TRU-158
+  fidelity: ok
+  verdict: ok
+  applicability: wallet-general
+  priority: P2
+  priority_reason: In force from 11.8.2026; precondition for instance attestation trust
+  clusters:
+  - K07
+  - K04
+  verification_ready: 'yes'
+  note: Added after CIR 2026/1731; TR-WIA-2 of new Annex Ib. Complements EBW-TRU-117 (expiry) and EBW-TRU-029 (listed certificate).

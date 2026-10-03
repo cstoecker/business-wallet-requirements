@@ -6,7 +6,7 @@ statement: When a wallet provider has revoked a wallet unit attestation, the wal
 rationale: Relying parties and issuers need status without tracking users.
 sources:
 - id: SRC-CIR-2024-2979
-  location: Article 7(4)
+  location: Article 7(4) (not amended by Implementing Regulation (EU) 2026/1731; consolidated text 02024R2979-20260811)
 provenance: L
 legal_status: in force
 plane: assurance
@@ -28,4 +28,5 @@ last_verified: '2026-10-03'
 quote: make publicly available the validity status of the wallet unit attestation in a privacy preserving manner
 full_quote: Where wallet providers have revoked wallet unit attestations, they shall make publicly available the validity status of the wallet unit attestation in a privacy preserving manner and describe the location of that information in the wallet unit attestation.
 fidelity_checked: '2026-10-03'
+revision_note: 'Checked against the consolidated text as amended by Implementing Regulation (EU) 2026/1731: Article 7(4) unchanged, wording still current.'
 ---
