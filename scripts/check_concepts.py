@@ -43,19 +43,19 @@ cats = {c["code"] for c in load("_data/categories.yml")}
 rdir = os.path.join(ROOT, "_requirements"); rids = []
 for f in sorted(os.listdir(rdir)) if os.path.isdir(rdir) else []:
     t = open(os.path.join(rdir, f), encoding="utf-8").read(); m = re.match(r"---\n(.*?)\n---", t, re.S); r = yaml.safe_load(m.group(1)); rids.append(r["req_id"])
-    if f != r["req_id"] + ".md": err(f"requirement file {f} must be named {r['id']}.md")
-    if not re.fullmatch(r"EBW-[A-Z]{3}-\d{3}", r["req_id"]) or r["req_id"].split("-")[1] != r["category"]: err(f"{r['id']}: ID must be EBW-<CATEGORY>-<NNN> matching the category")
-    if r["category"] not in cats: err(f"{r['id']}: unknown category {r['category']}")
-    if not re.search(r"\bshall\b", r["statement"]): err(f"{r['id']}: statement must contain 'shall'")
-    if r["provenance"] not in ("L", "S", "D", "A"): err(f"{r['id']}: provenance must be L, S, D or A")
-    if r["status"] not in ("draft", "in-review", "agreed", "verified", "obsolete"): err(f"{r['id']}: bad status")
-    if r["status"] in ("agreed", "verified") and r.get("reviewer") in (None, "", "pending"): err(f"{r['id']}: agreed or verified requires a named reviewer")
-    if not r.get("sources") and r["provenance"] != "A": err(f"{r['id']}: needs at least one source unless provenance is A")
+    if f != r["req_id"] + ".md": err(f"requirement file {f} must be named {r['req_id']}.md")
+    if not re.fullmatch(r"EBW-[A-Z]{3}-\d{3}", r["req_id"]) or r["req_id"].split("-")[1] != r["category"]: err(f"{r['req_id']}: ID must be EBW-<CATEGORY>-<NNN> matching the category")
+    if r["category"] not in cats: err(f"{r['req_id']}: unknown category {r['category']}")
+    if not re.search(r"\bshall\b", r["statement"]): err(f"{r['req_id']}: statement must contain 'shall'")
+    if r["provenance"] not in ("L", "S", "D", "A"): err(f"{r['req_id']}: provenance must be L, S, D or A")
+    if r["status"] not in ("draft", "in-review", "agreed", "verified", "obsolete"): err(f"{r['req_id']}: bad status")
+    if r["status"] in ("agreed", "verified") and r.get("reviewer") in (None, "", "pending"): err(f"{r['req_id']}: agreed or verified requires a named reviewer")
+    if not r.get("sources") and r["provenance"] != "A": err(f"{r['req_id']}: needs at least one source unless provenance is A")
     for x in r.get("sources", []):
-        if x["id"] not in sid: err(f"{r['id']}: unknown source {x['id']}")
+        if x["id"] not in sid: err(f"{r['req_id']}: unknown source {x['id']}")
     for cc in r.get("concepts", []):
-        if cc not in cid_all: err(f"{r['id']}: unknown concept {cc}")
-    if r["legal_status"] == "proposal" and not any(x["id"] == "SRC-EBW-PROPOSAL" for x in r["sources"]): err(f"{r['id']}: legal_status proposal must cite the proposal")
+        if cc not in cid_all: err(f"{r['req_id']}: unknown concept {cc}")
+    if r["legal_status"] == "proposal" and not any(x["id"] in ("SRC-EBW-PROPOSAL", "SRC-COUNCIL-ST-9684-26", "SRC-COUNCIL-ST-7659-26") for x in r["sources"]): err(f"{r['req_id']}: legal_status proposal must cite the proposal or the Council text")
 for d in {i for i in rids if rids.count(i) > 1}: err(f"requirements: duplicate id {d}")
 SECTIONS = ["Summary", "Definition", "Why it matters", "How it works", "Interaction flow", "Roles and responsibilities", "Related concepts",
             "Requirements and obligations", "Standards and specifications", "Design choices and alternatives", "Examples",
