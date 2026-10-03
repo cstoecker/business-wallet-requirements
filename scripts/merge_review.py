@@ -28,6 +28,15 @@ for p in sys.argv[1:]:
         if cs: item["corrected_statement"] = cs if isinstance(cs, list) else [str(cs).strip()]
         if e.get("note"): item["note"] = str(e["note"]).strip()
         out.append(item)
+adds = os.path.join(ROOT, "_data/review/cluster-additions.yml")
+if os.path.exists(adds):
+    byid = {x["id"]: x for x in out}
+    for a in yaml.safe_load(open(adds, encoding="utf-8")) or []:
+        x = byid.get(a["id"])
+        if not x or a["add"] not in clusters: problems.append(f"cluster addition {a['id']}: unknown id or cluster"); continue
+        if a["add"] not in x["clusters"]:
+            if len(x["clusters"]) >= 3: x["clusters"][2] = a["add"]
+            else: x["clusters"].append(a["add"])
 missing = sorted(ids - seen)
 if missing: problems.append("not reviewed: " + ", ".join(missing))
 out.sort(key=lambda x: x["id"])

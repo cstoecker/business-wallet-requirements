@@ -20,7 +20,7 @@ layout: default
 <h2>Sources</h2>
 <ul>{% for s in page.sources %}{% assign src = site.data.graph.sources | where: "id", s.id | first %}<li><a href="{{ src.url }}">{{ src.title }}</a> ({{ src.version }}{{ src.date }}), {{ s.location }}. <code>{{ s.id }}</code></li>{% endfor %}</ul>
 {%- if page.quote %}<blockquote><p>{{ page.full_quote | default: page.quote }}</p><p>Verbatim extract from the cited source.</p></blockquote>{% endif %}
-{%- if page.legal_status == "proposal" %}<p><strong>Proposal text.</strong> This requirement follows the Commission proposal COM(2025) 838 and may change during the legislative procedure.</p>{% endif %}
+{%- if page.legal_status == "proposal" %}<p><strong>Proposal text.</strong> This requirement follows a Commission proposal (or the Council text on it) and may change during the legislative procedure. See the cited source for which one.</p>{% endif %}
 <h2>Related concepts</h2>
 <p>{% for rid in page.concepts %}{% include concept-ref.html id=rid %} {% endfor %}</p>
 <h2>Status and history</h2>

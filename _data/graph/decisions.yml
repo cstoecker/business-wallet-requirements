@@ -57,4 +57,5 @@
   title: "Primary and secondary identifiers, assurance and partners outside the EU"
   question: "Which identifiers are primary for an EU organisation (EUID, EBWOID, EU Company Certificate), which are secondary (BPN, LEI, party GLN, domain identifiers), how are secondary identifiers issued quickly after authentication with a primary one, and how does an EBW holder interact with partners outside the EU and with partners that have no business wallet?"
   clusters: [K17, K06, K14]
-  status: planned
+  status: draft
+  page: /architecture/decisions/dec-11/

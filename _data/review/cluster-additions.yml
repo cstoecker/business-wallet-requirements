@@ -1,0 +1,124 @@
+# Cluster tags added after the main review passes (kept here so scripts/merge_review.py can re-apply them).
+- id: EBW-INT-005
+  add: K17
+  reason: 'Minimum content of owner identification data: official name plus unique identifier (Art 8(5))'
+- id: EBW-INT-006
+  add: K17
+  reason: EUID is the primary identifier where attributed (Art 9(1))
+- id: EBW-INT-007
+  add: K17
+  reason: Equivalent unique identifier where no EUID exists, one per owner (Art 9(2),(4))
+- id: EBW-INT-004
+  add: K17
+  reason: Format and issuer categories for owner identification data (Art 8(3))
+- id: EBW-INT-048
+  add: K17
+  reason: Commission attestation scheme for owner identification data (Art 8(6))
+- id: EBW-TRU-067
+  add: K17
+  reason: Owner identification data digitally associated with the owner wallet (Art 6(2)(a))
+- id: EBW-TRU-015
+  add: K17
+  reason: Issuing identification data and unique identifier to third-country operators (Art 18(5))
+- id: EBW-INT-009
+  add: K17
+  reason: Equivalence assessment for third-country business wallets (Art 17(1),(3))
+- id: EBW-INT-014
+  add: K17
+  reason: Cross-border recognition of public-sector authentic-source attestations (eIDAS Art 45b(3))
+- id: EBW-LEG-004
+  add: K17
+  reason: Legal effect of QEAA and authentic-source attestations (eIDAS Art 45b(2))
+- id: EBW-TRU-008
+  add: K17
+  reason: Remote onboarding of owner via representative at LoA substantial or high (Art 6(1)(e))
+- id: EBW-TRU-070
+  add: K17
+  reason: Wallet access only after authentication at LoA substantial or higher
+- id: EBW-TRU-019
+  add: K17
+  reason: QTSP verifies identity before issuing qualified attestation, relevant for secondary identifier credentials (eIDAS Art 24(1))
+- id: EBW-TRU-020
+  add: K17
+  reason: Identity verification methods incl. wallet at LoA high, seal certificate (Art 24(1a))
+- id: EBW-TRU-021
+  add: K17
+  reason: Attribute verification methods incl. existing QEAA, basis for fast secondary issuance (Art 24(1b))
+- id: EBW-TRU-022
+  add: K17
+  reason: Revocation publication of qualified certificates, applies to identifier credentials (Art 24(3))
+- id: EBW-TRU-024
+  add: K17
+  reason: Revocation rules applied to QEAA (Art 24(4a))
+- id: EBW-INT-002
+  add: K17
+  reason: Sharing identification data between EBW, EUDIW and relying parties (Art 5(1)(c))
+- id: EBW-FUN-004
+  add: K17
+  reason: Selective disclosure of owner identification data and attributes (Art 5(1)(b))
+- id: EBW-FUN-001
+  add: K17
+  reason: QERDS as channel towards counterparties; relevant for partners without a wallet
+- id: EBW-FUN-013
+  add: K17
+  reason: Standalone QERDS for EUDIW users, a non-EBW counterparty case
+- id: EBW-FUN-024
+  add: K17
+  reason: QERDS identifies sender and addressee, assurance basis for non-wallet contact
+- id: EBW-INT-013
+  add: K17
+  reason: Interoperability between QERDS providers
+- id: EBW-INT-003
+  add: K17
+  reason: Unique digital address per owner, linked to Directory lookups by identifier
+- id: EBW-INT-008
+  add: K17
+  reason: Directory API for machine lookup of counterparties
+- id: EBW-FUN-002
+  add: K17
+  reason: Directory update within one working day when identifiers or data change
+- id: EBW-LEG-045
+  add: K17
+  reason: Digital EU power of attorney template content (Directive 2025/25 Art 16c(4))
+- id: EBW-LEG-046
+  add: K17
+  reason: EU power of attorney authenticated by trust services, EUDIW-compatible (Art 16c(1))
+- id: EBW-LEG-047
+  add: K17
+  reason: Acceptance of EU power of attorney in all Member States (Art 16c(2))
+- id: EBW-TRU-012
+  add: K17
+  reason: Roles and attribute mappings traceable to issuers
+- id: EBW-FUN-015
+  add: K17
+  reason: Prevent over-delegation and expired authorisations; authorisation logic across Member States
+- id: EBW-TRU-035
+  add: K17
+  reason: PID provider validates wallet unit before issuing identification data
+- id: EBW-INT-033
+  add: K17
+  reason: Attestation format list (Annex II of 2024/2979) incl. replacement by 2026/1731
+- id: EBW-INT-045
+  add: K17
+  reason: Catalogue entry states attestation formats, relevant for identifier schemes
+- id: EBW-INT-046
+  add: K17
+  reason: Catalogue entry states attribute namespaces and semantics, relevant for secondary identifier credentials
+- id: EBW-INT-047
+  add: K17
+  reason: Catalogue attributes identifiable by unique identifiers
+- id: EBW-TRU-038
+  add: K17
+  reason: Registration certificates limiting what relying parties may request
+- id: EBW-GOV-022
+  add: K17
+  reason: Registrar verifies entitlements and power of attorney against authentic sources
+- id: EBW-OPS-010
+  add: K17
+  reason: PID revocation informs wallet user, applies to legal-person PID data
+- id: EBW-FUN-026
+  add: K17
+  reason: QTSP electronic verification against public authentic sources (Annex VI attributes)
+- id: EBW-GOV-005
+  add: K17
+  reason: Supervisory body can revoke provider inclusion, relevant to provider trust for identity issuance

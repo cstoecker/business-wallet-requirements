@@ -81,7 +81,7 @@ BASE = "https://spherity.github.io/business-wallet-requirements/"
 g = {"@context": {"@vocab": "https://schema.org/", "ebw": BASE + "ns#"}, "@graph": []}
 for r in R:
     g["@graph"].append({"@id": BASE + "requirements/" + r["req_id"].lower() + "/", "@type": ["ebw:Requirement", "DefinedTerm"], "identifier": r["req_id"], "name": r["title"], "description": r["statement"], "ebw:category": r["category"],
-                        "ebw:provenance": r["provenance"], "ebw:status": r["status"], "ebw:derivedFrom": [{"@id": srcmap[s["id"]]["url"]} for s in r["sources"] if s["id"] in srcmap]})
+                        "ebw:provenance": r["provenance"], "ebw:status": r["status"], "ebw:derivedFrom": [{"@id": srcmap[s["id"]]["url"]} for s in r["sources"] if s["id"] in srcmap and srcmap[s["id"]].get("url")]})
 for s in src: g["@graph"].append({"@id": s.get("url") or BASE + "sources/" + s["id"], "@type": "ebw:Source", "identifier": s["id"], "name": s["title"], "publisher": s["issuer"], "version": s.get("version", "")})
 for c in concepts: g["@graph"].append({"@id": BASE + "concepts/" + c["slug"] + "/", "@type": "DefinedTerm", "identifier": c["id"], "name": c["title"], "description": c["summary"]})
 json.dump(g, open(os.path.join(OUT, "graph.jsonld"), "w", encoding="utf-8"), indent=1, ensure_ascii=False)

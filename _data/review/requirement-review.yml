@@ -917,6 +917,29 @@
   fidelity: broader-than-quote
   verification_ready: 'yes'
   note: Quote is Member States "should consider"; statement widens to bodies exchanging with wallets and says shall. Covered by TRN-002/003.
+- id: EBW-CON-002
+  verdict: ok
+  priority: P3
+  priority_reason: Ecosystem rule for vLEI
+  clusters:
+  - K01
+  - K17
+  applicability: provider-side
+  fidelity: ok
+  verification_ready: true
+  note: Ecosystem constraint of GLEIF; relevant only as exclusion/bridging case.
+- id: EBW-CON-003
+  verdict: ok
+  priority: P3
+  priority_reason: Ecosystem-specific identifier rule; not EBW architecture mandate
+  clusters:
+  - K06
+  - K17
+  - K01
+  applicability: provider-side
+  fidelity: ok
+  verification_ready: true
+  note: Rationale states project owner exclusion; keep as context, not as EBW requirement.
 - id: EBW-DAT-001
   verdict: reword
   priority: P3
@@ -940,6 +963,84 @@
   fidelity: broader-than-quote
   verification_ready: needs-source-check
   note: Terms of use and quality of service not in quote; consider merging with DAT-001.
+- id: EBW-DAT-003
+  verdict: reword
+  priority: P3
+  priority_reason: Domain ecosystem rule; secondary identifier example
+  clusters:
+  - K17
+  - K06
+  - K07
+  applicability: provider-side
+  fidelity: broader-than-quote
+  verification_ready: needs-source-check
+  corrected_statement:
+  - The Catena-X core service provider shall issue the Business Partner Number credential for a credential subject.
+  note: Quote 'It is issued by the CSP' is thin; 'attests the BPN' of subject is not in quote.
+- id: EBW-DAT-004
+  verdict: reword
+  priority: P3
+  priority_reason: Ecosystem identifier stability property
+  clusters:
+  - K17
+  - K06
+  applicability: provider-side
+  fidelity: ok
+  verification_ready: true
+  corrected_statement:
+  - The Business Partner Number shall remain structurally unchanged, shall not cease to exist and shall not be reassigned.
+  note: Wording uses 'never'; make testable; applies to Catena-X BPN issuer.
+- id: EBW-DAT-005
+  verdict: ok
+  priority: P3
+  priority_reason: Binds Member State registers; no wallet design impact
+  clusters:
+  - K06
+  - K01
+  applicability: authority-side
+  fidelity: ok
+  verification_ready: true
+  note: Enabler for automated retrieval; wallet only consumes.
+- id: EBW-DAT-006
+  verdict: ok
+  priority: P2
+  priority_reason: Register publication of EUID usable in mandate chains
+  clusters:
+  - K06
+  - K03
+  - K17
+  applicability: authority-side
+  fidelity: ok
+  verification_ready: true
+  note: Quote says 'shall be made publicly available'; statement adds name and legal form from article context; check.
+- id: EBW-DAT-007
+  verdict: reword
+  priority: P2
+  priority_reason: Authentic source consumed by wallets; Directive binds States
+  clusters:
+  - K06
+  - K03
+  - K05
+  applicability: authority-side
+  fidelity: broader-than-quote
+  verification_ready: needs-source-check
+  corrected_statement:
+  - Member States shall ensure that at least the information and documents listed in Article 19(2), including particulars of persons authorised to represent the company, are available free of charge through the system of interconnection of registers.
+  note: Quote only says 'at least the following'; item list not in quote. Overlaps EBW-DAT-008.
+- id: EBW-DAT-008
+  verdict: reword
+  priority: P2
+  priority_reason: Defines certificate attribute set a wallet may carry
+  clusters:
+  - K01
+  - K06
+  - K17
+  applicability: authority-side
+  fidelity: broader-than-quote
+  verification_ready: needs-source-check
+  corrected_statement:
+  - The EU Company Certificate for limited liability companies shall include the information listed in Article 16b(2) points (a) to (k), including EUID and persons authorised to represent.
+  note: Quote 'shall include the following information' lacks the list; verify attribute list against full_quote.
 - id: EBW-FUN-001
   verdict: ok
   priority: P1
@@ -947,6 +1048,7 @@
   clusters:
   - K12
   - K08
+  - K17
   applicability: core
   fidelity: ok
   verification_ready: needs-source-check (quote not stored in file)
@@ -957,6 +1059,7 @@
   clusters:
   - K06
   - K05
+  - K17
   applicability: provider-side
   fidelity: ok
   verification_ready: needs-source-check (one working day vs Art 10(5) wording)
@@ -985,6 +1088,7 @@
   clusters:
   - K01
   - K09
+  - K17
   applicability: core
   fidelity: ok
   verification_ready: needs-source-check (quote not stored in file)
@@ -1081,6 +1185,7 @@
   clusters:
   - K12
   - K15
+  - K17
   applicability: provider-side
   fidelity: ok
   verification_ready: needs-source-check (quote not stored in file)
@@ -1102,6 +1207,7 @@
   clusters:
   - K03
   - K16
+  - K17
   applicability: core
   fidelity: broader-than-quote
   verification_ready: 'needs-source-check (Art 6(2)(b) second indent: detection vs prevention, "real time")'
@@ -1210,6 +1316,7 @@
   clusters:
   - K12
   - K06
+  - K17
   applicability: provider-side
   fidelity: ok
   verification_ready: needs-source-check (quote not stored in file)
@@ -1239,7 +1346,7 @@
   clusters:
   - K06
   - K07
-  - K05
+  - K17
   applicability: authority-side
   fidelity: ok
   verification_ready: needs-source-check (quote not stored in file)
@@ -1456,6 +1563,80 @@
   fidelity: ok
   verification_ready: needs-source-check (Council text)
   note: Survivor of FUN-036 duplicate; also overlaps FUN-015 on real-time role conflicts.
+- id: EBW-FUN-044
+  verdict: ok
+  priority: P1
+  priority_reason: Proposal obligation shaping non-EU onboarding architecture
+  clusters:
+  - K06
+  - K17
+  - K13
+  applicability: core
+  fidelity: ok
+  verification_ready: needs-legal-review
+  note: Proposal text; check final adoption.
+- id: EBW-FUN-045
+  verdict: recategorise
+  priority: P2
+  priority_reason: Binds States; EUDI interoperability with registers
+  clusters:
+  - K15
+  - K02
+  - K08
+  applicability: wallet-general
+  fidelity: ok
+  verification_ready: true
+  verdict_arg: INT
+  note: Obligation lies on Member States; relates to EUDI, not EBW; category INT fits better than FUN.
+- id: EBW-FUN-046
+  verdict: recategorise
+  priority: P2
+  priority_reason: Register online filing channel enables B2G wallet use
+  clusters:
+  - K12
+  - K15
+  applicability: authority-side
+  fidelity: ok
+  verification_ready: true
+  verdict_arg: INT
+  note: Binds Member States; not a wallet function.
+- id: EBW-FUN-047
+  verdict: merge-with
+  priority: P3
+  priority_reason: Once-only duty for registers; weak design impact
+  clusters:
+  - K15
+  - K06
+  applicability: authority-side
+  fidelity: ok
+  verification_ready: true
+  verdict_arg: EBW-INT-058
+  note: 'Same article 13g(2a) as INT-058: once-only plus retrieval are two sides; merge or keep both atomic.'
+- id: EBW-FUN-048
+  verdict: recategorise
+  priority: P2
+  priority_reason: Defines certificate sourcing channels for wallets
+  clusters:
+  - K06
+  - K08
+  - K17
+  applicability: authority-side
+  fidelity: ok
+  verification_ready: true
+  verdict_arg: INT
+  note: Statement bundles application channel and electronic availability; split optional.
+- id: EBW-FUN-049
+  verdict: ok
+  priority: P2
+  priority_reason: Proposal mandate verification pattern; interface consumes mandates
+  clusters:
+  - K03
+  - K12
+  - K08
+  applicability: authority-side
+  fidelity: ok
+  verification_ready: needs-legal-review
+  note: COM(2026) 321 proposal; EU Inc, not EBW.
 - id: EBW-GOV-001
   verdict: merge-with
   priority: P3
@@ -1509,6 +1690,7 @@
   clusters:
   - K13
   - K05
+  - K17
   applicability: authority-side
   fidelity: ok
   verification_ready: 'yes'
@@ -1697,6 +1879,7 @@
   clusters:
   - K05
   - K06
+  - K17
   applicability: authority-side
   fidelity: ok
   verification_ready: 'yes'
@@ -1774,6 +1957,102 @@
   corrected_statement:
   - Authorisations granted through the European Business Wallet shall not create, limit or otherwise affect any power of attorney or legal mandate under national or Union law.
   note: Recital 18 is not an operative text; keep shall only if operative article exists.
+- id: EBW-GOV-029
+  verdict: ok
+  priority: P3
+  priority_reason: Commission procedure; no design impact
+  clusters:
+  - K15
+  - K13
+  - K17
+  applicability: authority-side
+  fidelity: ok
+  verification_ready: needs-legal-review
+  note: Companion of INT-009 and INT-051.
+- id: EBW-GOV-030
+  verdict: ok
+  priority: P2
+  priority_reason: Provider workflow duty in non-EU onboarding
+  clusters:
+  - K13
+  - K17
+  applicability: provider-side
+  fidelity: ok
+  verification_ready: needs-legal-review
+  note: Obligation on provider, not Member State; fits provider-side.
+- id: EBW-GOV-031
+  verdict: ok
+  priority: P2
+  priority_reason: Cross-border uniqueness check shapes identifier design
+  clusters:
+  - K17
+  - K06
+  - K13
+  applicability: authority-side
+  fidelity: ok
+  verification_ready: needs-legal-review
+  note: Related to TRU-015 and INT-007.
+- id: EBW-GOV-032
+  verdict: merge-with
+  priority: P3
+  priority_reason: Supervisory cooperation duty; design covered by TRU-015
+  clusters:
+  - K13
+  - K17
+  - K06
+  applicability: authority-side
+  fidelity: ok
+  verification_ready: needs-legal-review
+  verdict_arg: EBW-TRU-015
+  note: Same uniqueness objective as TRU-015 and GOV-031; statement adds 'unique identifier' beyond quote.
+- id: EBW-GOV-033
+  verdict: ok
+  priority: P3
+  priority_reason: Publication duty for Member States
+  clusters:
+  - K05
+  - K15
+  applicability: authority-side
+  fidelity: ok
+  verification_ready: true
+  note: Discovery of accepted identification means; consumed by wallet providers.
+- id: EBW-GOV-034
+  verdict: ok
+  priority: P3
+  priority_reason: Procedural limit on in-person presence
+  clusters:
+  - K15
+  - K06
+  applicability: authority-side
+  fidelity: ok
+  verification_ready: true
+  note: Quote only supports the first half ('only case-by-case'); 'all other steps online' needs source check.
+- id: EBW-GOV-035
+  verdict: ok
+  priority: P3
+  priority_reason: Filing deadline; procedural
+  clusters:
+  - K15
+  - K12
+  applicability: authority-side
+  fidelity: ok
+  verification_ready: true
+  note: Binds Member States; companies' deadline only indirect.
+- id: EBW-GOV-036
+  verdict: split
+  priority: P2
+  priority_reason: Limits relying-party refusals of register evidence
+  clusters:
+  - K15
+  - K05
+  - K12
+  applicability: relying-party-side
+  fidelity: ok
+  verification_ready: needs-source-check
+  corrected_statement:
+  - The requesting authority shall refuse a register document or EU Company Certificate only where the register does not confirm its origin or authenticity.
+  - The requesting authority shall notify the submitter within 10 working days of the register's reply when it refuses a document.
+  note: Quote covers only refusal condition; 10-day notice must be checked.
 - id: EBW-INT-001
   verdict: drop
   priority: P3
@@ -1792,7 +2071,7 @@
   clusters:
   - K08
   - K15
-  - K09
+  - K17
   applicability: core
   fidelity: ok
   verification_ready: needs-source-check (quote not stored in file)
@@ -1804,6 +2083,7 @@
   clusters:
   - K12
   - K06
+  - K17
   applicability: core
   fidelity: ok
   verification_ready: needs-source-check (quote not stored in file)
@@ -1816,7 +2096,7 @@
   clusters:
   - K01
   - K06
-  - K07
+  - K17
   applicability: provider-side
   fidelity: ok
   verification_ready: needs-legal-review (issuer-type mapping vs Art 8(3))
@@ -1830,6 +2110,7 @@
   clusters:
   - K06
   - K01
+  - K17
   applicability: core
   fidelity: ok
   verification_ready: needs-source-check (quote not stored in file)
@@ -1840,6 +2121,7 @@
   priority_reason: EUID reuse fixes identifier design
   clusters:
   - K06
+  - K17
   applicability: core
   fidelity: ok
   verification_ready: needs-source-check (quote not stored in file)
@@ -1850,6 +2132,7 @@
   priority_reason: Unique identifier fallback fixes identity model
   clusters:
   - K06
+  - K17
   applicability: core
   fidelity: ok
   verification_ready: needs-source-check (Art 9(2) vs 9(4) separately)
@@ -1864,7 +2147,7 @@
   clusters:
   - K08
   - K06
-  - K05
+  - K17
   applicability: authority-side
   fidelity: ok
   verification_ready: needs-source-check (quote not stored in file)
@@ -1879,6 +2162,7 @@
   clusters:
   - K15
   - K05
+  - K17
   applicability: authority-side
   fidelity: ok
   verification_ready: needs-source-check (quote not stored in file)
@@ -1926,6 +2210,7 @@
   clusters:
   - K12
   - K14
+  - K17
   applicability: provider-side
   fidelity: ok
   verification_ready: needs-source-check (quote not stored in file)
@@ -1937,7 +2222,7 @@
   clusters:
   - K15
   - K05
-  - K07
+  - K17
   applicability: authority-side
   fidelity: ok
   verification_ready: needs-source-check (quote not stored in file)
@@ -2170,7 +2455,7 @@
   clusters:
   - K01
   - K15
-  - K07
+  - K17
   applicability: provider-side
   fidelity: ok
   verification_ready: 'yes'
@@ -2306,6 +2591,7 @@
   clusters:
   - K01
   - K15
+  - K17
   applicability: authority-side
   fidelity: ok
   verification_ready: 'yes'
@@ -2318,6 +2604,7 @@
   clusters:
   - K01
   - K15
+  - K17
   applicability: authority-side
   fidelity: ok
   verification_ready: 'yes'
@@ -2328,6 +2615,7 @@
   clusters:
   - K01
   - K15
+  - K17
   applicability: provider-side
   fidelity: ok
   verification_ready: 'yes'
@@ -2338,7 +2626,7 @@
   clusters:
   - K06
   - K01
-  - K05
+  - K17
   applicability: authority-side
   fidelity: ok
   verification_ready: 'yes'
@@ -2353,6 +2641,231 @@
   fidelity: ok
   verification_ready: 'yes'
   note: Not technology-neutral; SD-JWT VC specific.
+- id: EBW-INT-050
+  verdict: ok
+  priority: P2
+  priority_reason: Identifier authority for Union entities
+  clusters:
+  - K17
+  - K06
+  applicability: authority-side
+  fidelity: ok
+  verification_ready: needs-legal-review
+  note: Complements INT-006/INT-007.
+- id: EBW-INT-051
+  verdict: merge-with
+  priority: P2
+  priority_reason: Conditions for third-country recognition; shapes interoperability
+  clusters:
+  - K15
+  - K17
+  - K05
+  applicability: authority-side
+  fidelity: broader-than-quote
+  verification_ready: needs-source-check
+  verdict_arg: EBW-INT-009
+  note: '''support at least identification, authentication, attestations'' not in quote; overlaps INT-009.'
+- id: EBW-INT-052
+  verdict: merge-with
+  priority: P3
+  priority_reason: Subset of certificate content already in DAT-008
+  clusters:
+  - K06
+  - K17
+  applicability: authority-side
+  fidelity: ok
+  verification_ready: true
+  verdict_arg: EBW-DAT-008
+  note: Quote only supports EUID; registration number and Member State come from DAT-008 list.
+- id: EBW-INT-053
+  verdict: reword
+  priority: P1
+  priority_reason: In-force minimum legal-person identity set
+  clusters:
+  - K06
+  - K02
+  - K17
+  applicability: wallet-general
+  fidelity: broader-than-quote
+  verification_ready: needs-source-check
+  corrected_statement:
+  - The provider of person identification data for a legal person shall include the current legal name and a unique identifier constructed in accordance with the technical specifications.
+  note: Quote says 'constructed by the sending Member State'; 'cross-border' qualifier unverified.
+- id: EBW-INT-054
+  verdict: ok
+  priority: P2
+  priority_reason: Optional secondary identifiers in PID; format detail
+  clusters:
+  - K17
+  - K06
+  - K01
+  applicability: wallet-general
+  fidelity: ok
+  verification_ready: needs-source-check
+  note: List of optional elements (VAT, EORI, excise) not in quote.
+- id: EBW-INT-055
+  verdict: ok
+  priority: P3
+  priority_reason: Customs authority rule; secondary identifier property
+  clusters:
+  - K17
+  - K06
+  applicability: authority-side
+  fidelity: ok
+  verification_ready: true
+  note: Binds customs authority; used only as uniqueness assumption.
+- id: EBW-INT-056
+  verdict: reword
+  priority: P2
+  priority_reason: Standard-derived encoding for seal certificates
+  clusters:
+  - K17
+  - K06
+  - K01
+  applicability: provider-side
+  fidelity: ok
+  verification_ready: needs-source-check
+  corrected_statement:
+  - Where the legal person semantics identifier is used, a certificate shall carry an LEI in organizationIdentifier prefixed 'LEI' with country code 'XG' followed by the LEI.
+  note: Quote shows only the 'LEI' prefix; 'XG' country code not in quote.
+- id: EBW-INT-057
+  verdict: reword
+  priority: P2
+  priority_reason: Ecosystem profile choice conflicts with minimisation
+  clusters:
+  - K09
+  - K01
+  - K17
+  applicability: core
+  fidelity: ok
+  verification_ready: needs-legal-review
+  corrected_statement:
+  - The holder shall present the EBWOID attributes only as a whole and shall not apply selective disclosure to them.
+  note: Tension with EBW-FUN-004 selective disclosure; flag for architecture decision.
+- id: EBW-INT-058
+  verdict: ok
+  priority: P3
+  priority_reason: Register-to-register channel; wallet consumes only
+  clusters:
+  - K15
+  - K06
+  - K08
+  applicability: authority-side
+  fidelity: ok
+  verification_ready: true
+  note: Overlaps FUN-047 (same article).
+- id: EBW-INT-059
+  verdict: ok
+  priority: P2
+  priority_reason: EUID minimum semantics a verifier parses
+  clusters:
+  - K17
+  - K06
+  applicability: wallet-general
+  fidelity: ok
+  verification_ready: true
+  note: Overlaps INT-060 and INT-006 partially.
+- id: EBW-INT-060
+  verdict: reword
+  priority: P2
+  priority_reason: Concrete EUID syntax for wallet parsing
+  clusters:
+  - K17
+  - K06
+  - K01
+  applicability: wallet-general
+  fidelity: broader-than-quote
+  verification_ready: needs-source-check
+  corrected_statement:
+  - The structure of the EUID shall be compliant with ISO 6523.
+  note: Quote supports only ISO 6523; mandatory elements and verification digit unverified.
+- id: EBW-INT-061
+  verdict: ok
+  priority: P3
+  priority_reason: Scoped to register exchange via the platform
+  clusters:
+  - K17
+  - K06
+  applicability: authority-side
+  fidelity: ok
+  verification_ready: true
+  note: Rationale 'wallet should carry it' is a design choice, not in source.
+- id: EBW-INT-062
+  verdict: ok
+  priority: P3
+  priority_reason: Commission implementing act mandate; no direct design duty
+  clusters:
+  - K06
+  - K15
+  - K17
+  applicability: authority-side
+  fidelity: ok
+  verification_ready: true
+  note: Deadline-style authority procedure.
+- id: EBW-INT-063
+  verdict: ok
+  priority: P3
+  priority_reason: Commission publication duty; no wallet design impact
+  clusters:
+  - K01
+  - K17
+  applicability: authority-side
+  fidelity: broader-than-quote
+  verification_ready: needs-source-check
+  note: Quote omits 'all official languages'; confirm full Article 16b(8) text.
+- id: EBW-INT-064
+  verdict: reword
+  priority: P2
+  priority_reason: Future specs will fix certificate and mandate format
+  clusters:
+  - K01
+  - K03
+  - K17
+  applicability: authority-side
+  fidelity: broader-than-quote
+  verification_ready: needs-source-check
+  corrected_statement:
+  - The Commission shall adopt implementing acts specifying the technical specifications, taxonomy and multilingual template of the EU Company Certificate and the digital EU power of attorney, including compatibility with the European Digital Identity Wallet.
+  note: Quote covers only compatibility clause; deadline and taxonomy unquoted. Rationale mixes publication-status finding into rationale.
+- id: EBW-INT-065
+  verdict: merge-with
+  priority: P2
+  priority_reason: Directive duty on registers; wallet-consumed output format
+  clusters:
+  - K01
+  - K17
+  - K15
+  applicability: authority-side
+  fidelity: ok
+  verification_ready: needs-legal-review
+  verdict_arg: EBW-TRU-095
+  note: Same wallet-compatibility duty as TRU-095 (certificate) and TRU-098 (authentication); extracts vs certificate differ only in object.
+- id: EBW-INT-066
+  verdict: ok
+  priority: P3
+  priority_reason: Register-to-register interconnection; indirect wallet effect
+  clusters:
+  - K08
+  - K01
+  - K17
+  applicability: authority-side
+  fidelity: ok
+  verification_ready: true
+  note: Overlaps EBW-INT-058 and NFR-054 only thematically.
+- id: EBW-INT-067
+  verdict: reword
+  priority: P2
+  priority_reason: Proposal; extends wallet-compatible company evidence to EU Inc
+  clusters:
+  - K01
+  - K03
+  - K17
+  applicability: authority-side
+  fidelity: broader-than-quote
+  verification_ready: needs-source-check
+  corrected_statement:
+  - The EU Company Certificate and the digital EU power of attorney of an EU Inc. shall be compatible with the European Digital Identity Wallets.
+  note: Quote says European Digital Identity Wallets, statement says Business Wallets 'where available'; unsupported. Near-duplicate of INT-064/TRU-095.
 - id: EBW-LEG-001
   verdict: reword
   priority: P1
@@ -2401,7 +2914,7 @@
   clusters:
   - K07
   - K15
-  - K06
+  - K17
   applicability: authority-side
   fidelity: broader-than-quote
   verification_ready: needs-source-check
@@ -2892,6 +3405,7 @@
   clusters:
   - K03
   - K01
+  - K17
   applicability: authority-side
   fidelity: ok
   verification_ready: 'yes'
@@ -2903,7 +3417,7 @@
   clusters:
   - K03
   - K05
-  - K04
+  - K17
   applicability: authority-side
   fidelity: broader-than-quote
   verification_ready: 'needs-source-check: wallet-compatibility part not in quote'
@@ -2918,6 +3432,7 @@
   clusters:
   - K03
   - K15
+  - K17
   applicability: relying-party-side
   fidelity: ok
   verification_ready: 'yes'
@@ -2958,6 +3473,78 @@
   verification_ready: 'yes'
   verdict_arg: EBW-LEG-049
   note: Second subparagraph of Article 4; could be kept as scope extension of LEG-049.
+- id: EBW-LEG-051
+  verdict: ok
+  priority: P2
+  priority_reason: Proposal; legal effect only, no design change
+  clusters:
+  - K06
+  - K17
+  applicability: core
+  fidelity: ok
+  verification_ready: needs-legal-review
+  note: Check statement says qualified EAA equivalence only; quote truncated.
+- id: EBW-LEG-052
+  verdict: ok
+  priority: P1
+  priority_reason: In force; forces non-wallet fallback channels
+  clusters:
+  - K15
+  - K17
+  applicability: relying-party-side
+  fidelity: ok
+  verification_ready: true
+  note: Obligation is on service providers, not the wallet; drives counterparty-without-wallet design.
+- id: EBW-LEG-053
+  verdict: reword
+  priority: P1
+  priority_reason: In force; legal weight of registered delivery evidence
+  clusters:
+  - K12
+  - K10
+  - K17
+  applicability: provider-side
+  fidelity: broader-than-quote
+  verification_ready: needs-source-check
+  corrected_statement:
+  - Data sent and received using a qualified electronic registered delivery service shall enjoy the presumption of integrity, of sending by the identified sender, of receipt by the identified addressee, and of the accuracy of the date and time.
+  note: Quote ends at the sender clause; verify full list. 'shall enjoy' is a legal effect, not a design duty.
+- id: EBW-LEG-054
+  verdict: ok
+  priority: P2
+  priority_reason: In force; governs non-EU trust service acceptance
+  clusters:
+  - K17
+  - K05
+  - K15
+  applicability: authority-side
+  fidelity: ok
+  verification_ready: true
+  note: The only-where restriction is implied by Article structure; fine.
+- id: EBW-LEG-055
+  verdict: ok
+  priority: P3
+  priority_reason: Legal formality exemption; no design impact
+  clusters:
+  - K17
+  - K15
+  applicability: authority-side
+  fidelity: ok
+  verification_ready: true
+- id: EBW-LEG-056
+  verdict: reword
+  priority: P2
+  priority_reason: Proposal; EUID in communications, local template impact
+  clusters:
+  - K17
+  - K06
+  - K12
+  applicability: core
+  fidelity: ok
+  verification_ready: needs-source-check
+  corrected_statement:
+  - Business-related communication of an EU Inc., in digital or paper form, shall contain company name, EUID, registered office address, digital correspondence address and digital presence address.
+  note: Verify list of items in Article 29(1) is complete; 'digital presence address' definition unclear.
 - id: EBW-NFR-001
   verdict: ok
   priority: P1
@@ -3604,6 +4191,31 @@
   corrected_statement:
   - The national register of wallet-relying parties shall provide security functions that ensure the availability and integrity of its common API and the information available through it.
   note: Authority-side register operator duty; not design of EBW.
+- id: EBW-NFR-053
+  verdict: ok
+  priority: P3
+  priority_reason: Binds registers and authorities, not wallets
+  clusters:
+  - K09
+  - K17
+  applicability: authority-side
+  fidelity: ok
+  verification_ready: true
+  note: Rationale claims wallet-side relying parties must respect it; not supported by quote.
+- id: EBW-NFR-054
+  verdict: reword
+  priority: P3
+  priority_reason: BRIS operational standard; wallet impact only by mirroring
+  clusters:
+  - K11
+  - K10
+  - K08
+  applicability: authority-side
+  fidelity: broader-than-quote
+  verification_ready: needs-source-check
+  corrected_statement:
+  - Communication and distribution of information via BRIS shall include measures ensuring non-repudiation of origin and of receipt, confidentiality, integrity, security event logging, and authentication and authorisation of users and systems.
+  note: Quote covers non-repudiation only; other measures need quotes. Standard-derived (S), not a wallet duty.
 - id: EBW-OPS-001
   verdict: ok
   priority: P2
@@ -3718,6 +4330,7 @@
   clusters:
   - K07
   - K09
+  - K17
   applicability: wallet-general
   fidelity: ok
   verification_ready: 'yes'
@@ -4045,6 +4658,7 @@
   clusters:
   - K02
   - K03
+  - K17
   applicability: core
   fidelity: broader-than-quote
   verification_ready: 'needs-source-check: assurance level substantial or high'
@@ -4092,6 +4706,7 @@
   clusters:
   - K03
   - K10
+  - K17
   applicability: core
   fidelity: ok
   verification_ready: needs-legal-review
@@ -4126,6 +4741,7 @@
   priority_reason: Identifier issuance rule; overlaps INT-007
   clusters:
   - K06
+  - K17
   applicability: provider-side
   fidelity: ok
   verification_ready: needs-legal-review
@@ -4167,6 +4783,7 @@
   clusters:
   - K06
   - K07
+  - K17
   applicability: provider-side
   fidelity: ok
   verification_ready: 'yes'
@@ -4177,6 +4794,7 @@
   clusters:
   - K06
   - K14
+  - K17
   applicability: provider-side
   fidelity: broader-than-quote
   verification_ready: 'needs-source-check: other four methods not in quote'
@@ -4190,7 +4808,7 @@
   clusters:
   - K06
   - K07
-  - K01
+  - K17
   applicability: provider-side
   fidelity: broader-than-quote
   verification_ready: 'needs-source-check: other methods not in quote'
@@ -4203,6 +4821,7 @@
   priority_reason: 24 h latency is a local operational target
   clusters:
   - K07
+  - K17
   applicability: provider-side
   fidelity: broader-than-quote
   verification_ready: 'yes'
@@ -4224,6 +4843,7 @@
   priority_reason: Cross-reference only; no own obligation
   clusters:
   - K07
+  - K17
   applicability: provider-side
   fidelity: ok
   verification_ready: 'yes'
@@ -4350,7 +4970,7 @@
   clusters:
   - K04
   - K05
-  - K07
+  - K17
   applicability: provider-side
   fidelity: broader-than-quote
   verification_ready: 'needs-source-check: accepted-solution check not in quote'
@@ -4388,6 +5008,7 @@
   clusters:
   - K05
   - K09
+  - K17
   applicability: authority-side
   fidelity: ok
   verification_ready: 'needs-source-check: intended-use and policy items not in quote'
@@ -4740,7 +5361,7 @@
   clusters:
   - K06
   - K02
-  - K04
+  - K17
   applicability: core
   fidelity: ok
   verification_ready: 'yes'
@@ -4777,7 +5398,7 @@
   clusters:
   - K04
   - K02
-  - K14
+  - K17
   applicability: core
   fidelity: broader-than-quote
   verification_ready: needs-source-check
@@ -4867,3 +5488,279 @@
   fidelity: ok
   verification_ready: needs-source-check
   note: Automated, reliable and free of charge not in the visible quote; check full quote. Overlaps EBW-TRU-023 and EBW-TRU-041.
+- id: EBW-TRU-078
+  verdict: ok
+  priority: P1
+  priority_reason: Proposal; primary identity credential shapes EBW model
+  clusters:
+  - K06
+  - K07
+  - K02
+  applicability: core
+  fidelity: ok
+  verification_ready: needs-legal-review
+- id: EBW-TRU-079
+  verdict: ok
+  priority: P2
+  priority_reason: Proposal; authentic-source discovery list
+  clusters:
+  - K05
+  - K06
+  applicability: authority-side
+  fidelity: ok
+  verification_ready: needs-legal-review
+- id: EBW-TRU-080
+  verdict: merge-with
+  priority: P3
+  priority_reason: Publication procedure for Commission
+  clusters:
+  - K17
+  - K05
+  applicability: authority-side
+  fidelity: ok
+  verification_ready: needs-legal-review
+  verdict_arg: EBW-INT-051
+  note: Publication of equivalence list belongs with the equivalence act requirement (INT-051/INT-009).
+- id: EBW-TRU-081
+  verdict: merge-with
+  priority: P2
+  priority_reason: Proposal; uniqueness rule for third-country identity
+  clusters:
+  - K17
+  - K06
+  applicability: authority-side
+  fidelity: ok
+  verification_ready: needs-legal-review
+  verdict_arg: EBW-TRU-015
+  note: Duplicate of TRU-015 (one set of identification data for third-country operators).
+- id: EBW-TRU-082
+  verdict: ok
+  priority: P2
+  priority_reason: In force; assurance vocabulary baseline
+  clusters:
+  - K17
+  - K14
+  applicability: authority-side
+  fidelity: ok
+  verification_ready: true
+  note: Binds notified schemes; wallet consumes the level.
+- id: EBW-TRU-083
+  verdict: ok
+  priority: P1
+  priority_reason: In force; assurance level high shapes wallet architecture
+  clusters:
+  - K14
+  - K04
+  - K17
+  applicability: wallet-general
+  fidelity: ok
+  verification_ready: true
+  note: Applies to natural-person EUDI wallets; EBW applicability to be decided in K02.
+- id: EBW-TRU-084
+  verdict: ok
+  priority: P2
+  priority_reason: Standard-derived identity proofing detail
+  clusters:
+  - K17
+  - K06
+  - K14
+  applicability: provider-side
+  fidelity: ok
+  verification_ready: needs-source-check
+  note: Statement combines name, legal form, identifier and evidence check; quote covers only identifier. Consider split.
+- id: EBW-TRU-085
+  verdict: ok
+  priority: P2
+  priority_reason: Standard-derived; revocable representation binding
+  clusters:
+  - K03
+  - K07
+  - K17
+  applicability: provider-side
+  fidelity: ok
+  verification_ready: true
+  note: Requirement is testable but passive; actor is eID scheme provider.
+- id: EBW-TRU-086
+  verdict: split
+  priority: P2
+  priority_reason: Ecosystem rulebook; binds secondary identifiers to primary
+  clusters:
+  - K17
+  - K05
+  - K01
+  applicability: core
+  fidelity: broader-than-quote
+  verification_ready: needs-source-check
+  corrected_statement:
+  - The issuer of a non-qualified electronic attestation of attributes under the rulebook shall include its EBWOID in the header of every such attestation.
+  - The relying party shall verify the EBWOID in the header of an attestation of this kind before relying on it.
+  note: Quote only supports issuer inclusion; relying-party verification is unquoted. Rulebook scope (rb-duns) is narrower than 'every EAA'.
+- id: EBW-TRU-087
+  verdict: ok
+  priority: P3
+  priority_reason: Ecosystem rulebook; GS1-specific credential chain
+  clusters:
+  - K17
+  - K01
+  - K06
+  applicability: provider-side
+  fidelity: ok
+  verification_ready: true
+  note: Technology-specific credential type names should stay out of statement; currently neutral.
+- id: EBW-TRU-088
+  verdict: reword
+  priority: P2
+  priority_reason: In force; register-side eID acceptance, wallet-consumed
+  clusters:
+  - K17
+  - K15
+  - K06
+  applicability: authority-side
+  fidelity: broader-than-quote
+  verification_ready: needs-source-check
+  corrected_statement:
+  - Member States shall ensure that electronic identification means issued under an approved scheme, or issued elsewhere and recognised for cross-border authentication, can be used by applicants who are Union citizens in online company procedures.
+  note: Statement drops the 'Union citizens' restriction present in quote.
+- id: EBW-TRU-089
+  verdict: ok
+  priority: P3
+  priority_reason: Directive procedural rule for Member States
+  clusters:
+  - K03
+  - K17
+  applicability: authority-side
+  fidelity: ok
+  verification_ready: true
+  note: Rationale implication about wallet evidence is derived, not in quote.
+- id: EBW-TRU-090
+  verdict: ok
+  priority: P3
+  priority_reason: Member State procedural rule
+  clusters:
+  - K17
+  - K15
+  applicability: authority-side
+  fidelity: ok
+  verification_ready: true
+  note: Rationale claims wallet must produce qualified signatures; derived, not in quote.
+- id: EBW-TRU-091
+  verdict: ok
+  priority: P3
+  priority_reason: Branch registration procedure for Member States
+  clusters:
+  - K17
+  - K06
+  applicability: authority-side
+  fidelity: ok
+  verification_ready: true
+- id: EBW-TRU-092
+  verdict: ok
+  priority: P2
+  priority_reason: In force; verifiable filings drive seal and signature use
+  clusters:
+  - K17
+  - K08
+  applicability: authority-side
+  fidelity: ok
+  verification_ready: true
+- id: EBW-TRU-093
+  verdict: ok
+  priority: P1
+  priority_reason: In force; EUID is primary legal-person identifier
+  clusters:
+  - K17
+  - K06
+  applicability: authority-side
+  fidelity: ok
+  verification_ready: true
+- id: EBW-TRU-094
+  verdict: split
+  priority: P1
+  priority_reason: In force; cross-border company evidence anchors EBW onboarding
+  clusters:
+  - K17
+  - K06
+  - K15
+  applicability: authority-side
+  fidelity: ok
+  verification_ready: needs-source-check
+  corrected_statement:
+  - Member States shall ensure that registers issue EU Company Certificates.
+  - Member States shall ensure that the EU Company Certificate is accepted in all Member States as sufficient evidence, at the time of issuance, of the company's incorporation and listed information.
+  note: Quote supports only acceptance clause; issuance by registers needs its own quote. Overlap with EBW-FUN-048.
+- id: EBW-TRU-095
+  verdict: split
+  priority: P1
+  priority_reason: In force; certificate format and authentication shape wallet storage
+  clusters:
+  - K01
+  - K17
+  - K05
+  applicability: authority-side
+  fidelity: broader-than-quote
+  verification_ready: needs-source-check
+  corrected_statement:
+  - Member States shall ensure that the electronic EU Company Certificate is authenticated by means of trust services under Regulation (EU) No 910/2014.
+  - Member States shall ensure that the electronic EU Company Certificate is compatible with the European Digital Identity Wallet.
+  note: Quote supports only authentication; compatibility clause needs quote. Duplicates EBW-INT-065 and LEG-046 pattern.
+- id: EBW-TRU-096
+  verdict: ok
+  priority: P3
+  priority_reason: Paper form detail; limited wallet relevance
+  clusters:
+  - K17
+  - K12
+  applicability: authority-side
+  fidelity: ok
+  verification_ready: true
+- id: EBW-TRU-097
+  verdict: ok
+  priority: P2
+  priority_reason: In force; ex-ante verification underpins mandate trust
+  clusters:
+  - K03
+  - K17
+  - K05
+  applicability: authority-side
+  fidelity: ok
+  verification_ready: true
+  note: Related to LEG-045/046/047 and TRU-058; not a duplicate.
+- id: EBW-TRU-098
+  verdict: merge-with
+  priority: P2
+  priority_reason: In force; authenticated register extracts usable as evidence
+  clusters:
+  - K01
+  - K17
+  - K05
+  applicability: authority-side
+  fidelity: broader-than-quote
+  verification_ready: needs-source-check
+  verdict_arg: EBW-INT-065
+  note: Quote gives purpose clause only; 'trust services' authentication not in quote. Same object as INT-065.
+- id: EBW-TRU-099
+  verdict: ok
+  priority: P1
+  priority_reason: Proposal; makes EBW signing function a filing channel
+  clusters:
+  - K08
+  - K04
+  - K17
+  applicability: core
+  fidelity: ok
+  verification_ready: needs-legal-review
+  note: The if-applicable condition is ambiguous; clarify it.
+- id: EBW-TRU-100
+  verdict: reword
+  priority: P1
+  priority_reason: Proposal; wallet as authentication channel for filings
+  clusters:
+  - K17
+  - K15
+  - K08
+  applicability: core
+  fidelity: broader-than-quote
+  verification_ready: needs-source-check
+  corrected_statement:
+  - All filings of documents and information with the business register of an EU Inc. shall be made fully online using electronic identification means under Regulation (EU) No 910/2014 or Business Wallets.
+  note: Quote truncated at 'Business'; confirm 'Wallets' wording. Scope limited to EU Inc.
