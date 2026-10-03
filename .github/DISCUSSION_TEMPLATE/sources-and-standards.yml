@@ -1,0 +1,37 @@
+title: "[Source] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Suggest or challenge a source. The baseline uses only official documents, standards, ecosystem specifications and peer-reviewed papers (business cases only). Blogs, press and vendor material can be mentioned as pointers but are not cited as authority.
+  - type: input
+    id: link
+    attributes:
+      label: Link to the primary document
+      placeholder: https://
+    validations:
+      required: true
+  - type: dropdown
+    id: class
+    attributes:
+      label: Kind of source
+      options:
+        - Law, proposal or official document
+        - Standard or technical specification
+        - Ecosystem specification
+        - Peer-reviewed paper or institutional working paper
+        - Other (explain below)
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version, date and clause or section
+      description: For example ETSI TS 119 612 V2.4.1, Article 22.
+  - type: textarea
+    id: why
+    attributes:
+      label: What does it change or confirm on this site?
+      description: Name the page, concept, requirement or claim.
+    validations:
+      required: true

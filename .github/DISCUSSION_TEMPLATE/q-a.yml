@@ -1,0 +1,42 @@
+title: "[Question] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Ask a question about a concept, a requirement, a source or the European Business Wallet. Please search existing discussions first. Legal content on this site is analysis, not legal advice.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Concept article
+        - Requirement
+        - Business case
+        - Ecosystem or initiative
+        - Legal source or timeline
+        - Standard or specification
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: page
+    attributes:
+      label: Page or ID
+      description: URL of the page, a requirement ID such as EBW-TRU-001, or a concept ID such as CON-TRUST-PLANE.
+  - type: textarea
+    id: question
+    attributes:
+      label: Your question
+      description: What are you trying to understand or decide?
+    validations:
+      required: true
+  - type: dropdown
+    id: role
+    attributes:
+      label: Your perspective
+      options:
+        - Policy maker
+        - Researcher
+        - Implementer
+        - Business leader
+        - Other

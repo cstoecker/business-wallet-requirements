@@ -1,53 +1,66 @@
-# Requirement categories (docs/01 section 2). code is used in IDs EBW-<CODE>-<NNN>.
+# Requirement categories (docs/01 section 2). code is used in IDs EBW-<CODE>-<NNN>. icon: Untitled UI icon name in assets/icons.
 - code: FUN
   name: Functional
   scope: 'What the wallet and its services must do: identify, authenticate, present, sign and seal, deliver, manage mandates, look up directories.'
   plane: Trust, control and data planes
+  icon: cube-02
 - code: NFR
   name: Non-functional
   scope: 'Qualities: security, privacy, availability, performance, usability, accessibility, auditability, portability.'
   plane: All planes
+  icon: shield-tick
 - code: INT
   name: Interoperability and semantics
   scope: Protocols, formats, vocabularies and mappings that let wallets, issuers, verifiers and ecosystems work together.
   plane: Data plane
+  icon: dataflow-03
 - code: TRU
   name: Trust and assurance
   scope: Trust anchors, trusted lists, qualified services, levels of assurance, status and revocation.
   plane: Trust plane
+  icon: check-verified-02
 - code: CER
   name: Certification and conformity
   scope: Audits, conformity assessment, certification schemes, testing and evidence.
   plane: Governance and assurance
+  icon: certificate-02
 - code: GOV
   name: Governance
   scope: Roles, supervision, liability, rulebooks, change control, onboarding of participants.
   plane: Governance
+  icon: users-check
 - code: LEG
   name: Legal and compliance
   scope: Obligations derived from GDPR, NIS2, DORA, CRA, AI Act and sector law.
   plane: Governance
+  icon: scales-02
 - code: DAT
   name: Data space and sovereignty
   scope: Usage policies, contract negotiation, connector and wallet binding, DSP and DCP profiles.
   plane: Control and data planes
+  icon: database-02
 - code: OPS
   name: Operational and service
   scope: Service levels, incident handling, key ceremonies, lifecycle, business continuity.
   plane: Governance and assurance
+  icon: settings-02
 - code: DOM
   name: Domain-specific
   scope: Overlays per industry, such as product passports, automotive, pharma and AI.
   plane: Per domain
+  icon: package
 - code: BIZ
   name: Business and adoption
   scope: Cost, onboarding effort, access for small firms, migration from existing solutions.
   plane: Governance
+  icon: coins-03
 - code: CON
   name: Constraints and assumptions
   scope: Mandated technology, legal limits, explicit assumptions.
   plane: All planes
+  icon: lock-03
 - code: TRN
   name: Transition and migration
   scope: Coexistence with legacy solutions and phased roll-out.
   plane: All planes
+  icon: flag-03

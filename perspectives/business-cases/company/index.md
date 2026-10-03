@@ -7,6 +7,7 @@ permalink: /perspectives/business-cases/company/
 description: "What a European Business Wallet could cost and save one company: per-entity costs and savings from the Commission impact assessment for micro, small and large firms, stand-alone service prices, barriers, fraud exposure, and what the sources do not quantify."
 keywords: [business wallet cost, SME administrative burden, company business case, KYB cost, wallet licence cost, impact assessment]
 schema_type: TechArticle
+toc: true
 about: [European Business Wallet, SME, Cost benefit analysis]
 last_verified: "2026-10-03"
 figures: [company-cost-benefit]

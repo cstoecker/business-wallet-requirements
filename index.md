@@ -34,10 +34,10 @@ On 19 November 2025 the European Commission proposed European Business Wallets (
 ## Where to start
 
 <div class="path-grid">
-<a class="path-card" href="{{ '/legal/' | relative_url }}"><strong>Policy makers</strong><span>What the proposal says, its status and what changed. Start with the legal overview and the business cases.</span></a>
-<a class="path-card" href="{{ '/concepts/' | relative_url }}"><strong>Researchers</strong><span>Concepts with sources, figures and open questions; the method and the knowledge graph.</span></a>
-<a class="path-card" href="{{ '/requirements/' | relative_url }}"><strong>Implementers</strong><span>Requirements by category with sources and verification criteria; Excel download; ecosystems and standards.</span></a>
-<a class="path-card" href="{{ '/perspectives/business-cases/' | relative_url }}"><strong>Business leaders</strong><span>Costs, savings and risks at economy, ecosystem and company level, with every number sourced.</span></a>
+<a class="path-card" href="{{ '/legal/' | relative_url }}">{% include icon.html name="scales-02" size="lg" %}<strong>Policy makers</strong><span>What the proposal says, its status and what changed. Start with the legal overview and the business cases.</span></a>
+<a class="path-card" href="{{ '/concepts/' | relative_url }}">{% include icon.html name="microscope" size="lg" %}<strong>Researchers</strong><span>Concepts with sources, figures and open questions; the method and the knowledge graph.</span></a>
+<a class="path-card" href="{{ '/requirements/' | relative_url }}">{% include icon.html name="code-02" size="lg" %}<strong>Implementers</strong><span>Requirements by category with sources and verification criteria; Excel download; ecosystems and standards.</span></a>
+<a class="path-card" href="{{ '/perspectives/business-cases/' | relative_url }}">{% include icon.html name="briefcase-02" size="lg" %}<strong>Business leaders</strong><span>Costs, savings and risks at economy, ecosystem and company level, with every number sourced.</span></a>
 </div>
 
 ## Recent developments

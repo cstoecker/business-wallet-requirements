@@ -7,6 +7,7 @@ permalink: /perspectives/business-cases/macro/
 description: "What the Commission impact assessment SWD(2025) 837 and academic evidence say about EU-wide savings, costs and trust effects of European Business Wallets: EUR 150 billion per year as an upper bound, EUR 58 billion as a lower bound, and the stated limits of the estimate."
 keywords: [European Business Wallet macroeconomic impact, EUR 150 billion savings, SWD(2025) 837, impact assessment, administrative burden, economic benefit]
 schema_type: TechArticle
+toc: true
 about: [European Business Wallet, Economic impact, Administrative burden]
 last_verified: "2026-10-03"
 figures: [macro-range]

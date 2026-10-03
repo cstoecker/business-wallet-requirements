@@ -1,0 +1,22 @@
+# Navigation icons by page path (relative to the base URL); Untitled UI icon names in assets/icons.
+/: home-line
+/concepts/: lightbulb-02
+/research/: file-search-02
+/changelog/: clock-refresh
+/downloads/: download-04
+/figures/: image-03
+/about/: info-circle
+/requirements/: check-done-02
+/requirements/methodology/: clipboard-check
+/perspectives/: eye
+/perspectives/business-cases/: coins-03
+/legal/: scales-02
+/domains/: grid-03
+/architecture/: layers-three-02
+/traceability/: dataflow-03
+/ecosystem/: globe-02
+/ecosystem/initiatives/: building-05
+/ecosystem/standards/: target-02
+/ecosystem/certification/: award-03
+/ecosystem/governance/: users-check
+discussions: message-chat-circle

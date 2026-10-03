@@ -7,6 +7,7 @@ permalink: /perspectives/business-cases/ecosystem/
 description: "What official impact assessments say about the value and cost of processes that depend on reliable organisation identity: product passports, data spaces, customs and trade documents, e-invoicing and VAT, and incident reporting. Modelled figures with their basis, overlaps and gaps."
 keywords: [digital product passport cost, data space business case, customs reform savings, ViDA e-invoicing savings, single entry point incident reporting, European Business Wallet ecosystems]
 schema_type: TechArticle
+toc: true
 about: [Digital Product Passport, Data spaces, Customs, E-invoicing, Incident reporting]
 last_verified: "2026-10-03"
 faq:

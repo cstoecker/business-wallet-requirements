@@ -1,0 +1,27 @@
+title: "[Idea] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Suggest an improvement to the site, the method or the data: a new concept, a better figure, a missing category, a new download.
+  - type: textarea
+    id: idea
+    attributes:
+      label: Your idea
+    validations:
+      required: true
+  - type: textarea
+    id: benefit
+    attributes:
+      label: Who benefits and how?
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Content
+        - Navigation and design
+        - Downloads and data
+        - Method and review
+        - Accessibility
+        - Other

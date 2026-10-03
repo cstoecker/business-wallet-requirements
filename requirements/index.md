@@ -24,7 +24,7 @@ Each requirement is atomic, technology-neutral and traced to a source. They are 
 {% assign n = site.requirements | where: "category", c.code | size %}
 {% assign k = site.data.graph.ecosystem-requirements | where: "category", c.code | size %}
 <a class="cat-card" href="#all" data-cat="{{ c.code }}" aria-label="{{ c.name }}: {{ n }} requirements, {{ k }} candidates">
-  <span class="cat-code">{{ c.code }}</span>
+  <span class="cat-head">{% include icon.html name=c.icon size="lg" %}<span class="cat-code">{{ c.code }}</span></span>
   <strong>{{ c.name }}</strong>
   <span class="cat-scope">{{ c.scope }}</span>
   <span class="cat-count">{{ n }} requirement{% if n != 1 %}s{% endif %} · {{ k }} candidate{% if k != 1 %}s{% endif %}</span>

@@ -1,0 +1,2 @@
+{%- comment -%} Untitled UI icon (outline, 1.5px, currentColor) as a CSS mask. Usage: {% include icon.html name="home-line" size="md" %} {%- endcomment -%}
+<span class="icon icon-{{ include.size | default: 'md' }}" style="--icon: url('{{ '/assets/icons/' | append: include.name | append: '.svg' | relative_url }}')" aria-hidden="true"></span>

@@ -12,3 +12,46 @@
     {%- if site.privacy_url %} · <a href="{{ site.privacy_url }}">Privacy</a>{% endif %}
   </p>
 </footer>
+<script>
+(function () {
+  var html = document.documentElement;
+  // tooltips and accessible names for icon-only navigation
+  document.querySelectorAll(".nav-list-link").forEach(function (a) { var t = a.textContent.trim(); if (t) { a.setAttribute("title", t); } });
+  // navigation icons (Untitled UI, outline); inserted as elements so the active link shows them too
+  var base = "{{ site.baseurl }}", icons = {{ site.data.nav_icons | jsonify }};
+  document.querySelectorAll(".nav-list-link").forEach(function (a) {
+    if (a.querySelector(".nav-ic")) return;
+    var u; try { u = new URL(a.href, location.href); } catch (e) { return; }
+    var key = u.origin === location.origin ? (u.pathname.indexOf(base) === 0 ? u.pathname.slice(base.length) : u.pathname) : (u.pathname.indexOf("/discussions") > -1 ? "discussions" : "");
+    key = key.replace(/index\.html$/, "");
+    var name = icons[key]; if (!name) return;
+    var s = document.createElement("span"); s.className = "nav-ic"; s.setAttribute("aria-hidden", "true");
+    s.style.setProperty("--icon", 'url("{{ "/assets/icons/" | relative_url }}' + name + '.svg")');
+    a.insertBefore(s, a.firstChild);
+  });
+  // mark the current page in the navigation
+  var here = location.pathname.replace(/index\.html$/, "");
+  document.querySelectorAll(".nav-list-link").forEach(function (a) { try { var u = new URL(a.href, location.href); if (u.origin === location.origin && u.pathname.replace(/index\.html$/, "") === here) { a.setAttribute("aria-current", "page"); } } catch (e) {} });
+  // collapse toggle
+  var header = document.querySelector(".site-header");
+  if (header && !header.querySelector(".nav-toggle")) {
+    var b = document.createElement("button");
+    b.type = "button"; b.className = "nav-toggle";
+    b.innerHTML = '<span class="icon" aria-hidden="true"></span>';
+    function sync() { var c = html.classList.contains("nav-collapsed"); b.setAttribute("aria-pressed", c ? "true" : "false"); b.setAttribute("aria-label", c ? "Expand navigation" : "Collapse navigation to icons"); b.title = c ? "Expand navigation" : "Collapse navigation to icons"; }
+    b.addEventListener("click", function () { html.classList.toggle("nav-collapsed"); try { localStorage.setItem("ebw-nav", html.classList.contains("nav-collapsed") ? "collapsed" : "expanded"); } catch (e) {} sync(); });
+    header.appendChild(b); sync();
+  }
+  // "On this page" for long articles
+  {%- if page.toc or page.layout == "concept" or page.layout == "requirement" %}
+  var content = document.querySelector(".main-content");
+  var hs = content ? content.querySelectorAll("h2[id]") : [];
+  if (hs.length > 3 && !document.querySelector(".toc-box")) {
+    var d = document.createElement("details"); d.className = "toc-box"; d.open = window.innerWidth > 800;
+    var ol = ""; hs.forEach(function (h) { ol += '<li><a href="#' + h.id + '">' + h.textContent.replace(/\s+/g, " ").trim() + "</a></li>"; });
+    d.innerHTML = "<summary>On this page</summary><ol>" + ol + "</ol>";
+    var first = content.querySelector("h2"); if (first) first.parentNode.insertBefore(d, first);
+  }
+  {%- endif %}
+})();
+</script>

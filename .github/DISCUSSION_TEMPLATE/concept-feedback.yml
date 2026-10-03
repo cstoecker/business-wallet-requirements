@@ -1,0 +1,44 @@
+title: "[Concept feedback] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Give feedback on a concept article. One discussion per concept keeps the thread useful. Concepts are listed on the concepts page of the site.
+  - type: input
+    id: concept
+    attributes:
+      label: Concept
+      description: Title or ID, for example Trust plane (CON-TRUST-PLANE).
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Type of feedback
+      options:
+        - Something is unclear
+        - Something is wrong
+        - Something is missing
+        - A figure should change
+        - Suggest an example
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: Quote the sentence or section and say what should change.
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: Source for your point (optional)
+      description: Official document, standard, specification or peer-reviewed paper, with article or clause number and link.
+  - type: checkboxes
+    id: consent
+    attributes:
+      label: Publication
+      options:
+        - label: I agree that the maintainers may quote this feedback and credit me by my GitHub name.

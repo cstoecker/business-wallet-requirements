@@ -44,7 +44,7 @@ for f in glob.glob(f"{site}/**/*.html", recursive=True):
                 t = n.get("@type"); types += t if isinstance(t, list) else [t]
             for need in ("Organization", "WebSite"):
                 if need not in types: errors.append(f"{rel}: JSON-LD lacks {need}")
-            if not ({"WebPage", "TechArticle", "CollectionPage", "Article"} & set(types)): errors.append(f"{rel}: JSON-LD lacks a page node")
+            if not ({"WebPage", "TechArticle", "CollectionPage", "Article", "AboutPage", "ContactPage"} & set(types)): errors.append(f"{rel}: JSON-LD lacks a page node")
             ids = [n["@id"] for n in j["@graph"] if "@id" in n]
             if len(ids) != len(set(ids)): errors.append(f"{rel}: duplicate @id in JSON-LD")
             if rel.startswith("figures/") and rel != "figures/index.html" and "ImageObject" not in types: errors.append(f"{rel}: figure page lacks ImageObject")

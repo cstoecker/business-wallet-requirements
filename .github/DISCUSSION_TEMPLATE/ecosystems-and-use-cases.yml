@@ -1,0 +1,38 @@
+title: "[Ecosystem] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Tell us how your ecosystem, sector or project uses or plans to use organisation identity and credentials. Please do not share confidential information.
+  - type: input
+    id: ecosystem
+    attributes:
+      label: Ecosystem, sector or project
+    validations:
+      required: true
+  - type: textarea
+    id: usecase
+    attributes:
+      label: Use case
+      description: Who needs to prove what to whom, and why?
+    validations:
+      required: true
+  - type: textarea
+    id: requirements
+    attributes:
+      label: Requirements or constraints you see
+      description: With references to official documents or specifications where possible.
+  - type: dropdown
+    id: stage
+    attributes:
+      label: Stage
+      options:
+        - Idea
+        - Pilot
+        - Production
+        - Not applicable
+  - type: input
+    id: contact
+    attributes:
+      label: Preferred contact (optional)
+      description: A public handle or email address; anything you enter here is visible to everyone.
