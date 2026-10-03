@@ -1,0 +1,18 @@
+# Architecture decision areas (clusters). Each requirement is tagged with 1 to 3 clusters (primary first) in
+# _data/review/requirement-review.yml. decision links a cluster to an entry in decisions.yml (or null).
+- {code: K01, name: Credential data model and formats, decision: DEC-01, summary: "Semantics, linked data, selective-disclosure formats, schemas and machine or AI processing of credential content."}
+- {code: K02, name: Wallet subject model, decision: DEC-02, summary: "Natural-person wallet used by employees, legal-person wallet, or a hybrid: who holds the wallet and who is the subject."}
+- {code: K03, name: Mandates, representation and delegation, decision: DEC-02, summary: "How natural persons and agents act for an organisation: mandates, multi-user authorisation, limits and revocation."}
+- {code: K04, name: Key custody and wallet architecture, decision: DEC-03, summary: "Device, hosted or organisational wallet; hardware security modules; remote sealing and signing; wallet unit attestation."}
+- {code: K05, name: Trust framework and discovery, decision: DEC-04, summary: "Trusted lists, lists of trusted entities, registers, ecosystem trust anchors and how a relying party finds the right one."}
+- {code: K06, name: Identity and identifiers, decision: DEC-05, summary: "Legal-person identification data, unique identifier, directory and authentic sources."}
+- {code: K07, name: Credential lifecycle, decision: DEC-06, summary: "Issuance, validity, status, suspension and revocation, including privacy-preserving status."}
+- {code: K08, name: Protocols and interfaces, decision: DEC-07, summary: "Issuance and presentation protocols, APIs, data space protocols and delivery interfaces."}
+- {code: K09, name: Privacy and data protection, decision: DEC-08, summary: "Minimisation, unlinkability, GDPR roles, consent and retention."}
+- {code: K10, name: Evidence, logging and audit, decision: DEC-09, summary: "Transaction logs, dashboards, audit trail and accountability."}
+- {code: K11, name: Security, resilience and incident handling, decision: null, summary: "Risk management, breach reporting, security certification and crypto agility."}
+- {code: K12, name: Registered delivery and notifications, decision: null, summary: "Qualified registered delivery, digital addresses, messaging and B2G submissions."}
+- {code: K13, name: Governance, supervision and liability, decision: null, summary: "Roles of providers, supervisory bodies, notification and liability."}
+- {code: K14, name: Conformity, certification and assurance, decision: null, summary: "Conformity assessment, certification schemes and levels of assurance."}
+- {code: K15, name: Adoption, acceptance and cross-ecosystem interoperability, decision: null, summary: "Public-sector acceptance, transition periods, SME access and interoperability across Member States and ecosystems."}
+- {code: K16, name: AI use and AI governance, decision: DEC-01, summary: "AI agents acting with credentials, AI Act duties and machine-readable evidence."}
