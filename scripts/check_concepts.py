@@ -46,7 +46,7 @@ for f in sorted(os.listdir(rdir)) if os.path.isdir(rdir) else []:
     if f != r["req_id"] + ".md": err(f"requirement file {f} must be named {r['id']}.md")
     if not re.fullmatch(r"EBW-[A-Z]{3}-\d{3}", r["req_id"]) or r["req_id"].split("-")[1] != r["category"]: err(f"{r['id']}: ID must be EBW-<CATEGORY>-<NNN> matching the category")
     if r["category"] not in cats: err(f"{r['id']}: unknown category {r['category']}")
-    if " shall " not in " " + r["statement"] + " ": err(f"{r['id']}: statement must contain 'shall'")
+    if not re.search(r"\bshall\b", r["statement"]): err(f"{r['id']}: statement must contain 'shall'")
     if r["provenance"] not in ("L", "S", "D", "A"): err(f"{r['id']}: provenance must be L, S, D or A")
     if r["status"] not in ("draft", "in-review", "agreed", "verified", "obsolete"): err(f"{r['id']}: bad status")
     if r["status"] in ("agreed", "verified") and r.get("reviewer") in (None, "", "pending"): err(f"{r['id']}: agreed or verified requires a named reviewer")

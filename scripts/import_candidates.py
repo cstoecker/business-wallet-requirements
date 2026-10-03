@@ -27,7 +27,7 @@ for path in files:
         cat = it["category"]
         errs = []
         if cat not in cats: errs.append("category")
-        if " shall " not in " " + it["statement"] + " ": errs.append("shall")
+        if not re.search(r"\bshall\b", it["statement"]): errs.append("shall")
         if it["source"] not in sources: errs.append("source " + it["source"])
         cons = [c for c in it.get("concepts", []) if c in concepts]
         if errs: print("SKIP", it.get("key"), errs); continue

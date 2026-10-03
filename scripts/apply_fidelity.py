@@ -12,7 +12,7 @@ for path in sys.argv[1:]:
         v = e["verdict"]
         if v not in ("supported", "overreach", "derived", "wrong-location"): print("skip", e["id"], v); continue
         if v in ("overreach", "derived") and e.get("corrected_statement"):
-            if " shall " not in " " + e["corrected_statement"] + " ": print("skip (no shall)", e["id"]); continue
+            if not re.search(r"\bshall\b", e["corrected_statement"]): print("skip (no shall)", e["id"]); continue
             fm["statement"] = e["corrected_statement"].strip()
         if e.get("corrected_location"): fm["sources"][0]["location"] = e["corrected_location"]
         if e.get("provenance") in ("L", "S", "D"): fm["provenance"] = e["provenance"]
