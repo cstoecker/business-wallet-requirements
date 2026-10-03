@@ -1,0 +1,13 @@
+<footer class="site-footer-extra">
+  <p>{{ site.title }} · published by <a href="{{ site.publisher.url }}">{{ site.publisher.name }}</a> · Content CC BY 4.0, code Apache-2.0 (to be confirmed).</p>
+  <p>
+    <a href="{{ '/contact/' | relative_url }}">Contact</a> ·
+    <a href="{{ site.repo_url }}/discussions">Discussions</a> ·
+    <a href="{{ site.repo_url }}">GitHub</a> ·
+    <a href="{{ '/figures/' | relative_url }}">Figures</a> ·
+    <a href="{{ '/llms.txt' | relative_url }}">llms.txt</a> ·
+    <a href="{{ '/sitemap.xml' | relative_url }}">Sitemap</a>
+    {%- if site.imprint_url %} · <a href="{{ site.imprint_url }}">Imprint</a>{% endif -%}
+    {%- if site.privacy_url %} · <a href="{{ site.privacy_url }}">Privacy</a>{% endif %}
+  </p>
+</footer>

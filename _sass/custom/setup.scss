@@ -1,0 +1,21 @@
+// Spherity design system tokens (hex values copied from assets/css/tokens/colors.css).
+// Sass needs literal values for its colour functions; custom.scss uses var(--sph-*) wherever possible.
+$petrol-100: #E5EAEE; $petrol-300: #6F8895; $petrol-500: #023852; $petrol-700: #022536; $petrol-900: #00141F;
+$cyan-100: #DFFFF2; $cyan-500: #2BFEBB; $cyan-700: #14B98A;
+$offwhite-100: #FFFFFE; $offwhite-300: #F4F2EE; $offwhite-500: #EEEEEE; $offwhite-700: #C9C7C2;
+$ink: #253746; $ink-dim: #445260;
+
+$body-font-family: "Archivo", system-ui, sans-serif;
+$mono-font-family: "IBM Plex Mono", ui-monospace, monospace;
+$root-font-size: 16px;
+$body-background-color: $offwhite-300;
+$body-heading-color: $petrol-500;
+$body-text-color: $ink;
+$link-color: $petrol-500;
+$btn-primary-color: $petrol-500;
+$sidebar-color: $offwhite-100;
+$border-color: $offwhite-700;
+$code-background-color: $offwhite-500;
+$feedback-color: $offwhite-500;
+$nav-width: 17rem;
+$content-width: 52rem;

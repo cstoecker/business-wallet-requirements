@@ -1,0 +1,2 @@
+{%- assign rc = site.data.graph.concepts | where: "id", include.id | first -%}
+{%- if rc -%}<div class="concept-def"><span class="term">{{ rc.title }}.</span> {{ rc.definition | default: rc.summary }} <a href="{{ '/concepts/' | append: rc.slug | append: '/' | relative_url }}">Read the concept article</a></div>{%- endif -%}

@@ -1,0 +1,57 @@
+{%- comment -%} Site-wide JSON-LD (schema.org) as one @graph. Built from page front matter; never invents facts. {%- endcomment -%}
+{%- assign canon = page.url | replace: "index.html", "" | absolute_url -%}
+{%- assign nodes = "" | split: "," -%}
+
+{%- capture n -%}{"@type":"Organization","@id":{{ '/#publisher' | absolute_url | jsonify }},"name":{{ site.publisher.name | jsonify }},"url":{{ site.publisher.url | jsonify }},"email":{{ site.publisher.contact_email | jsonify }},"logo":{"@type":"ImageObject","url":{{ '/assets/images/logos/spherity-s-mark.svg' | absolute_url | jsonify }},"width":372,"height":372}}{%- endcapture -%}
+{%- assign nodes = nodes | push: n -%}
+
+{%- capture n -%}{"@type":"WebSite","@id":{{ '/#website' | absolute_url | jsonify }},"url":{{ '/' | absolute_url | jsonify }},"name":{{ site.title | jsonify }},"description":{{ site.description | jsonify }},"inLanguage":"en","publisher":{"@id":{{ '/#publisher' | absolute_url | jsonify }}},"license":"https://creativecommons.org/licenses/by/4.0/"}{%- endcapture -%}
+{%- assign nodes = nodes | push: n -%}
+
+{%- assign ptype = page.schema_type | default: "WebPage" -%}
+{%- assign pdesc = page.description | default: page.summary | default: site.description | strip_html | normalize_whitespace -%}
+{%- assign pimg = page.image | default: site.default_image | absolute_url -%}
+{%- capture n -%}{"@type":{{ ptype | jsonify }},"@id":{{ canon | append: '#page' | jsonify }},"url":{{ canon | jsonify }},"name":{{ page.title | default: site.title | jsonify }},{% if ptype == "TechArticle" or ptype == "Article" %}"headline":{{ page.title | jsonify }},{% endif %}"description":{{ pdesc | jsonify }},"inLanguage":"en","isPartOf":{"@id":{{ '/#website' | absolute_url | jsonify }}},"publisher":{"@id":{{ '/#publisher' | absolute_url | jsonify }}},"primaryImageOfPage":{"@type":"ImageObject","url":{{ pimg | jsonify }}}{% if page.keywords %},"keywords":{{ page.keywords | join: ", " | jsonify }}{% endif %}{% if page.last_verified %},"dateModified":{{ page.last_verified | jsonify }}{% endif %}{% if page.date_published %},"datePublished":{{ page.date_published | jsonify }}{% endif %}{% if page.about %},"about":[{% for a in page.about %}{"@type":"Thing","name":{{ a | jsonify }}}{% unless forloop.last %},{% endunless %}{% endfor %}]{% endif %},"license":"https://creativecommons.org/licenses/by/4.0/"{% if page.figures %},"hasPart":[{% for fid in page.figures %}{"@id":{{ '/figures/' | append: fid | append: '/' | absolute_url | append: '#image' | jsonify }}}{% unless forloop.last %},{% endunless %}{% endfor %}]{% endif %}}{%- endcapture -%}
+{%- assign nodes = nodes | push: n -%}
+
+{%- comment -%} Breadcrumbs from just-the-docs parent/grand_parent titles {%- endcomment -%}
+{%- if page.url != "/" -%}
+{%- capture crumbs -%}{"@type":"ListItem","position":1,"name":"Home","item":{{ '/' | absolute_url | jsonify }}}{%- assign pos = 1 -%}
+{%- if page.grand_parent -%}{%- assign gp = site.pages | where: "title", page.grand_parent | first -%}{%- if gp -%}{%- assign pos = pos | plus: 1 -%},{"@type":"ListItem","position":{{ pos }},"name":{{ gp.title | jsonify }},"item":{{ gp.url | replace: "index.html", "" | absolute_url | jsonify }}}{%- endif -%}{%- endif -%}
+{%- if page.parent -%}{%- assign pp = site.pages | where: "title", page.parent | first -%}{%- if pp -%}{%- assign pos = pos | plus: 1 -%},{"@type":"ListItem","position":{{ pos }},"name":{{ pp.title | jsonify }},"item":{{ pp.url | replace: "index.html", "" | absolute_url | jsonify }}}{%- endif -%}{%- endif -%}
+{%- assign pos = pos | plus: 1 -%},{"@type":"ListItem","position":{{ pos }},"name":{{ page.title | jsonify }},"item":{{ canon | jsonify }}}{%- endcapture -%}
+{%- capture n -%}{"@type":"BreadcrumbList","@id":{{ canon | append: '#breadcrumb' | jsonify }},"itemListElement":[{{ crumbs }}]}{%- endcapture -%}
+{%- assign nodes = nodes | push: n -%}
+{%- endif -%}
+
+{%- comment -%} Concept articles: DefinedTerm inside a DefinedTermSet {%- endcomment -%}
+{%- if page.concept -%}
+{%- assign c = site.data.graph.concepts | where: "id", page.concept | first -%}
+{%- if c -%}
+{%- capture n -%}{"@type":"DefinedTerm","@id":{{ canon | append: '#term' | jsonify }},"name":{{ c.title | jsonify }},"description":{{ c.definition | default: c.summary | jsonify }},"url":{{ canon | jsonify }},"inDefinedTermSet":{"@type":"DefinedTermSet","@id":{{ '/concepts/#termset' | absolute_url | jsonify }},"name":"European Business Wallet Requirements: concepts","url":{{ '/concepts/' | absolute_url | jsonify }}}{% if c.related %},"mentions":[{% for rid in c.related %}{% assign rc = site.data.graph.concepts | where: "id", rid | first %}{% if rc %}{"@type":"DefinedTerm","name":{{ rc.title | jsonify }},"url":{{ '/concepts/' | append: rc.slug | append: '/' | absolute_url | jsonify }}}{% unless forloop.last %},{% endunless %}{% endif %}{% endfor %}]{% endif %}}{%- endcapture -%}
+{%- assign nodes = nodes | push: n -%}
+{%- endif -%}
+{%- endif -%}
+
+{%- comment -%} FAQ: only when the same questions are visibly rendered (see _includes/faq.html) {%- endcomment -%}
+{%- if page.faq -%}
+{%- capture n -%}{"@type":"FAQPage","@id":{{ canon | append: '#faq' | jsonify }},"mainEntity":[{% for q in page.faq %}{"@type":"Question","name":{{ q.q | jsonify }},"acceptedAnswer":{"@type":"Answer","text":{{ q.a | strip_html | jsonify }}}}{% unless forloop.last %},{% endunless %}{% endfor %}]}{%- endcapture -%}
+{%- assign nodes = nodes | push: n -%}
+{%- endif -%}
+
+{%- comment -%} Figures referenced by this page, and the figure landing page itself {%- endcomment -%}
+{%- if page.figures -%}
+{%- for fid in page.figures -%}
+{%- assign fg = site.figures | where: "slug", fid | first -%}
+{%- if fg -%}
+{%- capture n -%}{"@type":"ImageObject","@id":{{ fg.url | absolute_url | append: '#image' | jsonify }},"name":{{ fg.title | jsonify }},"caption":{{ fg.caption | jsonify }},"description":{{ fg.description | jsonify }},"contentUrl":{{ fg.image | absolute_url | jsonify }},"url":{{ fg.url | absolute_url | jsonify }},"encodingFormat":"image/svg+xml","width":{{ fg.width }},"height":{{ fg.height }},"keywords":{{ fg.keywords | join: ", " | jsonify }},"license":"https://creativecommons.org/licenses/by/4.0/","creditText":{{ site.publisher.name | jsonify }},"creator":{"@id":{{ '/#publisher' | absolute_url | jsonify }}},"inLanguage":"en"}{%- endcapture -%}
+{%- assign nodes = nodes | push: n -%}
+{%- endif -%}
+{%- endfor -%}
+{%- endif -%}
+{%- if page.collection == "figures" -%}
+{%- capture n -%}{"@type":"ImageObject","@id":{{ canon | append: '#image' | jsonify }},"name":{{ page.title | jsonify }},"caption":{{ page.caption | jsonify }},"description":{{ page.description | jsonify }},"contentUrl":{{ page.image | absolute_url | jsonify }},"thumbnailUrl":{{ page.image_png | absolute_url | jsonify }},"url":{{ canon | jsonify }},"encodingFormat":"image/svg+xml","width":{{ page.width }},"height":{{ page.height }},"keywords":{{ page.keywords | join: ", " | jsonify }},"license":"https://creativecommons.org/licenses/by/4.0/","creditText":{{ site.publisher.name | jsonify }},"creator":{"@id":{{ '/#publisher' | absolute_url | jsonify }}},"inLanguage":"en"}{%- endcapture -%}
+{%- assign nodes = nodes | push: n -%}
+{%- endif -%}
+
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{{ nodes | join: "," }}]}</script>

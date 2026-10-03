@@ -1,0 +1,27 @@
+/* token_color — brand board §02, §02.5. .500 is always the canonical brand hex. */
+:root{
+  /* Petrol ramp (brand primary) */
+  --sph-petrol-100:#E5EAEE; --sph-petrol-300:#6F8895; --sph-petrol-500:#023852; --sph-petrol-700:#022536; --sph-petrol-900:#00141F;
+  /* Cyan ramp (brand accent) */
+  --sph-cyan-100:#DFFFF2; --sph-cyan-300:#8AFED9; --sph-cyan-500:#2BFEBB; --sph-cyan-700:#14B98A; --sph-cyan-900:#0A6F52;
+  /* Off-White ramp (brand surface) */
+  --sph-offwhite-100:#FFFFFE; --sph-offwhite-300:#F4F2EE; --sph-offwhite-500:#EEEEEE; --sph-offwhite-700:#C9C7C2; --sph-offwhite-900:#A5A5A5;
+  /* Brand roles */
+  --sph-brand-primary:var(--sph-petrol-500);
+  --sph-brand-primary-deep:#192B38;
+  --sph-brand-accent:var(--sph-cyan-500);
+  --sph-brand-surface:var(--sph-offwhite-500);
+  /* Neutrals (brand secondary) — snap to a ramp stop, never eyeball a grey */
+  --sph-ink:#253746; --sph-ink-dim:#445260; --sph-neutral-mid:var(--sph-offwhite-900);
+  /* Status — fixed, never brand-overridden, excluded from the tonal ramp */
+  --sph-success:#079455; --sph-warning:#F79009; --sph-error-soft:#F96D61; --sph-error-strong:#B62549;
+  /* Sub-brand accents (max 10% quota, never a primary-button fill) */
+  --sph-caro-500:#1F6F8B;
+  --sph-vera-500:#2C6F7B;
+  --sph-eida-300:#CDD3E8; --sph-eida-500:#4961A8; --sph-eida-700:#324377;
+  --sph-kyle-300:#CDD1D5; --sph-kyle-500:#4D5B6A; --sph-kyle-700:#353F49;
+  /* Gradients — surface treatment only, max one gradient surface per view, never in icons or illustration */
+  --sph-gradient-cyan:linear-gradient(135deg,#2BFEBB 0%,#0FB497 100%); /* @kind other */
+  --sph-gradient-petrol-cyan:linear-gradient(135deg,#023852 0%,#2BFEBB 100%); /* @kind other */
+  --sph-gradient-petrol-depth:linear-gradient(135deg,#023852 0%,#0F1F2A 100%); /* @kind other */
+}

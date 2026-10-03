@@ -1,0 +1,21 @@
+---
+layout: default
+---
+{%- assign c = site.data.graph.concepts | where: "id", page.concept | first -%}
+<span class="badge badge-{{ c.status }}">{{ c.status }}</span>
+<h1>{{ c.title }}</h1>
+<div class="concept-meta"><dl>
+<dt>Concept ID</dt><dd><code>{{ c.id }}</code></dd>
+<dt>Group</dt><dd>{{ c.group }}</dd>
+<dt>Summary</dt><dd>{{ c.summary }}</dd>
+{%- if c.related %}<dt>Related concepts</dt><dd>{% for rid in c.related %}{% include concept-ref.html id=rid %} {% endfor %}</dd>{% endif -%}
+{%- if c.requirement_categories %}<dt>Requirement categories</dt><dd>{{ c.requirement_categories | join: ", " }}</dd>{% endif -%}
+{%- if page.last_verified %}<dt>Last verified</dt><dd>{{ page.last_verified }}</dd>{% endif -%}
+<dt>Provenance</dt><dd>Analysis, not legal advice. Sources: official documents, standards, ecosystem specifications and the OID 2025 paper only.</dd>
+</dl></div>
+{%- if c.status == "planned" or c.status == "proposed" %}
+<div class="in-prep"><strong>Article in preparation.</strong> {{ c.definition | default: c.summary }} This article will follow the standard concept template (summary, definition, mechanism with two figures, roles, related concepts, requirements, standards, design choices, examples, open questions, references).</div>
+{%- else %}
+{{ content }}
+{% include faq.html %}
+{%- endif %}

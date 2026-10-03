@@ -1,0 +1,32 @@
+/* Semantic aliases — consumers should reach for these, not the ramps. */
+:root{
+  /* Text */
+  --sph-text-strong:var(--sph-petrol-500);
+  --sph-text-body:var(--sph-ink);
+  --sph-text-dim:var(--sph-ink-dim);
+  --sph-text-muted:var(--sph-petrol-300);
+  --sph-text-on-dark:var(--sph-offwhite-300);
+  --sph-text-on-dark-muted:var(--sph-petrol-300);
+  --sph-text-on-accent:var(--sph-petrol-500); /* text on Cyan is Petrol, never white */
+  /* Surfaces */
+  --sph-surface-page:var(--sph-offwhite-500);
+  --sph-surface-soft:var(--sph-offwhite-300);
+  --sph-surface-card:var(--sph-offwhite-100);
+  --sph-surface-dark:var(--sph-petrol-500);
+  --sph-surface-dark-deep:var(--sph-petrol-900);
+  --sph-surface-accent-soft:var(--sph-cyan-100);
+  --sph-surface-tint:var(--sph-petrol-100);
+  /* Lines */
+  --sph-border-hairline:var(--sph-offwhite-700);
+  --sph-border-on-dark:rgba(111,136,149,.45);
+  --sph-border-strong:var(--sph-petrol-300);
+  /* Interaction */
+  --sph-action-primary:var(--sph-petrol-500);
+  --sph-action-primary-hover:var(--sph-petrol-700);
+  --sph-action-primary-active:var(--sph-petrol-900);
+  --sph-action-accent:var(--sph-cyan-500);
+  --sph-action-accent-hover:var(--sph-cyan-700);
+  --sph-focus-ring:var(--sph-cyan-500);
+  /* Icons */
+  --sph-icon-size-sm:16px; --sph-icon-size-md:20px; --sph-icon-size-lg:24px; --sph-icon-stroke:1.5px;
+}

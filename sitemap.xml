@@ -1,0 +1,21 @@
+---
+layout: null
+permalink: /sitemap.xml
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+{%- assign pages = site.pages | concat: site.figures | sort: "url" -%}
+{%- for p in pages -%}
+{%- unless p.sitemap == false or p.url contains ".xml" or p.url contains ".txt" or p.url contains "/assets/" -%}
+  <url>
+    <loc>{{ p.url | replace: "index.html", "" | absolute_url }}</loc>
+    <lastmod>{{ p.last_verified | default: site.time | date: "%Y-%m-%d" }}</lastmod>
+{%- if p.collection == "figures" %}
+    <image:image><image:loc>{{ p.image | absolute_url }}</image:loc><image:title>{{ p.title | xml_escape }}</image:title><image:caption>{{ p.caption | xml_escape }}</image:caption><image:license>https://creativecommons.org/licenses/by/4.0/</image:license></image:image>
+{%- elsif p.figures %}{%- for fid in p.figures %}{%- assign fg = site.figures | where: "slug", fid | first %}{%- if fg %}
+    <image:image><image:loc>{{ fg.image | absolute_url }}</image:loc><image:title>{{ fg.title | xml_escape }}</image:title><image:caption>{{ fg.caption | xml_escape }}</image:caption><image:license>https://creativecommons.org/licenses/by/4.0/</image:license></image:image>
+{%- endif %}{%- endfor %}{%- endif %}
+  </url>
+{%- endunless -%}
+{%- endfor %}
+</urlset>

@@ -1,11 +1,39 @@
 title: European Business Wallet Requirements
-description: Traceable requirements for European Business Wallets and trust infrastructure
+description: Open, traceable requirements for European Business Wallets and trust infrastructure, from law and standards to conformance checks and industry scenarios.
+lang: en
+# Production URL; adjust when GitHub Pages / custom domain is configured.
+url: "https://spherity.github.io"
+baseurl: "/business-wallet-requirements"
+repo_url: "https://github.com/spherity/business-wallet-requirements"
 theme: just-the-docs
+logo: "/assets/images/logos/spherity-wordmark.svg"
 search_enabled: true
 heading_anchors: true
+color_scheme: light
+publisher:
+  name: Spherity GmbH
+  url: https://www.spherity.com
+  contact_email: info@spherity.com
+default_image: "/assets/figures/concept-model-planes.png"
+# REQUIRED before public launch (German law: Impressum and privacy notice): set both to the Spherity pages.
+imprint_url: ""
+privacy_url: ""
 aux_links:
-  "Edit on GitHub": "https://github.com/spherity/business-wallet-requirements"
-exclude: [docs, README.md, Gemfile.lock, vendor]
+  "Discussions": "https://github.com/spherity/business-wallet-requirements/discussions"
+  "Contact": "/contact/"
+  "GitHub": "https://github.com/spherity/business-wallet-requirements"
+aux_links_new_tab: false
+nav_external_links:
+  - title: Discussions
+    url: https://github.com/spherity/business-wallet-requirements/discussions
+    opens_in_new_tab: true
+collections:
+  figures:
+    output: true
+    permalink: /figures/:name/
+exclude: [docs, scripts, README.md, Gemfile.lock, vendor, node_modules]
 defaults:
   - scope: {path: ""}
     values: {layout: default}
+  - scope: {path: "", type: figures}
+    values: {layout: figure}

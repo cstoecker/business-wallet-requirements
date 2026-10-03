@@ -1,0 +1,24 @@
+---
+layout: null
+permalink: /llms.txt
+---
+# {{ site.title }}
+
+> {{ site.description }}
+
+Machine-readable discovery aid only. It is not a ranking, citation or training-data promise. Content is licensed CC BY 4.0 unless stated otherwise; legal content is analysis, not legal advice. Published by {{ site.publisher.name }} ({{ site.publisher.contact_email }}).
+
+## Concepts
+{% for c in site.data.graph.concepts %}{% if c.status != "proposed" and c.status != "planned" %}- [{{ c.title }}]({{ '/concepts/' | append: c.slug | append: '/' | absolute_url }}): {{ c.summary }}
+{% endif %}{% endfor %}
+## Ecosystems and initiatives
+{% for e in site.data.graph.ecosystems %}- [{{ e.name }}]({{ '/ecosystem/initiatives/' | append: e.id | remove: 'ECO-' | downcase | append: '/' | absolute_url }}): {{ e.summary }}
+{% endfor %}
+## Methodology
+- [Requirements management methodology]({{ '/requirements/methodology/' | absolute_url }}): sources, lifecycle, categories, provenance and traceability rules.
+
+## Figures
+{% for f in site.figures %}- [{{ f.title }}]({{ f.url | absolute_url }}): {{ f.caption }}
+{% endfor %}
+## Data
+- Sitemap: {{ '/sitemap.xml' | absolute_url }}

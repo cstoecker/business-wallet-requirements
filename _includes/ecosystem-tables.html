@@ -5,7 +5,7 @@
 
 | ID | Use case | Verification |
 |---|---|---|
-{% for u in ucs %}| `{{ u.id }}` | {{ u.title }} | {% if u.verification == "read" %}✅ read{% else %}🔎 unverified{% endif %} |
+{% for u in ucs %}| `{{ u.id }}` | {{ u.title }} | {% if u.verification == "read" %}<span class="vtag v-ok">verified</span>{% else %}<span class="vtag v-todo">to verify</span>{% endif %} |
 {% endfor %}
 ## High-level requirements imposed on identity, trust and wallets
 
@@ -13,7 +13,7 @@ Source statements only; each still has to be derived into a technology-neutral `
 
 | ID | Cat. | Statement | Reference | Verification |
 |---|---|---|---|---|
-{% for r in reqs %}| `{{ r.id }}` | {{ r.category }} | {{ r.statement }} | {{ r.ref }} | {% if r.verification == "read" %}✅{% elsif r.verification == "snippet" %}🔎 snippet only{% else %}🔎{% endif %} |
+{% for r in reqs %}| `{{ r.id }}` | {{ r.category }} | {{ r.statement }} | {{ r.ref }} | {% if r.verification == "read" %}<span class="vtag v-ok">verified</span>{% elsif r.verification == "snippet" %}<span class="vtag v-todo">to verify</span> snippet only{% else %}<span class="vtag v-todo">to verify</span>{% endif %} |
 {% endfor %}
 ## Sources
 
@@ -21,4 +21,4 @@ Source statements only; each still has to be derived into a technology-neutral `
 |---|---|---|---|
 {% for sid in eco.sources %}{% assign s = site.data.graph.sources | where: "id", sid | first %}| `{{ s.id }}` | {% if s.url %}[{{ s.title }}]({{ s.url }}){% else %}{{ s.title }}{% endif %} | {{ s.version }} {{ s.date }} | {{ s.retrieved }} |
 {% endfor %}
-<small>Graph entity: `{{ eco.id }}`. Legend: ✅ verified in a source that was read, 🔎 to verify. Analysis, not legal advice.</small>
+<p class="mono">Graph entity: `{{ eco.id }}`. Legend: <span class="vtag v-ok">verified</span> verified in a source that was read, <span class="vtag v-todo">to verify</span> to verify. Analysis, not legal advice.</p>

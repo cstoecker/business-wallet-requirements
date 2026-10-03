@@ -83,4 +83,4 @@ Issue, proposal (pull request with data diff), review by steward and legal revie
 
 ## 9. Confidence markers
 
-✅ verified in a source that was read. 🔎 to verify. Unverified facts are never presented as verified.
+<span class="vtag v-ok">verified</span> verified in a source that was read. <span class="vtag v-todo">to verify</span> to verify. Unverified facts are never presented as verified.

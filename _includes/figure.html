@@ -1,0 +1,8 @@
+{%- comment -%} Usage: {% include figure.html id="concept-model-planes" no=1 %}  (id = slug in _figures/) {%- endcomment -%}
+{%- assign fg = site.figures | where: "slug", include.id | first -%}
+{%- if fg -%}
+<figure class="fig" id="fig-{{ fg.slug }}">
+  <a href="{{ fg.url | relative_url }}"><img src="{{ fg.image | relative_url }}" alt="{{ fg.alt | escape }}" width="{{ fg.width }}" height="{{ fg.height }}" loading="lazy" decoding="async"></a>
+  <figcaption><span class="fig-no">Figure {{ include.no }}.</span> {{ fg.caption }} <a href="{{ fg.url | relative_url }}">Figure page and description</a> · <a href="{{ fg.image | relative_url }}">SVG</a> · CC BY 4.0</figcaption>
+</figure>
+{%- else -%}<p><strong>Missing figure: {{ include.id }}</strong></p>{%- endif -%}

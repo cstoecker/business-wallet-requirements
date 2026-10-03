@@ -1,0 +1,13 @@
+/* token_typography — Archivo 400–900, IBM Plex Mono 400/500. */
+:root{
+  --sph-font-display:"Archivo",system-ui,sans-serif;
+  --sph-font-ui:"Archivo",system-ui,sans-serif;
+  --sph-font-mono:"IBM Plex Mono",ui-monospace,monospace;
+
+  --sph-display-size:56px; --sph-display-weight:800; /* @kind other */ --sph-display-lh:1.05; /* @kind other */ --sph-display-tracking:-0.02em; /* @kind other */
+  --sph-h1-size:36px; --sph-h1-weight:700; /* @kind other */ --sph-h1-lh:1.15; /* @kind other */ --sph-h1-tracking:-0.015em; /* @kind other */
+  --sph-h2-size:26px; --sph-h2-weight:600; /* @kind other */ --sph-h2-lh:1.25; /* @kind other */ --sph-h2-tracking:0em; /* @kind other */
+  --sph-body-size:16px; --sph-body-weight:400; /* @kind other */ --sph-body-lh:1.55; /* @kind other */
+  --sph-mono-size:14px; --sph-mono-weight:400; /* @kind other */ --sph-mono-lh:1.45; /* @kind other */
+  --sph-caption-size:12px; --sph-caption-weight:500; /* @kind other */ --sph-caption-tracking:0.06em; /* @kind other */
+}

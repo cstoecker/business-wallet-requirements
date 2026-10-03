@@ -1,0 +1,5 @@
+/* Archivo (display + UI) and IBM Plex Mono (technical) — token_typography.
+   No binaries were supplied in the source package; both families are the real brand
+   families and are served here from Google Fonts. Swap to self-hosted @font-face
+   when the licensed binaries land in assets/fonts/. */
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500&display=swap");

@@ -1,0 +1,12 @@
+---
+layout: default
+---
+<h1>{{ page.title }}</h1>
+<figure class="fig"><img src="{{ page.image | relative_url }}" alt="{{ page.alt | escape }}" width="{{ page.width }}" height="{{ page.height }}" decoding="async"><figcaption>{{ page.caption }}</figcaption></figure>
+<h2>Description</h2>
+<p>{{ page.description }}</p>
+{{ content }}
+<h2>Used in</h2>
+<ul>{% for u in page.used_in %}{% assign up = site.pages | where: "url", u | first %}<li><a href="{{ u | relative_url }}">{{ up.title | default: u }}</a></li>{% endfor %}</ul>
+<h2>Download and reuse</h2>
+<p><a href="{{ page.image | relative_url }}">SVG</a> · <a href="{{ page.image_png | relative_url }}">PNG</a>. Licence: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Please credit "Spherity GmbH, European Business Wallet Requirements" and link to this page. Figure type: {{ page.figure_type }}. Last verified: {{ page.last_verified }}.</p>

@@ -1,0 +1,55 @@
+---
+layout: null
+permalink: /robots.txt
+---
+# Crawler policy for the European Business Wallet Requirements site.
+# Classic search crawlers and user-initiated answer-engine fetchers are allowed.
+# AI model-training crawlers: NO decision has been taken yet (open item, Legal review required).
+# Until a decision is documented, they fall under the catch-all group below. Do not read this as a decision.
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Google-InspectionTool
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: *
+Allow: /
+
+Sitemap: {{ "/sitemap.xml" | absolute_url }}

@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1260 640" width="1260" height="640" role="img" aria-labelledby="t2 d2">
+  <title id="t2">From source clause to conformance check</title>
+  <desc id="d2">Flow. A source clause is extracted into an obligation, derived into a requirement and reviewed. A rejected review returns to the requirement. The published requirement guides implementations and configures the conformance check; implementations are tested against it.</desc>
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"><rdf:RDF><cc:Work rdf:about=""><dc:title>From source clause to conformance check</dc:title><dc:description>Flow of a requirement from a source clause through obligation, requirement, review and publication to implementations and conformance testing.</dc:description><dc:creator>European Business Wallet Requirements project</dc:creator><dc:subject>requirements management; traceability; European Business Wallet; conformance testing</dc:subject><dc:language>en</dc:language><dc:format>image/svg+xml</dc:format><dc:rights>CC BY 4.0</dc:rights><cc:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/></cc:Work></rdf:RDF></metadata>
+  <defs>
+    <marker id="ah" viewBox="0 0 12 12" markerWidth="10" markerHeight="10" refX="10" refY="6" orient="auto"><path d="M1,1 L10,6 L1,11" fill="none" stroke="#023852" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></marker>
+    <style>
+      text{font-family:Archivo,Arial,sans-serif}
+      .bx{fill:#FFFFFE;stroke:#023852;stroke-width:2}
+      .big{fill:#023852;stroke:#023852;stroke-width:2}
+      .sig{fill:#2BFEBB;stroke:#023852;stroke-width:2}
+      .t{font-size:17px;font-weight:600;fill:#023852;text-anchor:middle}
+      .tw{font-size:17px;font-weight:600;fill:#F4F2EE;text-anchor:middle}
+      .tb{font-size:26px;font-weight:700;fill:#023852;text-anchor:middle}
+      .tbw{font-size:26px;font-weight:700;fill:#F4F2EE;text-anchor:middle}
+      .lab{font-size:16px;fill:#253746;text-anchor:middle}
+      .arr{fill:none;stroke:#023852;stroke-width:2.2;stroke-linecap:round}
+      .grp{fill:none;stroke:#C9C7C2;stroke-width:2}
+      .gt{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:13px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;fill:#445260;text-anchor:middle}
+      .wbg{fill:#F4F2EE}
+    </style>
+  </defs>
+  <rect width="1260" height="640" fill="#F4F2EE"/>
+  <rect class="grp" x="190" y="70" width="840" height="300" rx="16"/>
+  <rect class="grp" x="240" y="425" width="420" height="170" rx="16"/>
+  <rect class="grp" x="880" y="395" width="340" height="215" rx="16"/>
+  <text class="gt" x="610" y="102">Requirements baseline (this site)</text>
+  <text class="gt" x="450" y="582">Implementers</text>
+  <text class="gt" x="1050" y="597">Testing</text>
+
+  <path class="arr" d="M152,217 H206" marker-end="url(#ah)"/>
+  <path class="arr" d="M332,217 H386" marker-end="url(#ah)"/>
+  <path class="arr" d="M512,217 H566" marker-end="url(#ah)"/>
+  <path class="arr" d="M694,217 H784" marker-end="url(#ah)"/>
+  <path class="arr" d="M630,248 C630,335 450,335 450,252" marker-end="url(#ah)"/>
+  <path class="arr" d="M830,268 L596,462" marker-end="url(#ah)"/>
+  <path class="arr" d="M935,268 L1000,436" marker-end="url(#ah)"/>
+  <path class="arr" d="M652,520 L918,520" marker-end="url(#ah)"/>
+
+  <text class="lab" x="179" y="182">Extract</text>
+  <text class="lab" x="359" y="182">Derive</text>
+  <text class="lab" x="539" y="182">Discuss</text>
+  <text class="lab" x="739" y="182">Approved</text>
+  <rect class="wbg" x="488" y="318" width="100" height="26"/><text class="lab" x="538" y="338">Rejected</text>
+  <rect class="wbg" x="660" y="332" width="80" height="26"/><text class="lab" x="700" y="352">Guiding</text>
+  <rect class="wbg" x="925" y="338" width="100" height="26"/><text class="lab" x="975" y="358">Configure</text>
+  <rect class="wbg" x="745" y="505" width="60" height="26"/><text class="lab" x="775" y="525">Test</text>
+
+  <rect class="bx" x="22" y="190" width="130" height="54" rx="12"/><text class="t" x="87" y="222">Source clause</text>
+  <rect class="bx" x="208" y="190" width="124" height="54" rx="12"/><text class="t" x="270" y="222">Obligation</text>
+  <rect class="bx" x="388" y="190" width="124" height="54" rx="12"/><text class="t" x="450" y="222">Requirement</text>
+  <rect class="bx" x="568" y="190" width="124" height="54" rx="12"/><text class="t" x="630" y="222">Review</text>
+  <rect class="sig" x="790" y="150" width="200" height="110" rx="12"/><text class="t" x="890" y="190">Published requirement</text><text class="tb" x="890" y="232" style="font-size:22px">EBW-CAT-NNN</text>
+  <rect class="bx" x="270" y="465" width="326" height="76" rx="12"/><text class="t" x="433" y="498">Implementations</text><text class="lab" x="433" y="522">wallets, issuers, verifiers</text>
+  <rect class="big" x="920" y="435" width="260" height="110" rx="12"/><text class="tw" x="1050" y="480">Conformance test cases</text><text class="tbw" x="1050" y="520">Check</text>
+</svg>

@@ -1,0 +1,31 @@
+# Search-language research record (see docs/04-seo-aeo-geo-indexing.md).
+# Google Trends cannot be queried by the automated build or by the authoring assistant. This record must be completed by a person
+# in Google Trends Explore (past 12 months and 5 years; Germany, other EU markets, worldwide; Web and News search) and then set to reviewed.
+status: pending-human-review
+reviewed_on: null
+reviewer: null
+source: https://trends.google.com/trends/explore
+authority_terms:       # terms the site intends to own; keep even if search volume is low
+  - European Business Wallet
+  - EBW
+  - EBWOID
+  - legal person identity
+  - business wallet requirements
+  - requirements traceability
+discovery_terms:       # familiar adjacent language that helps people find the site
+  - eIDAS 2.0 business wallet
+  - EUDI wallet for companies
+  - digital product passport
+  - NIS2 reporting
+  - verifiable credentials for organisations
+  - data space connector identity
+  - Catena-X identity
+  - organisation identity wallet
+audience_questions:
+  - What is the European Business Wallet and who must use it?
+  - How does the European Business Wallet differ from the EUDI Wallet?
+  - What does a business wallet change for reporting to authorities?
+  - How do trust lists work?
+  - How can AI agents act on behalf of a company?
+language_variants_to_check: [English, German]   # exact German phrases to be confirmed in Trends; none assumed here
+evidence_notes: "No Trends data has been collected. Do not use claims such as trending or most searched until a retained comparison supports them."

@@ -1,0 +1,27 @@
+{%- assign page_title = page.title | default: site.title -%}
+{%- if page.url == "/" -%}{%- assign full_title = site.title -%}{%- else -%}{%- assign full_title = page_title | append: " | " | append: site.title -%}{%- endif -%}
+{%- assign desc = page.description | default: page.summary | default: site.description | strip_html | normalize_whitespace | truncate: 300 -%}
+{%- assign canonical = page.url | replace: "index.html", "" | absolute_url -%}
+{%- assign img = page.image | default: site.default_image | absolute_url -%}
+<title>{{ full_title }}</title>
+<meta name="description" content="{{ desc | escape }}">
+{%- if page.keywords %}<meta name="keywords" content="{{ page.keywords | join: ', ' | escape }}">{% endif %}
+<meta name="author" content="{{ page.author | default: site.publisher.name | escape }}">
+{%- if page.noindex %}<meta name="robots" content="noindex, follow">{% else %}<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">{% endif %}
+<meta name="theme-color" content="#082239">
+<link rel="canonical" href="{{ canonical }}">
+<link rel="alternate" type="text/plain" href="{{ '/llms.txt' | absolute_url }}" title="llms.txt">
+<link rel="sitemap" type="application/xml" href="{{ '/sitemap.xml' | absolute_url }}">
+<meta property="og:site_name" content="{{ site.title | escape }}">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="{% if page.layout == 'concept' or page.schema_type == 'TechArticle' %}article{% else %}website{% endif %}">
+<meta property="og:title" content="{{ page_title | escape }}">
+<meta property="og:description" content="{{ desc | escape }}">
+<meta property="og:url" content="{{ canonical }}">
+<meta property="og:image" content="{{ img }}">
+{%- if page.image_alt %}<meta property="og:image:alt" content="{{ page.image_alt | escape }}">{% endif %}
+{%- if page.last_verified %}<meta property="article:modified_time" content="{{ page.last_verified }}">{% endif %}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ page_title | escape }}">
+<meta name="twitter:description" content="{{ desc | escape }}">
+<meta name="twitter:image" content="{{ img }}">

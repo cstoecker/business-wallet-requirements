@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 580" width="1200" height="580" role="img" aria-labelledby="t1 d1">
+  <title id="t1">The three planes and their main entities</title>
+  <desc id="d1">Concept model. Trust plane: trust list, attestation, issuer. Control plane: policy engine, authorisation decision, EBW instance. Data plane: data transfer, evidence exchange, relying party.</desc>
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"><rdf:RDF><cc:Work rdf:about=""><dc:title>The three planes and their main entities</dc:title><dc:description>Concept model of the trust, control and data planes of a European Business Wallet architecture and their main entities.</dc:description><dc:creator>European Business Wallet Requirements project</dc:creator><dc:subject>trust plane; control plane; data plane; European Business Wallet; policy engine; attestation</dc:subject><dc:language>en</dc:language><dc:format>image/svg+xml</dc:format><dc:rights>CC BY 4.0</dc:rights><cc:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/></cc:Work></rdf:RDF></metadata>
+  <defs>
+    <marker id="many" viewBox="-14 -8 16 16" markerWidth="14" markerHeight="14" refX="0" refY="0" orient="auto-start-reverse"><path d="M0,0 L-12,-6 M0,0 L-12,0 M0,0 L-12,6" stroke="#023852" stroke-width="1.6" fill="none"/></marker>
+    <marker id="one" viewBox="-14 -8 16 16" markerWidth="14" markerHeight="14" refX="0" refY="0" orient="auto-start-reverse"><path d="M-6,-6 L-6,6 M-11,-6 L-11,6" stroke="#023852" stroke-width="1.6" fill="none"/></marker>
+    <style>
+      .band{fill:#F4F2EE;stroke:#C9C7C2;stroke-width:1.5}
+      .band-t{font:700 16px Archivo,Arial,sans-serif;fill:#023852;letter-spacing:.04em}
+      .ent{fill:#E5EAEE;stroke:#023852;stroke-width:1.4}
+      .hi{fill:#2BFEBB;stroke:#023852;stroke-width:1.6}
+      .typ{fill:#EEEEEE;stroke:#6F8895;stroke-width:1.4}
+      .en{font:16px Archivo,Arial,sans-serif;fill:#253746;text-anchor:middle}
+      .ln{fill:none;stroke:#023852;stroke-width:1.4}
+      .lb{font:15px Archivo,Arial,sans-serif;fill:#253746;text-anchor:middle}
+      .lbg{fill:#FFFFFE}
+    </style>
+  </defs>
+  <rect width="1200" height="580" fill="#FFFFFE"/>
+  <!-- plane bands -->
+  <rect class="band" x="20" y="20" width="370" height="540" rx="12"/><text class="band-t" x="205" y="48" text-anchor="middle">TRUST PLANE</text>
+  <rect class="band" x="415" y="20" width="370" height="540" rx="12"/><text class="band-t" x="600" y="48" text-anchor="middle">CONTROL PLANE</text>
+  <rect class="band" x="810" y="20" width="370" height="540" rx="12"/><text class="band-t" x="995" y="48" text-anchor="middle">DATA PLANE</text>
+
+  <!-- relations (drawn first, below entities) -->
+  <path class="ln" d="M125,138 H60 V448 H125" marker-end="url(#many)" marker-start="url(#one)"/>
+  <rect class="lbg" x="34" y="268" width="52" height="20"/><text class="lb" x="60" y="283">lists</text>
+  <path class="ln" d="M210,420 V316" marker-end="url(#many)" marker-start="url(#one)"/>
+  <rect class="lbg" x="222" y="357" width="46" height="20"/><text class="lb" x="245" y="372">issues</text>
+  <path class="ln" d="M515,138 H295" marker-end="url(#one)" marker-start="url(#many)"/>
+  <rect class="lbg" x="337" y="104" width="116" height="20"/><text class="lb" x="395" y="119">checks trust in</text>
+  <path class="ln" d="M600,166 V260" marker-end="url(#many)" marker-start="url(#one)"/>
+  <rect class="lbg" x="607" y="203" width="64" height="20"/><text class="lb" x="639" y="218">produces</text>
+  <path class="ln" d="M515,272 H295" marker-end="url(#many)" marker-start="url(#many)"/>
+  <rect class="lbg" x="361" y="248" width="86" height="20"/><text class="lb" x="404" y="263">based on</text>
+  <path class="ln" d="M600,420 V316" marker-end="url(#many)" marker-start="url(#one)"/>
+  <rect class="lbg" x="607" y="361" width="60" height="20"/><text class="lb" x="637" y="376">enforces</text>
+  <path class="ln" d="M515,440 H330 V300 H295" marker-end="url(#many)" marker-start="url(#one)"/>
+  <rect class="lbg" x="381" y="404" width="40" height="20"/><text class="lb" x="401" y="419">holds</text>
+  <path class="ln" d="M685,288 H905" marker-end="url(#many)" marker-start="url(#one)"/>
+  <rect class="lbg" x="763" y="278" width="64" height="20"/><text class="lb" x="795" y="293">permits</text>
+  <path class="ln" d="M990,166 V260" marker-end="url(#many)" marker-start="url(#one)"/>
+  <rect class="lbg" x="1000" y="203" width="84" height="20"/><text class="lb" x="1042" y="218">may carry</text>
+  <path class="ln" d="M685,448 H905" marker-end="url(#many)" marker-start="url(#one)"/>
+  <rect class="lbg" x="743" y="438" width="104" height="20"/><text class="lb" x="795" y="453">presents to</text>
+  <path class="ln" d="M990,420 V316" marker-end="url(#many)" marker-start="url(#one)"/>
+  <rect class="lbg" x="1000" y="357" width="64" height="20"/><text class="lb" x="1032" y="372">requests</text>
+
+  <!-- entities -->
+  <rect class="ent" x="125" y="110" width="170" height="56" rx="8"/><text class="en" x="210" y="144">Trust list</text>
+  <rect class="ent" x="125" y="260" width="170" height="56" rx="8"/><text class="en" x="210" y="294">Attestation</text>
+  <rect class="typ" x="125" y="420" width="170" height="56" rx="8"/><text class="en" x="210" y="454">Issuer</text>
+  <rect class="ent" x="515" y="110" width="170" height="56" rx="8"/><text class="en" x="600" y="144">Policy engine</text>
+  <rect class="ent" x="515" y="260" width="170" height="56" rx="8"/><text class="en" x="600" y="294">Authorisation decision</text>
+  <rect class="hi" x="515" y="420" width="170" height="56" rx="8"/><text class="en" x="600" y="454">EBW instance</text>
+  <rect class="ent" x="905" y="110" width="170" height="56" rx="8"/><text class="en" x="990" y="144">Data transfer</text>
+  <rect class="ent" x="905" y="260" width="170" height="56" rx="8"/><text class="en" x="990" y="294">Evidence exchange</text>
+  <rect class="typ" x="905" y="420" width="170" height="56" rx="8"/><text class="en" x="990" y="454">Relying party</text>
+</svg>

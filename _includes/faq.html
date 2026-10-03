@@ -1,0 +1,7 @@
+{%- if page.faq -%}
+<section class="faq" aria-labelledby="faq-h"><h2 id="faq-h">Frequently asked questions</h2>
+{%- for q in page.faq %}
+<details><summary>{{ q.q }}</summary><p>{{ q.a }}</p></details>
+{%- endfor %}
+</section>
+{%- endif -%}

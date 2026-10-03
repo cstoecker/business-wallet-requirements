@@ -1,0 +1,2 @@
+{%- assign rc = site.data.graph.concepts | where: "id", include.id | first -%}
+{%- if rc -%}<a class="concept-ref" href="{{ '/concepts/' | append: rc.slug | append: '/' | relative_url }}" title="{{ rc.summary | escape }}">{{ rc.title }}</a>{%- else -%}<strong>Unknown concept: {{ include.id }}</strong>{%- endif -%}

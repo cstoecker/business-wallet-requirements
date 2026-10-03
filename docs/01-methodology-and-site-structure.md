@@ -215,6 +215,8 @@ Requirements come first, ahead of perspectives. Standards, Certification and Gov
 | 7 | **Traceability & graph** | Matrices, coverage dashboard, gap list, interactive knowledge graph, JSON-LD download |
 | 8 | **Ecosystem** | **Ecosystems & initiatives** (§6.2), Standards radar, Certification, Governance |
 
+Update 2026-10-03: *Concepts* (29 concept articles) and the *Figure gallery* sit under Start here; the header carries search, Discussions, Contact and GitHub; Discussions is also an external sidebar item; every page has a draft-status banner and a footer. See docs/05-navigation-and-deployment.md. The site is branded with the Spherity design system (docs/04 and docs/03 for details).
+
 Utility links (header/footer, not in the numbered sidebar): Roadmap, Glossary, Research (non-normative reading list), Contribute, Changelog, About/Disclaimer.
 
 ### 6.2 Ecosystems & initiatives subpage
