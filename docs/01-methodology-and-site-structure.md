@@ -17,6 +17,7 @@ Purpose of the site: a **public, citable, version-controlled requirements baseli
 5. **Plane-based architecture, technology-neutral requirements.** Requirements say *what*; architecture alternatives say *how*. Requirements never name a product.
 6. **Many audiences, one model.** Executives, legal/compliance, architects, domain experts (AAS/DPP/pharma/automotive) and implementers each get an entry path through the same underlying graph.
 7. **Open by default**, contribution through pull requests/issues, with a light governance process (§7).
+8. **Official sources only in the traceability chain and knowledge graph.** Only (a) official legal and policy documents (EU legislation, proposals, Council/Parliament/Commission documents, implementing acts, the EUDI ARF), (b) published standards and technical specifications of recognised bodies (ETSI/CEN, ISO/IEC, W3C, IETF, OpenID Foundation, Eclipse DSP/DCP, IDTA, …), and (c) the peer-reviewed paper *Towards the European Business Wallet* (T. Hühnlein, D. Hühnlein, S. Schwalm, C. Stöcker; Open Identity Summit 2025, DOI 10.18420/oid2025_09) may appear as sources, obligations or edges. Blog posts, Medium articles, position papers, vendor material and repositories are **not** graph sources. They may appear only in the non-normative reading list under `/research/` and never as the basis of a requirement's provenance.
 
 ---
 
@@ -36,7 +37,7 @@ You asked whether there are categories beyond Functional / Non-functional / Cert
 | **DAT** | Data-space & data-sovereignty | Usage policies (ODRL), contract negotiation, connector–wallet binding, DSP/DCP profiles | Eclipse DSP/DCP, IDSA, DSSC |
 | **OPS** | Operational & service | SLAs, support, incident handling, key ceremonies, lifecycle (onboard/offboard), business continuity | ISO 27001/27701, ETSI EN 319 401 |
 | **DOM** | Domain-specific | Overlays per industry (DPP/ESPR, battery, automotive, GxP, financial, public procurement, agentic/physical AI) | Sector law and standards |
-| **BIZ** | Business & adoption | Cost, onboarding friction, SME accessibility, commercial models, migration from existing eID/e-seal/PKI | Position papers (DIGITALEUROPE, Bitkom, CNUE ✅ found) |
+| **BIZ** | Business & adoption | Cost, onboarding friction, SME accessibility, commercial models, migration from existing eID/e-seal/PKI | Official impact assessments and the EBW proposal's own analysis; the OID 2025 paper |
 | **CON** | Constraints & assumptions | Mandated technology choices, legal limits, time constraints, explicit assumptions | Any |
 | **TRN** | Transition & migration | Coexistence with legacy (EDI, PKI/X.509 seals, Peppol, AS4), phased roll-out per roadmap | EBW roadmap |
 
@@ -149,7 +150,7 @@ Industry scenario / use case      DPP exchange, GxP batch release, supplier onbo
 | **L** | Directly mandated by law/regulation | solid badge |
 | **S** | Mandated/profiled by a standard or technical specification | solid badge |
 | **D** | Derived by us (interpretation of L/S for a domain) | outlined badge |
-| **A** | Assumption / ecosystem recommendation / stakeholder input | dashed badge |
+| **A** | Assumption / ecosystem recommendation / stakeholder input (never cites a non-official source as authority) | dashed badge |
 
 Legal interpretation is labelled **"analysis, not legal advice"**, with the author and review date.
 
@@ -185,7 +186,7 @@ Evaluation criteria: legal conformity, assurance level, sovereignty, interoperab
 ## 5. Knowledge graph design
 
 - **Source of truth:** `_data/` YAML (one file per entity type) + `ontology/` (SKOS concept schemes for taxonomy/glossary; OWL/RDFS vocabulary for relations; SHACL shapes for validation). Reuse existing vocabularies where possible: Dublin Core/DCAT, ELI (European Legislation Identifier) and FRBR for legal sources, ODRL for policies, PROV-O for provenance, SKOS for terms, schema.org for pages.
-- **Entity types:** `LegalSource`, `Clause`, `Obligation`, `Requirement`, `Capability`, `BuildingBlock`, `ArchitectureOption`, `Standard`, `StandardClause`, `Actor`, `Plane`, `Domain`, `UseCase`, `ConformanceCheck`, `Publication`, `Term`.
+- **Entity types:** `LegalSource`, `Clause`, `Obligation`, `Requirement`, `Capability`, `BuildingBlock`, `ArchitectureOption`, `Standard`, `StandardClause`, `Actor`, `Plane`, `Domain`, `UseCase`, `ConformanceCheck`, `Publication` (restricted to the OID 2025 paper), `Term`.
 - **Build pipeline** (GitHub Actions, because custom Jekyll plugins are not supported on the default GitHub Pages build):
   1. Validate data (JSON-Schema + SHACL; broken links, orphans, duplicate IDs fail the build).
   2. Generate: per-entity Markdown stubs, traceability matrices, coverage report, JSON-LD export (`/graph.jsonld`), CSV/Excel export.
@@ -230,7 +231,7 @@ Evaluation criteria: legal conformity, assurance level, sovereignty, interoperab
 /graph/                        Interactive knowledge graph + JSON-LD download
 /certification/                Conformance profiles, test-suite catalogue, evidence templates
 /governance/                   Roles, rulebook requirements, change process, RACI
-/research/                     Annotated bibliography (Medium, GitHub, papers, position papers), publication timeline
+/research/                     Non-normative reading list (outside the knowledge graph), publication timeline
 /roadmap/                      EBW legislative & standards timeline, project roadmap, open questions
 /glossary/                     SKOS-backed terms (EBW, LPID, QEAA, QSCD, ERDS, DPP, AAS, DSP, DCP, …)
 /contribute/                   How to propose/change a requirement; issue templates; code of conduct
