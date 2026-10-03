@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" width="1200" height="640" role="img" aria-labelledby="t3 d3">
+  <title id="t3">Trust plane: who establishes and uses trust</title>
+  <desc id="d3">Concept model of the trust plane. A conformity assessment body audits a qualified trust service provider. A supervisory body grants it qualified status and informs the list body, which updates the Member State trusted list that lists the provider. The provider issues credentials that carry status information. A relying party validates against the trusted list and the Commission list of trusted entities and checks status.</desc>
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"><rdf:RDF><cc:Work rdf:about=""><dc:title>Trust plane: who establishes and uses trust</dc:title><dc:description>Concept model of the trust plane: conformity assessment body, supervisory body, qualified trust service provider, trusted list, list of trusted entities, credential status and relying party.</dc:description><dc:creator>European Business Wallet Requirements project</dc:creator><dc:subject>trust plane; trusted list; qualified trust service provider; supervisory body; relying party; eIDAS</dc:subject><dc:language>en</dc:language><dc:format>image/svg+xml</dc:format><dc:rights>CC BY 4.0</dc:rights><cc:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/></cc:Work></rdf:RDF></metadata>
+  <defs>
+    <marker id="many" viewBox="-14 -8 16 16" markerWidth="14" markerHeight="14" refX="0" refY="0" orient="auto-start-reverse"><path d="M0,0 L-12,-6 M0,0 L-12,0 M0,0 L-12,6" stroke="#023852" stroke-width="1.6" fill="none"/></marker>
+    <marker id="one" viewBox="-14 -8 16 16" markerWidth="14" markerHeight="14" refX="0" refY="0" orient="auto-start-reverse"><path d="M-6,-6 L-6,6 M-11,-6 L-11,6" stroke="#023852" stroke-width="1.6" fill="none"/></marker>
+    <style>
+      text{font-family:Archivo,Arial,sans-serif}
+      .band{fill:#F4F2EE;stroke:#C9C7C2;stroke-width:1.5}
+      .band-t{font-size:16px;font-weight:700;fill:#023852;letter-spacing:.04em;text-anchor:middle}
+      .ent{fill:#E5EAEE;stroke:#023852;stroke-width:1.4}
+      .hi{fill:#2BFEBB;stroke:#023852;stroke-width:1.6}
+      .typ{fill:#EEEEEE;stroke:#6F8895;stroke-width:1.4}
+      .en{font-size:16px;fill:#253746;text-anchor:middle}
+      .ln{fill:none;stroke:#023852;stroke-width:1.4}
+      .lb{font-size:15px;fill:#253746;text-anchor:middle}
+      .lbg{fill:#F4F2EE}
+    </style>
+  </defs>
+  <rect width="1200" height="640" fill="#F4F2EE"/>
+  <rect class="band" x="20" y="20" width="250" height="600" rx="12"/><text class="band-t" x="145" y="48">OVERSIGHT</text>
+  <rect class="band" x="310" y="20" width="360" height="600" rx="12"/><text class="band-t" x="490" y="48">PROVIDERS AND LISTS</text>
+  <rect class="band" x="710" y="20" width="470" height="600" rx="12"/><text class="band-t" x="945" y="48">USE</text>
+
+  <path class="ln" d="M215,138 H345" marker-end="url(#many)" marker-start="url(#one)"/>
+  <rect class="lbg" x="222" y="104" width="116" height="22"/><text class="lb" x="280" y="120">audits</text>
+  <path class="ln" d="M215,308 H300 V158 H345" marker-end="url(#many)" marker-start="url(#one)"/>
+  <rect class="lbg" x="224" y="250" width="68" height="22"/><text class="lb" x="258" y="266">grants</text>
+  <text class="lb" x="258" y="286">status</text>
+  <path class="ln" d="M215,340 H345" marker-end="url(#one)" marker-start="url(#one)"/>
+  <rect class="lbg" x="226" y="346" width="110" height="22"/><text class="lb" x="281" y="362">informs</text>
+  <path class="ln" d="M490,356 V196" marker-end="url(#many)" marker-start="url(#one)"/>
+  <rect class="lbg" x="500" y="266" width="48" height="22"/><text class="lb" x="524" y="282">lists</text>
+  <path class="ln" d="M635,170 H795" marker-end="url(#many)" marker-start="url(#one)"/>
+  <rect class="lbg" x="690" y="136" width="52" height="22"/><text class="lb" x="716" y="152">issues</text>
+  <path class="ln" d="M880,196 V300" marker-end="url(#one)" marker-start="url(#many)"/>
+  <rect class="lbg" x="890" y="238" width="80" height="22"/><text class="lb" x="930" y="254">has status</text>
+  <path class="ln" d="M880,500 V356" marker-end="url(#many)" marker-start="url(#many)"/>
+  <rect class="lbg" x="890" y="418" width="58" height="22"/><text class="lb" x="919" y="434">checks</text>
+  <path class="ln" d="M795,520 H680 V396 H635" marker-end="url(#one)" marker-start="url(#many)"/>
+  <rect class="lbg" x="690" y="470" width="96" height="22"/><text class="lb" x="738" y="486">validates</text>
+  <path class="ln" d="M795,550 H635" marker-end="url(#one)" marker-start="url(#many)"/>
+  <rect class="lbg" x="692" y="556" width="96" height="22"/><text class="lb" x="740" y="572">validates</text>
+
+  <rect class="typ" x="45" y="110" width="170" height="60" rx="8"/><text class="en" x="130" y="136">Conformity</text><text class="en" x="130" y="156">assessment body</text>
+  <rect class="typ" x="45" y="290" width="170" height="60" rx="8"/><text class="en" x="130" y="326">Supervisory body</text>
+  <rect class="ent" x="345" y="110" width="290" height="86" rx="8"/><text class="en" x="490" y="146">Qualified trust</text><text class="en" x="490" y="168">service provider</text>
+  <rect class="hi" x="345" y="320" width="290" height="76" rx="8"/><text class="en" x="490" y="354">Trusted list</text><text class="en" x="490" y="374">(Member State, signed)</text>
+  <rect class="ent" x="345" y="500" width="290" height="100" rx="8"/><text class="en" x="490" y="534">List of trusted entities</text><text class="en" x="490" y="556">(Commission: wallet, PID,</text><text class="en" x="490" y="576">access certificate providers)</text>
+  <rect class="ent" x="795" y="140" width="170" height="56" rx="8"/><text class="en" x="880" y="174">Credential</text>
+  <rect class="ent" x="795" y="300" width="170" height="56" rx="8"/><text class="en" x="880" y="334">Status information</text>
+  <rect class="typ" x="795" y="500" width="170" height="60" rx="8"/><text class="en" x="880" y="536">Relying party</text>
+</svg>

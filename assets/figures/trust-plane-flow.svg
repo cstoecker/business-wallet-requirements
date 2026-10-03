@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1260 600" width="1260" height="600" role="img" aria-labelledby="t4 d4">
+  <title id="t4">How a provider becomes qualified and is checked by relying parties</title>
+  <desc id="d4">Flow. A provider notifies the supervisory body with a conformity assessment report. The supervisory body verifies and grants qualified status, or does not grant it and the provider reworks. The list body updates the trusted list. The provider may start the qualified service once the status is shown. A relying party validates against the trusted list.</desc>
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"><rdf:RDF><cc:Work rdf:about=""><dc:title>How a provider becomes qualified and is checked by relying parties</dc:title><dc:description>Flow from notification of a qualified trust service provider through verification, qualified status and trusted list update to validation by a relying party.</dc:description><dc:creator>European Business Wallet Requirements project</dc:creator><dc:subject>qualified trust service provider; trusted list; supervisory body; notification; relying party; eIDAS</dc:subject><dc:language>en</dc:language><dc:format>image/svg+xml</dc:format><dc:rights>CC BY 4.0</dc:rights><cc:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/></cc:Work></rdf:RDF></metadata>
+  <defs>
+    <marker id="ah" viewBox="0 0 12 12" markerWidth="10" markerHeight="10" refX="10" refY="6" orient="auto"><path d="M1,1 L10,6 L1,11" fill="none" stroke="#023852" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></marker>
+    <style>
+      text{font-family:Archivo,Arial,sans-serif}
+      .bx{fill:#FFFFFE;stroke:#023852;stroke-width:2}
+      .sig{fill:#2BFEBB;stroke:#023852;stroke-width:2}
+      .big{fill:#023852;stroke:#023852;stroke-width:2}
+      .t{font-size:17px;font-weight:600;fill:#023852;text-anchor:middle}
+      .tw{font-size:17px;font-weight:600;fill:#F4F2EE;text-anchor:middle}
+      .lab{font-size:16px;fill:#253746;text-anchor:middle}
+      .arr{fill:none;stroke:#023852;stroke-width:2.2;stroke-linecap:round}
+      .grp{fill:none;stroke:#C9C7C2;stroke-width:2}
+      .gt{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:13px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;fill:#445260;text-anchor:middle}
+      .wbg{fill:#F4F2EE}
+    </style>
+  </defs>
+  <rect width="1260" height="600" fill="#F4F2EE"/>
+  <rect class="grp" x="20" y="80" width="210" height="230" rx="16"/><text class="gt" x="125" y="108">Provider</text>
+  <rect class="grp" x="290" y="80" width="470" height="230" rx="16"/><text class="gt" x="525" y="108">Supervisory body</text>
+  <rect class="grp" x="790" y="80" width="210" height="230" rx="16"/><text class="gt" x="895" y="108">List body</text>
+  <rect class="grp" x="1030" y="80" width="210" height="230" rx="16"/><text class="gt" x="1135" y="108">Provider</text>
+  <rect class="grp" x="790" y="400" width="210" height="170" rx="16"/><text class="gt" x="895" y="552">Relying party</text>
+
+  <path class="arr" d="M205,200 H325" marker-end="url(#ah)"/>
+  <path class="arr" d="M485,200 H585" marker-end="url(#ah)"/>
+  <path class="arr" d="M735,200 H825" marker-end="url(#ah)"/>
+  <path class="arr" d="M965,200 H1065" marker-end="url(#ah)"/>
+  <path class="arr" d="M405,236 C405,330 125,330 125,236" marker-end="url(#ah)"/>
+  <path class="arr" d="M895,436 V240" marker-end="url(#ah)"/>
+  <text class="lab" x="265" y="180">Notifies</text>
+  <text class="lab" x="535" y="180">Grants</text>
+  <text class="lab" x="780" y="180">Informs</text>
+  <text class="lab" x="1015" y="180">May start</text>
+  <rect class="wbg" x="205" y="316" width="120" height="26"/><text class="lab" x="265" y="336">Not granted</text>
+  <rect class="wbg" x="905" y="318" width="120" height="26"/><text class="lab" x="965" y="338">Validates</text>
+
+  <rect class="bx" x="40" y="164" width="170" height="72" rx="12"/><text class="t" x="125" y="194">Notification with</text><text class="t" x="125" y="216">audit report</text>
+  <rect class="bx" x="325" y="164" width="160" height="72" rx="12"/><text class="t" x="405" y="194">Verifies</text><text class="t" x="405" y="216">compliance</text>
+  <rect class="bx" x="585" y="164" width="150" height="72" rx="12"/><text class="t" x="660" y="194">Qualified</text><text class="t" x="660" y="216">status</text>
+  <rect class="sig" x="825" y="164" width="140" height="72" rx="12"/><text class="t" x="895" y="194">Trusted list</text><text class="t" x="895" y="216">updated</text>
+  <rect class="bx" x="1065" y="164" width="150" height="72" rx="12"/><text class="t" x="1140" y="194">Qualified</text><text class="t" x="1140" y="216">service live</text>
+  <rect class="big" x="810" y="436" width="170" height="80" rx="12"/><text class="tw" x="895" y="470">Validates</text><text class="tw" x="895" y="492">against list</text>
+</svg>

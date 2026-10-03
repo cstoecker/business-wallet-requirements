@@ -24,7 +24,7 @@ for x in ucs + reqs:
     if x["ecosystem"] not in eid: err(f"{x['id']}: unknown ecosystem {x['ecosystem']}")
     if x["source"] not in sid: err(f"{x['id']}: unknown source {x['source']}")
 for s in sources:
-    if s.get("class") not in ("official", "ecosystem-specification", "paper"): err(f"{s['id']}: class must be official, ecosystem-specification or paper")
+    if s.get("class") not in ("official", "standard", "ecosystem-specification", "paper"): err(f"{s['id']}: class must be official, standard, ecosystem-specification or paper")
 
 SECTIONS = ["Summary", "Definition", "Why it matters", "How it works", "Interaction flow", "Roles and responsibilities", "Related concepts",
             "Requirements and obligations", "Standards and specifications", "Design choices and alternatives", "Examples",
@@ -70,7 +70,7 @@ for c in concepts:
         if not fm.get("description"): err(f"{c['slug']}: description required")
         for q in fm.get("faq") or []:
             if not q.get("q") or not q.get("a"): err(f"{c['slug']}: faq entries need q and a")
-        for ref in re.findall(r"CON-[A-Z-]+", t):
+        for ref in re.findall(r"CON-[A-Z0-9-]+", t):
             if ref not in cid: err(f"{c['slug']}: unknown concept reference {ref}")
         for ref in re.findall(r"SRC-[A-Z0-9-]+", t):
             if ref not in sid: err(f"{c['slug']}: unknown source reference {ref}")

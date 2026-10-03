@@ -16,11 +16,8 @@
   - CON-AGENT-MANDATE
   - CON-AUTHORITY-ACCESS
   - CON-WALLET-CONNECTOR
-  summary: Where policies are evaluated and authorisation decisions are made for people,
-    systems and agents.
-  definition: The control plane is the part of an architecture that decides who may
-    do what under which policy, using a policy engine that evaluates identities, attestations
-    and mandates, and that wallets and connectors enforce.
+  summary: Where policies are evaluated and authorisation decisions are made for people, systems and agents.
+  definition: The control plane is the part of an architecture that decides who may do what under which policy, using a policy engine that evaluates identities, attestations and mandates, and that wallets and connectors enforce.
 - id: CON-DATA-PLANE
   slug: data-plane
   title: Data plane
@@ -36,14 +33,12 @@
   - CON-DSP-DCP
   - CON-EVIDENCE-GRAPH
   summary: How credentials, evidence, documents and data actually move between parties.
-  definition: The data plane is the part of an architecture that carries credentials,
-    evidence, documents and data between parties once the control plane has authorised
-    the exchange.
+  definition: The data plane is the part of an architecture that carries credentials, evidence, documents and data between parties once the control plane has authorised the exchange.
 - id: CON-TRUST-PLANE
   slug: trust-plane
   title: Trust plane
   group: Architecture planes
-  status: planned
+  status: draft
   requirement_categories:
   - TRU
   - GOV
@@ -56,11 +51,8 @@
   - CON-LEGAL-PERSON-ID
   - CON-REVOCATION
   - CON-PQC
-  summary: 'Who and what can be trusted and why: trust anchors, trust lists, qualified
-    services, registries and status.'
-  definition: The trust plane is the part of an architecture that establishes who
-    or what can be trusted and why, through trust anchors, trust lists, qualified
-    trust services, registries and revocation status.
+  summary: 'Who and what can be trusted and why: trust anchors, trust lists, qualified services, registries and status.'
+  definition: The trust plane is the part of an architecture that establishes who or what can be trusted and why, through trust anchors, trust lists, qualified trust services, registries and revocation status.
 - id: CON-KNOWLEDGE-GRAPH
   slug: knowledge-graph
   title: Knowledge graph
@@ -71,11 +63,8 @@
   - GOV
   related:
   - CON-EVIDENCE-GRAPH
-  summary: How this site links law, obligations, requirements, building blocks, standards,
-    checks and scenarios as a machine-readable graph.
-  definition: A knowledge graph represents entities and their typed relations in a
-    machine-readable form; here it links legal sources, obligations, requirements,
-    building blocks, standard clauses, conformance checks and scenarios.
+  summary: How this site links law, obligations, requirements, building blocks, standards, checks and scenarios as a machine-readable graph.
+  definition: A knowledge graph represents entities and their typed relations in a machine-readable form; here it links legal sources, obligations, requirements, building blocks, standard clauses, conformance checks and scenarios.
 - id: CON-EVIDENCE-GRAPH
   slug: evidence-graph
   title: Access-controlled verifiable evidence graph
@@ -90,11 +79,8 @@
   - CON-DATA-PLANE
   - CON-CROSS-SECTOR
   - CON-PRIVACY
-  summary: Verifiable evidence expressed as linked data under open-world semantics,
-    disclosed only to parties entitled to see it.
-  definition: An evidence graph is a set of verifiable claims about entities and their
-    relations, expressed as linked data under open-world semantics, where access to
-    each part is controlled and each claim can be verified.
+  summary: Verifiable evidence expressed as linked data under open-world semantics, disclosed only to parties entitled to see it.
+  definition: An evidence graph is a set of verifiable claims about entities and their relations, expressed as linked data under open-world semantics, where access to each part is controlled and each claim can be verified.
 - id: CON-DSP-DCP
   slug: dsp-dcp-integration
   title: DSP and DCP integration
@@ -107,11 +93,8 @@
   - CON-WALLET-CONNECTOR
   - CON-DATA-PLANE
   - CON-CROSS-SECTOR
-  summary: How the Dataspace Protocol and the Decentralized Claims Protocol fit with
-    wallets and credentials.
-  definition: The Dataspace Protocol (DSP) governs catalogue, contract negotiation
-    and transfer between data-space participants, and the Decentralized Claims Protocol
-    (DCP) governs how participants present and verify credentials in those exchanges.
+  summary: How the Dataspace Protocol and the Decentralized Claims Protocol fit with wallets and credentials.
+  definition: The Dataspace Protocol (DSP) governs catalogue, contract negotiation and transfer between data-space participants, and the Decentralized Claims Protocol (DCP) governs how participants present and verify credentials in those exchanges.
 - id: CON-WALLET-CONNECTOR
   slug: wallet-connector-binding
   title: Wallet and data-space connector binding
@@ -125,11 +108,8 @@
   - CON-DSP-DCP
   - CON-CONTROL-PLANE
   - CON-TRUST-LIST
-  summary: How an organisation's wallet is bound to the data-space connector that
-    acts on its behalf.
-  definition: Wallet and connector binding is the relationship that lets a data-space
-    connector use credentials held for an organisation, and lets counterparties verify
-    that the connector acts for that organisation.
+  summary: How an organisation's wallet is bound to the data-space connector that acts on its behalf.
+  definition: Wallet and connector binding is the relationship that lets a data-space connector use credentials held for an organisation, and lets counterparties verify that the connector acts for that organisation.
 - id: CON-B2G-REPORTING
   slug: b2g-reporting
   title: B2G reporting
@@ -143,11 +123,8 @@
   - CON-AUTHORITY-ACCESS
   - CON-EBW-EUDIW
   - CON-QUALIFIED-SERVICES
-  summary: Mandate-bound, sealed and time-stamped reports from businesses to authorities,
-    with receipts.
-  definition: B2G reporting is the submission of structured, signed or sealed and
-    time-stamped reports by an organisation to a public body, with proof of delivery
-    and a legally relevant acknowledgement.
+  summary: Mandate-bound, sealed and time-stamped reports from businesses to authorities, with receipts.
+  definition: B2G reporting is the submission of structured, signed or sealed and time-stamped reports by an organisation to a public body, with proof of delivery and a legally relevant acknowledgement.
 - id: CON-B2G-REGISTRY
   slug: b2g-registry-obligations
   title: B2G registry obligations
@@ -161,11 +138,8 @@
   - CON-EBW-DPP
   - CON-AUTHORITY-ACCESS
   - CON-AUTHENTIC-SOURCES
-  summary: Entries that organisations must create and maintain in public registries,
-    linked to the legal person.
-  definition: A registry obligation requires an organisation to create and maintain
-    an entry in a public register, such as a product, device or system register, linked
-    to the identity of the responsible legal person.
+  summary: Entries that organisations must create and maintain in public registries, linked to the legal person.
+  definition: A registry obligation requires an organisation to create and maintain an entry in a public register, such as a product, device or system register, linked to the identity of the responsible legal person.
 - id: CON-AUTHORITY-ACCESS
   slug: authority-access
   title: Authority access
@@ -180,11 +154,8 @@
   - CON-CONTROL-PLANE
   - CON-EBW-DPP
   - CON-B2G-REGISTRY
-  summary: How authorities authenticate to and obtain lawful access to data held by
-    organisations.
-  definition: Authority access is the controlled, lawful access of public bodies,
-    such as market-surveillance and customs authorities, to data and evidence held
-    by organisations, including how those authorities are identified and authorised.
+  summary: How authorities authenticate to and obtain lawful access to data held by organisations.
+  definition: Authority access is the controlled, lawful access of public bodies, such as market-surveillance and customs authorities, to data and evidence held by organisations, including how those authorities are identified and authorised.
 - id: CON-TRUSTED-AI
   slug: trusted-ai
   title: Trusted AI
@@ -198,10 +169,8 @@
   - CON-AGENT-MANDATE
   - CON-AISP
   - CON-AI-SAFETY
-  summary: Verifiable identity, authority and accountability for AI systems that act
-    for organisations.
-  definition: Trusted AI in this context means AI systems whose identity, authority
-    and actions can be verified and attributed to a legal person.
+  summary: Verifiable identity, authority and accountability for AI systems that act for organisations.
+  definition: Trusted AI in this context means AI systems whose identity, authority and actions can be verified and attributed to a legal person.
 - id: CON-AGENT-MANDATE
   slug: agent-mandate
   title: Agent mandate
@@ -217,10 +186,8 @@
   - CON-MANDATE
   - CON-AI-SAFETY
   - CON-REVOCATION
-  summary: A verifiable, scoped and revocable authorisation that lets an AI agent
-    act for an organisation.
-  definition: An agent mandate is a verifiable, scoped and revocable authorisation
-    by which an organisation lets an AI agent act on its behalf.
+  summary: A verifiable, scoped and revocable authorisation that lets an AI agent act for an organisation.
+  definition: An agent mandate is a verifiable, scoped and revocable authorisation by which an organisation lets an AI agent act on its behalf.
 - id: CON-AISP
   slug: aisp
   title: AISP
@@ -232,10 +199,8 @@
   related:
   - CON-TRUSTED-AI
   - CON-AI-SAFETY
-  summary: AISP as used in the Trusted AI work from a supply-chain perspective (expansion
-    and scope to be confirmed from the source).
-  definition: To be defined from the cited source; the acronym is not expanded here
-    until it has been confirmed.
+  summary: AISP as used in the Trusted AI work from a supply-chain perspective (expansion and scope to be confirmed from the source).
+  definition: To be defined from the cited source; the acronym is not expanded here until it has been confirmed.
 - id: CON-AI-SAFETY
   slug: ai-safety
   title: AI safety
@@ -249,10 +214,8 @@
   - CON-TRUSTED-AI
   - CON-AISP
   - CON-AGENT-MANDATE
-  summary: Safety assurance for AI systems that act across organisations, and what
-    evidence a wallet-based architecture can provide.
-  definition: To be defined from official sources (for example the EU AI Act and referenced
-    standards) and limited to what a wallet and trust architecture can evidence.
+  summary: Safety assurance for AI systems that act across organisations, and what evidence a wallet-based architecture can provide.
+  definition: To be defined from official sources (for example the EU AI Act and referenced standards) and limited to what a wallet and trust architecture can evidence.
 - id: CON-MULTI-TRUST
   slug: multi-trust-domains
   title: Multi-trust domains
@@ -267,11 +230,8 @@
   - CON-TRUST-LIST
   - CON-CROSS-SECTOR
   - CON-TRUST-LIST-DISCOVERY
-  summary: How credentials and trust decisions work across ecosystems that have different
-    trust anchors.
-  definition: A trust domain is a set of participants that accept the same trust anchors
-    and rules; multi-trust-domain architectures let credentials and decisions cross
-    between such domains.
+  summary: How credentials and trust decisions work across ecosystems that have different trust anchors.
+  definition: A trust domain is a set of participants that accept the same trust anchors and rules; multi-trust-domain architectures let credentials and decisions cross between such domains.
 - id: CON-CROSS-SECTOR
   slug: cross-sector-credential-use
   title: Cross-sector credential use
@@ -286,11 +246,8 @@
   - CON-EVIDENCE-GRAPH
   - CON-DSP-DCP
   - CON-EBW-DPP
-  summary: Using one organisation credential in several sectors and data spaces without
-    re-onboarding.
-  definition: Cross-sector credential use is the reuse of the same organisation credentials
-    across sectors and data spaces, with sector-specific attestations added where
-    needed.
+  summary: Using one organisation credential in several sectors and data spaces without re-onboarding.
+  definition: Cross-sector credential use is the reuse of the same organisation credentials across sectors and data spaces, with sector-specific attestations added where needed.
 - id: CON-TRUST-LIST
   slug: trust-list
   title: Trust list
@@ -307,11 +264,8 @@
   - CON-MULTI-TRUST
   - CON-QUALIFIED-SERVICES
   - CON-WUA
-  summary: A governed list of trusted issuers or services that relying parties use
-    to validate credentials.
-  definition: A trust list is a governed, signed list of entities or services, such
-    as qualified trust service providers or attestation issuers, that relying parties
-    use as trust anchors.
+  summary: A governed list of trusted issuers or services that relying parties use to validate credentials.
+  definition: A trust list is a governed, signed list of entities or services, such as qualified trust service providers or attestation issuers, that relying parties use as trust anchors.
 - id: CON-TRUST-LIST-DISCOVERY
   slug: trust-list-discovery
   title: Trust list discovery
@@ -323,11 +277,8 @@
   related:
   - CON-TRUST-LIST
   - CON-MULTI-TRUST
-  summary: How a relying party finds the right trust list for a credential, sector
-    or jurisdiction.
-  definition: Trust list discovery is the mechanism by which a relying party finds,
-    retrieves and authenticates the trust list that applies to a given credential
-    type, sector or jurisdiction.
+  summary: How a relying party finds the right trust list for a credential, sector or jurisdiction.
+  definition: Trust list discovery is the mechanism by which a relying party finds, retrieves and authenticates the trust list that applies to a given credential type, sector or jurisdiction.
 - id: CON-LOA
   slug: levels-of-assurance
   title: Levels of assurance
@@ -341,10 +292,8 @@
   - CON-EBW-EUDIW
   - CON-TRUST-LIST
   - CON-LEGAL-PERSON-ID
-  summary: The confidence a relying party can place in an identity or credential,
-    and how levels map between regimes.
-  definition: A level of assurance expresses the degree of confidence in an asserted
-    identity or credential, as defined in the applicable regulation and standards.
+  summary: The confidence a relying party can place in an identity or credential, and how levels map between regimes.
+  definition: A level of assurance expresses the degree of confidence in an asserted identity or credential, as defined in the applicable regulation and standards.
 - id: CON-EBW-EUDIW
   slug: ebw-eudiw-interaction
   title: EBW and EUDI Wallet interaction
@@ -359,11 +308,8 @@
   - CON-MANDATE
   - CON-B2G-REPORTING
   - CON-PRIVACY
-  summary: How the European Business Wallet and the EUDI Wallet of a natural person
-    interact, including representatives and consumers.
-  definition: The EBW and EUDI Wallet interaction covers how a natural person, as
-    consumer or as authorised representative, and an organisation exchange and verify
-    credentials between their respective wallets.
+  summary: How the European Business Wallet and the EUDI Wallet of a natural person interact, including representatives and consumers.
+  definition: The EBW and EUDI Wallet interaction covers how a natural person, as consumer or as authorised representative, and an organisation exchange and verify credentials between their respective wallets.
 - id: CON-EBW-DPP
   slug: ebw-dpp-integration
   title: EBW and DPP integration
@@ -377,11 +323,8 @@
   - CON-B2G-REGISTRY
   - CON-AUTHORITY-ACCESS
   - CON-CROSS-SECTOR
-  summary: How organisation identity, credentials and access rights support Digital
-    Product Passports, with and without AAS.
-  definition: The EBW and DPP integration covers how legal-person identity, attestations
-    and access rights let economic operators, authorities and other actors publish
-    and read Digital Product Passport data.
+  summary: How organisation identity, credentials and access rights support Digital Product Passports, with and without AAS.
+  definition: The EBW and DPP integration covers how legal-person identity, attestations and access rights let economic operators, authorities and other actors publish and read Digital Product Passport data.
 - id: CON-MANDATE
   slug: mandate-and-power-of-representation
   title: Mandate and power of representation
@@ -394,8 +337,7 @@
   related:
   - CON-AGENT-MANDATE
   - CON-EBW-EUDIW
-  summary: How authority to act for an organisation is created, delegated, verified
-    and revoked.
+  summary: How authority to act for an organisation is created, delegated, verified and revoked.
 - id: CON-LEGAL-PERSON-ID
   slug: legal-person-identity
   title: Legal person identity and EBWOID
@@ -409,8 +351,7 @@
   - CON-LOA
   - CON-AUTHENTIC-SOURCES
   - CON-WUA
-  summary: The identification data that establishes an organisation in the wallet
-    ecosystem.
+  summary: The identification data that establishes an organisation in the wallet ecosystem.
 - id: CON-AUTHENTIC-SOURCES
   slug: authentic-sources-and-registries
   title: Authentic sources and registries
@@ -435,8 +376,7 @@
   related:
   - CON-TRUST-LIST
   - CON-B2G-REPORTING
-  summary: Qualified signatures, seals, time stamps and registered delivery and their
-    legal effect.
+  summary: Qualified signatures, seals, time stamps and registered delivery and their legal effect.
 - id: CON-WUA
   slug: wallet-unit-attestation
   title: Wallet unit attestation and lifecycle
@@ -460,8 +400,7 @@
   related:
   - CON-TRUST-PLANE
   - CON-AGENT-MANDATE
-  summary: How validity and revocation of credentials and mandates are published and
-    checked.
+  summary: How validity and revocation of credentials and mandates are published and checked.
 - id: CON-PRIVACY
   slug: selective-disclosure-and-unlinkability
   title: Selective disclosure and unlinkability
@@ -473,8 +412,7 @@
   related:
   - CON-EVIDENCE-GRAPH
   - CON-EBW-EUDIW
-  summary: Privacy techniques for organisations and the natural persons who represent
-    them.
+  summary: Privacy techniques for organisations and the natural persons who represent them.
 - id: CON-PQC
   slug: crypto-agility-and-pqc
   title: Crypto-agility and post-quantum readiness
@@ -485,5 +423,4 @@
   - TRN
   related:
   - CON-TRUST-PLANE
-  summary: Planning cryptographic transitions for long-lived credentials and trust
-    anchors.
+  summary: Planning cryptographic transitions for long-lived credentials and trust anchors.
