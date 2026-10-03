@@ -32,4 +32,4 @@ Google Search Console (indexed pages, sitemap processing, queries, impressions, 
 
 ## 6. Launch blockers (not SEO, but required for a public Spherity-branded site)
 
-Imprint and privacy notice (set `imprint_url`, `privacy_url`; the footer shows them when set, the checker warns); fonts: the design system loads Archivo and IBM Plex Mono from Google Fonts, which transfers visitor IP addresses to a third party, so self-host the licensed font files before launch; confirm CC BY 4.0 and the code licence; decide on contact-form handling (currently a mailto form, no data stored).
+Imprint and privacy notice (set `imprint_url`, `privacy_url`; the footer shows them when set, the checker warns); fonts: Archivo and IBM Plex Mono are now self-hosted (assets/fonts, SIL OFL 1.1, no third-party request); replace them with the licensed brand binaries if Spherity supplies them; confirm CC BY 4.0 and the code licence; decide on contact-form handling (currently a mailto form, no data stored).
