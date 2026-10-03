@@ -2,6 +2,11 @@
 # Entries are added by people or by the weekly agent through a reviewed pull request. type: law | standard | ecosystem | site
 - date: "2026-10-03"
   type: site
+  title: "Legal roadmap added"
+  summary: "Swimlane roadmap chart and page with milestones, gates, Council presidencies and risks from the Commission proposal to mandatory acceptance. Only the proposal date is confirmed; all other dates are scenarios."
+  sources: [SRC-EC-IP-25-2718]
+- date: "2026-10-03"
+  type: site
   title: "Business cases added (macroeconomic, ecosystem, company)"
   summary: "Forty-one traced claims from the Commission impact assessment SWD(2025) 837, other official impact assessments and academic papers, with basis, caveats and verification state. The often quoted EUR 37.5 billion SME figure could not be traced to an official document."
   sources: [SRC-EC-SWD-2025-837, SRC-EC-IP-25-2718]

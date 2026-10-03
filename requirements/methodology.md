@@ -1,8 +1,9 @@
 ---
-title: Requirements management methodology
+title: Methodology
 parent: Requirements
 nav_order: 1
 permalink: /requirements/methodology/
+description: "How a statement in a law, standard or ecosystem specification becomes a traceable, reviewed requirement: sources, lifecycle, categories, facets, provenance classes, traceability and change control."
 ---
 
 # Requirements management methodology
