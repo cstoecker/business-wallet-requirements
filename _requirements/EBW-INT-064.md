@@ -3,7 +3,7 @@ req_id: EBW-INT-064
 title: Implementing acts on EUCC and power of attorney wallet profile
 category: INT
 statement: The Commission shall adopt implementing acts by 31 July 2026 establishing the technical specifications, including compatibility with the European Digital Identity Wallet, the taxonomy and the multilingual template for the EU Company Certificate and for the digital EU power of attorney.
-rationale: Technical profile for the certificate and the power of attorney in wallets; implementing acts were not found published when checked (October 2026).
+rationale: Technical profile for the certificate and the power of attorney in wallets; implementing acts were not found published when checked (October 2026). Member States apply the national measures from 31 July 2028 (Article 4(2) of Directive (EU) 2025/25). The Article 24(2) deadline of 31 July 2026 passed; no implementing regulation found in the Publications Office records up to 29 September 2026.
 sources:
 - id: SRC-DIR-2025-25
   location: Article 24(2), points (d) and (e), of Directive (EU) 2017/1132 as inserted by Directive (EU) 2025/25

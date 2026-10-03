@@ -3,7 +3,7 @@ req_id: EBW-INT-058
 title: Receiving register retrieves data via interconnection of registers
 category: INT
 statement: Member States shall ensure that the register where the company is being formed retrieves documents and information by means of exchange of information through the system of interconnection of registers.
-rationale: Defines register-to-register retrieval as the channel for company data in cross-border procedures.
+rationale: Defines register-to-register retrieval as the channel for company data in cross-border procedures. Member States apply the national measures from 31 July 2028 (Article 4(2) of Directive (EU) 2025/25).
 sources:
 - id: SRC-DIR-2025-25
   location: Article 13g(2a) of Directive (EU) 2017/1132 as inserted by Directive (EU) 2025/25

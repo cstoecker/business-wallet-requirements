@@ -3,7 +3,7 @@ req_id: EBW-LEG-038
 title: Support period of at least five years
 category: LEG
 statement: The manufacturer shall handle the wallet's vulnerabilities for a support period of at least five years, or the expected use time if shorter, and keep each security update available for 10 years or the remainder of the support period, whichever is longer.
-rationale: Added 'whichever is longer' (Art. 13(9)); original 'or the remainder of the support period' read as an alternative that could shorten retention. Role corrected to manufacturer. Support period is determined by the manufacturer to reflect expected use time, minimum five years unless expected use is shorter.
+rationale: Added 'whichever is longer' (Art. 13(9)); original 'or the remainder of the support period' read as an alternative that could shorten retention. Role corrected to manufacturer. Support period is determined by the manufacturer to reflect expected use time, minimum five years unless expected use is shorter. Regulation (EU) 2024/2847 applies from 11 December 2027 (Article 71(2)).
 sources:
 - id: SRC-CRA
   location: Article 13(8) and 13(9)

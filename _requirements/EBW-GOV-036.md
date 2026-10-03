@@ -3,7 +3,7 @@ req_id: EBW-GOV-036
 title: Rejection of unconfirmed documents only after register verification
 category: GOV
 statement: The requesting authority shall decide not to accept a register document or EU Company Certificate only if the register from which it requested information does not confirm its origin or authenticity, and shall notify the submitter within 10 working days of the reply.
-rationale: Limits refusals to unverified origin and ensures the holder is informed; relevant to relying-party behaviour.
+rationale: Limits refusals to unverified origin and ensures the holder is informed; relevant to relying-party behaviour. Member States apply the national measures from 31 July 2028 (Article 4(2) of Directive (EU) 2025/25).
 sources:
 - id: SRC-DIR-2025-25
   location: Article 16e(4) of Directive (EU) 2017/1132 as inserted by Directive (EU) 2025/25

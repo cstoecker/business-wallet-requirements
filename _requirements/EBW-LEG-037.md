@@ -3,7 +3,7 @@ req_id: EBW-LEG-037
 title: Coordinated vulnerability disclosure policy and contact point
 category: LEG
 statement: The manufacturer of a wallet that is a product with digital elements shall put in place and enforce a policy on coordinated vulnerability disclosure and take measures to facilitate sharing of vulnerability information, including by providing a contact address for reporting vulnerabilities.
-rationale: Role corrected to manufacturer; the contact address is an example within the point (6) duty to facilitate information sharing about vulnerabilities (including in third-party components), not a stand-alone duty.
+rationale: Role corrected to manufacturer; the contact address is an example within the point (6) duty to facilitate information sharing about vulnerabilities (including in third-party components), not a stand-alone duty. Regulation (EU) 2024/2847 applies from 11 December 2027 (Article 71(2)).
 sources:
 - id: SRC-CRA
   location: Annex I, Part II, points (5) and (6)

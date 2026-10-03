@@ -3,7 +3,7 @@ req_id: EBW-INT-062
 title: Mutual accessibility of interconnections by unique identifier
 category: INT
 statement: The Commission shall adopt implementing acts on the technical specifications and detailed list of data defining mutual accessibility between the system of interconnection of registers, the beneficial ownership registers interconnection and the insolvency registers interconnection, covering use of the unique company identifier.
-rationale: Provides the basis for cross-sector use of the EUID across registers that a wallet-based identification will meet.
+rationale: Provides the basis for cross-sector use of the EUID across registers that a wallet-based identification will meet. Member States apply the national measures from 31 July 2028 (Article 4(2) of Directive (EU) 2025/25).
 sources:
 - id: SRC-DIR-2025-25
   location: Article 24(2), point (f), of Directive (EU) 2017/1132 as inserted by Directive (EU) 2025/25

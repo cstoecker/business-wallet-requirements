@@ -55,7 +55,7 @@ for f in sorted(os.listdir(rdir)) if os.path.isdir(rdir) else []:
         if x["id"] not in sid: err(f"{r['req_id']}: unknown source {x['id']}")
     for cc in r.get("concepts", []):
         if cc not in cid_all: err(f"{r['req_id']}: unknown concept {cc}")
-    if r["legal_status"] == "proposal" and not any(x["id"] in ("SRC-EBW-PROPOSAL", "SRC-COUNCIL-ST-9684-26", "SRC-COUNCIL-ST-7659-26", "SRC-COM-2026-321") for x in r["sources"]): err(f"{r['req_id']}: legal_status proposal must cite a Commission proposal or the Council text")
+    if r["legal_status"] == "proposal" and not any(x["id"] in ("SRC-EBW-PROPOSAL", "SRC-COUNCIL-ST-9684-26", "SRC-COUNCIL-ST-7659-26", "SRC-COM-2026-321", "SRC-EC-SWD-2025-837", "SRC-EC-IP-25-2718", "SRC-EC-DIGITAL-PACKAGE-FAQ") for x in r["sources"]): err(f"{r['req_id']}: legal_status proposal must cite a Commission proposal or the Council text")
 for d in {i for i in rids if rids.count(i) > 1}: err(f"requirements: duplicate id {d}")
 SECTIONS = ["Summary", "Definition", "Why it matters", "How it works", "Interaction flow", "Roles and responsibilities", "Related concepts",
             "Requirements and obligations", "Standards and specifications", "Design choices and alternatives", "Examples",

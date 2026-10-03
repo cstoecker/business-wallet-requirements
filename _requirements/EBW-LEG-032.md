@@ -3,7 +3,7 @@ req_id: EBW-LEG-032
 title: Wallet products meet both CRA and eIDAS security requirements
 category: LEG
 statement: Where a wallet is a product with digital elements within the scope of the CRA, its manufacturer shall comply with both the essential cybersecurity requirements of the CRA and the specific security requirements of Article 5a of Regulation 910/2014.
-rationale: Recital 33 is non-operative and uses 'should'; the binding CRA duty falls on the manufacturer (Art. 13(1), Annex I). Applying 'shall' to the wallet provider derives the operative duty from the recital plus the manufacturer role; the recital also mentions optional demonstration by certification under an EU cybersecurity scheme.
+rationale: Recital 33 is non-operative and uses 'should'; the binding CRA duty falls on the manufacturer (Art. 13(1), Annex I). Applying 'shall' to the wallet provider derives the operative duty from the recital plus the manufacturer role; the recital also mentions optional demonstration by certification under an EU cybersecurity scheme. Regulation (EU) 2024/2847 applies from 11 December 2027 (Article 71(2)).
 sources:
 - id: SRC-CRA
   location: Recital (33)

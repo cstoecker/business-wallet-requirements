@@ -3,7 +3,7 @@ req_id: EBW-FUN-048
 title: EU Company Certificate obtainable electronically and via BRIS
 category: FUN
 statement: Member States shall ensure that the EU Company Certificate can be obtained from the register upon an application by electronic or by paper means, and that its electronic version can also be obtained through the system of interconnection of registers.
-rationale: Defines channels through which a wallet or a relying party can source the certificate.
+rationale: Defines channels through which a wallet or a relying party can source the certificate. Member States apply the national measures from 31 July 2028 (Article 4(2) of Directive (EU) 2025/25).
 sources:
 - id: SRC-DIR-2025-25
   location: Article 16b(4) of Directive (EU) 2017/1132 as inserted by Directive (EU) 2025/25

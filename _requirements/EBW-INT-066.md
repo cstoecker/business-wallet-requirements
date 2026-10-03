@@ -3,7 +3,7 @@ req_id: EBW-INT-066
 title: Documents available through BRIS in a standard message format
 category: INT
 statement: Member States shall ensure that the documents and information referred to in Articles 14, 14a, 19(2), 19a(2) and 19b are available through the system of interconnection of registers in a standard message format and accessible by electronic means.
-rationale: Standardised formats enable machine consumption of register data.
+rationale: Standardised formats enable machine consumption of register data. Member States apply the national measures from 31 July 2028 (Article 4(2) of Directive (EU) 2025/25).
 sources:
 - id: SRC-DIR-2025-25
   location: Article 18(2) of Directive (EU) 2017/1132 as amended by Directive (EU) 2025/25

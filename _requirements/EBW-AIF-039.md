@@ -3,7 +3,7 @@ req_id: EBW-AIF-039
 title: Measures against data poisoning and adversarial inputs
 category: AIF
 statement: The provider of a high-risk AI system shall include, where appropriate, technical solutions to prevent, detect, respond to, resolve and control attacks on training data, pre-trained components, adversarial inputs and confidentiality attacks.
-rationale: Extends EBW-LEG-042 (resilience against manipulation) with the AI-specific attack classes that matter for prompt injection and model evasion against wallet-connected agents. Applies only if the AI system is classified high-risk under Article 6; mapping to a wallet or agent operator is a derivation.
+rationale: Extends EBW-LEG-042 (resilience against manipulation) with the AI-specific attack classes that matter for prompt injection and model evasion against wallet-connected agents. Applies only if the AI system is classified high-risk under Article 6; mapping to a wallet or agent operator is a derivation. Chapter III Sections 1-3 of Regulation (EU) 2024/1689 apply from 2 December 2027 (Annex III systems) or 2 August 2028 (Annex I systems) under Article 113 as amended by Regulation (EU) 2026/1744.
 sources:
 - id: SRC-AIACT
   location: Article 15(5)

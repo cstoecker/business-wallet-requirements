@@ -3,7 +3,7 @@ req_id: EBW-DAT-006
 title: Legal-person representatives shown with EUID or registration number
 category: DAT
 statement: Where persons authorised to represent a company are legal persons, Member States shall ensure that the name of the company, its legal form and its EUID, or its registration number where the EUID is not applicable, are made publicly available through the system of interconnection of registers.
-rationale: Chains of representation by legal persons are identifiable by EUID, which a mandate verification can reuse.
+rationale: Chains of representation by legal persons are identifiable by EUID, which a mandate verification can reuse. Member States apply the national measures from 31 July 2028 (Article 4(2) of Directive (EU) 2025/25).
 sources:
 - id: SRC-DIR-2025-25
   location: Article 18(4), second subparagraph, of Directive (EU) 2017/1132 as amended by Directive (EU) 2025/25

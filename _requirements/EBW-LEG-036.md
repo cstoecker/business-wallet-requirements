@@ -3,7 +3,7 @@ req_id: EBW-LEG-036
 title: Software bill of materials for vulnerability management
 category: LEG
 statement: The wallet provider shall identify and document vulnerabilities and components of the wallet, including a software bill of materials in a commonly used, machine-readable format covering at least top-level dependencies.
-rationale: Supply chain transparency lets operators and authorities assess exposure to a component vulnerability.
+rationale: Supply chain transparency lets operators and authorities assess exposure to a component vulnerability. Regulation (EU) 2024/2847 applies from 11 December 2027 (Article 71(2)).
 sources:
 - id: SRC-CRA
   location: Annex I, Part II, point (1)

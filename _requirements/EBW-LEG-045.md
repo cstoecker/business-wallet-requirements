@@ -3,7 +3,7 @@ req_id: EBW-LEG-045
 title: Digital EU power of attorney data fields
 category: LEG
 statement: The digital EU power of attorney template shall include at least data fields about the scope of representation, the person authorised to represent the company and the type of representation.
-rationale: These fields are the minimum content a verifier can rely on when a mandate originates from company-law representation.
+rationale: These fields are the minimum content a verifier can rely on when a mandate originates from company-law representation. Member States apply the national measures from 31 July 2028 (Article 4(2) of Directive (EU) 2025/25).
 sources:
 - id: SRC-DIR-2025-25
   location: Article 16c(4) of Directive (EU) 2017/1132 as inserted by Directive (EU) 2025/25

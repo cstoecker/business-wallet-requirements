@@ -3,7 +3,7 @@ req_id: EBW-TRU-095
 title: EU Company Certificate authenticated and wallet-compatible
 category: TRU
 statement: Member States shall ensure that the EU Company Certificate provided in electronic form is authenticated by means of trust services under Regulation (EU) No 910/2014 and is compatible with the European Digital Identity Wallet.
-rationale: Makes the certificate verifiable by signature or seal and storable in wallets; a business wallet shall be able to hold it.
+rationale: Makes the certificate verifiable by signature or seal and storable in wallets; a business wallet shall be able to hold it. Member States apply the national measures from 31 July 2028 (Article 4(2) of Directive (EU) 2025/25).
 sources:
 - id: SRC-DIR-2025-25
   location: Article 16b(6) of Directive (EU) 2017/1132 as inserted by Directive (EU) 2025/25

@@ -3,7 +3,7 @@ req_id: EBW-AIF-045
 title: Deployer informs persons subject to high-risk AI decisions
 category: AIF
 statement: The deployer of an Annex III high-risk AI system that makes or assists in making decisions related to natural persons shall inform those natural persons that they are subject to the use of the system.
-rationale: Relevant where AI-assisted decisions about natural persons (for example employees or applicants) are taken on wallet-held data. Applies only if the AI system is classified high-risk under Article 6; mapping to a wallet or agent operator is a derivation.
+rationale: Relevant where AI-assisted decisions about natural persons (for example employees or applicants) are taken on wallet-held data. Applies only if the AI system is classified high-risk under Article 6; mapping to a wallet or agent operator is a derivation. Chapter III Sections 1-3 of Regulation (EU) 2024/1689 apply from 2 December 2027 (Annex III systems) or 2 August 2028 (Annex I systems) under Article 113 as amended by Regulation (EU) 2026/1744.
 sources:
 - id: SRC-AIACT
   location: Article 26(11)

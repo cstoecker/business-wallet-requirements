@@ -3,7 +3,7 @@ req_id: EBW-NFR-053
 title: No storage of personal data transmitted via the interconnection
 category: NFR
 statement: Member States shall ensure that registers, authorities and persons or bodies mandated under national law do not store personal data transmitted through the system of interconnection of registers for the purposes of Articles 13g, 28a and 30a, unless otherwise provided by Union or national law.
-rationale: Data-minimisation rule for transferred representative data that a wallet-side relying party must also respect.
+rationale: Data-minimisation rule for transferred representative data that a wallet-side relying party must also respect. Member States apply the national measures from 31 July 2028 (Article 4(2) of Directive (EU) 2025/25).
 sources:
 - id: SRC-DIR-2025-25
   location: Article 18(6) of Directive (EU) 2017/1132 as amended by Directive (EU) 2025/25

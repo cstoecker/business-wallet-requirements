@@ -3,7 +3,7 @@ req_id: EBW-INT-052
 title: EU Company Certificate contains the EUID
 category: INT
 statement: The EU Company Certificate for limited liability companies shall include the EUID of the company, the registration number and the Member State where the company is registered.
-rationale: Ties the certificate content to the primary identifier.
+rationale: Ties the certificate content to the primary identifier. Member States apply the national measures from 31 July 2028 (Article 4(2) of Directive (EU) 2025/25).
 sources:
 - id: SRC-DIR-2025-25
   location: Article 16b(2)(c),(d) of Directive (EU) 2017/1132 as inserted

@@ -3,7 +3,7 @@ req_id: EBW-INT-063
 title: Multilingual EU Company Certificate template published
 category: INT
 statement: The Commission shall publish the multilingual template for the EU Company Certificate on the European e-Justice portal in all official languages of the Union.
-rationale: A common multilingual template gives wallets a stable semantic reference.
+rationale: A common multilingual template gives wallets a stable semantic reference. Member States apply the national measures from 31 July 2028 (Article 4(2) of Directive (EU) 2025/25).
 sources:
 - id: SRC-DIR-2025-25
   location: Article 16b(8) of Directive (EU) 2017/1132 as inserted by Directive (EU) 2025/25

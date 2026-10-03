@@ -3,7 +3,7 @@ req_id: EBW-AIF-028
 title: Human approval above a mandate-defined threshold
 category: AIF
 statement: A mandate shall be able to define thresholds or action classes above which the action requires approval by a natural person, and the wallet or verifier shall withhold the action until that approval is given.
-rationale: AI Act Article 14(3) requires oversight commensurate with autonomy and risk; thresholds make this enforceable per mandate.
+rationale: AI Act Article 14(3) requires oversight commensurate with autonomy and risk; thresholds make this enforceable per mandate. Chapter III Sections 1-3 of Regulation (EU) 2024/1689 apply from 2 December 2027 (Annex III systems) or 2 August 2028 (Annex I systems) under Article 113 as amended by Regulation (EU) 2026/1744.
 sources:
 - id: SRC-AIACT
   location: Article 14(3) and 14(4)(d)

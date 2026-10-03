@@ -1,7 +1,6 @@
 # Source register (graph entity type: Source). Only official sources, ecosystem specifications
 # and the OID 2025 paper are allowed here (docs/01 principle 8).
-# class: official | ecosystem-specification | paper
-# verification: read = fetched/read in full or in the cited part; snippet = seen only as a search snippet; unverified
+# class: official | standard | ecosystem-specification | paper | academic; verification: read | snippet | unverified
 - id: SRC-CX-HOME
   title: Catena-X home page
   issuer: Catena-X Automotive Network Association
@@ -272,7 +271,7 @@
   date: '2026-06-02'
   retrieved: '2026-10-03'
   verification: read
-  note: 'Text submitted for the Council general approach (2 June 2026); the outcome of the 9 June 2026 meeting was not read. It differs from the Commission text (for example it deletes the definitions of authorised representative and mandate). Annex read in this version only.'
+  note: Text submitted for the Council general approach (2 June 2026); the outcome of the 9 June 2026 meeting was not read. It differs from the Commission text (for example it deletes the definitions of authorised representative and mandate). Annex read in this version only.
 - id: SRC-COUNCIL-ST-7659-26
   title: Council document ST 7659/26
   issuer: Council of the European Union
@@ -281,7 +280,7 @@
   date: '2026-05-22'
   retrieved: '2026-10-03'
   verification: read
-  note: 'Marked-up draft (22 May 2026); bold and underline were lost in text extraction, so original and new wording cannot be separated.'
+  note: Marked-up draft (22 May 2026); bold and underline were lost in text extraction, so original and new wording cannot be separated.
 - id: SRC-PLOS-CHEN-2024
   title: 'Chen, Wang, Gan, Gui (2024): The effect of digital government on corporate total factor productivity. PLOS ONE. DOI 10.1371/journal.pone.0308093'
   issuer: PLOS ONE (peer-reviewed journal)
@@ -437,7 +436,7 @@
   verification: snippet
   note: Results not read.
 - id: SRC-EC-ID-2015-1505
-  title: 'Commission Implementing Decision (EU) 2015/1505 of 8 September 2015 on technical specifications and formats relating to trusted lists pursuant to Article 22(5) of Regulation (EU) No 910/2014'
+  title: Commission Implementing Decision (EU) 2015/1505 of 8 September 2015 on technical specifications and formats relating to trusted lists pursuant to Article 22(5) of Regulation (EU) No 910/2014
   issuer: European Commission
   class: official
   url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32015D1505
@@ -446,147 +445,147 @@
   verification: read
   note: Whether this decision has been amended or replaced since was not checked.
 - id: SRC-GDPR
-  title: 'Regulation (EU) 2016/679 (GDPR)'
+  title: Regulation (EU) 2016/679 (GDPR)
   issuer: European Union
   class: official
   url: https://eur-lex.europa.eu/eli/reg/2016/679/oj
-  version: 'OJ original text'
+  version: OJ original text
   date: '2016-04-27'
   retrieved: '2026-10-03'
   verification: read
-  note: 'Read in the Official Journal original text (Formex from the Publications Office); amendments and consolidated versions not checked.'
+  note: Read in the Official Journal original text (Formex from the Publications Office); amendments and consolidated versions not checked.
 - id: SRC-NIS2
-  title: 'Directive (EU) 2022/2555 (NIS 2)'
+  title: Directive (EU) 2022/2555 (NIS 2)
   issuer: European Union
   class: official
   url: https://eur-lex.europa.eu/eli/dir/2022/2555/oj
-  version: 'OJ original text'
+  version: OJ original text
   date: '2022-12-14'
   retrieved: '2026-10-03'
   verification: read
-  note: 'Read in the Official Journal original text (Formex from the Publications Office); amendments and consolidated versions not checked.'
+  note: Read in the Official Journal original text (Formex from the Publications Office); amendments and consolidated versions not checked.
 - id: SRC-DORA
-  title: 'Regulation (EU) 2022/2554 (DORA)'
+  title: Regulation (EU) 2022/2554 (DORA)
   issuer: European Union
   class: official
   url: https://eur-lex.europa.eu/eli/reg/2022/2554/oj
-  version: 'OJ original text'
+  version: OJ original text
   date: '2022-12-14'
   retrieved: '2026-10-03'
   verification: read
-  note: 'Read in the Official Journal original text (Formex from the Publications Office); amendments and consolidated versions not checked.'
+  note: Read in the Official Journal original text (Formex from the Publications Office); amendments and consolidated versions not checked.
 - id: SRC-CRA
-  title: 'Regulation (EU) 2024/2847 (Cyber Resilience Act)'
+  title: Regulation (EU) 2024/2847 (Cyber Resilience Act)
   issuer: European Union
   class: official
   url: https://eur-lex.europa.eu/eli/reg/2024/2847/oj
-  version: 'OJ original text'
+  version: OJ original text
   date: '2024-10-23'
   retrieved: '2026-10-03'
   verification: read
-  note: 'Read in the Official Journal original text (Formex from the Publications Office); amendments and consolidated versions not checked.'
+  note: Amended by Regulation (EU) 2025/327 (EHDS); applies 11.12.2027, Article 14 from 11.9.2026, Chapter IV from 11.6.2026.
 - id: SRC-AIACT
-  title: 'Regulation (EU) 2024/1689 (AI Act)'
+  title: Regulation (EU) 2024/1689 (AI Act)
   issuer: European Union
   class: official
   url: https://eur-lex.europa.eu/eli/reg/2024/1689/oj
-  version: 'OJ original text'
+  version: OJ original text
   date: '2024-06-13'
   retrieved: '2026-10-03'
   verification: read
-  note: 'Read in the Official Journal original text (Formex from the Publications Office); amendments and consolidated versions not checked.'
+  note: Amended by Regulation (EU) 2026/1744 (OJ 24.7.2026, in force 27.7.2026); consolidated text CELEX 02024R1689-20260727; high-risk Chapter III Sections 1-3 apply from 2.12.2027 / 2.8.2028.
 - id: SRC-DATAACT
-  title: 'Regulation (EU) 2023/2854 (Data Act)'
+  title: Regulation (EU) 2023/2854 (Data Act)
   issuer: European Union
   class: official
   url: https://eur-lex.europa.eu/eli/reg/2023/2854/oj
-  version: 'OJ original text'
+  version: OJ original text
   date: '2023-12-13'
   retrieved: '2026-10-03'
   verification: read
-  note: 'Read in the Official Journal original text (Formex from the Publications Office); amendments and consolidated versions not checked.'
+  note: Read in the Official Journal original text (Formex from the Publications Office); amendments and consolidated versions not checked.
 - id: SRC-CIR-2024-2977
-  title: 'Commission Implementing Regulation (EU) 2024/2977 (person identification data and electronic attestations of attributes issued to EUDI Wallets)'
-  issuer: 'European Commission'
+  title: Commission Implementing Regulation (EU) 2024/2977 (person identification data and electronic attestations of attributes issued to EUDI Wallets)
+  issuer: European Commission
   class: official
   url: https://eur-lex.europa.eu/eli/reg_impl/2024/2977/oj
-  version: 'OJ L 2024/2977'
+  version: OJ L 2024/2977
   date: '2024-12-04'
   retrieved: '2026-10-03'
   verification: read
 - id: SRC-CIR-2024-2979
-  title: 'Commission Implementing Regulation (EU) 2024/2979 (integrity and core functionalities of EUDI Wallets)'
-  issuer: 'European Commission'
+  title: Commission Implementing Regulation (EU) 2024/2979 (integrity and core functionalities of EUDI Wallets)
+  issuer: European Commission
   class: official
   url: https://eur-lex.europa.eu/eli/reg_impl/2024/2979/oj
-  version: 'OJ L 2024/2979'
+  version: OJ L 2024/2979
   date: '2024-12-04'
   retrieved: '2026-10-03'
   verification: read
 - id: SRC-CIR-2024-2980
-  title: 'Commission Implementing Regulation (EU) 2024/2980 (notifications to the Commission concerning the EUDI Wallet ecosystem)'
-  issuer: 'European Commission'
+  title: Commission Implementing Regulation (EU) 2024/2980 (notifications to the Commission concerning the EUDI Wallet ecosystem)
+  issuer: European Commission
   class: official
   url: https://eur-lex.europa.eu/eli/reg_impl/2024/2980/oj
-  version: 'OJ L 2024/2980'
+  version: OJ L 2024/2980
   date: '2024-12-04'
   retrieved: '2026-10-03'
   verification: read
 - id: SRC-CIR-2024-2981
-  title: 'Commission Implementing Regulation (EU) 2024/2981 (certification of EUDI Wallets)'
-  issuer: 'European Commission'
+  title: Commission Implementing Regulation (EU) 2024/2981 (certification of EUDI Wallets)
+  issuer: European Commission
   class: official
   url: https://eur-lex.europa.eu/eli/reg_impl/2024/2981/oj
-  version: 'OJ L 2024/2981'
+  version: OJ L 2024/2981
   date: '2024-12-04'
   retrieved: '2026-10-03'
   verification: read
 - id: SRC-CIR-2024-2982
-  title: 'Commission Implementing Regulation (EU) 2024/2982 (protocols and interfaces of the European Digital Identity Framework)'
-  issuer: 'European Commission'
+  title: Commission Implementing Regulation (EU) 2024/2982 (protocols and interfaces of the European Digital Identity Framework)
+  issuer: European Commission
   class: official
   url: https://eur-lex.europa.eu/eli/reg_impl/2024/2982/oj
-  version: 'OJ L 2024/2982'
+  version: OJ L 2024/2982
   date: '2024-12-04'
   retrieved: '2026-10-03'
   verification: read
 - id: SRC-CIR-2025-848
-  title: 'Commission Implementing Regulation (EU) 2025/848 (registration of wallet-relying parties)'
-  issuer: 'European Commission'
+  title: Commission Implementing Regulation (EU) 2025/848 (registration of wallet-relying parties)
+  issuer: European Commission
   class: official
   url: https://eur-lex.europa.eu/eli/reg_impl/2025/848/oj
-  version: 'OJ L 2025/848; applies from 2026-12-24'
+  version: OJ L 2025/848; applies from 2026-12-24
   date: '2025-05-06'
   retrieved: '2026-10-03'
   verification: read
 - id: SRC-CIR-2025-1569
-  title: 'Commission Implementing Regulation (EU) 2025/1569 (attestations of attributes)'
-  issuer: 'European Commission'
+  title: Commission Implementing Regulation (EU) 2025/1569 (attestations of attributes)
+  issuer: European Commission
   class: official
   url: https://eur-lex.europa.eu/eli/reg_impl/2025/1569/oj
-  version: 'OJ L 2025/1569; Articles 6-9 apply from 2026-08-19'
+  version: OJ L 2025/1569; Articles 6-9 apply from 2026-08-19
   date: '2025-07-29'
   retrieved: '2026-10-03'
   verification: read
 - id: SRC-CIR-2025-1944
-  title: 'Commission Implementing Regulation (EU) 2025/1944 (qualified electronic registered delivery services)'
-  issuer: 'European Commission'
+  title: Commission Implementing Regulation (EU) 2025/1944 (qualified electronic registered delivery services)
+  issuer: European Commission
   class: official
   url: https://eur-lex.europa.eu/eli/reg_impl/2025/1944/oj
-  version: 'OJ L 2025/1944'
+  version: OJ L 2025/1944
   date: '2025-09-29'
   retrieved: '2026-10-03'
   verification: read
 - id: SRC-ARF-HLR
-  title: 'EUDI Wallet ARF, Annex 2.02 High-level requirements by topic (eudi.dev rendering)'
-  issuer: 'European Commission and Member States'
+  title: EUDI Wallet ARF, Annex 2.02 High-level requirements by topic (eudi.dev rendering)
+  issuer: European Commission and Member States
   class: standard
   url: https://eudi.dev/latest/annexes/annex-2/annex-2.02-high-level-requirements-by-topic/
-  version: 'ARF 3.0.0 (as rendered at /latest/)'
+  version: ARF 3.0.0 (as rendered at /latest/)
   retrieved: '2026-10-03'
   verification: read
 - id: SRC-CIR-2026-1731
-  title: 'Commission Implementing Regulation (EU) 2026/1731 amending Implementing Regulations (EU) 2024/2977, 2024/2979 and related acts (formats, standards and specifications for EUDI Wallets)'
+  title: Commission Implementing Regulation (EU) 2026/1731 of 15 July 2026 amending Implementing Regulations (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications
   issuer: European Commission
   class: official
   url: https://eur-lex.europa.eu/eli/reg_impl/2026/1731/oj
@@ -601,7 +600,7 @@
   class: standard
   url: https://www.etsi.org/standards
   version: V1.2.1
-  date: '2026-02'
+  date: 2026-02
   retrieved: '2026-10-03'
   verification: read
   note: 'Read in part: clauses 1, 4.2, 5.2.1, 6.2.1, 7.1 to 7.2 and 7.6. The URL is the ETSI standards search page; the document copy used was fetched in the research pass.'
@@ -614,9 +613,9 @@
   date: '2026-01-30'
   retrieved: '2026-10-03'
   verification: read
-  note: 'Read from the raw repository file; the repository path of the specification was not re-checked.'
+  note: Read from the raw repository file; the repository path of the specification was not re-checked.
 - id: SRC-VCDM-2.0
-  title: 'Verifiable Credentials Data Model v2.0, W3C Recommendation'
+  title: Verifiable Credentials Data Model v2.0, W3C Recommendation
   issuer: W3C
   class: standard
   url: https://www.w3.org/TR/vc-data-model-2.0/
@@ -630,12 +629,12 @@
   class: standard
   url: https://www.rfc-editor.org/rfc/rfc9901.html
   version: RFC 9901
-  date: '2025-11'
+  date: 2025-11
   retrieved: '2026-10-03'
   verification: read
-  note: 'Section 10.1 (unlinkability) read.'
+  note: Section 10.1 (unlinkability) read.
 - id: SRC-IETF-SDJWT-VC
-  title: 'SD-JWT-based Verifiable Credentials (SD-JWT VC), Internet-Draft'
+  title: SD-JWT-based Verifiable Credentials (SD-JWT VC), Internet-Draft
   issuer: IETF OAuth Working Group
   class: standard
   url: https://datatracker.ietf.org/doc/draft-ietf-oauth-sd-jwt-vc/
@@ -643,19 +642,19 @@
   date: '2026-08-31'
   retrieved: '2026-10-03'
   verification: read
-  note: 'Not yet an RFC when read; the IETF status was "Waiting for AD Go-Ahead". ETSI TS 119 472-1 cites draft 13.'
+  note: Not yet an RFC when read; the IETF status was "Waiting for AD Go-Ahead". ETSI TS 119 472-1 cites draft 13.
 - id: SRC-IDTA-AAS-P1
   title: 'Specification of the Asset Administration Shell, Part 1: Metamodel (IDTA-01001-3-0-2)'
   issuer: Industrial Digital Twin Association
   class: ecosystem-specification
   url: https://industrialdigitaltwin.org/wp-content/uploads/2025/03/IDTA-01001-3-0-2_SpecificationAssetAdministrationShell_Part1_Metamodel.pdf
   version: V3.0.2
-  date: '2025-03'
+  date: 2025-03
   retrieved: '2026-10-03'
   verification: read
-  note: 'Read by term search (semanticId, RDF serialisation). Parts 2, 3a and 4 not read. No IDTA specification on verifiable credentials was found.'
+  note: Read by term search (semanticId, RDF serialisation). Parts 2, 3a and 4 not read. No IDTA specification on verifiable credentials was found.
 - id: SRC-DCP
-  title: 'Decentralized Claims Protocol (DCP) v1.0'
+  title: Decentralized Claims Protocol (DCP) v1.0
   issuer: Eclipse Dataspace Working Group
   class: standard
   url: https://eclipse-dataspace-dcp.github.io/decentralized-claims-protocol/
@@ -664,455 +663,1058 @@
   retrieved: '2026-10-03'
   verification: read
   note: 'Profiles read from the repository (commit b80ad76, 2026-08-05): VCDM 2.0 with JOSE and Bitstring Status List, and VCDM 1.1 with StatusList2021.'
-- id: 'SRC-MCP-AUTH'
+- id: SRC-MCP-AUTH
   title: 'Model Context Protocol Specification: Authorization'
-  issuer: 'Model Context Protocol project (Linux Foundation / Agentic AI Foundation), modelcontextprotocol.io'
-  class: 'ecosystem-specification'
-  url: 'https://modelcontextprotocol.io/specification/latest/basic/authorization'
-  version: 'Protocol revision 2026-07-28 (latest)'
+  issuer: Model Context Protocol project (Linux Foundation / Agentic AI Foundation), modelcontextprotocol.io
+  class: ecosystem-specification
+  url: https://modelcontextprotocol.io/specification/latest/basic/authorization
+  version: Protocol revision 2026-07-28 (latest)
   date: '2026-07-28'
   retrieved: '2026-10-03'
-  verification: 'read'
-- id: 'SRC-MCP-SEC'
+  verification: read
+- id: SRC-MCP-SEC
   title: 'Model Context Protocol Specification: Security Best Practices'
-  issuer: 'Model Context Protocol project, modelcontextprotocol.io'
-  class: 'ecosystem-specification'
-  url: 'https://modelcontextprotocol.io/specification/latest/basic/security_best_practices'
-  version: 'Protocol revision 2026-07-28 (latest)'
+  issuer: Model Context Protocol project, modelcontextprotocol.io
+  class: ecosystem-specification
+  url: https://modelcontextprotocol.io/specification/latest/basic/security_best_practices
+  version: Protocol revision 2026-07-28 (latest)
   date: '2026-07-28'
   retrieved: '2026-10-03'
-  verification: 'read'
-- id: 'SRC-MCP-TOOLS'
+  verification: read
+- id: SRC-MCP-TOOLS
   title: 'Model Context Protocol Specification: Tools'
-  issuer: 'Model Context Protocol project, modelcontextprotocol.io'
-  class: 'ecosystem-specification'
-  url: 'https://modelcontextprotocol.io/specification/latest/server/tools'
-  version: 'Protocol revision 2026-07-28 (latest)'
+  issuer: Model Context Protocol project, modelcontextprotocol.io
+  class: ecosystem-specification
+  url: https://modelcontextprotocol.io/specification/latest/server/tools
+  version: Protocol revision 2026-07-28 (latest)
   date: '2026-07-28'
   retrieved: '2026-10-03'
-  verification: 'read'
-- id: 'SRC-A2A'
-  title: 'Agent2Agent (A2A) Protocol Specification'
-  issuer: 'A2A project (a2a-protocol.org, github.com/a2aproject/A2A)'
-  class: 'ecosystem-specification'
-  url: 'https://a2a-protocol.org/latest/specification/'
-  version: '1.0.0 (latest released)'
+  verification: read
+- id: SRC-A2A
+  title: Agent2Agent (A2A) Protocol Specification
+  issuer: A2A project (a2a-protocol.org, github.com/a2aproject/A2A)
+  class: ecosystem-specification
+  url: https://a2a-protocol.org/latest/specification/
+  version: 1.0.0 (latest released)
   date: '2026-10-03'
   retrieved: '2026-10-03'
-  verification: 'read'
-- id: 'SRC-OIDF-AGENTIC'
-  title: 'Identity Management for Agentic AI (whitepaper, non-normative)'
-  issuer: 'OpenID Foundation, AI Identity Management Community Group'
-  class: 'ecosystem-specification'
-  url: 'https://openid.net/wp-content/uploads/2025/10/Identity-Management-for-Agentic-AI.pdf'
-  version: 'October 2025 whitepaper (informative, not a normative standard)'
-  date: '2025-10'
+  verification: read
+- id: SRC-OIDF-AGENTIC
+  title: Identity Management for Agentic AI (whitepaper, non-normative)
+  issuer: OpenID Foundation, AI Identity Management Community Group
+  class: ecosystem-specification
+  url: https://openid.net/wp-content/uploads/2025/10/Identity-Management-for-Agentic-AI.pdf
+  version: October 2025 whitepaper (informative, not a normative standard)
+  date: 2025-10
   retrieved: '2026-10-03'
-  verification: 'read'
-- id: 'SRC-WIMSE-ARCH'
-  title: 'Workload Identity in a Multi System Environment (WIMSE) Architecture'
-  issuer: 'IETF WIMSE Working Group'
-  class: 'standard'
-  url: 'https://datatracker.ietf.org/doc/draft-ietf-wimse-arch/'
-  version: 'draft-ietf-wimse-arch-08 (Internet-Draft, work in progress)'
+  verification: read
+- id: SRC-WIMSE-ARCH
+  title: Workload Identity in a Multi System Environment (WIMSE) Architecture
+  issuer: IETF WIMSE Working Group
+  class: standard
+  url: https://datatracker.ietf.org/doc/draft-ietf-wimse-arch/
+  version: draft-ietf-wimse-arch-08 (Internet-Draft, work in progress)
   date: '2026-07-06'
   retrieved: '2026-10-03'
-  verification: 'read'
-- id: 'SRC-RFC-8693'
-  title: 'RFC 8693 OAuth 2.0 Token Exchange'
-  issuer: 'IETF'
-  class: 'standard'
-  url: 'https://www.rfc-editor.org/rfc/rfc8693'
-  version: 'RFC 8693'
-  date: '2020-01'
+  verification: read
+- id: SRC-RFC-8693
+  title: RFC 8693 OAuth 2.0 Token Exchange
+  issuer: IETF
+  class: standard
+  url: https://www.rfc-editor.org/rfc/rfc8693
+  version: RFC 8693
+  date: 2020-01
   retrieved: '2026-10-03'
-  verification: 'read'
-- id: 'SRC-RFC-9396'
-  title: 'RFC 9396 OAuth 2.0 Rich Authorization Requests'
-  issuer: 'IETF'
-  class: 'standard'
-  url: 'https://www.rfc-editor.org/rfc/rfc9396'
-  version: 'RFC 9396'
-  date: '2023-05'
+  verification: read
+- id: SRC-RFC-9396
+  title: RFC 9396 OAuth 2.0 Rich Authorization Requests
+  issuer: IETF
+  class: standard
+  url: https://www.rfc-editor.org/rfc/rfc9396
+  version: RFC 9396
+  date: 2023-05
   retrieved: '2026-10-03'
-  verification: 'read'
-- id: 'SRC-RFC-9449'
-  title: 'RFC 9449 OAuth 2.0 Demonstrating Proof of Possession (DPoP)'
-  issuer: 'IETF'
-  class: 'standard'
-  url: 'https://www.rfc-editor.org/rfc/rfc9449'
-  version: 'RFC 9449'
-  date: '2023-09'
+  verification: read
+- id: SRC-RFC-9449
+  title: RFC 9449 OAuth 2.0 Demonstrating Proof of Possession (DPoP)
+  issuer: IETF
+  class: standard
+  url: https://www.rfc-editor.org/rfc/rfc9449
+  version: RFC 9449
+  date: 2023-09
   retrieved: '2026-10-03'
-  verification: 'read'
-- id: 'SRC-W3C-AIAP-ID'
+  verification: read
+- id: SRC-W3C-AIAP-ID
   title: 'AI Agent Protocol CG: Agent Identity and HTTP Authentication (draft)'
-  issuer: 'W3C AI Agent Protocol Community Group (not a W3C Recommendation-track standard)'
-  class: 'ecosystem-specification'
-  url: 'https://w3c-cg.github.io/ai-agent-protocol/agent-identity.html'
-  version: 'Community Group draft, no version stated'
+  issuer: W3C AI Agent Protocol Community Group (not a W3C Recommendation-track standard)
+  class: ecosystem-specification
+  url: https://w3c-cg.github.io/ai-agent-protocol/agent-identity.html
+  version: Community Group draft, no version stated
   date: '2026-10-03'
   retrieved: '2026-10-03'
-  verification: 'read'
-- id: 'SRC-AP2'
-  title: 'Agent Payments Protocol (AP2) specification, Agent Authorization framework, Payment Mandate and Security and Privacy Considerations pages'
-  issuer: 'Google and AP2 community (ap2-protocol.org)'
-  class: 'ecosystem-specification'
-  url: 'https://ap2-protocol.org/ap2/specification/'
-  version: 'v0.2 (specification page; Checkout Mandate and open/closed Payment Mandate model; the earlier Intent Mandate and Cart Mandate terms were not found in this version)'
+  verification: read
+- id: SRC-AP2
+  title: Agent Payments Protocol (AP2) specification, Agent Authorization framework, Payment Mandate and Security and Privacy Considerations pages
+  issuer: Google and AP2 community (ap2-protocol.org)
+  class: ecosystem-specification
+  url: https://ap2-protocol.org/ap2/specification/
+  version: v0.2 (specification page; Checkout Mandate and open/closed Payment Mandate model; the earlier Intent Mandate and Cart Mandate terms were not found in this version)
   date: '2026'
   retrieved: '2026-10-03'
-  verification: 'read'
-- id: 'SRC-RFC-9635'
+  verification: read
+- id: SRC-RFC-9635
   title: 'RFC 9635: Grant Negotiation and Authorization Protocol (GNAP)'
-  issuer: 'IETF'
-  class: 'standard'
-  url: 'https://www.rfc-editor.org/rfc/rfc9635.html'
-  version: 'RFC 9635'
-  date: '2024-10'
+  issuer: IETF
+  class: standard
+  url: https://www.rfc-editor.org/rfc/rfc9635.html
+  version: RFC 9635
+  date: 2024-10
   retrieved: '2026-10-03'
-  verification: 'read'
-- id: 'SRC-RFC-7800'
+  verification: read
+- id: SRC-RFC-7800
   title: 'RFC 7800: Proof-of-Possession Key Semantics for JSON Web Tokens (JWTs)'
-  issuer: 'IETF'
-  class: 'standard'
-  url: 'https://www.rfc-editor.org/rfc/rfc7800.html'
-  version: 'RFC 7800'
-  date: '2016-04'
+  issuer: IETF
+  class: standard
+  url: https://www.rfc-editor.org/rfc/rfc7800.html
+  version: RFC 7800
+  date: 2016-04
   retrieved: '2026-10-03'
-  verification: 'read'
-- id: 'SRC-IETF-IDENTITY-CHAINING'
-  title: 'OAuth Identity and Authorization Chaining Across Domains, Internet-Draft'
-  issuer: 'IETF OAuth Working Group'
-  class: 'standard'
-  url: 'https://datatracker.ietf.org/doc/draft-ietf-oauth-identity-chaining/'
-  version: 'draft-ietf-oauth-identity-chaining-17'
-  date: '2026-07'
+  verification: read
+- id: SRC-IETF-IDENTITY-CHAINING
+  title: OAuth Identity and Authorization Chaining Across Domains, Internet-Draft
+  issuer: IETF OAuth Working Group
+  class: standard
+  url: https://datatracker.ietf.org/doc/draft-ietf-oauth-identity-chaining/
+  version: draft-ietf-oauth-identity-chaining-17
+  date: 2026-07
   retrieved: '2026-10-03'
-  verification: 'read'
-- id: 'SRC-DIR-2025-25'
-  title: 'Directive (EU) 2025/25 amending Directives 2009/102/EC and (EU) 2017/1132 as regards further expanding and upgrading the use of digital tools and processes in company law'
-  issuer: 'European Union (OJ L, 10.1.2025, CELEX 32025L0025)'
-  class: 'official'
-  url: 'https://eur-lex.europa.eu/eli/dir/2025/25/oj'
-  version: 'OJ original text (Article 16c of Directive 2017/1132 as inserted)'
+  verification: read
+- id: SRC-DIR-2025-25
+  title: Directive (EU) 2025/25 amending Directives 2009/102/EC and (EU) 2017/1132 as regards further expanding and upgrading the use of digital tools and processes in company law
+  issuer: European Union (OJ L, 10.1.2025, CELEX 32025L0025)
+  class: official
+  url: https://eur-lex.europa.eu/eli/dir/2025/25/oj
+  version: OJ original text (Article 16c of Directive 2017/1132 as inserted)
   date: '2024-12-19'
   retrieved: '2026-10-03'
-  verification: 'read'
-- id: 'SRC-IEA'
-  title: 'Regulation (EU) 2024/903 (Interoperable Europe Act)'
-  issuer: 'European Union (OJ L, 22.3.2024, CELEX 32024R0903)'
-  class: 'official'
-  url: 'https://eur-lex.europa.eu/eli/reg/2024/903/oj'
-  version: 'OJ original text'
+  verification: read
+- id: SRC-IEA
+  title: Regulation (EU) 2024/903 (Interoperable Europe Act)
+  issuer: European Union (OJ L, 22.3.2024, CELEX 32024R0903)
+  class: official
+  url: https://eur-lex.europa.eu/eli/reg/2024/903/oj
+  version: OJ original text
   date: '2024-03-13'
   retrieved: '2026-10-03'
-  verification: 'read'
-- id: 'SRC-ESPR'
-  title: 'Regulation (EU) 2024/1781 (Ecodesign for Sustainable Products Regulation)'
-  issuer: 'European Union (OJ L, 28.6.2024, CELEX 32024R1781)'
-  class: 'official'
-  url: 'https://eur-lex.europa.eu/eli/reg/2024/1781/oj'
-  version: 'OJ original text'
+  verification: read
+- id: SRC-ESPR
+  title: Regulation (EU) 2024/1781 (Ecodesign for Sustainable Products Regulation)
+  issuer: European Union (OJ L, 28.6.2024, CELEX 32024R1781)
+  class: official
+  url: https://eur-lex.europa.eu/eli/reg/2024/1781/oj
+  version: OJ original text
   date: '2024-06-13'
   retrieved: '2026-10-03'
-  verification: 'read'
-- id: 'SRC-REC-2024-1101'
-  title: 'Commission Recommendation (EU) 2024/1101 on a Coordinated Implementation Roadmap for the transition to Post-Quantum Cryptography'
-  issuer: 'European Commission (OJ L'
-  class: 'official'
-  url: 'https://eur-lex.europa.eu/eli/reco/2024/1101/oj'
-  version: 'OJ original text (non-binding Recommendation)'
+  verification: read
+- id: SRC-REC-2024-1101
+  title: Commission Recommendation (EU) 2024/1101 on a Coordinated Implementation Roadmap for the transition to Post-Quantum Cryptography
+  issuer: European Commission (OJ L
+  class: official
+  url: https://eur-lex.europa.eu/eli/reco/2024/1101/oj
+  version: OJ original text (non-binding Recommendation)
   date: '2024-04-11'
   retrieved: '2026-10-03'
-  verification: 'read'
-  12.4.2024): 'None'
-- id: 'SRC-NISCG-PQC-ROADMAP'
-  title: 'A Coordinated Implementation Roadmap for the Transition to Post-Quantum Cryptography, Part 1'
-  issuer: 'NIS Cooperation Group'
-  class: 'official'
-  url: 'https://ec.europa.eu/newsroom/dae/redirection/document/117507'
-  version: 'Part 1, Version 1.1 (non-binding)'
+  verification: read
+  12.4.2024): None
+- id: SRC-NISCG-PQC-ROADMAP
+  title: A Coordinated Implementation Roadmap for the Transition to Post-Quantum Cryptography, Part 1
+  issuer: NIS Cooperation Group
+  class: official
+  url: https://ec.europa.eu/newsroom/dae/redirection/document/117507
+  version: Part 1, Version 1.1 (non-binding)
   date: '2025-06-11'
   retrieved: '2026-10-03'
-  verification: 'read'
-  EU PQC Workstream (published by the European Commission): 'None'
-- id: 'SRC-ECCG-ACM-V2'
-  title: 'Agreed Cryptographic Mechanisms, Version 2.0'
-  issuer: 'European Cybersecurity Certification Group'
-  class: 'official'
-  url: 'https://certification.enisa.europa.eu/publications/eucc-guidelines-cryptography_en'
+  verification: read
+  EU PQC Workstream (published by the European Commission): None
+- id: SRC-ECCG-ACM-V2
+  title: Agreed Cryptographic Mechanisms, Version 2.0
+  issuer: European Cybersecurity Certification Group
+  class: official
+  url: https://certification.enisa.europa.eu/publications/eucc-guidelines-cryptography_en
   version: '2.0'
-  date: '2025-04'
+  date: 2025-04
   retrieved: '2026-10-03'
-  verification: 'read'
-  Sub-group on Cryptography (published by ENISA): 'None'
-- id: 'SRC-ETSI-TS-119312'
-  title: 'ETSI TS 119 312 Electronic Signatures and Trust Infrastructures (ESI); Cryptographic Suites'
-  issuer: 'ETSI'
-  class: 'standard'
-  url: 'https://www.etsi.org/deliver/etsi_ts/119300_119399/119312/01.05.01_60/ts_119312v010501p.pdf'
-  version: 'V1.5.1'
-  date: '2024-12'
+  verification: read
+  Sub-group on Cryptography (published by ENISA): None
+- id: SRC-ETSI-TS-119312
+  title: ETSI TS 119 312 Electronic Signatures and Trust Infrastructures (ESI); Cryptographic Suites
+  issuer: ETSI
+  class: standard
+  url: https://www.etsi.org/deliver/etsi_ts/119300_119399/119312/01.05.01_60/ts_119312v010501p.pdf
+  version: V1.5.1
+  date: 2024-12
   retrieved: '2026-10-03'
-  verification: 'read'
-- id: 'SRC-ETSI-EN-319401'
-  title: 'ETSI EN 319 401 Electronic Signatures and Trust Infrastructures (ESI); General Policy Requirements for Trust Service Providers'
-  issuer: 'ETSI'
-  class: 'standard'
-  url: 'https://www.etsi.org/deliver/etsi_en/319400_319499/319401/03.01.01_60/en_319401v030101p.pdf'
-  version: 'V3.1.1'
-  date: '2024-06'
+  verification: read
+- id: SRC-ETSI-EN-319401
+  title: ETSI EN 319 401 Electronic Signatures and Trust Infrastructures (ESI); General Policy Requirements for Trust Service Providers
+  issuer: ETSI
+  class: standard
+  url: https://www.etsi.org/deliver/etsi_en/319400_319499/319401/03.01.01_60/en_319401v030101p.pdf
+  version: V3.1.1
+  date: 2024-06
   retrieved: '2026-10-03'
-  verification: 'read'
-- id: 'SRC-ETSI-EN-319411-1'
+  verification: read
+- id: SRC-ETSI-EN-319411-1
   title: 'ETSI EN 319 411-1 Policy and security requirements for Trust Service Providers issuing certificates; Part 1: General requirements'
-  issuer: 'ETSI'
-  class: 'standard'
-  url: 'https://www.etsi.org/deliver/etsi_en/319400_319499/31941101/01.05.01_60/en_31941101v010501p.pdf'
-  version: 'V1.5.1'
-  date: '2025-04'
+  issuer: ETSI
+  class: standard
+  url: https://www.etsi.org/deliver/etsi_en/319400_319499/31941101/01.05.01_60/en_31941101v010501p.pdf
+  version: V1.5.1
+  date: 2025-04
   retrieved: '2026-10-03'
-  verification: 'read'
-- id: 'SRC-DORA-RTS-1774'
-  title: 'Commission Delegated Regulation (EU) 2024/1774 (ICT risk management framework, RTS under DORA)'
-  issuer: 'European Union (OJ L'
-  class: 'official'
-  url: 'https://eur-lex.europa.eu/eli/reg_del/2024/1774/oj'
-  version: 'OJ original text'
+  verification: read
+- id: SRC-DORA-RTS-1774
+  title: Commission Delegated Regulation (EU) 2024/1774 (ICT risk management framework, RTS under DORA)
+  issuer: European Union (OJ L
+  class: official
+  url: https://eur-lex.europa.eu/eli/reg_del/2024/1774/oj
+  version: OJ original text
   date: '2024-03-13'
   retrieved: '2026-10-03'
-  verification: 'read'
-  25.6.2024: 'None'
-  CELEX 32024R1774): 'None'
-- id: 'SRC-CIR-2015-1502'
-  title: 'Commission Implementing Regulation (EU) 2015/1502 on minimum technical specifications and procedures for assurance levels for electronic identification means'
-  issuer: 'European Commission (OJ L 235, 9.9.2015)'
-  class: 'official'
-  url: 'https://publications.europa.eu/resource/celex/32015R1502'
-  version: 'OJ original text'
+  verification: read
+  25.6.2024: None
+  CELEX 32024R1774): None
+- id: SRC-CIR-2015-1502
+  title: Commission Implementing Regulation (EU) 2015/1502 on minimum technical specifications and procedures for assurance levels for electronic identification means
+  issuer: European Commission (OJ L 235, 9.9.2015)
+  class: official
+  url: https://publications.europa.eu/resource/celex/32015R1502
+  version: OJ original text
   date: '2015-09-08'
   retrieved: '2026-10-03'
-  verification: 'read'
-- id: 'SRC-CIR-2021-1042'
-  title: 'Commission Implementing Regulation (EU) 2021/1042 on technical specifications and procedures for the system of interconnection of registers (BRIS), incl. EUID structure'
-  issuer: 'European Commission (OJ L 225, 25.6.2021)'
-  class: 'official'
-  url: 'https://publications.europa.eu/resource/celex/32021R1042'
-  version: 'OJ original text'
+  verification: read
+- id: SRC-CIR-2021-1042
+  title: Commission Implementing Regulation (EU) 2021/1042 on technical specifications and procedures for the system of interconnection of registers (BRIS), incl. EUID structure
+  issuer: European Commission (OJ L 225, 25.6.2021)
+  class: official
+  url: https://publications.europa.eu/resource/celex/32021R1042
+  version: OJ original text
   date: '2021-06-18'
   retrieved: '2026-10-03'
-  verification: 'read'
-- id: 'SRC-DIR-2017-1132'
-  title: 'Directive (EU) 2017/1132 relating to certain aspects of company law (Article 16 unique identifier, Article 22 BRIS)'
-  issuer: 'European Union (OJ L 169, 30.6.2017)'
-  class: 'official'
-  url: 'https://publications.europa.eu/resource/celex/32017L1132'
-  version: 'OJ original text (before amendment by Directive (EU) 2025/25)'
+  verification: read
+- id: SRC-DIR-2017-1132
+  title: Directive (EU) 2017/1132 relating to certain aspects of company law (Article 16 unique identifier, Article 22 BRIS)
+  issuer: European Union (OJ L 169, 30.6.2017)
+  class: official
+  url: https://publications.europa.eu/resource/celex/32017L1132
+  version: OJ original text (before amendment by Directive (EU) 2025/25)
   date: '2017-06-14'
   retrieved: '2026-10-03'
-  verification: 'partly-read'
-- id: 'SRC-CIR-2015-2447'
-  title: 'Commission Implementing Regulation (EU) 2015/2447 laying down detailed rules for the Union Customs Code (EORI Articles 6-7)'
-  issuer: 'European Commission (OJ L 343, 29.12.2015)'
-  class: 'official'
-  url: 'https://publications.europa.eu/resource/celex/32015R2447'
-  version: 'OJ original text'
+  verification: partly-read
+- id: SRC-CIR-2015-2447
+  title: Commission Implementing Regulation (EU) 2015/2447 laying down detailed rules for the Union Customs Code (EORI Articles 6-7)
+  issuer: European Commission (OJ L 343, 29.12.2015)
+  class: official
+  url: https://publications.europa.eu/resource/celex/32015R2447
+  version: OJ original text
   date: '2015-11-24'
   retrieved: '2026-10-03'
-  verification: 'partly-read'
-- id: 'SRC-CIR-2022-1860'
-  title: 'Commission Implementing Regulation (EU) 2022/1860 on reporting under EMIR (ISO 17442 LEI use)'
-  issuer: 'European Commission (OJ L 262, 7.10.2022)'
-  class: 'official'
-  url: 'https://publications.europa.eu/resource/celex/32022R1860'
-  version: 'OJ original text'
+  verification: partly-read
+- id: SRC-CIR-2022-1860
+  title: Commission Implementing Regulation (EU) 2022/1860 on reporting under EMIR (ISO 17442 LEI use)
+  issuer: European Commission (OJ L 262, 7.10.2022)
+  class: official
+  url: https://publications.europa.eu/resource/celex/32022R1860
+  version: OJ original text
   date: '2022-06-10'
   retrieved: '2026-10-03'
-  verification: 'partly-read'
-- id: 'SRC-ETSI-EN-319412-1'
-  title: 'ETSI EN 319 412-1 V1.5.1 Certificate profiles; overview and common data structures (clause 5.1.4 legal person semantics identifier, LEI)'
-  issuer: 'ETSI'
-  class: 'standard'
-  url: 'https://www.etsi.org/deliver/etsi_en/319400_319499/31941201/01.05.01_60/en_31941201v010501p.pdf'
-  version: 'V1.5.1'
-  date: '2023-09'
+  verification: partly-read
+- id: SRC-ETSI-EN-319412-1
+  title: ETSI EN 319 412-1 V1.5.1 Certificate profiles; overview and common data structures (clause 5.1.4 legal person semantics identifier, LEI)
+  issuer: ETSI
+  class: standard
+  url: https://www.etsi.org/deliver/etsi_en/319400_319499/31941201/01.05.01_60/en_31941201v010501p.pdf
+  version: V1.5.1
+  date: 2023-09
   retrieved: '2026-10-03'
-  verification: 'partly-read'
-- id: 'SRC-GLEIF-LEI'
-  title: 'GLEIF - The Legal Entity Identifier (LEI)'
-  issuer: 'Global Legal Entity Identifier Foundation (GLEIF)'
-  class: 'ecosystem-specification'
-  url: 'https://www.gleif.org/en/organizational-identity/lei-vlei/the-legal-entity-identifier-lei'
-  version: 'web page retrieved 2026-10-03'
+  verification: partly-read
+- id: SRC-GLEIF-LEI
+  title: GLEIF - The Legal Entity Identifier (LEI)
+  issuer: Global Legal Entity Identifier Foundation (GLEIF)
+  class: ecosystem-specification
+  url: https://www.gleif.org/en/organizational-identity/lei-vlei/the-legal-entity-identifier-lei
+  version: web page retrieved 2026-10-03
   retrieved: '2026-10-03'
-  verification: 'read'
-- id: 'SRC-GLEIF-VLEI'
-  title: 'GLEIF - The verifiable LEI (vLEI) page'
-  issuer: 'GLEIF'
-  class: 'ecosystem-specification'
-  url: 'https://www.gleif.org/en/organizational-identity/lei-vlei/the-verifiable-lei-vlei'
-  version: 'web page retrieved 2026-10-03'
+  verification: read
+- id: SRC-GLEIF-VLEI
+  title: GLEIF - The verifiable LEI (vLEI) page
+  issuer: GLEIF
+  class: ecosystem-specification
+  url: https://www.gleif.org/en/organizational-identity/lei-vlei/the-verifiable-lei-vlei
+  version: web page retrieved 2026-10-03
   retrieved: '2026-10-03'
-  verification: 'read'
-- id: 'SRC-GLEIF-VLEI-QA'
-  title: 'GLEIF vLEI Q&A v1.2'
-  issuer: 'GLEIF'
-  class: 'ecosystem-specification'
-  url: 'https://www.gleif.org/organizational-identity/lei-vlei/the-verifiable-lei-vlei/2023-08-30_vlei-q-a-updated_v1.2_final.pdf'
+  verification: read
+- id: SRC-GLEIF-VLEI-QA
+  title: GLEIF vLEI Q&A v1.2
+  issuer: GLEIF
+  class: ecosystem-specification
+  url: https://www.gleif.org/organizational-identity/lei-vlei/the-verifiable-lei-vlei/2023-08-30_vlei-q-a-updated_v1.2_final.pdf
   version: '1.2'
   date: '2023-08-30'
   retrieved: '2026-10-03'
-  verification: 'partly-read'
-- id: 'SRC-GLEIF-VLEI-INTRO'
-  title: 'GLEIF - The vLEI, Introducing Digital I.D. for Organizations Everywhere v2.3'
-  issuer: 'GLEIF'
-  class: 'ecosystem-specification'
-  url: 'https://www.gleif.org/organizational-identity/lei-vlei/the-verifiable-lei-vlei/2024-11-18-gleif_introduction-to-the-vlei_v2.3_compressed.pdf'
+  verification: partly-read
+- id: SRC-GLEIF-VLEI-INTRO
+  title: GLEIF - The vLEI, Introducing Digital I.D. for Organizations Everywhere v2.3
+  issuer: GLEIF
+  class: ecosystem-specification
+  url: https://www.gleif.org/organizational-identity/lei-vlei/the-verifiable-lei-vlei/2024-11-18-gleif_introduction-to-the-vlei_v2.3_compressed.pdf
   version: '2.3'
   date: '2024-11-18'
   retrieved: '2026-10-03'
-  verification: 'partly-read'
-- id: 'SRC-GLEIF-EGF'
-  title: 'GLEIF vLEI Ecosystem Governance Framework v4.0 (index page)'
-  issuer: 'GLEIF'
-  class: 'ecosystem-specification'
-  url: 'https://www.gleif.org/en/organizational-identity/become-a-vlei-issuer-qvi/vlei-ecosystem-governance-framework'
-  version: 'EGF 4.0'
+  verification: partly-read
+- id: SRC-GLEIF-EGF
+  title: GLEIF vLEI Ecosystem Governance Framework v4.0 (index page)
+  issuer: GLEIF
+  class: ecosystem-specification
+  url: https://www.gleif.org/en/organizational-identity/become-a-vlei-issuer-qvi/vlei-ecosystem-governance-framework
+  version: EGF 4.0
   date: '2026-03-25'
   retrieved: '2026-10-03'
-  verification: 'read'
-- id: 'SRC-GLEIF-EGF-TR2'
-  title: 'vLEI EGF v4.0 Technical Requirements Part 2 - vLEI Credentials v1.2'
-  issuer: 'GLEIF'
-  class: 'ecosystem-specification'
-  url: 'https://www.gleif.org/organizational-identity/become-a-vlei-issuer-qvi/vlei-ecosystem-governance-framework/2026-03-25_vlei-egf-v4.0-technical-requirements-part-2-vlei-credentials_v1.2_final.pdf'
+  verification: read
+- id: SRC-GLEIF-EGF-TR2
+  title: vLEI EGF v4.0 Technical Requirements Part 2 - vLEI Credentials v1.2
+  issuer: GLEIF
+  class: ecosystem-specification
+  url: https://www.gleif.org/organizational-identity/become-a-vlei-issuer-qvi/vlei-ecosystem-governance-framework/2026-03-25_vlei-egf-v4.0-technical-requirements-part-2-vlei-credentials_v1.2_final.pdf
   version: '1.2'
   date: '2026-03-25'
   retrieved: '2026-10-03'
-  verification: 'read'
-- id: 'SRC-GLEIF-EGF-PRIMARY'
-  title: 'vLEI EGF v4.0 Primary Document v1.2'
-  issuer: 'GLEIF'
-  class: 'ecosystem-specification'
-  url: 'https://www.gleif.org/organizational-identity/become-a-vlei-issuer-qvi/vlei-ecosystem-governance-framework/2026-03-25_vlei-egf-v4.0-primary-document_v1.2_final.pdf'
+  verification: read
+- id: SRC-GLEIF-EGF-PRIMARY
+  title: vLEI EGF v4.0 Primary Document v1.2
+  issuer: GLEIF
+  class: ecosystem-specification
+  url: https://www.gleif.org/organizational-identity/become-a-vlei-issuer-qvi/vlei-ecosystem-governance-framework/2026-03-25_vlei-egf-v4.0-primary-document_v1.2_final.pdf
   version: '1.2'
   date: '2026-03-25'
   retrieved: '2026-10-03'
-  verification: 'snippet'
-- id: 'SRC-GLEIF-LEI-CERT'
-  title: 'GLEIF - The LEI in Digital Certificates (ISO 17442-2)'
-  issuer: 'GLEIF'
-  class: 'ecosystem-specification'
-  url: 'https://www.gleif.org/en/organizational-identity/lei-vlei/the-legal-entity-identifier-lei/the-lei-in-digital-certificates'
-  version: 'web page retrieved 2026-10-03'
+  verification: snippet
+- id: SRC-GLEIF-LEI-CERT
+  title: GLEIF - The LEI in Digital Certificates (ISO 17442-2)
+  issuer: GLEIF
+  class: ecosystem-specification
+  url: https://www.gleif.org/en/organizational-identity/lei-vlei/the-legal-entity-identifier-lei/the-lei-in-digital-certificates
+  version: web page retrieved 2026-10-03
   retrieved: '2026-10-03'
-  verification: 'read'
-- id: 'SRC-GLEIF-GET-VLEI'
-  title: 'GLEIF - Get a vLEI (list of Qualified vLEI Issuers)'
-  issuer: 'GLEIF'
-  class: 'ecosystem-specification'
-  url: 'https://www.gleif.org/en/organizational-identity/get-an-lei-vlei/get-a-vlei'
-  version: 'web page retrieved 2026-10-03'
+  verification: read
+- id: SRC-GLEIF-GET-VLEI
+  title: GLEIF - Get a vLEI (list of Qualified vLEI Issuers)
+  issuer: GLEIF
+  class: ecosystem-specification
+  url: https://www.gleif.org/en/organizational-identity/get-an-lei-vlei/get-a-vlei
+  version: web page retrieved 2026-10-03
   retrieved: '2026-10-03'
-  verification: 'read'
-- id: 'SRC-GLEIF-BLOG-AUTH'
-  title: 'GLEIF blog - From Passwords to Proof, the vLEI Authenticator (2026-02-24)'
-  issuer: 'GLEIF'
-  class: 'ecosystem-specification'
-  url: 'https://www.gleif.org/en/newsroom/blog/from-passwords-to-proof-how-the-vlei-authenticator-establishes-verifiable-organizational-roles'
+  verification: read
+- id: SRC-GLEIF-BLOG-AUTH
+  title: GLEIF blog - From Passwords to Proof, the vLEI Authenticator (2026-02-24)
+  issuer: GLEIF
+  class: ecosystem-specification
+  url: https://www.gleif.org/en/newsroom/blog/from-passwords-to-proof-how-the-vlei-authenticator-establishes-verifiable-organizational-roles
   date: '2026-02-24'
   retrieved: '2026-10-03'
-  verification: 'read'
-- id: 'SRC-ISO-TC68-17442-3'
-  title: 'ISO/TC 68 news - ISO 17442-3 Verifiable LEIs (vLEIs) published'
-  issuer: 'ISO/TC 68'
-  class: 'standard'
-  url: 'https://committee.iso.org/sites/tc68/home/news/content-left-area/news-and-updates/iso-17442-3-verifiable-leis-vlei.html'
+  verification: read
+- id: SRC-ISO-TC68-17442-3
+  title: ISO/TC 68 news - ISO 17442-3 Verifiable LEIs (vLEIs) published
+  issuer: ISO/TC 68
+  class: standard
+  url: https://committee.iso.org/sites/tc68/home/news/content-left-area/news-and-updates/iso-17442-3-verifiable-leis-vlei.html
   retrieved: '2026-10-03'
-  verification: 'read'
-  note: 'summary page only; the standard text itself (iso.org/standard/85628.html, paywalled, WAF 403) was not read'
-- id: 'SRC-GLEIF-PR-17442-3'
-  title: 'GLEIF press release - ISO standardizes vLEI with ISO 17442-3 (2024-10-14)'
-  issuer: 'GLEIF'
-  class: 'ecosystem-specification'
-  url: 'https://www.gleif.org/en/newsroom/press-releases/iso-standardizes-gleif-s-pioneering-digital-organizational-identity-offering-with-publication-of-vlei-technical-standard'
+  verification: read
+  note: summary page only; the standard text itself (iso.org/standard/85628.html, paywalled, WAF 403) was not read
+- id: SRC-GLEIF-PR-17442-3
+  title: GLEIF press release - ISO standardizes vLEI with ISO 17442-3 (2024-10-14)
+  issuer: GLEIF
+  class: ecosystem-specification
+  url: https://www.gleif.org/en/newsroom/press-releases/iso-standardizes-gleif-s-pioneering-digital-organizational-identity-offering-with-publication-of-vlei-technical-standard
   date: '2024-10-14'
   retrieved: '2026-10-03'
-  verification: 'read'
-- id: 'SRC-GS1-VC-DM'
-  title: 'GS1 Verifiable Credentials - White Paper on Data Model and Validations v1.0.1'
-  issuer: 'GS1 AISBL'
-  class: 'ecosystem-specification'
-  url: 'https://ref.gs1.org/gs1/vc/data-model/1.0.1/'
-  version: '1.0.1'
+  verification: read
+- id: SRC-GS1-VC-DM
+  title: GS1 Verifiable Credentials - White Paper on Data Model and Validations v1.0.1
+  issuer: GS1 AISBL
+  class: ecosystem-specification
+  url: https://ref.gs1.org/gs1/vc/data-model/1.0.1/
+  version: 1.0.1
   date: '2022-11-17'
   retrieved: '2026-10-03'
-  verification: 'partly-read'
-- id: 'SRC-GS1-VC-IDX'
-  title: 'GS1 documents and artefacts related to Verifiable Credentials'
-  issuer: 'GS1'
-  class: 'ecosystem-specification'
-  url: 'https://ref.gs1.org/gs1/vc/'
+  verification: partly-read
+- id: SRC-GS1-VC-IDX
+  title: GS1 documents and artefacts related to Verifiable Credentials
+  issuer: GS1
+  class: ecosystem-specification
+  url: https://ref.gs1.org/gs1/vc/
   retrieved: '2026-10-03'
-  verification: 'read'
-- id: 'SRC-CX-0010'
-  title: 'CX-0010 Business Partner Number v3.2.0 (preview)'
-  issuer: 'Catena-X Automotive Network Association'
-  class: 'ecosystem-specification'
-  url: 'https://catenax-ev.github.io/docs/next/standards/CX-0010-BusinessPartnerNumber'
-  version: 'v3.2.0 (preview)'
+  verification: read
+- id: SRC-CX-0010
+  title: CX-0010 Business Partner Number v3.2.0 (preview)
+  issuer: Catena-X Automotive Network Association
+  class: ecosystem-specification
+  url: https://catenax-ev.github.io/docs/next/standards/CX-0010-BusinessPartnerNumber
+  version: v3.2.0 (preview)
   retrieved: '2026-10-03'
-  verification: 'read'
-- id: 'SRC-CX-0050'
-  title: 'CX-0050 Catena-X-specific verifiable credentials v2.2.1 (preview)'
-  issuer: 'Catena-X Automotive Network Association'
-  class: 'ecosystem-specification'
-  url: 'https://catenax-ev.github.io/docs/next/standards/CX-0050-CXSpecificCredentials/CX-0050-CatenaXSpecificVerifiableCredentials'
-  version: 'v2.2.1 (preview)'
+  verification: read
+- id: SRC-CX-0050
+  title: CX-0050 Catena-X-specific verifiable credentials v2.2.1 (preview)
+  issuer: Catena-X Automotive Network Association
+  class: ecosystem-specification
+  url: https://catenax-ev.github.io/docs/next/standards/CX-0050-CXSpecificCredentials/CX-0050-CatenaXSpecificVerifiableCredentials
+  version: v2.2.1 (preview)
   retrieved: '2026-10-03'
-  verification: 'read'
-- id: 'SRC-CX-0167'
-  title: 'CX-0167 BPN-DID Resolution v1.0.0 (preview)'
-  issuer: 'Catena-X Automotive Network Association'
-  class: 'ecosystem-specification'
-  url: 'https://catenax-ev.github.io/docs/next/standards/CX-0167-BpnDidResolution'
-  version: 'v1.0.0 (preview)'
+  verification: read
+- id: SRC-CX-0167
+  title: CX-0167 BPN-DID Resolution v1.0.0 (preview)
+  issuer: Catena-X Automotive Network Association
+  class: ecosystem-specification
+  url: https://catenax-ev.github.io/docs/next/standards/CX-0167-BpnDidResolution
+  version: v1.0.0 (preview)
   retrieved: '2026-10-03'
-  verification: 'partly-read'
-- id: 'SRC-REG-952-2013'
-  title: 'Regulation (EU) No 952/2013 Union Customs Code (Article 9 registration of economic operators)'
-  issuer: 'European Union (OJ L 269, 10.10.2013)'
-  class: 'official'
-  url: 'https://publications.europa.eu/resource/celex/32013R0952'
-  version: 'OJ original text'
+  verification: partly-read
+- id: SRC-REG-952-2013
+  title: Regulation (EU) No 952/2013 Union Customs Code (Article 9 registration of economic operators)
+  issuer: European Union (OJ L 269, 10.10.2013)
+  class: official
+  url: https://publications.europa.eu/resource/celex/32013R0952
+  version: OJ original text
   date: '2013-10-09'
   retrieved: '2026-10-03'
-  verification: 'partly-read'
-- id: 'SRC-DIR-2019-1151'
-  title: 'Directive (EU) 2019/1151 amending Directive (EU) 2017/1132 as regards the use of digital tools and processes in company law'
-  issuer: 'European Union (OJ L 186, 11.7.2019, CELEX 32019L1151)'
-  class: 'official'
-  url: 'https://eur-lex.europa.eu/eli/dir/2019/1151/oj'
-  version: 'OJ original text (Articles 13a to 13j, 16, 16a, 19, 28a to 28c inserted)'
+  verification: partly-read
+- id: SRC-DIR-2019-1151
+  title: Directive (EU) 2019/1151 amending Directive (EU) 2017/1132 as regards the use of digital tools and processes in company law
+  issuer: European Union (OJ L 186, 11.7.2019, CELEX 32019L1151)
+  class: official
+  url: https://eur-lex.europa.eu/eli/dir/2019/1151/oj
+  version: OJ original text (Articles 13a to 13j, 16, 16a, 19, 28a to 28c inserted)
   date: '2019-06-20'
   retrieved: '2026-10-03'
-  verification: 'read'
-- id: 'SRC-DIR-2019-2121'
-  title: 'Directive (EU) 2019/2121 amending Directive (EU) 2017/1132 as regards cross-border conversions, mergers and divisions'
-  issuer: 'European Union (OJ L 321, 12.12.2019, CELEX 32019L2121)'
-  class: 'official'
-  url: 'https://eur-lex.europa.eu/eli/dir/2019/2121/oj'
-  version: 'OJ original text (Articles 86m, 86n read)'
+  verification: read
+- id: SRC-DIR-2019-2121
+  title: Directive (EU) 2019/2121 amending Directive (EU) 2017/1132 as regards cross-border conversions, mergers and divisions
+  issuer: European Union (OJ L 321, 12.12.2019, CELEX 32019L2121)
+  class: official
+  url: https://eur-lex.europa.eu/eli/dir/2019/2121/oj
+  version: OJ original text (Articles 86m, 86n read)
   date: '2019-11-27'
   retrieved: '2026-10-03'
-  verification: 'read'
-- id: 'SRC-COM-2026-321'
-  title: 'Proposal for a Regulation on the 28th regime corporate legal framework (EU Inc.), COM(2026) 321 final'
-  issuer: 'European Commission'
-  class: 'official'
-  url: 'https://commission.europa.eu/document/download/3e9822aa-8cef-40a1-904e-a53fc68e7265_en?filename=Proposal+for+an+EU+Inc+corporate+legal+framework.pdf'
-  version: 'COM(2026) 321 final, 2026/0074 (COD), not adopted'
+  verification: read
+- id: SRC-COM-2026-321
+  title: Proposal for a Regulation on the 28th regime corporate legal framework (EU Inc.), COM(2026) 321 final
+  issuer: European Commission
+  class: official
+  url: https://commission.europa.eu/document/download/3e9822aa-8cef-40a1-904e-a53fc68e7265_en?filename=Proposal+for+an+EU+Inc+corporate+legal+framework.pdf
+  version: COM(2026) 321 final, 2026/0074 (COD), not adopted
   date: '2026-03-18'
   retrieved: '2026-10-03'
+  verification: read
+- id: 'SRC-REG-2026-1744'
+  title: 'Regulation (EU) 2026/1744 of 8 July 2026 amending Regulation (EU) 2024/1689 (Digital Omnibus on AI)'
+  issuer: 'European Parliament and Council of the European Union'
+  class: 'official'
+  url: 'https://publications.europa.eu/resource/celex/32026R1744'
+  version: 'OJ L, 24.7.2026'
+  date: '2026-07-08'
+  retrieved: '2026-10-03'
   verification: 'read'
+  note: 'Adopted: Parliament vote 16.6.2026, Council 29.6.2026, in force 27.7.2026. Postpones the high-risk obligations to 2.12.2027 (Annex III) and 2.8.2028 (Annex I) and replaces Article 4.'
+- id: 'SRC-DIR-2019-882'
+  title: 'Directive (EU) 2019/882 on the accessibility requirements for products and services (European Accessibility Act)'
+  issuer: 'European Parliament and Council (OJ L 151, 7.6.2019, CELEX 32019L0882)'
+  class: 'official'
+  url: 'https://eur-lex.europa.eu/eli/dir/2019/882/oj'
+  version: 'OJ original text of 17 April 2019 (consolidation not read; no later amendment was checked)'
+  date: '2019-04-17'
+  retrieved: '2026-10-03'
+  verification: 'read'
+- id: 'SRC-DIR-2016-2102'
+  title: 'Directive (EU) 2016/2102 on the accessibility of the websites and mobile applications of public sector bodies (Web Accessibility Directive)'
+  issuer: 'European Parliament and Council (OJ L 327, 2.12.2016, CELEX 32016L2102)'
+  class: 'official'
+  url: 'https://eur-lex.europa.eu/eli/dir/2016/2102/oj'
+  version: 'OJ original text of 26 October 2016'
+  date: '2016-10-26'
+  retrieved: '2026-10-03'
+  verification: 'read'
+- id: 'SRC-CID-2018-2048'
+  title: 'Commission Implementing Decision (EU) 2018/2048 on the harmonised standard for websites and mobile applications drafted in support of Directive (EU) 2016/2102'
+  issuer: 'European Commission (OJ L 327, 21.12.2018, p. 84)'
+  class: 'official'
+  url: 'https://eur-lex.europa.eu/eli/dec_impl/2018/2048/oj'
+  version: 'OJ original text (published EN 301 549 V2.1.2 (2018-08); row 1 deleted by Decision (EU) 2021/1339)'
+  date: '2018-12-20'
+  retrieved: '2026-10-03'
+  verification: 'read'
+- id: 'SRC-CID-2021-1339'
+  title: 'Commission Implementing Decision (EU) 2021/1339 amending Implementing Decision (EU) 2018/2048 as regards the harmonised standard for websites and mobile applications'
+  issuer: 'European Commission (OJ L 289, 12.8.2021, p. 53)'
+  class: 'official'
+  url: 'https://eur-lex.europa.eu/eli/dec_impl/2021/1339/oj'
+  version: 'OJ original text (publishes EN 301 549 V3.2.1 (2021-03); withdrawal of V2.1.2 applies from 12 February 2022)'
+  date: '2021-08-11'
+  retrieved: '2026-10-03'
+  verification: 'read'
+- id: 'SRC-EN-301549'
+  title: 'ETSI EN 301 549 V3.2.1 (2021-03) Accessibility requirements for ICT products and services (harmonised European standard, CEN/CENELEC/ETSI)'
+  issuer: 'CEN, CENELEC, ETSI'
+  class: 'standard'
+  url: 'https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.02.01_60/en_301549v030201p.pdf'
+  version: 'V3.2.1 (2021-03); the version referenced in the OJ under Directive (EU) 2016/2102 per Decision (EU) 2021/1339; a newer version was not found'
+  date: '2021-03'
+  retrieved: '2026-10-03'
+  verification: 'read'
+- id: 'SRC-REG-2018-1724'
+  title: 'Regulation (EU) 2018/1724 establishing a single digital gateway'
+  issuer: 'European Parliament and Council (OJ L 295, 21.11.2018, CELEX 32018R1724)'
+  class: 'official'
+  url: 'https://eur-lex.europa.eu/eli/reg/2018/1724/oj'
+  version: 'OJ original text of 2 October 2018 (consolidation not read)'
+  date: '2018-10-02'
+  retrieved: '2026-10-03'
+  verification: 'read'
+- id: 'SRC-EBW-ANNEX-CELLAR'
+  title: 'Annex to the Proposal for a Regulation on the establishment of European Business Wallets, COM(2025) 838 final (Cellar manifestation, part 2)'
+  issuer: 'European Commission'
+  class: 'official'
+  url: 'http://publications.europa.eu/resource/cellar/bfd78780-c5de-11f0-8da2-01aa75ed71a1.0001.03/DOC_2'
+  version: 'COM(2025) 838 final, ANNEX (stream 1_EN_annexe_proposition_part1_v5.html)'
+  date: '2025-11-19'
+  retrieved: '2026-10-03'
+  verification: 'read'
+  note: 'Part of SRC-EBW-PROPOSAL; requirement candidates cite SRC-EBW-PROPOSAL. Reached via https://publications.europa.eu/resource/celex/52025PC0838 (HTTP 300 listing, Accept: application/xhtml+xml, Accept-Language: eng); DOC_1 is the act.'
+- id: 'SRC-CONSILIUM-PR-20260609'
+  title: 'European business wallets: Council adopts negotiating position (press release, 9 June 2026)'
+  issuer: 'Council of the European Union'
+  class: 'official'
+  url: 'https://www.consilium.europa.eu/en/press/press-releases/2026/06/09/european-business-wallets-council-adopts-negotiating-position/'
+  version: 'press release 9 June 2026'
+  date: '2026-06-09'
+  retrieved: '2026-10-03'
+  verification: 'snippet'
+  note: 'Page returned HTTP 403 (browser check) to every automated client; only search-result text and the EP Legislative Train summary of it were seen.'
+- id: 'SRC-COUNCIL-ST-7604-26'
+  title: 'Council document ST 7604/26 (3rd Presidency compromise proposal, LIMITE, 27 March 2026)'
+  issuer: 'Council of the European Union'
+  class: 'official'
+  url: 'https://data.consilium.europa.eu/doc/document/ST-7604-2026-INIT/en/pdf'
+  version: '7604/26 of 27 March 2026'
+  date: '2026-03-27'
+  retrieved: '2026-10-03'
+  verification: 'snippet'
+  note: 'Downloaded and text-extracted; only the cover and introduction were read. Superseded by ST 9684/26.'
+- id: 'SRC-EP-ITRE-DRAFT-REPORT'
+  title: 'Draft report on the proposal for a regulation on the establishment of European Business Wallets (PE785.244v02-00)'
+  issuer: 'European Parliament, Committee on Industry, Research and Energy (rapporteur Eero Heinäluoma, S&D)'
+  class: 'official'
+  url: 'https://www.europarl.europa.eu/RegData/commissions/itre/projet_rapport/2026/785244/ITRE_PR(2026)785244_EN.pdf'
+  version: 'PE785.244v02-00, Amendments 1 to 140 to COM(2025) 838'
+  date: '2026-04-01'
+  retrieved: '2026-10-03'
+  verification: 'read'
+  note: 'Also at https://www.europarl.europa.eu/doceo/document/ITRE-PR-785244_EN.html (WAF challenge for automated clients). Council ST 9684/26 gives 20 March 2026 as the publication date; the Observatory gives 1 April 2026.'
+- id: 'SRC-EP-ITRE-REPORT-A10-0240'
+  title: 'Report on the proposal for a regulation on the establishment of European Business Wallets, A10-0240/2026'
+  issuer: 'European Parliament, Committee on Industry, Research and Energy'
+  class: 'official'
+  url: 'https://www.europarl.europa.eu/doceo/document/A-10-2026-0240_EN.html'
+  version: 'A10-0240/2026, tabled 23 September 2026'
+  date: '2026-09-23'
+  retrieved: '2026-10-03'
+  verification: 'snippet'
+  note: 'Not retrievable (HTTP 202 WAF challenge on doceo, no RegData PDF path found). Reference and date taken from the Legislative Observatory. Content of the adopted amendments unread.'
+- id: 'SRC-EP-IMCO-OPINION'
+  title: 'Opinion of the Committee on the Internal Market and Consumer Protection on European Business Wallets (PE786.736)'
+  issuer: 'European Parliament, IMCO (rapporteur for opinion Veronika Cifrová Ostrihoňová, Renew)'
+  class: 'official'
+  url: 'https://www.europarl.europa.eu/RegData/commissions/imco/avis/2026/786736/IMCO_AD(2026)786736_EN.pdf'
+  version: 'PE786.736v03-00'
+  date: '2026-06-04'
+  retrieved: '2026-10-03'
+  verification: 'snippet'
+  note: 'PDF downloaded; only the cover page was read.'
+- id: 'SRC-EP-JURI-OPINION'
+  title: 'Opinion of the Committee on Legal Affairs on European Business Wallets (PE786.718)'
+  issuer: 'European Parliament, JURI (rapporteur for opinion Axel Voss, EPP)'
+  class: 'official'
+  url: 'https://www.europarl.europa.eu/RegData/commissions/juri/avis/2026/786718/JURI_AD(2026)786718_EN.pdf'
+  version: 'PE786.718v03-00'
+  date: '2026-06-08'
+  retrieved: '2026-10-03'
+  verification: 'snippet'
+  note: 'PDF downloaded; only the cover page was read.'
+- id: 'SRC-EP-OEIL-2025-0358'
+  title: 'Procedure file 2025/0358(COD), Establishment of European Business Wallets'
+  issuer: 'European Parliament, Legislative Observatory'
+  class: 'official'
+  url: 'https://oeil.secure.europarl.europa.eu/oeil/en/procedure-file?reference=2025/0358(COD)'
+  version: 'page as retrieved 2026-10-03'
+  date: '2026-10-03'
+  retrieved: '2026-10-03'
+  verification: 'read'
+- id: 'SRC-EP-LEGTRAIN-EBW'
+  title: 'Legislative Train Schedule: European business wallets (2025/0358(COD))'
+  issuer: 'European Parliament, EPRS'
+  class: 'official'
+  url: 'https://www.europarl.europa.eu/legislative-train/theme-a-europe-fit-for-the-digital-age/file-european-business-wallet'
+  version: 'information updated as of 20/09/2026'
+  date: '2026-09-20'
+  retrieved: '2026-10-03'
+  verification: 'read'
+- id: 'SRC-EESC-INT1110'
+  title: 'EESC opinion: European Business Wallets (INT/1110, CES3899/2025)'
+  issuer: 'European Economic and Social Committee (rapporteur Philip von Brockdorff)'
+  class: 'official'
+  url: 'https://www.eesc.europa.eu/en/our-work/opinions-information-reports/opinions/european-business-wallets'
+  version: 'adopted 18 March 2026 (INT section)'
+  date: '2026-03-18'
+  retrieved: '2026-10-03'
+  verification: 'snippet'
+  note: 'Key points on the EESC page read; the opinion text (docx) was not downloaded.'
+- id: 'SRC-EDPS-OPINION-5-2026'
+  title: 'EDPS Opinion 5/2026 on the Proposal for a Regulation on the establishment of European Business Wallets'
+  issuer: 'European Data Protection Supervisor'
+  class: 'official'
+  url: 'https://www.edps.europa.eu/system/files/2026-01/26-01-20_opinion_establishment_of_european_business_wallets_en.pdf'
+  version: 'Opinion 5/2026 of 20 January 2026'
+  date: '2026-01-20'
+  retrieved: '2026-10-03'
+  verification: 'read'
+  note: 'Council ST 9684/26 calls it ''formal comments''; the EDPS publishes it as Opinion 5/2026 under Article 42(1) of Regulation 2018/1725.'
+- id: 'SRC-COR-CDR4359'
+  title: 'Committee of the Regions opinion CDR 4359/2025 on European Business Wallets'
+  issuer: 'European Committee of the Regions'
+  class: 'official'
+  url: 'https://dmsearch.cor.europa.eu/search/public?k=(documenttype:AC)(documentnumber:4359)(documentyear:2025)(documentlanguage:EN)'
+  version: 'CDR4359/2025'
+  date: '2026-07-01'
+  retrieved: '2026-10-03'
+  verification: 'snippet'
+  note: 'Listed in the Observatory only; not opened.'
+- id: 'SRC-EC-DPP-PAGE'
+  title: 'Digital Product Passport (European Commission web page, DG GROW)'
+  issuer: 'European Commission'
+  class: 'official'
+  url: 'https://single-market-economy.ec.europa.eu/single-market/digital-product-passport_en'
+  version: 'web page as read 3 October 2026 (indicative timeline, subject to publication)'
+  date: '2026-07-17'
+  retrieved: '2026-10-03'
+  verification: 'read'
+- id: 'SRC-REG-2023-1542'
+  title: 'Regulation (EU) 2023/1542 (Batteries Regulation), Articles 77 and 78 battery passport'
+  issuer: 'European Union (OJ L 191, 28.7.2023, CELEX 32023R1542)'
+  class: 'official'
+  url: 'https://eur-lex.europa.eu/eli/reg/2023/1542/oj'
+  version: 'OJ original text; later amendments not read'
+  date: '2023-07-12'
+  retrieved: '2026-10-03'
+  verification: 'read'
+- id: 'SRC-DR-2016-161'
+  title: 'Commission Delegated Regulation (EU) 2016/161 supplementing Directive 2001/83/EC with detailed rules for the safety features on the packaging of medicinal products'
+  issuer: 'European Commission (OJ L 32, 9.2.2016, CELEX 32016R0161)'
+  class: 'official'
+  url: 'https://eur-lex.europa.eu/eli/reg_del/2016/161/oj'
+  version: 'OJ original text (Articles 4, 5, 31 to 39 read)'
+  date: '2015-10-02'
+  retrieved: '2026-10-03'
+  verification: 'read'
+- id: 'SRC-DIR-2011-62'
+  title: 'Directive 2011/62/EU amending Directive 2001/83/EC as regards the prevention of the entry into the legal supply chain of falsified medicinal products'
+  issuer: 'European Union (OJ L 174, 1.7.2011, CELEX 32011L0062)'
+  class: 'official'
+  url: 'https://eur-lex.europa.eu/eli/dir/2011/62/oj'
+  version: 'OJ original text; consolidated Directive 2001/83/EC not read'
+  date: '2011-06-08'
+  retrieved: '2026-10-03'
+  verification: 'partly-read'
+- id: 'SRC-REG-2023-1115'
+  title: 'Regulation (EU) 2023/1115 on deforestation-free products (EUDR), Articles 4, 6, 7, 9, 33'
+  issuer: 'European Union (OJ L 150, 9.6.2023, CELEX 32023R1115)'
+  class: 'official'
+  url: 'https://eur-lex.europa.eu/eli/reg/2023/1115/oj'
+  version: 'OJ original text; amending acts on application date and simplification not read'
+  date: '2023-05-31'
+  retrieved: '2026-10-03'
+  verification: 'read'
+- id: 'SRC-REG-2020-1056'
+  title: 'Regulation (EU) 2020/1056 on electronic freight transport information (eFTI), Articles 4 to 9'
+  issuer: 'European Union (OJ L 249, 31.7.2020, CELEX 32020R1056)'
+  class: 'official'
+  url: 'https://eur-lex.europa.eu/eli/reg/2020/1056/oj'
+  version: 'OJ original text; delegated and implementing acts not read'
+  date: '2020-07-15'
+  retrieved: '2026-10-03'
+  verification: 'read'
+- id: 'SRC-DIR-2019-944'
+  title: 'Directive (EU) 2019/944 on common rules for the internal market for electricity, Articles 23 and 24'
+  issuer: 'European Union (OJ L 158, 14.6.2019, CELEX 32019L0944)'
+  class: 'official'
+  url: 'https://eur-lex.europa.eu/eli/dir/2019/944/oj'
+  version: 'OJ original text; later amendments (including Directive (EU) 2024/1711) not read'
+  date: '2019-06-05'
+  retrieved: '2026-10-03'
+  verification: 'read'
+- id: 'SRC-IR-2023-1162'
+  title: 'Commission Implementing Regulation (EU) 2023/1162 on interoperability requirements and non-discriminatory and transparent procedures for access to metering and consumption data'
+  issuer: 'European Commission (OJ L 154, 15.6.2023, CELEX 32023R1162)'
+  class: 'official'
+  url: 'https://eur-lex.europa.eu/eli/reg_impl/2023/1162/oj'
+  version: 'OJ original text, Articles 1 to 14 and Annex'
+  date: '2023-06-06'
+  retrieved: '2026-10-03'
+  verification: 'read'
+- id: 'SRC-DGA'
+  title: 'Regulation (EU) 2022/868 on European data governance (Data Governance Act), Articles 10 to 12, 17, 18, 21, 22'
+  issuer: 'European Union (OJ L 152, 3.6.2022, CELEX 32022R0868)'
+  class: 'official'
+  url: 'https://eur-lex.europa.eu/eli/reg/2022/868/oj'
+  version: 'OJ original text'
+  date: '2022-05-30'
+  retrieved: '2026-10-03'
+  verification: 'read'
+- id: 'SRC-ETSI-TS-119431-1'
+  title: 'ETSI TS 119 431-1 Electronic Signatures and Trust Infrastructures (ESI); Policy and security requirements for trust service providers; Part 1: TSP service components operating a remote QSCD / SCDev'
+  issuer: 'ETSI'
+  class: 'standard'
+  url: 'https://www.etsi.org/deliver/etsi_ts/119400_119499/11943101/01.03.01_60/ts_11943101v010301p.pdf'
+  version: 'V1.3.1'
+  date: '2024-12'
+  retrieved: '2026-10-03'
+  verification: 'read'
+  note: 'Clauses 1, 4, 6 and Annex A read; the EN 419 241-1 clauses it incorporates by reference were not read. The PDF was served only to a browser user agent.'
+- id: 'SRC-ETSI-TS-119431-2'
+  title: 'ETSI TS 119 431-2 Electronic Signatures and Trust Infrastructures (ESI); Policy and security requirements for trust service providers; Part 2: TSP service components supporting AdES digital signature creation'
+  issuer: 'ETSI'
+  class: 'standard'
+  url: 'https://www.etsi.org/deliver/etsi_ts/119400_119499/11943102/01.02.01_60/ts_11943102v010201p.pdf'
+  version: 'V1.2.1'
+  date: '2023-06'
+  retrieved: '2026-10-03'
+  verification: 'snippet'
+  note: 'Scope, Annex B and Annex C read; the body clauses on the signature creation application service component were not read.'
+- id: 'SRC-ETSI-TS-119432'
+  title: 'ETSI TS 119 432 Electronic Signatures and Trust Infrastructures (ESI); Protocols for remote digital signature creation'
+  issuer: 'ETSI'
+  class: 'standard'
+  url: 'https://www.etsi.org/deliver/etsi_ts/119400_119499/119432/01.03.01_60/ts_119432v010301p.pdf'
+  version: 'V1.3.1'
+  date: '2026-03'
+  retrieved: '2026-10-03'
+  verification: 'snippet'
+  note: 'Scope, clause 6.4.3 and annex A.8 to A.10 read; named by CIR 2026/1731 Annex VI as the signing interface (clauses 6.4.3, A.6, A.7, A.8).'
+- id: 'SRC-CSC-API-V2'
+  title: 'Cloud Signature Consortium, Architectures and protocols for remote signature applications (CSC API) version 2.0.0.2'
+  issuer: 'Cloud Signature Consortium'
+  class: 'standard'
+  url: 'https://cloudsignatureconsortium.org/wp-content/uploads/2023/04/csc-api-v2.0.0.2.pdf'
+  version: '2.0.0.2'
+  date: '2023-04'
+  retrieved: '2026-10-03'
+  verification: 'read'
+  note: 'Clauses 1, 6.1, 8.2, 8.5 and 9 read; named by CIR 2024/2979 Annex IV until replaced by CIR 2026/1731. Version 2.2 (cited by ETSI TS 119 432) was not read.'
+- id: 'SRC-CIR-2025-847'
+  title: 'Commission Implementing Regulation (EU) 2025/847 laying down rules for the application of Regulation (EU) No 910/2014 as regards reactions to security breaches of European Digital Identity Wallets'
+  issuer: 'European Commission'
+  class: 'official'
+  url: 'https://eur-lex.europa.eu/eli/reg_impl/2025/847/oj'
+  version: 'OJ L, 7.5.2025'
+  date: '2025-05-07'
+  retrieved: '2026-10-03'
+  verification: 'read'
+  note: 'Read via publications.europa.eu/resource/celex/32025R0847 (Accept application/xhtml+xml, Accept-Language en).'
+- id: 'SRC-CID-2016-650'
+  title: 'Commission Implementing Decision (EU) 2016/650 laying down standards for the security assessment of qualified signature and seal creation devices pursuant to Articles 30(3) and 39(2) of Regulation (EU) No 910/2014'
+  issuer: 'European Commission'
+  class: 'official'
+  url: 'https://eur-lex.europa.eu/eli/dec_impl/2016/650/oj'
+  version: 'OJ L 109, 26.4.2016'
+  date: '2016-04-25'
+  retrieved: '2026-10-03'
+  verification: 'read'
+  note: 'Read via publications.europa.eu/resource/celex/32016D0650; refers to EN 419 211 and, for devices managed by a QTSP, to a comparable process notified to the Commission.'
+- id: 'SRC-IETF-TSL'
+  title: 'IETF Token Status List (TSL), draft-ietf-oauth-status-list'
+  issuer: 'IETF OAuth Working Group'
+  class: 'standard'
+  url: 'https://datatracker.ietf.org/doc/draft-ietf-oauth-status-list/'
+  version: 'draft-21'
+  date: '2026-06-21'
+  retrieved: '2026-10-03'
+  verification: 'read'
+  note: 'Sections 4.1, 5.1, 7, 11.5, 12 and 13 read. CIR 2026/1731 cites draft-20 of 20 April 2026, which was also retrieved. The draft is not an RFC.'
+- id: 'SRC-ARF-MAIN'
+  title: 'EUDI Wallet Architecture and Reference Framework, main document chapters 2, 3, 4 and 7 (eudi.dev rendering)'
+  issuer: 'European Commission and Member States (EUDI Wallet toolbox)'
+  class: 'standard'
+  url: 'https://eudi.dev/latest/main/04-high-level-architecture/'
+  version: 'ARF v3.0.0 (as rendered at /latest/)'
+  date: '2026-07-21'
+  retrieved: '2026-10-03'
+  verification: 'read'
+  note: 'Sections 4.3.2, 4.5 and 4.6 and the key paragraphs of chapters 3 and 7 read. Complements SRC-ARF-TRUST (chapter 6) and SRC-ARF-HLR (annex 2.02).'
+- id: 'SRC-ARF-DT-AB'
+  title: 'EUDI Wallet ARF Discussion Topic AB: Digital signature using wallet'
+  issuer: 'European Commission and Member States (EUDI Wallet toolbox)'
+  class: 'standard'
+  url: 'https://eudi.dev/latest/discussion-topics/ab-digital-signature-using-wallet/'
+  version: '1.1'
+  date: '2026-09-16'
+  retrieved: '2026-10-03'
+  verification: 'snippet'
+  note: 'Sections on definitions, signature creation request and authorisation interface read; discussion paper, not normative.'
+- id: 'SRC-OID4VCI-1.0'
+  title: 'OpenID for Verifiable Credential Issuance 1.0'
+  issuer: 'OpenID Foundation, Digital Credentials Protocols WG'
+  class: 'standard'
+  url: 'https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0.html'
+  version: '1.0 Final'
+  date: '2025-09-16'
+  retrieved: '2026-10-03'
+  verification: 'read'
+  note: 'Read sections 3, 11, 12.2.3, 13.3, 13.7, 15 and the table of contents; appendices D to F (key and wallet attestation, proof types) were not read in full.'
+- id: 'SRC-OID4VP-1.0'
+  title: 'OpenID for Verifiable Presentations 1.0'
+  issuer: 'OpenID Foundation, Digital Credentials Protocols WG'
+  class: 'standard'
+  url: 'https://openid.net/specs/openid-4-verifiable-presentations-1_0.html'
+  version: '1.0 Final'
+  date: '2025-07-09'
+  retrieved: '2026-10-03'
+  verification: 'read'
+  note: 'Read sections 5.9, 5.11, 6, 8.4, 8.6, 14 headings and 15; appendix A (Digital Credentials API) was read for the response modes only.'
+- id: 'SRC-HAIP-1.0'
+  title: 'OpenID4VC High Assurance Interoperability Profile 1.0'
+  issuer: 'OpenID Foundation, Digital Credentials Protocols WG'
+  class: 'standard'
+  url: 'https://openid.net/specs/openid4vc-high-assurance-interoperability-profile-1_0.html'
+  version: '1.0 Final'
+  date: '2025-12-24'
+  retrieved: '2026-10-03'
+  verification: 'read'
+  note: 'Sections 1 to 11 read. Refers to SD-JWT VC draft -13 and Token Status List draft -14 as not yet final.'
+- id: 'SRC-OIDF-FEDERATION-1.0'
+  title: 'OpenID Federation 1.0'
+  issuer: 'OpenID Foundation, OpenID Connect Working Group'
+  class: 'standard'
+  url: 'https://openid.net/specs/openid-federation-1_0.html'
+  version: '1.0 Final'
+  date: '2026-02-17'
+  retrieved: '2026-10-03'
+  verification: 'partly-read'
+  note: 'Read sections 2 to 4, 7, 8.2, 8.3, 10 and 11; metadata, policy and client registration sections not read.'
+- id: 'SRC-ETSI-119472-2'
+  title: 'ETSI TS 119 472-2 Profiles for Electronic Attestations of Attributes; Part 2: Profiles for EAA/PID presentations to Relying Party'
+  issuer: 'ETSI'
+  class: 'standard'
+  url: 'https://www.etsi.org/deliver/etsi_ts/119400_119499/11947202/01.02.01_60/ts_11947202v010201p.pdf'
+  version: 'V1.2.1'
+  date: '2026-03'
+  retrieved: '2026-10-03'
+  verification: 'partly-read'
+  note: 'Version cited by Implementing Regulation (EU) 2026/1731 Annex XII. A V1.3.1 exists on the ETSI server and was not read. Clauses 1, 5 and 6 read for the requirement list.'
+- id: 'SRC-ETSI-119472-3'
+  title: 'ETSI TS 119 472-3 Profiles for Electronic Attestations of Attributes; Part 3: Profiles for issuance of EAA or PID'
+  issuer: 'ETSI'
+  class: 'standard'
+  url: 'https://www.etsi.org/deliver/etsi_ts/119400_119499/11947203/01.01.01_60/ts_11947203v010101p.pdf'
+  version: 'V1.1.1'
+  date: '2026-03'
+  retrieved: '2026-10-03'
+  verification: 'partly-read'
+  note: 'Version cited by Implementing Regulation (EU) 2026/1731 Annex XI. Clauses 1, 4.1, 4.2 and 4.3 read.'
+- id: 'SRC-ETSI-119615'
+  title: 'ETSI TS 119 615 Trusted lists; Procedures for using and interpreting European Union Member States national trusted lists'
+  issuer: 'ETSI'
+  class: 'standard'
+  url: 'https://www.etsi.org/deliver/etsi_ts/119600_119699/119615/01.04.01_60/ts_119615v010401p.pdf'
+  version: 'V1.4.1'
+  date: '2026-05'
+  retrieved: '2026-10-03'
+  verification: 'partly-read'
+  note: 'Clauses 1 and 4.1 (authenticating the list of trusted lists, pivot LOTL) read; the validation procedures for qualified outputs were not read.'
+- id: 'SRC-ETSI-EN-319522-1'
+  title: 'ETSI EN 319 522-1 Electronic Registered Delivery Services; Part 1: Framework and Architecture'
+  issuer: 'ETSI'
+  class: 'standard'
+  url: 'https://www.etsi.org/deliver/etsi_en/319500_319599/31952201/01.02.01_60/en_31952201v010201p.pdf'
+  version: 'V1.2.1'
+  date: '2024-01'
+  retrieved: '2026-10-03'
+  verification: 'partly-read'
+  note: 'Clauses 1 to 4 read; evidence clause 6 not read. Cited by Implementing Regulation (EU) 2025/1944 Annexes I and II.'
+- id: 'SRC-ETSI-EN-319522-4-1'
+  title: 'ETSI EN 319 522-4-1 Electronic Registered Delivery Services; Part 4: Bindings; Sub-part 1: Message delivery bindings'
+  issuer: 'ETSI'
+  class: 'standard'
+  url: 'https://www.etsi.org/deliver/etsi_en/319500_319599/3195220401/01.02.01_60/en_3195220401v010201p.pdf'
+  version: 'V1.2.1'
+  date: '2019-01'
+  retrieved: '2026-10-03'
+  verification: 'partly-read'
+  note: 'Clauses 1 to 5.3 read; message-type bindings (5.4 onward) skimmed. Cited by Implementing Regulation (EU) 2025/1944 Annex II.'
+- id: 'SRC-ETSI-EN-319522-4-3'
+  title: 'ETSI EN 319 522-4-3 Electronic Registered Delivery Services; Part 4: Bindings; Sub-part 3: Capability/requirements bindings'
+  issuer: 'ETSI'
+  class: 'standard'
+  url: 'https://www.etsi.org/deliver/etsi_en/319500_319599/3195220403/01.01.01_60/en_3195220403v010101p.pdf'
+  version: 'V1.1.1'
+  date: '2018-09'
+  retrieved: '2026-10-03'
+  verification: 'partly-read'
+  note: 'Clauses 1 to 7.2 read. Cited by Implementing Regulation (EU) 2025/1944 Annex II.'
+- id: 'SRC-OASIS-AS4'
+  title: 'AS4 Profile of ebMS 3.0 Version 1.0'
+  issuer: 'OASIS ebXML Messaging Services TC'
+  class: 'standard'
+  url: 'https://docs.oasis-open.org/ebxml-msg/ebms/v3.0/profiles/AS4-profile/v1.0/os/AS4-profile-v1.0-os.html'
+  version: '1.0 OASIS Standard'
+  date: '2013-01-23'
+  retrieved: '2026-10-03'
+  verification: 'partly-read'
+  note: 'Abstract, conformance profiles and receipts read in outline.'
+- id: 'SRC-ETSI-EN-319401-V3.2.1'
+  title: 'ETSI EN 319 401 General Policy Requirements for Trust Service Providers (V3.2.1)'
+  issuer: 'ETSI'
+  class: 'standard'
+  url: 'https://www.etsi.org/deliver/etsi_en/319400_319499/319401/03.02.01_60/en_319401v030201p.pdf'
+  version: 'V3.2.1'
+  date: '2026-01'
+  retrieved: '2026-10-03'
+  verification: 'partly-read'
+  note: 'Newer version than the registered SRC-ETSI-EN-319401 (V3.1.1, cited by CIR 2025/1944 and 2025/1946). Clauses 7.9.1, 7.10 and annexes A to C read.'
+- id: 'SRC-ETSI-119511'
+  title: 'ETSI TS 119 511 Policy and security requirements for trust service providers providing long-term preservation of digital signatures or unsigned data using digital signature techniques'
+  issuer: 'ETSI'
+  class: 'standard'
+  url: 'https://www.etsi.org/deliver/etsi_ts/119500_119599/119511/01.02.01_60/ts_119511v010201p.pdf'
+  version: 'V1.2.1'
+  date: '2025-10'
+  retrieved: '2026-10-03'
+  verification: 'snippet'
+  note: 'Scope clause only. Implementing Regulation (EU) 2025/1946 cites V1.1.1 (2019-06).'
+- id: 'SRC-ETSI-119512'
+  title: 'ETSI TS 119 512 Protocols for trust service providers providing long-term data preservation services'
+  issuer: 'ETSI'
+  class: 'standard'
+  url: 'https://www.etsi.org/deliver/etsi_ts/119500_119599/119512/01.02.01_60/ts_119512v010201p.pdf'
+  version: 'V1.2.1'
+  date: '2023-05'
+  retrieved: '2026-10-03'
+  verification: 'snippet'
+  note: 'Scope clause only.'
+- id: 'SRC-CIR-2024-2690'
+  title: 'Commission Implementing Regulation (EU) 2024/2690 (cybersecurity risk-management measures and significant incidents under NIS2, including trust service providers)'
+  issuer: 'European Union (OJ L, 18.10.2024, CELEX 32024R2690)'
+  class: 'official'
+  url: 'https://eur-lex.europa.eu/eli/reg_impl/2024/2690/oj'
+  version: 'OJ original text'
+  date: '2024-10-17'
+  retrieved: '2026-10-03'
+  verification: 'read'
+  note: 'Read recitals 1 to 3, Article 14 and Annex sections 3.1 to 3.3; other annex sections not read.'
+- id: 'SRC-CIR-2025-1946'
+  title: 'Commission Implementing Regulation (EU) 2025/1946 (qualified preservation services for qualified electronic signatures and seals)'
+  issuer: 'European Union (OJ L, 30.9.2025, CELEX 32025R1946)'
+  class: 'official'
+  url: 'https://eur-lex.europa.eu/eli/reg_impl/2025/1946/oj'
+  version: 'OJ original text'
+  date: '2025-09-29'
+  retrieved: '2026-10-03'
+  verification: 'read'
+  note: 'Annex applies ETSI TS 119 511 V1.1.1 and TS 119 172-4 with adaptations.'
+- id: 'SRC-CIR-2025-2530'
+  title: 'Commission Implementing Regulation (EU) 2025/2530 (requirements for qualified trust service providers providing qualified trust services)'
+  issuer: 'European Union (OJ L, 17.12.2025, CELEX 32025R2530)'
+  class: 'official'
+  url: 'https://eur-lex.europa.eu/eli/reg_impl/2025/2530/oj'
+  version: 'OJ original text'
+  date: '2025-12-16'
+  retrieved: '2026-10-03'
+  verification: 'read'
+  note: 'Articles 1 to 5 read; the Annex list of reference regulations was not read.'
+- id: 'SRC-RFC-9162'
+  title: 'RFC 9162 Certificate Transparency Version 2.0'
+  issuer: 'IETF'
+  class: 'standard'
+  url: 'https://www.rfc-editor.org/rfc/rfc9162'
+  version: 'RFC 9162 (Experimental)'
+  date: '2021-12'
+  retrieved: '2026-10-03'
+  verification: 'partly-read'
+  note: 'Introduction and proof sections read in outline. Category is Experimental, not Standards Track. Option reference only.'
+- id: 'SRC-RFC-9943'
+  title: 'RFC 9943 An Architecture for Trustworthy and Transparent Digital Supply Chains (SCITT)'
+  issuer: 'IETF'
+  class: 'standard'
+  url: 'https://www.rfc-editor.org/rfc/rfc9943'
+  version: 'RFC 9943 (Standards Track)'
+  date: '2026-06'
+  retrieved: '2026-10-03'
+  verification: 'partly-read'
+  note: 'Abstract, introduction and terminology read; protocol sections not read. Option reference only.'
+- id: 'SRC-EDPB-GL-07-2020'
+  title: 'EDPB Guidelines 07/2020 on the concepts of controller and processor in the GDPR'
+  issuer: 'European Data Protection Board'
+  class: 'official'
+  url: 'https://www.edpb.europa.eu/system/files/2023-10/edpb_guidelines_202007_controllerprocessor_final_en.pdf'
+  version: 'Version 2.1 (adopted 7 July 2021, corrections 20 September 2022)'
+  date: '2022-09-20'
+  retrieved: '2026-10-03'
+  verification: 'partly-read'
+  note: 'Executive summary, paragraph 19 with footnote 9, essential means and the examples near paragraph 83 read.'
+- id: 'SRC-EDPB-GL-01-2025'
+  title: 'EDPB Guidelines 01/2025 on Pseudonymisation'
+  issuer: 'European Data Protection Board'
+  class: 'official'
+  url: 'https://www.edpb.europa.eu/system/files/2025-01/edpb_guidelines_202501_pseudonymisation_en.pdf'
+  version: 'Adopted 16 January 2025, version for public consultation'
+  date: '2025-01-16'
+  retrieved: '2026-10-03'
+  verification: 'partly-read'
+  note: 'Executive summary read. A final version was not found.'
+- id: 'SRC-EDPB-GL-04-2019'
+  title: 'EDPB Guidelines 4/2019 on Article 25 Data Protection by Design and by Default'
+  issuer: 'European Data Protection Board'
+  class: 'official'
+  url: 'https://www.edpb.europa.eu/sites/default/files/files/file1/edpb_guidelines_201904_dataprotection_by_design_and_by_default_v2.0_en.pdf'
+  version: 'Version 2.0 (adopted 20 October 2020)'
+  date: '2020-10-20'
+  retrieved: '2026-10-03'
+  verification: 'snippet'
+  note: 'Table of contents and minimisation headings only.'
+- id: 'SRC-DSP'
+  title: 'Dataspace Protocol (Eclipse Dataspace Protocol Base) Release 2025-1'
+  issuer: 'Eclipse Dataspace Working Group'
+  class: 'standard'
+  url: 'https://eclipse-dataspace-protocol-base.github.io/DataspaceProtocol/2025-1/'
+  version: 'Release 2025-1 (latest tag 2025-1-err2); repository commit 8c20a5b'
+  date: '2026-09-09'
+  retrieved: '2026-10-03'
+  verification: 'partly-read'
+  note: 'Scope, introduction, common protocol and authorization text read; catalog, negotiation and transfer message definitions not read.'
+- id: 'SRC-GAIAX-COMPLIANCE-24.04'
+  title: 'Gaia-X Compliance Document 24.04-prerelease (policy rules, trust anchors and process)'
+  issuer: 'Gaia-X European Association for Data and Cloud AISBL'
+  class: 'ecosystem-specification'
+  url: 'https://docs.gaia-x.eu/policy-rules-committee/trust-framework/latest/'
+  version: '24.04-prerelease (page served as latest)'
+  date: '2024-04-22'
+  retrieved: '2026-10-03'
+  verification: 'partly-read'
+  note: 'Sections on scope, trust anchors (6) and process (7) read. A newer release was not searched. GXDCH documentation pages returned stubs or 404.'
+- id: 'SRC-LOTL-EU'
+  title: 'EU list of trusted lists (LOTL), machine-readable XML instance'
+  issuer: 'European Commission'
+  class: 'official'
+  url: 'https://ec.europa.eu/tools/lotl/eu-lotl.xml'
+  version: 'TSL sequence number 395'
+  date: '2026-09-24'
+  retrieved: '2026-10-03'
+  verification: 'read'
+  note: 'Instance fetched 2026-10-03: 43 pointers, next update 2027-03-17. Signature was not verified.'
