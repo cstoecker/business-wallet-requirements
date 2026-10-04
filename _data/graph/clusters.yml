@@ -68,3 +68,7 @@
   name: Cross-jurisdiction identity, identifiers and assurance (EBW and non-EBW)
   decision: DEC-11
   summary: "Primary identifiers (EUID, EBWOID, EU Company Certificate), secondary identifiers (BPN, LEI, party GLN, domain-specific), levels of assurance, legal compliance across EU Member States and interaction with partners outside the EU, with and without a business wallet."
+- code: K18
+  name: Planes and evidence graph (control, data, verifiable evidence)
+  decision: DEC-12
+  summary: "One integrated view of the control plane (policy decisions and enforcement), the data plane (how credentials, evidence and data move) and the access-controlled verifiable evidence graph under open-world semantics, for policy, register, product passport and AI processes."

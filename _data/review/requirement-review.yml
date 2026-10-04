@@ -22,6 +22,7 @@
   clusters:
   - K16
   - K11
+  - K18
   applicability: wallet-general
   fidelity: ok
   verification_ready: 'yes'
@@ -226,7 +227,7 @@
   clusters:
   - K16
   - K03
-  - K11
+  - K18
   applicability: wallet-general
   fidelity: ok
   verification_ready: 'yes'
@@ -238,7 +239,7 @@
   clusters:
   - K03
   - K16
-  - K11
+  - K18
   applicability: wallet-general
   fidelity: derived-unmarked
   verification_ready: needs-source-check
@@ -252,7 +253,7 @@
   clusters:
   - K03
   - K16
-  - K01
+  - K18
   applicability: relying-party-side
   fidelity: ok
   verification_ready: 'yes'
@@ -263,7 +264,7 @@
   clusters:
   - K03
   - K16
-  - K07
+  - K18
   applicability: relying-party-side
   fidelity: ok
   verification_ready: 'yes'
@@ -275,7 +276,7 @@
   clusters:
   - K03
   - K16
-  - K08
+  - K18
   applicability: wallet-general
   fidelity: ok
   verification_ready: needs-source-check
@@ -287,7 +288,7 @@
   clusters:
   - K09
   - K01
-  - K16
+  - K18
   applicability: wallet-general
   fidelity: ok
   verification_ready: 'yes'
@@ -298,7 +299,7 @@
   clusters:
   - K07
   - K03
-  - K16
+  - K18
   applicability: wallet-general
   fidelity: ok
   verification_ready: 'yes'
@@ -312,7 +313,7 @@
   clusters:
   - K03
   - K16
-  - K07
+  - K18
   applicability: core
   fidelity: derived-unmarked
   verification_ready: needs-source-check
@@ -352,7 +353,7 @@
   clusters:
   - K03
   - K16
-  - K10
+  - K18
   applicability: wallet-general
   fidelity: derived-unmarked
   verification_ready: needs-legal-review
@@ -592,7 +593,7 @@
   clusters:
   - K16
   - K01
-  - K09
+  - K18
   applicability: horizontal
   fidelity: derived-unmarked
   verification_ready: needs-legal-review
@@ -606,6 +607,7 @@
   clusters:
   - K16
   - K15
+  - K18
   applicability: horizontal
   fidelity: derived-unmarked
   verification_ready: needs-source-check
@@ -664,6 +666,7 @@
   clusters:
   - K15
   - K01
+  - K18
   applicability: authority-side
   fidelity: broader-than-quote
   verification_ready: needs-source-check (website and Board sharing not in quote)
@@ -690,7 +693,7 @@
   clusters:
   - K01
   - K15
-  - K08
+  - K18
   applicability: horizontal
   fidelity: derived-marked
   verification_ready: needs-legal-review (statement addresses operator, not wallet; derivation unclear)
@@ -702,6 +705,7 @@
   clusters:
   - K06
   - K01
+  - K18
   applicability: horizontal
   fidelity: broader-than-quote
   verification_ready: needs-source-check (Annex III reference not in quote)
@@ -713,6 +717,7 @@
   clusters:
   - K15
   - K01
+  - K18
   applicability: horizontal
   fidelity: ok
   verification_ready: 'yes'
@@ -737,6 +742,7 @@
   clusters:
   - K03
   - K11
+  - K18
   applicability: horizontal
   fidelity: ok
   verification_ready: 'yes'
@@ -770,7 +776,7 @@
   clusters:
   - K01
   - K15
-  - K08
+  - K18
   applicability: horizontal
   fidelity: ok
   verification_ready: 'yes'
@@ -782,6 +788,7 @@
   clusters:
   - K08
   - K16
+  - K18
   applicability: horizontal
   fidelity: ok
   verification_ready: needs-legal-review (what "means to enable interoperability" demands)
@@ -793,7 +800,7 @@
   clusters:
   - K15
   - K12
-  - K08
+  - K18
   applicability: authority-side
   fidelity: broader-than-quote
   verification_ready: needs-source-check
@@ -1192,6 +1199,7 @@
   priority_reason: Limits legal effect of authorisations; shapes mandate model
   clusters:
   - K03
+  - K18
   applicability: core
   fidelity: derived-marked
   verification_ready: needs-legal-review
@@ -1246,6 +1254,7 @@
   clusters:
   - K08
   - K01
+  - K18
   applicability: horizontal
   fidelity: derived-unmarked
   verification_ready: needs-source-check
@@ -1258,6 +1267,7 @@
   priority_reason: Data Act duty, only indirect wallet link
   clusters:
   - K08
+  - K18
   applicability: horizontal
   fidelity: broader-than-quote
   verification_ready: needs-source-check
@@ -1296,6 +1306,7 @@
   clusters:
   - K06
   - K01
+  - K18
   applicability: authority-side
   fidelity: ok
   verification_ready: true
@@ -1307,7 +1318,7 @@
   clusters:
   - K06
   - K03
-  - K17
+  - K18
   applicability: authority-side
   fidelity: ok
   verification_ready: true
@@ -1319,7 +1330,7 @@
   clusters:
   - K06
   - K03
-  - K05
+  - K18
   applicability: authority-side
   fidelity: broader-than-quote
   verification_ready: needs-source-check
@@ -1333,7 +1344,7 @@
   clusters:
   - K01
   - K06
-  - K17
+  - K18
   applicability: authority-side
   fidelity: broader-than-quote
   verification_ready: needs-source-check
@@ -1347,6 +1358,7 @@
   clusters:
   - K09
   - K10
+  - K18
   applicability: horizontal
   fidelity: ok
   verification_ready: 'yes'
@@ -1361,6 +1373,7 @@
   clusters:
   - K03
   - K08
+  - K18
   applicability: horizontal
   fidelity: ok
   verification_ready: 'yes'
@@ -1372,6 +1385,7 @@
   clusters:
   - K11
   - K08
+  - K18
   applicability: horizontal
   fidelity: ok
   verification_ready: 'yes'
@@ -1383,6 +1397,7 @@
   clusters:
   - K11
   - K08
+  - K18
   applicability: horizontal
   fidelity: ok
   verification_ready: 'yes'
@@ -1490,6 +1505,7 @@
   clusters:
   - K01
   - K08
+  - K18
   applicability: wallet-general
   fidelity: ok
   verification_ready: needs-source-check
@@ -1501,6 +1517,7 @@
   clusters:
   - K06
   - K08
+  - K18
   applicability: wallet-general
   fidelity: ok
   verification_ready: needs-source-check
@@ -1534,6 +1551,7 @@
   clusters:
   - K17
   - K06
+  - K18
   applicability: provider-side
   fidelity: ok
   verification_ready: 'yes'
@@ -1706,6 +1724,7 @@
   clusters:
   - K09
   - K06
+  - K18
   applicability: wallet-general
   fidelity: derived-marked
   verification_ready: needs-legal-review
@@ -1718,6 +1737,7 @@
   clusters:
   - K06
   - K17
+  - K18
   applicability: horizontal
   fidelity: ok
   verification_ready: 'yes'
@@ -1740,6 +1760,7 @@
   clusters:
   - K12
   - K08
+  - K18
   applicability: horizontal
   fidelity: ok
   verification_ready: 'yes'
@@ -1760,6 +1781,7 @@
   clusters:
   - K03
   - K16
+  - K18
   applicability: horizontal
   fidelity: ok
   verification_ready: 'yes'
@@ -1783,6 +1805,7 @@
   priority_reason: Battery passport date; sector deadline, no wallet design
   clusters:
   - K15
+  - K18
   applicability: horizontal
   fidelity: ok
   verification_ready: 'yes'
@@ -1794,6 +1817,7 @@
   clusters:
   - K09
   - K06
+  - K18
   applicability: horizontal
   fidelity: broader-than-quote
   verification_ready: needs-source-check
@@ -1806,6 +1830,7 @@
   priority_reason: Statutory mandate case; written authorisation is wallet-representable
   clusters:
   - K03
+  - K18
   applicability: horizontal
   fidelity: derived-unmarked
   verification_ready: needs-legal-review
@@ -1851,6 +1876,7 @@
   clusters:
   - K12
   - K03
+  - K18
   applicability: horizontal
   fidelity: ok
   verification_ready: needs-source-check
@@ -1875,6 +1901,7 @@
   priority_reason: Statutory mandate evidence on request; mandate credential use case
   clusters:
   - K03
+  - K18
   applicability: horizontal
   fidelity: ok
   verification_ready: 'yes'
@@ -1895,6 +1922,7 @@
   priority_reason: Evidence-of-empowerment on request; verifiable mandate fits
   clusters:
   - K03
+  - K18
   applicability: horizontal
   fidelity: ok
   verification_ready: 'yes'
@@ -1906,6 +1934,7 @@
   clusters:
   - K08
   - K04
+  - K18
   applicability: horizontal
   fidelity: ok
   verification_ready: 'yes'
@@ -1925,6 +1954,7 @@
   clusters:
   - K09
   - K03
+  - K18
   applicability: horizontal
   fidelity: ok
   verification_ready: 'yes'
@@ -1935,6 +1965,7 @@
   clusters:
   - K09
   - K07
+  - K18
   applicability: horizontal
   fidelity: ok
   verification_ready: 'yes'
@@ -1944,6 +1975,7 @@
   priority_reason: Sector precondition for data release
   clusters:
   - K09
+  - K18
   applicability: horizontal
   fidelity: ok
   verification_ready: 'yes'
@@ -1999,7 +2031,7 @@
   clusters:
   - K12
   - K08
-  - K17
+  - K18
   applicability: core
   fidelity: ok
   verification_ready: needs-source-check (quote not stored in file)
@@ -2024,7 +2056,7 @@
   clusters:
   - K07
   - K01
-  - K08
+  - K18
   applicability: core
   fidelity: ok
   verification_ready: needs-source-check (quote not stored in file)
@@ -2039,7 +2071,7 @@
   clusters:
   - K01
   - K09
-  - K17
+  - K18
   applicability: core
   fidelity: ok
   verification_ready: needs-source-check (quote not stored in file)
@@ -2050,6 +2082,7 @@
   clusters:
   - K04
   - K14
+  - K18
   applicability: core
   fidelity: ok
   verification_ready: needs-source-check (quote not stored in file)
@@ -2060,6 +2093,7 @@
   clusters:
   - K10
   - K14
+  - K18
   applicability: core
   fidelity: ok
   verification_ready: needs-source-check (quote not stored in file)
@@ -2070,7 +2104,7 @@
   clusters:
   - K07
   - K02
-  - K01
+  - K18
   applicability: core
   fidelity: ok
   verification_ready: needs-source-check (quote not stored in file)
@@ -2081,6 +2115,7 @@
   clusters:
   - K01
   - K03
+  - K18
   applicability: core
   fidelity: ok
   verification_ready: needs-source-check (what "chain" means in Art 5(1)(g))
@@ -2094,6 +2129,7 @@
   clusters:
   - K03
   - K06
+  - K18
   applicability: core
   fidelity: ok
   verification_ready: needs-source-check (quote not stored in file)
@@ -2104,6 +2140,7 @@
   clusters:
   - K03
   - K02
+  - K18
   applicability: core
   fidelity: ok
   verification_ready: needs-source-check (quote not stored in file)
@@ -2114,7 +2151,7 @@
   clusters:
   - K03
   - K09
-  - K08
+  - K18
   applicability: core
   fidelity: ok
   verification_ready: needs-source-check (quote not stored in file)
@@ -2125,6 +2162,7 @@
   clusters:
   - K12
   - K10
+  - K18
   applicability: core
   fidelity: ok
   verification_ready: needs-source-check (quote not stored in file)
@@ -2147,6 +2185,7 @@
   clusters:
   - K08
   - K16
+  - K18
   applicability: core
   fidelity: ok
   verification_ready: needs-source-check (quote not stored in file)
@@ -2158,7 +2197,7 @@
   clusters:
   - K03
   - K16
-  - K17
+  - K18
   applicability: core
   fidelity: broader-than-quote
   verification_ready: 'needs-source-check (Art 6(2)(b) second indent: detection vs prevention, "real time")'
@@ -2183,6 +2222,7 @@
   clusters:
   - K15
   - K12
+  - K18
   applicability: authority-side
   fidelity: ok
   verification_ready: needs-source-check (quote not stored in file)
@@ -2267,7 +2307,7 @@
   clusters:
   - K12
   - K06
-  - K17
+  - K18
   applicability: provider-side
   fidelity: ok
   verification_ready: needs-source-check (quote not stored in file)
@@ -2282,6 +2322,7 @@
   clusters:
   - K12
   - K10
+  - K18
   applicability: provider-side
   fidelity: ok
   verification_ready: needs-source-check (quote not stored in file)
@@ -2297,7 +2338,7 @@
   clusters:
   - K06
   - K07
-  - K17
+  - K18
   applicability: authority-side
   fidelity: ok
   verification_ready: needs-source-check (quote not stored in file)
@@ -2310,6 +2351,7 @@
   clusters:
   - K15
   - K07
+  - K18
   applicability: wallet-general
   fidelity: ok
   verification_ready: needs-source-check (quote not stored in file)
@@ -2321,6 +2363,7 @@
   clusters:
   - K04
   - K11
+  - K18
   applicability: wallet-general
   fidelity: ok
   verification_ready: needs-source-check (quote not stored in file)
@@ -2346,7 +2389,7 @@
   clusters:
   - K05
   - K09
-  - K03
+  - K18
   applicability: wallet-general
   fidelity: ok
   verification_ready: needs-source-check (quote not stored in file)
@@ -2359,7 +2402,7 @@
   clusters:
   - K04
   - K15
-  - K09
+  - K18
   applicability: wallet-general
   fidelity: ok
   verification_ready: needs-source-check (quote not stored in file)
@@ -2371,7 +2414,7 @@
   clusters:
   - K01
   - K09
-  - K04
+  - K18
   applicability: wallet-general
   fidelity: ok
   verification_ready: needs-source-check (quote not stored in file)
@@ -2386,6 +2429,7 @@
   clusters:
   - K09
   - K08
+  - K18
   applicability: wallet-general
   fidelity: ok
   verification_ready: needs-source-check (quote not stored in file)
@@ -2398,7 +2442,7 @@
   clusters:
   - K03
   - K05
-  - K09
+  - K18
   applicability: wallet-general
   fidelity: ok
   verification_ready: needs-source-check (quote not stored in file)
@@ -2411,6 +2455,7 @@
   clusters:
   - K03
   - K08
+  - K18
   applicability: core
   fidelity: ok
   verification_ready: needs-source-check (Council text, not final law)
@@ -2423,6 +2468,7 @@
   clusters:
   - K03
   - K08
+  - K18
   applicability: core
   fidelity: ok
   verification_ready: needs-source-check (Council text)
@@ -2435,7 +2481,7 @@
   clusters:
   - K03
   - K16
-  - K08
+  - K18
   applicability: core
   fidelity: ok
   verification_ready: 'yes'
@@ -2496,6 +2542,7 @@
   clusters:
   - K03
   - K08
+  - K18
   applicability: core
   fidelity: broader-than-quote
   verification_ready: needs-source-check (Council text; quote covers only mandate criterion)
@@ -2509,7 +2556,7 @@
   clusters:
   - K03
   - K08
-  - K12
+  - K18
   applicability: core
   fidelity: ok
   verification_ready: needs-source-check (Council text)
@@ -2546,6 +2593,7 @@
   clusters:
   - K12
   - K15
+  - K18
   applicability: authority-side
   fidelity: ok
   verification_ready: true
@@ -2558,6 +2606,7 @@
   clusters:
   - K15
   - K06
+  - K18
   applicability: authority-side
   fidelity: ok
   verification_ready: true
@@ -2570,7 +2619,7 @@
   clusters:
   - K06
   - K08
-  - K17
+  - K18
   applicability: authority-side
   fidelity: ok
   verification_ready: true
@@ -2583,7 +2632,7 @@
   clusters:
   - K03
   - K12
-  - K08
+  - K18
   applicability: authority-side
   fidelity: ok
   verification_ready: needs-legal-review
@@ -2595,6 +2644,7 @@
   clusters:
   - K04
   - K08
+  - K18
   applicability: core
   fidelity: ok
   verification_ready: 'yes'
@@ -2606,6 +2656,7 @@
   clusters:
   - K04
   - K08
+  - K18
   applicability: core
   fidelity: broader-than-quote
   verification_ready: needs-source-check
@@ -2654,6 +2705,7 @@
   clusters:
   - K03
   - K02
+  - K18
   applicability: core
   fidelity: ok
   verification_ready: 'yes'
@@ -2677,6 +2729,7 @@
   clusters:
   - K04
   - K08
+  - K18
   applicability: wallet-general
   fidelity: ok
   verification_ready: needs-source-check
@@ -2688,7 +2741,7 @@
   clusters:
   - K04
   - K03
-  - K02
+  - K18
   applicability: wallet-general
   fidelity: derived-marked
   verification_ready: needs-legal-review
@@ -2700,6 +2753,7 @@
   clusters:
   - K04
   - K15
+  - K18
   applicability: wallet-general
   fidelity: derived-marked
   verification_ready: needs-legal-review
@@ -3358,7 +3412,7 @@
   clusters:
   - K08
   - K15
-  - K17
+  - K18
   applicability: core
   fidelity: ok
   verification_ready: needs-source-check (quote not stored in file)
@@ -3370,7 +3424,7 @@
   clusters:
   - K12
   - K06
-  - K17
+  - K18
   applicability: core
   fidelity: ok
   verification_ready: needs-source-check (quote not stored in file)
@@ -3397,7 +3451,7 @@
   clusters:
   - K06
   - K01
-  - K17
+  - K18
   applicability: core
   fidelity: ok
   verification_ready: needs-source-check (quote not stored in file)
@@ -3409,6 +3463,7 @@
   clusters:
   - K06
   - K17
+  - K18
   applicability: core
   fidelity: ok
   verification_ready: needs-source-check (quote not stored in file)
@@ -3420,6 +3475,7 @@
   clusters:
   - K06
   - K17
+  - K18
   applicability: core
   fidelity: ok
   verification_ready: needs-source-check (Art 9(2) vs 9(4) separately)
@@ -3434,7 +3490,7 @@
   clusters:
   - K08
   - K06
-  - K17
+  - K18
   applicability: authority-side
   fidelity: ok
   verification_ready: needs-source-check (quote not stored in file)
@@ -3522,6 +3578,7 @@
   clusters:
   - K01
   - K07
+  - K18
   applicability: core
   fidelity: ok
   verification_ready: needs-source-check (quote not stored in file)
@@ -3536,6 +3593,7 @@
   clusters:
   - K15
   - K01
+  - K18
   applicability: authority-side
   fidelity: ok
   verification_ready: needs-source-check (quote not stored in file)
@@ -3586,6 +3644,7 @@
   clusters:
   - K01
   - K15
+  - K18
   applicability: authority-side
   fidelity: ok
   verification_ready: needs-source-check (quote not stored in file)
@@ -3597,7 +3656,7 @@
   clusters:
   - K16
   - K08
-  - K05
+  - K18
   applicability: core
   fidelity: narrower
   verification_ready: 'yes'
@@ -3609,7 +3668,7 @@
   clusters:
   - K16
   - K08
-  - K05
+  - K18
   applicability: core
   fidelity: ok
   verification_ready: 'yes'
@@ -3621,6 +3680,7 @@
   clusters:
   - K16
   - K08
+  - K18
   applicability: core
   fidelity: ok
   verification_ready: 'yes'
@@ -3656,7 +3716,7 @@
   clusters:
   - K03
   - K16
-  - K08
+  - K18
   applicability: core
   fidelity: derived-marked
   verification_ready: 'yes'
@@ -3935,6 +3995,7 @@
   clusters:
   - K17
   - K06
+  - K18
   applicability: authority-side
   fidelity: ok
   verification_ready: needs-legal-review
@@ -3959,6 +4020,7 @@
   clusters:
   - K06
   - K17
+  - K18
   applicability: authority-side
   fidelity: ok
   verification_ready: true
@@ -3971,7 +4033,7 @@
   clusters:
   - K06
   - K02
-  - K17
+  - K18
   applicability: wallet-general
   fidelity: broader-than-quote
   verification_ready: needs-source-check
@@ -3985,7 +4047,7 @@
   clusters:
   - K17
   - K06
-  - K01
+  - K18
   applicability: wallet-general
   fidelity: ok
   verification_ready: needs-source-check
@@ -3997,6 +4059,7 @@
   clusters:
   - K17
   - K06
+  - K18
   applicability: authority-side
   fidelity: ok
   verification_ready: true
@@ -4022,7 +4085,7 @@
   clusters:
   - K09
   - K01
-  - K17
+  - K18
   applicability: core
   fidelity: ok
   verification_ready: needs-legal-review
@@ -4036,7 +4099,7 @@
   clusters:
   - K15
   - K06
-  - K08
+  - K18
   applicability: authority-side
   fidelity: ok
   verification_ready: true
@@ -4048,6 +4111,7 @@
   clusters:
   - K17
   - K06
+  - K18
   applicability: wallet-general
   fidelity: ok
   verification_ready: true
@@ -4059,7 +4123,7 @@
   clusters:
   - K17
   - K06
-  - K01
+  - K18
   applicability: wallet-general
   fidelity: broader-than-quote
   verification_ready: needs-source-check
@@ -4073,6 +4137,7 @@
   clusters:
   - K17
   - K06
+  - K18
   applicability: authority-side
   fidelity: ok
   verification_ready: true
@@ -4121,7 +4186,7 @@
   clusters:
   - K01
   - K17
-  - K15
+  - K18
   applicability: authority-side
   fidelity: ok
   verification_ready: needs-legal-review
@@ -4134,7 +4199,7 @@
   clusters:
   - K08
   - K01
-  - K17
+  - K18
   applicability: authority-side
   fidelity: ok
   verification_ready: true
@@ -4182,6 +4247,7 @@
   clusters:
   - K08
   - K04
+  - K18
   applicability: core
   fidelity: ok
   verification_ready: 'yes'
@@ -4193,6 +4259,7 @@
   clusters:
   - K12
   - K08
+  - K18
   applicability: core
   fidelity: ok
   verification_ready: needs-legal-review
@@ -4204,7 +4271,7 @@
   clusters:
   - K12
   - K08
-  - K15
+  - K18
   applicability: authority-side
   fidelity: ok
   verification_ready: 'yes'
@@ -4226,6 +4293,7 @@
   clusters:
   - K08
   - K04
+  - K18
   applicability: wallet-general
   fidelity: ok
   verification_ready: 'yes'
@@ -4237,6 +4305,7 @@
   clusters:
   - K08
   - K04
+  - K18
   applicability: wallet-general
   fidelity: ok
   verification_ready: 'yes'
@@ -4346,7 +4415,7 @@
   clusters:
   - K17
   - K06
-  - K08
+  - K18
   applicability: provider-side
   fidelity: ok
   verification_ready: 'yes'
@@ -4439,6 +4508,7 @@
   clusters:
   - K17
   - K06
+  - K18
   applicability: authority-side
   fidelity: ok
   verification_ready: needs-source-check
@@ -4450,6 +4520,7 @@
   clusters:
   - K17
   - K06
+  - K18
   applicability: authority-side
   fidelity: ok
   verification_ready: 'yes'
@@ -4462,6 +4533,7 @@
   clusters:
   - K17
   - K06
+  - K18
   applicability: authority-side
   fidelity: broader-than-quote
   verification_ready: needs-legal-review
@@ -4590,6 +4662,7 @@
   clusters:
   - K09
   - K06
+  - K18
   applicability: wallet-general
   fidelity: broader-than-quote
   verification_ready: 'yes'
@@ -4603,7 +4676,7 @@
   clusters:
   - K09
   - K06
-  - K05
+  - K18
   applicability: wallet-general
   fidelity: derived-unmarked
   verification_ready: needs-legal-review
@@ -4617,6 +4690,7 @@
   clusters:
   - K09
   - K01
+  - K18
   applicability: wallet-general
   fidelity: ok
   verification_ready: 'yes'
@@ -4629,6 +4703,7 @@
   clusters:
   - K09
   - K10
+  - K18
   applicability: wallet-general
   fidelity: ok
   verification_ready: 'yes'
@@ -4652,7 +4727,7 @@
   clusters:
   - K09
   - K10
-  - K04
+  - K18
   applicability: wallet-general
   fidelity: ok
   verification_ready: needs-legal-review
@@ -4664,7 +4739,7 @@
   clusters:
   - K09
   - K15
-  - K01
+  - K18
   applicability: wallet-general
   fidelity: ok
   verification_ready: 'yes'
@@ -4676,7 +4751,7 @@
   clusters:
   - K16
   - K03
-  - K09
+  - K18
   applicability: wallet-general
   fidelity: derived-unmarked
   verification_ready: needs-legal-review
@@ -4902,7 +4977,7 @@
   clusters:
   - K11
   - K03
-  - K04
+  - K18
   applicability: wallet-general
   fidelity: broader-than-quote
   verification_ready: 'yes'
@@ -4914,6 +4989,7 @@
   clusters:
   - K11
   - K09
+  - K18
   applicability: wallet-general
   fidelity: broader-than-quote
   verification_ready: 'yes'
@@ -4986,7 +5062,7 @@
   clusters:
   - K16
   - K03
-  - K07
+  - K18
   applicability: horizontal
   fidelity: ok
   verification_ready: needs-legal-review
@@ -5008,6 +5084,7 @@
   priority_reason: Generic AI Act transparency, outside wallet core
   clusters:
   - K16
+  - K18
   applicability: horizontal
   fidelity: ok
   verification_ready: 'yes'
@@ -5163,7 +5240,7 @@
   clusters:
   - K17
   - K06
-  - K12
+  - K18
   applicability: core
   fidelity: ok
   verification_ready: needs-source-check
@@ -5275,6 +5352,7 @@
   clusters:
   - K14
   - K11
+  - K18
   applicability: authority-side
   fidelity: broader-than-quote
   verification_ready: needs-source-check
@@ -5417,7 +5495,7 @@
   clusters:
   - K01
   - K09
-  - K15
+  - K18
   applicability: core
   fidelity: ok
   verification_ready: 'yes'
@@ -5429,6 +5507,7 @@
   clusters:
   - K10
   - K09
+  - K18
   applicability: core
   fidelity: ok
   verification_ready: 'yes'
@@ -5556,6 +5635,7 @@
   clusters:
   - K04
   - K09
+  - K18
   applicability: wallet-general
   fidelity: ok
   verification_ready: 'yes'
@@ -5594,7 +5674,7 @@
   clusters:
   - K09
   - K04
-  - K08
+  - K18
   applicability: wallet-general
   fidelity: ok
   verification_ready: 'yes'
@@ -5619,6 +5699,7 @@
   clusters:
   - K09
   - K08
+  - K18
   applicability: wallet-general
   fidelity: ok
   verification_ready: 'yes'
@@ -5655,6 +5736,7 @@
   clusters:
   - K09
   - K08
+  - K18
   applicability: relying-party-side
   fidelity: ok
   verification_ready: 'yes'
@@ -5680,7 +5762,7 @@
   clusters:
   - K16
   - K08
-  - K11
+  - K18
   applicability: core
   fidelity: ok
   verification_ready: 'yes'
@@ -5692,7 +5774,7 @@
   clusters:
   - K16
   - K11
-  - K08
+  - K18
   applicability: core
   fidelity: ok
   verification_ready: 'yes'
@@ -5704,7 +5786,7 @@
   clusters:
   - K16
   - K11
-  - K10
+  - K18
   applicability: core
   fidelity: ok
   verification_ready: 'yes'
@@ -5716,7 +5798,7 @@
   clusters:
   - K16
   - K09
-  - K11
+  - K18
   applicability: core
   fidelity: ok
   verification_ready: 'yes'
@@ -5728,7 +5810,7 @@
   clusters:
   - K16
   - K11
-  - K04
+  - K18
   applicability: wallet-general
   fidelity: ok
   verification_ready: 'yes'
@@ -5740,7 +5822,7 @@
   clusters:
   - K16
   - K03
-  - K11
+  - K18
   applicability: core
   fidelity: derived-unmarked
   verification_ready: 'needs-source-check: step-up elevation not in quote'
@@ -5754,7 +5836,7 @@
   clusters:
   - K16
   - K08
-  - K11
+  - K18
   applicability: core
   fidelity: ok
   verification_ready: 'yes'
@@ -5766,7 +5848,7 @@
   clusters:
   - K16
   - K03
-  - K11
+  - K18
   applicability: core
   fidelity: ok
   verification_ready: 'yes'
@@ -5778,6 +5860,7 @@
   clusters:
   - K16
   - K08
+  - K18
   applicability: core
   fidelity: ok
   verification_ready: 'yes'
@@ -5789,7 +5872,7 @@
   clusters:
   - K16
   - K03
-  - K11
+  - K18
   applicability: core
   fidelity: derived-unmarked
   verification_ready: 'needs-source-check: SHOULD hardened to shall without stated derivation'
@@ -5830,7 +5913,7 @@
   clusters:
   - K11
   - K16
-  - K08
+  - K18
   applicability: core
   fidelity: ok
   verification_ready: 'yes'
@@ -5869,7 +5952,7 @@
   clusters:
   - K02
   - K09
-  - K04
+  - K18
   applicability: wallet-general
   fidelity: ok
   verification_ready: needs-legal-review
@@ -5881,6 +5964,7 @@
   clusters:
   - K09
   - K13
+  - K18
   applicability: wallet-general
   fidelity: ok
   verification_ready: 'yes'
@@ -5930,6 +6014,7 @@
   clusters:
   - K15
   - K09
+  - K18
   applicability: core
   fidelity: ok
   verification_ready: needs-legal-review
@@ -5942,7 +6027,7 @@
   clusters:
   - K09
   - K01
-  - K07
+  - K18
   applicability: wallet-general
   fidelity: ok
   verification_ready: 'yes'
@@ -6014,6 +6099,7 @@
   clusters:
   - K10
   - K09
+  - K18
   applicability: wallet-general
   fidelity: ok
   verification_ready: 'yes'
@@ -6063,6 +6149,7 @@
   clusters:
   - K09
   - K17
+  - K18
   applicability: authority-side
   fidelity: ok
   verification_ready: true
@@ -6074,7 +6161,7 @@
   clusters:
   - K11
   - K10
-  - K08
+  - K18
   applicability: authority-side
   fidelity: broader-than-quote
   verification_ready: needs-source-check
@@ -6197,6 +6284,7 @@
   clusters:
   - K15
   - K12
+  - K18
   applicability: wallet-general
   fidelity: ok
   verification_ready: 'yes'
@@ -6322,6 +6410,7 @@
   clusters:
   - K10
   - K09
+  - K18
   applicability: core
   fidelity: ok
   verification_ready: 'yes'
@@ -6333,6 +6422,7 @@
   clusters:
   - K10
   - K09
+  - K18
   applicability: core
   fidelity: ok
   verification_ready: 'yes'
@@ -6342,6 +6432,7 @@
   priority_reason: Log content detail
   clusters:
   - K10
+  - K18
   applicability: core
   fidelity: ok
   verification_ready: 'yes'
@@ -6352,6 +6443,7 @@
   clusters:
   - K10
   - K11
+  - K18
   applicability: core
   fidelity: ok
   verification_ready: 'yes'
@@ -6364,6 +6456,7 @@
   clusters:
   - K10
   - K12
+  - K18
   applicability: core
   fidelity: ok
   verification_ready: 'yes'
@@ -6374,6 +6467,7 @@
   clusters:
   - K10
   - K09
+  - K18
   applicability: core
   fidelity: ok
   verification_ready: 'yes'
@@ -6386,7 +6480,7 @@
   clusters:
   - K15
   - K01
-  - K04
+  - K18
   applicability: core
   fidelity: broader-than-quote
   verification_ready: needs-source-check
@@ -6400,7 +6494,7 @@
   clusters:
   - K12
   - K11
-  - K08
+  - K18
   applicability: authority-side
   fidelity: narrower
   verification_ready: needs-legal-review
@@ -6414,6 +6508,7 @@
   clusters:
   - K03
   - K09
+  - K18
   applicability: core
   fidelity: ok
   verification_ready: 'yes'
@@ -6690,7 +6785,7 @@
   clusters:
   - K08
   - K09
-  - K11
+  - K18
   applicability: wallet-general
   fidelity: ok
   verification_ready: 'yes'
@@ -6716,6 +6811,7 @@
   clusters:
   - K09
   - K08
+  - K18
   applicability: wallet-general
   fidelity: ok
   verification_ready: 'yes'
@@ -6738,7 +6834,7 @@
   clusters:
   - K09
   - K07
-  - K04
+  - K18
   applicability: core
   fidelity: derived-marked
   verification_ready: needs-legal-review
@@ -6798,6 +6894,7 @@
   clusters:
   - K04
   - K15
+  - K18
   applicability: wallet-general
   fidelity: ok
   verification_ready: needs-source-check
@@ -6809,7 +6906,7 @@
   clusters:
   - K04
   - K02
-  - K13
+  - K18
   applicability: wallet-general
   fidelity: derived-marked
   verification_ready: needs-legal-review
@@ -6844,7 +6941,7 @@
   clusters:
   - K09
   - K13
-  - K15
+  - K18
   applicability: core
   fidelity: ok
   verification_ready: needs-source-check
@@ -7136,6 +7233,7 @@
   clusters:
   - K07
   - K13
+  - K18
   applicability: core
   fidelity: ok
   verification_ready: 'yes'
@@ -7147,6 +7245,7 @@
   clusters:
   - K12
   - K11
+  - K18
   applicability: authority-side
   fidelity: ok
   verification_ready: needs-legal-review
@@ -7315,6 +7414,7 @@
   clusters:
   - K04
   - K15
+  - K18
   applicability: wallet-general
   fidelity: derived-marked
   verification_ready: needs-legal-review
@@ -7337,6 +7437,7 @@
   clusters:
   - K15
   - K12
+  - K18
   applicability: authority-side
   fidelity: derived-unmarked
   verification_ready: needs-source-check
@@ -7517,7 +7618,7 @@
   clusters:
   - K03
   - K10
-  - K17
+  - K18
   applicability: core
   fidelity: ok
   verification_ready: needs-legal-review
@@ -8120,6 +8221,7 @@
   clusters:
   - K03
   - K16
+  - K18
   applicability: wallet-general
   fidelity: ok
   verification_ready: 'yes'
@@ -8143,7 +8245,7 @@
   clusters:
   - K07
   - K03
-  - K16
+  - K18
   applicability: wallet-general
   fidelity: ok
   verification_ready: needs-source-check
@@ -8157,7 +8259,7 @@
   clusters:
   - K07
   - K03
-  - K16
+  - K18
   applicability: core
   fidelity: derived-marked
   verification_ready: needs-legal-review
@@ -8209,7 +8311,7 @@
   clusters:
   - K04
   - K02
-  - K17
+  - K18
   applicability: core
   fidelity: broader-than-quote
   verification_ready: needs-source-check

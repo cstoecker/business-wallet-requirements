@@ -4,7 +4,7 @@ Status: concept for discussion, not yet built. Audience: Industry 4.0 (Plattform
 
 ## What the stakeholders need to decide
 
-Each group meets the European Business Wallet (EBW) from a different side. The brief should show the same 8 decisions through three lenses.
+Each group meets the European Business Wallet (EBW) from a different side. The brief should show the same 9 themes through three lenses.
 
 | Group | Main interest | Typical question |
 |---|---|---|
@@ -22,9 +22,9 @@ Each group meets the European Business Wallet (EBW) from a different side. The b
 
 The selection is generated from the review data (`_data/review/requirement-review.yml`) by a script, so it can be rerun when the catalogue changes.
 
-## Grouping: 8 decision themes instead of 17 clusters
+## Grouping: 9 decision themes instead of 18 clusters
 
-17 clusters are too many for a 90 minute session. Group them by the decision they drive.
+18 clusters are too many for a 90 minute session. Group them by the decision they drive.
 
 | Theme | Clusters | Decision pages | Question for the room |
 |---|---|---|---|
@@ -36,8 +36,9 @@ The selection is generated from the review data (`_data/review/requirement-revie
 | 6. Lifecycle and evidence | K07, K10 | DEC-06, DEC-09 | Revocation, suspension, logging, audit without exposing employees |
 | 7. Protocols and delivery | K08, K12 | DEC-07 | OID4VCI, OID4VP, DSP, delivery: what must interoperate? |
 | 8. Privacy and adoption | K09, K15 | DEC-08 | Minimisation, controller roles, acceptance across ecosystems |
+| 9. Planes and evidence graph | K18 (with K01, K10, K16) | DEC-12 | Where are policies decided and enforced, how do data and evidence move, and is one access-controlled linked-data evidence graph with open-world semantics the shared layer for policy, register, product passport and AI processes? |
 
-K11 (security) and K13 (governance) are shown as constraints on all themes, not as separate topics.
+Theme 9 is the integrating one: K18 (183 requirements, 45 at P1) tags the control-plane and data-plane requirements and the evidence graph concept, and links to themes 2, 3, 6 and 7. K11 (security) and K13 (governance) are shown as constraints on all themes, not as separate topics.
 
 ## Format of the brief
 
@@ -55,7 +56,7 @@ Plus a cover page (scope, how to read status labels) and a one-page map from the
 ## Output forms
 
 - A page on the site, `architecture/brief/`, generated from the data, printable as PDF.
-- A short slide deck (12 to 15 slides: cover, method, 8 themes, conflicts, next steps) to use in the session. The existing presentation plan (`docs/06-presentation-plan.md`) is the larger deck; this brief is a subset.
+- A short slide deck (12 to 15 slides: cover, method, 9 themes, conflicts, next steps) to use in the session. The existing presentation plan (`docs/06-presentation-plan.md`) is the larger deck; this brief is a subset.
 - A feedback sheet per theme (agree, disagree, missing) that feeds the existing review loop (`scripts/import_review_feedback.py`).
 
 ## Risks and how to handle them
@@ -68,6 +69,6 @@ Plus a cover page (scope, how to read status labels) and a one-page map from the
 
 ## Open points for you
 
-- Which of the three groups should see which themes (all eight, or a subset per group)?
+- Which of the three groups should see which themes (all nine, or a subset per group)?
 - Session length and language (English assumed).
 - Whether the brief should show the Spherity position (recommended option per theme) or stay neutral until after the session. The decision pages currently hold a preliminary reading only.

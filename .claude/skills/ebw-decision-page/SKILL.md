@@ -5,7 +5,7 @@ description: Create or update an architecture decision page (DEC-nn) for the Eur
 
 # Architecture decision page
 
-Chain: requirement -> cluster (K01 to K17) -> decision (DEC-nn) -> pattern -> building block. Register in `_data/graph/decisions.yml` (id, title, question, clusters, status planned or draft, page). A cluster becomes a decision when it has several P1 requirements and at least two options that differ on criteria that matter; otherwise it is a constraint set. Method text: `/architecture/decisions/` and `docs/13-from-requirements-to-decisions.md`.
+Chain: requirement -> cluster (K01 to K18) -> decision (DEC-nn) -> pattern -> building block. Register in `_data/graph/decisions.yml` (id, title, question, clusters, status planned or draft, page). A cluster becomes a decision when it has several P1 requirements and at least two options that differ on criteria that matter; otherwise it is a constraint set. Method text: `/architecture/decisions/` and `docs/13-from-requirements-to-decisions.md`.
 
 ## Research first
 

@@ -1,4 +1,3 @@
-# Cluster tags added after the main review passes (kept here so scripts/merge_review.py can re-apply them).
 - id: EBW-INT-005
   add: K17
   reason: 'Minimum content of owner identification data: official name plus unique identifier (Art 8(5))'
@@ -122,3 +121,552 @@
 - id: EBW-GOV-005
   add: K17
   reason: Supervisory body can revoke provider inclusion, relevant to provider trust for identity issuance
+- id: EBW-AIF-002
+  add: K18
+  reason: 'Control plane: policy decision, authorisation or enforcement'
+- id: EBW-AIF-018
+  add: K18
+  reason: 'Control plane: policy decision, authorisation or enforcement'
+- id: EBW-AIF-019
+  add: K18
+  reason: 'Control plane: policy decision, authorisation or enforcement'
+- id: EBW-AIF-020
+  add: K18
+  reason: 'Control plane: policy decision, authorisation or enforcement'
+- id: EBW-AIF-021
+  add: K18
+  reason: 'Control plane: policy decision, authorisation or enforcement'
+- id: EBW-AIF-022
+  add: K18
+  reason: 'Control plane: policy decision, authorisation or enforcement'
+- id: EBW-AIF-023
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-AIF-024
+  add: K18
+  reason: 'Control plane: policy decision, authorisation or enforcement'
+- id: EBW-AIF-025
+  add: K18
+  reason: 'Control plane: policy decision, authorisation or enforcement'
+- id: EBW-AIF-028
+  add: K18
+  reason: 'Control plane: policy decision, authorisation or enforcement'
+- id: EBW-AIF-047
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-AIF-048
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-AIF-053
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-AIF-055
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-AIF-056
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-AIF-057
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-AIF-059
+  add: K18
+  reason: 'Control plane: policy decision, authorisation or enforcement'
+- id: EBW-AIF-062
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-AIF-063
+  add: K18
+  reason: 'Control plane: policy decision, authorisation or enforcement'
+- id: EBW-BIZ-001
+  add: K18
+  reason: 'Control plane: policy decision, authorisation or enforcement'
+- id: EBW-CON-005
+  add: K18
+  reason: 'Control plane: policy decision, authorisation or enforcement'
+- id: EBW-DAT-001
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-DAT-002
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-DAT-005
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-DAT-006
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-DAT-007
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-DAT-008
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-DAT-009
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-DAT-010
+  add: K18
+  reason: 'Control plane: policy decision, authorisation or enforcement'
+- id: EBW-DAT-011
+  add: K18
+  reason: 'Control plane: policy decision, authorisation or enforcement'
+- id: EBW-DAT-012
+  add: K18
+  reason: 'Control plane: policy decision, authorisation or enforcement'
+- id: EBW-DAT-022
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-DAT-023
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-DAT-026
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-DAT-041
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-DOM-001
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-DOM-003
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-DOM-005
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-DOM-007
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-DOM-008
+  add: K18
+  reason: 'Control plane: policy decision, authorisation or enforcement'
+- id: EBW-DOM-009
+  add: K18
+  reason: 'Control plane: policy decision, authorisation or enforcement'
+- id: EBW-DOM-013
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-DOM-015
+  add: K18
+  reason: 'Control plane: policy decision, authorisation or enforcement'
+- id: EBW-DOM-017
+  add: K18
+  reason: 'Control plane: policy decision, authorisation or enforcement'
+- id: EBW-DOM-018
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-DOM-020
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-DOM-021
+  add: K18
+  reason: 'Control plane: policy decision, authorisation or enforcement'
+- id: EBW-DOM-022
+  add: K18
+  reason: 'Control plane: policy decision, authorisation or enforcement'
+- id: EBW-FUN-001
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-FUN-003
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-FUN-004
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-FUN-005
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-FUN-006
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-FUN-007
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-FUN-008
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-FUN-009
+  add: K18
+  reason: 'Control plane: policy decision, authorisation or enforcement'
+- id: EBW-FUN-010
+  add: K18
+  reason: 'Control plane: policy decision, authorisation or enforcement'
+- id: EBW-FUN-011
+  add: K18
+  reason: 'Control plane: policy decision, authorisation or enforcement'
+- id: EBW-FUN-012
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-FUN-014
+  add: K18
+  reason: 'Control plane: policy decision, authorisation or enforcement'
+- id: EBW-FUN-015
+  add: K18
+  reason: 'Control plane: policy decision, authorisation or enforcement'
+- id: EBW-FUN-017
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-FUN-024
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-FUN-025
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-FUN-026
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-FUN-027
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-FUN-028
+  add: K18
+  reason: 'Control plane: policy decision, authorisation or enforcement'
+- id: EBW-FUN-030
+  add: K18
+  reason: 'Control plane: policy decision, authorisation or enforcement'
+- id: EBW-FUN-031
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-FUN-032
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-FUN-033
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-FUN-034
+  add: K18
+  reason: 'Control plane: policy decision, authorisation or enforcement'
+- id: EBW-FUN-035
+  add: K18
+  reason: 'Control plane: policy decision, authorisation or enforcement'
+- id: EBW-FUN-036
+  add: K18
+  reason: 'Control plane: policy decision, authorisation or enforcement'
+- id: EBW-FUN-037
+  add: K18
+  reason: 'Control plane: policy decision, authorisation or enforcement'
+- id: EBW-FUN-042
+  add: K18
+  reason: 'Control plane: policy decision, authorisation or enforcement'
+- id: EBW-FUN-043
+  add: K18
+  reason: 'Control plane: policy decision, authorisation or enforcement'
+- id: EBW-FUN-046
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-FUN-047
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-FUN-048
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-FUN-049
+  add: K18
+  reason: 'Control plane: policy decision, authorisation or enforcement'
+- id: EBW-FUN-050
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-FUN-051
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-FUN-055
+  add: K18
+  reason: 'Control plane: policy decision, authorisation or enforcement'
+- id: EBW-FUN-057
+  add: K18
+  reason: 'Control plane: policy decision, authorisation or enforcement'
+- id: EBW-FUN-058
+  add: K18
+  reason: 'Control plane: policy decision, authorisation or enforcement'
+- id: EBW-FUN-059
+  add: K18
+  reason: 'Control plane: policy decision, authorisation or enforcement'
+- id: EBW-INT-002
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-INT-003
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-INT-005
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-INT-006
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-INT-007
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-INT-008
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-INT-015
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-INT-016
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-INT-020
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-INT-021
+  add: K18
+  reason: 'Control plane: policy decision, authorisation or enforcement'
+- id: EBW-INT-022
+  add: K18
+  reason: 'Control plane: policy decision, authorisation or enforcement'
+- id: EBW-INT-023
+  add: K18
+  reason: 'Control plane: policy decision, authorisation or enforcement'
+- id: EBW-INT-026
+  add: K18
+  reason: 'Control plane: policy decision, authorisation or enforcement'
+- id: EBW-INT-050
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-INT-052
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-INT-053
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-INT-054
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-INT-055
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-INT-057
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-INT-058
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-INT-059
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-INT-060
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-INT-061
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-INT-065
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-INT-066
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-INT-070
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-INT-071
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-INT-072
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-INT-074
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-INT-075
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-INT-084
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-INT-092
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-INT-093
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-INT-094
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-LEG-008
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-LEG-009
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-LEG-010
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-LEG-011
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-LEG-013
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-LEG-014
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-LEG-015
+  add: K18
+  reason: 'Control plane: policy decision, authorisation or enforcement'
+- id: EBW-LEG-034
+  add: K18
+  reason: Plane and evidence graph concepts
+- id: EBW-LEG-035
+  add: K18
+  reason: Plane and evidence graph concepts
+- id: EBW-LEG-041
+  add: K18
+  reason: 'Control plane: policy decision, authorisation or enforcement'
+- id: EBW-LEG-043
+  add: K18
+  reason: 'Control plane: policy decision, authorisation or enforcement'
+- id: EBW-LEG-056
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-LEG-065
+  add: K18
+  reason: 'Control plane: policy decision, authorisation or enforcement'
+- id: EBW-NFR-001
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-NFR-002
+  add: K18
+  reason: Plane and evidence graph concepts
+- id: EBW-NFR-012
+  add: K18
+  reason: 'Control plane: policy decision, authorisation or enforcement'
+- id: EBW-NFR-015
+  add: K18
+  reason: 'Control plane: policy decision, authorisation or enforcement'
+- id: EBW-NFR-017
+  add: K18
+  reason: 'Control plane: policy decision, authorisation or enforcement'
+- id: EBW-NFR-020
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-NFR-022
+  add: K18
+  reason: 'Control plane: policy decision, authorisation or enforcement'
+- id: EBW-NFR-023
+  add: K18
+  reason: 'Control plane: policy decision, authorisation or enforcement'
+- id: EBW-NFR-024
+  add: K18
+  reason: 'Control plane: policy decision, authorisation or enforcement'
+- id: EBW-NFR-025
+  add: K18
+  reason: 'Control plane: policy decision, authorisation or enforcement'
+- id: EBW-NFR-026
+  add: K18
+  reason: 'Control plane: policy decision, authorisation or enforcement'
+- id: EBW-NFR-027
+  add: K18
+  reason: 'Control plane: policy decision, authorisation or enforcement'
+- id: EBW-NFR-028
+  add: K18
+  reason: 'Control plane: policy decision, authorisation or enforcement'
+- id: EBW-NFR-029
+  add: K18
+  reason: 'Control plane: policy decision, authorisation or enforcement'
+- id: EBW-NFR-030
+  add: K18
+  reason: 'Control plane: policy decision, authorisation or enforcement'
+- id: EBW-NFR-031
+  add: K18
+  reason: 'Control plane: policy decision, authorisation or enforcement'
+- id: EBW-NFR-034
+  add: K18
+  reason: 'Control plane: policy decision, authorisation or enforcement'
+- id: EBW-NFR-037
+  add: K18
+  reason: 'Control plane: policy decision, authorisation or enforcement'
+- id: EBW-NFR-038
+  add: K18
+  reason: 'Control plane: policy decision, authorisation or enforcement'
+- id: EBW-NFR-042
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-NFR-043
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-NFR-049
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-NFR-053
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-NFR-054
+  add: K18
+  reason: 'Control plane: policy decision, authorisation or enforcement'
+- id: EBW-NFR-065
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-NFR-076
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-NFR-077
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-NFR-078
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-NFR-079
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-NFR-080
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-NFR-081
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-NFR-082
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-NFR-083
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-NFR-084
+  add: K18
+  reason: 'Control plane: policy decision, authorisation or enforcement'
+- id: EBW-NFR-109
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-NFR-111
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-NFR-113
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-NFR-118
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-NFR-119
+  add: K18
+  reason: 'Control plane: policy decision, authorisation or enforcement'
+- id: EBW-OPS-002
+  add: K18
+  reason: Plane and evidence graph concepts
+- id: EBW-OPS-026
+  add: K18
+  reason: 'Control plane: policy decision, authorisation or enforcement'
+- id: EBW-OPS-027
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-OPS-042
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-TRN-001
+  add: K18
+  reason: 'Data plane: movement and form of credentials, evidence and data'
+- id: EBW-TRU-012
+  add: K18
+  reason: 'Control plane: policy decision, authorisation or enforcement'
+- id: EBW-TRU-063
+  add: K18
+  reason: 'Control plane: policy decision, authorisation or enforcement'
+- id: EBW-TRU-065
+  add: K18
+  reason: 'Control plane: policy decision, authorisation or enforcement'
+- id: EBW-TRU-066
+  add: K18
+  reason: 'Control plane: policy decision, authorisation or enforcement'
+- id: EBW-TRU-070
+  add: K18
+  reason: 'Control plane: policy decision, authorisation or enforcement'

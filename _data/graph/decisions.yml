@@ -65,3 +65,8 @@
   clusters: [K17, K06, K14]
   status: draft
   page: /architecture/decisions/dec-11/
+- id: DEC-12
+  title: "Control plane, data plane and the verifiable evidence graph"
+  question: "Where are policies decided and enforced, how do credentials, evidence and data move, and should evidence be expressed as one access-controlled linked-data graph with open-world semantics that serves policy, register, product passport and AI processes?"
+  clusters: [K18, K01, K10, K16]
+  status: planned
