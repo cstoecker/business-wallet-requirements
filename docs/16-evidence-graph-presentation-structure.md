@@ -51,6 +51,27 @@ A derivation chain on one slide, then one slide per level. Each level cites what
 8. Federation: several trust domains and issuers without a central authority.
 9. Durability and exit: verifiable after the provider or the certificate is gone; portable between providers.
 
+## Part B2. Semantic richness as a first-class requirement (3 slides)
+
+Semantic richness is not decoration. It decides whether evidence from different sectors and jurisdictions can be combined without bilateral mapping.
+
+1. **What it means.** Every statement uses terms with a resolvable identifier and a published definition (class, property, unit, code list), so a machine in another sector can interpret it. New facts can be added without breaking old ones (open world).
+2. **What it needs.** Shared core vocabularies, sector vocabularies mapped to them, validation shapes that state what a given process expects (closed-world checks on top of an open model), and versioned, citable vocabularies.
+3. **What it excludes.** Vocabularies that cannot be used without a licence fee or contract are not a base. They can be mapped to open identifiers; the mapping itself is evidence. Research status of licences: see the claims list below.
+
+Link to the catalogue: cluster K01 (formats and semantics) and decision DEC-01. The EU wallet instruments carry meaning through attribute catalogues and rulebooks, not through linked data; the gap between the two is a decision for the room.
+
+## Part B3. Authority model: who may act for whom (4 slides)
+
+The graph has actors as well as facts. Four kinds of actor act for an organisation: the company itself, employees, machines (devices, plants, services) and AI agents. The same questions apply to all four, and the answers are statements in the graph.
+
+1. **Representation and authority.** Who is the legal person, who represents it under company law, and how is that evidenced (register entry, company certificate, power of attorney). Link: DEC-13, DEC-02, K03.
+2. **Mandates and delegation.** A mandate is a verifiable statement: grantor, grantee, scope, limits, validity, onward delegation allowed or not. Chains of delegation are paths in the graph and are checkable end to end.
+3. **Authorisation as policy.** Who may write or read which element, on which condition. Roles in the wallet, mandate credentials and protocol-level tokens are alternative or combined carriers of the same authority.
+4. **Actors compared.** Employee, machine and agent differ in how authority starts (appointment, registration, deployment), how it is limited (role, certificate, scope) and how it ends (leaving, decommissioning, shutdown). Attribution of every act to the owning organisation is a shared requirement.
+
+Link to the catalogue: K03 (about 140 requirements mention mandates and delegation), K16 for agents and the DEC-13 research for machines. Known gap: no EBW text defines authority for machines.
+
 ## Part C. Risk scoring as the consumer of the graph (3 slides)
 
 1. **What scoring needs.** Evidence from several trust domains, each with its issuer, its assurance level and its provenance chain.
@@ -60,6 +81,8 @@ A derivation chain on one slide, then one slide per level. Each level cites what
 Open point: the catalogue has no requirement on risk scoring yet. It is a gap to fill.
 
 ## Part D. From abstract to concrete requirements (4 slides)
+
+This part includes theme 10 of the stakeholder brief (planes and evidence graph, decision DEC-12) as the home of the pattern in the catalogue.
 
 1. **What the catalogue already covers.** Control plane and data plane requirements (cluster K18, 183 requirements, 45 at P1), mandates (K03), evidence and audit (K10), formats (K01), AI-first (K16), cross-jurisdiction identity (K17).
 2. **What it does not cover.** No P1 requirement on a graph model, on open-world semantics, on semantic profiles, on scale, or on risk scoring.
@@ -116,7 +139,7 @@ Not "we have a hammer", but a repeatable method:
 1. **Decisions we ask for.** Confirm the pattern, the nine criteria and their weights, the scope of the evidence graph (EBW only or the wider ecosystem layer).
 2. **Next steps.** Research of the new requirement families, scoring of options with sources, DEC-12, concept articles on the control plane, the data plane and the evidence graph.
 
-Total: about 36 slides for a half-day session, or Parts A, B, G and I (about 17 slides) for 90 minutes.
+Total: about 43 slides for a half-day session, or Parts A, B, B3, G and I (about 22 slides) for 90 minutes.
 
 ## Claims that need support before the talk
 
