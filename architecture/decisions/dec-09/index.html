@@ -1,0 +1,874 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+  <link rel="stylesheet" href="/business-wallet-requirements/assets/css/just-the-docs-default.css">
+
+  <link rel="stylesheet" href="/business-wallet-requirements/assets/css/just-the-docs-head-nav.css" id="jtd-head-nav-stylesheet">
+
+  <style id="jtd-nav-activation">
+  
+
+    .site-nav > ul.nav-list:first-child > li > a,
+    .site-nav > ul.nav-list:first-child > li > ul > li > a,
+    
+    .site-nav > ul.nav-list:first-child > li > ul > li > ul > li:not(:nth-child(8)) > a,
+    .site-nav > ul.nav-list:first-child > li > ul > li > ul > li > ul > li a {
+      background-image: none;
+    }
+
+    .site-nav > ul.nav-list:not(:first-child) a,
+    .site-nav li.external a {
+      background-image: none;
+    }
+
+    .site-nav > ul.nav-list:first-child > li:nth-child(6) > ul > li:nth-child(1) > ul > li:nth-child(8) > a {
+      font-weight: 600;
+      text-decoration: none;
+    }.site-nav > ul.nav-list:first-child > li:nth-child(6) > button svg,
+    .site-nav > ul.nav-list:first-child > li:nth-child(6) > ul > li:nth-child(1) > button svg,
+    .site-nav > ul.nav-list:first-child > li:nth-child(6) > ul > li:nth-child(1) > ul > li:nth-child(8) > button svg {
+      transform: rotate(-90deg);
+    }.site-nav > ul.nav-list:first-child > li.nav-list-item:nth-child(6) > ul.nav-list,
+    .site-nav > ul.nav-list:first-child > li.nav-list-item:nth-child(6) > ul.nav-list > li.nav-list-item:nth-child(1) > ul.nav-list,
+    .site-nav > ul.nav-list:first-child > li.nav-list-item:nth-child(6) > ul.nav-list > li.nav-list-item:nth-child(1) > ul.nav-list > li.nav-list-item:nth-child(8) > ul.nav-list {
+      display: block;
+    }
+  </style>
+
+  
+
+  
+    <script src="/business-wallet-requirements/assets/js/vendor/lunr.min.js"></script>
+  
+
+  <script src="/business-wallet-requirements/assets/js/just-the-docs.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="icon" type="image/svg+xml" href="/business-wallet-requirements/assets/images/logos/spherity-s-mark.svg">
+
+  <title>DEC-09 Evidence, logging and audit | European Business Wallet Requirements</title>
+<meta name="description" content="What is logged, by whom, with which integrity, retention and access rules, so that actions in a European Business Wallet are attributable and auditable without exposing employees unnecessarily? Facts from the sources, decision criteria, three options and the conditions under which each holds."><meta name="keywords" content="logging, audit trail, evidence, retention, integrity, time stamp, registered delivery, preservation, transparency log, European Business Wallet">
+<meta name="author" content="Spherity GmbH"><meta name="robots" content="noindex, follow">
+<meta name="theme-color" content="#023852">
+<link rel="canonical" href="https://cstoecker.github.io/business-wallet-requirements/architecture/decisions/dec-09/">
+<link rel="alternate" type="text/plain" href="https://cstoecker.github.io/business-wallet-requirements/llms.txt" title="llms.txt">
+<link rel="sitemap" type="application/xml" href="https://cstoecker.github.io/business-wallet-requirements/sitemap.xml">
+<meta property="og:site_name" content="European Business Wallet Requirements">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="DEC-09 Evidence, logging and audit">
+<meta property="og:description" content="What is logged, by whom, with which integrity, retention and access rules, so that actions in a European Business Wallet are attributable and auditable without exposing employees unnecessarily? Facts from the sources, decision criteria, three options and the conditions under which each holds.">
+<meta property="og:url" content="https://cstoecker.github.io/business-wallet-requirements/architecture/decisions/dec-09/">
+<meta property="og:image" content="https://cstoecker.github.io/business-wallet-requirements/assets/figures/concept-model-planes.png"><meta property="article:modified_time" content="2026-10-03">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="DEC-09 Evidence, logging and audit">
+<meta name="twitter:description" content="What is logged, by whom, with which integrity, retention and access rules, so that actions in a European Business Wallet are attributable and auditable without exposing employees unnecessarily? Facts from the sources, decision criteria, three options and the conditions under which each holds.">
+<meta name="twitter:image" content="https://cstoecker.github.io/business-wallet-requirements/assets/figures/concept-model-planes.png">
+
+
+  <script>try{if(localStorage.getItem("ebw-nav")==="collapsed"&&window.matchMedia("(min-width: 50rem)").matches){document.documentElement.classList.add("nav-collapsed")}}catch(e){}</script><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://cstoecker.github.io/business-wallet-requirements/#publisher","name":"Spherity GmbH","url":"https://www.spherity.com","email":"info@spherity.com","logo":{"@type":"ImageObject","url":"https://cstoecker.github.io/business-wallet-requirements/assets/images/logos/spherity-s-mark.svg","width":372,"height":372}},{"@type":"WebSite","@id":"https://cstoecker.github.io/business-wallet-requirements/#website","url":"https://cstoecker.github.io/business-wallet-requirements/","name":"European Business Wallet Requirements","description":"Open, traceable requirements for European Business Wallets and trust infrastructure, from law and standards to conformance checks and industry scenarios.","inLanguage":"en","publisher":{"@id":"https://cstoecker.github.io/business-wallet-requirements/#publisher"},"license":"https://creativecommons.org/licenses/by/4.0/"},{"@type":"TechArticle","@id":"https://cstoecker.github.io/business-wallet-requirements/architecture/decisions/dec-09/#page","url":"https://cstoecker.github.io/business-wallet-requirements/architecture/decisions/dec-09/","name":"DEC-09 Evidence, logging and audit","headline":"DEC-09 Evidence, logging and audit","description":"What is logged, by whom, with which integrity, retention and access rules, so that actions in a European Business Wallet are attributable and auditable without exposing employees unnecessarily? Facts from the sources, decision criteria, three options and the conditions under which each holds.","inLanguage":"en","isPartOf":{"@id":"https://cstoecker.github.io/business-wallet-requirements/#website"},"publisher":{"@id":"https://cstoecker.github.io/business-wallet-requirements/#publisher"},"primaryImageOfPage":{"@type":"ImageObject","url":"https://cstoecker.github.io/business-wallet-requirements/assets/figures/concept-model-planes.png"},"keywords":"logging, audit trail, evidence, retention, integrity, time stamp, registered delivery, preservation, transparency log, European Business Wallet","dateModified":"2026-10-03","license":"https://creativecommons.org/licenses/by/4.0/"},{"@type":"BreadcrumbList","@id":"https://cstoecker.github.io/business-wallet-requirements/architecture/decisions/dec-09/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://cstoecker.github.io/business-wallet-requirements/"},{"@type":"ListItem","position":2,"name":"Architecture","item":"https://cstoecker.github.io/business-wallet-requirements/architecture/"},{"@type":"ListItem","position":3,"name":"Architecture decisions","item":"https://cstoecker.github.io/business-wallet-requirements/architecture/decisions/"},{"@type":"ListItem","position":4,"name":"DEC-09 Evidence, logging and audit","item":"https://cstoecker.github.io/business-wallet-requirements/architecture/decisions/dec-09/"}]}]}</script>
+
+
+</head>
+
+<body>
+  <a class="skip-to-main" href="#main-content">Skip to main content</a>
+  <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+  <symbol id="svg-link" viewBox="0 0 24 24">
+  <title>Link</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link">
+    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+  </svg>
+</symbol>
+
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+  <title>Menu</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
+    <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>
+  </svg>
+</symbol>
+
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+  <title>Expand</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+    <polyline points="9 18 15 12 9 6"></polyline>
+  </svg>
+</symbol>
+
+  <!-- Feather. MIT License: https://github.com/feathericons/feather/blob/master/LICENSE -->
+<symbol id="svg-external-link" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link">
+  <title id="svg-external-link-title">(external link)</title>
+  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line>
+</symbol>
+
+  
+    <symbol id="svg-doc" viewBox="0 0 24 24">
+  <title>Document</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file">
+    <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline>
+  </svg>
+</symbol>
+
+    <symbol id="svg-search" viewBox="0 0 24 24">
+  <title>Search</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
+    <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+  </svg>
+</symbol>
+
+  
+  
+    <!-- Bootstrap Icons. MIT License: https://github.com/twbs/icons/blob/main/LICENSE.md -->
+<symbol id="svg-copy" viewBox="0 0 16 16">
+  <title>Copy</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+  </svg>
+</symbol>
+<symbol id="svg-copied" viewBox="0 0 16 16">
+  <title>Copied</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-check-fill" viewBox="0 0 16 16">
+    <path d="M6.5 0A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3Zm3 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3Z"/>
+    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1A2.5 2.5 0 0 1 9.5 5h-3A2.5 2.5 0 0 1 4 2.5v-1Zm6.854 7.354-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708.708Z"/>
+  </svg>
+</symbol>
+
+  
+</svg>
+
+  
+    <header class="side-bar">
+  <div class="site-header">
+    <a href="/business-wallet-requirements/" class="site-title lh-tight">
+  <div class="site-logo" role="img" aria-label="European Business Wallet Requirements"></div>
+
+</a>
+    <button id="menu-button" class="site-button btn-reset" aria-label="Menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><use xlink:href="#svg-menu"></use></svg>
+    </button>
+  </div>
+
+  <nav aria-label="Main" id="site-nav" class="site-nav">
+  
+  
+    <ul class="nav-list"><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="Start here submenu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+      </button><a href="/business-wallet-requirements/" class="nav-list-link">Start here</a><ul class="nav-list"><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="Concepts submenu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+      </button><a href="/business-wallet-requirements/concepts/" class="nav-list-link">Concepts</a><ul class="nav-list"><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/ai-safety/" class="nav-list-link">AI safety</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/aisp/" class="nav-list-link">AISP</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/evidence-graph/" class="nav-list-link">Access-controlled verifiable evidence graph</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/agent-mandate/" class="nav-list-link">Agent mandate</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/authentic-sources-and-registries/" class="nav-list-link">Authentic sources and registries</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/authority-access/" class="nav-list-link">Authority access</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/b2g-registry-obligations/" class="nav-list-link">B2G registry obligations</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/b2g-reporting/" class="nav-list-link">B2G reporting</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/control-plane-policy-engine/" class="nav-list-link">Control plane and policy engine</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/cross-sector-credential-use/" class="nav-list-link">Cross-sector credential use</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/crypto-agility-and-pqc/" class="nav-list-link">Crypto-agility and post-quantum readiness</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/dsp-dcp-integration/" class="nav-list-link">DSP and DCP integration</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/data-plane/" class="nav-list-link">Data plane</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/ebw-dpp-integration/" class="nav-list-link">EBW and DPP integration</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/ebw-eudiw-interaction/" class="nav-list-link">EBW and EUDI Wallet interaction</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/knowledge-graph/" class="nav-list-link">Knowledge graph</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/legal-person-identity/" class="nav-list-link">Legal person identity and EBWOID</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/levels-of-assurance/" class="nav-list-link">Levels of assurance</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/mandate-and-power-of-representation/" class="nav-list-link">Mandate and power of representation</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/multi-trust-domains/" class="nav-list-link">Multi-trust domains</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/qualified-trust-services/" class="nav-list-link">Qualified trust services (signature, seal, delivery)</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/revocation-and-status/" class="nav-list-link">Revocation and status</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/selective-disclosure-and-unlinkability/" class="nav-list-link">Selective disclosure and unlinkability</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/trust-list/" class="nav-list-link">Trust list</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/trust-list-discovery/" class="nav-list-link">Trust list discovery</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/trust-plane/" class="nav-list-link">Trust plane</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/trusted-ai/" class="nav-list-link">Trusted AI</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/wallet-connector-binding/" class="nav-list-link">Wallet and data-space connector binding</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/wallet-unit-attestation/" class="nav-list-link">Wallet unit attestation and lifecycle</a></li></ul></li><li class="nav-list-item"><a href="/business-wallet-requirements/research/" class="nav-list-link">Research and reading</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/changelog/" class="nav-list-link">What changed</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/downloads/" class="nav-list-link">Downloads</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/about/" class="nav-list-link">About</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/figures/" class="nav-list-link">Figure gallery</a></li></ul></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="Requirements submenu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+      </button><a href="/business-wallet-requirements/requirements/" class="nav-list-link">Requirements</a><ul class="nav-list"><li class="nav-list-item"><a href="/business-wallet-requirements/requirements/methodology/" class="nav-list-link">Methodology</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/requirements/review/" class="nav-list-link">Review list</a></li></ul></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="Perspectives submenu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+      </button><a href="/business-wallet-requirements/perspectives/" class="nav-list-link">Perspectives</a><ul class="nav-list"><li class="nav-list-item"><a href="/business-wallet-requirements/perspectives/use-cases/" class="nav-list-link">Use cases</a></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="Business cases submenu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+      </button><a href="/business-wallet-requirements/perspectives/business-cases/" class="nav-list-link">Business cases</a><ul class="nav-list"><li class="nav-list-item"><a href="/business-wallet-requirements/perspectives/business-cases/macro/" class="nav-list-link">Macroeconomic case</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/perspectives/business-cases/ecosystem/" class="nav-list-link">Ecosystem case</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/perspectives/business-cases/company/" class="nav-list-link">Company case</a></li></ul></li></ul></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="Legal & compliance submenu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+      </button><a href="/business-wallet-requirements/legal/" class="nav-list-link">Legal & compliance</a><ul class="nav-list"><li class="nav-list-item"><a href="/business-wallet-requirements/legal/roadmap/" class="nav-list-link">Legal roadmap</a></li></ul></li><li class="nav-list-item"><a href="/business-wallet-requirements/domains/" class="nav-list-link">Domains</a></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="Architecture submenu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+      </button><a href="/business-wallet-requirements/architecture/" class="nav-list-link">Architecture</a><ul class="nav-list"><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="Architecture decisions submenu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+      </button><a href="/business-wallet-requirements/architecture/decisions/" class="nav-list-link">Architecture decisions</a><ul class="nav-list"><li class="nav-list-item"><a href="/business-wallet-requirements/architecture/decisions/dec-01/" class="nav-list-link">DEC-01 Credential data model, semantics and formats</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/architecture/decisions/dec-02/" class="nav-list-link">DEC-02 Employees: EUDI Wallet or business wallet</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/architecture/decisions/dec-03/" class="nav-list-link">DEC-03 Key custody and wallet architecture</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/architecture/decisions/dec-04/" class="nav-list-link">DEC-04 Trust framework and discovery</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/architecture/decisions/dec-06/" class="nav-list-link">DEC-06 Credential lifecycle and revocation</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/architecture/decisions/dec-07/" class="nav-list-link">DEC-07 Protocols and interfaces</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/architecture/decisions/dec-08/" class="nav-list-link">DEC-08 Privacy and data protection</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/architecture/decisions/dec-09/" class="nav-list-link">DEC-09 Evidence, logging and audit</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/architecture/decisions/dec-10/" class="nav-list-link">DEC-10 AI-first: agent protocols, identity and mandates</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/architecture/decisions/dec-11/" class="nav-list-link">DEC-11 Identifiers, assurance and partners outside the EU</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/architecture/decisions/dec-13/" class="nav-list-link">DEC-13 Delegation and mandates for employees, machines and AI agents</a></li></ul></li><li class="nav-list-item"><a href="/business-wallet-requirements/architecture/brief/" class="nav-list-link">Stakeholder brief</a></li></ul></li><li class="nav-list-item"><a href="/business-wallet-requirements/traceability/" class="nav-list-link">Traceability & graph</a></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="Ecosystem submenu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+      </button><a href="/business-wallet-requirements/ecosystem/" class="nav-list-link">Ecosystem</a><ul class="nav-list"><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="Ecosystems & initiatives submenu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+      </button><a href="/business-wallet-requirements/ecosystem/initiatives/" class="nav-list-link">Ecosystems & initiatives</a><ul class="nav-list"><li class="nav-list-item"><a href="/business-wallet-requirements/ecosystem/initiatives/catenax/" class="nav-list-link">Catena-X</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/ecosystem/initiatives/webuild/" class="nav-list-link">WE BUILD</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/ecosystem/initiatives/manufacturingx/" class="nav-list-link">Manufacturing-X</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/ecosystem/initiatives/factoryx/" class="nav-list-link">Factory-X</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/ecosystem/initiatives/energydatax/" class="nav-list-link">energy data-X</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/ecosystem/initiatives/cirpass2/" class="nav-list-link">CIRPASS-2</a></li></ul></li><li class="nav-list-item"><a href="/business-wallet-requirements/ecosystem/standards/" class="nav-list-link">Standards radar</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/ecosystem/certification/" class="nav-list-link">Certification</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/ecosystem/governance/" class="nav-list-link">Governance</a></li></ul></li></ul>
+  <ul class="nav-list"><li class="nav-list-item external">
+          <a href="https://github.com/cstoecker/business-wallet-requirements/discussions" class="nav-list-link external"
+            
+              target="_blank" rel="noopener noreferrer"
+            
+          >
+            Discussions
+            <svg viewBox="0 0 24 24" aria-labelledby="svg-external-link-title"><use xlink:href="#svg-external-link"></use></svg>
+          </a>
+        </li></ul>
+</nav>
+
+
+<div class="d-md-block d-none site-footer">
+  
+  
+    This site uses <a href="https://github.com/just-the-docs/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.
+  
+  </div>
+</header>
+
+  
+  <div class="main" id="top">
+    <div id="main-header" class="main-header">
+  
+    
+
+<div class="search" role="search">
+  <div class="search-input-wrap">
+    <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search European Business Wallet Requirements" autocomplete="off">
+    <label for="search-input" class="search-label">
+      <span class="sr-only">Search European Business Wallet Requirements</span>
+      <svg viewBox="0 0 24 24" class="search-icon" aria-hidden="true"><use xlink:href="#svg-search"></use></svg>
+    </label>
+  </div>
+  <div id="search-results" class="search-results"></div>
+</div>
+
+  
+  
+  
+    <nav aria-label="Auxiliary" class="aux-nav">
+  <ul class="aux-nav-list">
+    
+      <li class="aux-nav-list-item">
+        <a href="https://spherity.github.io/spherity-research/" class="site-button"
+          
+        >
+          Spherity Research
+        </a>
+      </li>
+    
+      <li class="aux-nav-list-item">
+        <a href="https://github.com/spherity/business-wallet-requirements/discussions" class="site-button"
+          
+        >
+          Discussions
+        </a>
+      </li>
+    
+      <li class="aux-nav-list-item">
+        <a href="/contact/" class="site-button"
+          
+        >
+          Contact
+        </a>
+      </li>
+    
+      <li class="aux-nav-list-item">
+        <a href="https://github.com/cstoecker/business-wallet-requirements" class="site-button"
+          
+        >
+          GitHub
+        </a>
+      </li>
+    
+  </ul>
+</nav>
+
+  
+</div>
+
+    <div class="main-content-wrap">
+      <div class="status-banner" role="region" aria-label="Draft status">Draft for review. Based on the Commission proposal COM(2025) 838, which may change. Analysis, not legal advice.</div>
+
+      <nav aria-label="Breadcrumb" class="breadcrumb-nav">
+  <ol class="breadcrumb-nav-list">
+    <li class="breadcrumb-nav-list-item"><a href="/business-wallet-requirements/architecture/">Architecture</a></li>
+    <li class="breadcrumb-nav-list-item"><a href="/business-wallet-requirements/architecture/decisions/">Architecture decisions</a></li>
+    <li class="breadcrumb-nav-list-item"><span>DEC-09 Evidence, logging and audit</span></li>
+  </ol>
+</nav>
+
+
+      <div id="main-content" class="main-content">
+        <main>
+          
+            <h1 id="dec-09-evidence-logging-and-audit">
+  
+  
+    <a href="#dec-09-evidence-logging-and-audit" class="anchor-heading" aria-labelledby="dec-09-evidence-logging-and-audit"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> DEC-09 Evidence, logging and audit
+  
+  
+</h1>
+    
+
+<p><em>Analysis for decision, not a decision. The European Business Wallet (EBW) is a Commission proposal (COM(2025) 838); the Council text submitted for its general approach (ST 9684/26, 2 June 2026) differs from it, and the outcome of the Council meeting on 9 June 2026 was not read. The Commission Annex is not in the copy read. Analysis, not legal advice. “Not stated” means that no source read says it.</em></p>
+<h2 id="question">
+  
+  
+    <a href="#question" class="anchor-heading" aria-labelledby="question"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Question
+  
+  
+</h2>
+    
+
+<p>An organisation acts through its European Business Wallet: it signs, seals, sends, receives and grants access. Someone has to be able to show later what happened, when, and on whose authority. The decision fixes <strong>what is logged</strong>, <strong>who keeps the log</strong>, <strong>which integrity, time, retention and access rules apply</strong>, and <strong>how far the log can serve as evidence</strong> with counterparties, supervisors and in proceedings, without showing individual employees to more parties than necessary.</p>
+
+<p>The accountability angle (who acted for the company) is treated in <a href="/business-wallet-requirements/architecture/decisions/dec-02/">DEC-02</a>; the logs of AI agents acting through the wallet are treated in <a href="/business-wallet-requirements/architecture/decisions/dec-10/">DEC-10</a>. This page does not repeat them. Roles for logs under data protection law are discussed in the research for DEC-08.</p>
+<h2 id="what-the-requirement-set-says">
+  
+  
+    <a href="#what-the-requirement-set-says" class="anchor-heading" aria-labelledby="what-the-requirement-set-says"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> What the requirement set says
+  
+  
+</h2>
+    
+
+<p>The cluster K10 (evidence, logging and audit) carries this decision. The requirements that shape the options are:</p>
+
+<div class="table-scroll"><div class="table-wrapper"><table><thead><tr><th>Requirement</th><th>Title</th><th>Source</th><th>Proposal</th></tr></thead><tbody>
+<tr><td><a href="/business-wallet-requirements/requirements/ebw-aif-004/">EBW-AIF-004</a></td><td>Agents act by delegation, not impersonation</td><td>SRC-OIDF-AGENTIC, Executive Summary, Critical future challenges</td><td>ecosystem</td></tr>
+<tr><td><a href="/business-wallet-requirements/requirements/ebw-aif-012/">EBW-AIF-012</a></td><td>Agent actions distinguishable in wallet log</td><td>SRC-EBW-PROPOSAL, Article 5(1)(m); Article 6(1)(d)</td><td>proposal</td></tr>
+<tr><td><a href="/business-wallet-requirements/requirements/ebw-fun-025/">EBW-FUN-025</a></td><td>Delivery data secured and time-stamped</td><td>SRC-EIDAS-CONSOL, Article 44(1)(d)-(f)</td><td>in force</td></tr>
+<tr><td><a href="/business-wallet-requirements/requirements/ebw-leg-013/">EBW-LEG-013</a></td><td>Erasure capability for personal data in provider systems</td><td>SRC-GDPR, Article 17(1)</td><td>in force</td></tr>
+<tr><td><a href="/business-wallet-requirements/requirements/ebw-leg-053/">EBW-LEG-053</a></td><td>Presumption of integrity and identified sender and addressee</td><td>SRC-EIDAS-CONSOL, Article 43(2)</td><td>in force</td></tr>
+<tr><td><a href="/business-wallet-requirements/requirements/ebw-nfr-002/">EBW-NFR-002</a></td><td>Access to a log of all transactions</td><td>SRC-EBW-PROPOSAL, Article 5(1)(m)</td><td>proposal</td></tr>
+<tr><td><a href="/business-wallet-requirements/requirements/ebw-nfr-033/">EBW-NFR-033</a></td><td>Audit logs record principal and agent separately</td><td>SRC-OIDF-AGENTIC, Section 2.11 Closing the Auditability Gap</td><td>ecosystem</td></tr>
+<tr><td><a href="/business-wallet-requirements/requirements/ebw-nfr-039/">EBW-NFR-039</a></td><td>Logging policy for signing, sealing and notifications</td><td>SRC-COUNCIL-ST-9684-26, Annex, point 7(1)</td><td>proposal</td></tr>
+<tr><td><a href="/business-wallet-requirements/requirements/ebw-nfr-041/">EBW-NFR-041</a></td><td>Access events logged with verifiable proofs of authorisation</td><td>SRC-COUNCIL-ST-9684-26, Annex, point 12(2)(c)</td><td>proposal</td></tr>
+<tr><td><a href="/business-wallet-requirements/requirements/ebw-tru-012/">EBW-TRU-012</a></td><td>Verifiable and revocable role-attribute mappings</td><td>SRC-EBW-PROPOSAL, Article 6(2)(b), first indent</td><td>proposal</td></tr>
+<tr><td><a href="/business-wallet-requirements/requirements/ebw-tru-059/">EBW-TRU-059</a></td><td>Authorisation events bound to verifiable proofs</td><td>SRC-COUNCIL-ST-9684-26, Annex point 12(2)(c)</td><td>proposal</td></tr>
+</tbody></table></div></div>
+
+<p>Requirement candidates found in the research and not yet written as requirements: a log asset list derived from the risk assessment, log retention with backup and protection, audit events that cannot easily be deleted, a termination plan that keeps records accessible, and preservation evidence that uses qualified time stamps. Existing entries already cover log integrity and export (EBW-NFR-013, -014, -039, -040, -041, -049), UTC synchronisation (EBW-NFR-048) and records kept after cessation (EBW-OPS-007). Agent audit trails and AI Act logs are covered by EBW-AIF-034, -035, EBW-NFR-032, -033 and EBW-LEG-040 (see DEC-10).</p>
+<h2 id="facts-from-the-sources">
+  
+  
+    <a href="#facts-from-the-sources" class="anchor-heading" aria-labelledby="facts-from-the-sources"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Facts from the sources
+  
+  
+</h2>
+    
+
+<p>Each fact has a source and was read in the original text unless marked.</p>
+
+<p><strong>Commission proposal and Council text.</strong></p>
+<ul>
+  <li>Providers shall enable owners to “access a log of all transactions” and to export “communication logs, and interaction records” in a structured machine-readable format (proposal Article 5(1)(m) and 5(1)(l)). Access to wallets and functions is “controlled and auditable” (recital 18). Role-attribute mappings “are verifiable, auditable, revocable and traceable to their legitimate issuers” (Article 6(2)(b)).</li>
+  <li>The owner’s action “shall have the same legal effect as if the action had been lawfully carried out in person, in paper form” (Article 4). This gives records weight in dealings but is not an evidence rule.</li>
+  <li>Council text: providers “shall provide an appropriate logging policy that shall include, at a minimum, electronic signing, electronic sealing, and notifications of all transactions” with relying parties, other business wallet units and EUDI Wallet units, “irrespective of whether the transaction is successfully completed” (Annex 7(1)). The log holds time and date, relying party name, contact details, unique identifier and Member State, the type of data requested and presented, and the reason for non-completion (Annex 7(2)). No field for the acting user or the authorisation used appears in 7(2).</li>
+  <li>Council text: the provider must “ensure integrity, authenticity, availability and confidentiality of the logged information”; the back-end “shall log reports sent by the European Business Wallet user to the competent authorities”; logs are accessible to the provider “where it is necessary for the provision of European Business Wallets services”; they “shall remain accessible for as long as required to be accessible by Union law or national law” (Annex 7(3) to 7(6)).</li>
+  <li>Council text: “all access and execution events are logged, timestamped, and bound to cryptographically verifiable proofs of authorisation, suitable for audit and legal proceedings” (Annex 12(2)(c)). Implementing acts shall cover “requirements for secure logging, timestamping and auditability of authorisation events” (Annex 12(4)(d)).</li>
+  <li>When the provider ends service, owner data is transferred or deleted on instruction, and export covers communication logs and interaction records (Article 5(1)(l), 7(6)(f)). Providers shall “respond without undue delay to any request for information or documentation necessary to verify compliance” (Article 7(6)(d)); the audit powers of supervisory bodies beyond this were not analysed.</li>
+</ul>
+
+<p><strong>eIDAS: qualified trust service providers and legal effect.</strong></p>
+<ul>
+  <li>A qualified trust service provider shall “record and keep accessible for as long as necessary after the activities of the qualified trust service provider have ceased” all relevant information on data issued and received, for evidence in legal proceedings and for continuity (Article 24(2)(h)). It uses trustworthy systems to store data “in a verifiable form” so that only authorised persons make entries and changes and “the data can be checked for authenticity” (Article 24(2)(f)). Significant breaches are notified “without undue delay and in any event within 24 hours of the incident” (Article 24(2)(fb)).</li>
+  <li>A qualified time stamp “is based on an accurate time source linked to Coordinated Universal Time” and carries a presumption of accuracy of date and time and of integrity (Articles 42(1)(b), 41(2)). Data sent through a qualified registered delivery service enjoys the presumption of integrity, of sending by the identified sender, of receipt by the identified addressee and of accuracy of date and time; the dates and times “are indicated by a qualified electronic time stamp” (Articles 43(2), 44(1)(f)).</li>
+  <li>A qualified preservation service uses “procedures and technologies capable of extending the trustworthiness of the qualified electronic signature beyond the technological validity period” (Article 34(1)); it applies to seals under Article 40. The EUDI Wallet dashboard gives access to “a log of all transactions carried out through the European Digital Identity Wallet” (Article 5a(4)(d)).</li>
+</ul>
+
+<p><strong>Implementing regulations.</strong></p>
+<ul>
+  <li>EUDI Wallet instances “shall log all transactions with wallet-relying parties and other wallet units, including electronic signing and sealing” with four content fields; the provider ensures “integrity, authenticity and confidentiality of the logged information”; logs are accessible to the provider “on the basis of explicit prior consent by the wallet user”; they are kept “for as long as they are required by Union law or national law”; the user can export them (SRC-CIR-2024-2979, Article 9, not amended by CIR 2026/1731 as far as searched). The ARF adds that the Wallet Unit logs all transactions “including any transactions that were not completed successfully” (SRC-ARF-HLR, Topic 19).</li>
+  <li>Qualified providers keep a termination plan “including how information is kept accessible in accordance with Article 24(2), point (h)”, reviewed “at least every two years”; the records must allow evidence of compliance with Regulation (EU) No 910/2014 and Regulation (EU) 2016/679 and continued verification of earlier outputs (SRC-CIR-2025-2530, Article 3(1), 3(4), 3(7)(e), 3(8)). Where the Annex standards and Articles 1 to 3 differ, the Articles prevail (Article 4(2)).</li>
+  <li>Registered delivery: “The ERDS shall generate and make available to legitimate interested parties ERDS evidence about ERD events” and “The ERDSP shall archive the evidence and/or evidence digests for each evidence that it issued” (SRC-CIR-2025-1944, Annex I, REQ-ERDS-5.4.1-06 and -07). Preservation: qualified preservation services ensure “long-term integrity, authenticity, proof of existence and accessibility of preservation evidence”, and time stamps in preservation evidence “shall be qualified time-stamps” (SRC-CIR-2025-1946, recital 1 and Annex OVR-A-03).</li>
+  <li>NIS2 implementing rules for trust service providers require procedures and tools “to monitor and log activities”, logs that are maintained, documented and reviewed, a list of assets to be logged, logs kept and backed up “for a predefined period” and protected “from unauthorised access or changes”, synchronised time sources and redundant logging systems (SRC-CIR-2024-2690, Annex 3.2.1 to 3.2.7). A trust service is significantly affected if it is unavailable “for more than 20 minutes” or if integrity, confidentiality or authenticity is compromised for “more than 0,1 % of users or relying parties” (Article 14).</li>
+</ul>
+
+<p><strong>Standards.</strong></p>
+<ul>
+  <li>EN 319 401 V3.2.1, clause 7.10: the provider keeps records accessible “for an appropriate period of time”, “including after the activities of the TSP have ceased”; the confidentiality and integrity of current and archived records are maintained; the time used in the audit log is “synchronized with UTC at least once a day”; the retention period is “as notified in the TSP’s terms and conditions”; events are logged “in a way that they cannot be easily deleted or destroyed” (SRC-ETSI-EN-319401-V3.2.1). Clause 7.9.1: logs cover network traffic, user administration, authentication events, privileged activity and access to critical configuration; they are backed up for a predefined period and protected from unauthorised access or changes. Annexes A and C map the clauses to DORA Article 30 and to CIR 2024/2690. The registered source SRC-ETSI-EN-319401 is V3.1.1, the version cited by CIR 2025/1944 and 2025/1946; V3.2.1 (2026-01) is the version read.</li>
+  <li>EN 319 411-1 V1.5.1: “All security events shall be logged”; all revocation requests and the resulting action are logged; the retention period must be documented precisely; the CA key life-cycle event log and the registration documentation are kept “at least seven years after any certificate based on these records ceases to be valid”; “The TSP shall maintain the privacy of subject information” (SRC-ETSI-EN-319411-1).</li>
+  <li>EN 319 522-1: an ERDS evidence is “an attestation provided by an ERDS that a specific event related to the process of transferring some specific data … happened at a certain time”; it “can be used to prove to third parties, if needed also in legal proceedings”; an evidence repository keeps evidence for a period that depends on the service policy (SRC-ETSI-EN-319522-1).</li>
+  <li>TS 119 511 V1.2.1 sets policy and security requirements for long-term preservation of digital signatures and of general data, with storage, no-storage and temporary-storage strategies (SRC-ETSI-119511); TS 119 512 V1.2.1 specifies the protocols between client and preservation service (SRC-ETSI-119512). Both were partly read: the scope clauses only. CIR 2025/1946 cites TS 119 511 as V1.1.1 (2019-06).</li>
+</ul>
+
+<p><strong>Horizontal law.</strong></p>
+<ul>
+  <li>AI Act: high-risk AI systems “shall technically allow for the automatic recording of events (logs) over the lifetime of the system”; providers keep logs for a period appropriate to the purpose, “at least six months, unless provided otherwise” in other Union or national law, “in particular in Union law on the protection of personal data” (SRC-AIACT, Article 12(1), 19(1)). Documentation is kept for 10 years after placing on the market (Article 18(1)); deployers keep logs for at least six months (Article 26(6)). Employer-deployers inform workers’ representatives and the affected workers before using a high-risk system at the workplace (Article 26(7)). Whether the timetable for high-risk systems changed after the text of 13 June 2024 was not checked.</li>
+  <li>NIS2 Article 21(2) lists ten minimum measures; logging is not named. Trust service providers fall under the implementing rules of Article 21(5). Significant incidents trigger an early warning “within 24 hours”, and for trust service providers a notification “within 24 hours of becoming aware” (SRC-NIS2, Article 23(4)).</li>
+  <li>DORA: contracts with ICT third-party providers include provisions on access, recovery and return of data on termination and, for critical or important functions, “unrestricted rights of access, inspection and audit” (SRC-DORA, Article 30(2)(d), 30(3)(e)(i)). The regulatory technical standard requires logging procedures covering access control, change, operations and network traffic, protection against tampering, detection of logging failure and clock synchronisation; the financial entity sets the retention period from its objectives, the reason for the log and the risk assessment (SRC-DORA-RTS-1774, Article 12).</li>
+  <li>GDPR: identifiable data is kept “for no longer than is necessary” (Article 5(1)(e)); security includes the ability to ensure ongoing confidentiality, integrity, availability and resilience (Article 32(1)(b)) (SRC-GDPR).</li>
+</ul>
+
+<p><strong>Protocol level.</strong></p>
+<ul>
+  <li>OpenID4VP transaction data “enables a binding between the user’s identification/authentication and the user’s authorization”, signed with the key used for proof of possession (SRC-OID4VP-1.0, 8.4). The specification defines no verifier-side audit record format (8.6). Wallet history “SHOULD NOT be accessible to anyone other than the End-User” (15.1).</li>
+  <li>OpenID4VCI: parties should store credentials with privacy-sensitive data “only for as long as needed, including in log files” (SRC-OID4VCI-1.0, 15.3).</li>
+</ul>
+
+<p><strong>Audit-log and transparency specifications.</strong> These are options only; no law read mandates them, and no source read links them to the EBW or to eIDAS evidence rules.</p>
+<ul>
+  <li>RFC 9162 (Certificate Transparency 2.0) provides “append-only logs of issued certificates” and is described as a general mechanism “that could be used for transparently logging any form of binary data” (SRC-RFC-9162, section 1).</li>
+  <li>RFC 9943 (SCITT architecture, June 2026, Standards Track) likens registering a signed statement with a Transparency Service to “a notarization procedure” and has the service issue a receipt. Its scope text is “limited to use cases originating from the software supply chain domain” (SRC-RFC-9943, section 1). Only the introduction and terminology were read; the protocol sections and RFC 9942 (COSE receipts) were not.</li>
+</ul>
+
+<p><strong>What no source read says.</strong></p>
+<ul>
+  <li>No source read fixes a retention period for EBW transaction logs; the Council text refers to Union or national law. Reference points from other regimes: at least six months (AI Act), at least seven years after a certificate ceases to be valid (EN 319 411-1), 10 years for AI Act documentation, entity-defined (DORA technical standard) and “predefined period” (NIS2 rules).</li>
+  <li>No source says which identifier of the acting person goes into the EBW log or how it is protected. Annex 12(2)(c) requires access events to be bound to proofs of authorisation, while Annex 7(2) lists no actor field.</li>
+  <li>No source says whether the owner’s copy or the provider’s copy of a log is the authoritative evidence in proceedings.</li>
+  <li>No source says how logs of an AI agent relate to the AI Act deployer logs (see DEC-10).</li>
+</ul>
+<h2 id="decision-criteria">
+  
+  
+    <a href="#decision-criteria" class="anchor-heading" aria-labelledby="decision-criteria"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Decision criteria
+  
+  
+</h2>
+    
+
+<p>Criteria marked <strong>source</strong> are stated or implied by a source; <strong>driver</strong> means an architecture or business driver that no source states and that a stakeholder has to confirm.</p>
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Criterion</th>
+      <th>Basis</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>L1</td>
+      <td>Completeness: all transactions including failed ones, signing, sealing and notifications</td>
+      <td>source: Council Annex 7(1), CIR 2024/2979 Article 9</td>
+    </tr>
+    <tr>
+      <td>L2</td>
+      <td>Attribution: access and execution events bound to proofs of authorisation; acting user identity</td>
+      <td>source (partial): Council Annex 12(2)(c); the actor field is not stated in Annex 7(2)</td>
+    </tr>
+    <tr>
+      <td>L3</td>
+      <td>Integrity, authenticity, availability and confidentiality of logs; tamper resistance</td>
+      <td>source: Council Annex 7(3), EN 319 401 clause 7.10, CIR 2024/2690</td>
+    </tr>
+    <tr>
+      <td>L4</td>
+      <td>Time: UTC-linked source, daily synchronisation, qualified time stamps for delivery events</td>
+      <td>source: eIDAS Articles 41 and 42, EN 319 401 7.10, DORA RTS Article 12</td>
+    </tr>
+    <tr>
+      <td>L5</td>
+      <td>Retention after the activity and after cessation of service</td>
+      <td>source (partial): eIDAS Article 24(2)(h), EN 319 401; no EBW period is fixed</td>
+    </tr>
+    <tr>
+      <td>L6</td>
+      <td>Continuity: termination plans and accessibility of records after the provider ceases</td>
+      <td>source: CIR 2025/2530 Article 3, proposal Article 5(1)(l)</td>
+    </tr>
+    <tr>
+      <td>L7</td>
+      <td>Access separation between user, owner, provider and authorities</td>
+      <td>source: Council Annex 7(5), CIR 2024/2979 Article 9</td>
+    </tr>
+    <tr>
+      <td>L8</td>
+      <td>Evidential value: presumptions for time stamps and delivery evidence; use in proceedings</td>
+      <td>source: eIDAS Articles 41 to 44, EN 319 522-1</td>
+    </tr>
+    <tr>
+      <td>L9</td>
+      <td>Long-term verifiability of signatures and seals in archived records</td>
+      <td>source: eIDAS Article 34, CIR 2025/1946, TS 119 511</td>
+    </tr>
+    <tr>
+      <td>L10</td>
+      <td>Minimisation and storage limitation in logs</td>
+      <td>source: GDPR Article 5(1)(e), OpenID4VCI 15.3</td>
+    </tr>
+    <tr>
+      <td>L11</td>
+      <td>Incident and supervision timelines that rely on logs</td>
+      <td>source: eIDAS Article 24(2)(fb), NIS2 Article 23(4), CIR 2024/2690 Article 14</td>
+    </tr>
+    <tr>
+      <td>L12</td>
+      <td>Export and portability of logs</td>
+      <td>source: proposal Article 5(1)(l) and (m), CIR 2024/2979 Article 9</td>
+    </tr>
+    <tr>
+      <td>L13</td>
+      <td>Employee exposure: which log view shows which person to whom (owner administrator, auditor, authority, counterparty)</td>
+      <td>driver</td>
+    </tr>
+    <tr>
+      <td>L14</td>
+      <td>Third-party verifiability without trusting the provider</td>
+      <td>driver</td>
+    </tr>
+    <tr>
+      <td>L15</td>
+      <td>Cost, storage volume and operational burden for small owners</td>
+      <td>driver</td>
+    </tr>
+    <tr>
+      <td>L16</td>
+      <td>Cross-border admissibility beyond the equivalence rule (national procedural law)</td>
+      <td>driver</td>
+    </tr>
+    <tr>
+      <td>L17</td>
+      <td>Alignment with AI agent audit needs (principal and agent recorded separately)</td>
+      <td>driver; see DEC-10</td>
+    </tr>
+  </tbody>
+</table></div>
+<h2 id="options">
+  
+  
+    <a href="#options" class="anchor-heading" aria-labelledby="options"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Options
+  
+  
+</h2>
+    
+<h3 id="a-provider-operated-log-under-trust-service-provider-style-controls">
+  
+  
+    <a href="#a-provider-operated-log-under-trust-service-provider-style-controls" class="anchor-heading" aria-labelledby="a-provider-operated-log-under-trust-service-provider-style-controls"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> (a) Provider-operated log under trust-service-provider style controls
+  
+  
+</h3>
+    
+
+<p>The provider keeps a tamper-resistant transaction and access log under policies modelled on EN 319 401 and the NIS2 rules for trust service providers, and gives owners access and export.</p>
+
+<p><strong>What the sources enable.</strong> A direct fit to Council Annex 7 and 12 and to CIR 2024/2979 Article 9. Established controls for integrity, time and archiving (EN 319 401 clauses 7.9.1 and 7.10). The same controls are already assessed for qualified providers, and export and termination duties are already stated.</p>
+
+<p><strong>What they restrict.</strong> The owner depends on the provider for availability and for evidence after exit, unless the export is complete and verifiable. Provider access to logs is limited to necessity (Council) or consent (EUDI Wallet), which constrains analytics. Retention periods must be set by the provider and stated in its terms.</p>
+
+<p><strong>What they leave open.</strong> Whether the provider’s copy or the owner’s export is the evidence, how user identity is represented, and how long logs are kept after termination.</p>
+<h3 id="b-owner-held-evidence-store-with-provider-signed-receipts">
+  
+  
+    <a href="#b-owner-held-evidence-store-with-provider-signed-receipts" class="anchor-heading" aria-labelledby="b-owner-held-evidence-store-with-provider-signed-receipts"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> (b) Owner-held evidence store with provider-signed receipts
+  
+  
+</h3>
+    
+
+<p>The provider issues signed, time-stamped receipts per event; the full record sits with the owner, who is responsible for retention and access.</p>
+
+<p><strong>What the sources enable.</strong> Owner control and minimisation at the provider. Qualified time stamps and registered delivery evidence already exist as signed evidence, and portability is a core function.</p>
+
+<p><strong>What they restrict.</strong> The owner, including a small firm, has to run archiving and long-term preservation (TS 119 511 and 119 512, qualified preservation services). Provider-side duties for logs of its own operation remain (CIR 2024/2690, EN 319 401 7.9.1). Breach investigation by the provider may be harder without full logs.</p>
+
+<p><strong>What they leave open.</strong> How receipts are verified after the provider ends service, who is liable for lost owner archives, and how supervisors access owner-held logs.</p>
+<h3 id="c-provider-log-plus-an-external-transparency-or-preservation-layer">
+  
+  
+    <a href="#c-provider-log-plus-an-external-transparency-or-preservation-layer" class="anchor-heading" aria-labelledby="c-provider-log-plus-an-external-transparency-or-preservation-layer"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> (c) Provider log plus an external transparency or preservation layer
+  
+  
+</h3>
+    
+
+<p>Option (a) plus an external, independently verifiable layer for selected events: qualified time stamps, qualified preservation, or a transparency log with receipts (RFC 9162 style or SCITT style).</p>
+
+<p><strong>What the sources enable.</strong> Third-party verifiability and detection of log tampering. Legal presumptions where qualified time stamps or preservation are used. Long-term proof of existence of signed records (CIR 2025/1946).</p>
+
+<p><strong>What they restrict.</strong> Neither transparency specification is mandated by law or tied to the EBW, and the published scope of SCITT is software supply chains. Publishing events can conflict with minimisation and confidentiality unless only digests are published. Qualified services have a cost per event, which no source quantifies.</p>
+
+<p><strong>What they leave open.</strong> Which events are anchored, whether the provider or the owner anchors them, and how deletion requests under data protection law interact with append-only structures (not addressed in any source read).</p>
+<h2 id="assessment-against-the-criteria">
+  
+  
+    <a href="#assessment-against-the-criteria" class="anchor-heading" aria-labelledby="assessment-against-the-criteria"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Assessment against the criteria
+  
+  
+</h2>
+    
+
+<p>How far the <em>sources</em> support each option for each criterion. “Not stated” means no source speaks to it; the cell does not say the option fails.</p>
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Criterion</th>
+      <th>(a) provider log</th>
+      <th>(b) owner store with receipts</th>
+      <th>(c) provider log plus external layer</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>L1 Completeness</td>
+      <td>Council Annex 7(1) and CIR 2024/2979 Article 9 describe this form</td>
+      <td>Not stated for receipts; full record with the owner</td>
+      <td>As (a)</td>
+    </tr>
+    <tr>
+      <td>L2 Attribution</td>
+      <td>Annex 12(2)(c) binds events to proofs of authorisation; actor field not stated</td>
+      <td>Not stated</td>
+      <td>As (a); anchoring adds no actor information (not stated)</td>
+    </tr>
+    <tr>
+      <td>L3 Integrity and tamper resistance</td>
+      <td>EN 319 401 7.10 and CIR 2024/2690 controls</td>
+      <td>Provider signs receipts; owner archive controls not stated</td>
+      <td>Adds append-only structures or qualified evidence (RFC 9162, eIDAS)</td>
+    </tr>
+    <tr>
+      <td>L4 Time</td>
+      <td>UTC synchronisation (EN 319 401 7.10)</td>
+      <td>Qualified time stamps exist (eIDAS Article 42)</td>
+      <td>Qualified time stamps for selected events</td>
+    </tr>
+    <tr>
+      <td>L5 Retention</td>
+      <td>Set by the provider and stated in terms (EN 319 401)</td>
+      <td>Owner sets it; not stated</td>
+      <td>As (a); retention of anchored digests not stated</td>
+    </tr>
+    <tr>
+      <td>L6 Continuity after exit</td>
+      <td>Termination plan and export (CIR 2025/2530, proposal Article 5(1)(l))</td>
+      <td>Depends on owner archive; receipt verification after exit not stated</td>
+      <td>As (a), with externally held proofs</td>
+    </tr>
+    <tr>
+      <td>L7 Access separation</td>
+      <td>Provider access by necessity (Council Annex 7(5))</td>
+      <td>Owner-controlled; supervisor access not stated</td>
+      <td>As (a)</td>
+    </tr>
+    <tr>
+      <td>L8 Evidential value</td>
+      <td>Which copy is evidence is not stated</td>
+      <td>Presumptions where qualified services are used</td>
+      <td>Presumptions where qualified services are used</td>
+    </tr>
+    <tr>
+      <td>L9 Long-term verifiability</td>
+      <td>Not stated for EBW logs</td>
+      <td>Owner needs preservation (CIR 2025/1946)</td>
+      <td>Qualified preservation available</td>
+    </tr>
+    <tr>
+      <td>L10 Minimisation</td>
+      <td>Provider holds the full log</td>
+      <td>Provider holds receipts only</td>
+      <td>Digests only, if so designed (not stated)</td>
+    </tr>
+    <tr>
+      <td>L12 Export</td>
+      <td>Core function (Article 5(1)(l))</td>
+      <td>Record already with the owner</td>
+      <td>As (a)</td>
+    </tr>
+    <tr>
+      <td>L14 Verifiability without trusting the provider</td>
+      <td>Not stated</td>
+      <td>Receipts signed by the provider</td>
+      <td>Transparency log or qualified evidence</td>
+    </tr>
+    <tr>
+      <td>L15 Cost for small owners</td>
+      <td>Not stated; provider price not stated</td>
+      <td>Owner runs archiving</td>
+      <td>Cost per event for qualified services; not quantified</td>
+    </tr>
+  </tbody>
+</table></div>
+<h2 id="preliminary-reading">
+  
+  
+    <a href="#preliminary-reading" class="anchor-heading" aria-labelledby="preliminary-reading"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Preliminary reading
+  
+  
+</h2>
+    
+
+<p><em>This section is the analysis of this project, not a statement of a source.</em> Three observations follow from the facts.</p>
+
+<ol>
+  <li><strong>Option (a) is the baseline the texts already describe.</strong> The Council Annex 7 and 12 and CIR 2024/2979 Article 9 describe a provider-side log with integrity, confidentiality and limited provider access, and EN 319 401 gives the control set. It does not by itself settle which copy is evidence or how the acting person is recorded.</li>
+  <li><strong>Option (b) moves duties to the owner that the sources place on providers.</strong> Archiving, preservation and retention are stated for providers; for small owners the sources do not say how they would be met. It fits better as an export format than as the primary store.</li>
+  <li><strong>Option (c) adds evidential value only where the events matter.</strong> Qualified time stamps and registered delivery evidence carry presumptions in eIDAS; the transparency specifications are not tied to the EBW and would be a project choice. If an external layer is used, publishing digests rather than event content is the form that fits the minimisation criterion.</li>
+</ol>
+
+<p>On employee exposure (L13), the sources point in two directions: Annex 12(2)(c) asks for attribution to proofs of authorisation, while the Council log fields in Annex 7(2) name no actor. A working split is a log that records the authorisation used for each event and shows the person identifier only to roles that need it. Which roles those are is a driver to be confirmed (see the employment-law question in the gaps below).</p>
+
+<p><strong>Conditions under which this reading holds.</strong> The final text keeps the Council Annex 7 and 12 content or an equivalent; the implementing acts under Annex 12(4)(d) do not require a different log structure; the retention period is fixed by Union or national law or by the provider’s terms; stakeholders confirm the drivers L13 to L17.</p>
+
+<p><strong>What would change it.</strong> The Commission Annex or the implementing acts on secure logging and timestamping; a retention period set for EBW logs; a rule that names the actor identifier in the log; a source that makes a transparency log or SCITT applicable to the EBW; a clarification of which copy is evidence; the AI Act timetable amendments, which were not checked.</p>
+<h2 id="evidence-gaps-and-next-steps">
+  
+  
+    <a href="#evidence-gaps-and-next-steps" class="anchor-heading" aria-labelledby="evidence-gaps-and-next-steps"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Evidence gaps and next steps
+  
+  
+</h2>
+    
+
+<ul>
+  <li>Obtain the Annex of COM(2025) 838, the implementing acts under Council Annex 12(4) and the outcome of the Council meeting on 9 June 2026, then re-check the logging provisions. <span class="vtag v-todo">to verify</span></li>
+  <li>Settle which retention period applies to EBW logs and who sets it. <span class="vtag v-todo">to verify</span></li>
+  <li>Settle whether the owner’s administrators may see the identity of each acting user, and under which employment-law constraints (see the research for DEC-08). <span class="vtag v-todo">to verify</span></li>
+  <li>Read what was read for scope only or not at all: TS 119 511 and 119 512 beyond clause 1, EN 319 522-2 (evidence semantics) and EN 319 521, RFC 9942 (COSE receipts) and the protocol sections of RFC 9943, and CIR 2025/2160 (risk management framework referenced by CIR 2025/2530). No W3C audit-log specification was identified.</li>
+  <li>Check NIS2 national transposition, the Commission list of reference standards for qualified trust services beyond CIR 2025/2530, and the AI Act timetable amendments (digital omnibus). <span class="vtag v-todo">to verify</span></li>
+  <li>Write the requirement candidates listed under “What the requirement set says” and review them with a named reviewer.</li>
+  <li>Confirm the business drivers L13 to L17 with stakeholders; they are assumptions until then.</li>
+</ul>
+<h2 id="references">
+  
+  
+    <a href="#references" class="anchor-heading" aria-labelledby="references"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> References
+  
+  
+</h2>
+    
+
+<p>SRC-EBW-PROPOSAL, SRC-COUNCIL-ST-9684-26, SRC-EIDAS-CONSOL, SRC-CIR-2024-2979, SRC-ARF-HLR, SRC-CIR-2025-2530, SRC-CIR-2025-1944, SRC-CIR-2025-1946, SRC-CIR-2024-2690, SRC-ETSI-EN-319401-V3.2.1, SRC-ETSI-EN-319411-1, SRC-ETSI-EN-319522-1, SRC-ETSI-119511, SRC-ETSI-119512, SRC-AIACT, SRC-NIS2, SRC-DORA, SRC-DORA-RTS-1774, SRC-GDPR, SRC-OID4VP-1.0, SRC-OID4VCI-1.0, SRC-RFC-9162, SRC-RFC-9943. Full entries with version, date and URL are in the source register.</p>
+
+          
+
+          
+            
+          
+        </main>
+        
+<hr>
+<footer>
+  
+
+  <div class="site-footer-extra">
+  <div class="sf-grid">
+    <div class="sf-brand">
+      <img src="/business-wallet-requirements/assets/images/logos/spherity-logo-white.svg" alt="Spherity" width="150" height="auto">
+      <p>European Business Wallet Requirements: open, traceable requirements for European Business Wallets and trust infrastructure.</p>
+      <p><a href="mailto:info@spherity.com">info@spherity.com</a></p>
+    </div>
+    <nav class="sf-col" aria-label="Explore">
+      <h2>Explore</h2>
+      <ul>
+        <li><a href="/business-wallet-requirements/requirements/">Requirements</a></li>
+        <li><a href="/business-wallet-requirements/concepts/">Concepts</a></li>
+        <li><a href="/business-wallet-requirements/perspectives/use-cases/">Use cases</a></li>
+        <li><a href="/business-wallet-requirements/perspectives/business-cases/">Business cases</a></li>
+        <li><a href="/business-wallet-requirements/legal/roadmap/">Legal roadmap</a></li>
+        <li><a href="/business-wallet-requirements/ecosystem/initiatives/">Ecosystems</a></li>
+      </ul>
+    </nav>
+    <nav class="sf-col" aria-label="Resources">
+      <h2>Resources</h2>
+      <ul>
+        <li><a href="/business-wallet-requirements/downloads/">Downloads</a></li>
+        <li><a href="/business-wallet-requirements/figures/">Figure gallery</a></li>
+        <li><a href="/business-wallet-requirements/changelog/">What changed</a></li>
+        <li><a href="https://spherity.github.io/spherity-research/">Spherity Research</a></li>
+        <li><a href="/business-wallet-requirements/llms.txt">llms.txt</a></li>
+        <li><a href="/business-wallet-requirements/sitemap.xml">Sitemap</a></li>
+      </ul>
+    </nav>
+    <nav class="sf-col" aria-label="Project">
+      <h2>Project</h2>
+      <ul>
+        <li><a href="/business-wallet-requirements/about/">About</a></li>
+        <li><a href="/business-wallet-requirements/contact/">Contact</a></li>
+        <li><a href="https://github.com/cstoecker/business-wallet-requirements/discussions">Discussions</a></li>
+        <li><a href="https://github.com/cstoecker/business-wallet-requirements">GitHub</a></li>
+      </ul>
+    </nav>
+  </div>
+  <p class="sf-legal">Published by <a href="https://www.spherity.com">Spherity GmbH</a>. Content CC BY 4.0, code Apache-2.0 (to be confirmed). Draft for review; based on the Commission proposal COM(2025) 838. Analysis, not legal advice.</p>
+</div>
+<script>
+(function () {
+  var html = document.documentElement;
+  // tooltips and accessible names for icon-only navigation
+  document.querySelectorAll(".nav-list-link").forEach(function (a) { var t = a.textContent.trim(); if (t) { a.setAttribute("title", t); } });
+  // navigation icons (Untitled UI, outline); inserted as elements so the active link shows them too
+  var base = "/business-wallet-requirements", icons = {"/":"home-line","/concepts/":"lightbulb-02","/research/":"file-search-02","/changelog/":"clock-refresh","/downloads/":"download-04","/figures/":"image-03","/about/":"info-circle","/requirements/":"check-done-02","/requirements/methodology/":"clipboard-check","/perspectives/":"eye","/perspectives/use-cases/":"target-02","/perspectives/business-cases/":"coins-03","/legal/":"scales-02","/legal/roadmap/":"flag-03","/domains/":"grid-03","/architecture/":"layers-three-02","/traceability/":"dataflow-03","/ecosystem/":"globe-02","/ecosystem/initiatives/":"building-05","/ecosystem/standards/":"target-02","/ecosystem/certification/":"award-03","/ecosystem/governance/":"users-check","discussions":"message-chat-circle","/requirements/review/":"list","/architecture/decisions/":"settings-02"};
+  document.querySelectorAll(".nav-list-link").forEach(function (a) {
+    if (a.querySelector(".nav-ic")) return;
+    var u; try { u = new URL(a.href, location.href); } catch (e) { return; }
+    var key = u.origin === location.origin ? (u.pathname.indexOf(base) === 0 ? u.pathname.slice(base.length) : u.pathname) : (u.pathname.indexOf("/discussions") > -1 ? "discussions" : "");
+    key = key.replace(/index\.html$/, "");
+    var name = icons[key]; if (!name) return;
+    var s = document.createElement("span"); s.className = "nav-ic"; s.setAttribute("aria-hidden", "true");
+    s.style.setProperty("--icon", 'url("/business-wallet-requirements/assets/icons/' + name + '.svg")');
+    a.insertBefore(s, a.firstChild);
+  });
+  // mark the current page in the navigation
+  var here = location.pathname.replace(/index\.html$/, "");
+  document.querySelectorAll(".nav-list-link").forEach(function (a) { try { var u = new URL(a.href, location.href); if (u.origin === location.origin && u.pathname.replace(/index\.html$/, "") === here) { a.setAttribute("aria-current", "page"); } } catch (e) {} });
+  // desktop: sub-pages open as a flyout on hover or focus instead of expanding inside the sidebar
+  (function () {
+    var mq = window.matchMedia("(min-width: 50rem)"), side = document.querySelector(".side-bar"), fly, hideT, showT, cur;
+    if (!side) return;
+    function close() { clearTimeout(showT); if (fly) { fly.remove(); fly = null; } cur = null; }
+    function open(li) {
+      if (!mq.matches || cur === li) return;
+      var sub = li.querySelector(":scope > .nav-list"); if (!sub) return;
+      close(); cur = li;
+      fly = document.createElement("nav"); fly.className = "nav-flyout"; fly.setAttribute("aria-label", li.querySelector(":scope > .nav-list-link").textContent.trim());
+      var ul = document.createElement("ul"); ul.className = "nav-list";
+      sub.querySelectorAll(":scope > .nav-list-item").forEach(function (item) {
+        var a = item.querySelector(":scope > .nav-list-link"); if (!a) return;
+        var c = a.cloneNode(true); c.removeAttribute("title"); var e = document.createElement("li"); e.appendChild(c); ul.appendChild(e);
+      });
+      fly.appendChild(ul); document.body.appendChild(fly);
+      var r = side.getBoundingClientRect(), lr = li.getBoundingClientRect(), h = fly.offsetHeight;
+      fly.style.left = r.right + "px"; fly.style.top = Math.max(8, Math.min(lr.top, window.innerHeight - h - 8)) + "px";
+      fly.addEventListener("mouseenter", function () { clearTimeout(hideT); });
+      fly.addEventListener("mouseleave", function () { hideT = setTimeout(close, 160); });
+      fly.addEventListener("focusout", function (ev) { if (!fly || !fly.contains(ev.relatedTarget)) hideT = setTimeout(close, 160); });
+    }
+    side.querySelectorAll(".nav-list > .nav-list-item").forEach(function (li) {
+      if (!li.querySelector(":scope > .nav-list")) return;
+      li.addEventListener("mouseenter", function () { clearTimeout(hideT); clearTimeout(showT); showT = setTimeout(function () { open(li); }, 140); });
+      li.addEventListener("mouseleave", function () { clearTimeout(showT); hideT = setTimeout(close, 160); });
+      li.addEventListener("focusin", function () { open(li); });
+    });
+    side.addEventListener("mouseenter", function (e) { if (!e.target.closest || true) clearTimeout(hideT); });
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape") close(); });
+    window.addEventListener("scroll", close, true); window.addEventListener("resize", close);
+  })();
+  // keyboard access to horizontally scrollable tables and figures
+  document.querySelectorAll(".main-content *").forEach(function (el) {
+    var o = getComputedStyle(el).overflowX;
+    if ((o === "auto" || o === "scroll") && el.scrollWidth > el.clientWidth + 1 && !el.hasAttribute("tabindex")) { el.setAttribute("tabindex", "0"); }
+  });
+  // collapse toggle
+  var header = document.querySelector(".site-header");
+  if (header && !header.querySelector(".nav-toggle")) {
+    var b = document.createElement("button");
+    b.type = "button"; b.className = "nav-toggle";
+    b.innerHTML = '<span class="icon" aria-hidden="true"></span>';
+    var side = document.querySelector(".side-bar"), tin, tout;
+    if (side) {
+      side.addEventListener("mouseenter", function () { clearTimeout(tout); if (html.classList.contains("nav-collapsed")) tin = setTimeout(function () { html.classList.add("nav-peek"); }, 90); });
+      side.addEventListener("mouseleave", function () { clearTimeout(tin); tout = setTimeout(function () { html.classList.remove("nav-peek"); }, 180); });
+      side.addEventListener("focusin", function () { if (html.classList.contains("nav-collapsed")) html.classList.add("nav-peek"); });
+      side.addEventListener("focusout", function (e) { if (!side.contains(e.relatedTarget)) html.classList.remove("nav-peek"); });
+    }
+    function sync() { var c = html.classList.contains("nav-collapsed"); b.setAttribute("aria-pressed", c ? "true" : "false"); b.setAttribute("aria-label", c ? "Expand navigation" : "Collapse navigation to icons"); b.title = c ? "Expand navigation" : "Collapse navigation to icons"; }
+    b.addEventListener("click", function () { html.classList.remove("nav-peek"); html.classList.toggle("nav-collapsed"); try { localStorage.setItem("ebw-nav", html.classList.contains("nav-collapsed") ? "collapsed" : "expanded"); } catch (e) {} sync(); });
+    header.appendChild(b); sync();
+  }
+  // "On this page" for long articles
+  var content = document.querySelector(".main-content");
+  var hs = content ? content.querySelectorAll("h2[id]") : [];
+  if (hs.length > 3 && !document.querySelector(".toc-box")) {
+    var d = document.createElement("details"); d.className = "toc-box"; d.open = window.innerWidth > 800;
+    var ol = ""; hs.forEach(function (h) { ol += '<li><a href="#' + h.id + '">' + h.textContent.replace(/\s+/g, " ").trim() + "</a></li>"; });
+    d.innerHTML = "<summary>On this page</summary><ol>" + ol + "</ol>";
+    var first = content.querySelector("h2"); if (first) first.parentNode.insertBefore(d, first);
+  }
+})();
+</script>
+
+
+  <div class="d-md-none mt-4 fs-2">
+    
+    
+      This site uses <a href="https://github.com/just-the-docs/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.
+    
+  </div>
+</footer>
+
+      </div>
+    </div>
+    
+      
+
+<div class="search-overlay"></div>
+
+    
+  </div>
+
+  
+</body>
+</html>
+

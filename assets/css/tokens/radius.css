@@ -1,0 +1,7 @@
+/* token_radius — brand board §11.4. Card ceiling 16px; full rounding only for tags, buttons, avatars, round status dots. */
+:root{
+  --sph-radius-compact:8px;
+  --sph-radius-standard:12px;
+  --sph-radius-prominent:16px;
+  --sph-radius-full:9999px;
+}

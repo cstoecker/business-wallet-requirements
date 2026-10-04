@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" width="1200" height="520" role="img" aria-labelledby="tm dm">
+  <title id="tm">EU-wide annual savings estimates for European Business Wallets, EUR billion</title>
+  <desc id="dm">Bar chart of annual EU-wide estimates in EUR billion from the Commission impact assessment and press release: minimum direct benefit 58.4, headline up to 150, maximum direct benefit at 75 percent adoption 168.8, direct benefit at 100 percent adoption about 225, and costs of economic operators in year 1 of 45.5.</desc>
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"><rdf:RDF><cc:Work rdf:about=""><dc:title>EU-wide annual savings estimates for European Business Wallets</dc:title><dc:description>Bar chart of annual EU-wide estimates in EUR billion from Commission sources: minimum, headline, maximum and full-adoption direct benefits and year 1 costs.</dc:description><dc:creator>European Business Wallet Requirements project</dc:creator><dc:subject>business case; European Business Wallet; impact assessment; EUR billion</dc:subject><dc:language>en</dc:language><dc:format>image/svg+xml</dc:format><dc:rights>CC BY 4.0</dc:rights><cc:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/></cc:Work></rdf:RDF></metadata>
+  <style>
+      text{font-family:Archivo,Arial,sans-serif}
+      .lab{font-size:17px;fill:#253746}
+      .val{font-size:17px;font-weight:700;fill:#023852}
+      .note{font-size:15px;fill:#445260}
+      .ttl{font-size:20px;font-weight:700;fill:#023852}
+      .axis{stroke:#C9C7C2;stroke-width:1.5}
+      .grp{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:13px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;fill:#445260}
+    </style>
+  <rect width="1200" height="520" fill="#F4F2EE"/>
+  <text class="ttl" x="30" y="38">EU-wide annual estimates, EUR billion (gross unless marked as costs)</text>
+  <text class="lab" x="406" y="102" text-anchor="end">Minimum direct benefit</text>
+  <rect x="420" y="80" width="175.3" height="38" rx="8" fill="#6F8895"/>
+  <text class="val" x="605.3" y="105">58.4</text>
+  <text class="note" x="406" y="122" text-anchor="end">lower bound, survey-based</text>
+  <text class="lab" x="406" y="178" text-anchor="end">Headline: "up to"</text>
+  <rect x="420" y="156" width="450.0" height="38" rx="8" fill="#2BFEBB" stroke="#023852" stroke-width="1.5"/>
+  <text class="val" x="880.0" y="181">150</text>
+  <text class="note" x="406" y="198" text-anchor="end">press release IP/25/2718, broad uptake</text>
+  <text class="lab" x="406" y="254" text-anchor="end">Maximum direct benefit, 75% adoption</text>
+  <rect x="420" y="232" width="506.4" height="38" rx="8" fill="#023852"/>
+  <text class="val" x="936.4" y="257">168.8</text>
+  <text class="note" x="406" y="274" text-anchor="end">upper bound</text>
+  <text class="lab" x="406" y="330" text-anchor="end">Direct benefit, 100% adoption</text>
+  <rect x="420" y="308" width="675.0" height="38" rx="8" fill="#023852"/>
+  <text class="val" x="1105.0" y="333">about 225</text>
+  <text class="note" x="406" y="350" text-anchor="end">upper bound</text>
+  <text class="lab" x="406" y="406" text-anchor="end">Costs of economic operators, year 1</text>
+  <rect x="420" y="384" width="136.5" height="38" rx="8" fill="#E5EAEE" stroke="#023852" stroke-width="1.5"/>
+  <text class="val" x="566.5" y="409">45.5</text>
+  <text class="note" x="406" y="426" text-anchor="end">75% adoption, one-off plus recurring</text>
+  <line class="axis" x1="420" y1="66" x2="420" y2="450"/>
+  <text class="note" x="30" y="498">Source: SWD(2025) 837 (Tables 8, 9 and section 6) and press release IP/25/2718. Modelled upper and lower bounds, not forecasts.</text>
+</svg>

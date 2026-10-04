@@ -1,0 +1,6 @@
+# Preview build: not for indexing.
+User-agent: *
+Disallow: /
+
+Sitemap: https://cstoecker.github.io/business-wallet-requirements/sitemap.xml
+

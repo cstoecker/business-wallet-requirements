@@ -1,0 +1,42 @@
+# European Business Wallet Requirements
+
+> Open, traceable requirements for European Business Wallets and trust infrastructure, from law and standards to conformance checks and industry scenarios.
+
+Machine-readable discovery aid only. It is not a ranking, citation or training-data promise. Content is licensed CC BY 4.0 unless stated otherwise; legal content is analysis, not legal advice. Published by Spherity GmbH (info@spherity.com).
+
+## Concepts
+- [Trust plane](https://cstoecker.github.io/business-wallet-requirements/concepts/trust-plane/): Who and what can be trusted and why: trust anchors, trust lists, qualified services, registries and status.
+- [Trust list](https://cstoecker.github.io/business-wallet-requirements/concepts/trust-list/): A governed list of trusted issuers or services that relying parties use to validate credentials.
+
+## Ecosystems and initiatives
+- [Catena-X](https://cstoecker.github.io/business-wallet-requirements/ecosystem/initiatives/catenax/): Collaborative data ecosystem for the automotive industry for exchanging data with business partners along the supply chain.
+- [WE BUILD](https://cstoecker.github.io/business-wallet-requirements/ecosystem/initiatives/webuild/): Commission-funded Large-Scale Pilot using the EUDI Wallet and the European Business Wallet to cut red tape for cross-border business; 200+ organisations from 28 countries including 13 national business registers (project website).
+- [Manufacturing-X](https://cstoecker.github.io/business-wallet-requirements/ecosystem/initiatives/manufacturingx/): Industrial-policy initiative building a decentrally organised, interoperable data space for industry; a portfolio of ecosystems rather than one product.
+- [Factory-X](https://cstoecker.github.io/business-wallet-requirements/ecosystem/initiatives/factoryx/): Open collaborative digital ecosystem for factory outfitters and operators, built on Catena-X foundations and Plattform Industrie 4.0 principles; defines the MX-Port "Leo" configuration for discovery and access.
+- [energy data-X](https://cstoecker.github.io/business-wallet-requirements/ecosystem/initiatives/energydatax/): Data ecosystem for the energy industry based on Gaia-X standards, following the DSSC blueprint, with market-role based access and cross-data-space exchange.
+- [CIRPASS-2](https://cstoecker.github.io/business-wallet-requirements/ecosystem/initiatives/cirpass2/): Demonstrates functioning DPPs in real settings and at scale through 13 lighthouse pilots in 4 value chains.
+
+## Business cases
+- [Business cases](https://cstoecker.github.io/business-wallet-requirements/perspectives/business-cases/): macroeconomic, ecosystem and company-level cases with every number traced to an official source or peer-reviewed paper.
+- [Macroeconomic case](https://cstoecker.github.io/business-wallet-requirements/perspectives/business-cases/macro/)
+- [Company case](https://cstoecker.github.io/business-wallet-requirements/perspectives/business-cases/company/)
+
+## Methodology
+- [Requirements management methodology](https://cstoecker.github.io/business-wallet-requirements/requirements/methodology/): sources, lifecycle, categories, provenance and traceability rules.
+
+## Figures
+- [Figure: annual cost and maximum benefit per company](https://cstoecker.github.io/business-wallet-requirements/figures/company-cost-benefit/): Model values per company and year: annual cost against theoretical maximum benefit for micro, small and large companies.
+- [Figure: the three planes and their main entities](https://cstoecker.github.io/business-wallet-requirements/figures/concept-model-planes/): Concept model of the trust, control and data planes: who decides, what is trusted and how evidence moves.
+- [Figure: from source clause to conformance check](https://cstoecker.github.io/business-wallet-requirements/figures/flow-requirement-lifecycle/): Requirement lifecycle: extract, derive, review, publish, then guide implementations and configure conformance tests.
+- [Figure: European Business Wallet legal and operational roadmap 2025-2029](https://cstoecker.github.io/business-wallet-requirements/figures/legal-roadmap/): Indicative roadmap with legal, standardisation, pilot, conformity and adoption milestones. Calendar dates are scenarios; the 24 and 36 month periods after entry into force follow Articles 16 and 22 of the proposal.
+- [Figure: EU-wide annual savings estimates](https://cstoecker.github.io/business-wallet-requirements/figures/macro-range/): Modelled upper and lower bounds from the Commission impact assessment and press release, with year 1 costs for comparison.
+- [Figure: anatomy of a trusted list](https://cstoecker.github.io/business-wallet-requirements/figures/trust-list-anatomy/): A trusted list is a signed document with scheme information, providers and their services, and a signature; relying parties read and validate it.
+- [Figure: how a relying party uses a trusted list](https://cstoecker.github.io/business-wallet-requirements/figures/trust-list-validation/): Six steps from locating the list of trusted lists to using a service's digital identity as trust anchor.
+- [Figure: trust plane concept model](https://cstoecker.github.io/business-wallet-requirements/figures/trust-plane-concept-model/): Who establishes trust (oversight, providers and lists) and who uses it (credentials, status and relying parties).
+- [Figure: becoming a qualified provider and being checked](https://cstoecker.github.io/business-wallet-requirements/figures/trust-plane-flow/): Notification, verification, qualified status and list update, then validation by relying parties.
+
+## Related research
+- [Spherity Research](https://spherity.github.io/spherity-research/): publications and roadmaps by the publisher (reading list, not a source of this requirements baseline).
+
+## Data
+- Sitemap: https://cstoecker.github.io/business-wallet-requirements/sitemap.xml

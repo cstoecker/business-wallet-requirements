@@ -1,0 +1,897 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+  <link rel="stylesheet" href="/business-wallet-requirements/assets/css/just-the-docs-default.css">
+
+  <link rel="stylesheet" href="/business-wallet-requirements/assets/css/just-the-docs-head-nav.css" id="jtd-head-nav-stylesheet">
+
+  <style id="jtd-nav-activation">
+  
+
+    .site-nav > ul.nav-list:first-child > li > a,
+    .site-nav > ul.nav-list:first-child > li > ul > li > a,
+    
+    .site-nav > ul.nav-list:first-child > li > ul > li > ul > li:not(:nth-child(3)) > a,
+    .site-nav > ul.nav-list:first-child > li > ul > li > ul > li > ul > li a {
+      background-image: none;
+    }
+
+    .site-nav > ul.nav-list:not(:first-child) a,
+    .site-nav li.external a {
+      background-image: none;
+    }
+
+    .site-nav > ul.nav-list:first-child > li:nth-child(6) > ul > li:nth-child(1) > ul > li:nth-child(3) > a {
+      font-weight: 600;
+      text-decoration: none;
+    }.site-nav > ul.nav-list:first-child > li:nth-child(6) > button svg,
+    .site-nav > ul.nav-list:first-child > li:nth-child(6) > ul > li:nth-child(1) > button svg,
+    .site-nav > ul.nav-list:first-child > li:nth-child(6) > ul > li:nth-child(1) > ul > li:nth-child(3) > button svg {
+      transform: rotate(-90deg);
+    }.site-nav > ul.nav-list:first-child > li.nav-list-item:nth-child(6) > ul.nav-list,
+    .site-nav > ul.nav-list:first-child > li.nav-list-item:nth-child(6) > ul.nav-list > li.nav-list-item:nth-child(1) > ul.nav-list,
+    .site-nav > ul.nav-list:first-child > li.nav-list-item:nth-child(6) > ul.nav-list > li.nav-list-item:nth-child(1) > ul.nav-list > li.nav-list-item:nth-child(3) > ul.nav-list {
+      display: block;
+    }
+  </style>
+
+  
+
+  
+    <script src="/business-wallet-requirements/assets/js/vendor/lunr.min.js"></script>
+  
+
+  <script src="/business-wallet-requirements/assets/js/just-the-docs.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="icon" type="image/svg+xml" href="/business-wallet-requirements/assets/images/logos/spherity-s-mark.svg">
+
+  <title>DEC-03 Key custody and wallet architecture | European Business Wallet Requirements</title>
+<meta name="description" content="Where do the keys of an organisation live: on a device it holds, in a back-end run by the wallet provider, in a hardware security module it runs itself, or with a qualified trust service provider that seals and signs remotely? Facts from the sources, decision criteria, four options and the condit..."><meta name="keywords" content="key custody, wallet secure cryptographic device, WSCD, WSCA, hardware security module, remote sealing, remote signing, wallet unit attestation, QTSP, European Business Wallet">
+<meta name="author" content="Spherity GmbH"><meta name="robots" content="noindex, follow">
+<meta name="theme-color" content="#023852">
+<link rel="canonical" href="https://cstoecker.github.io/business-wallet-requirements/architecture/decisions/dec-03/">
+<link rel="alternate" type="text/plain" href="https://cstoecker.github.io/business-wallet-requirements/llms.txt" title="llms.txt">
+<link rel="sitemap" type="application/xml" href="https://cstoecker.github.io/business-wallet-requirements/sitemap.xml">
+<meta property="og:site_name" content="European Business Wallet Requirements">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="DEC-03 Key custody and wallet architecture">
+<meta property="og:description" content="Where do the keys of an organisation live: on a device it holds, in a back-end run by the wallet provider, in a hardware security module it runs itself, or with a qualified trust service provider that seals and signs remotely? Facts from the sources, decision criteria, four options and the condit...">
+<meta property="og:url" content="https://cstoecker.github.io/business-wallet-requirements/architecture/decisions/dec-03/">
+<meta property="og:image" content="https://cstoecker.github.io/business-wallet-requirements/assets/figures/concept-model-planes.png"><meta property="article:modified_time" content="2026-10-03">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="DEC-03 Key custody and wallet architecture">
+<meta name="twitter:description" content="Where do the keys of an organisation live: on a device it holds, in a back-end run by the wallet provider, in a hardware security module it runs itself, or with a qualified trust service provider that seals and signs remotely? Facts from the sources, decision criteria, four options and the condit...">
+<meta name="twitter:image" content="https://cstoecker.github.io/business-wallet-requirements/assets/figures/concept-model-planes.png">
+
+
+  <script>try{if(localStorage.getItem("ebw-nav")==="collapsed"&&window.matchMedia("(min-width: 50rem)").matches){document.documentElement.classList.add("nav-collapsed")}}catch(e){}</script><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://cstoecker.github.io/business-wallet-requirements/#publisher","name":"Spherity GmbH","url":"https://www.spherity.com","email":"info@spherity.com","logo":{"@type":"ImageObject","url":"https://cstoecker.github.io/business-wallet-requirements/assets/images/logos/spherity-s-mark.svg","width":372,"height":372}},{"@type":"WebSite","@id":"https://cstoecker.github.io/business-wallet-requirements/#website","url":"https://cstoecker.github.io/business-wallet-requirements/","name":"European Business Wallet Requirements","description":"Open, traceable requirements for European Business Wallets and trust infrastructure, from law and standards to conformance checks and industry scenarios.","inLanguage":"en","publisher":{"@id":"https://cstoecker.github.io/business-wallet-requirements/#publisher"},"license":"https://creativecommons.org/licenses/by/4.0/"},{"@type":"TechArticle","@id":"https://cstoecker.github.io/business-wallet-requirements/architecture/decisions/dec-03/#page","url":"https://cstoecker.github.io/business-wallet-requirements/architecture/decisions/dec-03/","name":"DEC-03 Key custody and wallet architecture","headline":"DEC-03 Key custody and wallet architecture","description":"Where do the keys of an organisation live: on a device it holds, in a back-end run by the wallet provider, in a hardware security module it runs itself, or with a qualified trust service provider that seals and signs remotely? Facts from the sources, decision criteria, four options and the conditions under which each holds.","inLanguage":"en","isPartOf":{"@id":"https://cstoecker.github.io/business-wallet-requirements/#website"},"publisher":{"@id":"https://cstoecker.github.io/business-wallet-requirements/#publisher"},"primaryImageOfPage":{"@type":"ImageObject","url":"https://cstoecker.github.io/business-wallet-requirements/assets/figures/concept-model-planes.png"},"keywords":"key custody, wallet secure cryptographic device, WSCD, WSCA, hardware security module, remote sealing, remote signing, wallet unit attestation, QTSP, European Business Wallet","dateModified":"2026-10-03","license":"https://creativecommons.org/licenses/by/4.0/"},{"@type":"BreadcrumbList","@id":"https://cstoecker.github.io/business-wallet-requirements/architecture/decisions/dec-03/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://cstoecker.github.io/business-wallet-requirements/"},{"@type":"ListItem","position":2,"name":"Architecture","item":"https://cstoecker.github.io/business-wallet-requirements/architecture/"},{"@type":"ListItem","position":3,"name":"Architecture decisions","item":"https://cstoecker.github.io/business-wallet-requirements/architecture/decisions/"},{"@type":"ListItem","position":4,"name":"DEC-03 Key custody and wallet architecture","item":"https://cstoecker.github.io/business-wallet-requirements/architecture/decisions/dec-03/"}]}]}</script>
+
+
+</head>
+
+<body>
+  <a class="skip-to-main" href="#main-content">Skip to main content</a>
+  <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+  <symbol id="svg-link" viewBox="0 0 24 24">
+  <title>Link</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link">
+    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+  </svg>
+</symbol>
+
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+  <title>Menu</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
+    <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>
+  </svg>
+</symbol>
+
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+  <title>Expand</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+    <polyline points="9 18 15 12 9 6"></polyline>
+  </svg>
+</symbol>
+
+  <!-- Feather. MIT License: https://github.com/feathericons/feather/blob/master/LICENSE -->
+<symbol id="svg-external-link" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link">
+  <title id="svg-external-link-title">(external link)</title>
+  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line>
+</symbol>
+
+  
+    <symbol id="svg-doc" viewBox="0 0 24 24">
+  <title>Document</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file">
+    <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline>
+  </svg>
+</symbol>
+
+    <symbol id="svg-search" viewBox="0 0 24 24">
+  <title>Search</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
+    <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+  </svg>
+</symbol>
+
+  
+  
+    <!-- Bootstrap Icons. MIT License: https://github.com/twbs/icons/blob/main/LICENSE.md -->
+<symbol id="svg-copy" viewBox="0 0 16 16">
+  <title>Copy</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+  </svg>
+</symbol>
+<symbol id="svg-copied" viewBox="0 0 16 16">
+  <title>Copied</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-check-fill" viewBox="0 0 16 16">
+    <path d="M6.5 0A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3Zm3 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3Z"/>
+    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1A2.5 2.5 0 0 1 9.5 5h-3A2.5 2.5 0 0 1 4 2.5v-1Zm6.854 7.354-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708.708Z"/>
+  </svg>
+</symbol>
+
+  
+</svg>
+
+  
+    <header class="side-bar">
+  <div class="site-header">
+    <a href="/business-wallet-requirements/" class="site-title lh-tight">
+  <div class="site-logo" role="img" aria-label="European Business Wallet Requirements"></div>
+
+</a>
+    <button id="menu-button" class="site-button btn-reset" aria-label="Menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><use xlink:href="#svg-menu"></use></svg>
+    </button>
+  </div>
+
+  <nav aria-label="Main" id="site-nav" class="site-nav">
+  
+  
+    <ul class="nav-list"><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="Start here submenu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+      </button><a href="/business-wallet-requirements/" class="nav-list-link">Start here</a><ul class="nav-list"><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="Concepts submenu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+      </button><a href="/business-wallet-requirements/concepts/" class="nav-list-link">Concepts</a><ul class="nav-list"><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/ai-safety/" class="nav-list-link">AI safety</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/aisp/" class="nav-list-link">AISP</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/evidence-graph/" class="nav-list-link">Access-controlled verifiable evidence graph</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/agent-mandate/" class="nav-list-link">Agent mandate</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/authentic-sources-and-registries/" class="nav-list-link">Authentic sources and registries</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/authority-access/" class="nav-list-link">Authority access</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/b2g-registry-obligations/" class="nav-list-link">B2G registry obligations</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/b2g-reporting/" class="nav-list-link">B2G reporting</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/control-plane-policy-engine/" class="nav-list-link">Control plane and policy engine</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/cross-sector-credential-use/" class="nav-list-link">Cross-sector credential use</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/crypto-agility-and-pqc/" class="nav-list-link">Crypto-agility and post-quantum readiness</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/dsp-dcp-integration/" class="nav-list-link">DSP and DCP integration</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/data-plane/" class="nav-list-link">Data plane</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/ebw-dpp-integration/" class="nav-list-link">EBW and DPP integration</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/ebw-eudiw-interaction/" class="nav-list-link">EBW and EUDI Wallet interaction</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/knowledge-graph/" class="nav-list-link">Knowledge graph</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/legal-person-identity/" class="nav-list-link">Legal person identity and EBWOID</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/levels-of-assurance/" class="nav-list-link">Levels of assurance</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/mandate-and-power-of-representation/" class="nav-list-link">Mandate and power of representation</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/multi-trust-domains/" class="nav-list-link">Multi-trust domains</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/qualified-trust-services/" class="nav-list-link">Qualified trust services (signature, seal, delivery)</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/revocation-and-status/" class="nav-list-link">Revocation and status</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/selective-disclosure-and-unlinkability/" class="nav-list-link">Selective disclosure and unlinkability</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/trust-list/" class="nav-list-link">Trust list</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/trust-list-discovery/" class="nav-list-link">Trust list discovery</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/trust-plane/" class="nav-list-link">Trust plane</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/trusted-ai/" class="nav-list-link">Trusted AI</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/wallet-connector-binding/" class="nav-list-link">Wallet and data-space connector binding</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/wallet-unit-attestation/" class="nav-list-link">Wallet unit attestation and lifecycle</a></li></ul></li><li class="nav-list-item"><a href="/business-wallet-requirements/research/" class="nav-list-link">Research and reading</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/changelog/" class="nav-list-link">What changed</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/downloads/" class="nav-list-link">Downloads</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/about/" class="nav-list-link">About</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/figures/" class="nav-list-link">Figure gallery</a></li></ul></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="Requirements submenu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+      </button><a href="/business-wallet-requirements/requirements/" class="nav-list-link">Requirements</a><ul class="nav-list"><li class="nav-list-item"><a href="/business-wallet-requirements/requirements/methodology/" class="nav-list-link">Methodology</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/requirements/review/" class="nav-list-link">Review list</a></li></ul></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="Perspectives submenu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+      </button><a href="/business-wallet-requirements/perspectives/" class="nav-list-link">Perspectives</a><ul class="nav-list"><li class="nav-list-item"><a href="/business-wallet-requirements/perspectives/use-cases/" class="nav-list-link">Use cases</a></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="Business cases submenu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+      </button><a href="/business-wallet-requirements/perspectives/business-cases/" class="nav-list-link">Business cases</a><ul class="nav-list"><li class="nav-list-item"><a href="/business-wallet-requirements/perspectives/business-cases/macro/" class="nav-list-link">Macroeconomic case</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/perspectives/business-cases/ecosystem/" class="nav-list-link">Ecosystem case</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/perspectives/business-cases/company/" class="nav-list-link">Company case</a></li></ul></li></ul></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="Legal & compliance submenu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+      </button><a href="/business-wallet-requirements/legal/" class="nav-list-link">Legal & compliance</a><ul class="nav-list"><li class="nav-list-item"><a href="/business-wallet-requirements/legal/roadmap/" class="nav-list-link">Legal roadmap</a></li></ul></li><li class="nav-list-item"><a href="/business-wallet-requirements/domains/" class="nav-list-link">Domains</a></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="Architecture submenu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+      </button><a href="/business-wallet-requirements/architecture/" class="nav-list-link">Architecture</a><ul class="nav-list"><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="Architecture decisions submenu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+      </button><a href="/business-wallet-requirements/architecture/decisions/" class="nav-list-link">Architecture decisions</a><ul class="nav-list"><li class="nav-list-item"><a href="/business-wallet-requirements/architecture/decisions/dec-01/" class="nav-list-link">DEC-01 Credential data model, semantics and formats</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/architecture/decisions/dec-02/" class="nav-list-link">DEC-02 Employees: EUDI Wallet or business wallet</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/architecture/decisions/dec-03/" class="nav-list-link">DEC-03 Key custody and wallet architecture</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/architecture/decisions/dec-04/" class="nav-list-link">DEC-04 Trust framework and discovery</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/architecture/decisions/dec-06/" class="nav-list-link">DEC-06 Credential lifecycle and revocation</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/architecture/decisions/dec-07/" class="nav-list-link">DEC-07 Protocols and interfaces</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/architecture/decisions/dec-08/" class="nav-list-link">DEC-08 Privacy and data protection</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/architecture/decisions/dec-09/" class="nav-list-link">DEC-09 Evidence, logging and audit</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/architecture/decisions/dec-10/" class="nav-list-link">DEC-10 AI-first: agent protocols, identity and mandates</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/architecture/decisions/dec-11/" class="nav-list-link">DEC-11 Identifiers, assurance and partners outside the EU</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/architecture/decisions/dec-13/" class="nav-list-link">DEC-13 Delegation and mandates for employees, machines and AI agents</a></li></ul></li><li class="nav-list-item"><a href="/business-wallet-requirements/architecture/brief/" class="nav-list-link">Stakeholder brief</a></li></ul></li><li class="nav-list-item"><a href="/business-wallet-requirements/traceability/" class="nav-list-link">Traceability & graph</a></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="Ecosystem submenu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+      </button><a href="/business-wallet-requirements/ecosystem/" class="nav-list-link">Ecosystem</a><ul class="nav-list"><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="Ecosystems & initiatives submenu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+      </button><a href="/business-wallet-requirements/ecosystem/initiatives/" class="nav-list-link">Ecosystems & initiatives</a><ul class="nav-list"><li class="nav-list-item"><a href="/business-wallet-requirements/ecosystem/initiatives/catenax/" class="nav-list-link">Catena-X</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/ecosystem/initiatives/webuild/" class="nav-list-link">WE BUILD</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/ecosystem/initiatives/manufacturingx/" class="nav-list-link">Manufacturing-X</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/ecosystem/initiatives/factoryx/" class="nav-list-link">Factory-X</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/ecosystem/initiatives/energydatax/" class="nav-list-link">energy data-X</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/ecosystem/initiatives/cirpass2/" class="nav-list-link">CIRPASS-2</a></li></ul></li><li class="nav-list-item"><a href="/business-wallet-requirements/ecosystem/standards/" class="nav-list-link">Standards radar</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/ecosystem/certification/" class="nav-list-link">Certification</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/ecosystem/governance/" class="nav-list-link">Governance</a></li></ul></li></ul>
+  <ul class="nav-list"><li class="nav-list-item external">
+          <a href="https://github.com/cstoecker/business-wallet-requirements/discussions" class="nav-list-link external"
+            
+              target="_blank" rel="noopener noreferrer"
+            
+          >
+            Discussions
+            <svg viewBox="0 0 24 24" aria-labelledby="svg-external-link-title"><use xlink:href="#svg-external-link"></use></svg>
+          </a>
+        </li></ul>
+</nav>
+
+
+<div class="d-md-block d-none site-footer">
+  
+  
+    This site uses <a href="https://github.com/just-the-docs/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.
+  
+  </div>
+</header>
+
+  
+  <div class="main" id="top">
+    <div id="main-header" class="main-header">
+  
+    
+
+<div class="search" role="search">
+  <div class="search-input-wrap">
+    <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search European Business Wallet Requirements" autocomplete="off">
+    <label for="search-input" class="search-label">
+      <span class="sr-only">Search European Business Wallet Requirements</span>
+      <svg viewBox="0 0 24 24" class="search-icon" aria-hidden="true"><use xlink:href="#svg-search"></use></svg>
+    </label>
+  </div>
+  <div id="search-results" class="search-results"></div>
+</div>
+
+  
+  
+  
+    <nav aria-label="Auxiliary" class="aux-nav">
+  <ul class="aux-nav-list">
+    
+      <li class="aux-nav-list-item">
+        <a href="https://spherity.github.io/spherity-research/" class="site-button"
+          
+        >
+          Spherity Research
+        </a>
+      </li>
+    
+      <li class="aux-nav-list-item">
+        <a href="https://github.com/spherity/business-wallet-requirements/discussions" class="site-button"
+          
+        >
+          Discussions
+        </a>
+      </li>
+    
+      <li class="aux-nav-list-item">
+        <a href="/contact/" class="site-button"
+          
+        >
+          Contact
+        </a>
+      </li>
+    
+      <li class="aux-nav-list-item">
+        <a href="https://github.com/cstoecker/business-wallet-requirements" class="site-button"
+          
+        >
+          GitHub
+        </a>
+      </li>
+    
+  </ul>
+</nav>
+
+  
+</div>
+
+    <div class="main-content-wrap">
+      <div class="status-banner" role="region" aria-label="Draft status">Draft for review. Based on the Commission proposal COM(2025) 838, which may change. Analysis, not legal advice.</div>
+
+      <nav aria-label="Breadcrumb" class="breadcrumb-nav">
+  <ol class="breadcrumb-nav-list">
+    <li class="breadcrumb-nav-list-item"><a href="/business-wallet-requirements/architecture/">Architecture</a></li>
+    <li class="breadcrumb-nav-list-item"><a href="/business-wallet-requirements/architecture/decisions/">Architecture decisions</a></li>
+    <li class="breadcrumb-nav-list-item"><span>DEC-03 Key custody and wallet architecture</span></li>
+  </ol>
+</nav>
+
+
+      <div id="main-content" class="main-content">
+        <main>
+          
+            <h1 id="dec-03-key-custody-and-wallet-architecture">
+  
+  
+    <a href="#dec-03-key-custody-and-wallet-architecture" class="anchor-heading" aria-labelledby="dec-03-key-custody-and-wallet-architecture"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> DEC-03 Key custody and wallet architecture
+  
+  
+</h1>
+    
+
+<p><em>Analysis for decision, not a decision. The European Business Wallet (EBW) is a Commission proposal (COM(2025) 838) with an Annex; the Council text submitted for its general approach (ST 9684/26, 2 June 2026) differs from it, and the outcome of the Council meeting on 9 June 2026 was not read. The EUDI Wallet rules (eIDAS Article 5a, Regulations 2024/2979 and 2024/2981, the ARF) concern a wallet of a natural person and bind the EBW only where the EBW text refers to them. Analysis, not legal advice. “Not stated” means that no source read says it.</em></p>
+<h2 id="question">
+  
+  
+    <a href="#question" class="anchor-heading" aria-labelledby="question"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Question
+  
+  
+</h2>
+    
+
+<p>Where do the keys of an organisation live, and what does that mean for control, assurance and exit? Four placements are conceivable, and they can be combined:</p>
+
+<ul>
+  <li><strong>(1)</strong> on a <strong>device the owner holds</strong> (local or external secure device, for example a smart card, token or secure element);</li>
+  <li><strong>(2)</strong> in a <strong>back-end operated by the wallet provider</strong> (the cryptographic device as a remote hardware security module, HSM);</li>
+  <li><strong>(3)</strong> in an <strong>HSM operated by the organisation itself</strong> (on premises or in its own cloud account);</li>
+  <li><strong>(4)</strong> with a <strong>qualified trust service provider (QTSP)</strong> that creates seals and signatures remotely on behalf of the owner, orchestrated by the wallet.</li>
+</ul>
+
+<p>The decision touches cluster K04 (wallet unit attestation and key protection) and, through it, assurance, revocation and exit. Wallet unit lifecycle and status are treated in DEC-06; this page repeats from it only the points that bear on keys.</p>
+<h2 id="what-the-requirement-set-says">
+  
+  
+    <a href="#what-the-requirement-set-says" class="anchor-heading" aria-labelledby="what-the-requirement-set-says"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> What the requirement set says
+  
+  
+</h2>
+    
+
+<p>K04 has 60 tagged requirements, 18 of them with priority P1. The P1 requirements that drive this decision are:</p>
+
+<div class="table-scroll"><div class="table-wrapper"><table><thead><tr><th>Requirement</th><th>Title</th><th>Source</th><th>Proposal</th></tr></thead><tbody>
+<tr><td><a href="/business-wallet-requirements/requirements/ebw-aif-015/">EBW-AIF-015</a></td><td>Owner identity preserved under delegation</td><td>SRC-EBW-PROPOSAL, Recital 18</td><td>proposal</td></tr>
+<tr><td><a href="/business-wallet-requirements/requirements/ebw-cer-009/">EBW-CER-009</a></td><td>Critical-asset operations meet LoA substantial design rules</td><td>SRC-EBW-PROPOSAL, Annex, point 3(3)</td><td>proposal</td></tr>
+<tr><td><a href="/business-wallet-requirements/requirements/ebw-cer-010/">EBW-CER-010</a></td><td>Secure cryptographic components meet LoA substantial design</td><td>SRC-EBW-PROPOSAL, Annex, point 4(1)(g)</td><td>proposal</td></tr>
+<tr><td><a href="/business-wallet-requirements/requirements/ebw-cer-012/">EBW-CER-012</a></td><td>Activate a unit only with a certified secure device</td><td>SRC-ARF-HLR, Annex 2.02, Topic 40, WIAM_08</td><td>standard</td></tr>
+<tr><td><a href="/business-wallet-requirements/requirements/ebw-fun-005/">EBW-FUN-005</a></td><td>Qualified signing and sealing</td><td>SRC-EBW-PROPOSAL, Article 5(1)(d)</td><td>proposal</td></tr>
+<tr><td><a href="/business-wallet-requirements/requirements/ebw-fun-028/">EBW-FUN-028</a></td><td>Key generation, proof of possession and secure erasure</td><td>SRC-CIR-2024-2979, Article 5(1)(c)-(e)</td><td>in force</td></tr>
+<tr><td><a href="/business-wallet-requirements/requirements/ebw-fun-050/">EBW-FUN-050</a></td><td>Secure interface to local, external or remote QSCD</td><td>SRC-EBW-PROPOSAL, Annex, point 8(2)</td><td>proposal</td></tr>
+<tr><td><a href="/business-wallet-requirements/requirements/ebw-gov-002/">EBW-GOV-002</a></td><td>Provider establishment and control</td><td>SRC-EBW-PROPOSAL, Article 7(2)</td><td>proposal</td></tr>
+<tr><td><a href="/business-wallet-requirements/requirements/ebw-nfr-008/">EBW-NFR-008</a></td><td>Remote signature creation data managed only by qualified provider</td><td>SRC-EIDAS-CONSOL, Article 29(1a)</td><td>in force</td></tr>
+<tr><td><a href="/business-wallet-requirements/requirements/ebw-nfr-039/">EBW-NFR-039</a></td><td>Logging policy for signing, sealing and notifications</td><td>SRC-COUNCIL-ST-9684-26, Annex, point 7(1)</td><td>proposal</td></tr>
+<tr><td><a href="/business-wallet-requirements/requirements/ebw-nfr-041/">EBW-NFR-041</a></td><td>Access events logged with verifiable proofs of authorisation</td><td>SRC-COUNCIL-ST-9684-26, Annex, point 12(2)(c)</td><td>proposal</td></tr>
+<tr><td><a href="/business-wallet-requirements/requirements/ebw-nfr-044/">EBW-NFR-044</a></td><td>Cryptographic agility by modular design</td><td>SRC-NISCG-PQC-ROADMAP, Section 6.3 (Next Steps), first item; definition of cryptographic agility in Section 3.2</td><td>ecosystem</td></tr>
+<tr><td><a href="/business-wallet-requirements/requirements/ebw-nfr-069/">EBW-NFR-069</a></td><td>Back-end uses secure cryptographic application and device</td><td>SRC-EBW-PROPOSAL, Annex, point 3(1)</td><td>proposal</td></tr>
+<tr><td><a href="/business-wallet-requirements/requirements/ebw-nfr-070/">EBW-NFR-070</a></td><td>Protected channels between wallet components</td><td>SRC-EBW-PROPOSAL, Annex, point 3(2)</td><td>proposal</td></tr>
+<tr><td><a href="/business-wallet-requirements/requirements/ebw-nfr-071/">EBW-NFR-071</a></td><td>Cryptographic operations only after user authentication</td><td>SRC-EBW-PROPOSAL, Annex, point 4(1)(a)</td><td>proposal</td></tr>
+<tr><td><a href="/business-wallet-requirements/requirements/ebw-nfr-075/">EBW-NFR-075</a></td><td>Protection of private keys during their lifetime</td><td>SRC-EBW-PROPOSAL, Annex, point 4(1)(f)</td><td>proposal</td></tr>
+<tr><td><a href="/business-wallet-requirements/requirements/ebw-nfr-086/">EBW-NFR-086</a></td><td>Wallet instance uses a secure cryptographic device</td><td>SRC-CIR-2024-2979, Article 4(1)</td><td>in force</td></tr>
+<tr><td><a href="/business-wallet-requirements/requirements/ebw-nfr-119/">EBW-NFR-119</a></td><td>Provider-held keys used only on the authority of the owner</td><td>SRC-EIDAS-CONSOL, Article 26(1)(c)</td><td>in force</td></tr>
+<tr><td><a href="/business-wallet-requirements/requirements/ebw-tru-010/">EBW-TRU-010</a></td><td>Relying party verification of wallet authenticity</td><td>SRC-EBW-PROPOSAL, Article 6(1)(h)</td><td>proposal</td></tr>
+<tr><td><a href="/business-wallet-requirements/requirements/ebw-tru-011/">EBW-TRU-011</a></td><td>Wallet unit attestation with protected keys</td><td>SRC-EBW-PROPOSAL, Article 6(1)(k)</td><td>proposal</td></tr>
+<tr><td><a href="/business-wallet-requirements/requirements/ebw-tru-013/">EBW-TRU-013</a></td><td>Revocation of wallet validity</td><td>SRC-EBW-PROPOSAL, Article 6(2)(f)</td><td>proposal</td></tr>
+<tr><td><a href="/business-wallet-requirements/requirements/ebw-tru-029/">EBW-TRU-029</a></td><td>Wallet unit attestation signed under a listed certificate</td><td>SRC-CIR-2024-2979, Article 6(1), as replaced by Implementing Regulation (EU) 2026/1731, Article 2(4)(a) (in force 11 August 2026); former Article 3(2) deleted by Article 2(1)</td><td>in force</td></tr>
+<tr><td><a href="/business-wallet-requirements/requirements/ebw-tru-070/">EBW-TRU-070</a></td><td>Wallet unit access only after substantial-level authentication</td><td>SRC-COUNCIL-ST-9684-26, Annex, point 1</td><td>proposal</td></tr>
+<tr><td><a href="/business-wallet-requirements/requirements/ebw-tru-083/">EBW-TRU-083</a></td><td>Wallet provided under an assurance level high scheme</td><td>SRC-EIDAS-CONSOL, Article 5a(11)</td><td>in force</td></tr>
+<tr><td><a href="/business-wallet-requirements/requirements/ebw-tru-099/">EBW-TRU-099</a></td><td>EU Inc filings signed by trust services or business wallet</td><td>SRC-COM-2026-321, Article 23(1) of COM(2026) 321</td><td>proposal</td></tr>
+<tr><td><a href="/business-wallet-requirements/requirements/ebw-tru-101/">EBW-TRU-101</a></td><td>Unit attestation generated and signed per wallet unit</td><td>SRC-EBW-PROPOSAL, Annex, point 2</td><td>proposal</td></tr>
+<tr><td><a href="/business-wallet-requirements/requirements/ebw-tru-102/">EBW-TRU-102</a></td><td>Unit attestation signed under a trusted-list certificate</td><td>SRC-EBW-PROPOSAL, Annex, point 2</td><td>proposal</td></tr>
+<tr><td><a href="/business-wallet-requirements/requirements/ebw-tru-103/">EBW-TRU-103</a></td><td>Unit attestation holds public keys, private keys in secure device</td><td>SRC-EBW-PROPOSAL, Annex, point 5(1)</td><td>proposal</td></tr>
+<tr><td><a href="/business-wallet-requirements/requirements/ebw-tru-104/">EBW-TRU-104</a></td><td>User identification independent of the wallet unit</td><td>SRC-EBW-PROPOSAL, Annex, point 5(2)</td><td>proposal</td></tr>
+<tr><td><a href="/business-wallet-requirements/requirements/ebw-tru-111/">EBW-TRU-111</a></td><td>Owner identification data bound to the receiving unit</td><td>SRC-EBW-PROPOSAL, Annex, point 16(2)</td><td>proposal</td></tr>
+<tr><td><a href="/business-wallet-requirements/requirements/ebw-tru-116/">EBW-TRU-116</a></td><td>Unit attestation consists of instance and key attestations</td><td>SRC-CIR-2026-1731, Annex III (new Annex Ib to Implementing Regulation (EU) 2024/2979), point 1</td><td>in force</td></tr>
+</tbody></table></div></div>
+
+<p>Gaps in the set (facts found in the research, not yet written as requirements): the requirement that the back-end uses a wallet secure cryptographic application and device (Annex point 3(1)), the Council deletion of the assurance-level clauses for critical operations, the provider’s conformity regime without a device certificate (Article 11), and the choice between local, external and remote qualified devices (Annex point 8). One register item is stale: EBW-TRU-029 cites Regulation 2024/2979 Article 3(2), which Regulation 2026/1731 Article 2(1) deletes; it needs review.</p>
+<h2 id="facts-from-the-sources">
+  
+  
+    <a href="#facts-from-the-sources" class="anchor-heading" aria-labelledby="facts-from-the-sources"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Facts from the sources
+  
+  
+</h2>
+    
+
+<p>Each fact has a source and was read in the original text unless marked. “Commission proposal” is COM(2025) 838, “Commission Annex” is its Annex (Cellar copy), “Council text” is ST 9684/26, “in-force law” is eIDAS as consolidated and the implementing regulations named.</p>
+
+<p><strong>What the EBW texts define and require.</strong></p>
+<ul>
+  <li>Commission proposal, Article 3(25): the wallet unit is “a unique configuration” provided to a specific owner that includes front-end, back-end, wallet secure cryptographic applications (WSCA) and wallet secure cryptographic devices (WSCD). The WSCD is “a tamper-resistant device that provides an environment that is linked to and used by the wallet secure cryptographic application” (Article 3(29)). The back-end is “the server-side components, including software, services, and infrastructure” (Article 3(43)).</li>
+  <li>Council text: Article 3(25) lists only front-end and back-end; Article 3(26) lists front-end and back-end; Article 3(28) and (29) are marked “deleted”.</li>
+  <li>Commission Annex point 3(1) and Council Annex point 3(1), same wording: the back-end “shall use at least one Wallet secure cryptographic application and Wallets secure cryptographic device to manage critical assets”.</li>
+  <li>Commission proposal Article 6(1)(l) and Commission Annex points 3(3), 4(1)(b) and 4(1)(g): critical operations meet the requirements for electronic identification means at assurance level substantial. Council text: Annex 3(3), 4(1)(b) and 4(1)(g) read “deleted”, Article 6(1)(l) is absent from the Council Article 6(1) list, and Council Annex point 4(1) addresses “secure cryptographic applications and devices” jointly.</li>
+  <li>Commission proposal Article 6(1)(k): the unit attestation contains “public keys and corresponding private keys protected by a wallet secure cryptographic device”. Council text Article 6(1)(k) is shortened; Council Annex point 5(1) keeps the key-protection wording.</li>
+  <li>Onboarding: Commission proposal Article 6(1)(e) names assurance “substantial” or “high” for the representative’s eID; Council text names “high”. Council Annex point 1 keeps “substantial” for user access to the unit, and access is granted only after successful authentication of the user.</li>
+  <li>Signing and sealing: the core function is to “sign by means of qualified electronic signatures and seal by means of qualified electronic seals, as applicable” (Commission proposal Article 5(1)(d)). Commission Annex point 8 and Council Annex point 8 (same wording): certificates are linked to qualified devices “either local, external, or remote” in relation to the unit, and the solution can interface with “local, external, or remotely managed” devices.</li>
+  <li>Signature creation applications may be provided by the wallet provider, a trust service provider or a relying party; they may be integrated into or external to the back-end, and if integrated and relying on a remote qualified device they “shall support the application programming interface” set out in implementing acts (Council Annex point 9(1), 9(3); Commission Annex point 9). No named standard appears in the EBW texts.</li>
+  <li>The unit presents its unit attestation “to European Business Wallet relying parties or European Business Wallet units that request it” (Annex point 13(4), Council wording; the Commission Annex has the same point).</li>
+  <li>Conformity of the provider: Commission proposal Article 11(2)(e) asks for a declaration of conformity, and qualified trust service providers are not reviewed (Article 11(3)). Council text Article 11(2aa) asks applicants to demonstrate conformity with Articles 5, 6, 7 and the Annex “through a self-assessment report”, with a risk assessment and reuse of valid eIDAS reports. No EBW text requires a certificate for the WSCA, the WSCD or the solution.</li>
+  <li>Security duties: Article 19a of Regulation (EU) 910/2014 (not for qualified trust service providers), NIS2 and supplier standards (Commission proposal Article 7(3) to (5)). The Council text adds an update of the self-assessment every 24 months, or immediately after a significant incident or a substantial change to “cryptographic components” (Article 7(6b)).</li>
+  <li>Providers must be established in the Union, have their principal place of business and main operations there, and “shall not be subject to control by a third country or by a third-country entity” (Commission proposal Article 7(2)).</li>
+  <li>Exit: owners can export data on termination of service or revocation of the provider’s notification (Article 5(1)(l)); the provider ensures “transfer or deletion” of owner data on instruction (Article 7(6)(f)). The Council text adds import for “data portability across European Business Wallet providers” (point (la)) and Annex point 10 “secure export, import and portability” “in at least an open format”; the Commission Annex point 10 ties portability to assurance level substantial. None of these texts says whether private keys can be exported or must be re-created.</li>
+  <li>Logs are accessible to the provider “where it is necessary for the provision of European Business Wallets services” (Council Annex point 7(5)). Neither EBW text contains the explicit prior-consent condition that Regulation 2024/2979 Article 9(5) sets for EUDI Wallet logs.</li>
+  <li>Wallet validity can be revoked where the provider is not on the list (Commission proposal Article 6(2)(f)); supervisors can revoke the inclusion of a non-compliant provider (Article 13(5)(k)) and implementing acts may suspend it (Article 13(12)). The texts do not say how keys held by that provider pass to another provider.</li>
+  <li>Absence: the words custody, hosted, HSM and hardware security module do not occur in the proposal or the Council text (searched). No provision states where the keys of an owner must be held.</li>
+</ul>
+
+<p><strong>Signatory, seal creator and remote qualified devices (in-force law, eIDAS).</strong></p>
+<ul>
+  <li>A signatory is “a natural person who creates an electronic signature”; the creator of a seal is “a legal person who creates an electronic seal” (Article 3(9), 3(24)).</li>
+  <li>A remote qualified creation device is managed by a qualified trust service provider “on behalf of a signatory”, and for seals “on behalf of a seal creator” (Article 3(23a), 3(23b)). Creation data are generated, managed or duplicated for back-up “only on behalf of the signatory, at the request of the signatory, and by a qualified trust service provider” (Article 29(1a)); Article 39a applies Article 29a to seals.</li>
+  <li>Back-up copies are allowed only at the same security level and in the minimum number needed for continuity (Article 29a(1)(b)). The provider complies with the certification report of the specific device (Article 29a(1)(c)); certification and cross-border recognition are in Articles 30 and 24a(2) and (3).</li>
+  <li>Advanced seals use data that the creator “can, with a high level of confidence under its control, use” (Article 36(1)(c)). Qualified seal certificates indicate where the creation data are in a qualified device (Annex III, point (j)). EUDI Wallets support qualified signing and sealing by means of qualified devices (Article 5a(5)(a)(xi)) and are provided at assurance level high (Article 5a(11)).</li>
+  <li>Commission Implementing Decision 2016/650 lists ISO/IEC 15408, ISO/IEC 18045 and EN 419 211 for devices in a user-managed environment; for devices managed by a QTSP it requires comparable security levels, notified to the Commission, until a list of standards exists.</li>
+</ul>
+
+<p><strong>Standards for remote signing and sealing.</strong></p>
+<ul>
+  <li>ETSI TS 119 431-1 (read) covers providers of a remote qualified device: “The service consists of a server signing application and a QSCD / SCDev.” It incorporates EN 419 241-1 by reference and applies the requirements “mutatis mutandis to electronic seals” (clauses 1 and 4.1). It has three policies (lightweight, normalised, EU policy v2, clause 4.3.2 and Annex A). Under the EU policy v2 the signing key “shall be generated in a QSCD”; the signature activation module “should be certified to be conformant to EN 419241-2”; identity-based activation ends “at most 30 minutes after the end of the identity verification process”.</li>
+  <li>For a legal-person signer, identity proofing follows EN 419241-1 at level substantial or higher, and activation by identity needs “an explicit action (not just a checkbox)” of the identified natural person who “is allowed to sign in the name of the legal person” (SIG-6.3.1-16, LNK-6.2.2-02B); the EU policy v2 applies control in place of sole control for a legal person (SIG-A.6-07A).</li>
+  <li>Key life cycle: “If the public key certificate is revoked, the corresponding signing key shall be destroyed”; the provider destroys a key when the signer requests it; back-up “shall not exceed the minimum needed” (DEL-6.3.2-01, -02, GEN-6.3.3-04). The provider should check that the certificate is valid before using the key (SIG-6.3.1-08).</li>
+  <li>CSC API v2.0.0.2 (read in part) covers architectures where the key is “in the cloud”; architectures where the key is in the signer’s hand are not covered as a particular case. It supports sole control levels SCAL1 and SCAL2; for SCAL2 the activation data are linked to the documents and a two-factor authorisation is needed (clauses 1, 6.1, 8.2). For seals it describes automated processes and three strategies to avoid human interaction per signature, and a multi-signature authorisation “SHALL explicitly specify the total number of signatures to be authorized” (clauses 8.5 and 9).</li>
+  <li>ETSI TS 119 431-2 and ETSI TS 119 432: the register lists both as snippet <span class="vtag v-todo">to verify</span>. The research read the scope, clause 6.4.3 and Annex A.8 to A.10 of TS 119 432 and the scope and annexes B and C of TS 119 431-2, not the full texts. TS 119 432 is “limited to remote server signing”; local signing, with the key on the signer’s device, is a possible solution whose protocols “are not covered”. In clause 6.4.3 the wallet “coordinates AdES signature creation through a SCASC, that may be part of the EUDIW or of the EUDIW backend”, and the request travels as OpenID4VP transaction data.</li>
+  <li>Regulation 2026/1731 replaces the Cloud Signature Consortium reference in Annex IV of Regulation 2024/2979 with “ETSI TS 119 432 v1.3.1 (2026-03) clauses 6.4.3, A.6, A.7 and A.8”. The EBW Annex point 9(3) points to “implementing acts”.</li>
+  <li>ARF Topic 16 (read): QES_01 allows a qualified device “either local, external, or remotely managed”; QES_23 requires wallet providers and QTSPs to comply with SCAL 2 of EN 419 241-1. ARF Discussion Topic AB (the register lists it as snippet, <span class="vtag v-todo">to verify</span>; the research read section 4.2 in part): “Although the liability on signature creation compliance is on the QTSP, the Wallet Unit shall follow applicable requirements to enable compliance of the involved QTSP.” It is a discussion paper, not normative.</li>
+</ul>
+
+<p><strong>EUDI Wallet architecture for keys (for comparison, not binding on the EBW).</strong></p>
+<ul>
+  <li>The ARF allows four WSCD architectures: remote WSCD (a “remote HSM”), local external, local internal and local native. A remote WSCD is “typically” an HSM on a secure server, used where the device lacks secure hardware or the provider wants no dependency on it; the provider must ensure “only the legitimate Wallet Instance can access the remote HSM”, for example with “a split-key architecture” (ARF main text, sections 4.5.1 and 4.5.2). One WSCD may be part of several wallet units, for example a remote HSM, and a wallet instance can be a web application or a server (section 4.3.2).</li>
+  <li>ARF Topic 40: the provider “SHALL NOT access the contents of a Wallet Instance” (WIAM_12a) and must implement strict controls where contents sit in a provider service (WIAM_12c); the note says the unit “cannot fully prevent” such access. The ARF assumes “a User device is a personal device”.</li>
+  <li>ARF key rules: the provider activates a unit only if its WSCA/WSCD is certified for assurance level high (WIAM_08); “A WSCA SHALL NOT enable export of private keys from a WSCD” (WUA_16a). Regulation 2024/2979 Article 4(1) requires at least one WSCD for critical assets; Article 11(1) allows local, external or remote qualified devices; Article 11(3) gives natural persons free qualified signing “at least for non-professional purposes”.</li>
+  <li>Regulation 2024/2981: certification covers the provision and operation of wallet solutions; the WSCD is assessed against assurance level high, with vulnerability assessment at AVA_VAN.5 unless justified; where verification of the WSCD stays inconclusive and no compensating requirements are possible, no certificate is issued (Article 8(2), Annex IV points 2(2) to 2(6)). Cancelling a certificate “might have severe consequences such as the revocation of all deployed wallet units” (recital, Article 12).</li>
+  <li>Regulation 2026/1731: the unit attestation comprises one or more wallet instance attestations and one or more key attestations, signed JWTs; the key attestation carries ‘key_storage’ and ‘user_authentication’ with value ‘iso_18045_high’ where a WSCD is mentioned; the instance attestation expires less than 24 hours after the provider’s integrity check; Regulation 2024/2979 Article 3(2) is deleted. Wallet providers use only the cryptographic mechanisms of its Annex Ia; the EBW texts do not refer to it.</li>
+  <li>In the EUDI Wallet the unit attestation goes only to a PID provider or attestation provider during issuance, “not to a Relying Party” (ARF Topic 9, WUA_07 and WUA_24). The EBW Annex point 13(4) differs (see above).</li>
+  <li>Provider revocation and suspension: Article 5e of eIDAS and Regulation 2025/847 require suspension and withdrawal of EUDI Wallets after a breach, with evaluation of wallet unit attestation revocation within 24 hours; revoked attestations “cannot revert to a valid state” (Regulation 2025/847 Article 4 and Article 8). The risk register of Regulation 2024/2981 names the threat “An attacker can prevent suspension or revocation of a wallet” (Annex I, TR79, read in part).</li>
+</ul>
+
+<p><strong>WE BUILD (ecosystem specification, not law).</strong></p>
+<ul>
+  <li>The WE BUILD architecture decision on wallet unit attestation and lifecycle (status Proposed, 11 February 2026) says the EBW “operates within a cloud or on-premise environment”, requires “A valid WUA” for a unit to operate, and does not consider the wallet instance attestation “for the first iteration”. The holder authorisation handshake rulebook has relying parties check that the holder’s unit attestation is not revoked. The blueprint leaves the WSCA/WSCD architecture “to be specified by the Architecture and Wallets groups” and names “Theft of a YubiKey” as a revocation example (read in part).</li>
+</ul>
+
+<p><strong>Overlap with DEC-06.</strong> Key life cycle follows certificate status (TS 119 431-1 DEL-6.3.2-01, SIG-6.3.1-08), and wallet unit revocation (ARF Topic 38) and the split into wallet instance and key attestation (Regulation 2026/1731) are treated there. The EBW texts speak of one “wallet unit attestation”; whether implementing acts follow the split is open.</p>
+<h2 id="decision-criteria">
+  
+  
+    <a href="#decision-criteria" class="anchor-heading" aria-labelledby="decision-criteria"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Decision criteria
+  
+  
+</h2>
+    
+
+<p>Criteria marked <strong>source</strong> are stated in a source; <strong>driver</strong> means an architecture or business driver that no source states and that a stakeholder has to confirm.</p>
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Criterion</th>
+      <th>Basis</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>C1</td>
+      <td>Control of the keys by the owner (sole control, or control for a legal person)</td>
+      <td>source: eIDAS Article 36(1)(c); TS 119 431-1 clause 4.1 and SIG-A.6-07A; CSC SCAL2</td>
+    </tr>
+    <tr>
+      <td>C2</td>
+      <td>Assurance level of key protection (substantial or high; certified WSCD)</td>
+      <td>source: Commission Annex 3(3), 4(1)(g) against Council deletion; Regulation 2024/2981 for EUDI Wallets; driver: level needed by business use cases</td>
+    </tr>
+    <tr>
+      <td>C3</td>
+      <td>Qualified status of signatures and seals (qualified device, remote only through a QTSP)</td>
+      <td>source: eIDAS Article 29(1a), 29a, 39a; Article 5(1)(d)</td>
+    </tr>
+    <tr>
+      <td>C4</td>
+      <td>Natural person signs, legal person seals; who may trigger use of the key</td>
+      <td>source: eIDAS Article 3(9), 3(24); TS 119 431-1 SIG-6.3.1-16; driver: internal approval rules</td>
+    </tr>
+    <tr>
+      <td>C5</td>
+      <td>Availability and continuity (back-up, redundancy, recovery after loss)</td>
+      <td>source: eIDAS Article 29a(1)(b); TS 119 431-1 GEN-6.3.3-04; driver: availability targets</td>
+    </tr>
+    <tr>
+      <td>C6</td>
+      <td>Dependence on the provider and exit (portability, re-creation of keys, transfer on provider failure)</td>
+      <td>source: Article 5(1)(l), 7(6)(f), Council (la) and Annex 10; ARF WUA_16a; driver: switching cost</td>
+    </tr>
+    <tr>
+      <td>C7</td>
+      <td>Provider and insider risk (provider access to keys, logs, content)</td>
+      <td>source: ARF WIAM_12a to 12c; Council Annex 7(5); driver: threat model for hosted keys</td>
+    </tr>
+    <tr>
+      <td>C8</td>
+      <td>Evidence and conformity burden for the provider</td>
+      <td>source: Article 11, Council Article 11(2aa), eIDAS Article 29a and 30; driver: cost of evaluation</td>
+    </tr>
+    <tr>
+      <td>C9</td>
+      <td>Verifiability of the unit by counterparties</td>
+      <td>source: Annex 13(4); Regulation 2026/1731 Annex Ib; WE BUILD decision; driver: what relying parties check</td>
+    </tr>
+    <tr>
+      <td>C10</td>
+      <td>Interoperability of signing interfaces</td>
+      <td>source: Regulation 2026/1731 Annex VI; TS 119 432; Annex 9(3)</td>
+    </tr>
+    <tr>
+      <td>C11</td>
+      <td>Union establishment and freedom from third-country control of the key-holding provider</td>
+      <td>source: Article 7(2)</td>
+    </tr>
+    <tr>
+      <td>C12</td>
+      <td>Cost and scalability for many units and small owners</td>
+      <td>driver</td>
+    </tr>
+    <tr>
+      <td>C13</td>
+      <td>Cryptographic agility and post-quantum migration of the key store</td>
+      <td>source (partial): Regulation 2026/1731 Annex Ia for EUDI Wallets; requirements EBW-NFR-021 and EBW-NFR-044; driver: timing</td>
+    </tr>
+    <tr>
+      <td>C14</td>
+      <td>Multi-user access to keys under owner authorisation, with audit</td>
+      <td>source: Article 5(1)(j), Annex 12(2)(c); driver: segregation rules</td>
+    </tr>
+  </tbody>
+</table></div>
+<h2 id="options">
+  
+  
+    <a href="#options" class="anchor-heading" aria-labelledby="options"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Options
+  
+  
+</h2>
+    
+
+<p>The four patterns are not mutually exclusive. A wallet may combine them, for example a provider-hosted wallet key with a QTSP-managed qualified seal key.</p>
+<h3 id="1-keys-on-a-device-the-owner-holds">
+  
+  
+    <a href="#1-keys-on-a-device-the-owner-holds" class="anchor-heading" aria-labelledby="1-keys-on-a-device-the-owner-holds"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> (1) Keys on a device the owner holds
+  
+  
+</h3>
+    
+
+<p><strong>What the sources enable.</strong> The ARF lists local external, internal and native WSCDs as allowed for the EUDI Wallet. The QES texts accept a “local” or “external” qualified device (Annex point 8, ARF QES_01). The owner keeps physical possession, which matches the control wording of eIDAS Article 36(1)(c).</p>
+
+<p><strong>What they restrict.</strong> Annex point 3(1) places the WSCA and WSCD use at the back-end, and no source says how a device held only by the owner fits. The ARF assumes a personal device, and no EBW text says how several users share one device. WUA_16a excludes key export, so a lost device means new keys. TS 119 432 does not cover protocols for a key on the signer’s device, and the CSC API does not cover it as a particular case.</p>
+
+<p><strong>What they leave open.</strong> How a device is assigned to an owner and to which users; how an owner withdraws access to a physical device when an authorised user leaves; how the unit attestation is built for an EBW with a local device, given that the Council text drops the device from the unit definition.</p>
+<h3 id="2-keys-in-a-back-end-operated-by-the-wallet-provider">
+  
+  
+    <a href="#2-keys-in-a-back-end-operated-by-the-wallet-provider" class="anchor-heading" aria-labelledby="2-keys-in-a-back-end-operated-by-the-wallet-provider"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> (2) Keys in a back-end operated by the wallet provider
+  
+  
+</h3>
+    
+
+<p><strong>What the sources enable.</strong> The EBW definitions place a back-end in the unit and require it to use a WSCA and WSCD. The ARF describes the remote HSM as typical where device hardware is missing and for web wallets and servers, and one WSCD may serve several units with isolation between them. The WE BUILD decision assumes “a cloud or on-premise environment”.</p>
+
+<p><strong>What they restrict.</strong> Limits on provider access are strict controls, not technical impossibility (WIAM_12c and its note). The provider must be established in the Union and free of third-country control (Article 7(2)). Under the Council text it evidences conformity by self-assessment, not certification. Keys are not exportable in the ARF rules (WUA_16a), so exit would mean re-creating keys and re-issuing bound attestations, which no EBW text describes. Qualified signatures or seals cannot be created with keys held by a provider that is not a QTSP running a qualified remote device service (Article 29(1a)).</p>
+
+<p><strong>What they leave open.</strong> The assurance level of the HSM (substantial in the Commission text, not stated in the Council text); whether a certified WSCD is required at all for the EBW; how the owner proves control to counterparties; recovery after provider failure or removal from the list.</p>
+<h3 id="3-keys-in-an-hsm-operated-by-the-organisation-itself">
+  
+  
+    <a href="#3-keys-in-an-hsm-operated-by-the-organisation-itself" class="anchor-heading" aria-labelledby="3-keys-in-an-hsm-operated-by-the-organisation-itself"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> (3) Keys in an HSM operated by the organisation itself
+  
+  
+</h3>
+    
+
+<p><strong>What the sources enable.</strong> The WE BUILD decision names “on-premise” operation. The ARF notes that wallet providers, PID providers and trusted list providers typically use a certified HSM (ARF main text, chapter 7). An owner can be the entity with the strongest control over the key (Article 36(1)(c)).</p>
+
+<p><strong>What they restrict.</strong> The EBW provider must be a notified provider on the list, established in the Union, so an owner-run HSM would have to be integrated as the WSCD of a provider’s solution. For qualified seals the remote operator must be a QTSP (Article 29(1a)). The sole control levels of EN 419 241 are applied to the QTSP service in the standards read, not to an owner-run store. The unit attestation describes the components of the unit or allows their authentication and validation (Article 3(24) of the proposal), and no source describes how a component run by the owner would be covered.</p>
+
+<p><strong>What they leave open.</strong> Whether an owner-operated HSM counts as WSCD in the sense of Article 3(29); who is liable and who evidences certification; how the provider verifies the owner-operated component for the unit attestation; the minimum evaluation level.</p>
+<h3 id="4-remote-qualified-sealing-and-signing-by-a-qtsp-orchestrated-by-the-wallet">
+  
+  
+    <a href="#4-remote-qualified-sealing-and-signing-by-a-qtsp-orchestrated-by-the-wallet" class="anchor-heading" aria-labelledby="4-remote-qualified-sealing-and-signing-by-a-qtsp-orchestrated-by-the-wallet"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> (4) Remote qualified sealing and signing by a QTSP, orchestrated by the wallet
+  
+  
+</h3>
+    
+
+<p><strong>What the sources enable.</strong> eIDAS defines the remote qualified device as a trust service on behalf of the creator. Annex points 8 and 9 allow remote qualified devices and a signature creation application from a trust service provider. TS 119 431-1 gives policy requirements, and TS 119 432 gives a wallet-orchestrated flow (read in part). The ARF requires SCAL 2 for remote QES in the EUDI Wallet, and Regulation 2026/1731 fixes the interface reference for the EUDI Wallet.</p>
+
+<p><strong>What they restrict.</strong> Keys are generated and managed only on behalf of the creator, at its request, by the QTSP; back-up is limited to the minimum. Identity-based activation needs an explicit action by the identified natural person. An EBW has no device certification requirement of its own, so the qualified path brings its evidence through the QTSP’s conformity regime. The key is destroyed when the certificate is revoked.</p>
+
+<p><strong>What they leave open.</strong> How a legal-person seal is activated by several authorised users in the wallet (the standards read give the rule for one identified natural person per activation); whether sole control levels for seals are defined where the text says control (EN 419 241-1 not read); transfer of keys or re-issuance of certificates when changing QTSP; the relation between the QTSP’s key and the wallet’s own WSCD keys.</p>
+<h2 id="assessment-against-the-criteria">
+  
+  
+    <a href="#assessment-against-the-criteria" class="anchor-heading" aria-labelledby="assessment-against-the-criteria"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Assessment against the criteria
+  
+  
+</h2>
+    
+
+<p>How far the <em>sources</em> support each option for each criterion. “Not stated” means no source speaks to it; the cell does not say the option fails.</p>
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Criterion</th>
+      <th>(1) owner device</th>
+      <th>(2) provider back-end</th>
+      <th>(3) owner HSM</th>
+      <th>(4) QTSP remote</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>C1 Owner control</td>
+      <td>Physical possession; sharing among users not stated</td>
+      <td>Strict controls on provider access, not impossibility (WIAM_12c)</td>
+      <td>Strongest in principle; integration not stated</td>
+      <td>Sole control or control levels apply to the QTSP service</td>
+    </tr>
+    <tr>
+      <td>C2 Assurance of key protection</td>
+      <td>Not stated for the EBW; ARF high for EUDI Wallet</td>
+      <td>Substantial in Commission Annex, not stated in Council text</td>
+      <td>Not stated</td>
+      <td>Qualified device certification (Article 30)</td>
+    </tr>
+    <tr>
+      <td>C3 Qualified status</td>
+      <td>Local or external qualified device accepted (Annex 8)</td>
+      <td>Qualified only with a QTSP service (Article 29(1a))</td>
+      <td>QTSP needed for remote qualified seals</td>
+      <td>Yes, by definition</td>
+    </tr>
+    <tr>
+      <td>C4 Who triggers use</td>
+      <td>Not stated</td>
+      <td>Not stated</td>
+      <td>Not stated</td>
+      <td>Explicit action of an identified natural person (SIG-6.3.1-16)</td>
+    </tr>
+    <tr>
+      <td>C5 Continuity</td>
+      <td>Lost device means new keys (WUA_16a)</td>
+      <td>Not stated for the EBW</td>
+      <td>Not stated</td>
+      <td>Back-up at minimum and same level (Article 29a(1)(b))</td>
+    </tr>
+    <tr>
+      <td>C6 Exit</td>
+      <td>Not stated</td>
+      <td>Export of keys not stated; data transfer or deletion (Article 7(6)(f))</td>
+      <td>Not stated</td>
+      <td>Change of QTSP not stated</td>
+    </tr>
+    <tr>
+      <td>C7 Provider risk</td>
+      <td>Not stated</td>
+      <td>Provider can read logs where necessary (Council Annex 7(5))</td>
+      <td>Reduced provider role; not stated</td>
+      <td>QTSP under certification and supervision</td>
+    </tr>
+    <tr>
+      <td>C8 Conformity burden</td>
+      <td>Not stated</td>
+      <td>Self-assessment in Council text (Article 11(2aa))</td>
+      <td>Not stated</td>
+      <td>QTSP conformity regime</td>
+    </tr>
+    <tr>
+      <td>C9 Verifiability</td>
+      <td>Not stated</td>
+      <td>Unit attestation shown to relying parties (Annex 13(4))</td>
+      <td>Not stated</td>
+      <td>Certificate and trusted list</td>
+    </tr>
+    <tr>
+      <td>C10 Interfaces</td>
+      <td>Not covered by TS 119 432 or CSC API</td>
+      <td>Annex 9(3), implementing acts</td>
+      <td>Not stated</td>
+      <td>TS 119 432 for the EUDI Wallet; EBW names no standard</td>
+    </tr>
+    <tr>
+      <td>C11 Union establishment</td>
+      <td>Not stated</td>
+      <td>Required (Article 7(2))</td>
+      <td>Not stated</td>
+      <td>QTSP rules of eIDAS</td>
+    </tr>
+    <tr>
+      <td>C14 Multi-user access</td>
+      <td>Not stated</td>
+      <td>Owner authorises users (Article 5(1)(j))</td>
+      <td>Not stated</td>
+      <td>Several-user activation for a seal not stated</td>
+    </tr>
+  </tbody>
+</table></div>
+<h2 id="preliminary-reading">
+  
+  
+    <a href="#preliminary-reading" class="anchor-heading" aria-labelledby="preliminary-reading"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Preliminary reading
+  
+  
+</h2>
+    
+
+<p><em>This section is the analysis of this project, not a statement of a source.</em> Four observations follow from the facts.</p>
+
+<ol>
+  <li><strong>The EBW texts do not fix where keys are held.</strong> They require a back-end that uses a WSCA and WSCD (Annex point 3(1)) and allow local, external or remote qualified devices (Annex point 8). Options (2) and (4) fit the wording most directly; options (1) and (3) depend on how a provider integrates a device or HSM it does not run, which no source describes.</li>
+  <li><strong>Qualified seals and signatures require a QTSP when the key is remote.</strong> Under Article 29(1a) a provider that is not a QTSP cannot hold the qualified key. A pattern with a provider-hosted wallet key for unit operations and a QTSP-managed key for qualified seals follows the structure of the sources, including the split between the wallet’s own keys and the certificate of the QTSP.</li>
+  <li><strong>Exit is the weakest documented point.</strong> The EBW texts specify export, transfer and deletion of owner data, and the ARF excludes private key export for the EUDI Wallet. No source says how keys or key attestations move between providers. Until this is settled, any placement with a provider carries re-creation of keys and re-issuance of bound attestations as the working assumption.</li>
+  <li><strong>The assurance level for key protection is not settled.</strong> The Commission text names substantial; the Council text removes the clause. The EUDI Wallet rules name high and certification, but they bind the EBW only where referred to.</li>
+</ol>
+
+<p><strong>Conditions under which this reading holds.</strong> The final text keeps the WSCA/WSCD requirement for the back-end (Annex point 3(1)) and the local, external or remote qualified devices (Annex point 8); eIDAS Articles 29(1a) and 29a stay as they are; qualified providers offer remote sealing for legal persons with several authorised users.</p>
+
+<p><strong>What would change it.</strong> The Council outcome of 9 June 2026 and the adopted text; an implementing act on the signature creation interface (Annex point 9(3)); a statement on whether an owner-run HSM counts as WSCD; rules on key transfer between providers; a decision to apply the EUDI Wallet certification scheme (Regulation 2024/2981) to the EBW; EN 419 241-1 and -2 once read.</p>
+<h2 id="gaps-and-next-steps">
+  
+  
+    <a href="#gaps-and-next-steps" class="anchor-heading" aria-labelledby="gaps-and-next-steps"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Gaps and next steps
+  
+  
+</h2>
+    
+
+<ul>
+  <li>Obtain the outcome of the Council meeting on 9 June 2026, then re-check Articles 3, 5, 6, 7 and 11 and Annex points 3, 4, 8, 9 and 10.</li>
+  <li>Read what could not be read: EN 419 241-1 and -2 (paid CEN standards, connection refused), EN 419 221-5, EN 419 211, ETSI TS 119 461, TS 119 101, EN 319 411-2, CSC API 2.2, ARF Technical Specification 3, and the full call sequence of TS 119 432. Regulation 2015/1502 was not read for this note. The Parliament report (A10-0240/2026) and the EDPS opinion 5/2026 were not read.</li>
+  <li>Review requirement EBW-TRU-029 (cites a deleted article); write the missing requirements (see “What the requirement set says”) and review them with a named reviewer.</li>
+  <li>Ask the Commission or a supervisory body whether an owner-operated or customer-managed HSM can be the WSCD, how keys move between providers, how a multi-user wallet maps users to keys, and how liability is allocated between provider, owner and QTSP. No source in the EBW texts says.</li>
+  <li>Confirm the business drivers (C2, C5, C12, C13, C14) with stakeholders; they are assumptions until then.</li>
+</ul>
+<h2 id="references">
+  
+  
+    <a href="#references" class="anchor-heading" aria-labelledby="references"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> References
+  
+  
+</h2>
+    
+
+<p>SRC-EBW-PROPOSAL, SRC-EBW-ANNEX-CELLAR, SRC-COUNCIL-ST-9684-26, SRC-EIDAS-CONSOL, SRC-CID-2016-650, SRC-CIR-2024-2979, SRC-CIR-2024-2981, SRC-CIR-2025-847, SRC-CIR-2026-1731, SRC-ETSI-TS-119431-1, SRC-ETSI-TS-119431-2, SRC-ETSI-TS-119432, SRC-CSC-API-V2, SRC-ARF-HLR, SRC-ARF-MAIN, SRC-ARF-DT-AB, SRC-WEBUILD-ARCH, SRC-WEBUILD-RB. Full entries with version, date and URL are in the source register.</p>
+
+          
+
+          
+            
+          
+        </main>
+        
+<hr>
+<footer>
+  
+
+  <div class="site-footer-extra">
+  <div class="sf-grid">
+    <div class="sf-brand">
+      <img src="/business-wallet-requirements/assets/images/logos/spherity-logo-white.svg" alt="Spherity" width="150" height="auto">
+      <p>European Business Wallet Requirements: open, traceable requirements for European Business Wallets and trust infrastructure.</p>
+      <p><a href="mailto:info@spherity.com">info@spherity.com</a></p>
+    </div>
+    <nav class="sf-col" aria-label="Explore">
+      <h2>Explore</h2>
+      <ul>
+        <li><a href="/business-wallet-requirements/requirements/">Requirements</a></li>
+        <li><a href="/business-wallet-requirements/concepts/">Concepts</a></li>
+        <li><a href="/business-wallet-requirements/perspectives/use-cases/">Use cases</a></li>
+        <li><a href="/business-wallet-requirements/perspectives/business-cases/">Business cases</a></li>
+        <li><a href="/business-wallet-requirements/legal/roadmap/">Legal roadmap</a></li>
+        <li><a href="/business-wallet-requirements/ecosystem/initiatives/">Ecosystems</a></li>
+      </ul>
+    </nav>
+    <nav class="sf-col" aria-label="Resources">
+      <h2>Resources</h2>
+      <ul>
+        <li><a href="/business-wallet-requirements/downloads/">Downloads</a></li>
+        <li><a href="/business-wallet-requirements/figures/">Figure gallery</a></li>
+        <li><a href="/business-wallet-requirements/changelog/">What changed</a></li>
+        <li><a href="https://spherity.github.io/spherity-research/">Spherity Research</a></li>
+        <li><a href="/business-wallet-requirements/llms.txt">llms.txt</a></li>
+        <li><a href="/business-wallet-requirements/sitemap.xml">Sitemap</a></li>
+      </ul>
+    </nav>
+    <nav class="sf-col" aria-label="Project">
+      <h2>Project</h2>
+      <ul>
+        <li><a href="/business-wallet-requirements/about/">About</a></li>
+        <li><a href="/business-wallet-requirements/contact/">Contact</a></li>
+        <li><a href="https://github.com/cstoecker/business-wallet-requirements/discussions">Discussions</a></li>
+        <li><a href="https://github.com/cstoecker/business-wallet-requirements">GitHub</a></li>
+      </ul>
+    </nav>
+  </div>
+  <p class="sf-legal">Published by <a href="https://www.spherity.com">Spherity GmbH</a>. Content CC BY 4.0, code Apache-2.0 (to be confirmed). Draft for review; based on the Commission proposal COM(2025) 838. Analysis, not legal advice.</p>
+</div>
+<script>
+(function () {
+  var html = document.documentElement;
+  // tooltips and accessible names for icon-only navigation
+  document.querySelectorAll(".nav-list-link").forEach(function (a) { var t = a.textContent.trim(); if (t) { a.setAttribute("title", t); } });
+  // navigation icons (Untitled UI, outline); inserted as elements so the active link shows them too
+  var base = "/business-wallet-requirements", icons = {"/":"home-line","/concepts/":"lightbulb-02","/research/":"file-search-02","/changelog/":"clock-refresh","/downloads/":"download-04","/figures/":"image-03","/about/":"info-circle","/requirements/":"check-done-02","/requirements/methodology/":"clipboard-check","/perspectives/":"eye","/perspectives/use-cases/":"target-02","/perspectives/business-cases/":"coins-03","/legal/":"scales-02","/legal/roadmap/":"flag-03","/domains/":"grid-03","/architecture/":"layers-three-02","/traceability/":"dataflow-03","/ecosystem/":"globe-02","/ecosystem/initiatives/":"building-05","/ecosystem/standards/":"target-02","/ecosystem/certification/":"award-03","/ecosystem/governance/":"users-check","discussions":"message-chat-circle","/requirements/review/":"list","/architecture/decisions/":"settings-02"};
+  document.querySelectorAll(".nav-list-link").forEach(function (a) {
+    if (a.querySelector(".nav-ic")) return;
+    var u; try { u = new URL(a.href, location.href); } catch (e) { return; }
+    var key = u.origin === location.origin ? (u.pathname.indexOf(base) === 0 ? u.pathname.slice(base.length) : u.pathname) : (u.pathname.indexOf("/discussions") > -1 ? "discussions" : "");
+    key = key.replace(/index\.html$/, "");
+    var name = icons[key]; if (!name) return;
+    var s = document.createElement("span"); s.className = "nav-ic"; s.setAttribute("aria-hidden", "true");
+    s.style.setProperty("--icon", 'url("/business-wallet-requirements/assets/icons/' + name + '.svg")');
+    a.insertBefore(s, a.firstChild);
+  });
+  // mark the current page in the navigation
+  var here = location.pathname.replace(/index\.html$/, "");
+  document.querySelectorAll(".nav-list-link").forEach(function (a) { try { var u = new URL(a.href, location.href); if (u.origin === location.origin && u.pathname.replace(/index\.html$/, "") === here) { a.setAttribute("aria-current", "page"); } } catch (e) {} });
+  // desktop: sub-pages open as a flyout on hover or focus instead of expanding inside the sidebar
+  (function () {
+    var mq = window.matchMedia("(min-width: 50rem)"), side = document.querySelector(".side-bar"), fly, hideT, showT, cur;
+    if (!side) return;
+    function close() { clearTimeout(showT); if (fly) { fly.remove(); fly = null; } cur = null; }
+    function open(li) {
+      if (!mq.matches || cur === li) return;
+      var sub = li.querySelector(":scope > .nav-list"); if (!sub) return;
+      close(); cur = li;
+      fly = document.createElement("nav"); fly.className = "nav-flyout"; fly.setAttribute("aria-label", li.querySelector(":scope > .nav-list-link").textContent.trim());
+      var ul = document.createElement("ul"); ul.className = "nav-list";
+      sub.querySelectorAll(":scope > .nav-list-item").forEach(function (item) {
+        var a = item.querySelector(":scope > .nav-list-link"); if (!a) return;
+        var c = a.cloneNode(true); c.removeAttribute("title"); var e = document.createElement("li"); e.appendChild(c); ul.appendChild(e);
+      });
+      fly.appendChild(ul); document.body.appendChild(fly);
+      var r = side.getBoundingClientRect(), lr = li.getBoundingClientRect(), h = fly.offsetHeight;
+      fly.style.left = r.right + "px"; fly.style.top = Math.max(8, Math.min(lr.top, window.innerHeight - h - 8)) + "px";
+      fly.addEventListener("mouseenter", function () { clearTimeout(hideT); });
+      fly.addEventListener("mouseleave", function () { hideT = setTimeout(close, 160); });
+      fly.addEventListener("focusout", function (ev) { if (!fly || !fly.contains(ev.relatedTarget)) hideT = setTimeout(close, 160); });
+    }
+    side.querySelectorAll(".nav-list > .nav-list-item").forEach(function (li) {
+      if (!li.querySelector(":scope > .nav-list")) return;
+      li.addEventListener("mouseenter", function () { clearTimeout(hideT); clearTimeout(showT); showT = setTimeout(function () { open(li); }, 140); });
+      li.addEventListener("mouseleave", function () { clearTimeout(showT); hideT = setTimeout(close, 160); });
+      li.addEventListener("focusin", function () { open(li); });
+    });
+    side.addEventListener("mouseenter", function (e) { if (!e.target.closest || true) clearTimeout(hideT); });
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape") close(); });
+    window.addEventListener("scroll", close, true); window.addEventListener("resize", close);
+  })();
+  // keyboard access to horizontally scrollable tables and figures
+  document.querySelectorAll(".main-content *").forEach(function (el) {
+    var o = getComputedStyle(el).overflowX;
+    if ((o === "auto" || o === "scroll") && el.scrollWidth > el.clientWidth + 1 && !el.hasAttribute("tabindex")) { el.setAttribute("tabindex", "0"); }
+  });
+  // collapse toggle
+  var header = document.querySelector(".site-header");
+  if (header && !header.querySelector(".nav-toggle")) {
+    var b = document.createElement("button");
+    b.type = "button"; b.className = "nav-toggle";
+    b.innerHTML = '<span class="icon" aria-hidden="true"></span>';
+    var side = document.querySelector(".side-bar"), tin, tout;
+    if (side) {
+      side.addEventListener("mouseenter", function () { clearTimeout(tout); if (html.classList.contains("nav-collapsed")) tin = setTimeout(function () { html.classList.add("nav-peek"); }, 90); });
+      side.addEventListener("mouseleave", function () { clearTimeout(tin); tout = setTimeout(function () { html.classList.remove("nav-peek"); }, 180); });
+      side.addEventListener("focusin", function () { if (html.classList.contains("nav-collapsed")) html.classList.add("nav-peek"); });
+      side.addEventListener("focusout", function (e) { if (!side.contains(e.relatedTarget)) html.classList.remove("nav-peek"); });
+    }
+    function sync() { var c = html.classList.contains("nav-collapsed"); b.setAttribute("aria-pressed", c ? "true" : "false"); b.setAttribute("aria-label", c ? "Expand navigation" : "Collapse navigation to icons"); b.title = c ? "Expand navigation" : "Collapse navigation to icons"; }
+    b.addEventListener("click", function () { html.classList.remove("nav-peek"); html.classList.toggle("nav-collapsed"); try { localStorage.setItem("ebw-nav", html.classList.contains("nav-collapsed") ? "collapsed" : "expanded"); } catch (e) {} sync(); });
+    header.appendChild(b); sync();
+  }
+  // "On this page" for long articles
+  var content = document.querySelector(".main-content");
+  var hs = content ? content.querySelectorAll("h2[id]") : [];
+  if (hs.length > 3 && !document.querySelector(".toc-box")) {
+    var d = document.createElement("details"); d.className = "toc-box"; d.open = window.innerWidth > 800;
+    var ol = ""; hs.forEach(function (h) { ol += '<li><a href="#' + h.id + '">' + h.textContent.replace(/\s+/g, " ").trim() + "</a></li>"; });
+    d.innerHTML = "<summary>On this page</summary><ol>" + ol + "</ol>";
+    var first = content.querySelector("h2"); if (first) first.parentNode.insertBefore(d, first);
+  }
+})();
+</script>
+
+
+  <div class="d-md-none mt-4 fs-2">
+    
+    
+      This site uses <a href="https://github.com/just-the-docs/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.
+    
+  </div>
+</footer>
+
+      </div>
+    </div>
+    
+      
+
+<div class="search-overlay"></div>
+
+    
+  </div>
+
+  
+</body>
+</html>
+

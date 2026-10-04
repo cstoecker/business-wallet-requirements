@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"><url>
+    <loc>https://cstoecker.github.io/business-wallet-requirements/</loc>
+    <lastmod>2026-10-03</lastmod>
+  </url><url>
+    <loc>https://cstoecker.github.io/business-wallet-requirements/about/</loc>
+    <lastmod>2026-10-03</lastmod>
+  </url><url>
+    <loc>https://cstoecker.github.io/business-wallet-requirements/architecture/</loc>
+    <lastmod>2026-10-04</lastmod>
+  </url><url>
+    <loc>https://cstoecker.github.io/business-wallet-requirements/architecture/brief/</loc>
+    <lastmod>2026-10-04</lastmod>
+  </url><url>
+    <loc>https://cstoecker.github.io/business-wallet-requirements/architecture/decisions/</loc>
+    <lastmod>2026-10-03</lastmod>
+  </url><url>
+    <loc>https://cstoecker.github.io/business-wallet-requirements/architecture/decisions/dec-01/</loc>
+    <lastmod>2026-10-03</lastmod>
+  </url><url>
+    <loc>https://cstoecker.github.io/business-wallet-requirements/architecture/decisions/dec-02/</loc>
+    <lastmod>2026-10-03</lastmod>
+  </url><url>
+    <loc>https://cstoecker.github.io/business-wallet-requirements/architecture/decisions/dec-03/</loc>
+    <lastmod>2026-10-03</lastmod>
+  </url><url>
+    <loc>https://cstoecker.github.io/business-wallet-requirements/architecture/decisions/dec-04/</loc>
+    <lastmod>2026-10-03</lastmod>
+  </url><url>
+    <loc>https://cstoecker.github.io/business-wallet-requirements/architecture/decisions/dec-06/</loc>
+    <lastmod>2026-10-03</lastmod>
+  </url><url>
+    <loc>https://cstoecker.github.io/business-wallet-requirements/architecture/decisions/dec-07/</loc>
+    <lastmod>2026-10-03</lastmod>
+  </url><url>
+    <loc>https://cstoecker.github.io/business-wallet-requirements/architecture/decisions/dec-08/</loc>
+    <lastmod>2026-10-03</lastmod>
+  </url><url>
+    <loc>https://cstoecker.github.io/business-wallet-requirements/architecture/decisions/dec-09/</loc>
+    <lastmod>2026-10-03</lastmod>
+  </url><url>
+    <loc>https://cstoecker.github.io/business-wallet-requirements/architecture/decisions/dec-10/</loc>
+    <lastmod>2026-10-03</lastmod>
+  </url><url>
+    <loc>https://cstoecker.github.io/business-wallet-requirements/architecture/decisions/dec-11/</loc>
+    <lastmod>2026-10-03</lastmod>
+  </url><url>
+    <loc>https://cstoecker.github.io/business-wallet-requirements/architecture/decisions/dec-13/</loc>
+    <lastmod>2026-10-04</lastmod>
+  </url><url>
+    <loc>https://cstoecker.github.io/business-wallet-requirements/changelog/</loc>
+    <lastmod>2026-10-03</lastmod>
+  </url><url>
+    <loc>https://cstoecker.github.io/business-wallet-requirements/concepts/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <image:image><image:loc>https://cstoecker.github.io/business-wallet-requirements/assets/figures/concept-model-planes.svg</image:loc><image:title>Figure: the three planes and their main entities</image:title><image:caption>Concept model of the trust, control and data planes: who decides, what is trusted and how evidence moves.</image:caption><image:license>https://creativecommons.org/licenses/by/4.0/</image:license></image:image>
+  </url><url>
+    <loc>https://cstoecker.github.io/business-wallet-requirements/concepts/trust-list/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <image:image><image:loc>https://cstoecker.github.io/business-wallet-requirements/assets/figures/trust-list-anatomy.svg</image:loc><image:title>Figure: anatomy of a trusted list</image:title><image:caption>A trusted list is a signed document with scheme information, providers and their services, and a signature; relying parties read and validate it.</image:caption><image:license>https://creativecommons.org/licenses/by/4.0/</image:license></image:image>
+    <image:image><image:loc>https://cstoecker.github.io/business-wallet-requirements/assets/figures/trust-list-validation.svg</image:loc><image:title>Figure: how a relying party uses a trusted list</image:title><image:caption>Six steps from locating the list of trusted lists to using a service&apos;s digital identity as trust anchor.</image:caption><image:license>https://creativecommons.org/licenses/by/4.0/</image:license></image:image>
+  </url><url>
+    <loc>https://cstoecker.github.io/business-wallet-requirements/concepts/trust-plane/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <image:image><image:loc>https://cstoecker.github.io/business-wallet-requirements/assets/figures/trust-plane-concept-model.svg</image:loc><image:title>Figure: trust plane concept model</image:title><image:caption>Who establishes trust (oversight, providers and lists) and who uses it (credentials, status and relying parties).</image:caption><image:license>https://creativecommons.org/licenses/by/4.0/</image:license></image:image>
+    <image:image><image:loc>https://cstoecker.github.io/business-wallet-requirements/assets/figures/trust-plane-flow.svg</image:loc><image:title>Figure: becoming a qualified provider and being checked</image:title><image:caption>Notification, verification, qualified status and list update, then validation by relying parties.</image:caption><image:license>https://creativecommons.org/licenses/by/4.0/</image:license></image:image>
+  </url><url>
+    <loc>https://cstoecker.github.io/business-wallet-requirements/contact/</loc>
+    <lastmod>2026-10-03</lastmod>
+  </url><url>
+    <loc>https://cstoecker.github.io/business-wallet-requirements/domains/</loc>
+    <lastmod>2026-10-04</lastmod>
+  </url><url>
+    <loc>https://cstoecker.github.io/business-wallet-requirements/downloads/</loc>
+    <lastmod>2026-10-03</lastmod>
+  </url><url>
+    <loc>https://cstoecker.github.io/business-wallet-requirements/ecosystem/</loc>
+    <lastmod>2026-10-04</lastmod>
+  </url><url>
+    <loc>https://cstoecker.github.io/business-wallet-requirements/ecosystem/certification/</loc>
+    <lastmod>2026-10-04</lastmod>
+  </url><url>
+    <loc>https://cstoecker.github.io/business-wallet-requirements/ecosystem/governance/</loc>
+    <lastmod>2026-10-04</lastmod>
+  </url><url>
+    <loc>https://cstoecker.github.io/business-wallet-requirements/ecosystem/initiatives/</loc>
+    <lastmod>2026-10-04</lastmod>
+  </url><url>
+    <loc>https://cstoecker.github.io/business-wallet-requirements/ecosystem/initiatives/catenax/</loc>
+    <lastmod>2026-10-04</lastmod>
+  </url><url>
+    <loc>https://cstoecker.github.io/business-wallet-requirements/ecosystem/initiatives/cirpass2/</loc>
+    <lastmod>2026-10-04</lastmod>
+  </url><url>
+    <loc>https://cstoecker.github.io/business-wallet-requirements/ecosystem/initiatives/energydatax/</loc>
+    <lastmod>2026-10-04</lastmod>
+  </url><url>
+    <loc>https://cstoecker.github.io/business-wallet-requirements/ecosystem/initiatives/factoryx/</loc>
+    <lastmod>2026-10-04</lastmod>
+  </url><url>
+    <loc>https://cstoecker.github.io/business-wallet-requirements/ecosystem/initiatives/manufacturingx/</loc>
+    <lastmod>2026-10-04</lastmod>
+  </url><url>
+    <loc>https://cstoecker.github.io/business-wallet-requirements/ecosystem/initiatives/webuild/</loc>
+    <lastmod>2026-10-04</lastmod>
+  </url><url>
+    <loc>https://cstoecker.github.io/business-wallet-requirements/ecosystem/standards/</loc>
+    <lastmod>2026-10-04</lastmod>
+  </url><url>
+    <loc>https://cstoecker.github.io/business-wallet-requirements/figures/</loc>
+    <lastmod>2026-10-03</lastmod>
+  </url><url>
+    <loc>https://cstoecker.github.io/business-wallet-requirements/figures/company-cost-benefit/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <image:image><image:loc>https://cstoecker.github.io/business-wallet-requirements/assets/figures/company-cost-benefit.svg</image:loc><image:title>Figure: annual cost and maximum benefit per company</image:title><image:caption>Model values per company and year: annual cost against theoretical maximum benefit for micro, small and large companies.</image:caption><image:license>https://creativecommons.org/licenses/by/4.0/</image:license></image:image>
+  </url><url>
+    <loc>https://cstoecker.github.io/business-wallet-requirements/figures/concept-model-planes/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <image:image><image:loc>https://cstoecker.github.io/business-wallet-requirements/assets/figures/concept-model-planes.svg</image:loc><image:title>Figure: the three planes and their main entities</image:title><image:caption>Concept model of the trust, control and data planes: who decides, what is trusted and how evidence moves.</image:caption><image:license>https://creativecommons.org/licenses/by/4.0/</image:license></image:image>
+  </url><url>
+    <loc>https://cstoecker.github.io/business-wallet-requirements/figures/flow-requirement-lifecycle/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <image:image><image:loc>https://cstoecker.github.io/business-wallet-requirements/assets/figures/flow-requirement-lifecycle.svg</image:loc><image:title>Figure: from source clause to conformance check</image:title><image:caption>Requirement lifecycle: extract, derive, review, publish, then guide implementations and configure conformance tests.</image:caption><image:license>https://creativecommons.org/licenses/by/4.0/</image:license></image:image>
+  </url><url>
+    <loc>https://cstoecker.github.io/business-wallet-requirements/figures/legal-roadmap/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <image:image><image:loc>https://cstoecker.github.io/business-wallet-requirements/assets/figures/legal-roadmap.svg</image:loc><image:title>Figure: European Business Wallet legal and operational roadmap 2025-2029</image:title><image:caption>Indicative roadmap with legal, standardisation, pilot, conformity and adoption milestones. Calendar dates are scenarios; the 24 and 36 month periods after entry into force follow Articles 16 and 22 of the proposal.</image:caption><image:license>https://creativecommons.org/licenses/by/4.0/</image:license></image:image>
+  </url><url>
+    <loc>https://cstoecker.github.io/business-wallet-requirements/figures/macro-range/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <image:image><image:loc>https://cstoecker.github.io/business-wallet-requirements/assets/figures/macro-range.svg</image:loc><image:title>Figure: EU-wide annual savings estimates</image:title><image:caption>Modelled upper and lower bounds from the Commission impact assessment and press release, with year 1 costs for comparison.</image:caption><image:license>https://creativecommons.org/licenses/by/4.0/</image:license></image:image>
+  </url><url>
+    <loc>https://cstoecker.github.io/business-wallet-requirements/figures/trust-list-anatomy/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <image:image><image:loc>https://cstoecker.github.io/business-wallet-requirements/assets/figures/trust-list-anatomy.svg</image:loc><image:title>Figure: anatomy of a trusted list</image:title><image:caption>A trusted list is a signed document with scheme information, providers and their services, and a signature; relying parties read and validate it.</image:caption><image:license>https://creativecommons.org/licenses/by/4.0/</image:license></image:image>
+  </url><url>
+    <loc>https://cstoecker.github.io/business-wallet-requirements/figures/trust-list-validation/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <image:image><image:loc>https://cstoecker.github.io/business-wallet-requirements/assets/figures/trust-list-validation.svg</image:loc><image:title>Figure: how a relying party uses a trusted list</image:title><image:caption>Six steps from locating the list of trusted lists to using a service&apos;s digital identity as trust anchor.</image:caption><image:license>https://creativecommons.org/licenses/by/4.0/</image:license></image:image>
+  </url><url>
+    <loc>https://cstoecker.github.io/business-wallet-requirements/figures/trust-plane-concept-model/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <image:image><image:loc>https://cstoecker.github.io/business-wallet-requirements/assets/figures/trust-plane-concept-model.svg</image:loc><image:title>Figure: trust plane concept model</image:title><image:caption>Who establishes trust (oversight, providers and lists) and who uses it (credentials, status and relying parties).</image:caption><image:license>https://creativecommons.org/licenses/by/4.0/</image:license></image:image>
+  </url><url>
+    <loc>https://cstoecker.github.io/business-wallet-requirements/figures/trust-plane-flow/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <image:image><image:loc>https://cstoecker.github.io/business-wallet-requirements/assets/figures/trust-plane-flow.svg</image:loc><image:title>Figure: becoming a qualified provider and being checked</image:title><image:caption>Notification, verification, qualified status and list update, then validation by relying parties.</image:caption><image:license>https://creativecommons.org/licenses/by/4.0/</image:license></image:image>
+  </url><url>
+    <loc>https://cstoecker.github.io/business-wallet-requirements/legal/</loc>
+    <lastmod>2026-10-03</lastmod>
+  </url><url>
+    <loc>https://cstoecker.github.io/business-wallet-requirements/legal/roadmap/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <image:image><image:loc>https://cstoecker.github.io/business-wallet-requirements/assets/figures/legal-roadmap.svg</image:loc><image:title>Figure: European Business Wallet legal and operational roadmap 2025-2029</image:title><image:caption>Indicative roadmap with legal, standardisation, pilot, conformity and adoption milestones. Calendar dates are scenarios; the 24 and 36 month periods after entry into force follow Articles 16 and 22 of the proposal.</image:caption><image:license>https://creativecommons.org/licenses/by/4.0/</image:license></image:image>
+  </url><url>
+    <loc>https://cstoecker.github.io/business-wallet-requirements/perspectives/</loc>
+    <lastmod>2026-10-04</lastmod>
+  </url><url>
+    <loc>https://cstoecker.github.io/business-wallet-requirements/perspectives/business-cases/</loc>
+    <lastmod>2026-10-03</lastmod>
+  </url><url>
+    <loc>https://cstoecker.github.io/business-wallet-requirements/perspectives/business-cases/company/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <image:image><image:loc>https://cstoecker.github.io/business-wallet-requirements/assets/figures/company-cost-benefit.svg</image:loc><image:title>Figure: annual cost and maximum benefit per company</image:title><image:caption>Model values per company and year: annual cost against theoretical maximum benefit for micro, small and large companies.</image:caption><image:license>https://creativecommons.org/licenses/by/4.0/</image:license></image:image>
+  </url><url>
+    <loc>https://cstoecker.github.io/business-wallet-requirements/perspectives/business-cases/ecosystem/</loc>
+    <lastmod>2026-10-03</lastmod>
+  </url><url>
+    <loc>https://cstoecker.github.io/business-wallet-requirements/perspectives/business-cases/macro/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <image:image><image:loc>https://cstoecker.github.io/business-wallet-requirements/assets/figures/macro-range.svg</image:loc><image:title>Figure: EU-wide annual savings estimates</image:title><image:caption>Modelled upper and lower bounds from the Commission impact assessment and press release, with year 1 costs for comparison.</image:caption><image:license>https://creativecommons.org/licenses/by/4.0/</image:license></image:image>
+  </url><url>
+    <loc>https://cstoecker.github.io/business-wallet-requirements/perspectives/use-cases/</loc>
+    <lastmod>2026-10-03</lastmod>
+  </url><url>
+    <loc>https://cstoecker.github.io/business-wallet-requirements/requirements/</loc>
+    <lastmod>2026-10-03</lastmod>
+  </url><url>
+    <loc>https://cstoecker.github.io/business-wallet-requirements/requirements/methodology/</loc>
+    <lastmod>2026-10-04</lastmod>
+  </url><url>
+    <loc>https://cstoecker.github.io/business-wallet-requirements/requirements/review/</loc>
+    <lastmod>2026-10-03</lastmod>
+  </url><url>
+    <loc>https://cstoecker.github.io/business-wallet-requirements/research/</loc>
+    <lastmod>2026-10-03</lastmod>
+  </url><url>
+    <loc>https://cstoecker.github.io/business-wallet-requirements/traceability/</loc>
+    <lastmod>2026-10-04</lastmod>
+  </url>
+</urlset>

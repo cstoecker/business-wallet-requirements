@@ -1,0 +1,847 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+  <link rel="stylesheet" href="/business-wallet-requirements/assets/css/just-the-docs-default.css">
+
+  <link rel="stylesheet" href="/business-wallet-requirements/assets/css/just-the-docs-head-nav.css" id="jtd-head-nav-stylesheet">
+
+  <style id="jtd-nav-activation">
+  
+
+    .site-nav > ul.nav-list:first-child > li > a,
+    .site-nav > ul.nav-list:first-child > li > ul > li > a,
+    
+    .site-nav > ul.nav-list:first-child > li > ul > li > ul > li:not(:nth-child(7)) > a,
+    .site-nav > ul.nav-list:first-child > li > ul > li > ul > li > ul > li a {
+      background-image: none;
+    }
+
+    .site-nav > ul.nav-list:not(:first-child) a,
+    .site-nav li.external a {
+      background-image: none;
+    }
+
+    .site-nav > ul.nav-list:first-child > li:nth-child(6) > ul > li:nth-child(1) > ul > li:nth-child(7) > a {
+      font-weight: 600;
+      text-decoration: none;
+    }.site-nav > ul.nav-list:first-child > li:nth-child(6) > button svg,
+    .site-nav > ul.nav-list:first-child > li:nth-child(6) > ul > li:nth-child(1) > button svg,
+    .site-nav > ul.nav-list:first-child > li:nth-child(6) > ul > li:nth-child(1) > ul > li:nth-child(7) > button svg {
+      transform: rotate(-90deg);
+    }.site-nav > ul.nav-list:first-child > li.nav-list-item:nth-child(6) > ul.nav-list,
+    .site-nav > ul.nav-list:first-child > li.nav-list-item:nth-child(6) > ul.nav-list > li.nav-list-item:nth-child(1) > ul.nav-list,
+    .site-nav > ul.nav-list:first-child > li.nav-list-item:nth-child(6) > ul.nav-list > li.nav-list-item:nth-child(1) > ul.nav-list > li.nav-list-item:nth-child(7) > ul.nav-list {
+      display: block;
+    }
+  </style>
+
+  
+
+  
+    <script src="/business-wallet-requirements/assets/js/vendor/lunr.min.js"></script>
+  
+
+  <script src="/business-wallet-requirements/assets/js/just-the-docs.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="icon" type="image/svg+xml" href="/business-wallet-requirements/assets/images/logos/spherity-s-mark.svg">
+
+  <title>DEC-08 Privacy and data protection | European Business Wallet Requirements</title>
+<meta name="description" content="How are minimisation, unlinkability and the controller and processor roles designed when the wallet owner is an organisation and the users are people? Facts from the sources, decision criteria, three role options and the conditions under which each holds."><meta name="keywords" content="privacy, data protection, GDPR, controller, processor, joint controllers, minimisation, unlinkability, pseudonymisation, European Business Wallet">
+<meta name="author" content="Spherity GmbH"><meta name="robots" content="noindex, follow">
+<meta name="theme-color" content="#023852">
+<link rel="canonical" href="https://cstoecker.github.io/business-wallet-requirements/architecture/decisions/dec-08/">
+<link rel="alternate" type="text/plain" href="https://cstoecker.github.io/business-wallet-requirements/llms.txt" title="llms.txt">
+<link rel="sitemap" type="application/xml" href="https://cstoecker.github.io/business-wallet-requirements/sitemap.xml">
+<meta property="og:site_name" content="European Business Wallet Requirements">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="DEC-08 Privacy and data protection">
+<meta property="og:description" content="How are minimisation, unlinkability and the controller and processor roles designed when the wallet owner is an organisation and the users are people? Facts from the sources, decision criteria, three role options and the conditions under which each holds.">
+<meta property="og:url" content="https://cstoecker.github.io/business-wallet-requirements/architecture/decisions/dec-08/">
+<meta property="og:image" content="https://cstoecker.github.io/business-wallet-requirements/assets/figures/concept-model-planes.png"><meta property="article:modified_time" content="2026-10-03">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="DEC-08 Privacy and data protection">
+<meta name="twitter:description" content="How are minimisation, unlinkability and the controller and processor roles designed when the wallet owner is an organisation and the users are people? Facts from the sources, decision criteria, three role options and the conditions under which each holds.">
+<meta name="twitter:image" content="https://cstoecker.github.io/business-wallet-requirements/assets/figures/concept-model-planes.png">
+
+
+  <script>try{if(localStorage.getItem("ebw-nav")==="collapsed"&&window.matchMedia("(min-width: 50rem)").matches){document.documentElement.classList.add("nav-collapsed")}}catch(e){}</script><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://cstoecker.github.io/business-wallet-requirements/#publisher","name":"Spherity GmbH","url":"https://www.spherity.com","email":"info@spherity.com","logo":{"@type":"ImageObject","url":"https://cstoecker.github.io/business-wallet-requirements/assets/images/logos/spherity-s-mark.svg","width":372,"height":372}},{"@type":"WebSite","@id":"https://cstoecker.github.io/business-wallet-requirements/#website","url":"https://cstoecker.github.io/business-wallet-requirements/","name":"European Business Wallet Requirements","description":"Open, traceable requirements for European Business Wallets and trust infrastructure, from law and standards to conformance checks and industry scenarios.","inLanguage":"en","publisher":{"@id":"https://cstoecker.github.io/business-wallet-requirements/#publisher"},"license":"https://creativecommons.org/licenses/by/4.0/"},{"@type":"TechArticle","@id":"https://cstoecker.github.io/business-wallet-requirements/architecture/decisions/dec-08/#page","url":"https://cstoecker.github.io/business-wallet-requirements/architecture/decisions/dec-08/","name":"DEC-08 Privacy and data protection","headline":"DEC-08 Privacy and data protection","description":"How are minimisation, unlinkability and the controller and processor roles designed when the wallet owner is an organisation and the users are people? Facts from the sources, decision criteria, three role options and the conditions under which each holds.","inLanguage":"en","isPartOf":{"@id":"https://cstoecker.github.io/business-wallet-requirements/#website"},"publisher":{"@id":"https://cstoecker.github.io/business-wallet-requirements/#publisher"},"primaryImageOfPage":{"@type":"ImageObject","url":"https://cstoecker.github.io/business-wallet-requirements/assets/figures/concept-model-planes.png"},"keywords":"privacy, data protection, GDPR, controller, processor, joint controllers, minimisation, unlinkability, pseudonymisation, European Business Wallet","dateModified":"2026-10-03","license":"https://creativecommons.org/licenses/by/4.0/"},{"@type":"BreadcrumbList","@id":"https://cstoecker.github.io/business-wallet-requirements/architecture/decisions/dec-08/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://cstoecker.github.io/business-wallet-requirements/"},{"@type":"ListItem","position":2,"name":"Architecture","item":"https://cstoecker.github.io/business-wallet-requirements/architecture/"},{"@type":"ListItem","position":3,"name":"Architecture decisions","item":"https://cstoecker.github.io/business-wallet-requirements/architecture/decisions/"},{"@type":"ListItem","position":4,"name":"DEC-08 Privacy and data protection","item":"https://cstoecker.github.io/business-wallet-requirements/architecture/decisions/dec-08/"}]}]}</script>
+
+
+</head>
+
+<body>
+  <a class="skip-to-main" href="#main-content">Skip to main content</a>
+  <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+  <symbol id="svg-link" viewBox="0 0 24 24">
+  <title>Link</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link">
+    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+  </svg>
+</symbol>
+
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+  <title>Menu</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
+    <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>
+  </svg>
+</symbol>
+
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+  <title>Expand</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+    <polyline points="9 18 15 12 9 6"></polyline>
+  </svg>
+</symbol>
+
+  <!-- Feather. MIT License: https://github.com/feathericons/feather/blob/master/LICENSE -->
+<symbol id="svg-external-link" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link">
+  <title id="svg-external-link-title">(external link)</title>
+  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line>
+</symbol>
+
+  
+    <symbol id="svg-doc" viewBox="0 0 24 24">
+  <title>Document</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file">
+    <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline>
+  </svg>
+</symbol>
+
+    <symbol id="svg-search" viewBox="0 0 24 24">
+  <title>Search</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
+    <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+  </svg>
+</symbol>
+
+  
+  
+    <!-- Bootstrap Icons. MIT License: https://github.com/twbs/icons/blob/main/LICENSE.md -->
+<symbol id="svg-copy" viewBox="0 0 16 16">
+  <title>Copy</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+  </svg>
+</symbol>
+<symbol id="svg-copied" viewBox="0 0 16 16">
+  <title>Copied</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-check-fill" viewBox="0 0 16 16">
+    <path d="M6.5 0A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3Zm3 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3Z"/>
+    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1A2.5 2.5 0 0 1 9.5 5h-3A2.5 2.5 0 0 1 4 2.5v-1Zm6.854 7.354-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708.708Z"/>
+  </svg>
+</symbol>
+
+  
+</svg>
+
+  
+    <header class="side-bar">
+  <div class="site-header">
+    <a href="/business-wallet-requirements/" class="site-title lh-tight">
+  <div class="site-logo" role="img" aria-label="European Business Wallet Requirements"></div>
+
+</a>
+    <button id="menu-button" class="site-button btn-reset" aria-label="Menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><use xlink:href="#svg-menu"></use></svg>
+    </button>
+  </div>
+
+  <nav aria-label="Main" id="site-nav" class="site-nav">
+  
+  
+    <ul class="nav-list"><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="Start here submenu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+      </button><a href="/business-wallet-requirements/" class="nav-list-link">Start here</a><ul class="nav-list"><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="Concepts submenu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+      </button><a href="/business-wallet-requirements/concepts/" class="nav-list-link">Concepts</a><ul class="nav-list"><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/ai-safety/" class="nav-list-link">AI safety</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/aisp/" class="nav-list-link">AISP</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/evidence-graph/" class="nav-list-link">Access-controlled verifiable evidence graph</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/agent-mandate/" class="nav-list-link">Agent mandate</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/authentic-sources-and-registries/" class="nav-list-link">Authentic sources and registries</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/authority-access/" class="nav-list-link">Authority access</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/b2g-registry-obligations/" class="nav-list-link">B2G registry obligations</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/b2g-reporting/" class="nav-list-link">B2G reporting</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/control-plane-policy-engine/" class="nav-list-link">Control plane and policy engine</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/cross-sector-credential-use/" class="nav-list-link">Cross-sector credential use</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/crypto-agility-and-pqc/" class="nav-list-link">Crypto-agility and post-quantum readiness</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/dsp-dcp-integration/" class="nav-list-link">DSP and DCP integration</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/data-plane/" class="nav-list-link">Data plane</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/ebw-dpp-integration/" class="nav-list-link">EBW and DPP integration</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/ebw-eudiw-interaction/" class="nav-list-link">EBW and EUDI Wallet interaction</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/knowledge-graph/" class="nav-list-link">Knowledge graph</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/legal-person-identity/" class="nav-list-link">Legal person identity and EBWOID</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/levels-of-assurance/" class="nav-list-link">Levels of assurance</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/mandate-and-power-of-representation/" class="nav-list-link">Mandate and power of representation</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/multi-trust-domains/" class="nav-list-link">Multi-trust domains</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/qualified-trust-services/" class="nav-list-link">Qualified trust services (signature, seal, delivery)</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/revocation-and-status/" class="nav-list-link">Revocation and status</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/selective-disclosure-and-unlinkability/" class="nav-list-link">Selective disclosure and unlinkability</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/trust-list/" class="nav-list-link">Trust list</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/trust-list-discovery/" class="nav-list-link">Trust list discovery</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/trust-plane/" class="nav-list-link">Trust plane</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/trusted-ai/" class="nav-list-link">Trusted AI</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/wallet-connector-binding/" class="nav-list-link">Wallet and data-space connector binding</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/wallet-unit-attestation/" class="nav-list-link">Wallet unit attestation and lifecycle</a></li></ul></li><li class="nav-list-item"><a href="/business-wallet-requirements/research/" class="nav-list-link">Research and reading</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/changelog/" class="nav-list-link">What changed</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/downloads/" class="nav-list-link">Downloads</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/about/" class="nav-list-link">About</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/figures/" class="nav-list-link">Figure gallery</a></li></ul></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="Requirements submenu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+      </button><a href="/business-wallet-requirements/requirements/" class="nav-list-link">Requirements</a><ul class="nav-list"><li class="nav-list-item"><a href="/business-wallet-requirements/requirements/methodology/" class="nav-list-link">Methodology</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/requirements/review/" class="nav-list-link">Review list</a></li></ul></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="Perspectives submenu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+      </button><a href="/business-wallet-requirements/perspectives/" class="nav-list-link">Perspectives</a><ul class="nav-list"><li class="nav-list-item"><a href="/business-wallet-requirements/perspectives/use-cases/" class="nav-list-link">Use cases</a></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="Business cases submenu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+      </button><a href="/business-wallet-requirements/perspectives/business-cases/" class="nav-list-link">Business cases</a><ul class="nav-list"><li class="nav-list-item"><a href="/business-wallet-requirements/perspectives/business-cases/macro/" class="nav-list-link">Macroeconomic case</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/perspectives/business-cases/ecosystem/" class="nav-list-link">Ecosystem case</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/perspectives/business-cases/company/" class="nav-list-link">Company case</a></li></ul></li></ul></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="Legal & compliance submenu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+      </button><a href="/business-wallet-requirements/legal/" class="nav-list-link">Legal & compliance</a><ul class="nav-list"><li class="nav-list-item"><a href="/business-wallet-requirements/legal/roadmap/" class="nav-list-link">Legal roadmap</a></li></ul></li><li class="nav-list-item"><a href="/business-wallet-requirements/domains/" class="nav-list-link">Domains</a></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="Architecture submenu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+      </button><a href="/business-wallet-requirements/architecture/" class="nav-list-link">Architecture</a><ul class="nav-list"><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="Architecture decisions submenu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+      </button><a href="/business-wallet-requirements/architecture/decisions/" class="nav-list-link">Architecture decisions</a><ul class="nav-list"><li class="nav-list-item"><a href="/business-wallet-requirements/architecture/decisions/dec-01/" class="nav-list-link">DEC-01 Credential data model, semantics and formats</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/architecture/decisions/dec-02/" class="nav-list-link">DEC-02 Employees: EUDI Wallet or business wallet</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/architecture/decisions/dec-03/" class="nav-list-link">DEC-03 Key custody and wallet architecture</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/architecture/decisions/dec-04/" class="nav-list-link">DEC-04 Trust framework and discovery</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/architecture/decisions/dec-06/" class="nav-list-link">DEC-06 Credential lifecycle and revocation</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/architecture/decisions/dec-07/" class="nav-list-link">DEC-07 Protocols and interfaces</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/architecture/decisions/dec-08/" class="nav-list-link">DEC-08 Privacy and data protection</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/architecture/decisions/dec-09/" class="nav-list-link">DEC-09 Evidence, logging and audit</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/architecture/decisions/dec-10/" class="nav-list-link">DEC-10 AI-first: agent protocols, identity and mandates</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/architecture/decisions/dec-11/" class="nav-list-link">DEC-11 Identifiers, assurance and partners outside the EU</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/architecture/decisions/dec-13/" class="nav-list-link">DEC-13 Delegation and mandates for employees, machines and AI agents</a></li></ul></li><li class="nav-list-item"><a href="/business-wallet-requirements/architecture/brief/" class="nav-list-link">Stakeholder brief</a></li></ul></li><li class="nav-list-item"><a href="/business-wallet-requirements/traceability/" class="nav-list-link">Traceability & graph</a></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="Ecosystem submenu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+      </button><a href="/business-wallet-requirements/ecosystem/" class="nav-list-link">Ecosystem</a><ul class="nav-list"><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="Ecosystems & initiatives submenu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+      </button><a href="/business-wallet-requirements/ecosystem/initiatives/" class="nav-list-link">Ecosystems & initiatives</a><ul class="nav-list"><li class="nav-list-item"><a href="/business-wallet-requirements/ecosystem/initiatives/catenax/" class="nav-list-link">Catena-X</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/ecosystem/initiatives/webuild/" class="nav-list-link">WE BUILD</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/ecosystem/initiatives/manufacturingx/" class="nav-list-link">Manufacturing-X</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/ecosystem/initiatives/factoryx/" class="nav-list-link">Factory-X</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/ecosystem/initiatives/energydatax/" class="nav-list-link">energy data-X</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/ecosystem/initiatives/cirpass2/" class="nav-list-link">CIRPASS-2</a></li></ul></li><li class="nav-list-item"><a href="/business-wallet-requirements/ecosystem/standards/" class="nav-list-link">Standards radar</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/ecosystem/certification/" class="nav-list-link">Certification</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/ecosystem/governance/" class="nav-list-link">Governance</a></li></ul></li></ul>
+  <ul class="nav-list"><li class="nav-list-item external">
+          <a href="https://github.com/cstoecker/business-wallet-requirements/discussions" class="nav-list-link external"
+            
+              target="_blank" rel="noopener noreferrer"
+            
+          >
+            Discussions
+            <svg viewBox="0 0 24 24" aria-labelledby="svg-external-link-title"><use xlink:href="#svg-external-link"></use></svg>
+          </a>
+        </li></ul>
+</nav>
+
+
+<div class="d-md-block d-none site-footer">
+  
+  
+    This site uses <a href="https://github.com/just-the-docs/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.
+  
+  </div>
+</header>
+
+  
+  <div class="main" id="top">
+    <div id="main-header" class="main-header">
+  
+    
+
+<div class="search" role="search">
+  <div class="search-input-wrap">
+    <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search European Business Wallet Requirements" autocomplete="off">
+    <label for="search-input" class="search-label">
+      <span class="sr-only">Search European Business Wallet Requirements</span>
+      <svg viewBox="0 0 24 24" class="search-icon" aria-hidden="true"><use xlink:href="#svg-search"></use></svg>
+    </label>
+  </div>
+  <div id="search-results" class="search-results"></div>
+</div>
+
+  
+  
+  
+    <nav aria-label="Auxiliary" class="aux-nav">
+  <ul class="aux-nav-list">
+    
+      <li class="aux-nav-list-item">
+        <a href="https://spherity.github.io/spherity-research/" class="site-button"
+          
+        >
+          Spherity Research
+        </a>
+      </li>
+    
+      <li class="aux-nav-list-item">
+        <a href="https://github.com/spherity/business-wallet-requirements/discussions" class="site-button"
+          
+        >
+          Discussions
+        </a>
+      </li>
+    
+      <li class="aux-nav-list-item">
+        <a href="/contact/" class="site-button"
+          
+        >
+          Contact
+        </a>
+      </li>
+    
+      <li class="aux-nav-list-item">
+        <a href="https://github.com/cstoecker/business-wallet-requirements" class="site-button"
+          
+        >
+          GitHub
+        </a>
+      </li>
+    
+  </ul>
+</nav>
+
+  
+</div>
+
+    <div class="main-content-wrap">
+      <div class="status-banner" role="region" aria-label="Draft status">Draft for review. Based on the Commission proposal COM(2025) 838, which may change. Analysis, not legal advice.</div>
+
+      <nav aria-label="Breadcrumb" class="breadcrumb-nav">
+  <ol class="breadcrumb-nav-list">
+    <li class="breadcrumb-nav-list-item"><a href="/business-wallet-requirements/architecture/">Architecture</a></li>
+    <li class="breadcrumb-nav-list-item"><a href="/business-wallet-requirements/architecture/decisions/">Architecture decisions</a></li>
+    <li class="breadcrumb-nav-list-item"><span>DEC-08 Privacy and data protection</span></li>
+  </ol>
+</nav>
+
+
+      <div id="main-content" class="main-content">
+        <main>
+          
+            <h1 id="dec-08-privacy-and-data-protection">
+  
+  
+    <a href="#dec-08-privacy-and-data-protection" class="anchor-heading" aria-labelledby="dec-08-privacy-and-data-protection"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> DEC-08 Privacy and data protection
+  
+  
+</h1>
+    
+
+<p><em>Analysis for decision, not a decision. The European Business Wallet (EBW) is a Commission proposal (COM(2025) 838); the Council text submitted for its general approach (ST 9684/26, 2 June 2026) differs from it, and the outcome of the Council meeting on 9 June 2026 was not read. Analysis, not legal advice. “Not stated” means that no source read says it.</em></p>
+<h2 id="question">
+  
+  
+    <a href="#question" class="anchor-heading" aria-labelledby="question"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Question
+  
+  
+</h2>
+    
+
+<p>The owner of an EBW is an organisation, but the people who act in the wallet, and whose data appears in it, are natural persons. How are <strong>minimisation</strong>, <strong>unlinkability</strong> and the <strong>controller and processor roles</strong> designed in that setting? Three things have to be settled together: who decides why and how user-level data is processed (owner, provider, Commission), which of the privacy rules that eIDAS sets for the EUDI Wallet are carried over to the EBW, and what the provider may see of the people who use the wallet.</p>
+
+<p>The employee and identifier angles are treated elsewhere: employees acting for a company in <a href="/business-wallet-requirements/architecture/decisions/dec-02/">DEC-02</a>, identifiers and their combination in <a href="/business-wallet-requirements/architecture/decisions/dec-11/">DEC-11</a>. This page links to them and does not repeat them.</p>
+<h2 id="what-the-requirement-set-says">
+  
+  
+    <a href="#what-the-requirement-set-says" class="anchor-heading" aria-labelledby="what-the-requirement-set-says"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> What the requirement set says
+  
+  
+</h2>
+    
+
+<p>The cluster K09 holds the requirements that bear on this decision:</p>
+
+<div class="table-scroll"><div class="table-wrapper"><table><thead><tr><th>Requirement</th><th>Title</th><th>Source</th><th>Proposal</th></tr></thead><tbody>
+<tr><td><a href="/business-wallet-requirements/requirements/ebw-fun-004/">EBW-FUN-004</a></td><td>Selective disclosure of identification data and attributes</td><td>SRC-EBW-PROPOSAL, Article 5(1)(b)</td><td>proposal</td></tr>
+<tr><td><a href="/business-wallet-requirements/requirements/ebw-fun-011/">EBW-FUN-011</a></td><td>Authorising relying parties to request attestations</td><td>SRC-EBW-PROPOSAL, Article 5(1)(k)</td><td>proposal</td></tr>
+<tr><td><a href="/business-wallet-requirements/requirements/ebw-fun-032/">EBW-FUN-032</a></td><td>Selective disclosure and key possession proof</td><td>SRC-CIR-2024-2982, Article 5(3)-(4)</td><td>in force</td></tr>
+<tr><td><a href="/business-wallet-requirements/requirements/ebw-int-095/">EBW-INT-095</a></td><td>Owner identification scheme states which attributes are disclosed together</td><td>SRC-EBW-PROPOSAL, Article 8(6), read with Article 5(1)(b) and Article 8(5)</td><td>proposal</td></tr>
+<tr><td><a href="/business-wallet-requirements/requirements/ebw-leg-009/">EBW-LEG-009</a></td><td>No indefinite public exposure of personal data</td><td>SRC-GDPR, Article 25(2), third sentence</td><td>in force</td></tr>
+<tr><td><a href="/business-wallet-requirements/requirements/ebw-leg-013/">EBW-LEG-013</a></td><td>Erasure capability for personal data in provider systems</td><td>SRC-GDPR, Article 17(1)</td><td>in force</td></tr>
+<tr><td><a href="/business-wallet-requirements/requirements/ebw-nfr-001/">EBW-NFR-001</a></td><td>Export of wallet data and records</td><td>SRC-EBW-PROPOSAL, Article 5(1)(l)</td><td>proposal</td></tr>
+<tr><td><a href="/business-wallet-requirements/requirements/ebw-nfr-002/">EBW-NFR-002</a></td><td>Access to a log of all transactions</td><td>SRC-EBW-PROPOSAL, Article 5(1)(m)</td><td>proposal</td></tr>
+<tr><td><a href="/business-wallet-requirements/requirements/ebw-nfr-016/">EBW-NFR-016</a></td><td>Revocation techniques hinder linkability</td><td>SRC-CIR-2025-1569, Article 4(4)</td><td>in force</td></tr>
+<tr><td><a href="/business-wallet-requirements/requirements/ebw-nfr-037/">EBW-NFR-037</a></td><td>User keeps full control of wallet use and data</td><td>SRC-EIDAS-CONSOL, Article 5a(14), first sentence</td><td>in force</td></tr>
+<tr><td><a href="/business-wallet-requirements/requirements/ebw-nfr-043/">EBW-NFR-043</a></td><td>Unlinkability across relying parties</td><td>SRC-CIR-2024-2982, Article 3(10)</td><td>in force</td></tr>
+<tr><td><a href="/business-wallet-requirements/requirements/ebw-nfr-084/">EBW-NFR-084</a></td><td>Credential visibility conditioned on access rights</td><td>SRC-EBW-PROPOSAL, Annex, point 12(2)(a)</td><td>proposal</td></tr>
+<tr><td><a href="/business-wallet-requirements/requirements/ebw-ops-002/">EBW-OPS-002</a></td><td>Owner notification and data transfer or deletion on service end</td><td>SRC-EBW-PROPOSAL, Article 7(6)(f)</td><td>proposal</td></tr>
+<tr><td><a href="/business-wallet-requirements/requirements/ebw-tru-031/">EBW-TRU-031</a></td><td>Privacy-preserving publication of wallet unit validity status</td><td>SRC-CIR-2024-2979, Article 7(4) (not amended by Implementing Regulation (EU) 2026/1731; consolidated text 02024R2979-20260811)</td><td>in force</td></tr>
+<tr><td><a href="/business-wallet-requirements/requirements/ebw-tru-106/">EBW-TRU-106</a></td><td>Public validity status of revoked unit attestations</td><td>SRC-EBW-PROPOSAL, Annex, point 6(3)</td><td>proposal</td></tr>
+</tbody></table></div></div>
+
+<p>Candidates found in the research and not yet written as requirements: provider processing under a processor contract, a joint-controller arrangement, owner measures for processing by users, pseudonymisation of the Directory where appropriate, and no tracking by the issuer after issuance. Existing entries already cover records of processing (EBW-LEG-016), pseudonymisation and encryption (EBW-LEG-017), the data protection impact assessment (EBW-LEG-020), unlinkability across relying parties (EBW-NFR-043) and logical separation (EBW-NFR-010).</p>
+<h2 id="facts-from-the-sources">
+  
+  
+    <a href="#facts-from-the-sources" class="anchor-heading" aria-labelledby="facts-from-the-sources"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Facts from the sources
+  
+  
+</h2>
+    
+
+<p>Each fact has a source and was read in the original text unless marked. The EDPS formal comments of 20 January 2026 and the EDPS opinion on the Commission proposal were not read; only their existence is stated in the texts. No CJEU judgment and no national employment-law rule was read.</p>
+
+<p><strong>Who the data subjects are, and which data is involved.</strong></p>
+<ul>
+  <li>The owner is “an economic operator or public sector body”; a user is “a natural or legal person, or a natural person representing another natural person or a legal person, that uses European Business Wallets” (proposal Article 3(7), 3(22)). Economic operators include natural persons “acting in a commercial or professional capacity” (Article 3(4)).</li>
+  <li>The GDPR “does not cover the processing of personal data which concerns legal persons”, including name, form and contact details of the legal person (recital 14). Natural persons behind a legal person, such as users, representatives and sole traders, remain data subjects.</li>
+  <li>The Directory “includes personal data of economic operators”. The minimum content in the Council text is the official name of the owner, a unique identifier, a digital address and the country (Council recital 38 and Article 10(3a)); the Commission recital 38 has the same first statement.</li>
+  <li>Recital 39 says the GDPR “applies to all personal data processing activities under this Regulation” and that Directory processing will follow minimisation, purpose limitation, data protection by design and by default and “include, where appropriate, features of pseudonymisation” (Commission text; the Council recital is the same in substance). The legislative financial statement repeats this for the Commission. No article of the proposal repeats the duty.</li>
+  <li>The Commission explanatory memorandum says selective disclosure “also serves as a measure for the protection of personal data”; Article 5(1)(b) provides for selective disclosure of owner identification data and attributes.</li>
+  <li>Users, authorised representatives and their roles appear in logs, authorisation mappings and attestations (Article 5(1)(j), 6(2)(b); Council Annex 7 and 12). The articles read contain no controller, processor or joint-controller allocation between owner, user, provider and Commission. The words “controller” and “processor” do not occur in the Commission text or the Council text, apart from references to Regulation (EU) 2016/679 (searched).</li>
+  <li>Supervisory bodies shall “cooperate with supervisory authorities established pursuant to Article 51 of Regulation (EU) 2016/679” (Article 13(5)(g)).</li>
+  <li>The stems <em>unlink</em> and <em>correlat</em> do not occur in the proposal or in the Council text (searched). The Council Annex asks that “visibility of credentials and attestations is selective and conditioned on access rights” (Annex 12(2)(a)).</li>
+  <li>The Council log content (time and date, relying party data, data types, reason for non-completion) lists no field for the acting user; separately, “all access and execution events are logged, timestamped, and bound to cryptographically verifiable proofs of authorisation” (Annex 7(2), 12(2)(c)). The acting person in the log is also treated in <a href="/business-wallet-requirements/architecture/decisions/dec-02/">DEC-02</a>.</li>
+  <li>Council text: logs “shall be accessible to the European Business Wallets provider, where it is necessary for the provision of European Business Wallets services” without a consent condition (Annex 7(5)). For the EUDI Wallet the same access is “on the basis of explicit prior consent by the wallet user” (Regulation (EU) 2024/2979 Article 9(5)).</li>
+</ul>
+
+<p><strong>GDPR provisions on roles and design.</strong></p>
+<ul>
+  <li>A controller “alone or jointly with others, determines the purposes and means of the processing”; a processor “processes personal data on behalf of the controller” (Article 4(7), 4(8)).</li>
+  <li>Joint controllers: “Where two or more controllers jointly determine the purposes and means of processing, they shall be joint controllers.” They set responsibilities “by means of an arrangement” whose essence is made available to the data subject, who may exercise rights “in respect of and against each of the controllers” (Article 26(1) to (3)).</li>
+  <li>Processing by a processor “shall be governed by a contract or other legal act”, and the processor “processes the personal data only on documented instructions from the controller” (Article 28(3)(a)). A processor that determines purposes and means “shall be considered to be a controller in respect of that processing” (Article 28(10)). Persons acting under the authority of the controller or processor “shall not process those data except on instructions from the controller” (Article 29).</li>
+  <li>Personal data shall be “adequate, relevant and limited to what is necessary in relation to the purposes” and kept identifiable “for no longer than is necessary”; the controller must demonstrate compliance (Article 5(1)(c), (e), 5(2)).</li>
+  <li>Controllers implement measures “such as pseudonymisation” and, by default, process “only personal data which are necessary for each specific purpose” (Article 25(1), 25(2)).</li>
+  <li>Controllers keep a record of processing activities with purposes, categories, recipients and, where possible, time limits for erasure (Article 30(1)); security measures include “the pseudonymisation and encryption of personal data” (Article 32(1)(a)).</li>
+  <li>A data protection impact assessment is required “where a type of processing in particular using new technologies … is likely to result in a high risk”, before the processing; one assessment “may address a set of similar processing operations that present similar high risks” (Article 35(1), 35(7)). Breach notification to the authority is due “not later than 72 hours” after becoming aware (Article 33(1)).</li>
+  <li>Member States may provide “more specific rules” for employees’ data, with “suitable and specific measures” including “monitoring systems at the work place” (Article 88(1), (2)). Pseudonymised data “which could be attributed to a natural person by the use of additional information should be considered to be information on an identifiable natural person” (recital 26).</li>
+</ul>
+
+<p><strong>EDPB guidelines.</strong></p>
+<ul>
+  <li>“It is usually the organisation as such, and not an individual within the organisation”, such as an employee, that acts as a controller (Guidelines 07/2020, executive summary). Processing by employees within the organisation’s activities “may be presumed to take place under that organisation’s control”; employees are generally persons acting under the authority of the controller (paragraph 19 and footnote 9). The organisation must ensure “adequate technical and organizational measures, including e.g. training and information to employees”.</li>
+  <li>A processor must be “a separate entity in relation to the controller” and process “on the controller’s behalf”; essential means stay with the controller, non-essential means may be left to the processor. The criterion for joint controllership is “the joint participation of two or more entities in the determination of the purposes and means of a processing operation”.</li>
+  <li>In an example, a taxi booking platform used by a company for its employees is a controller of the employee data “in its own right”, because it independently designed the platform and decides categories and retention; a call-centre provider that cannot use data for other purposes is a processor (examples near paragraph 83).</li>
+  <li>Guidelines 01/2025 on pseudonymisation (consultation version, adopted 16 January 2025; a final version was not found): pseudonymised data that could be attributed by additional information “is to be considered information on an identifiable natural person”, which “also holds true if pseudonymised data and additional information are not in the hands of the same person”. “The GDPR does not impose a general obligation to use pseudonymisation.” Effectiveness “is highly dependent on the choice of the pseudonymisation domain and its isolation from additional information”.</li>
+  <li>Guidelines 4/2019 on Article 25 (v2.0, 20 October 2020) were partly read: the table of contents and the minimisation headings only.</li>
+</ul>
+
+<p><strong>eIDAS rules for the EUDI Wallet that the proposal does not repeat for the EBW.</strong></p>
+<ul>
+  <li>“Users shall have full control of the use of and of the data in their European Digital Identity Wallet.” The provider shall not collect usage information not necessary for the service nor combine personal data with other services, and personal data “shall be kept logically separate from any other data held by the provider” (Article 5a(14)).</li>
+  <li>The technical framework shall not allow attestation providers or any other party, after issuance, “to obtain data that allows transactions or user behaviour to be tracked, linked or correlated”, and shall “enable privacy preserving techniques which ensure unlinkability, where the attestation of attributes does not require the identification of the user” (Article 5a(16)(a), (b)).</li>
+  <li>The wallet enables the user to “generate pseudonyms and store them encrypted and locally” and to access a log with options to request erasure and report a relying party (Article 5a(4)(b), (d)). Relying parties shall not request data beyond the registration and shall not refuse pseudonyms “where the identification of the user is not required by Union or national law” (Article 5b(3), 5b(9)). “Compliance of such processing with Regulation (EU) 2016/679 shall be demonstrated” (Article 5a(17)).</li>
+  <li>Article 5a applies to European Digital Identity Wallets for natural persons, and the proposal narrows the mandatory EUDI Wallet to natural persons (Article 20, recital 55). Whether Article 5a(14) and (16) apply to business wallets is not stated in the articles read.</li>
+</ul>
+
+<p><strong>Implementing rules and ARF.</strong></p>
+<ul>
+  <li>Wallet instances “shall log all transactions with wallet-relying parties and other wallet units, including electronic signing and sealing”; providers “shall ensure integrity, authenticity and confidentiality of the logged information” (Regulation 2024/2979 Article 9(1) to (3)). Users can export the log (9(7)); logs “remain accessible for as long as they are required by Union law or national law” (9(6)).</li>
+  <li>Wallet units shall “enable privacy preserving techniques which ensure unlinkability where the electronic attestations of attributes do not require the identification of the wallet user” (Regulation 2024/2982 Article 3(10)).</li>
+  <li>ARF Topic 11: “A Relying Party SHALL NOT be able to derive the User’s true identity, or any data identifying the User” from the pseudonym value, and pseudonym protocols must make it “impossible to correlate Pseudonyms based on their values or on metadata”. Scope-rate-limited pseudonyms must not allow any entity or collusion of entities to link pseudonyms across relying parties (section E). Topic 10 section E requires support for batch issuance.</li>
+  <li>ETSI TS 119 472-2: “The EUDI Wallet shall by default disclose the presence of all stored EAAs’ type to the mediating API”, but not attributes.</li>
+</ul>
+
+<p><strong>Protocol-level privacy facts (OpenID4VC).</strong></p>
+<ul>
+  <li>Issuers and wallets “SHOULD implement Credential Formats that support selective disclosure”; “The time logs are retained for should be minimized”; issuers “SHOULD NOT store the Issuer-signed Credentials if they contain privacy-sensitive data” (OpenID4VCI 1.0, sections 15.2 and 15.3).</li>
+  <li>Unique values (claims, identifiers, issuer signature) can link presentations. Countermeasures include issuing a batch “to facilitate the use of a unique Credential per presentation or per Verifier” and discarding signature values after issuance (OpenID4VCI 15.4.1); one-time use of credential instances gives “Verifier-to-Verifier Unlinkable Presentations” (OpenID4VP 1.0, section 15.5).</li>
+  <li>“Wallet Attestations MUST NOT be reused across different Issuers”, and each credential has “its own unique, unpredictable status list index” (HAIP 1.0, sections 4.4.1 and 6.1).</li>
+  <li>Wallets “SHOULD obtain explicit, informed consent”; “Transaction history and data within the Wallet SHOULD NOT be accessible to anyone other than the End-User”, unless the user consents or another legal basis exists (OpenID4VP 15.1). Verifiers “SHOULD use DCQL queries that request only the minimal set of claims” (15.4.2).</li>
+  <li>Information in a credential that identifies a particular issuer “may reveal information about the End-User”; a group may use a common issuer (OpenID4VCI 15.5). “Mechanisms that require online resolution can leak information that could be used to profile the usage of the Credentials” (OpenID4VP 15.10).</li>
+</ul>
+
+<p><strong>AI Act.</strong> Deployers that are employers using high-risk AI at the workplace “shall inform workers’ representatives and the affected workers” before use (Article 26(7)). This is relevant only if an agent or AI component is a high-risk system.</p>
+
+<p><strong>What no source read says.</strong></p>
+<ul>
+  <li>No source allocates controller or processor roles for an EBW between owner, user, provider and Commission. The proposal names no controller for the Directory; the Commission text says the Directory is accessible to owners, authorised representatives and providers (Article 10(4)).</li>
+  <li>No source says whether an employee’s identity in a log is personal data of the employee vis-a-vis the owner, how an employee exercises access or erasure rights against an owner or provider, or how the owner’s interest in accountability is balanced against the employee’s privacy. The EDPB guidelines read describe the general principle, not the wallet case.</li>
+  <li>No source gives a retention period for EBW logs other than “as long as required … by Union law or national law” (Council Annex 7(6)).</li>
+</ul>
+<h2 id="decision-criteria">
+  
+  
+    <a href="#decision-criteria" class="anchor-heading" aria-labelledby="decision-criteria"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Decision criteria
+  
+  
+</h2>
+    
+
+<p>Criteria marked <strong>source</strong> are stated or implied by a source; <strong>driver</strong> means a project driver that no source states and that a stakeholder has to confirm.</p>
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Criterion</th>
+      <th>Basis</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>P1</td>
+      <td>Role clarity per processing activity: who determines purposes and means</td>
+      <td>source: GDPR Article 4(7), 4(8), 26, 28; EDPB Guidelines 07/2020</td>
+    </tr>
+    <tr>
+      <td>P2</td>
+      <td>Contract and arrangement duties that follow from the roles, including the sub-processor chain</td>
+      <td>source: GDPR Article 28(3), 26(1)</td>
+    </tr>
+    <tr>
+      <td>P3</td>
+      <td>Data minimisation and storage limitation by default</td>
+      <td>source: GDPR Article 5(1)(c), (e), 25(2); OpenID4VCI 15.3</td>
+    </tr>
+    <tr>
+      <td>P4</td>
+      <td>Unlinkability across relying parties and between issuer and verifier</td>
+      <td>source: eIDAS Article 5a(16) for the EUDI Wallet, Regulation 2024/2982 Article 3(10), HAIP, ARF pseudonyms; no corresponding EBW text</td>
+    </tr>
+    <tr>
+      <td>P5</td>
+      <td>Pseudonymisation where appropriate, and its limits</td>
+      <td>source: proposal recital 39, GDPR Article 32(1)(a), EDPB Guidelines 01/2025</td>
+    </tr>
+    <tr>
+      <td>P6</td>
+      <td>Provider access to user-level data</td>
+      <td>source: consent for EUDI Wallet logs, “where necessary” in the Council EBW text</td>
+    </tr>
+    <tr>
+      <td>P7</td>
+      <td>Separation of wallet-service data from other services of the provider</td>
+      <td>source: eIDAS Article 5a(14) for the EUDI Wallet</td>
+    </tr>
+    <tr>
+      <td>P8</td>
+      <td>Data subject rights when the data subject is a user of an organisation’s wallet</td>
+      <td>source: GDPR Chapter III, Regulation 2024/2982 Articles 6 and 7 for the EUDI Wallet</td>
+    </tr>
+    <tr>
+      <td>P9</td>
+      <td>Impact assessment and records of processing: who carries them for owner-side and provider-side processing</td>
+      <td>source: GDPR Article 35, 30</td>
+    </tr>
+    <tr>
+      <td>P10</td>
+      <td>Employment-context rules of Member States and worker information when AI is used</td>
+      <td>source: GDPR Article 88, AI Act Article 26(7)</td>
+    </tr>
+    <tr>
+      <td>P11</td>
+      <td>Security of processing and breach notification timelines</td>
+      <td>source: GDPR Article 32, 33; eIDAS Article 24(2)(fb) and NIS2 24-hour regimes for trust service providers</td>
+    </tr>
+    <tr>
+      <td>P12</td>
+      <td>Transparency to the data subject</td>
+      <td>source: GDPR Article 26(2); Articles 13 and 14 not read</td>
+    </tr>
+    <tr>
+      <td>P13</td>
+      <td>Employee privacy against owner accountability: which identifier of the acting person appears in which log, for whom, for how long</td>
+      <td>driver</td>
+    </tr>
+    <tr>
+      <td>P14</td>
+      <td>Cost and complexity of single-use batch issuance for B2B volumes and for organisational credentials with no natural-person identification need</td>
+      <td>driver</td>
+    </tr>
+    <tr>
+      <td>P15</td>
+      <td>Cross-border differences in employment and data protection law for multinational owners</td>
+      <td>driver</td>
+    </tr>
+  </tbody>
+</table></div>
+<h2 id="options">
+  
+  
+    <a href="#options" class="anchor-heading" aria-labelledby="options"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Options
+  
+  
+</h2>
+    
+
+<p>The GDPR roles below are a derivation for wallet providers: this page applies the GDPR role tests and the EDPB guidelines to the EBW actors, and no source read does that for the EBW. The Commission’s Directory role and the roles of the Member State supervisory bodies are separate from the provider-owner relation in all three options; the sources read do not name the Directory controller.</p>
+<h3 id="a-owner-as-controller-provider-as-processor-for-user-level-data">
+  
+  
+    <a href="#a-owner-as-controller-provider-as-processor-for-user-level-data" class="anchor-heading" aria-labelledby="a-owner-as-controller-provider-as-processor-for-user-level-data"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> (a) Owner as controller, provider as processor for user-level data
+  
+  
+</h3>
+    
+
+<p>The organisation decides why and how users act in the wallet. The provider processes on documented instructions under an Article 28 contract and is controller only for its own operation data (account, security, billing).</p>
+
+<p><strong>Enables.</strong> Matches the EDPB reading that the organisation is the controller for processing by its employees. Article 28 gives a ready contract frame including audits and return of data. Fits the owner’s right to export data and to instruct transfer or deletion (proposal Article 5(1)(l) and 7(6)(f)).</p>
+
+<p><strong>Restricts.</strong> The provider must not determine its own purposes and means for user data, or it becomes controller (Article 28(10)). A provider that designs the log content, retention and analytics itself resembles the platform example. The EUDI Wallet rules that forbid combining data and require logical separation have no stated EBW counterpart.</p>
+
+<p><strong>Leaves open.</strong> Who is controller of the Directory entry for sole traders (Commission, provider or owner); how employees exercise rights against the owner; how logs that identify the acting user are protected from the owner’s own misuse.</p>
+<h3 id="b-provider-and-owner-as-joint-controllers-for-core-wallet-processing">
+  
+  
+    <a href="#b-provider-and-owner-as-joint-controllers-for-core-wallet-processing" class="anchor-heading" aria-labelledby="b-provider-and-owner-as-joint-controllers-for-core-wallet-processing"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> (b) Provider and owner as joint controllers for core wallet processing
+  
+  
+</h3>
+    
+
+<p>Both determine purposes and means of core processing (for example log content, authorisation mappings, signing and sealing flows), with an Article 26 arrangement.</p>
+
+<p><strong>Enables.</strong> Reflects a provider that sets the technical and functional framework while the owner sets use. Each controller is reachable by the data subject (Article 26(3)). A single arrangement can cover cross-provider flows.</p>
+
+<p><strong>Restricts.</strong> The criterion of joint participation in the determination of purposes and means in the EDPB guidelines must be met. The essence of the arrangement must be made available to data subjects. Arrangements have to be negotiated with many small owners.</p>
+
+<p><strong>Leaves open.</strong> The liability split; how the Commission as Directory operator fits (as a third controller); the effect on the provider’s duties as a qualified trust service provider.</p>
+<h3 id="c-provider-as-independent-controller-for-user-level-data-owner-as-controller-for-business-use">
+  
+  
+    <a href="#c-provider-as-independent-controller-for-user-level-data-owner-as-controller-for-business-use" class="anchor-heading" aria-labelledby="c-provider-as-independent-controller-for-user-level-data-owner-as-controller-for-business-use"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> (c) Provider as independent controller for user-level data, owner as controller for business use
+  
+  
+</h3>
+    
+
+<p>The provider treats user accounts, authentication and logs as its own processing for providing a regulated service. The owner decides on the use of attestations and mandates.</p>
+
+<p><strong>Enables.</strong> Aligns with the provider’s own regulatory duties (eIDAS Article 24, NIS2, wallet provider rules including logging and security). Gives clarity for security monitoring and incident response. Fits the logic of the taxi example, where the service defines its own data model.</p>
+
+<p><strong>Restricts.</strong> The owner may lack control over user data held by the provider. Employee data flows between two controllers need a legal basis for each disclosure. The EUDI Wallet analogy (the provider may not combine data, Article 5a(14)) suggests limits that the EBW text does not state.</p>
+
+<p><strong>Leaves open.</strong> The lawful basis for provider processing of employee data; transparency duties towards employees who never contract with the provider; retention when the owner ends the contract.</p>
+<h2 id="assessment-against-the-criteria">
+  
+  
+    <a href="#assessment-against-the-criteria" class="anchor-heading" aria-labelledby="assessment-against-the-criteria"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Assessment against the criteria
+  
+  
+</h2>
+    
+
+<p>How far the <em>sources</em> support each option for each criterion. “Not stated” means no source speaks to it; the cell does not say the option fails.</p>
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Criterion</th>
+      <th>(a) owner controller, provider processor</th>
+      <th>(b) joint controllers</th>
+      <th>(c) provider independent controller</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>P1 Role clarity</td>
+      <td>Follows the EDPB organisation-as-controller reading; the provider must stay within instructions</td>
+      <td>Needs joint determination of purposes and means; the criterion is stated, its application to the EBW is not</td>
+      <td>Follows the platform example; the split of purposes between provider and owner is not stated</td>
+    </tr>
+    <tr>
+      <td>P2 Contract and arrangement</td>
+      <td>Article 28(3) contract</td>
+      <td>Article 26 arrangement</td>
+      <td>Not stated; a basis for each disclosure between controllers is needed</td>
+    </tr>
+    <tr>
+      <td>P6 Provider access to user data</td>
+      <td>Only on documented instructions</td>
+      <td>Not stated</td>
+      <td>Provider’s own processing; the Council text allows access to logs “where necessary”</td>
+    </tr>
+    <tr>
+      <td>P7 Separation from other services</td>
+      <td>Not stated for the EBW (Article 5a(14) is for the EUDI Wallet)</td>
+      <td>Not stated</td>
+      <td>Not stated; Article 5a(14) suggests limits</td>
+    </tr>
+    <tr>
+      <td>P8 Data subject rights</td>
+      <td>Against the owner; how an employee exercises them is not stated</td>
+      <td>Against each controller (Article 26(3))</td>
+      <td>Against the provider and the owner; not stated in detail</td>
+    </tr>
+    <tr>
+      <td>P9 Impact assessment and records</td>
+      <td>Owner for its processing, provider for its own; the split is not stated</td>
+      <td>Shared through the arrangement</td>
+      <td>Each controller for its own processing</td>
+    </tr>
+    <tr>
+      <td>P12 Transparency</td>
+      <td>Not stated</td>
+      <td>Essence of the arrangement is made available</td>
+      <td>Not stated for employees who never contract with the provider</td>
+    </tr>
+    <tr>
+      <td>P3 to P5 Minimisation, unlinkability, pseudonymisation</td>
+      <td>Not stated per option; the protocol-level facts apply in every option</td>
+      <td>As (a)</td>
+      <td>As (a)</td>
+    </tr>
+  </tbody>
+</table></div>
+<h2 id="preliminary-reading">
+  
+  
+    <a href="#preliminary-reading" class="anchor-heading" aria-labelledby="preliminary-reading"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Preliminary reading
+  
+  
+</h2>
+    
+
+<p><em>This section is the analysis of this project, not a statement of a source.</em> Three observations follow from the facts.</p>
+
+<ol>
+  <li><strong>The role question is open in the sources, so it has to be settled in the design and the contracts.</strong> No text read allocates the roles, and the GDPR tests (Article 4(7), 4(8), 28(10)) decide by who determines purposes and means. A provider that fixes log content, retention and analytics for user data moves from option (a) towards (c) whatever the contract says.</li>
+  <li><strong>Option (a) is the closest fit for user-level data, with the provider’s own operation data as the exception.</strong> It follows the EDPB reading for employees and uses an existing contract frame. Option (b) fits only where the provider really sets purposes and means with the owner. Option (c) fits provider-side processing that the provider’s regulatory duties require, but it leaves the owner without control over the data of its own users.</li>
+  <li><strong>The EUDI Wallet privacy rules are the natural reference for the EBW design, but their application is not stated.</strong> Logical separation, no combination of data, unlinkability and consent for provider access to logs are written for the EUDI Wallet. Taking them over for the EBW would be a design choice of this project, not a requirement of a source, until the final text says otherwise. Per-credential single-use issuance has a cost for B2B volumes (P14) that stakeholders have to weigh against organisational credentials that need no person identification.</li>
+</ol>
+
+<p><strong>Conditions under which this reading holds.</strong> The final text keeps recital 39 and does not allocate the roles in a way that contradicts the GDPR tests; providers do not set purposes for user data beyond the service; the Annex keeps the log and access-control requirements that the Council text has.</p>
+
+<p><strong>What would change it.</strong> An adopted text or implementing act that allocates controller and processor roles for the Directory, the logs and the authorisation mappings; the EDPS comments and opinion on the proposal, which were not read; a final version of the EDPB Guidelines 01/2025; a statement that eIDAS Article 5a(14) and (16) apply to EBW providers <span class="vtag v-todo">to verify</span>; national employment-law rules on logging of employee actions; CJEU case law on controllership and pseudonymised data.</p>
+<h2 id="evidence-gaps-and-next-steps">
+  
+  
+    <a href="#evidence-gaps-and-next-steps" class="anchor-heading" aria-labelledby="evidence-gaps-and-next-steps"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Evidence gaps and next steps
+  
+  
+</h2>
+    
+
+<ul>
+  <li>Obtain the outcome of the Council meeting on 9 June 2026 and re-check the privacy and logging provisions; read the EDPS comments of 20 January 2026 and the EDPS opinion, which were not read.</li>
+  <li>Check whether eIDAS Article 5a(14), (16) and Article 5b are intended to apply to EBW providers <span class="vtag v-todo">to verify</span>.</li>
+  <li>Read GDPR Articles 13 to 22 (information and rights) and Chapter V (transfers), which were not analysed, and Guidelines 4/2019 beyond the headings read; search for EDPB guidance specific to wallets.</li>
+  <li>Analyse the legal basis for processing the identification record of a sole trader or a representative (Article 6 text read, no source applying it to the EBW).</li>
+  <li>Read national employment-law restrictions on monitoring and logging (Article 88) and CJEU case law on controllership and pseudonymised data.</li>
+  <li>Write the requirement candidates listed above and review them with a named reviewer.</li>
+  <li>Confirm the drivers P13 to P15 with stakeholders; they are assumptions until then. The log and acting-person angle continues in <a href="/business-wallet-requirements/architecture/decisions/dec-02/">DEC-02</a> and the identifier combination angle in <a href="/business-wallet-requirements/architecture/decisions/dec-11/">DEC-11</a>.</li>
+  <li>Not covered here: privacy of the Commission’s third-country assessments, supervisory notifications and the unique identifier regime.</li>
+</ul>
+<h2 id="references">
+  
+  
+    <a href="#references" class="anchor-heading" aria-labelledby="references"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> References
+  
+  
+</h2>
+    
+
+<p>SRC-EBW-PROPOSAL, SRC-COUNCIL-ST-9684-26, SRC-GDPR, SRC-EIDAS-CONSOL, SRC-CIR-2024-2979, SRC-CIR-2024-2982, SRC-ARF-HLR, SRC-ETSI-119472-2, SRC-OID4VCI-1.0, SRC-OID4VP-1.0, SRC-HAIP-1.0, SRC-AIACT, SRC-EDPB-GL-07-2020, SRC-EDPB-GL-01-2025, SRC-EDPB-GL-04-2019. Full entries with version, date and URL are in the source register.</p>
+
+          
+
+          
+            
+          
+        </main>
+        
+<hr>
+<footer>
+  
+
+  <div class="site-footer-extra">
+  <div class="sf-grid">
+    <div class="sf-brand">
+      <img src="/business-wallet-requirements/assets/images/logos/spherity-logo-white.svg" alt="Spherity" width="150" height="auto">
+      <p>European Business Wallet Requirements: open, traceable requirements for European Business Wallets and trust infrastructure.</p>
+      <p><a href="mailto:info@spherity.com">info@spherity.com</a></p>
+    </div>
+    <nav class="sf-col" aria-label="Explore">
+      <h2>Explore</h2>
+      <ul>
+        <li><a href="/business-wallet-requirements/requirements/">Requirements</a></li>
+        <li><a href="/business-wallet-requirements/concepts/">Concepts</a></li>
+        <li><a href="/business-wallet-requirements/perspectives/use-cases/">Use cases</a></li>
+        <li><a href="/business-wallet-requirements/perspectives/business-cases/">Business cases</a></li>
+        <li><a href="/business-wallet-requirements/legal/roadmap/">Legal roadmap</a></li>
+        <li><a href="/business-wallet-requirements/ecosystem/initiatives/">Ecosystems</a></li>
+      </ul>
+    </nav>
+    <nav class="sf-col" aria-label="Resources">
+      <h2>Resources</h2>
+      <ul>
+        <li><a href="/business-wallet-requirements/downloads/">Downloads</a></li>
+        <li><a href="/business-wallet-requirements/figures/">Figure gallery</a></li>
+        <li><a href="/business-wallet-requirements/changelog/">What changed</a></li>
+        <li><a href="https://spherity.github.io/spherity-research/">Spherity Research</a></li>
+        <li><a href="/business-wallet-requirements/llms.txt">llms.txt</a></li>
+        <li><a href="/business-wallet-requirements/sitemap.xml">Sitemap</a></li>
+      </ul>
+    </nav>
+    <nav class="sf-col" aria-label="Project">
+      <h2>Project</h2>
+      <ul>
+        <li><a href="/business-wallet-requirements/about/">About</a></li>
+        <li><a href="/business-wallet-requirements/contact/">Contact</a></li>
+        <li><a href="https://github.com/cstoecker/business-wallet-requirements/discussions">Discussions</a></li>
+        <li><a href="https://github.com/cstoecker/business-wallet-requirements">GitHub</a></li>
+      </ul>
+    </nav>
+  </div>
+  <p class="sf-legal">Published by <a href="https://www.spherity.com">Spherity GmbH</a>. Content CC BY 4.0, code Apache-2.0 (to be confirmed). Draft for review; based on the Commission proposal COM(2025) 838. Analysis, not legal advice.</p>
+</div>
+<script>
+(function () {
+  var html = document.documentElement;
+  // tooltips and accessible names for icon-only navigation
+  document.querySelectorAll(".nav-list-link").forEach(function (a) { var t = a.textContent.trim(); if (t) { a.setAttribute("title", t); } });
+  // navigation icons (Untitled UI, outline); inserted as elements so the active link shows them too
+  var base = "/business-wallet-requirements", icons = {"/":"home-line","/concepts/":"lightbulb-02","/research/":"file-search-02","/changelog/":"clock-refresh","/downloads/":"download-04","/figures/":"image-03","/about/":"info-circle","/requirements/":"check-done-02","/requirements/methodology/":"clipboard-check","/perspectives/":"eye","/perspectives/use-cases/":"target-02","/perspectives/business-cases/":"coins-03","/legal/":"scales-02","/legal/roadmap/":"flag-03","/domains/":"grid-03","/architecture/":"layers-three-02","/traceability/":"dataflow-03","/ecosystem/":"globe-02","/ecosystem/initiatives/":"building-05","/ecosystem/standards/":"target-02","/ecosystem/certification/":"award-03","/ecosystem/governance/":"users-check","discussions":"message-chat-circle","/requirements/review/":"list","/architecture/decisions/":"settings-02"};
+  document.querySelectorAll(".nav-list-link").forEach(function (a) {
+    if (a.querySelector(".nav-ic")) return;
+    var u; try { u = new URL(a.href, location.href); } catch (e) { return; }
+    var key = u.origin === location.origin ? (u.pathname.indexOf(base) === 0 ? u.pathname.slice(base.length) : u.pathname) : (u.pathname.indexOf("/discussions") > -1 ? "discussions" : "");
+    key = key.replace(/index\.html$/, "");
+    var name = icons[key]; if (!name) return;
+    var s = document.createElement("span"); s.className = "nav-ic"; s.setAttribute("aria-hidden", "true");
+    s.style.setProperty("--icon", 'url("/business-wallet-requirements/assets/icons/' + name + '.svg")');
+    a.insertBefore(s, a.firstChild);
+  });
+  // mark the current page in the navigation
+  var here = location.pathname.replace(/index\.html$/, "");
+  document.querySelectorAll(".nav-list-link").forEach(function (a) { try { var u = new URL(a.href, location.href); if (u.origin === location.origin && u.pathname.replace(/index\.html$/, "") === here) { a.setAttribute("aria-current", "page"); } } catch (e) {} });
+  // desktop: sub-pages open as a flyout on hover or focus instead of expanding inside the sidebar
+  (function () {
+    var mq = window.matchMedia("(min-width: 50rem)"), side = document.querySelector(".side-bar"), fly, hideT, showT, cur;
+    if (!side) return;
+    function close() { clearTimeout(showT); if (fly) { fly.remove(); fly = null; } cur = null; }
+    function open(li) {
+      if (!mq.matches || cur === li) return;
+      var sub = li.querySelector(":scope > .nav-list"); if (!sub) return;
+      close(); cur = li;
+      fly = document.createElement("nav"); fly.className = "nav-flyout"; fly.setAttribute("aria-label", li.querySelector(":scope > .nav-list-link").textContent.trim());
+      var ul = document.createElement("ul"); ul.className = "nav-list";
+      sub.querySelectorAll(":scope > .nav-list-item").forEach(function (item) {
+        var a = item.querySelector(":scope > .nav-list-link"); if (!a) return;
+        var c = a.cloneNode(true); c.removeAttribute("title"); var e = document.createElement("li"); e.appendChild(c); ul.appendChild(e);
+      });
+      fly.appendChild(ul); document.body.appendChild(fly);
+      var r = side.getBoundingClientRect(), lr = li.getBoundingClientRect(), h = fly.offsetHeight;
+      fly.style.left = r.right + "px"; fly.style.top = Math.max(8, Math.min(lr.top, window.innerHeight - h - 8)) + "px";
+      fly.addEventListener("mouseenter", function () { clearTimeout(hideT); });
+      fly.addEventListener("mouseleave", function () { hideT = setTimeout(close, 160); });
+      fly.addEventListener("focusout", function (ev) { if (!fly || !fly.contains(ev.relatedTarget)) hideT = setTimeout(close, 160); });
+    }
+    side.querySelectorAll(".nav-list > .nav-list-item").forEach(function (li) {
+      if (!li.querySelector(":scope > .nav-list")) return;
+      li.addEventListener("mouseenter", function () { clearTimeout(hideT); clearTimeout(showT); showT = setTimeout(function () { open(li); }, 140); });
+      li.addEventListener("mouseleave", function () { clearTimeout(showT); hideT = setTimeout(close, 160); });
+      li.addEventListener("focusin", function () { open(li); });
+    });
+    side.addEventListener("mouseenter", function (e) { if (!e.target.closest || true) clearTimeout(hideT); });
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape") close(); });
+    window.addEventListener("scroll", close, true); window.addEventListener("resize", close);
+  })();
+  // keyboard access to horizontally scrollable tables and figures
+  document.querySelectorAll(".main-content *").forEach(function (el) {
+    var o = getComputedStyle(el).overflowX;
+    if ((o === "auto" || o === "scroll") && el.scrollWidth > el.clientWidth + 1 && !el.hasAttribute("tabindex")) { el.setAttribute("tabindex", "0"); }
+  });
+  // collapse toggle
+  var header = document.querySelector(".site-header");
+  if (header && !header.querySelector(".nav-toggle")) {
+    var b = document.createElement("button");
+    b.type = "button"; b.className = "nav-toggle";
+    b.innerHTML = '<span class="icon" aria-hidden="true"></span>';
+    var side = document.querySelector(".side-bar"), tin, tout;
+    if (side) {
+      side.addEventListener("mouseenter", function () { clearTimeout(tout); if (html.classList.contains("nav-collapsed")) tin = setTimeout(function () { html.classList.add("nav-peek"); }, 90); });
+      side.addEventListener("mouseleave", function () { clearTimeout(tin); tout = setTimeout(function () { html.classList.remove("nav-peek"); }, 180); });
+      side.addEventListener("focusin", function () { if (html.classList.contains("nav-collapsed")) html.classList.add("nav-peek"); });
+      side.addEventListener("focusout", function (e) { if (!side.contains(e.relatedTarget)) html.classList.remove("nav-peek"); });
+    }
+    function sync() { var c = html.classList.contains("nav-collapsed"); b.setAttribute("aria-pressed", c ? "true" : "false"); b.setAttribute("aria-label", c ? "Expand navigation" : "Collapse navigation to icons"); b.title = c ? "Expand navigation" : "Collapse navigation to icons"; }
+    b.addEventListener("click", function () { html.classList.remove("nav-peek"); html.classList.toggle("nav-collapsed"); try { localStorage.setItem("ebw-nav", html.classList.contains("nav-collapsed") ? "collapsed" : "expanded"); } catch (e) {} sync(); });
+    header.appendChild(b); sync();
+  }
+  // "On this page" for long articles
+  var content = document.querySelector(".main-content");
+  var hs = content ? content.querySelectorAll("h2[id]") : [];
+  if (hs.length > 3 && !document.querySelector(".toc-box")) {
+    var d = document.createElement("details"); d.className = "toc-box"; d.open = window.innerWidth > 800;
+    var ol = ""; hs.forEach(function (h) { ol += '<li><a href="#' + h.id + '">' + h.textContent.replace(/\s+/g, " ").trim() + "</a></li>"; });
+    d.innerHTML = "<summary>On this page</summary><ol>" + ol + "</ol>";
+    var first = content.querySelector("h2"); if (first) first.parentNode.insertBefore(d, first);
+  }
+})();
+</script>
+
+
+  <div class="d-md-none mt-4 fs-2">
+    
+    
+      This site uses <a href="https://github.com/just-the-docs/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.
+    
+  </div>
+</footer>
+
+      </div>
+    </div>
+    
+      
+
+<div class="search-overlay"></div>
+
+    
+  </div>
+
+  
+</body>
+</html>
+

@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 810" width="1600" height="810" role="img" aria-labelledby="tm dm">
+<title id="tm">European Business Wallet legal and operational roadmap, Q4 2025 to Q4 2029</title>
+<desc id="dm">Swimlane roadmap from Q4 2025 to Q4 2029 with Council presidencies and seven tracks: regulation and policy, standardisation, Architecture Reference Framework, large-scale pilots, Member States, conformity and accreditation, industry adoption. Only the Commission proposal of 19 November 2025 is confirmed; all other milestones are indicative scenarios that depend on adoption and entry into force of the regulation.</desc>
+<metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"><rdf:RDF><cc:Work rdf:about=""><dc:title>European Business Wallet legal and operational roadmap 2025-2029</dc:title><dc:description>Swimlane roadmap with indicative legal, standardisation, pilot, conformity and adoption milestones for the European Business Wallet.</dc:description><dc:creator>European Business Wallet Requirements project</dc:creator><dc:subject>European Business Wallet; roadmap; eIDAS 2.0; COM(2025) 838; timeline</dc:subject><dc:language>en</dc:language><dc:format>image/svg+xml</dc:format><dc:rights>CC BY 4.0</dc:rights><cc:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/></cc:Work></rdf:RDF></metadata>
+<style>text{font-family:Archivo,Arial,sans-serif;fill:#253746}.t{font-size:26px;font-weight:700;fill:#023852}.lane{font-size:15px;font-weight:700;fill:#023852}.sub{font-size:12.5px;fill:#445260}.yr{font-size:22px;font-weight:700;fill:#023852}.q{font-size:13px;font-weight:600;fill:#fff}.bx{font-size:13.5px}.pres{font-size:13px;font-weight:600;fill:#023852}.leg{font-size:13px;fill:#445260}.grid{stroke:#C9C7C2;stroke-width:1;stroke-dasharray:4 5}</style>
+<rect width="1600" height="810" fill="#fff"/>
+<text x="24" y="40" class="t">European Business Wallet: legal and operational roadmap</text>
+<text x="24" y="62" class="sub">Calendar dates are scenarios; periods after entry into force follow the Commission proposal. Analysis, not legal advice.</text>
+<text x="289" y="96" class="yr" text-anchor="middle">2025</text>
+<line x1="250" y1="104" x2="250" y2="740" class="grid"/>
+<text x="485" y="96" class="yr" text-anchor="middle">2026</text>
+<line x1="328" y1="104" x2="328" y2="740" class="grid"/>
+<text x="798" y="96" class="yr" text-anchor="middle">2027</text>
+<line x1="641" y1="104" x2="641" y2="740" class="grid"/>
+<text x="1111" y="96" class="yr" text-anchor="middle">2028</text>
+<line x1="954" y1="104" x2="954" y2="740" class="grid"/>
+<text x="1424" y="96" class="yr" text-anchor="middle">2029</text>
+<line x1="1267" y1="104" x2="1267" y2="740" class="grid"/>
+<rect x="251" y="108" width="76" height="28" rx="14" fill="#022536"/><text x="289" y="127" class="q" text-anchor="middle">Q4</text>
+<rect x="329" y="108" width="76" height="28" rx="14" fill="#023852"/><text x="367" y="127" class="q" text-anchor="middle">Q1</text>
+<rect x="407" y="108" width="76" height="28" rx="14" fill="#023852"/><text x="446" y="127" class="q" text-anchor="middle">Q2</text>
+<rect x="486" y="108" width="76" height="28" rx="14" fill="#023852"/><text x="524" y="127" class="q" text-anchor="middle">Q3</text>
+<rect x="564" y="108" width="76" height="28" rx="14" fill="#023852"/><text x="602" y="127" class="q" text-anchor="middle">Q4</text>
+<rect x="642" y="108" width="76" height="28" rx="14" fill="#023852"/><text x="680" y="127" class="q" text-anchor="middle">Q1</text>
+<rect x="720" y="108" width="76" height="28" rx="14" fill="#023852"/><text x="759" y="127" class="q" text-anchor="middle">Q2</text>
+<rect x="799" y="108" width="76" height="28" rx="14" fill="#023852"/><text x="837" y="127" class="q" text-anchor="middle">Q3</text>
+<rect x="877" y="108" width="76" height="28" rx="14" fill="#023852"/><text x="915" y="127" class="q" text-anchor="middle">Q4</text>
+<rect x="955" y="108" width="76" height="28" rx="14" fill="#023852"/><text x="993" y="127" class="q" text-anchor="middle">Q1</text>
+<rect x="1033" y="108" width="76" height="28" rx="14" fill="#023852"/><text x="1071" y="127" class="q" text-anchor="middle">Q2</text>
+<rect x="1112" y="108" width="76" height="28" rx="14" fill="#023852"/><text x="1150" y="127" class="q" text-anchor="middle">Q3</text>
+<rect x="1190" y="108" width="76" height="28" rx="14" fill="#023852"/><text x="1228" y="127" class="q" text-anchor="middle">Q4</text>
+<rect x="1268" y="108" width="76" height="28" rx="14" fill="#023852"/><text x="1306" y="127" class="q" text-anchor="middle">Q1</text>
+<rect x="1346" y="108" width="76" height="28" rx="14" fill="#023852"/><text x="1384" y="127" class="q" text-anchor="middle">Q2</text>
+<rect x="1425" y="108" width="76" height="28" rx="14" fill="#023852"/><text x="1463" y="127" class="q" text-anchor="middle">Q3</text>
+<rect x="1503" y="108" width="76" height="28" rx="14" fill="#023852"/><text x="1541" y="127" class="q" text-anchor="middle">Q4</text>
+<text x="24" y="166" class="lane">Council presidency</text>
+<rect x="252" y="146" width="74" height="28" rx="6" fill="#EEEEEE" stroke="#C9C7C2"/><text x="289" y="165" class="pres" text-anchor="middle">Denmark</text>
+<rect x="330" y="146" width="152" height="28" rx="6" fill="#EEEEEE" stroke="#C9C7C2"/><text x="406" y="165" class="pres" text-anchor="middle">Cyprus</text>
+<rect x="487" y="146" width="152" height="28" rx="6" fill="#EEEEEE" stroke="#C9C7C2"/><text x="563" y="165" class="pres" text-anchor="middle">Ireland</text>
+<rect x="643" y="146" width="152" height="28" rx="6" fill="#EEEEEE" stroke="#C9C7C2"/><text x="719" y="165" class="pres" text-anchor="middle">Lithuania</text>
+<rect x="800" y="146" width="152" height="28" rx="6" fill="#EEEEEE" stroke="#C9C7C2"/><text x="876" y="165" class="pres" text-anchor="middle">Greece</text>
+<rect x="956" y="146" width="152" height="28" rx="6" fill="#EEEEEE" stroke="#C9C7C2"/><text x="1032" y="165" class="pres" text-anchor="middle">Italy</text>
+<rect x="1113" y="146" width="152" height="28" rx="6" fill="#EEEEEE" stroke="#C9C7C2"/><text x="1189" y="165" class="pres" text-anchor="middle">Latvia</text>
+<rect x="1269" y="146" width="152" height="28" rx="6" fill="#EEEEEE" stroke="#C9C7C2"/><text x="1345" y="165" class="pres" text-anchor="middle">Luxembourg</text>
+<rect x="1426" y="146" width="152" height="28" rx="6" fill="#EEEEEE" stroke="#C9C7C2"/><text x="1502" y="165" class="pres" text-anchor="middle">Netherlands</text>
+<text x="24" y="210" class="lane">Regulation / policy</text>
+<text x="24" y="227" class="sub">top milestones</text>
+<text x="24" y="326" class="lane">Standardisation</text>
+<text x="24" y="386" class="lane">Reference framework</text>
+<text x="24" y="403" class="sub">ARF</text>
+<text x="24" y="454" class="lane">Wallet large-scale pilots</text>
+<text x="24" y="471" class="sub">WE BUILD and others</text>
+<text x="24" y="522" class="lane">Member States</text>
+<text x="24" y="539" class="sub">EBW acceptance</text>
+<text x="24" y="602" class="lane">Conformity and accreditation</text>
+<text x="24" y="619" class="sub">based on eIDAS</text>
+<text x="24" y="682" class="lane">Industry adoption</text>
+<line x1="24" y1="298" x2="1580" y2="298" stroke="#C9C7C2"/>
+<line x1="24" y1="358" x2="1580" y2="358" stroke="#C9C7C2"/>
+<line x1="24" y1="426" x2="1580" y2="426" stroke="#C9C7C2"/>
+<line x1="24" y1="494" x2="1580" y2="494" stroke="#C9C7C2"/>
+<line x1="24" y1="574" x2="1580" y2="574" stroke="#C9C7C2"/>
+<line x1="24" y1="654" x2="1580" y2="654" stroke="#C9C7C2"/>
+<line x1="24" y1="722" x2="1580" y2="722" stroke="#C9C7C2"/>
+<path d="M289 195 L298 204 L289 213 L280 204 Z" fill="#023852" stroke="#023852" stroke-width="2"/>
+<text x="305" y="208" class="bx" text-anchor="start">Commission proposal</text>
+<text x="305" y="225" class="bx" text-anchor="start">COM(2025) 838</text>
+<text x="305" y="242" class="bx" text-anchor="start">19 Nov 2025</text>
+<path d="M633 195 L642 204 L633 213 L624 204 Z" fill="#fff" stroke="#023852" stroke-width="2"/>
+<text x="617" y="208" class="bx" text-anchor="end">Parliament and Council</text>
+<text x="617" y="225" class="bx" text-anchor="end">provisional agreement</text>
+<text x="617" y="242" class="bx" text-anchor="end">(trilogue), late 2026</text>
+<path d="M653 195 L662 204 L653 213 L644 204 Z" fill="#fff" stroke="#023852" stroke-width="2"/>
+<text x="669" y="208" class="bx" text-anchor="start">T0 = publication in the</text>
+<text x="669" y="225" class="bx" text-anchor="start">Official Journal (est. Q1-Q2 2027);</text>
+<text x="669" y="242" class="bx" text-anchor="start">entry into force 20 days later</text>
+<path d="M1279 195 L1288 204 L1279 213 L1270 204 Z" fill="#fff" stroke="#023852" stroke-width="2"/>
+<text x="1295" y="208" class="bx" text-anchor="start">EBW go-live: mandatory acceptance</text>
+<text x="1295" y="225" class="bx" text-anchor="start">by public administrations, T0 + 24 months</text>
+<text x="1295" y="242" class="bx" text-anchor="start">Art. 16(1) of the proposal</text>
+<path d="M1517 259 L1526 268 L1517 277 L1508 268 Z" fill="#fff" stroke="#023852" stroke-width="2"/>
+<text x="1501" y="262" class="bx" text-anchor="end">QERDS go-live: mandatory acceptance</text>
+<text x="1501" y="279" class="bx" text-anchor="end">by public administrations, T0 + 36 months (Art. 16(3))</text>
+<rect x="252" y="308" width="1326" height="40" rx="8" fill="#fff" stroke="#023852" stroke-width="1.5"/>
+<text x="915" y="333" class="bx" text-anchor="middle">Standardisation in ETSI ESI and CEN-CENELEC (ongoing)</text>
+<rect x="643" y="372" width="677" height="40" rx="8" fill="#fff" stroke="#023852" stroke-width="1.5"/>
+<text x="655" y="397" class="bx" text-anchor="start">EBW specifics added to the ARF</text>
+<path d="M923 383 L932 392 L923 401 L914 392 Z" fill="#fff" stroke="#023852" stroke-width="2"/>
+<text x="939" y="397" class="bx" text-anchor="start">Toolbox upgrade for EBW specifics</text>
+<rect x="252" y="440" width="700" height="40" rx="8" fill="#fff" stroke="#023852" stroke-width="1.5"/>
+<text x="264" y="456.5" class="bx" text-anchor="start">Pilots for business, supply chain, payments: semantics,</text>
+<text x="264" y="473.5" class="bx" text-anchor="start">architecture and trust registry, QTSP</text>
+<path d="M962 451 L971 460 L962 469 L953 460 Z" fill="#fff" stroke="#023852" stroke-width="2"/>
+<text x="978" y="456" class="bx" text-anchor="start">EBW-ready solution</text>
+<text x="978" y="473" class="bx" text-anchor="start">baseline</text>
+<rect x="252" y="508" width="1326" height="52" rx="8" fill="#fff" stroke="#023852" stroke-width="1.5"/>
+<text x="264" y="539" class="bx" text-anchor="start">Trusted pilots B2G</text>
+<path d="M657 525 L666 534 L657 543 L648 534 Z" fill="#fff" stroke="#023852" stroke-width="2"/>
+<text x="673" y="530" class="bx" text-anchor="start">Pilot start: EBW acceptance</text>
+<text x="673" y="547" class="bx" text-anchor="start">(public and regulated sectors)</text>
+<path d="M985 525 L994 534 L985 543 L976 534 Z" fill="#fff" stroke="#023852" stroke-width="2"/>
+<text x="1001" y="523" class="bx" text-anchor="start">Start publishing company credentials</text>
+<text x="1001" y="540" class="bx" text-anchor="start">(EAA / QEAA) by authentic sources</text>
+<path d="M1291 525 L1300 534 L1291 543 L1282 534 Z" fill="#fff" stroke="#023852" stroke-width="2"/>
+<text x="1307" y="530" class="bx" text-anchor="start">Member States enable acceptance</text>
+<text x="1307" y="547" class="bx" text-anchor="start">of EBW use cases</text>
+<rect x="252" y="588" width="1326" height="52" rx="8" fill="#fff" stroke="#023852" stroke-width="1.5"/>
+<path d="M641 605 L650 614 L641 623 L632 614 Z" fill="#fff" stroke="#023852" stroke-width="2"/>
+<text x="625" y="610" class="bx" text-anchor="end">CABs operational for QTSPs issuing QEAAs</text>
+<text x="625" y="627" class="bx" text-anchor="end">(per CIR 2024/2981)</text>
+<path d="M696 605 L705 614 L696 623 L687 614 Z" fill="#fff" stroke="#023852" stroke-width="2"/>
+<text x="712" y="610" class="bx" text-anchor="start">QTSPs issuing QEAAs start conformity</text>
+<text x="712" y="627" class="bx" text-anchor="start">assessment and accreditation pathway</text>
+<rect x="252" y="668" width="700" height="44" rx="8" fill="#fff" stroke="#023852" stroke-width="1.5"/>
+<text x="264" y="686.5" class="bx" text-anchor="start">Trusted pilots of EBW-ready solutions (Industry 4.0, supply</text>
+<text x="264" y="703.5" class="bx" text-anchor="start">chain, data spaces, DPP, cross-border procurement, payment)</text>
+<rect x="972" y="668" width="606" height="44" rx="8" fill="#fff" stroke="#023852" stroke-width="1.5"/>
+<text x="984" y="695.0" class="bx" text-anchor="start">Widespread industry adoption</text>
+<rect x="0" y="730" width="1600" height="80" fill="#F4F2EE"/>
+<path d="M34 747 L43 756 L34 765 L25 756 Z" fill="#023852" stroke="#023852" stroke-width="2"/>
+<text x="50" y="761" class="leg">confirmed</text>
+<path d="M154 747 L163 756 L154 765 L145 756 Z" fill="#fff" stroke="#023852" stroke-width="2"/>
+<text x="170" y="761" class="leg">indicative (scenario)</text>
+<text x="354" y="761" class="leg">CAB conformity assessment body, EAA electronic attestation of attributes, QEAA qualified EAA, QTSP qualified trust service provider, T0 date of entry into force</text>
+<text x="24" y="784" class="leg">Sources: COM(2025) 838 (proposal date; periods relative to entry into force T0 per Art. 16 and 22); calendar dates follow the Spherity Research roadmap scenario (2026-05-18, updated 2026-09-07), not an official timetable. Council presidency order per Council rotation.</text>
+</svg>

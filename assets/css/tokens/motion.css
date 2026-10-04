@@ -1,0 +1,13 @@
+/* token_motion — ease-out / ease-in-out only. Bounce, elastic and spring are banned. */
+:root{
+  --sph-dur-micro:80ms; /* @kind other */ --sph-dur-short:120ms; /* @kind other */ --sph-dur-medium:220ms; /* @kind other */ --sph-dur-long:350ms; /* @kind other */
+  --sph-ease-standard:cubic-bezier(0.16,1,0.3,1); /* @kind other */
+  --sph-ease-enter:cubic-bezier(0.22,1,0.36,1); /* @kind other */
+  --sph-ease-exit:cubic-bezier(0.55,0,1,0.45); /* @kind other */
+}
+@media (prefers-reduced-motion:reduce){:root{
+  --sph-dur-micro:0ms; /* @kind other */
+  --sph-dur-short:0ms; /* @kind other */
+  --sph-dur-medium:0ms; /* @kind other */
+  --sph-dur-long:0ms; /* @kind other */
+}}

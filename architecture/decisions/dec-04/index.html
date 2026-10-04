@@ -1,0 +1,824 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+  <link rel="stylesheet" href="/business-wallet-requirements/assets/css/just-the-docs-default.css">
+
+  <link rel="stylesheet" href="/business-wallet-requirements/assets/css/just-the-docs-head-nav.css" id="jtd-head-nav-stylesheet">
+
+  <style id="jtd-nav-activation">
+  
+
+    .site-nav > ul.nav-list:first-child > li > a,
+    .site-nav > ul.nav-list:first-child > li > ul > li > a,
+    
+    .site-nav > ul.nav-list:first-child > li > ul > li > ul > li:not(:nth-child(4)) > a,
+    .site-nav > ul.nav-list:first-child > li > ul > li > ul > li > ul > li a {
+      background-image: none;
+    }
+
+    .site-nav > ul.nav-list:not(:first-child) a,
+    .site-nav li.external a {
+      background-image: none;
+    }
+
+    .site-nav > ul.nav-list:first-child > li:nth-child(6) > ul > li:nth-child(1) > ul > li:nth-child(4) > a {
+      font-weight: 600;
+      text-decoration: none;
+    }.site-nav > ul.nav-list:first-child > li:nth-child(6) > button svg,
+    .site-nav > ul.nav-list:first-child > li:nth-child(6) > ul > li:nth-child(1) > button svg,
+    .site-nav > ul.nav-list:first-child > li:nth-child(6) > ul > li:nth-child(1) > ul > li:nth-child(4) > button svg {
+      transform: rotate(-90deg);
+    }.site-nav > ul.nav-list:first-child > li.nav-list-item:nth-child(6) > ul.nav-list,
+    .site-nav > ul.nav-list:first-child > li.nav-list-item:nth-child(6) > ul.nav-list > li.nav-list-item:nth-child(1) > ul.nav-list,
+    .site-nav > ul.nav-list:first-child > li.nav-list-item:nth-child(6) > ul.nav-list > li.nav-list-item:nth-child(1) > ul.nav-list > li.nav-list-item:nth-child(4) > ul.nav-list {
+      display: block;
+    }
+  </style>
+
+  
+
+  
+    <script src="/business-wallet-requirements/assets/js/vendor/lunr.min.js"></script>
+  
+
+  <script src="/business-wallet-requirements/assets/js/just-the-docs.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="icon" type="image/svg+xml" href="/business-wallet-requirements/assets/images/logos/spherity-s-mark.svg">
+
+  <title>DEC-04 Trust framework and discovery | European Business Wallet Requirements</title>
+<meta name="description" content="Which trust lists, lists of trusted entities and ecosystem trust anchors does a relying party use, and how does it find the right one? Facts from the sources, decision criteria, three options and the conditions under which each holds."><meta name="keywords" content="trust list, trusted list, list of trusted entities, trust anchor, discovery, OpenID Federation, data space, Gaia-X, Catena-X, third countries, European Business Wallet">
+<meta name="author" content="Spherity GmbH"><meta name="robots" content="noindex, follow">
+<meta name="theme-color" content="#023852">
+<link rel="canonical" href="https://cstoecker.github.io/business-wallet-requirements/architecture/decisions/dec-04/">
+<link rel="alternate" type="text/plain" href="https://cstoecker.github.io/business-wallet-requirements/llms.txt" title="llms.txt">
+<link rel="sitemap" type="application/xml" href="https://cstoecker.github.io/business-wallet-requirements/sitemap.xml">
+<meta property="og:site_name" content="European Business Wallet Requirements">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="DEC-04 Trust framework and discovery">
+<meta property="og:description" content="Which trust lists, lists of trusted entities and ecosystem trust anchors does a relying party use, and how does it find the right one? Facts from the sources, decision criteria, three options and the conditions under which each holds.">
+<meta property="og:url" content="https://cstoecker.github.io/business-wallet-requirements/architecture/decisions/dec-04/">
+<meta property="og:image" content="https://cstoecker.github.io/business-wallet-requirements/assets/figures/concept-model-planes.png"><meta property="article:modified_time" content="2026-10-03">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="DEC-04 Trust framework and discovery">
+<meta name="twitter:description" content="Which trust lists, lists of trusted entities and ecosystem trust anchors does a relying party use, and how does it find the right one? Facts from the sources, decision criteria, three options and the conditions under which each holds.">
+<meta name="twitter:image" content="https://cstoecker.github.io/business-wallet-requirements/assets/figures/concept-model-planes.png">
+
+
+  <script>try{if(localStorage.getItem("ebw-nav")==="collapsed"&&window.matchMedia("(min-width: 50rem)").matches){document.documentElement.classList.add("nav-collapsed")}}catch(e){}</script><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://cstoecker.github.io/business-wallet-requirements/#publisher","name":"Spherity GmbH","url":"https://www.spherity.com","email":"info@spherity.com","logo":{"@type":"ImageObject","url":"https://cstoecker.github.io/business-wallet-requirements/assets/images/logos/spherity-s-mark.svg","width":372,"height":372}},{"@type":"WebSite","@id":"https://cstoecker.github.io/business-wallet-requirements/#website","url":"https://cstoecker.github.io/business-wallet-requirements/","name":"European Business Wallet Requirements","description":"Open, traceable requirements for European Business Wallets and trust infrastructure, from law and standards to conformance checks and industry scenarios.","inLanguage":"en","publisher":{"@id":"https://cstoecker.github.io/business-wallet-requirements/#publisher"},"license":"https://creativecommons.org/licenses/by/4.0/"},{"@type":"TechArticle","@id":"https://cstoecker.github.io/business-wallet-requirements/architecture/decisions/dec-04/#page","url":"https://cstoecker.github.io/business-wallet-requirements/architecture/decisions/dec-04/","name":"DEC-04 Trust framework and discovery","headline":"DEC-04 Trust framework and discovery","description":"Which trust lists, lists of trusted entities and ecosystem trust anchors does a relying party use, and how does it find the right one? Facts from the sources, decision criteria, three options and the conditions under which each holds.","inLanguage":"en","isPartOf":{"@id":"https://cstoecker.github.io/business-wallet-requirements/#website"},"publisher":{"@id":"https://cstoecker.github.io/business-wallet-requirements/#publisher"},"primaryImageOfPage":{"@type":"ImageObject","url":"https://cstoecker.github.io/business-wallet-requirements/assets/figures/concept-model-planes.png"},"keywords":"trust list, trusted list, list of trusted entities, trust anchor, discovery, OpenID Federation, data space, Gaia-X, Catena-X, third countries, European Business Wallet","dateModified":"2026-10-03","license":"https://creativecommons.org/licenses/by/4.0/"},{"@type":"BreadcrumbList","@id":"https://cstoecker.github.io/business-wallet-requirements/architecture/decisions/dec-04/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://cstoecker.github.io/business-wallet-requirements/"},{"@type":"ListItem","position":2,"name":"Architecture","item":"https://cstoecker.github.io/business-wallet-requirements/architecture/"},{"@type":"ListItem","position":3,"name":"Architecture decisions","item":"https://cstoecker.github.io/business-wallet-requirements/architecture/decisions/"},{"@type":"ListItem","position":4,"name":"DEC-04 Trust framework and discovery","item":"https://cstoecker.github.io/business-wallet-requirements/architecture/decisions/dec-04/"}]}]}</script>
+
+
+</head>
+
+<body>
+  <a class="skip-to-main" href="#main-content">Skip to main content</a>
+  <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+  <symbol id="svg-link" viewBox="0 0 24 24">
+  <title>Link</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link">
+    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+  </svg>
+</symbol>
+
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+  <title>Menu</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
+    <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>
+  </svg>
+</symbol>
+
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+  <title>Expand</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+    <polyline points="9 18 15 12 9 6"></polyline>
+  </svg>
+</symbol>
+
+  <!-- Feather. MIT License: https://github.com/feathericons/feather/blob/master/LICENSE -->
+<symbol id="svg-external-link" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link">
+  <title id="svg-external-link-title">(external link)</title>
+  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line>
+</symbol>
+
+  
+    <symbol id="svg-doc" viewBox="0 0 24 24">
+  <title>Document</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file">
+    <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline>
+  </svg>
+</symbol>
+
+    <symbol id="svg-search" viewBox="0 0 24 24">
+  <title>Search</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
+    <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+  </svg>
+</symbol>
+
+  
+  
+    <!-- Bootstrap Icons. MIT License: https://github.com/twbs/icons/blob/main/LICENSE.md -->
+<symbol id="svg-copy" viewBox="0 0 16 16">
+  <title>Copy</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+  </svg>
+</symbol>
+<symbol id="svg-copied" viewBox="0 0 16 16">
+  <title>Copied</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-check-fill" viewBox="0 0 16 16">
+    <path d="M6.5 0A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3Zm3 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3Z"/>
+    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1A2.5 2.5 0 0 1 9.5 5h-3A2.5 2.5 0 0 1 4 2.5v-1Zm6.854 7.354-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708.708Z"/>
+  </svg>
+</symbol>
+
+  
+</svg>
+
+  
+    <header class="side-bar">
+  <div class="site-header">
+    <a href="/business-wallet-requirements/" class="site-title lh-tight">
+  <div class="site-logo" role="img" aria-label="European Business Wallet Requirements"></div>
+
+</a>
+    <button id="menu-button" class="site-button btn-reset" aria-label="Menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><use xlink:href="#svg-menu"></use></svg>
+    </button>
+  </div>
+
+  <nav aria-label="Main" id="site-nav" class="site-nav">
+  
+  
+    <ul class="nav-list"><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="Start here submenu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+      </button><a href="/business-wallet-requirements/" class="nav-list-link">Start here</a><ul class="nav-list"><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="Concepts submenu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+      </button><a href="/business-wallet-requirements/concepts/" class="nav-list-link">Concepts</a><ul class="nav-list"><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/ai-safety/" class="nav-list-link">AI safety</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/aisp/" class="nav-list-link">AISP</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/evidence-graph/" class="nav-list-link">Access-controlled verifiable evidence graph</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/agent-mandate/" class="nav-list-link">Agent mandate</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/authentic-sources-and-registries/" class="nav-list-link">Authentic sources and registries</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/authority-access/" class="nav-list-link">Authority access</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/b2g-registry-obligations/" class="nav-list-link">B2G registry obligations</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/b2g-reporting/" class="nav-list-link">B2G reporting</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/control-plane-policy-engine/" class="nav-list-link">Control plane and policy engine</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/cross-sector-credential-use/" class="nav-list-link">Cross-sector credential use</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/crypto-agility-and-pqc/" class="nav-list-link">Crypto-agility and post-quantum readiness</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/dsp-dcp-integration/" class="nav-list-link">DSP and DCP integration</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/data-plane/" class="nav-list-link">Data plane</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/ebw-dpp-integration/" class="nav-list-link">EBW and DPP integration</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/ebw-eudiw-interaction/" class="nav-list-link">EBW and EUDI Wallet interaction</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/knowledge-graph/" class="nav-list-link">Knowledge graph</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/legal-person-identity/" class="nav-list-link">Legal person identity and EBWOID</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/levels-of-assurance/" class="nav-list-link">Levels of assurance</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/mandate-and-power-of-representation/" class="nav-list-link">Mandate and power of representation</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/multi-trust-domains/" class="nav-list-link">Multi-trust domains</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/qualified-trust-services/" class="nav-list-link">Qualified trust services (signature, seal, delivery)</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/revocation-and-status/" class="nav-list-link">Revocation and status</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/selective-disclosure-and-unlinkability/" class="nav-list-link">Selective disclosure and unlinkability</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/trust-list/" class="nav-list-link">Trust list</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/trust-list-discovery/" class="nav-list-link">Trust list discovery</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/trust-plane/" class="nav-list-link">Trust plane</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/trusted-ai/" class="nav-list-link">Trusted AI</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/wallet-connector-binding/" class="nav-list-link">Wallet and data-space connector binding</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/concepts/wallet-unit-attestation/" class="nav-list-link">Wallet unit attestation and lifecycle</a></li></ul></li><li class="nav-list-item"><a href="/business-wallet-requirements/research/" class="nav-list-link">Research and reading</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/changelog/" class="nav-list-link">What changed</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/downloads/" class="nav-list-link">Downloads</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/about/" class="nav-list-link">About</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/figures/" class="nav-list-link">Figure gallery</a></li></ul></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="Requirements submenu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+      </button><a href="/business-wallet-requirements/requirements/" class="nav-list-link">Requirements</a><ul class="nav-list"><li class="nav-list-item"><a href="/business-wallet-requirements/requirements/methodology/" class="nav-list-link">Methodology</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/requirements/review/" class="nav-list-link">Review list</a></li></ul></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="Perspectives submenu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+      </button><a href="/business-wallet-requirements/perspectives/" class="nav-list-link">Perspectives</a><ul class="nav-list"><li class="nav-list-item"><a href="/business-wallet-requirements/perspectives/use-cases/" class="nav-list-link">Use cases</a></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="Business cases submenu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+      </button><a href="/business-wallet-requirements/perspectives/business-cases/" class="nav-list-link">Business cases</a><ul class="nav-list"><li class="nav-list-item"><a href="/business-wallet-requirements/perspectives/business-cases/macro/" class="nav-list-link">Macroeconomic case</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/perspectives/business-cases/ecosystem/" class="nav-list-link">Ecosystem case</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/perspectives/business-cases/company/" class="nav-list-link">Company case</a></li></ul></li></ul></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="Legal & compliance submenu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+      </button><a href="/business-wallet-requirements/legal/" class="nav-list-link">Legal & compliance</a><ul class="nav-list"><li class="nav-list-item"><a href="/business-wallet-requirements/legal/roadmap/" class="nav-list-link">Legal roadmap</a></li></ul></li><li class="nav-list-item"><a href="/business-wallet-requirements/domains/" class="nav-list-link">Domains</a></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="Architecture submenu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+      </button><a href="/business-wallet-requirements/architecture/" class="nav-list-link">Architecture</a><ul class="nav-list"><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="Architecture decisions submenu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+      </button><a href="/business-wallet-requirements/architecture/decisions/" class="nav-list-link">Architecture decisions</a><ul class="nav-list"><li class="nav-list-item"><a href="/business-wallet-requirements/architecture/decisions/dec-01/" class="nav-list-link">DEC-01 Credential data model, semantics and formats</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/architecture/decisions/dec-02/" class="nav-list-link">DEC-02 Employees: EUDI Wallet or business wallet</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/architecture/decisions/dec-03/" class="nav-list-link">DEC-03 Key custody and wallet architecture</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/architecture/decisions/dec-04/" class="nav-list-link">DEC-04 Trust framework and discovery</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/architecture/decisions/dec-06/" class="nav-list-link">DEC-06 Credential lifecycle and revocation</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/architecture/decisions/dec-07/" class="nav-list-link">DEC-07 Protocols and interfaces</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/architecture/decisions/dec-08/" class="nav-list-link">DEC-08 Privacy and data protection</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/architecture/decisions/dec-09/" class="nav-list-link">DEC-09 Evidence, logging and audit</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/architecture/decisions/dec-10/" class="nav-list-link">DEC-10 AI-first: agent protocols, identity and mandates</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/architecture/decisions/dec-11/" class="nav-list-link">DEC-11 Identifiers, assurance and partners outside the EU</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/architecture/decisions/dec-13/" class="nav-list-link">DEC-13 Delegation and mandates for employees, machines and AI agents</a></li></ul></li><li class="nav-list-item"><a href="/business-wallet-requirements/architecture/brief/" class="nav-list-link">Stakeholder brief</a></li></ul></li><li class="nav-list-item"><a href="/business-wallet-requirements/traceability/" class="nav-list-link">Traceability & graph</a></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="Ecosystem submenu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+      </button><a href="/business-wallet-requirements/ecosystem/" class="nav-list-link">Ecosystem</a><ul class="nav-list"><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="Ecosystems & initiatives submenu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+      </button><a href="/business-wallet-requirements/ecosystem/initiatives/" class="nav-list-link">Ecosystems & initiatives</a><ul class="nav-list"><li class="nav-list-item"><a href="/business-wallet-requirements/ecosystem/initiatives/catenax/" class="nav-list-link">Catena-X</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/ecosystem/initiatives/webuild/" class="nav-list-link">WE BUILD</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/ecosystem/initiatives/manufacturingx/" class="nav-list-link">Manufacturing-X</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/ecosystem/initiatives/factoryx/" class="nav-list-link">Factory-X</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/ecosystem/initiatives/energydatax/" class="nav-list-link">energy data-X</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/ecosystem/initiatives/cirpass2/" class="nav-list-link">CIRPASS-2</a></li></ul></li><li class="nav-list-item"><a href="/business-wallet-requirements/ecosystem/standards/" class="nav-list-link">Standards radar</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/ecosystem/certification/" class="nav-list-link">Certification</a></li><li class="nav-list-item"><a href="/business-wallet-requirements/ecosystem/governance/" class="nav-list-link">Governance</a></li></ul></li></ul>
+  <ul class="nav-list"><li class="nav-list-item external">
+          <a href="https://github.com/cstoecker/business-wallet-requirements/discussions" class="nav-list-link external"
+            
+              target="_blank" rel="noopener noreferrer"
+            
+          >
+            Discussions
+            <svg viewBox="0 0 24 24" aria-labelledby="svg-external-link-title"><use xlink:href="#svg-external-link"></use></svg>
+          </a>
+        </li></ul>
+</nav>
+
+
+<div class="d-md-block d-none site-footer">
+  
+  
+    This site uses <a href="https://github.com/just-the-docs/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.
+  
+  </div>
+</header>
+
+  
+  <div class="main" id="top">
+    <div id="main-header" class="main-header">
+  
+    
+
+<div class="search" role="search">
+  <div class="search-input-wrap">
+    <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search European Business Wallet Requirements" autocomplete="off">
+    <label for="search-input" class="search-label">
+      <span class="sr-only">Search European Business Wallet Requirements</span>
+      <svg viewBox="0 0 24 24" class="search-icon" aria-hidden="true"><use xlink:href="#svg-search"></use></svg>
+    </label>
+  </div>
+  <div id="search-results" class="search-results"></div>
+</div>
+
+  
+  
+  
+    <nav aria-label="Auxiliary" class="aux-nav">
+  <ul class="aux-nav-list">
+    
+      <li class="aux-nav-list-item">
+        <a href="https://spherity.github.io/spherity-research/" class="site-button"
+          
+        >
+          Spherity Research
+        </a>
+      </li>
+    
+      <li class="aux-nav-list-item">
+        <a href="https://github.com/spherity/business-wallet-requirements/discussions" class="site-button"
+          
+        >
+          Discussions
+        </a>
+      </li>
+    
+      <li class="aux-nav-list-item">
+        <a href="/contact/" class="site-button"
+          
+        >
+          Contact
+        </a>
+      </li>
+    
+      <li class="aux-nav-list-item">
+        <a href="https://github.com/cstoecker/business-wallet-requirements" class="site-button"
+          
+        >
+          GitHub
+        </a>
+      </li>
+    
+  </ul>
+</nav>
+
+  
+</div>
+
+    <div class="main-content-wrap">
+      <div class="status-banner" role="region" aria-label="Draft status">Draft for review. Based on the Commission proposal COM(2025) 838, which may change. Analysis, not legal advice.</div>
+
+      <nav aria-label="Breadcrumb" class="breadcrumb-nav">
+  <ol class="breadcrumb-nav-list">
+    <li class="breadcrumb-nav-list-item"><a href="/business-wallet-requirements/architecture/">Architecture</a></li>
+    <li class="breadcrumb-nav-list-item"><a href="/business-wallet-requirements/architecture/decisions/">Architecture decisions</a></li>
+    <li class="breadcrumb-nav-list-item"><span>DEC-04 Trust framework and discovery</span></li>
+  </ol>
+</nav>
+
+
+      <div id="main-content" class="main-content">
+        <main>
+          
+            <h1 id="dec-04-trust-framework-and-discovery">
+  
+  
+    <a href="#dec-04-trust-framework-and-discovery" class="anchor-heading" aria-labelledby="dec-04-trust-framework-and-discovery"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> DEC-04 Trust framework and discovery
+  
+  
+</h1>
+    
+
+<p><em>Analysis for decision, not a decision. The European Business Wallet (EBW) is a Commission proposal (COM(2025) 838); the Council text submitted for its general approach (ST 9684/26, 2 June 2026) differs from it, and the outcome of the Council meeting on 9 June 2026 was not read. The Annex of the Commission text was not in the copy read; the Council Annex was read instead. Analysis, not legal advice. “Not stated” means that no source read says it.</em></p>
+<h2 id="question">
+  
+  
+    <a href="#question" class="anchor-heading" aria-labelledby="question"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Question
+  
+  
+</h2>
+    
+
+<p>A relying party receives a credential, a signature, a seal or a presentation. It has to decide which signers and issuers it accepts. Three setups are conceivable:</p>
+
+<ul>
+  <li><strong>(a)</strong> it trusts only entries reachable from <strong>EU lists</strong>: the EU list of trusted lists, the Commission lists for wallet roles and the Commission list of business wallet providers;</li>
+  <li><strong>(b)</strong> it keeps <strong>separate lists or anchors per ecosystem</strong> (EU qualified, EU wallet roles, data space, sector, global) and selects the domain per credential or counterparty;</li>
+  <li><strong>(c)</strong> it uses a <strong>bridged or federated trust layer</strong> that maps ecosystem anchors to common entries and resolves trust through a resolver or a federation chain.</li>
+</ul>
+
+<p>The decision also covers how the relying party finds the applicable list, and how third-country and ecosystem anchors enter. What a trust list is and how it is validated is explained in the concept article <a class="concept-ref" href="/business-wallet-requirements/concepts/trust-list/" title="A governed list of trusted issuers or services that relying parties use to validate credentials.">Trust list</a> and is not repeated here. This page adds discovery, several trust domains, third-country anchors and ecosystem anchors.</p>
+<h2 id="what-the-requirement-set-says">
+  
+  
+    <a href="#what-the-requirement-set-says" class="anchor-heading" aria-labelledby="what-the-requirement-set-says"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> What the requirement set says
+  
+  
+</h2>
+    
+
+<p>The cluster K05 (trust framework and discovery) carries this decision. The requirements that decide between the options are:</p>
+
+<div class="table-scroll"><div class="table-wrapper"><table><thead><tr><th>Requirement</th><th>Title</th><th>Source</th><th>Proposal</th></tr></thead><tbody>
+<tr><td><a href="/business-wallet-requirements/requirements/ebw-leg-046/">EBW-LEG-046</a></td><td>Digital EU power of attorney authenticated by trust services</td><td>SRC-DIR-2025-25, Article 16c(1), third subparagraph, of Directive (EU) 2017/1132 as inserted by Directive (EU) 2025/25</td><td>in force</td></tr>
+<tr><td><a href="/business-wallet-requirements/requirements/ebw-tru-009/">EBW-TRU-009</a></td><td>Authentication of relying parties</td><td>SRC-EBW-PROPOSAL, Article 6(1)(g)</td><td>proposal</td></tr>
+<tr><td><a href="/business-wallet-requirements/requirements/ebw-tru-011/">EBW-TRU-011</a></td><td>Wallet unit attestation with protected keys</td><td>SRC-EBW-PROPOSAL, Article 6(1)(k)</td><td>proposal</td></tr>
+<tr><td><a href="/business-wallet-requirements/requirements/ebw-tru-029/">EBW-TRU-029</a></td><td>Wallet unit attestation signed under a listed certificate</td><td>SRC-CIR-2024-2979, Article 6(1), as replaced by Implementing Regulation (EU) 2026/1731, Article 2(4)(a) (in force 11 August 2026); former Article 3(2) deleted by Article 2(1)</td><td>in force</td></tr>
+<tr><td><a href="/business-wallet-requirements/requirements/ebw-tru-032/">EBW-TRU-032</a></td><td>Authenticate relying party access certificates</td><td>SRC-CIR-2024-2982, Article 3(1)</td><td>in force</td></tr>
+<tr><td><a href="/business-wallet-requirements/requirements/ebw-tru-034/">EBW-TRU-034</a></td><td>Request issuance only from certified issuers</td><td>SRC-CIR-2024-2982, Article 4(2)</td><td>in force</td></tr>
+<tr><td><a href="/business-wallet-requirements/requirements/ebw-tru-043/">EBW-TRU-043</a></td><td>Authenticate relying party in every presentation</td><td>SRC-ARF-HLR, Annex 2 topic 6, RPA_03</td><td>standard</td></tr>
+<tr><td><a href="/business-wallet-requirements/requirements/ebw-tru-077/">EBW-TRU-077</a></td><td>Access certificate status available beyond certificate validity</td><td>SRC-CIR-2025-848, Annex IV, point 5</td><td>in force</td></tr>
+<tr><td><a href="/business-wallet-requirements/requirements/ebw-tru-095/">EBW-TRU-095</a></td><td>EU Company Certificate authenticated and wallet-compatible</td><td>SRC-DIR-2025-25, Article 16b(6) of Directive (EU) 2017/1132 as inserted by Directive (EU) 2025/25</td><td>in force</td></tr>
+<tr><td><a href="/business-wallet-requirements/requirements/ebw-tru-101/">EBW-TRU-101</a></td><td>Unit attestation generated and signed per wallet unit</td><td>SRC-EBW-PROPOSAL, Annex, point 2</td><td>proposal</td></tr>
+<tr><td><a href="/business-wallet-requirements/requirements/ebw-tru-102/">EBW-TRU-102</a></td><td>Unit attestation signed under a trusted-list certificate</td><td>SRC-EBW-PROPOSAL, Annex, point 2</td><td>proposal</td></tr>
+<tr><td><a href="/business-wallet-requirements/requirements/ebw-tru-103/">EBW-TRU-103</a></td><td>Unit attestation holds public keys, private keys in secure device</td><td>SRC-EBW-PROPOSAL, Annex, point 5(1)</td><td>proposal</td></tr>
+<tr><td><a href="/business-wallet-requirements/requirements/ebw-tru-106/">EBW-TRU-106</a></td><td>Public validity status of revoked unit attestations</td><td>SRC-EBW-PROPOSAL, Annex, point 6(3)</td><td>proposal</td></tr>
+</tbody></table></div></div>
+
+<p>The research note found candidate requirements that are not yet written as requirements: availability of 99,9 % for trusted lists, a distribution point that resolves to the latest list, authentication of a pointed-to list before use, trust evaluation from the list for registered electronic delivery (ERDS), capability discovery binding for ERDS, a rulebook statement of the anchor mechanism for non-qualified attestations, and recognition of several governance authorities. Existing entries already cover the Article 22 lists and the wallet ecosystem lists. The candidates are for the next requirement pass.</p>
+<h2 id="facts-from-the-sources">
+  
+  
+    <a href="#facts-from-the-sources" class="anchor-heading" aria-labelledby="facts-from-the-sources"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Facts from the sources
+  
+  
+</h2>
+    
+
+<p>Each fact has a source and was read in the original text unless marked.</p>
+
+<p><strong>EBW proposal and Council text.</strong> The two texts are kept apart here.</p>
+<ul>
+  <li>The Commission proposal says the trust framework “should build upon the structures established under Regulation (EU) No 910/2014” (recital 16). Providers must be included in “the list established pursuant to Article 12(5)” (Article 7(1)); that reference is dangling, because Article 12 of the copy read has paragraphs 1 to 3 only and the list is in Article 12(3). The Commission is to maintain on its website, in a machine-readable format, a list of providers (Article 12(3)). The text does not say the list is signed or sealed and names no location or signing key. By contrast, information on validation mechanisms is published “in electronically signed or sealed form suitable for automated processing” (Article 6(3)). A wallet can be revoked when its provider is not on the list (Article 6(2)(f)).</li>
+  <li>The Council text adds timing: inclusion and removal “within two working days” (Article 12(3)), changes the title from notified to authorised providers, and has a recital on temporary suspension from the list of trusted providers. Its Annex requires the wallet unit attestation to be issued under a certificate listed in the trusted list referred to in Regulation (EU) 2024/2980.</li>
+  <li>The European Digital Directory is “the trusted source of information” for owners, with an API (Commission Article 10(1)); access is limited to owners, their authorised representatives and providers, and the Council text adds Member State authorities (Article 10(4)). The articles read do not say the Directory carries keys, certificates or trust anchors; its content is identity and address data. This is a lookup, not a trust list.</li>
+  <li>Third-country frameworks: the Commission may establish by implementing act that third-country wallets or frameworks offer equivalent assurance, if interoperable with the trust framework of Regulation (EU) 910/2014, and publishes a list of them (Article 17). The Council text adds an assessment of independence from the control of high-risk governments. Providers established in the Union are not to be subject to control by a third country (Article 7(2)); providers may serve operators in a third country that hold owner identification data and a unique identifier (Article 18(1)).</li>
+</ul>
+
+<p><strong>eIDAS and the wallet ecosystem lists.</strong></p>
+<ul>
+  <li>Third countries and international organisations “shall in particular establish, maintain and publish a trusted list of recognised trust service providers”; recognition itself is by implementing act or agreement (SRC-EIDAS-CONSOL, Article 14).</li>
+  <li>Relying party registers are published by Member States in signed or sealed form suitable for automated processing, with a common mechanism for identifying and authenticating relying parties (Article 5b(5) and (7)).</li>
+  <li>The Commission publishes the wallet lists without registration or authentication, in signed form and on a human-readable website, together with the URL, the certificates that verify the lists and the mechanisms to validate changes (SRC-CIR-2024-2980, Article 5(3) and (4)). The ARF requires the Commission to publish the locations of the lists in the Official Journal (SRC-ARF-HLR, Topic 31, TLPub_06, TLPub_07). Wallet units and other actors accept PID provider trust anchors because of notification and publication (PPNot_05).</li>
+  <li>CIR 2026/1731 deletes Article 3(2) of CIR 2024/2979 and states that wallet unit attestations must be validated by a certificate listed under Annex II of CIR 2024/2980 (SRC-CIR-2026-1731, Article 2; SRC-CIR-2024-2979).</li>
+  <li>Non-qualified attestation providers are not notified, and “their trust anchors are not included in a LoTE by the Commission”; the relying party “must know how to obtain the trust anchor” (SRC-ARF-TRUST 6.3.2.4). “No centralised service discovery mechanism for PID or attestation issuance is foreseen”, and a wallet provider may configure a pre-defined list of providers (6.6.2.2). The relying party distinguishes anchors per attestation class (6.6.3.6). Trust in list providers is “primarily rooted in authority and in procedural measures” (6.1). Wallet providers receive no access or registration certificates (6.2.2).</li>
+  <li>ETSI TS 119 602 has profiles for lists of PID providers, wallet providers, providers of access certificates, providers of registration certificates, public sector bodies issuing attestations, and registrars and registers. It has no profile for business wallet providers or for their access certificates (SRC-ETSI-119602).</li>
+</ul>
+
+<p><strong>Discovery mechanisms in the specifications.</strong></p>
+<ul>
+  <li>A trusted list carries a URI pointer to another list with a digital identity of the issuer of the pointed-to list; for EU lists the field points to the Commission list of links, for non-EU schemes it is optional (SRC-ETSI-119612, clause 5.3.13). TS 119 602 has the same mechanism, states that one identity “shall allow successful authentication of the pointed-to list before its use”, allows distribution points that provide identical copies, and has a tag that lets a web-searching tool recognise a list (clauses 6.3.9, 6.3.13, 6.3.16).</li>
+  <li>Providers may add an extension to certificates and tokens that locates their list; it should not be marked critical and must resolve to the latest applicable list or a scheme that points to it (TS 119 612, clause 6.3). Lists are to be available 24 hours a day, 7 days a week, with at least 99,9 % availability over one year (clause 6.4).</li>
+  <li>The EU list of trusted lists is at ec.europa.eu/tools/lotl/eu-lotl.xml; its location and signing certificates are authenticated by an Official Journal publication and can change by a pivot list; EU lists have a legal constitutive value (ETSI TS 119 615, V1.4.1, clause 4.1.1, read; not yet in the source register). The live instance read has sequence number 395, issue date 2026-09-24, next update 2027-03-17 and 43 pointers, including Iceland, Liechtenstein, Norway and an entry for the UK. The content of the UK list and the status of its services were not analysed.</li>
+  <li>For registered electronic delivery, the recipient identification service is bound to OASIS BDXL (DNS) and capability discovery to OASIS SMP. Trust may be bilateral, through the EU trusted list, a domain trusted list or a domain PKI; for the EU list, the relying party checks that the digital identity matches and that the status is “granted” (ETSI EN 319 522-4-3, read; not yet in the source register).</li>
+  <li>OpenID4VP lets a query name accepted authorities: <code class="language-plaintext highlighter-rouge">aki</code>, <code class="language-plaintext highlighter-rouge">etsi_tl</code> (a list that can reference other lists) or <code class="language-plaintext highlighter-rouge">openid_federation</code>. Verifiers “must verify that the issuer of a received presentation is trusted on their own”, and online resolution “can leak information that could be used to profile the usage of the Credentials” (OpenID4VP 1.0, sections 6.1, 6.1.1, 15.10, read; not yet in the source register). HAIP leaves trust establishment out of scope and requires support for <code class="language-plaintext highlighter-rouge">aki</code>; the ISO VICAL text was not read. The EU wallet profile (ETSI TS 119 472-2) says the Authority Key Identifier shall use the “etsi_tl” mechanism and mixes the names of two query types; the intended type was not clarified in the text read. Signed issuer metadata needs trust in the signer, with the mechanisms out of scope; in the EU profile the signer is the access certificate of the provider (OpenID4VCI 1.0; ETSI TS 119 472-3; read, not yet registered).</li>
+</ul>
+
+<p><strong>OpenID Federation 1.0 (final, 17 February 2026).</strong> Entity statements are signed JWTs forming a chain from an entity to a trust anchor. The mechanism does not rely on Web PKI, and anchor keys are distributed “in some secure out-of-band way not described in this document”. A party needs the identifier of the other party and a list of anchors with their keys. Anchors and intermediates may list their subordinates, and a resolve endpoint lets a trusted third party do the chain evaluation. If several valid chains exist, the party decides which to use. Trust marks state conformance to criteria set by an accreditation authority. The specification “does not define a revocation process”; chains carry an expiry and must be refreshed. No EU law text read (proposal, Council text, CIR 2024/2979, 2024/2980, 2024/2982, 2026/1731) mandates or mentions OpenID Federation for the wallet ecosystem. Profiles of OpenID Federation for wallets were not searched. The specification was read, but is not yet in the source register.</p>
+
+<p><strong>Data space and ecosystem anchors.</strong></p>
+<ul>
+  <li>Eclipse DCP: the Dataspace Protocol is “independent of the identity and trust system used”; DCP “allows for multiple trust anchors in a dataspace”. Holders and verifiers expect a secure list of trusted issuer DIDs, but “how this list is provided is out of scope”; verifiers “can recognize several Dataspace Governance Authorities”. The governance authority handles participant registration and designation of trust credential issuers. The participant identifier must be a DID (SRC-DCP, git main of 2026-08-05, which states v1.0). Catalogs that support issuance advertise it at <code class="language-plaintext highlighter-rouge">/.well-known/dspace-trust</code>. The Dataspace Protocol release 2025-1 says the semantics of authorisation tokens are not part of that specification (read; not yet in the source register).</li>
+  <li>Gaia-X: trust anchors are conformity assessment bodies or technical means accredited by the Gaia-X Association, “not necessarily Root Certificate Authorities as commonly understood”. Claims must be signed with material traceable to a trust service provider; non-EU anchors named are South Korea, the United Arab Emirates and India, with the full list in the Gaia-X Registry. Notaries use EORI, LEI, local registers and VAT sources. The compliance service forwards a presentation to a clearing house instance. The page read is the 24.04 prerelease compliance document, and whether a newer release exists was not established. The list and operators of clearing house instances and their technical documentation were not read (the pages fetched were stubs or 404). The document is not yet in the source register.</li>
+  <li>Catena-X: a core service provider validates the company, creates the business partner number, does identity proofing and issues the Membership, BPN and Framework Agreement credentials (SRC-CX-0006, preview, go-live announced for 24 November 2026). The Membership Credential is issued by the core service provider or an assigned issuer (SRC-CX-0050). A BPN-DID resolution service maps the business partner number to a DID and checks that the credential is signed by a trusted issuer (SRC-CX-0167, partly read, the sections quoted were read). The participant identifier is the DID (SRC-CX-0018). In the pages read, no passage defines how a participant obtains the list of trusted issuers. The wallet standard CX-0149 was not read (the copy fetched was a stub).</li>
+  <li>Global root: GLEIF is the “root of trust” of the vLEI chain, from GLEIF through qualified vLEI issuers to legal entities and persons (SRC-GLEIF-VLEI; SRC-GLEIF-EGF-PRIMARY, v4.0 document v1.2). ISO 17442-3 is named as the standard; its text was not read.</li>
+  <li>WE BUILD pilot: the Commission is shown as compiling, signing and publishing the lists for wallet providers, PID providers, access certificate providers and registration certificate providers; Member State providers publish national lists for non-qualified and qualified attestation providers; validation follows ETSI TS 119 615. The authorisation model is “allow all” at ecosystem level, tightened by list extensions and registration data, in a draft pilot convention (SRC-WEBUILD-ARCH).</li>
+</ul>
+
+<p><strong>What the sources do not say.</strong> No source read defines a legal or technical list of trusted entities for business wallet providers or for access certificates of business wallet relying parties, other than the Commission list in Article 12 and the reference to the lists under CIR 2024/2980. No source read defines how a relying party chooses between several trust domains for the same credential; OpenID4VP lets the verifier name accepted authorities and DCP lets it recognise several governance authorities, and neither prescribes a decision rule. No source read defines equivalence between an ecosystem anchor and an EU list entry, except that Gaia-X names eIDAS trust service providers as one allowed anchor class.</p>
+<h2 id="decision-criteria">
+  
+  
+    <a href="#decision-criteria" class="anchor-heading" aria-labelledby="decision-criteria"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Decision criteria
+  
+  
+</h2>
+    
+
+<p>Criteria marked <strong>source</strong> are stated or implied in a source; <strong>driver</strong> means a business or architecture driver that no source states and that a stakeholder has to confirm.</p>
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Criterion</th>
+      <th>Basis</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>C1</td>
+      <td>Legal effect of the anchor</td>
+      <td><strong>source</strong>: EU trusted list status has legal constitutive value for qualified services (TS 119 615); ecosystem anchors carry contractual effect only</td>
+    </tr>
+    <tr>
+      <td>C2</td>
+      <td>Authenticity of the list itself (signed or sealed, location and keys anchored outside the list)</td>
+      <td><strong>source</strong>: CIR 2024/2980 Article 5; TS 119 615</td>
+    </tr>
+    <tr>
+      <td>C3</td>
+      <td>Machine readability and open access without registration</td>
+      <td><strong>source</strong>: CIR 2024/2980 Article 5(3); ARF TLPub_04</td>
+    </tr>
+    <tr>
+      <td>C4</td>
+      <td>Status and history, and speed of withdrawal</td>
+      <td><strong>source</strong>: concept article; ARF GenNot_05 (status Invalid); OpenID Federation chain expiry</td>
+    </tr>
+    <tr>
+      <td>C5</td>
+      <td>Coverage of issuer classes (qualified, public sector, other attestation providers, ecosystem members)</td>
+      <td><strong>source</strong>: ARF 6.3.2.4</td>
+    </tr>
+    <tr>
+      <td>C6</td>
+      <td>Support for several trust domains at once and per-credential policy</td>
+      <td><strong>source</strong>: ARF 6.6.3.6; OpenID4VP <code class="language-plaintext highlighter-rouge">trusted_authorities</code>; DCP</td>
+    </tr>
+    <tr>
+      <td>C7</td>
+      <td>Privacy of trust resolution (online lookups that reveal which credential is used)</td>
+      <td><strong>source</strong>: OpenID4VP section 15.10</td>
+    </tr>
+    <tr>
+      <td>C8</td>
+      <td>Availability and caching (99,9 % list availability, offline validation with cached data)</td>
+      <td><strong>source</strong>: TS 119 612 clause 6.4; ARF 6.6.3.2</td>
+    </tr>
+    <tr>
+      <td>C9</td>
+      <td>Third-country recognition path</td>
+      <td><strong>source</strong>: proposal Article 17; eIDAS Article 14; Gaia-X registry</td>
+    </tr>
+    <tr>
+      <td>C10</td>
+      <td>Governance of the anchor (who admits and removes members, EU establishment, independence from third-country control)</td>
+      <td><strong>source</strong>: proposal Articles 7(2) and 17, Council Article 17(3); EN 319 522-4-3</td>
+    </tr>
+    <tr>
+      <td>C11</td>
+      <td>Discovery path from the credential or service to the applicable list</td>
+      <td><strong>source</strong>: TS 119 612 clause 6.3; EN 319 522-4-3; OpenID4VP; the issuer discovery gap in ARF 6.6.2.2</td>
+    </tr>
+    <tr>
+      <td>C12</td>
+      <td>Number of parsers and signature profiles a relying party has to run (XML trusted lists with XAdES, JSON lists with JAdES, JWT entity statements, DID documents)</td>
+      <td><strong>driver</strong></td>
+    </tr>
+    <tr>
+      <td>C13</td>
+      <td>Operational dependence on a single operator (Commission, clearing houses, one core service provider) and exit path</td>
+      <td><strong>driver</strong></td>
+    </tr>
+    <tr>
+      <td>C14</td>
+      <td>Effort and cost for small relying parties to maintain anchor stores per attestation class</td>
+      <td><strong>driver</strong>; ARF 6.6.3.6 requires a regular process</td>
+    </tr>
+    <tr>
+      <td>C15</td>
+      <td>Liability and recourse when a list entry is wrong or late</td>
+      <td><strong>driver</strong></td>
+    </tr>
+  </tbody>
+</table></div>
+<h2 id="options">
+  
+  
+    <a href="#options" class="anchor-heading" aria-labelledby="options"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Options
+  
+  
+</h2>
+    
+<h3 id="a-eu-lists-as-the-single-root">
+  
+  
+    <a href="#a-eu-lists-as-the-single-root" class="anchor-heading" aria-labelledby="a-eu-lists-as-the-single-root"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> (a) EU lists as the single root
+  
+  
+</h3>
+    
+
+<p><strong>What the sources enable.</strong> Qualified services carry legal constitutive value, and the authentication of the list of lists is anchored in the Official Journal with a pivot list. Publication is open and signed, and the same rule set applies as for the EUDI Wallet. EEA states and a UK entry already appear in the live list of lists. The ERDS trust evaluation is defined for the EU list.</p>
+
+<p><strong>What they restrict.</strong> Non-qualified and ecosystem issuers have no entry. TS 119 602 has no profile for business wallet provider lists. The Article 12 list of the proposal has no stated signature, location or key. Third-country anchors enter only through implementing acts or agreements.</p>
+
+<p><strong>What they leave open.</strong> How a relying party learns of a new EU list location (the Official Journal publication and the pivot list are defined for the list of lists only), whether the Article 12 list will be published as a signed list of trusted entities, and how long a withdrawal takes to appear (TS 119 612 gives no timing beyond list validity, and the Council text sets two working days for the provider list).</p>
+<h3 id="b-separate-lists-per-ecosystem-selected-per-credential">
+  
+  
+    <a href="#b-separate-lists-per-ecosystem-selected-per-credential" class="anchor-heading" aria-labelledby="b-separate-lists-per-ecosystem-selected-per-credential"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> (b) Separate lists per ecosystem, selected per credential
+  
+  
+</h3>
+    
+
+<p><strong>What the sources enable.</strong> DCP and OpenID4VP support exactly this: multiple anchors, accepted authorities per credential query, several governance authorities. Catena-X and Gaia-X already run their own anchors, and the ARF already separates anchors per attestation class.</p>
+
+<p><strong>What they restrict.</strong> The specifications give no decision rule between domains. Ecosystem lists are out of scope of DCP and not specified in the Catena-X pages read. Each domain brings its own format and revocation behaviour. Wallets in the EU ecosystem have no discovery service for issuers.</p>
+
+<p><strong>What they leave open.</strong> How a business wallet advertises accepted domains to counterparties without revealing its credential portfolio, how a domain lists non-EU participants, and who audits ecosystem operators.</p>
+<h3 id="c-bridged-or-federated-trust-layer">
+  
+  
+    <a href="#c-bridged-or-federated-trust-layer" class="anchor-heading" aria-labelledby="c-bridged-or-federated-trust-layer"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> (c) Bridged or federated trust layer
+  
+  
+</h3>
+    
+
+<p><strong>What the sources enable.</strong> OpenID Federation offers anchors, intermediates, trust marks, member enumeration and resolution as a service. Gaia-X already admits eIDAS trust service providers as anchors and uses notaries over registers. The OpenID4VP query type <code class="language-plaintext highlighter-rouge">openid_federation</code> exists.</p>
+
+<p><strong>What they restrict.</strong> No EU legal text read mentions OpenID Federation. The federation specification defines no revocation process and leaves anchor key distribution out of band. Delegated resolution adds a trusted third party and an online lookup. Equivalence between ecosystem and EU anchors is not defined.</p>
+
+<p><strong>What they leave open.</strong> The legal status of a federation anchor next to an eIDAS list, governance and liability of a bridge operator, and whether resolved results may be cached for offline presentation.</p>
+<h2 id="assessment-against-the-criteria">
+  
+  
+    <a href="#assessment-against-the-criteria" class="anchor-heading" aria-labelledby="assessment-against-the-criteria"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Assessment against the criteria
+  
+  
+</h2>
+    
+
+<p>How far the <em>sources</em> support each option for each criterion. “Not stated” means no source speaks to it; the cell does not say the option fails.</p>
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Criterion</th>
+      <th>(a) EU lists</th>
+      <th>(b) per ecosystem</th>
+      <th>(c) federated layer</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>C1 Legal effect</td>
+      <td>Constitutive value for qualified services</td>
+      <td>Contractual effect only</td>
+      <td>Not stated; no EU text read mentions it</td>
+    </tr>
+    <tr>
+      <td>C2 Authenticity of the list</td>
+      <td>Signed lists; location and keys anchored in the Official Journal (list of lists); Article 12 list: not stated</td>
+      <td>Differs per domain; DCP leaves the list out of scope</td>
+      <td>Signed entity statements; anchor keys out of band</td>
+    </tr>
+    <tr>
+      <td>C3 Open access</td>
+      <td>Without registration (CIR 2024/2980 Article 5(3))</td>
+      <td>Not stated for DCP and Catena-X lists</td>
+      <td>Not stated</td>
+    </tr>
+    <tr>
+      <td>C4 Status and withdrawal</td>
+      <td>Status values; Invalid status in notification; Council: two working days for the provider list</td>
+      <td>Not stated in the pages read</td>
+      <td>No revocation process; chain expiry</td>
+    </tr>
+    <tr>
+      <td>C5 Issuer classes</td>
+      <td>No entry for non-qualified and ecosystem issuers</td>
+      <td>Ecosystem members covered by their own anchor</td>
+      <td>Not stated</td>
+    </tr>
+    <tr>
+      <td>C6 Several domains</td>
+      <td>Anchors per attestation class (ARF)</td>
+      <td>Supported by OpenID4VP and DCP; no decision rule</td>
+      <td>Several valid chains possible; party decides</td>
+    </tr>
+    <tr>
+      <td>C7 Privacy of resolution</td>
+      <td>Lists are downloaded; online resolution not required</td>
+      <td>Not stated</td>
+      <td>Resolution through a third party is an online lookup</td>
+    </tr>
+    <tr>
+      <td>C9 Third countries</td>
+      <td>Implementing act or agreement</td>
+      <td>Gaia-X names non-EU anchors; Catena-X: not stated</td>
+      <td>Not stated</td>
+    </tr>
+    <tr>
+      <td>C11 Discovery</td>
+      <td>Pointers, extensions and the list of lists; no issuer discovery in the ARF</td>
+      <td>Catalog advertising (DCP); no issuer discovery for EU wallets</td>
+      <td>Resolution and enumeration endpoints</td>
+    </tr>
+  </tbody>
+</table></div>
+<h2 id="preliminary-reading">
+  
+  
+    <a href="#preliminary-reading" class="anchor-heading" aria-labelledby="preliminary-reading"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Preliminary reading
+  
+  
+</h2>
+    
+
+<p><em>This section is the analysis of this project, not a statement of a source.</em> Three observations follow from the facts.</p>
+
+<ol>
+  <li><strong>Option (a) alone does not cover the issuer classes in the requirement set.</strong> The ARF and the sources leave non-qualified attestation providers and ecosystem members off the Commission lists, and no source defines the list of business wallet providers as a signed list with a stated location and key. (a) is the basis where legal effect is needed (C1) and where qualified services are involved.</li>
+  <li><strong>Option (b) is where the specifications are already written, but it leaves the choice between domains to the relying party.</strong> OpenID4VP and DCP support several anchors per credential, and the sources give no decision rule (C6). This makes a stated policy per credential class necessary, not a single list.</li>
+  <li><strong>Option (c) rests on text the sources do not yet contain.</strong> No EU legal text read mentions OpenID Federation, the specification has no revocation process, and equivalence between ecosystem and EU anchors is not defined. It can be treated as an option to test, not as a basis.</li>
+</ol>
+
+<p>A working reading follows: <strong>EU lists as the root for qualified services and wallet roles, ecosystem anchors admitted per credential class by relying-party policy, and a federated layer only as an optional resolver where a use case needs it.</strong></p>
+
+<p><strong>Conditions under which this reading holds.</strong> The adopted text keeps the Article 12 list and its link to the existing trust structures (recital 16); the Article 12 list is published in a signed, machine-readable form with a stated location and key; relying parties are willing to maintain anchor stores per attestation class, as the ARF requires.</p>
+
+<p><strong>What would change it.</strong> An adopted text that defines a trusted list or a list of trusted entities for business wallet providers or their access certificates (then (a) covers more); an EU or OpenID Foundation profile of OpenID Federation for wallets; a definition of equivalence between ecosystem anchors and EU list entries; a Commission decision under Article 17; the content of the Commission Annex; a clarified allocation of liability for wrong list entries.</p>
+<h2 id="gaps-and-next-steps">
+  
+  
+    <a href="#gaps-and-next-steps" class="anchor-heading" aria-labelledby="gaps-and-next-steps"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Gaps and next steps
+  
+  
+</h2>
+    
+
+<ul>
+  <li>Obtain the Annex of COM(2025) 838 and the outcome of the Council meeting on 9 June 2026, then re-check Articles 10, 12 and 17 and the dangling reference to Article 12(5). <span class="vtag v-todo">to verify</span></li>
+  <li>Check whether CIR 2024/2980, as amended by CIR 2026/1731, will be extended to business wallet roles; this was not checked beyond the Council Annex reference. <span class="vtag v-todo">to verify</span></li>
+  <li>Read ISO/IEC 18013-5 and 18013-7 (VICAL and IACA lists), which were paywalled; statements on VICAL come from HAIP only.</li>
+  <li>Read Catena-X CX-0149 and the Gaia-X clearing house documentation, and check for a Gaia-X release newer than the 24.04 prerelease.</li>
+  <li>Search for OpenID Federation profiles for wallets.</li>
+  <li>Analyse what the UK entry of the EU list of lists means legally today; read case law and national rules on the legal effect of trusted lists; check the amendment status of Implementing Decision (EU) 2015/1505.</li>
+  <li>Register the sources marked “not yet in the source register” (ETSI TS 119 615, the live EU list of trusted lists, ETSI EN 319 522-4-3, ETSI TS 119 472-2 and 119 472-3, OpenID4VP 1.0, OpenID4VCI 1.0, HAIP 1.0, OpenID Federation 1.0, the Dataspace Protocol, the Gaia-X compliance document) before citing them in requirements.</li>
+  <li>Per the research note, TS 119 612 V2.4.1 and TS 119 602 V1.1.1 are the latest versions in the ETSI delivery directory fetched on 2026-10-03.</li>
+  <li>Write the missing requirements (see “What the requirement set says”) and review them with a named reviewer.</li>
+  <li>Confirm the business drivers (C12 to C15) with stakeholders; they are assumptions until then.</li>
+</ul>
+<h2 id="references">
+  
+  
+    <a href="#references" class="anchor-heading" aria-labelledby="references"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> References
+  
+  
+</h2>
+    
+
+<p>SRC-EBW-PROPOSAL, SRC-COUNCIL-ST-9684-26, SRC-EIDAS-CONSOL, SRC-CIR-2024-2979, SRC-CIR-2024-2980, SRC-CIR-2026-1731, SRC-ARF-HLR, SRC-ARF-TRUST, SRC-ETSI-119602, SRC-ETSI-119612, SRC-DCP, SRC-CX-0006, SRC-CX-0050, SRC-CX-0167, SRC-CX-0018, SRC-GLEIF-VLEI, SRC-GLEIF-EGF-PRIMARY, SRC-WEBUILD-ARCH. Full entries with version, date and URL are in the source register.</p>
+
+          
+
+          
+            
+          
+        </main>
+        
+<hr>
+<footer>
+  
+
+  <div class="site-footer-extra">
+  <div class="sf-grid">
+    <div class="sf-brand">
+      <img src="/business-wallet-requirements/assets/images/logos/spherity-logo-white.svg" alt="Spherity" width="150" height="auto">
+      <p>European Business Wallet Requirements: open, traceable requirements for European Business Wallets and trust infrastructure.</p>
+      <p><a href="mailto:info@spherity.com">info@spherity.com</a></p>
+    </div>
+    <nav class="sf-col" aria-label="Explore">
+      <h2>Explore</h2>
+      <ul>
+        <li><a href="/business-wallet-requirements/requirements/">Requirements</a></li>
+        <li><a href="/business-wallet-requirements/concepts/">Concepts</a></li>
+        <li><a href="/business-wallet-requirements/perspectives/use-cases/">Use cases</a></li>
+        <li><a href="/business-wallet-requirements/perspectives/business-cases/">Business cases</a></li>
+        <li><a href="/business-wallet-requirements/legal/roadmap/">Legal roadmap</a></li>
+        <li><a href="/business-wallet-requirements/ecosystem/initiatives/">Ecosystems</a></li>
+      </ul>
+    </nav>
+    <nav class="sf-col" aria-label="Resources">
+      <h2>Resources</h2>
+      <ul>
+        <li><a href="/business-wallet-requirements/downloads/">Downloads</a></li>
+        <li><a href="/business-wallet-requirements/figures/">Figure gallery</a></li>
+        <li><a href="/business-wallet-requirements/changelog/">What changed</a></li>
+        <li><a href="https://spherity.github.io/spherity-research/">Spherity Research</a></li>
+        <li><a href="/business-wallet-requirements/llms.txt">llms.txt</a></li>
+        <li><a href="/business-wallet-requirements/sitemap.xml">Sitemap</a></li>
+      </ul>
+    </nav>
+    <nav class="sf-col" aria-label="Project">
+      <h2>Project</h2>
+      <ul>
+        <li><a href="/business-wallet-requirements/about/">About</a></li>
+        <li><a href="/business-wallet-requirements/contact/">Contact</a></li>
+        <li><a href="https://github.com/cstoecker/business-wallet-requirements/discussions">Discussions</a></li>
+        <li><a href="https://github.com/cstoecker/business-wallet-requirements">GitHub</a></li>
+      </ul>
+    </nav>
+  </div>
+  <p class="sf-legal">Published by <a href="https://www.spherity.com">Spherity GmbH</a>. Content CC BY 4.0, code Apache-2.0 (to be confirmed). Draft for review; based on the Commission proposal COM(2025) 838. Analysis, not legal advice.</p>
+</div>
+<script>
+(function () {
+  var html = document.documentElement;
+  // tooltips and accessible names for icon-only navigation
+  document.querySelectorAll(".nav-list-link").forEach(function (a) { var t = a.textContent.trim(); if (t) { a.setAttribute("title", t); } });
+  // navigation icons (Untitled UI, outline); inserted as elements so the active link shows them too
+  var base = "/business-wallet-requirements", icons = {"/":"home-line","/concepts/":"lightbulb-02","/research/":"file-search-02","/changelog/":"clock-refresh","/downloads/":"download-04","/figures/":"image-03","/about/":"info-circle","/requirements/":"check-done-02","/requirements/methodology/":"clipboard-check","/perspectives/":"eye","/perspectives/use-cases/":"target-02","/perspectives/business-cases/":"coins-03","/legal/":"scales-02","/legal/roadmap/":"flag-03","/domains/":"grid-03","/architecture/":"layers-three-02","/traceability/":"dataflow-03","/ecosystem/":"globe-02","/ecosystem/initiatives/":"building-05","/ecosystem/standards/":"target-02","/ecosystem/certification/":"award-03","/ecosystem/governance/":"users-check","discussions":"message-chat-circle","/requirements/review/":"list","/architecture/decisions/":"settings-02"};
+  document.querySelectorAll(".nav-list-link").forEach(function (a) {
+    if (a.querySelector(".nav-ic")) return;
+    var u; try { u = new URL(a.href, location.href); } catch (e) { return; }
+    var key = u.origin === location.origin ? (u.pathname.indexOf(base) === 0 ? u.pathname.slice(base.length) : u.pathname) : (u.pathname.indexOf("/discussions") > -1 ? "discussions" : "");
+    key = key.replace(/index\.html$/, "");
+    var name = icons[key]; if (!name) return;
+    var s = document.createElement("span"); s.className = "nav-ic"; s.setAttribute("aria-hidden", "true");
+    s.style.setProperty("--icon", 'url("/business-wallet-requirements/assets/icons/' + name + '.svg")');
+    a.insertBefore(s, a.firstChild);
+  });
+  // mark the current page in the navigation
+  var here = location.pathname.replace(/index\.html$/, "");
+  document.querySelectorAll(".nav-list-link").forEach(function (a) { try { var u = new URL(a.href, location.href); if (u.origin === location.origin && u.pathname.replace(/index\.html$/, "") === here) { a.setAttribute("aria-current", "page"); } } catch (e) {} });
+  // desktop: sub-pages open as a flyout on hover or focus instead of expanding inside the sidebar
+  (function () {
+    var mq = window.matchMedia("(min-width: 50rem)"), side = document.querySelector(".side-bar"), fly, hideT, showT, cur;
+    if (!side) return;
+    function close() { clearTimeout(showT); if (fly) { fly.remove(); fly = null; } cur = null; }
+    function open(li) {
+      if (!mq.matches || cur === li) return;
+      var sub = li.querySelector(":scope > .nav-list"); if (!sub) return;
+      close(); cur = li;
+      fly = document.createElement("nav"); fly.className = "nav-flyout"; fly.setAttribute("aria-label", li.querySelector(":scope > .nav-list-link").textContent.trim());
+      var ul = document.createElement("ul"); ul.className = "nav-list";
+      sub.querySelectorAll(":scope > .nav-list-item").forEach(function (item) {
+        var a = item.querySelector(":scope > .nav-list-link"); if (!a) return;
+        var c = a.cloneNode(true); c.removeAttribute("title"); var e = document.createElement("li"); e.appendChild(c); ul.appendChild(e);
+      });
+      fly.appendChild(ul); document.body.appendChild(fly);
+      var r = side.getBoundingClientRect(), lr = li.getBoundingClientRect(), h = fly.offsetHeight;
+      fly.style.left = r.right + "px"; fly.style.top = Math.max(8, Math.min(lr.top, window.innerHeight - h - 8)) + "px";
+      fly.addEventListener("mouseenter", function () { clearTimeout(hideT); });
+      fly.addEventListener("mouseleave", function () { hideT = setTimeout(close, 160); });
+      fly.addEventListener("focusout", function (ev) { if (!fly || !fly.contains(ev.relatedTarget)) hideT = setTimeout(close, 160); });
+    }
+    side.querySelectorAll(".nav-list > .nav-list-item").forEach(function (li) {
+      if (!li.querySelector(":scope > .nav-list")) return;
+      li.addEventListener("mouseenter", function () { clearTimeout(hideT); clearTimeout(showT); showT = setTimeout(function () { open(li); }, 140); });
+      li.addEventListener("mouseleave", function () { clearTimeout(showT); hideT = setTimeout(close, 160); });
+      li.addEventListener("focusin", function () { open(li); });
+    });
+    side.addEventListener("mouseenter", function (e) { if (!e.target.closest || true) clearTimeout(hideT); });
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape") close(); });
+    window.addEventListener("scroll", close, true); window.addEventListener("resize", close);
+  })();
+  // keyboard access to horizontally scrollable tables and figures
+  document.querySelectorAll(".main-content *").forEach(function (el) {
+    var o = getComputedStyle(el).overflowX;
+    if ((o === "auto" || o === "scroll") && el.scrollWidth > el.clientWidth + 1 && !el.hasAttribute("tabindex")) { el.setAttribute("tabindex", "0"); }
+  });
+  // collapse toggle
+  var header = document.querySelector(".site-header");
+  if (header && !header.querySelector(".nav-toggle")) {
+    var b = document.createElement("button");
+    b.type = "button"; b.className = "nav-toggle";
+    b.innerHTML = '<span class="icon" aria-hidden="true"></span>';
+    var side = document.querySelector(".side-bar"), tin, tout;
+    if (side) {
+      side.addEventListener("mouseenter", function () { clearTimeout(tout); if (html.classList.contains("nav-collapsed")) tin = setTimeout(function () { html.classList.add("nav-peek"); }, 90); });
+      side.addEventListener("mouseleave", function () { clearTimeout(tin); tout = setTimeout(function () { html.classList.remove("nav-peek"); }, 180); });
+      side.addEventListener("focusin", function () { if (html.classList.contains("nav-collapsed")) html.classList.add("nav-peek"); });
+      side.addEventListener("focusout", function (e) { if (!side.contains(e.relatedTarget)) html.classList.remove("nav-peek"); });
+    }
+    function sync() { var c = html.classList.contains("nav-collapsed"); b.setAttribute("aria-pressed", c ? "true" : "false"); b.setAttribute("aria-label", c ? "Expand navigation" : "Collapse navigation to icons"); b.title = c ? "Expand navigation" : "Collapse navigation to icons"; }
+    b.addEventListener("click", function () { html.classList.remove("nav-peek"); html.classList.toggle("nav-collapsed"); try { localStorage.setItem("ebw-nav", html.classList.contains("nav-collapsed") ? "collapsed" : "expanded"); } catch (e) {} sync(); });
+    header.appendChild(b); sync();
+  }
+  // "On this page" for long articles
+  var content = document.querySelector(".main-content");
+  var hs = content ? content.querySelectorAll("h2[id]") : [];
+  if (hs.length > 3 && !document.querySelector(".toc-box")) {
+    var d = document.createElement("details"); d.className = "toc-box"; d.open = window.innerWidth > 800;
+    var ol = ""; hs.forEach(function (h) { ol += '<li><a href="#' + h.id + '">' + h.textContent.replace(/\s+/g, " ").trim() + "</a></li>"; });
+    d.innerHTML = "<summary>On this page</summary><ol>" + ol + "</ol>";
+    var first = content.querySelector("h2"); if (first) first.parentNode.insertBefore(d, first);
+  }
+})();
+</script>
+
+
+  <div class="d-md-none mt-4 fs-2">
+    
+    
+      This site uses <a href="https://github.com/just-the-docs/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.
+    
+  </div>
+</footer>
+
+      </div>
+    </div>
+    
+      
+
+<div class="search-overlay"></div>
+
+    
+  </div>
+
+  
+</body>
+</html>
+

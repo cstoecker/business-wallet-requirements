@@ -1,0 +1,5 @@
+/* token_spacing — proposed 8-point scale (confidence: low, see readme). */
+:root{
+  --sph-space-2xs:2px; --sph-space-xs:4px; --sph-space-sm:8px; --sph-space-md:12px;
+  --sph-space-lg:16px; --sph-space-xl:24px; --sph-space-2xl:32px; --sph-space-3xl:48px; --sph-space-4xl:64px;
+}
