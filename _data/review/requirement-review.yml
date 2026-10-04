@@ -1710,7 +1710,7 @@
   fidelity: derived-marked
   verification_ready: needs-legal-review
   verdict_arg: EBW-LEG-010
-  note: Quote ends at "in a manner" and does not reach the statement. "Only to the extent the relying party requests" overstates GDPR (necessity for the purpose, not request) and conflicts with atomic EBWOID (INT-057); keep the sole-trader example as a note on LEG-010 and settle in INT-095.
+  note: 'Statement rewritten (minimisation to purpose, not ''as requested''), quote from Council recital 36 machine-checked; still derived: GDPR application to sole traders to verify; settle in INT-095.'
 - id: EBW-DOM-001
   verdict: ok
   priority: P3
@@ -2715,8 +2715,8 @@
   - K05
   applicability: provider-side
   fidelity: broader-than-quote
-  verification_ready: needs-source-check
-  note: Quote covers only the lead-in; the four data items come from the full clause. Check against full Council text. Complements FUN-002.
+  verification_ready: true
+  note: Quote now the operative clause of Council ST 9684/26 Art 10(3a), machine-checked against the cached text. Complements FUN-002.
 - id: EBW-GOV-001
   verdict: merge-with
   priority: P3
@@ -3278,10 +3278,10 @@
   - K07
   applicability: provider-side
   fidelity: broader-than-quote
-  verification_ready: needs-source-check
+  verification_ready: true
   corrected_statement:
   - The authority to revoke a power of attorney or power of representation attestation shall be defined by applicable legislation.
-  note: '"Only entities authorised ... shall revoke" is stronger than the quote. rb-poa-pox is v0.8 in cache, newer than registered commit de79cca: verify section 6.7.'
+  note: 'Verified against registered commit de79cca (rulebooks/rb-poa-pox.md, v0.7) and v0.8 of 2026-09-04: section and quote unchanged. Statement still stronger than the quote ("Only authorized entities SHALL revoke" is in 6.7, authority by law): reword stays proposed.'
 - id: EBW-GOV-050
   verdict: ok
   priority: P2
@@ -4396,8 +4396,8 @@
   - K01
   applicability: provider-side
   fidelity: ok
-  verification_ready: needs-source-check
-  note: Verify section 2.9 / IR-12 against registered commit de79cca (cache is v0.8).
+  verification_ready: true
+  note: 'Verified against registered commit de79cca (rulebooks/rb-poa-pox.md, v0.7) and v0.8 of 2026-09-04: section and quote unchanged. IR-12 in 2.9.'
 - id: EBW-INT-089
   verdict: ok
   priority: P3
@@ -5398,7 +5398,7 @@
   verification_ready: needs-legal-review
   corrected_statement:
   - The provider of European Business Wallets shall comply with the prohibition on making funds or economic resources available, directly or indirectly, to or for the benefit of persons and entities listed in Annex I to Regulation (EU) No 269/2014, and shall check whether wallet and owner identification services fall within that prohibition.
-  note: 'Overstates law: that wallet services are "economic resources" is an interpretation (rationale says to verify). Only one sanctions regime; others need the same check.'
+  note: Restated within Reg 269/2014 Art 2(2), quote machine-checked; provenance D. Wallet services as economic resources and other regimes (833/2014) still to verify by legal review.
 - id: EBW-LEG-076
   verdict: ok
   priority: P2
@@ -7306,8 +7306,8 @@
   - K03
   applicability: provider-side
   fidelity: ok
-  verification_ready: needs-source-check
-  note: Verify section 4.14 against registered commit (cache v0.8). Complements TRU-162 to TRU-164.
+  verification_ready: true
+  note: 'Verified against registered commit de79cca (rulebooks/rb-poa-pox.md, v0.7) and v0.8 of 2026-09-04: section and quote unchanged. Complements TRU-162 to TRU-164.'
 - id: EBW-OPS-042
   verdict: ok
   priority: P2
@@ -9271,9 +9271,9 @@
   - K07
   applicability: relying-party-side
   fidelity: ok
-  verification_ready: needs-source-check
+  verification_ready: true
   verdict_arg: EBW-TRU-160
-  note: Rulebook 6.5 allows suspension but its status values (6.9) have no suspended value; raise with WE BUILD. Verify section numbers (cache v0.8 newer than de79cca).
+  note: 'Verified against registered commit de79cca (rulebooks/rb-poa-pox.md, v0.7) and v0.8 of 2026-09-04: section and quote unchanged. Rulebook 6.5 allows suspension but its status values (6.9) have no suspended value; raise with WE BUILD.'
 - id: EBW-TRU-160
   verdict: ok
   priority: P2
@@ -9283,8 +9283,8 @@
   - K03
   applicability: relying-party-side
   fidelity: ok
-  verification_ready: needs-source-check
-  note: Statement adds "revoked, expired and unknown" from the 6.9 list; check against registered commit.
+  verification_ready: true
+  note: 'Verified against registered commit de79cca (rulebooks/rb-poa-pox.md, v0.7) and v0.8 of 2026-09-04: section and quote unchanged. Statement adds "revoked, expired and unknown" from the 6.9 list (checked).'
 - id: EBW-TRU-161
   verdict: ok
   priority: P2
@@ -9295,8 +9295,8 @@
   - K05
   applicability: relying-party-side
   fidelity: ok
-  verification_ready: needs-source-check
-  note: Verify section 6.10 against registered commit.
+  verification_ready: true
+  note: 'Verified against registered commit de79cca (rulebooks/rb-poa-pox.md, v0.7) and v0.8 of 2026-09-04: section and quote unchanged. Section 6.10.'
 - id: EBW-TRU-162
   verdict: ok
   priority: P2
@@ -9306,8 +9306,8 @@
   - K07
   applicability: provider-side
   fidelity: derived-marked
-  verification_ready: needs-source-check
-  note: Duty-holder derived from sections 4.14, 6.7, 6.13 (stated). Confirm with WE BUILD and verify section numbers against de79cca (cache v0.8).
+  verification_ready: true
+  note: 'Verified against registered commit de79cca (rulebooks/rb-poa-pox.md, v0.7) and v0.8 of 2026-09-04: section and quote unchanged. Duty-holder derived from 4.14, 6.7, 6.13 (stated); confirm with WE BUILD.'
 - id: EBW-TRU-163
   verdict: ok
   priority: P2
@@ -9317,8 +9317,8 @@
   - K07
   applicability: provider-side
   fidelity: derived-marked
-  verification_ready: needs-source-check
-  note: 'Duty-holder derived from sections 4.14, 6.7, 6.13 (stated). Confirm with WE BUILD and verify section numbers against de79cca (cache v0.8). Issuer can only act with a sync to HR or register data: see OPS-041.'
+  verification_ready: true
+  note: 'Verified against registered commit de79cca (rulebooks/rb-poa-pox.md, v0.7) and v0.8 of 2026-09-04: section and quote unchanged. Duty-holder derived from 4.14, 6.7, 6.13 (stated); confirm with WE BUILD. Issuer needs HR or register sync: see OPS-041.'
 - id: EBW-TRU-164
   verdict: ok
   priority: P2
@@ -9328,8 +9328,8 @@
   - K07
   applicability: provider-side
   fidelity: derived-marked
-  verification_ready: needs-source-check
-  note: Duty-holder derived from sections 4.14, 6.7, 6.13 (stated). Confirm with WE BUILD and verify section numbers against de79cca (cache v0.8).
+  verification_ready: true
+  note: 'Verified against registered commit de79cca (rulebooks/rb-poa-pox.md, v0.7) and v0.8 of 2026-09-04: section and quote unchanged. Duty-holder derived from 4.14, 6.7, 6.13 (stated); confirm with WE BUILD.'
 - id: EBW-TRU-165
   verdict: ok
   priority: P2
@@ -9365,8 +9365,8 @@
   - K01
   applicability: relying-party-side
   fidelity: broader-than-quote
-  verification_ready: needs-source-check
-  note: Quote says the mandate shall not authorise out-of-scope actions; the verifier duty to reject is from the surrounding text. Check IR-18 text and section number.
+  verification_ready: true
+  note: 'Verified against registered commit de79cca (rulebooks/rb-poa-pox.md, v0.7) and v0.8 of 2026-09-04: section and quote unchanged. IR-18 in 2.9 (verification, failure behaviour reject action).'
 - id: EBW-TRU-168
   verdict: reword
   priority: P3
@@ -9379,7 +9379,7 @@
   verification_ready: needs-legal-review
   corrected_statement:
   - Where the representation type of the authorised signatories of a legal entity is joint, a relying party that verifies the authorised signatories attestation shall require that two or more signatories act together before it treats an act as made on behalf of the entity.
-  note: Original wording ("treat a binding commitment as made only when") reads as a legal-effect rule that the rulebook does not state. Note other sections of this rulebook are copied text.
+  note: Reworded as in the N14 proposal and marked D; location corrected to rulebooks/rb-authorised-signatories/README.md 2.8.1 (registered commit de79cca). Legal effect of a joint act is national law (to verify).
 - id: EBW-TRU-169
   verdict: ok
   priority: P2
@@ -9403,7 +9403,7 @@
   fidelity: broader-than-quote
   verification_ready: needs-legal-review
   verdict_arg: EBW-TRU-008
-  note: 'Quote does not contain "legal representative or other lawfully empowered person": check Council text. Divergence from TRU-008 (substantial or high); keep both until the trilogue is known. Related TRU-070.'
+  note: Quote now Council ST 9684/26 Art 6(1)(e), including legal representative or lawfully empowered persons, machine-checked; assurance level high in full_quote. Divergence from TRU-008 kept until trilogue. Related TRU-070.
 - id: EBW-TRU-171
   verdict: merge-with
   priority: P3

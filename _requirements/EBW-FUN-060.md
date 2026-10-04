@@ -23,5 +23,8 @@ concepts:
 - CON-LEGAL-PERSON-ID
 created: '2026-10-03'
 last_verified: '2026-10-03'
-quote: shall provide at least the following information to the Commission upon the issuance of a European Business Wallet to a European Business Wallet owner
+quote: the official name of the European Business Wallet owner as stated in the national register of the owner's country of establishment or habitual residence
+full_quote: 'Providers of European Business Wallets shall provide at least the following information to the Commission upon the issuance of a European Business Wallet to a European Business Wallet owner: (a) the official name of the European Business Wallet owner as stated in the national register of the owner''s country of establishment or habitual residence; ... (d) the European Business Wallet owner’s country of establishment.'
+fidelity_checked: '2026-10-03'
+revision_note: Quote now the operative clause of Council ST 9684/26 Article 10(3a) (point (a)); full quote adds point (d).
 ---
