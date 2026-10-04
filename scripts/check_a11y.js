@@ -4,7 +4,7 @@
 // Prints one line per violation type; no output means no violations.
 const { chromium } = require(process.env.PLAYWRIGHT || 'playwright');
 const fs = require('fs'); const axe = fs.readFileSync(process.env.AXE || 'node_modules/axe-core/axe.min.js', 'utf8');
-const pages = ['/', '/requirements/', '/requirements/ebw-tru-012/', '/requirements/review/', '/concepts/trust-list/', '/architecture/decisions/dec-02/', '/legal/roadmap/', '/downloads/', '/about/', '/contact/', '/figures/'];
+const pages = ['/', '/requirements/', '/requirements/ebw-tru-012/', '/requirements/review/', '/concepts/trust-list/', '/architecture/decisions/dec-02/', '/architecture/brief/', '/legal/roadmap/', '/downloads/', '/about/', '/contact/', '/figures/'];
 (async () => {
   const b = await chromium.launch({ executablePath: process.env.CHROME || undefined, args: ['--no-sandbox'] });
   const all = {};

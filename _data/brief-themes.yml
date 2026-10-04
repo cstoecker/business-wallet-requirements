@@ -1,0 +1,103 @@
+# Hand-written frame of the stakeholder brief (nine themes). The selected requirements come from scripts/build_brief.py (_data/brief-selection.yml).
+- id: T1
+  title: Who is the wallet subject
+  clusters: [K02, K03]
+  decision: DEC-02
+  question: "Do employees act for the company with their personal EUDI Wallet, with users and authorisations inside the organisation's business wallet, or with both?"
+  silent: "How far the EUDI Wallet instruments apply to employees acting for a company; see the decision page for what was read."
+  lens:
+    industry40: "Machine and plant operators act for a company across a supply chain; who signs, and for whom, decides liability."
+    ipceiai: "An agent needs a subject to act for; the same question reappears for agents (theme 9)."
+    idta: "Who is the asset owner or manufacturer in a signed passport or shell: the person, the company or the wallet."
+  session_question: "Which actions must be done by a person in a personal wallet, and which may run under the organisation's wallet?"
+- id: T2
+  title: Formats and meaning
+  clusters: [K01, K16]
+  decision: DEC-01
+  also: DEC-10
+  question: "Which credential format carries which claim (SD-JWT VC, mdoc, JSON-LD), and how is meaning kept machine-readable for people, systems and agents?"
+  silent: "The EBW proposal points to the format standards of CIR 2024/2979 Annex II (Art 8(3)); CIR 2026/1731 names SD-JWT VC and mdoc for the EUDI Wallet. The JSON-LD realisation (ETSI TS 119 472-1 clause 7) is outside the legal list."
+  lens:
+    industry40: "Semantic identifiers and units must survive the step from credential to data space."
+    ipceiai: "Agents and retrieval need self-describing, linkable data; closed formats lose the context."
+    idta: "Submodel semantics (ECLASS, IRDI) have to map to claims; the shell itself stays an implementation artefact."
+  session_question: "Which semantic layer is the shared one, and which formats may carry it?"
+- id: T3
+  title: Keys and control
+  clusters: [K04]
+  decision: DEC-03
+  question: "Where do an organisation's keys live (device, hosted back-end, owner HSM, remote seal) and what does that mean for control, assurance and exit?"
+  silent: "The EBW texts say nothing about key location, key export between providers or an owner-run HSM."
+  lens:
+    industry40: "Machines and plants cannot use a phone; hosted or HSM custody is the default in practice."
+    ipceiai: "Agents sign on behalf of an organisation; custody decides who can stop them."
+    idta: "Signed passports outlive the provider; key portability and exit matter."
+  session_question: "Which custody models must be supported, and which must stay possible for exit?"
+- id: T4
+  title: Identity across borders
+  clusters: [K06, K17]
+  decision: DEC-11
+  also: DEC-05
+  question: "Which identifiers are primary (EUID, EBWOID, EU Company Certificate), which secondary (BPN, LEI, GLN, domain identifiers), and how does an EBW holder deal with partners outside the EU or without a business wallet?"
+  silent: "There is no official LEI credential outside the KERI-based vLEI; Catena-X issues BPNL only for some legal forms and has one issuing organisation."
+  lens:
+    industry40: "Ecosystem identifiers (BPN) already run; the mapping to EUID and EBWOID decides whether they can be bridged."
+    ipceiai: "Cross-border agents need the identity and assurance level of the organisation, not of the person."
+    idta: "Manufacturer and operator identifiers in passports must resolve to a legal entity."
+  session_question: "Which identifier is the anchor, and which mappings must be standardised first?"
+- id: T5
+  title: Trust and discovery
+  clusters: [K05, K14]
+  decision: DEC-04
+  question: "Which trust lists, lists of trusted entities and ecosystem trust anchors does a relying party use, and how does it find the right one?"
+  silent: "How ecosystem trust anchors (Catena-X, Gaia-X) relate to the EU trusted lists; no source read links them. See the decision page."
+  lens:
+    industry40: "Data spaces run their own trust anchors; relying parties need one way to combine them with EU lists."
+    ipceiai: "Agents verify counterparties automatically; discovery must work without a human."
+    idta: "Who may sign a passport or an attestation of conformity is a trust question."
+  session_question: "Which trust anchors must a verifier accept in a first cross-ecosystem scenario?"
+- id: T6
+  title: Lifecycle and evidence
+  clusters: [K07, K10]
+  decision: DEC-06
+  also: DEC-09
+  question: "How are validity, suspension and revocation handled for credentials, units and mandates, and what is logged and for whom?"
+  silent: "The EBW texts give no status mechanism of their own for owner identification data, business attestations or authorisations."
+  lens:
+    industry40: "Authority of staff and machines changes often; latency of revocation is an operating risk."
+    ipceiai: "Agent mandates must be revocable at once, with an audit trail."
+    idta: "A passport must stay verifiable after a certificate or a company ceases to exist."
+  session_question: "Which revocation latency is acceptable, and is suspension needed beside revocation?"
+- id: T7
+  title: Protocols and delivery
+  clusters: [K08, K12]
+  decision: DEC-07
+  question: "Which issuance, presentation, data space and delivery protocols must a business wallet implement, and how do they fit together?"
+  silent: "See the decision page for the protocols that no source requires."
+  lens:
+    industry40: "Connector protocols (DSP, DCP) and wallet protocols (OID4VCI, OID4VP) must meet at one point."
+    ipceiai: "Agent protocols (MCP, A2A) sit above them and need verifiable identity."
+    idta: "Passport exchange runs over APIs; the credential protocols must not duplicate them."
+  session_question: "Where do wallet protocols and data space protocols meet?"
+- id: T8
+  title: Privacy and adoption
+  clusters: [K09, K15]
+  decision: DEC-08
+  question: "How are minimisation, unlinkability and controller roles designed when the owner is an organisation and the users are people, and what makes the wallet accepted across ecosystems?"
+  silent: "Whether the EUDI Wallet privacy rules apply to the business wallet is not stated in the EBW texts read."
+  lens:
+    industry40: "Employee data in logs and credentials meets works council and GDPR rules."
+    ipceiai: "Processing by AI must follow purpose limits; evidence must not leak personal data."
+    idta: "Passports mix business secrets and personal data; disclosure must be selective."
+  session_question: "What may an organisation see about its employees' use of the wallet?"
+- id: T9
+  title: Planes and evidence graph
+  clusters: [K18, K01, K10, K16]
+  decision: DEC-12
+  question: "Where are policies decided and enforced (control plane), how do credentials, evidence and data move (data plane), and should evidence be expressed as one access-controlled linked-data graph under open-world semantics for policy, register, product passport and AI processes?"
+  silent: "No EU text read requires or forbids a linked-data graph, and none names ODRL, XACML or OPA for policies. The JSON-LD credential format is outside the legal list of CIR 2026/1731. CIR 2026/1778 (product passport registry) mentions ontologies and typed links to evidence but requires no RDF."
+  lens:
+    industry40: "Policies for data sharing (usage control) and evidence of supply chain facts need one model."
+    ipceiai: "Open-world linked data supports retrieval and reasoning; access control must follow the data."
+    idta: "Passports as graphs of verifiable facts; the shell stays one possible carrier."
+  session_question: "Is a shared evidence graph the common layer, or does each process keep its own format?"

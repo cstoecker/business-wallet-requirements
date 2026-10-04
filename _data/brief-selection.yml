@@ -1,0 +1,324 @@
+- theme: T1
+  requirements:
+  - id: EBW-FUN-039
+    title: PID may represent a person representing a legal person
+    statement: The Member State shall ensure that the person identification data available from the electronic identification scheme uniquely represents the natural person, legal person or the natural person
+      representing the natural or legal person, and is associated with the wallet.
+    provenance: L
+    legal_status: in force
+    source: SRC-EIDAS-CONSOL
+    location: Article 5a(5)(f)
+    plane: trust
+    reword: false
+    check: 'yes'
+  - id: EBW-NFR-037
+    title: User keeps full control of wallet use and data
+    statement: The European Digital Identity Wallet shall leave the user in full control of the use of and of the data in the wallet.
+    provenance: L
+    legal_status: in force
+    source: SRC-EIDAS-CONSOL
+    location: Article 5a(14), first sentence
+    plane: control
+    reword: false
+    check: needs-legal-review
+  - id: EBW-FUN-009
+    title: Authentication using attestations
+    statement: The European Business Wallet shall enable the use of qualified and non-qualified electronic attestations of attributes for owners and their authorised representatives to authenticate themselves.
+    provenance: L
+    legal_status: proposal
+    source: SRC-EBW-PROPOSAL
+    location: Article 5(1)(h)
+    plane: control
+    reword: false
+    check: needs-source-check (quote not stored in file)
+- theme: T2
+  requirements:
+  - id: EBW-FUN-004
+    title: Selective disclosure of identification data and attributes
+    statement: The European Business Wallet shall enable the owner to selectively disclose European Business Wallet owner identification data and attributes contained in electronic attestations of attributes.
+    provenance: L
+    legal_status: proposal
+    source: SRC-EBW-PROPOSAL
+    location: Article 5(1)(b)
+    plane: data
+    reword: false
+    check: needs-source-check (quote not stored in file)
+  - id: EBW-INT-015
+    title: Qualified attestation content per Annex V
+    statement: The qualified electronic attestation of attributes shall contain a qualified indication, issuer data, subject data, attributes, validity period, unique attestation code, the issuer's qualified
+      signature or seal, certificate location and status service location.
+    provenance: L
+    legal_status: in force
+    source: SRC-EIDAS-CONSOL
+    location: Article 45d(1), Annex V
+    plane: data
+    reword: false
+    check: needs-source-check (quote not stored in file)
+  - id: EBW-NFR-001
+    title: Export of wallet data and records
+    statement: The European Business Wallet shall enable the export of owner identification data, electronic attestations of attributes, communication logs and interaction records in a structured, commonly
+      used and machine-readable format at the owner's request or on termination of service or revocation of the provider's notification.
+    provenance: L
+    legal_status: proposal
+    source: SRC-EBW-PROPOSAL
+    location: Article 5(1)(l)
+    plane: data
+    reword: false
+    check: 'yes'
+- theme: T3
+  requirements:
+  - id: EBW-NFR-119
+    title: Provider-held keys used only on the authority of the owner
+    statement: Where a wallet provider holds private keys of an owner in its back-end, the wallet provider shall ensure that those keys are used only on the authorisation of the owner's authorised users
+      and not by the wallet provider itself.
+    provenance: D
+    legal_status: in force
+    source: SRC-EIDAS-CONSOL
+    location: Article 26(1)(c)
+    plane: control
+    reword: false
+    check: needs-legal-review
+  - id: EBW-CER-009
+    title: Critical-asset operations meet LoA substantial design rules
+    statement: Where critical assets relate to performing electronic identification at assurance level substantial, the European Business Wallet shall perform cryptographic operations processing critical
+      assets in accordance with the characteristics and design requirements for electronic identification means at assurance level substantial in Implementing Regulation (EU) 2015/1502.
+    provenance: L
+    legal_status: proposal
+    source: SRC-EBW-PROPOSAL
+    location: Annex, point 3(3)
+    plane: assurance
+    reword: true
+    check: needs-legal-review
+  - id: EBW-CER-010
+    title: Secure cryptographic components meet LoA substantial design
+    statement: The wallet secure cryptographic applications and devices shall comply with the requirements for the characteristics and design of electronic identification means at assurance level substantial
+      in Implementing Regulation (EU) 2015/1502.
+    provenance: L
+    legal_status: proposal
+    source: SRC-EBW-PROPOSAL
+    location: Annex, point 4(1)(g)
+    plane: assurance
+    reword: false
+    check: needs-legal-review
+  - id: EBW-FUN-005
+    title: Qualified signing and sealing
+    statement: The European Business Wallet shall enable the owner to sign by means of qualified electronic signatures and to seal by means of qualified electronic seals, as applicable.
+    provenance: L
+    legal_status: proposal
+    source: SRC-EBW-PROPOSAL
+    location: Article 5(1)(d)
+    plane: data
+    reword: false
+    check: needs-source-check (quote not stored in file)
+- theme: T4
+  requirements:
+  - id: EBW-INT-095
+    title: Owner identification scheme states which attributes are disclosed together
+    statement: The attestation scheme for owner identification data shall state which attributes, in particular the unique identifier, may be disclosed separately and which only together with other attributes.
+    provenance: D
+    legal_status: proposal
+    source: SRC-EBW-PROPOSAL
+    location: Article 8(6), read with Article 5(1)(b) and Article 8(5)
+    plane: trust
+    reword: true
+    check: needs-legal-review
+  - id: EBW-FUN-044
+    title: Request owner identification data for a third-country operator
+    statement: The provider of European Business Wallets shall request owner identification data from a provider of owner identification data on behalf of an economic operator established in a third country.
+    provenance: L
+    legal_status: proposal
+    source: SRC-EBW-PROPOSAL
+    location: Article 18(4)
+    plane: trust
+    reword: false
+    check: needs-legal-review
+  - id: EBW-INT-005
+    title: Minimum attributes of owner identification data
+    statement: European Business Wallet owner identification data shall contain at least the official name of the economic operator or public sector body as recorded in the register or official record,
+      and its unique identifier.
+    provenance: L
+    legal_status: proposal
+    source: SRC-EBW-PROPOSAL
+    location: Article 8(5)
+    plane: data
+    reword: false
+    check: needs-source-check (quote not stored in file)
+  - id: EBW-INT-006
+    title: EUID as unique identifier where available
+    statement: Where an economic operator has been attributed a European Unique Identifier, that identifier shall be used as the unique identifier in its owner identification data.
+    provenance: L
+    legal_status: proposal
+    source: SRC-EBW-PROPOSAL
+    location: Article 9(1)
+    plane: data
+    reword: false
+    check: needs-source-check (quote not stored in file)
+- theme: T5
+  requirements:
+  - id: EBW-TRU-102
+    title: Unit attestation signed under a trusted-list certificate
+    statement: The provider of European Business Wallets shall sign or seal the European Business Wallet unit attestation with a certificate issued under a certificate listed in the trusted list referred
+      to in Commission Implementing Regulation (EU) 2024/2980.
+    provenance: L
+    legal_status: proposal
+    source: SRC-EBW-PROPOSAL
+    location: Annex, point 2
+    plane: trust
+    reword: false
+    check: 'yes'
+  - id: EBW-TRU-032
+    title: Authenticate relying party access certificates
+    statement: The wallet unit shall authenticate and validate the wallet-relying party access certificate when interacting with a wallet-relying party.
+    provenance: L
+    legal_status: in force
+    source: SRC-CIR-2024-2982
+    location: Article 3(1)
+    plane: trust
+    reword: false
+    check: 'yes'
+  - id: EBW-TRU-034
+    title: Request issuance only from certified issuers
+    statement: The wallet unit shall request issuance of person identification data or attestations only from parties with an authentic and valid wallet-relying party access certificate attesting them as
+      a provider of person identification data or of the relevant type of attestation.
+    provenance: L
+    legal_status: in force
+    source: SRC-CIR-2024-2982
+    location: Article 4(2)
+    plane: trust
+    reword: false
+    check: 'yes'
+- theme: T6
+  requirements:
+  - id: EBW-FUN-003
+    title: Attestation lifecycle in the wallet
+    statement: The European Business Wallet shall enable the owner to securely issue, request, obtain, select, combine, store, delete, share and present electronic attestations of attributes.
+    provenance: L
+    legal_status: proposal
+    source: SRC-EBW-PROPOSAL
+    location: Article 5(1)(a)
+    plane: data
+    reword: false
+    check: needs-source-check (quote not stored in file)
+  - id: EBW-FUN-007
+    title: Issuing attestations to business and personal wallets
+    statement: The European Business Wallet shall enable the owner to issue electronic attestations of attributes to European Business Wallets and European Digital Identity Wallets.
+    provenance: L
+    legal_status: proposal
+    source: SRC-EBW-PROPOSAL
+    location: Article 5(1)(f)
+    plane: data
+    reword: false
+    check: needs-source-check (quote not stored in file)
+  - id: EBW-TRU-013
+    title: Revocation of wallet validity
+    statement: The provider of European Business Wallets shall ensure that the validity of a wallet can be revoked on explicit owner request, on compromise, on cessation of owner activity, and where the
+      provider is not on the list of notified providers.
+    provenance: L
+    legal_status: proposal
+    source: SRC-EBW-PROPOSAL
+    location: Article 6(2)(f)
+    plane: trust
+    reword: false
+    check: 'needs-source-check: trigger list truncated in quote'
+- theme: T7
+  requirements:
+  - id: EBW-FUN-014
+    title: Automated and manual wallet interaction
+    statement: The European Business Wallet shall support common protocols and interfaces that allow interaction with the wallet automatically without manual intervention or through direct user action.
+    provenance: L
+    legal_status: proposal
+    source: SRC-EBW-PROPOSAL
+    location: Article 6(1)(d)
+    plane: control
+    reword: false
+    check: needs-source-check (quote not stored in file)
+  - id: EBW-INT-002
+    title: Secure sharing with wallets and relying parties
+    statement: The European Business Wallet shall enable the owner to request and share owner identification data and electronic attestations of attributes in a secured way between European Business Wallets
+      and European Digital Identity Wallets and with relying parties.
+    provenance: L
+    legal_status: proposal
+    source: SRC-EBW-PROPOSAL
+    location: Article 5(1)(c)
+    plane: data
+    reword: false
+    check: needs-source-check (quote not stored in file)
+  - id: EBW-TRU-009
+    title: Authentication of relying parties
+    statement: The European Business Wallet shall support common protocols and interfaces for authenticating relying parties by implementing authentication mechanisms, where authentication is required.
+    provenance: L
+    legal_status: proposal
+    source: SRC-EBW-PROPOSAL
+    location: Article 6(1)(g)
+    plane: trust
+    reword: false
+    check: needs-legal-review
+- theme: T8
+  requirements:
+  - id: EBW-OPS-002
+    title: Owner notification and data transfer or deletion on service end
+    statement: On suspension, revocation or voluntary termination of its services, or removal from the list of notified providers, the provider of European Business Wallets shall notify owners and ensure
+      the transfer or deletion of owner data according to the owner's instructions.
+    provenance: L
+    legal_status: proposal
+    source: SRC-EBW-PROPOSAL
+    location: Article 7(6)(f)
+    plane: governance
+    reword: false
+    check: needs-source-check
+  - id: EBW-LEG-013
+    title: Erasure capability for personal data in provider systems
+    statement: The wallet provider shall design provider-held stores and registries so that personal data can be erased without undue delay where an erasure ground in Article 17(1) applies.
+    provenance: D
+    legal_status: in force
+    source: SRC-GDPR
+    location: Article 17(1)
+    plane: data
+    reword: false
+    check: needs-legal-review
+  - id: EBW-CON-007
+    title: Council text ties legal equivalence to qualified trust services
+    statement: Where a European Business Wallet owner or authorised user makes use of a qualified trust service forming part of the core functionalities, the resulting action shall have the same legal effect
+      as if carried out in person, in paper form or by other compliant means.
+    provenance: L
+    legal_status: proposal
+    source: SRC-COUNCIL-ST-9684-26
+    location: Article 4, first paragraph
+    plane: governance
+    reword: false
+    check: needs-legal-review
+- theme: T9
+  requirements:
+  - id: EBW-NFR-041
+    title: Access events logged with verifiable proofs of authorisation
+    statement: The European Business Wallet provider shall log and timestamp all access and execution events and bind them to cryptographically verifiable proofs of authorisation suitable for audit and
+      legal proceedings.
+    provenance: L
+    legal_status: proposal
+    source: SRC-COUNCIL-ST-9684-26
+    location: Annex, point 12(2)(c)
+    plane: assurance
+    reword: false
+    check: needs-legal-review
+  - id: EBW-TRU-059
+    title: Authorisation events bound to verifiable proofs
+    statement: The provider of European Business Wallets shall ensure that all access and execution events are logged, timestamped and bound to cryptographically verifiable proofs of authorisation suitable
+      for audit and legal proceedings.
+    provenance: L
+    legal_status: proposal
+    source: SRC-COUNCIL-ST-9684-26
+    location: Annex point 12(2)(c)
+    plane: assurance
+    reword: false
+    check: needs-source-check
+  - id: EBW-TRU-054
+    title: Bind agent identity to the legal person outside A2A
+    statement: Where the wallet or an agent acts for a legal person over A2A, the wallet provider shall bind the agent to the legal person by wallet credentials or equivalent evidence, because A2A leaves
+      identity semantics to the protocol layer.
+    provenance: D
+    legal_status: ecosystem
+    source: SRC-A2A
+    location: Section 7 Authentication and Authorization
+    plane: trust
+    reword: false
+    check: 'yes'
