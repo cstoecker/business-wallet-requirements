@@ -2,45 +2,56 @@
 
 Status: working paper for the stakeholder presentation. It extends `docs/16-evidence-graph-presentation-structure.md`. Statements marked "our reading" are derivations of the authors; sourced statements cite the research notes. Research notes for the economics of trust, the legal map for Germany and the EU and the protocol and format matrix are in progress and replace the placeholders marked "pending".
 
-## 1. Start: trust as a production factor (working definition)
+## 1. Start: trust as a production factor (Spherity Research, Harald and Stöcker, 2026)
 
-Working definition: **trust is an input that a business needs, in addition to labour, capital and knowledge, to produce and exchange goods and services with parties it does not control.** It is produced, not found: a relying party turns checkable evidence into a decision to rely.
+This section follows the executive research brief of the authors (SRC-WHY-2026, CC BY 4.0, evidence cut-off 30 August 2026). The brief is the authors' own analysis; its scenario figures are conditional, not forecasts.
 
-Trust is produced from six inputs, each of which can be checked by a machine:
+**Definition used in the brief.** A production factor in a broader managerial sense is an input that materially affects how productively people, capital, data and technology can be combined. Trust is not a separate national-accounts category but an enabling complement: without sufficient trust, valuable AI systems, data, machines and skills cannot be used fully. Trust becomes a primary production factor in a zero-trust-by-default threat landscape, where offensive AI, deepfakes and fabricated credentials spread at near-zero marginal cost.
 
-| Input | Question the relying party asks |
-|---|---|
-| Identity | Who made this statement, and which legal person is it about? |
-| Authority | Was the issuer or actor entitled to make it or to act? |
-| Integrity and authenticity | Is it unchanged and really from that source? |
-| Provenance | Where does it come from, through which hands? |
-| Compliance | Which rule does it satisfy, in which jurisdiction? |
-| Freshness | Is it still valid now? |
+**Four mechanisms by which trust enters production.**
 
-Output: a decision to rely, to trade, to delegate or to trigger a process, at a risk the relying party can name (risk scoring).
+1. It reduces transaction and coordination costs by replacing repeated bilateral checks with reusable identity, mandates and evidence.
+2. It expands authorised process depth: more steps move from human-assisted preparation to accountable execution across organisations.
+3. It raises risk-adjusted productivity by reducing fraud, error, unsafe action, expected loss and incident duration.
+4. It creates infrastructure and network effects: accepted credentials, policies and evidence formats are reused by further transactions.
 
-Why this framing matters for the architecture: if trust is a production factor, its cost and quality can be compared across designs. A design that lowers the cost of producing the six inputs for many parties and many sectors is worth more than one that serves a single community. This is the criterion behind "universal" in the building blocks below.
+**Trusted execution capital** is the accumulated stock of reusable technical, legal and organisational capabilities that let digital and physical actions be attributed, constrained, evidenced, monitored and corrected. Trust as a production factor at the point of use is supplied by this stock.
 
-Pending: economics sources (transaction cost, information asymmetry, institutional trust) and quantified claims from impact assessments (research note `RES-trust-factor`). Until verified, the framing is our reading.
+**Three layers kept distinct and connected.** AI Governance (legitimate purposes, decision rights, accountability), Trustworthy AI (required system qualities) and Trusted AI (selected claims and controls made machine-verifiable for an actor, action, context and time). A credential proves a claim; it does not prove that an action is authorised now.
+
+**The six-question execution chain** (the brief, section 3.2) is the backbone of this paper:
+
+1. Who or what is acting? Identity and attribution.
+2. For whom may it act? Mandate and delegation.
+3. Which facts support the action? Verifiable evidence and provenance.
+4. What do those facts mean? Shared semantics and validation rules.
+5. Is the action permitted now? Current status, policy and runtime authorisation.
+6. What happens if execution fails? Monitoring, interruption, recovery and accountability.
+
+**Trust Algorithms** (NIST SP 800-207: the process a policy engine uses to grant or deny access) are extended in the brief to two planes: a control-plane algorithm evaluates identity, mandate, workload posture and policy; an evidence-plane algorithm evaluates provenance, authority, semantic validity, freshness, contradiction and fitness for purpose. An action decision combines both with model state, context, security posture, safety limits and recoverability. Outputs: permit, restrict, escalate or deny.
+
+**Why this matters for the architecture.** If trust is a production factor, the cost and quality of producing it can be compared across designs. A foundation that serves many parties and sectors lowers that cost; one that serves a single community does not. That is the meaning of "universal" in the building blocks below.
+
+Supporting economics (research note `trust-factor-economics`): Coase 1937, Williamson 1979 and 1985, Akerlof 1970, Luhmann 1968 and Fukuyama 1995 are confirmed bibliographically, with the primary texts not opened. No verified text uses the phrase "trust as production factor". The impact assessment SWD(2025) 837 estimates a trust-related value of EUR 16.66 billion from a vendor trust index (correlational). The brief cites Commission modelling of direct annual benefits of EUR 58.4 to 169 billion across assumptions (ex ante; to verify against SWD(2025) 837).
 
 ## 2. Universal architecture building blocks (derivation)
 
-Derived from the six inputs and the recurring pattern (registers, passports, agent cards, catalogues). Each block answers one input and is independent of the sector.
+Derived from the six-question execution chain and the recurring pattern (registers, passports, agent cards, catalogues). Each block answers one question of the chain and is independent of the sector. The column 'Answers' gives the question number.
 
 | Block | Answers | Notes |
 |---|---|---|
-| B1 Identifier | Identity | Globally unique, resolvable identifiers for subjects, issuers, verifiers; primary and secondary identifiers mapped |
-| B2 Statement | Integrity, authenticity | A signed claim with issuer, subject, validity and status: the credential, in some format |
-| B3 Vocabulary | Meaning | Published, versioned, resolvable terms; shapes for validation |
-| B4 Evidence graph | Provenance | Statements linked into a graph; entries stay verifiable; access controlled |
-| B5 Authority statement | Authority | Representation, mandate, delegation as statements with scope, limits, onward delegation |
-| B6 Policy decision and enforcement | Compliance | Control plane: authenticate, authorise, apply policy; enforcement at the point of access |
-| B7 Trust anchor and registry | Authority of issuers | Trust lists, registries and ecosystem anchors tell who may issue what |
-| B8 Status and lifecycle | Freshness | Validity, suspension, revocation, expiry, privacy-preserving status |
-| B9 Protocol adapter | Connectivity | Extension modules that carry statements over issuance, presentation, exchange, delivery and agent protocols |
-| B10 Scoring | Decision | Risk score from verified statements under a named policy; replayable |
-| B11 Audit and attribution | Accountability | Every act attributed to the owner; logs that are themselves evidence |
-| B12 Key custody | Signing and sealing | Where the keys live and who controls them |
+| B1 Identifier | Q1 who acts | Globally unique, resolvable identifiers for subjects, issuers, verifiers; primary and secondary identifiers mapped |
+| B2 Statement | Q3 facts: integrity, authenticity | A signed claim with issuer, subject, validity and status: the credential, in some format |
+| B3 Vocabulary | Q4 meaning | Published, versioned, resolvable terms; shapes for validation |
+| B4 Evidence graph | Q3 facts: provenance | Statements linked into a graph; entries stay verifiable; access controlled |
+| B5 Authority statement | Q2 for whom | Representation, mandate, delegation as statements with scope, limits, onward delegation |
+| B6 Policy decision and enforcement | Q5 permitted now | Control plane: authenticate, authorise, apply policy; enforcement at the point of access |
+| B7 Trust anchor and registry | Q2, Q3: who may issue what | Trust lists, registries and ecosystem anchors tell who may issue what |
+| B8 Status and lifecycle | Q5 current status | Validity, suspension, revocation, expiry, privacy-preserving status |
+| B9 Protocol adapter | Connects all questions across ecosystems | Extension modules that carry statements over issuance, presentation, exchange, delivery and agent protocols |
+| B10 Scoring | Q5 evidence-plane Trust Algorithm | Risk score from verified statements under a named policy; replayable |
+| B11 Audit and attribution | Q6 failure, accountability | Every act attributed to the owner; logs that are themselves evidence |
+| B12 Key custody | Q1, Q2: who controls the signing keys | Where the keys live and who controls them |
 
 Rule: a building block is universal if it needs no change when a new sector, jurisdiction or actor type joins.
 
@@ -48,7 +59,7 @@ Rule: a building block is universal if it needs no change when a new sector, jur
 
 | Layer | Content | Clusters on the requirements site |
 |---|---|---|
-| L0 Purpose | Trust as production factor, the six inputs | none, framing |
+| L0 Purpose | Trust as production factor, the six-question chain | none, framing |
 | L1 Foundation (decide first) | B1 identifiers, B2 statement format, B3 vocabulary, B4 graph, B5 authority, B6 control and data plane, B12 keys | K01, K02, K03, K04, K06, K17, K18 |
 | L2 Mechanisms on the foundation | Trust frameworks, lifecycle, evidence and audit, protocol adapters and delivery, privacy, security, governance, conformity | K05, K07, K08, K09, K10, K11, K12, K13, K14 |
 | L3 Context | Adoption, AI-first use, domains, operations, business case, constraints, transition | K15, K16 and the categories DOM, OPS, BIZ, CON, TRN |
