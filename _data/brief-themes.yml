@@ -7,7 +7,7 @@
   silent: "How far the EUDI Wallet instruments apply to employees acting for a company; see the decision page for what was read."
   lens:
     industry40: "Machine and plant operators act for a company across a supply chain; who signs, and for whom, decides liability."
-    ipceiai: "An agent needs a subject to act for; the same question reappears for agents (theme 9)."
+    ipceiai: "An agent needs a subject to act for; the same question reappears for agents (theme 2)."
     idta: "Who is the asset owner or manufacturer in a signed passport or shell: the person, the company or the wallet."
   session_question: "Which actions must be done by a person in a personal wallet, and which may run under the organisation's wallet?"
 - id: T2
