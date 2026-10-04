@@ -74,4 +74,5 @@
   title: "Delegation and mandates for employees, machines and AI agents"
   question: "How do employees, machines and AI agents get authority to act for an organisation with a business wallet (roles in the wallet, mandate credentials, legal powers of attorney, protocol-level delegation), and how is that authority limited, delegated onward, shared, suspended, revoked and attributed?"
   clusters: [K03, K02, K16]
-  status: planned
+  status: draft
+  page: /architecture/decisions/dec-13/

@@ -793,6 +793,64 @@
   fidelity: ok
   verification_ready: needs-legal-review (what "means to enable interoperability" demands)
   note: '"Where applicable" and "means to enable" are hard to test.'
+- id: EBW-AIF-064
+  verdict: ok
+  priority: P2
+  priority_reason: Art 14(3) oversight proportional to autonomy; basis for mandate limits but only if high-risk (Art 6)
+  clusters:
+  - K16
+  - K03
+  applicability: provider-side
+  fidelity: ok
+  verification_ready: needs-legal-review
+  note: Derived mapping to agents stated in rationale. Statement adds the two-way build-in or specify-for-deployer split from Art 14(3)(a)/(b), not in the truncated quote. Partly overlaps AIF-028 (same Art 14(3) location); complementary, not merged.
+- id: EBW-AIF-065
+  verdict: ok
+  priority: P2
+  priority_reason: Art 14(4)(a) enabling duty; local design control
+  clusters:
+  - K16
+  - K03
+  - K10
+  applicability: provider-side
+  fidelity: ok
+  verification_ready: 'yes'
+  note: Conditional on high-risk classification; derivation to agents stated.
+- id: EBW-AIF-066
+  verdict: ok
+  priority: P3
+  priority_reason: Art 14(4)(b) automation-bias awareness; UX-level, hard to test
+  clusters:
+  - K16
+  - K03
+  applicability: provider-side
+  fidelity: ok
+  verification_ready: needs-clarification
+  note: Test criterion for 'enabled to remain aware' is undefined (inspection only). Derivation to agent approval prompts stated.
+- id: EBW-AIF-067
+  verdict: ok
+  priority: P3
+  priority_reason: Art 26(7) employer information duty; peripheral to wallet design, applies only to high-risk agents at the workplace
+  clusters:
+  - K16
+  - K03
+  - K13
+  applicability: horizontal
+  fidelity: ok
+  verification_ready: needs-legal-review
+  note: Duty-holder (deployer who is an employer) and condition match the quote. 'Shall inform' mirrors Art 26(7); information follows Union and national worker-information rules.
+- id: EBW-AIF-068
+  verdict: ok
+  priority: P2
+  priority_reason: Agent end-of-life revoking all mandates and credentials; closes lifecycle gap but source is non-normative
+  clusters:
+  - K03
+  - K16
+  - K07
+  applicability: wallet-general
+  fidelity: derived-unmarked
+  verification_ready: needs-clarification
+  note: Provenance D with derivation stated; quote only says formal processes through 'eventual decommissioning', so owner-initiated cascade revocation is an EBW design choice. Overlaps TRU-066 (mandate revocation propagation) and TRU-065; complementary (end of agent vs single mandate). Define 'all credentials issued to that agent' before test.
 - id: EBW-BIZ-001
   verdict: ok
   priority: P1
@@ -3394,6 +3452,44 @@
   fidelity: ok
   verification_ready: needs-legal-review
   note: Commission Art 13(4)(b) only; the Council text deletes it. Mark open until trilogue outcome.
+- id: EBW-GOV-055
+  verdict: reword
+  priority: P2
+  priority_reason: Source-backed basis for second-person approval, but applies only to financial entities (DORA RTS)
+  clusters:
+  - K03
+  - K02
+  - K11
+  applicability: horizontal
+  fidelity: ok
+  verification_ready: needs-legal-review
+  corrected_statement:
+  - Where the wallet owner is a financial entity, it shall include in its access control policy the segregation of duties designed to prevent unjustified access to critical data or to prevent the allocation of combinations of access rights that may be used to circumvent controls.
+  note: Quote reads 'or' between the two purposes of the segregation; statement says 'and'. Duty-holder is the financial entity; reaches the wallet only through the owner's authorisation model (D stated).
+- id: EBW-GOV-056
+  verdict: ok
+  priority: P2
+  priority_reason: EN 319 401 segregation of duties applies when the wallet provider is a TSP; standard-derived
+  clusters:
+  - K13
+  - K11
+  - K03
+  applicability: provider-side
+  fidelity: ok
+  verification_ready: 'yes'
+  note: 'Derived: duty binds the TSP and reaches the wallet provider only when it acts as one. Counterpart of multi-person approval.'
+- id: EBW-GOV-057
+  verdict: ok
+  priority: P2
+  priority_reason: Attribution of acts needs non-shared identities; financial-entity duty reaching wallet owners by derivation
+  clusters:
+  - K03
+  - K10
+  - K02
+  applicability: horizontal
+  fidelity: ok
+  verification_ready: 'yes'
+  note: Source says 'limiting to the extent possible', statement keeps that softening. Financial entities only.
 - id: EBW-INT-001
   verdict: drop
   priority: P3
@@ -4563,6 +4659,31 @@
   fidelity: derived-marked
   verification_ready: needs-legal-review
   note: Whether an implementing act may designate the LEI as the unique identifier is open. Overlaps INT-054.
+- id: EBW-INT-097
+  verdict: reword
+  priority: P1
+  priority_reason: Onward delegation (substitution) must be readable by relying parties; shapes the mandate and delegation-chain decision
+  clusters:
+  - K03
+  - K08
+  - K17
+  applicability: core
+  fidelity: broader-than-quote
+  verification_ready: needs-clarification
+  corrected_statement:
+  - An EU power of attorney attestation may carry an attribute stating whether the attorney may delegate the granted powers to a third party; where the issuer includes it, its value shall be allowed, not_allowed or limited.
+  note: 'Source check: rb-eu-poa/README.md exists at registered commit de79cca (unchanged, v0.1 of 9.4.2026), sections 2.3 and 2.8 confirmed. But 2.3 lists the attribute as OPTIONAL (SD-JWT table marks it only as disclosable), so ''issuer shall include'' overstates the source. Rulebook is a draft v0.1 with TBD semantic references.'
+- id: EBW-INT-098
+  verdict: ok
+  priority: P2
+  priority_reason: Rulebook integrity rule IR-04; makes limited substitution verifiable; local to PoA issuance
+  clusters:
+  - K03
+  - K08
+  applicability: provider-side
+  fidelity: ok
+  verification_ready: 'yes'
+  note: 'Source check: IR-04 confirmed at registered commit de79cca (rb-eu-poa v0.1). Quote is the rule column; the issuer-reject behaviour is in the same row''s last column. Only applies when the optional attribute is present.'
 - id: EBW-LEG-001
   verdict: reword
   priority: P1
@@ -5488,6 +5609,53 @@
   fidelity: derived-marked
   verification_ready: needs-legal-review
   note: Quote (Art 17(1) functionality) does not reach the statement; the point that equivalence is not an Art 45 adequacy decision is a legal interpretation to confirm. Restates LEG-073 for this context.
+- id: EBW-LEG-077
+  verdict: ok
+  priority: P3
+  priority_reason: Company-law duty on delegates of EU Inc. directors; context for mandates, not a wallet feature; proposal only
+  clusters:
+  - K03
+  - K17
+  applicability: horizontal
+  fidelity: ok
+  verification_ready: needs-legal-review
+  note: Source is a Commission proposal (COM(2026) 321, not adopted); may change in trilogue. Duty-holder is the delegate individual, not the wallet. Quote is truncated before 'delegated by directors'.
+- id: EBW-LEG-078
+  verdict: ok
+  priority: P2
+  priority_reason: Default joint representation must be expressible in mandate model; proposal text
+  clusters:
+  - K03
+  - K17
+  - K02
+  applicability: horizontal
+  fidelity: ok
+  verification_ready: needs-legal-review
+  note: Matches Art 43(1) quote. Rationale cites EBW-LEG-053 for the Art 43(2) individual-representation exception, but LEG-053 is eIDAS Art 43(2) (registered delivery presumption); the EU Inc. Art 43(2) item is not in the catalogue. Fix the rationale reference (no item exists yet). Complements TRU-168 (joint signatories); not a duplicate.
+- id: EBW-LEG-079
+  verdict: ok
+  priority: P2
+  priority_reason: CRA erase-on-decommission for devices holding keys; standard law, local to device makers
+  clusters:
+  - K04
+  - K03
+  - K11
+  applicability: provider-side
+  fidelity: ok
+  verification_ready: 'yes'
+  note: Duty-holder manufacturer; 'where applicable' kept; applies from 11 Dec 2027. Quote omits the transfer clause (end of Annex I (2)(m)); consider extending the quote.
+- id: EBW-LEG-080
+  verdict: ok
+  priority: P3
+  priority_reason: CRA device activity log; supports machine attribution but device-level and risk-based
+  clusters:
+  - K10
+  - K11
+  - K03
+  applicability: provider-side
+  fidelity: ok
+  verification_ready: 'yes'
+  note: Matches Annex I (2)(l) including opt-out. Applies only 'where applicable' per risk assessment.
 - id: EBW-NFR-001
   verdict: ok
   priority: P1
@@ -6923,6 +7091,32 @@
   fidelity: derived-marked
   verification_ready: needs-legal-review
   note: 'Rationale cites Annex 7(2) while location says 7(1): verify numbering. Check against privacy rules on logs (NFR-014, NFR-040).'
+- id: EBW-NFR-121
+  verdict: ok
+  priority: P3
+  priority_reason: IDTA AAS audit trail minimum; ecosystem spec for industrial assets, narrow reach
+  clusters:
+  - K10
+  - K03
+  - K11
+  applicability: horizontal
+  fidelity: broader-than-quote
+  verification_ready: needs-source-check
+  note: Event list in the statement (unauthorised access attempts, identity configuration, accounts, access rules) comes from Table 1, not the quote; check against IDTA-01004 v3.1 Table 1 (S1 to S4 security levels may differ). Derived (D stated). Related to NFR-116 and NFR-048 audit-log items.
+- id: EBW-NFR-122
+  verdict: reword
+  priority: P2
+  priority_reason: Machine acts need per-event actor identity for attribution to owner; ties to agent logging
+  clusters:
+  - K03
+  - K10
+  - K16
+  applicability: horizontal
+  fidelity: broader-than-quote
+  verification_ready: needs-source-check
+  corrected_statement:
+  - Each auditable event of an asset interface shall contain information to determine which application or machine took the action.
+  note: Dispute-resolution sentence ('sufficient to resolve a dispute about who acted') is not in the quote (source has a separate non-repudiation text); 'application or machine' generalises 'AAS user application'. Overlaps NFR-033 and AIF-012 (agent principal/agent logging); extends to machines.
 - id: EBW-OPS-001
   verdict: ok
   priority: P2
@@ -7430,6 +7624,53 @@
   fidelity: derived-marked
   verification_ready: needs-legal-review
   note: Derivation stated (C5). Quote is about duplicated datasets only.
+- id: EBW-OPS-044
+  verdict: ok
+  priority: P2
+  priority_reason: Separates temporary deactivation from termination; supports suspension distinct from revocation (open DEC-02 gap)
+  clusters:
+  - K03
+  - K07
+  - K02
+  applicability: horizontal
+  fidelity: ok
+  verification_ready: 'yes'
+  note: Financial entities only; derived. Source also lists 'update' in the lifecycle, omitted in the statement without loss.
+- id: EBW-OPS-045
+  verdict: ok
+  priority: P2
+  priority_reason: Leaver and no-longer-necessary withdrawal of access; financial-entity duty, derived to machines
+  clusters:
+  - K03
+  - K07
+  - K02
+  applicability: horizontal
+  fidelity: ok
+  verification_ready: 'yes'
+  note: Complements TRU-163 (issuer revokes mandate attestation on leaving); extension to machine accounts is a derivation, marked in rationale.
+- id: EBW-OPS-046
+  verdict: ok
+  priority: P2
+  priority_reason: Source-backed review interval (6 months / yearly) for authorisations; local control
+  clusters:
+  - K03
+  - K11
+  applicability: horizontal
+  fidelity: ok
+  verification_ready: 'yes'
+  note: Quote truncated before the 'once a year for other ICT systems' limb; statement follows RTS Art 21(1)(e)(iv). Related to FUN-015 only loosely; no merge.
+- id: EBW-OPS-047
+  verdict: ok
+  priority: P2
+  priority_reason: Role alignment between identity service and interface; precondition for timely revocation
+  clusters:
+  - K03
+  - K07
+  - K04
+  applicability: provider-side
+  fidelity: ok
+  verification_ready: 'yes'
+  note: Derived from IDTA Part 4 FR1; conditional 'where a detached service' matches the quote. Ecosystem specification (industrial AAS).
 - id: EBW-TRN-001
   verdict: reword
   priority: P3
@@ -9530,3 +9771,51 @@
   verification_ready: 'yes'
   verdict_arg: EBW-TRU-084
   note: Same CIR 2015/1502 section 2.1.3; add the "status preventing it from acting" check to TRU-084.
+- id: EBW-TRU-173
+  verdict: ok
+  priority: P2
+  priority_reason: Rulebook rule IR-03 against invalid delegation chains; issuer-side check
+  clusters:
+  - K03
+  - K17
+  - K08
+  applicability: provider-side
+  fidelity: ok
+  verification_ready: needs-clarification
+  note: 'Source check: IR-03 confirmed at registered commit de79cca (rb-eu-poa v0.1). ''Authority cannot be established'' has no stated method; testable only against a defined authentic source.'
+- id: EBW-TRU-174
+  verdict: ok
+  priority: P1
+  priority_reason: Defines verifier behaviour for non-substitutable powers; core of delegation-chain control
+  clusters:
+  - K03
+  - K08
+  - K17
+  applicability: relying-party-side
+  fidelity: derived-unmarked
+  verification_ready: needs-clarification
+  note: 'Provenance D with derivation stated: rulebook gives the code list definition only, no verifier rule. Source check: section 2.8 exists at registered commit de79cca (rb-eu-poa v0.1). Requires detecting that a third party acts under passed-on powers, which no credential mechanism yet shows (see INT-025/029 act claim). Depends on INT-097 (optional attribute).'
+- id: EBW-TRU-175
+  verdict: ok
+  priority: P2
+  priority_reason: Only Union text naming systems beside persons for identification; supports machine actors, financial-entity scope
+  clusters:
+  - K03
+  - K02
+  - K16
+  applicability: horizontal
+  fidelity: ok
+  verification_ready: 'yes'
+  note: Matches Art 20(1). Derived to wallet owners generally. Overlaps TRU-176 in subject (machines) but differs in duty-holder; not merged.
+- id: EBW-TRU-176
+  verdict: ok
+  priority: P2
+  priority_reason: Machine/application authentication before access; IDTA derived from IEC 62443
+  clusters:
+  - K03
+  - K16
+  - K04
+  applicability: provider-side
+  fidelity: ok
+  verification_ready: 'yes'
+  note: Derived; 'identification and authentication of AAS user application' generalised to machines. Related to TRU-175 (owner-side policy) and TRU-054 (agent).

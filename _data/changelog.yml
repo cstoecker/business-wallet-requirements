@@ -2,6 +2,11 @@
 # Entries are added by people or by the weekly agent through a reviewed pull request. type: law | standard | ecosystem | site
 - date: "2026-10-04"
   type: site
+  title: "Delegation and mandates for employees, machines and agents: 24 requirements and decision DEC-13"
+  summary: "Onward delegation, joint representation, suspension, termination of authority, authority of devices and limits for AI agents, from the Commission proposals, DORA RTS 2024/1774, the AI Act, the CRA, IDTA Part 4 and the WE BUILD rulebooks. DEC-13 compares four ways to give authority (roles in the wallet, mandate credentials, legal powers of attorney, protocol-level delegation). The stakeholder brief now has ten themes."
+  sources: [SRC-EBW-PROPOSAL, SRC-AIACT, SRC-CRA, SRC-WEBUILD-RB]
+- date: "2026-10-04"
+  type: site
   title: "53 requirements added for gaps in mandates, key custody and cross-jurisdiction identity"
   summary: "Owner-side status checks and revocation of mandates (clusters K02, K03), recording, evidence and disclosure for key custody (K04) and identifiers, assurance and third-country partners (K17), from the Commission proposal, the Council text, eIDAS, CIR 2015/1502 and the WE BUILD rulebooks. Eleven custody and six identity items are derivations (class D). Mandate items cite a rulebook version newer than the registered commit and are marked for source check."
   sources: [SRC-EBW-PROPOSAL, SRC-EIDAS-CONSOL, SRC-CIR-2026-1731]
