@@ -1,5 +1,10 @@
 # Public change log (what changed in laws, standards, ecosystems and on this site). Newest first.
 # Entries are added by people or by the weekly agent through a reviewed pull request. type: law | standard | ecosystem | site
+- date: "2026-10-04"
+  type: site
+  title: "53 requirements added for gaps in mandates, key custody and cross-jurisdiction identity"
+  summary: "Owner-side status checks and revocation of mandates (clusters K02, K03), recording, evidence and disclosure for key custody (K04) and identifiers, assurance and third-country partners (K17), from the Commission proposal, the Council text, eIDAS, CIR 2015/1502 and the WE BUILD rulebooks. Eleven custody and six identity items are derivations (class D). Mandate items cite a rulebook version newer than the registered commit and are marked for source check."
+  sources: [SRC-EBW-PROPOSAL, SRC-EIDAS-CONSOL, SRC-CIR-2026-1731]
 - date: "2026-10-03"
   type: ecosystem
   title: "40 cross-jurisdiction requirements added from Catena-X standards"

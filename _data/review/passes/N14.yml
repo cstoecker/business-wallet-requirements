@@ -1,0 +1,601 @@
+- id: EBW-CER-022
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P2
+  priority_reason: Art 29a(1)(c) duty of a QTSP with remote devices; local evidence control
+  clusters:
+  - K04
+  - K14
+  verification_ready: 'yes'
+  note: Quote reaches the statement. Applies only where the EBW uses QTSP-managed remote devices.
+- id: EBW-CER-023
+  fidelity: derived-marked
+  verdict: ok
+  applicability: provider-side
+  priority: P2
+  priority_reason: Derived safeguard for owner-run HSM; level open between Commission and Council
+  clusters:
+  - K04
+  - K14
+  - K02
+  verification_ready: needs-legal-review
+  note: Derivation stated (C2, C8). Quote is the EUDI WSCD level-high rule, so "level that applies to the provider's own devices" is the bridge; do not read as law. Related GOV-050 and TRU-169.
+- id: EBW-DAT-041
+  fidelity: derived-marked
+  verdict: merge-with:EBW-LEG-010
+  applicability: wallet-general
+  priority: P3
+  priority_reason: Application of GDPR minimisation to sole traders; adds little to LEG-010
+  clusters:
+  - K09
+  - K06
+  verification_ready: needs-legal-review
+  note: Quote ends at "in a manner" and does not reach the statement. "Only to the extent the relying party requests" overstates GDPR (necessity for the purpose, not request) and conflicts with atomic EBWOID (INT-057); keep the sole-trader example as a note on LEG-010 and settle in INT-095.
+- id: EBW-FUN-055
+  fidelity: ok
+  verdict: merge-with:EBW-FUN-010
+  applicability: core
+  priority: P2
+  priority_reason: Council wording of multi-user authorisation; role-based variant
+  clusters:
+  - K03
+  - K02
+  verification_ready: 'yes'
+  note: Duplicates FUN-010 except for "associated to roles". Rationale claim that a role change reaches every holder is not in the quote. Council-only.
+- id: EBW-FUN-056
+  fidelity: derived-marked
+  verdict: ok
+  applicability: provider-side
+  priority: P3
+  priority_reason: Derived owner convenience; status already public under Annex point 6(3)
+  clusters:
+  - K07
+  - K02
+  verification_ready: needs-source-check
+  note: 'Source id is Council but location mixes in an ARF reference (Topic 38 WURevocation_13, a SHOULD for EUDI): split location or add the ARF source. Since status is public, the extra duty is small.'
+- id: EBW-FUN-057
+  fidelity: ok
+  verdict: ok
+  applicability: wallet-general
+  priority: P2
+  priority_reason: ARF choice of remote QES channels; EUDI-only, local to key custody
+  clusters:
+  - K04
+  - K08
+  verification_ready: needs-source-check
+  note: Statement matches the ARF rule QES_06, which binds EUDI wallets; applies to the EBW only if adopted. Verify Topic 16 number in the ARF.
+- id: EBW-FUN-058
+  fidelity: derived-marked
+  verdict: ok
+  applicability: wallet-general
+  priority: P2
+  priority_reason: Closes the gap between user revocation and keys on a departed user's device; shapes custody
+  clusters:
+  - K04
+  - K03
+  - K02
+  verification_ready: needs-legal-review
+  note: Derivation stated (C1, C14). "Deactivate a key on a device the user holds" goes beyond Art 5(1)(j); keep as derived. Overlaps FUN-010 and FUN-055; TRU-066 covers agents.
+- id: EBW-FUN-059
+  fidelity: derived-marked
+  verdict: reword
+  corrected_statement: The wallet provider shall enable the owner to replace the qualified seal or signature creation device, or the trust service provider, linked to a wallet unit, and shall state whether the unit and its attestations remain valid or must be re-issued.
+  applicability: wallet-general
+  priority: P3
+  priority_reason: Derived design preference; sources silent on provider change
+  clusters:
+  - K04
+  - K15
+  verification_ready: needs-legal-review
+  note: '"Without replacing the wallet unit" is a design choice that the rationale itself says the sources do not describe (new keys and certificates). Verify Annex point numbering (8(2)).'
+- id: EBW-FUN-060
+  fidelity: broader-than-quote
+  verdict: ok
+  applicability: provider-side
+  priority: P2
+  priority_reason: Council Art 10(3a) data set at issuance for the Directory
+  clusters:
+  - K06
+  - K05
+  verification_ready: needs-source-check
+  note: Quote covers only the lead-in; the four data items come from the full clause. Check against full Council text. Complements FUN-002.
+- id: EBW-GOV-049
+  fidelity: broader-than-quote
+  verdict: reword
+  corrected_statement: The authority to revoke a power of attorney or power of representation attestation shall be defined by applicable legislation.
+  applicability: provider-side
+  priority: P3
+  priority_reason: Rulebook defers to law; no technical consequence
+  clusters:
+  - K03
+  - K07
+  verification_ready: needs-source-check
+  note: '"Only entities authorised ... shall revoke" is stronger than the quote. rb-poa-pox is v0.8 in cache, newer than registered commit de79cca: verify section 6.7.'
+- id: EBW-GOV-050
+  fidelity: derived-marked
+  verdict: ok
+  applicability: provider-side
+  priority: P2
+  priority_reason: Only place to demand device evidence in the Council notification procedure
+  clusters:
+  - K04
+  - K13
+  - K14
+  verification_ready: needs-legal-review
+  note: Derivation stated (C8). Quote supports a self-assessment report, not its content. Related CER-023, TRU-169.
+- id: EBW-GOV-051
+  fidelity: derived-marked
+  verdict: ok
+  applicability: provider-side
+  priority: P2
+  priority_reason: Extends Art 7(2) to key custodians; would exclude non-EU hosted HSM, but derived and open
+  clusters:
+  - K04
+  - K13
+  verification_ready: needs-legal-review
+  note: 'Statement extends Art 7(2) from the provider to its suppliers: this is derivation, not text (Art 7(5) asks suppliers only for security standards). Overlaps GOV-002. Do not cite as law.'
+- id: EBW-GOV-052
+  fidelity: broader-than-quote
+  verdict: merge-with:EBW-INT-007
+  applicability: authority-side
+  priority: P3
+  priority_reason: Commission empowerment with deadline; INT-007 covers the same Art 9(4)
+  clusters:
+  - K06
+  - K13
+  verification_ready: needs-source-check
+  note: The Council date is bracketed ("[insert the date - 1 year ...]"), so the one-year deadline is a placeholder, not settled. Add the deadline to INT-007.
+- id: EBW-GOV-053
+  fidelity: ok
+  verdict: merge-with:EBW-INT-009
+  applicability: authority-side
+  priority: P3
+  priority_reason: Assessment criteria of Commission; INT-009 covers Art 17(3)
+  clusters:
+  - K17
+  - K05
+  verification_ready: 'yes'
+  note: Same Art 17(3); adds the Council criteria. Fold into INT-009.
+- id: EBW-GOV-054
+  fidelity: ok
+  verdict: ok
+  applicability: authority-side
+  priority: P3
+  priority_reason: Supervisory body task; deleted in Council text
+  clusters:
+  - K13
+  - K06
+  verification_ready: needs-legal-review
+  note: Commission Art 13(4)(b) only; the Council text deletes it. Mark open until trilogue outcome.
+- id: EBW-INT-088
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P2
+  priority_reason: Integrity rule making restricted mandates verifiable
+  clusters:
+  - K03
+  - K01
+  verification_ready: needs-source-check
+  note: Verify section 2.9 / IR-12 against registered commit de79cca (cache is v0.8).
+- id: EBW-INT-089
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P3
+  priority_reason: CSC API parameter; binds protocol clients not the EBW
+  clusters:
+  - K04
+  - K08
+  verification_ready: needs-source-check
+  note: Protocol-specific; applies only if the CSC API is chosen. Note CIR 2026/1731 replaced the CSC reference with TS 119 432. Check clause 11.6 for the credential authorisation mode.
+- id: EBW-INT-090
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P3
+  priority_reason: Standard-derived seal certificate rule
+  clusters:
+  - K04
+  - K14
+  verification_ready: 'yes'
+  note: Rationale ("whoever operates the key store") goes beyond the quote.
+- id: EBW-INT-091
+  fidelity: ok
+  verdict: merge-with:EBW-INT-007
+  applicability: authority-side
+  priority: P2
+  priority_reason: Council triggers for identifier creation; same article as INT-007
+  clusters:
+  - K06
+  - K17
+  verification_ready: 'yes'
+  note: Adds the two triggers of Art 9(2) to INT-007. Creator of the identifier is not named in the source.
+- id: EBW-INT-092
+  fidelity: ok
+  verdict: ok
+  applicability: authority-side
+  priority: P3
+  priority_reason: BRIS data format; low wallet relevance
+  clusters:
+  - K17
+  - K06
+  verification_ready: needs-source-check
+  note: Quote is a table row, not a duty; verify points 5.2 to 5.4. Rationale claim "only official channel" is unsupported.
+- id: EBW-INT-093
+  fidelity: ok
+  verdict: merge-with:EBW-TRU-093
+  applicability: authority-side
+  priority: P3
+  priority_reason: Disqualification-query procedure; evidence for EUID reach only
+  clusters:
+  - K17
+  - K06
+  verification_ready: 'yes'
+  note: Procedural BRIS rule of limited use; keep as evidence note on TRU-093 (EUID for Annex II/IIB companies).
+- id: EBW-INT-094
+  fidelity: broader-than-quote
+  verdict: ok
+  applicability: authority-side
+  priority: P3
+  priority_reason: Member State register rule; peripheral to wallet
+  clusters:
+  - K17
+  - K06
+  verification_ready: needs-legal-review
+  note: Quote is the lead-in only; point (g) is not in it. Basis Art 29(4) not located (to verify). Identifier is that of the branch.
+- id: EBW-INT-095
+  fidelity: derived-marked
+  verdict: reword
+  corrected_statement: The Commission shall specify in the attestation scheme for owner identification data which attributes, in particular the unique identifier, may be disclosed separately and which only together with other attributes.
+  applicability: core
+  priority: P1
+  priority_reason: Resolves EBWOID selective disclosure conflict (Art 5(1)(b) vs 8(5) vs rulebook atomic)
+  clusters:
+  - K01
+  - K09
+  - K06
+  verification_ready: needs-legal-review
+  note: 'Duty-holder: the scheme is not a legal person; Commission is the actor. Derivation stated. Conflict with INT-057 (atomic presentation); options in RES-J3. Feeds DEC-01 and DEC-08.'
+- id: EBW-INT-096
+  fidelity: derived-marked
+  verdict: ok
+  applicability: provider-side
+  priority: P3
+  priority_reason: Secondary identifier cannot replace the Art 9 identifier; follows from "at least"
+  clusters:
+  - K17
+  - K06
+  verification_ready: needs-legal-review
+  note: Whether an implementing act may designate the LEI as the unique identifier is open. Overlaps INT-054.
+- id: EBW-LEG-069
+  fidelity: derived-marked
+  verdict: ok
+  applicability: wallet-general
+  priority: P2
+  priority_reason: Keeps technical authorisation separate from legal mandate; shapes DEC-02
+  clusters:
+  - K03
+  - K02
+  - K13
+  verification_ready: needs-legal-review
+  note: Derivation stated. Art 5(1)(j) says "without prejudice"; "shall not by itself create, limit or revoke" is a derived reading and the provider as addressee is derived.
+- id: EBW-LEG-070
+  fidelity: derived-marked
+  verdict: ok
+  applicability: provider-side
+  priority: P3
+  priority_reason: Contract transparency; no source allocates liability
+  clusters:
+  - K04
+  - K13
+  verification_ready: needs-legal-review
+  note: Quote comes from a non-normative ARF discussion paper and does not reach the duty. Statement is a proposed disclosure, not law; needs legal review.
+- id: EBW-LEG-071
+  fidelity: broader-than-quote
+  verdict: ok
+  applicability: authority-side
+  priority: P2
+  priority_reason: Cross-border eID recognition for representatives; public-sector scope only
+  clusters:
+  - K17
+  - K15
+  - K06
+  verification_ready: needs-source-check
+  note: 'Conditions (listed scheme, level) come from the full Art 6(1), not the quote. Research read the 2014 text; the consolidated text was not obtained: verify against SRC-EIDAS-CONSOL. Statement correctly limits scope to public sector.'
+- id: EBW-LEG-072
+  fidelity: ok
+  verdict: ok
+  applicability: authority-side
+  priority: P3
+  priority_reason: Third-country trust services need an agreement; Union-side
+  clusters:
+  - K17
+  - K15
+  verification_ready: 'yes'
+  note: Only point (a); reciprocity (b) omitted. Related LEG-054. Duty-holder is the agreement (Union), acceptable.
+- id: EBW-LEG-073
+  fidelity: ok
+  verdict: ok
+  applicability: horizontal
+  priority: P2
+  priority_reason: GDPR Chapter V restated; applies to partners outside EU
+  clusters:
+  - K09
+  - K17
+  verification_ready: 'yes'
+  note: Faithful to Art 44. Mapping to the wallet provider is a derivation.
+- id: EBW-LEG-074
+  fidelity: ok
+  verdict: ok
+  applicability: horizontal
+  priority: P3
+  priority_reason: Sub-rule of Chapter V; standard-derived
+  clusters:
+  - K09
+  - K17
+  verification_ready: 'yes'
+  note: Art 46(1) "may transfer ... only if" restated; consider merging with LEG-073 or LEG-076.
+- id: EBW-LEG-075
+  fidelity: derived-marked
+  verdict: reword
+  corrected_statement: The provider of European Business Wallets shall comply with the prohibition on making funds or economic resources available, directly or indirectly, to or for the benefit of persons and entities listed in Annex I to Regulation (EU) No 269/2014, and shall check whether wallet and owner identification services fall within that prohibition.
+  applicability: provider-side
+  priority: P2
+  priority_reason: Derived sanctions compliance; interpretation open
+  clusters:
+  - K13
+  - K17
+  verification_ready: needs-legal-review
+  note: 'Overstates law: that wallet services are "economic resources" is an interpretation (rationale says to verify). Only one sanctions regime; others need the same check.'
+- id: EBW-LEG-076
+  fidelity: derived-marked
+  verdict: ok
+  applicability: horizontal
+  priority: P2
+  priority_reason: Keeps GDPR Chapter V applicable to third-country wallet exchanges
+  clusters:
+  - K17
+  - K09
+  verification_ready: needs-legal-review
+  note: Quote (Art 17(1) functionality) does not reach the statement; the point that equivalence is not an Art 45 adequacy decision is a legal interpretation to confirm. Restates LEG-073 for this context.
+- id: EBW-NFR-117
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P2
+  priority_reason: Device-level sole-control basis from Annex II; standard-derived
+  clusters:
+  - K04
+  - K14
+  verification_ready: 'yes'
+  note: Quote matches. Seals via Art 39. Related CER-006.
+- id: EBW-NFR-118
+  fidelity: ok
+  verdict: ok
+  applicability: wallet-general
+  priority: P3
+  priority_reason: EUDI ARF rule; binds EBW only if adopted
+  clusters:
+  - K04
+  - K15
+  verification_ready: needs-source-check
+  note: EUDI-only (Mig_03). Reviewer may demote or drop; verify topic number. Relates to OPS-042.
+- id: EBW-NFR-119
+  fidelity: derived-marked
+  verdict: ok
+  applicability: wallet-general
+  priority: P1
+  priority_reason: 'Binds hosted custody: provider cannot use owner keys itself; shapes DEC-03'
+  clusters:
+  - K04
+  - K02
+  - K13
+  verification_ready: needs-legal-review
+  note: Derivation stated. Art 26(1)(c) is "sole control" of the signatory; for seals Art 36(1)(c) is weaker ("under control"). Add Art 36(1)(c) to location and treat as derived for non-qualified keys.
+- id: EBW-NFR-120
+  fidelity: derived-marked
+  verdict: ok
+  applicability: wallet-general
+  priority: P2
+  priority_reason: Attribution of key use to a user; fills log gap, shapes multi-user seal keys
+  clusters:
+  - K10
+  - K04
+  - K03
+  verification_ready: needs-legal-review
+  note: 'Rationale cites Annex 7(2) while location says 7(1): verify numbering. Check against privacy rules on logs (NFR-014, NFR-040).'
+- id: EBW-OPS-041
+  fidelity: ok
+  verdict: ok
+  applicability: provider-side
+  priority: P2
+  priority_reason: Rulebook MUST for revocation automation; local to issuers
+  clusters:
+  - K07
+  - K03
+  verification_ready: needs-source-check
+  note: Verify section 4.14 against registered commit (cache v0.8). Complements TRU-162 to TRU-164.
+- id: EBW-OPS-042
+  fidelity: derived-marked
+  verdict: ok
+  applicability: wallet-general
+  priority: P2
+  priority_reason: Exit transparency on keys; shapes portability under DEC-03
+  clusters:
+  - K04
+  - K15
+  verification_ready: needs-legal-review
+  note: Quote reaches data export only. "The ARF excludes key export" is an EUDI rule and does not bind the EBW; the statement is neutral and fine. Related NFR-118.
+- id: EBW-OPS-043
+  fidelity: derived-marked
+  verdict: ok
+  applicability: provider-side
+  priority: P3
+  priority_reason: Documentation duty for recovery per custody model
+  clusters:
+  - K04
+  - K11
+  verification_ready: needs-legal-review
+  note: Derivation stated (C5). Quote is about duplicated datasets only.
+- id: EBW-TRU-159
+  fidelity: ok
+  verdict: merge-with:EBW-TRU-160
+  applicability: relying-party-side
+  priority: P2
+  priority_reason: Suspension handling in rulebook; subsumed by reject-if-not-active
+  clusters:
+  - K03
+  - K07
+  verification_ready: needs-source-check
+  note: Rulebook 6.5 allows suspension but its status values (6.9) have no suspended value; raise with WE BUILD. Verify section numbers (cache v0.8 newer than de79cca).
+- id: EBW-TRU-160
+  fidelity: ok
+  verdict: ok
+  applicability: relying-party-side
+  priority: P2
+  priority_reason: Fail-closed mandate verification; standard-derived
+  clusters:
+  - K07
+  - K03
+  verification_ready: needs-source-check
+  note: Statement adds "revoked, expired and unknown" from the 6.9 list; check against registered commit.
+- id: EBW-TRU-161
+  fidelity: ok
+  verdict: ok
+  applicability: relying-party-side
+  priority: P2
+  priority_reason: Mandate status check including issuer status
+  clusters:
+  - K07
+  - K03
+  - K05
+  verification_ready: needs-source-check
+  note: Verify section 6.10 against registered commit.
+- id: EBW-TRU-162
+  fidelity: derived-marked
+  verdict: ok
+  applicability: provider-side
+  priority: P2
+  priority_reason: Mandatory revocation trigger in rulebook; issuer is derived
+  clusters:
+  - K03
+  - K07
+  verification_ready: needs-source-check
+  note: Duty-holder derived from sections 4.14, 6.7, 6.13 (stated). Confirm with WE BUILD and verify section numbers against de79cca (cache v0.8).
+- id: EBW-TRU-163
+  fidelity: derived-marked
+  verdict: ok
+  applicability: provider-side
+  priority: P2
+  priority_reason: Mandatory revocation trigger in rulebook; issuer is derived
+  clusters:
+  - K03
+  - K07
+  verification_ready: needs-source-check
+  note: 'Duty-holder derived from sections 4.14, 6.7, 6.13 (stated). Confirm with WE BUILD and verify section numbers against de79cca (cache v0.8). Issuer can only act with a sync to HR or register data: see OPS-041.'
+- id: EBW-TRU-164
+  fidelity: derived-marked
+  verdict: ok
+  applicability: provider-side
+  priority: P2
+  priority_reason: Mandatory revocation trigger in rulebook; issuer is derived
+  clusters:
+  - K03
+  - K07
+  verification_ready: needs-source-check
+  note: Duty-holder derived from sections 4.14, 6.7, 6.13 (stated). Confirm with WE BUILD and verify section numbers against de79cca (cache v0.8).
+- id: EBW-TRU-165
+  fidelity: derived-marked
+  verdict: ok
+  applicability: provider-side
+  priority: P2
+  priority_reason: Protects against unauthorised revocation; mapped from ARF
+  clusters:
+  - K07
+  - K11
+  - K02
+  verification_ready: needs-source-check
+  note: ARF rule is for EUDI; claim that Annex point 1 already requires an authentication mechanism for revocation requests to be verified.
+- id: EBW-TRU-166
+  fidelity: broader-than-quote
+  verdict: reword
+  corrected_statement: When the owner identification data of a European Business Wallet unit is revoked, the unit shall be treated as identity-invalid while its wallet unit attestation (structural trust) stays valid.
+  applicability: wallet-general
+  priority: P2
+  priority_reason: Separates identity trust from structural trust; ADR only proposed
+  clusters:
+  - K07
+  - K05
+  - K02
+  verification_ready: needs-source-check
+  note: 'Statement uses "shall" and adds "or expires" and "lose", none in the quote (which says "suspends identity validity"). ADR status is Proposed: not final.'
+- id: EBW-TRU-167
+  fidelity: broader-than-quote
+  verdict: ok
+  applicability: relying-party-side
+  priority: P2
+  priority_reason: Scope enforcement of representatives; rulebook integrity rule
+  clusters:
+  - K03
+  - K01
+  verification_ready: needs-source-check
+  note: Quote says the mandate shall not authorise out-of-scope actions; the verifier duty to reject is from the surrounding text. Check IR-18 text and section number.
+- id: EBW-TRU-168
+  fidelity: derived-marked
+  verdict: reword
+  corrected_statement: Where the representation type of the authorised signatories of a legal entity is joint, a relying party that verifies the authorised signatories attestation shall require that two or more signatories act together before it treats an act as made on behalf of the entity.
+  applicability: relying-party-side
+  priority: P3
+  priority_reason: Derived verifier duty; legal effect is national law
+  clusters:
+  - K03
+  - K02
+  verification_ready: needs-legal-review
+  note: Original wording ("treat a binding commitment as made only when") reads as a legal-effect rule that the rulebook does not state. Note other sections of this rulebook are copied text.
+- id: EBW-TRU-169
+  fidelity: derived-marked
+  verdict: ok
+  applicability: provider-side
+  priority: P2
+  priority_reason: Records where each key is held; prerequisite for all custody options
+  clusters:
+  - K04
+  - K13
+  verification_ready: needs-legal-review
+  note: Derivation stated. Quote supports a secure device only; four-way custody list is the reviewer's model. Related GOV-050, CER-023.
+- id: EBW-TRU-170
+  fidelity: broader-than-quote
+  verdict: merge-with:EBW-TRU-008
+  applicability: provider-side
+  priority: P1
+  priority_reason: Council level high for onboarding is stricter than Commission; decides who can onboard
+  clusters:
+  - K02
+  - K06
+  - K17
+  verification_ready: needs-legal-review
+  note: 'Quote does not contain "legal representative or other lawfully empowered person": check Council text. Divergence from TRU-008 (substantial or high); keep both until the trilogue is known. Related TRU-070.'
+- id: EBW-TRU-171
+  fidelity: ok
+  verdict: merge-with:EBW-TRU-015
+  applicability: provider-side
+  priority: P3
+  priority_reason: Council addition for third-country onboarding; same article as TRU-015
+  clusters:
+  - K17
+  - K06
+  verification_ready: 'yes'
+  note: Adds the empowered representative to the TRU-015 condition.
+- id: EBW-TRU-172
+  fidelity: ok
+  verdict: merge-with:EBW-TRU-084
+  applicability: authority-side
+  priority: P2
+  priority_reason: Further element of the same level-high table as TRU-084
+  clusters:
+  - K06
+  - K17
+  verification_ready: 'yes'
+  note: Same CIR 2015/1502 section 2.1.3; add the "status preventing it from acting" check to TRU-084.
