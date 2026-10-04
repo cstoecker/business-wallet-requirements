@@ -1,7 +1,7 @@
 # Hand-written frame of the stakeholder brief (nine themes). The selected requirements come from scripts/build_brief.py (_data/brief-selection.yml).
 - id: T1
   title: Who is the wallet subject
-  clusters: [K02, K03]
+  clusters: [K02]
   decision: DEC-02
   question: "Do employees act for the company with their personal EUDI Wallet, with users and authorisations inside the organisation's business wallet, or with both?"
   silent: "How far the EUDI Wallet instruments apply to employees acting for a company; see the decision page for what was read."
@@ -11,6 +11,18 @@
     idta: "Who is the asset owner or manufacturer in a signed passport or shell: the person, the company or the wallet."
   session_question: "Which actions must be done by a person in a personal wallet, and which may run under the organisation's wallet?"
 - id: T2
+  title: Delegation and mandates (employees, machines, agents)
+  clusters: [K03, K16]
+  decision: DEC-13
+  also: DEC-02
+  question: "How do employees, machines (devices, plants, services) and AI agents get authority to act for an organisation: how is it created, limited, delegated onward, shared (four-eyes), suspended, revoked and attributed?"
+  silent: "The EBW texts name role-based authorisations (Council Art 5(1)(j)) but leave policy language and enforcement to implementing acts; the sources read say little about delegation chains, suspension as distinct from revocation, and authority of machines. See the decision page when it is published."
+  lens:
+    industry40: "Operators, plants and technical users act across company borders; authority must be limited, checkable and end when a person leaves or a machine is retired."
+    ipceiai: "An agent acts only within a mandate that a person or the organisation can see, limit and withdraw at once; actions are attributed to the owner."
+    idta: "Who may sign, change or release a passport or shell entry for the manufacturer: person, system or agent, with which limits."
+  session_question: "Which authority model is the common one for people, machines and agents, and where may it differ?"
+- id: T3
   title: Formats and meaning
   clusters: [K01, K16]
   decision: DEC-01
@@ -22,7 +34,7 @@
     ipceiai: "Agents and retrieval need self-describing, linkable data; closed formats lose the context."
     idta: "Submodel semantics (ECLASS, IRDI) have to map to claims; the shell itself stays an implementation artefact."
   session_question: "Which semantic layer is the shared one, and which formats may carry it?"
-- id: T3
+- id: T4
   title: Keys and control
   clusters: [K04]
   decision: DEC-03
@@ -33,7 +45,7 @@
     ipceiai: "Agents sign on behalf of an organisation; custody decides who can stop them."
     idta: "Signed passports outlive the provider; key portability and exit matter."
   session_question: "Which custody models must be supported, and which must stay possible for exit?"
-- id: T4
+- id: T5
   title: Identity across borders
   clusters: [K06, K17]
   decision: DEC-11
@@ -45,7 +57,7 @@
     ipceiai: "Cross-border agents need the identity and assurance level of the organisation, not of the person."
     idta: "Manufacturer and operator identifiers in passports must resolve to a legal entity."
   session_question: "Which identifier is the anchor, and which mappings must be standardised first?"
-- id: T5
+- id: T6
   title: Trust and discovery
   clusters: [K05, K14]
   decision: DEC-04
@@ -56,7 +68,7 @@
     ipceiai: "Agents verify counterparties automatically; discovery must work without a human."
     idta: "Who may sign a passport or an attestation of conformity is a trust question."
   session_question: "Which trust anchors must a verifier accept in a first cross-ecosystem scenario?"
-- id: T6
+- id: T7
   title: Lifecycle and evidence
   clusters: [K07, K10]
   decision: DEC-06
@@ -68,7 +80,7 @@
     ipceiai: "Agent mandates must be revocable at once, with an audit trail."
     idta: "A passport must stay verifiable after a certificate or a company ceases to exist."
   session_question: "Which revocation latency is acceptable, and is suspension needed beside revocation?"
-- id: T7
+- id: T8
   title: Protocols and delivery
   clusters: [K08, K12]
   decision: DEC-07
@@ -79,7 +91,7 @@
     ipceiai: "Agent protocols (MCP, A2A) sit above them and need verifiable identity."
     idta: "Passport exchange runs over APIs; the credential protocols must not duplicate them."
   session_question: "Where do wallet protocols and data space protocols meet?"
-- id: T8
+- id: T9
   title: Privacy and adoption
   clusters: [K09, K15]
   decision: DEC-08
@@ -90,7 +102,7 @@
     ipceiai: "Processing by AI must follow purpose limits; evidence must not leak personal data."
     idta: "Passports mix business secrets and personal data; disclosure must be selective."
   session_question: "What may an organisation see about its employees' use of the wallet?"
-- id: T9
+- id: T10
   title: Planes and evidence graph
   clusters: [K18, K01, K10, K16]
   decision: DEC-12

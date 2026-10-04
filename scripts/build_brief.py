@@ -12,7 +12,7 @@ rev = {x['id']: x for x in rev}
 req = {}
 for f in glob.glob(f'{ROOT}/_requirements/*.md'):
     fm = yaml.safe_load(open(f).read().split('---')[1]); req[fm['req_id']] = fm
-PINS = {'T4': ['EBW-INT-095'], 'T3': ['EBW-NFR-119'], 'T1': [], 'T6': []}
+PINS = {'T5': ['EBW-INT-095'], 'T4': ['EBW-NFR-119']}
 OK_APPL = {'core': 0, 'wallet-general': 1, 'horizontal': 1}
 PROV = {'L': 0, 'S': 1, 'D': 2, 'A': 3}
 used, out = set(), []
@@ -32,7 +32,7 @@ for t in themes:
     cands.sort()
     pick = [p for p in PINS.get(t['id'], []) if p in req and p not in used]
     for _, rid in cands:
-        if len(pick) >= 3 + len(PINS.get(t['id'], [])): break
+        if len(pick) >= 3: break
         if rid in used or rid in pick: continue
         pick.append(rid)
     for rid in pick:

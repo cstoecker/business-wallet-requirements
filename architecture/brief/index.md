@@ -3,7 +3,7 @@ title: Stakeholder brief
 parent: Architecture
 nav_order: 2
 permalink: /architecture/brief/
-description: "Nine architecture themes and the key requirements behind them, prepared for discussion with Industry 4.0, IPCEI-AI and IDTA stakeholders: the question, the selected requirements with source and status, and one question to decide."
+description: "Ten architecture themes and the key requirements behind them, prepared for discussion with Industry 4.0, IPCEI-AI and IDTA stakeholders: the question, the selected requirements with source and status, and one question to decide."
 keywords: [European Business Wallet, stakeholder brief, Industry 4.0, IPCEI-AI, IDTA, architecture decisions, requirements]
 schema_type: CollectionPage
 toc: true
@@ -12,7 +12,7 @@ last_verified: "2026-10-04"
 
 # Stakeholder brief
 
-This page condenses the catalogue into nine themes for a discussion with Industry 4.0, IPCEI-AI and IDTA stakeholders. Each theme has one question, the requirements that constrain the answer most, what the sources leave open, and one question for the session. It is a working paper for discussion. It takes no position on the options and is not legal advice.
+This page condenses the catalogue into ten themes for a discussion with Industry 4.0, IPCEI-AI and IDTA stakeholders. Each theme has one question, the requirements that constrain the answer most, what the sources leave open, and one question for the session. It is a working paper for discussion. It takes no position on the options and is not legal advice.
 
 <div class="status-note" role="note"><strong>How the selection works.</strong> A script picks priority P1 requirements that concern the business wallet, drops duplicates, takes at most three per theme and adds named conflict items (<code>scripts/build_brief.py</code>). The first selection is a proposal for review. Each item shows its source, its legal status (in force, proposal, standard, ecosystem) and its provenance (L law, S standard, D derived). Derived items are derivations, not law.</div>
 

@@ -70,3 +70,8 @@
   question: "Where are policies decided and enforced, how do credentials, evidence and data move, and should evidence be expressed as one access-controlled linked-data graph with open-world semantics that serves policy, register, product passport and AI processes?"
   clusters: [K18, K01, K10, K16]
   status: planned
+- id: DEC-13
+  title: "Delegation and mandates for employees, machines and AI agents"
+  question: "How do employees, machines and AI agents get authority to act for an organisation with a business wallet (roles in the wallet, mandate credentials, legal powers of attorney, protocol-level delegation), and how is that authority limited, delegated onward, shared, suspended, revoked and attributed?"
+  clusters: [K03, K02, K16]
+  status: planned

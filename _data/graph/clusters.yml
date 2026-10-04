@@ -9,7 +9,7 @@
   decision: DEC-02
   summary: "Natural-person wallet used by employees, legal-person wallet, or a hybrid: who holds the wallet and who is the subject."
 - code: K03
-  name: Mandates, representation and delegation
+  name: Mandates, representation and delegation (employees, machines, agents)
   decision: DEC-02
   summary: "How natural persons and agents act for an organisation: mandates, multi-user authorisation, limits and revocation."
 - code: K04

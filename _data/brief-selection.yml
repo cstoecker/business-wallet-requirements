@@ -21,6 +21,18 @@
     plane: control
     reword: false
     check: needs-legal-review
+  - id: EBW-FUN-007
+    title: Issuing attestations to business and personal wallets
+    statement: The European Business Wallet shall enable the owner to issue electronic attestations of attributes to European Business Wallets and European Digital Identity Wallets.
+    provenance: L
+    legal_status: proposal
+    source: SRC-EBW-PROPOSAL
+    location: Article 5(1)(f)
+    plane: data
+    reword: false
+    check: needs-source-check (quote not stored in file)
+- theme: T2
+  requirements:
   - id: EBW-FUN-009
     title: Authentication using attestations
     statement: The European Business Wallet shall enable the use of qualified and non-qualified electronic attestations of attributes for owners and their authorised representatives to authenticate themselves.
@@ -31,7 +43,27 @@
     plane: control
     reword: false
     check: needs-source-check (quote not stored in file)
-- theme: T2
+  - id: EBW-FUN-010
+    title: Multi-user access with manageable authorisations
+    statement: The European Business Wallet shall enable the owner to authorise multiple users to access and operate the wallet and to manage and revoke such authorisations.
+    provenance: L
+    legal_status: proposal
+    source: SRC-EBW-PROPOSAL
+    location: Article 5(1)(j)
+    plane: control
+    reword: false
+    check: needs-source-check (quote not stored in file)
+  - id: EBW-FUN-011
+    title: Authorising relying parties to request attestations
+    statement: The European Business Wallet shall enable the owner to authorise relying parties to request electronic attestations of attributes issued to the owner and to manage and revoke such authorisations.
+    provenance: L
+    legal_status: proposal
+    source: SRC-EBW-PROPOSAL
+    location: Article 5(1)(k)
+    plane: control
+    reword: false
+    check: needs-source-check (quote not stored in file)
+- theme: T3
   requirements:
   - id: EBW-FUN-004
     title: Selective disclosure of identification data and attributes
@@ -65,7 +97,7 @@
     plane: data
     reword: false
     check: 'yes'
-- theme: T3
+- theme: T4
   requirements:
   - id: EBW-NFR-119
     title: Provider-held keys used only on the authority of the owner
@@ -100,17 +132,7 @@
     plane: assurance
     reword: false
     check: needs-legal-review
-  - id: EBW-FUN-005
-    title: Qualified signing and sealing
-    statement: The European Business Wallet shall enable the owner to sign by means of qualified electronic signatures and to seal by means of qualified electronic seals, as applicable.
-    provenance: L
-    legal_status: proposal
-    source: SRC-EBW-PROPOSAL
-    location: Article 5(1)(d)
-    plane: data
-    reword: false
-    check: needs-source-check (quote not stored in file)
-- theme: T4
+- theme: T5
   requirements:
   - id: EBW-INT-095
     title: Owner identification scheme states which attributes are disclosed together
@@ -143,17 +165,7 @@
     plane: data
     reword: false
     check: needs-source-check (quote not stored in file)
-  - id: EBW-INT-006
-    title: EUID as unique identifier where available
-    statement: Where an economic operator has been attributed a European Unique Identifier, that identifier shall be used as the unique identifier in its owner identification data.
-    provenance: L
-    legal_status: proposal
-    source: SRC-EBW-PROPOSAL
-    location: Article 9(1)
-    plane: data
-    reword: false
-    check: needs-source-check (quote not stored in file)
-- theme: T5
+- theme: T6
   requirements:
   - id: EBW-TRU-102
     title: Unit attestation signed under a trusted-list certificate
@@ -187,7 +199,7 @@
     plane: trust
     reword: false
     check: 'yes'
-- theme: T6
+- theme: T7
   requirements:
   - id: EBW-FUN-003
     title: Attestation lifecycle in the wallet
@@ -196,16 +208,6 @@
     legal_status: proposal
     source: SRC-EBW-PROPOSAL
     location: Article 5(1)(a)
-    plane: data
-    reword: false
-    check: needs-source-check (quote not stored in file)
-  - id: EBW-FUN-007
-    title: Issuing attestations to business and personal wallets
-    statement: The European Business Wallet shall enable the owner to issue electronic attestations of attributes to European Business Wallets and European Digital Identity Wallets.
-    provenance: L
-    legal_status: proposal
-    source: SRC-EBW-PROPOSAL
-    location: Article 5(1)(f)
     plane: data
     reword: false
     check: needs-source-check (quote not stored in file)
@@ -220,7 +222,18 @@
     plane: trust
     reword: false
     check: 'needs-source-check: trigger list truncated in quote'
-- theme: T7
+  - id: EBW-TRU-106
+    title: Public validity status of revoked unit attestations
+    statement: When the provider of European Business Wallets has revoked a wallet unit attestation, it shall make the validity status of that attestation publicly available and describe the location of
+      that information in the attestation.
+    provenance: L
+    legal_status: proposal
+    source: SRC-EBW-PROPOSAL
+    location: Annex, point 6(3)
+    plane: trust
+    reword: false
+    check: needs-legal-review
+- theme: T8
   requirements:
   - id: EBW-FUN-014
     title: Automated and manual wallet interaction
@@ -253,7 +266,7 @@
     plane: trust
     reword: false
     check: needs-legal-review
-- theme: T8
+- theme: T9
   requirements:
   - id: EBW-OPS-002
     title: Owner notification and data transfer or deletion on service end
@@ -287,7 +300,7 @@
     plane: governance
     reword: false
     check: needs-legal-review
-- theme: T9
+- theme: T10
   requirements:
   - id: EBW-NFR-041
     title: Access events logged with verifiable proofs of authorisation
